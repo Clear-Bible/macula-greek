@@ -1,0 +1,220 @@
+/*
+
+  Corduroy is a horizontal presentation of trees.
+
+  This is not yet useful except for playing around.  Until word order is
+  preserved in the trees, a horizontal presentation basically doesn't work.
+  There are also spacing issues that really need to be fixed in this 
+  stylesheet.  I am checking in the proof of concept because I will
+  need this once word order is restored.
+
+*/
+
+wg[class=header] {
+    display: inline;
+    position: fixed;
+    width=6em;
+    top: 5px;
+    left: 15px;
+    background-color: white;
+    opacity: 1;
+    overflow: scroll;
+}
+
+/*
+  ###TODO
+  May need to remove the milestone from the p.
+*/
+
+milestone {
+    font-size: small; 
+    color: blue;
+    display: block;
+}
+
+p {
+    display: block;
+}
+
+div[class=book]  {
+  margin-top: 1in;
+  margin-left: 1in;
+  margin-bottom: 1in;
+  line-height: 1.2;
+  background-color: white;
+  opacity: 1;
+}
+
+book, passage,root {
+  line-height: 1.5;
+  margin-left: 5em;
+  margin-right: 10em;
+  /* background: linen; */
+}
+
+
+
+/*
+  Only list rules I am willing to describe and defend ...
+*/
+
+/* WGs */
+
+wg[class=sentence] {
+} 
+
+wg[class=sentence] wg[class=cl]::before {
+  content: "";
+}
+
+sentence>wg[class=cl] {
+  border-left: none;
+  border-top: none;
+  border-right: none; 
+  display: block;
+}
+
+wg[class=cl] {
+  /* 
+    The nub of the spacing problem: 
+  
+    You really want spacing down to the last role before a word.
+    After that, you really don't want it.  Is there some way to
+    have it both ways with .css?
+  */
+  /*
+  position: relative;
+  display: block; 
+  */
+  padding-top: 0.4em;
+  padding-left: 0.25em;
+  padding-right: 0.25em;
+
+  display: inline;
+/*
+  border-radius: 15px;
+  border-left: 1px inset grey;
+  border-top: 1px inset grey; 
+  border-right: 1px inset grey;  */
+}
+
+
+wg[role]::before {
+  color: cadetblue;
+  content: attr(role);
+/*  vertical-align: super; */
+  size: small;
+}
+
+/* If wg[role] is indented, w[role] must be indented the same amount. */
+wg[role] {
+    position: relative;
+    display: inline;
+
+    border-radius: 15px;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border-left: 1px inset cadetblue;
+ /*   border-top: 1px inset grey;  */
+    border-right: 1px inset cadetblue; 
+}
+  
+/* Words */
+
+w[role=v][mood=participle]::before {
+  color: cadetblue;
+  content: "v.part ";
+  size: small;
+ /* vertical-align: super; */
+}
+
+w[role=v][mood=infinitive]::before {
+  color: cadetblue;
+  content: "v.inf ";
+  size: small;
+  /* vertical-align: super; */
+}
+
+w[role]::before {
+  color: cadetblue;
+  content: attr(role) " ";
+  size: small;
+  /* vertical-align: super; */
+}
+
+w[discontinuous]::after {
+  content: "*";
+  /* vertical-align: super; */
+  color: cadetblue;
+  size: x-small;
+}
+
+wg[class=cl] w[class=conj] {
+ /* 
+    Conjunctions are hard to get right with .css
+    alone.  It's important to know if it is coordinating
+    or subordinating, and whether it lives as a sibling
+    to things that have roles.
+
+  display: block;   
+  
+  */  
+}
+
+/*
+
+w[case=vocative]::before {
+  color: grey;
+  content: "voc ";
+  size: small;
+}
+
+w[case=vocative] {
+    position: relative; 
+    display: block;
+    padding-left: 1em;
+}
+*/
+
+/* If you indent this, indent wg[role] and w[case=vocative] by the same amount. */
+w[role] {
+    position: relative;
+    display: inline; 
+    padding-top: 1em;
+}
+
+/* -----  Experimental stuff goes here -------- */
+
+/*
+wg:not(role)+wg:not(role)::before {
+  color: grey;
+  content: "cl";
+  size: small; 
+}
+*/
+
+/*
+
+This is not specific enough to accurately identify parataxis, so I am commenting it out. 
+It currently causes more harm than good for the casual reader, but it is useful as
+a diagnostic.
+
+wg:not(role)+wg:not(role)::before {
+    content: '- -';
+    display: block;
+}
+
+This is overly broad, useful at least for debugging and thinking about what roles we may
+want to add.
+
+wg:not(role)[class=cl]::before {
+  color: grey;
+  content: "cl";
+  size: small; 
+}
+
+
+*/
+

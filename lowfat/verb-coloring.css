@@ -1,0 +1,63 @@
+w[tense=aorist] {
+    background-color: 	#ADD;  /* unmarked for aspect */
+    text-decoration: underline;   /* secondary tense */
+} 
+
+w[tense=imperfect] {
+    background-color: #FEC; /* imperfective aspect */
+    text-decoration: underline;   /* secondary tense */
+} 
+
+w[tense=present] {
+    background-color: #FEC; /* imperfective aspect */
+} 
+
+w[tense=perfect] {
+    background-color: #F99;       /* perfect aspect */
+} 
+
+w[tense=future] {
+    background-color: 	#ADD;  /* unmarked for aspect */
+    text-decoration: overline;    /* future  */
+} 
+
+w[tense=pluperfect] {
+    background-color: #F99;       /* perfect aspect */
+    text-decoration: underline;   /* secondary tense */
+} 
+
+w[mood=participle] {
+    border-width: 5px;
+    border-left: solid blue;
+}
+
+w[mood=infinitive] {
+    border-left: dotted blue;
+}
+
+w[mood=subjunctive] {
+    border-width: 5px;
+    border-right: double blue;
+}
+
+w[mood=imperative] {
+    border-right: solid blue;
+}
+
+w[mood=optative] {
+    border-right: dotted blue;
+}
+
+w[voice=passive] {
+    border-top: solid;
+    border-bottom: solid;
+    border-color: blue;
+}
+
+w[voice=middle] {
+    border-width: 5px;
+    border-top: double;
+    border-bottom: double;
+    border-color: blue;
+}
+

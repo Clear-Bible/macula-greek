@@ -1,0 +1,100 @@
+wg[class=header] {
+    display: block;
+    position: fixed;
+    width=6em;
+    top: 5px;
+    left: 15px;
+    background-color: white;
+    opacity: 1;
+    overflow: scroll;
+}
+
+wg[class=header] w {
+ display: block;
+ position: relative;
+ padding-left: 4px;
+ margin: 4px;
+ height: 2em;
+}
+
+milestone {
+    display: block;
+}
+
+div[class=book]  {
+  margin-top: 1in;
+  margin-left: 1in;
+  margin-bottom: 1in;
+  line-height: 1.2;
+  background-color: white;
+  opacity: 1;
+}
+
+/*
+book {
+  line-height: 1.5;
+  padding-left: 5em;
+}
+*/
+
+
+wg[class=sentence]::before {
+  margin-top: 10px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+wg[class=sentence]::after {
+}
+
+p {
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    display: block;
+    size: x-large;
+}
+
+/*
+wg[class=cl::before  {
+    content: "cl";
+    color: gray;
+}
+*/
+
+wg[class=cl]  {
+    position: relative;
+    display: block;
+    margin-left: 10px;
+    width: 400px;
+    border: 2px solid blue;
+}
+
+wg[class=sentence] {
+    position: relative;
+    display: block;
+    margin-left: 10px;
+    border: 2px solid green;
+}
+
+
+wg[role]::before {
+    content: attr(role);
+    color: grey;
+}
+
+wg[role] {
+    position: relative;
+    display: block;
+    margin-left: 10px;
+    width: 400px;
+    border: 2px solid blue;
+    padding: 5px;
+}
+
+w {
+    position: relative;
+    font-size: large;
+    font-weight: bold;
+}
+

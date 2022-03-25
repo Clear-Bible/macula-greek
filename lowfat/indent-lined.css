@@ -1,0 +1,127 @@
+wg[class=header] {
+    display: block;
+    position: fixed;
+    width=6em;
+    top: 5px;
+    left: 15px;
+    background-color: white;
+    opacity: 1;
+    overflow: scroll;
+}
+
+wg[class=header] w {
+ display: block;
+ position: relative;
+ padding-left: 4px;
+ margin: 4px;
+ height: 2em;
+}
+
+milestone {
+    display: block;
+}
+
+div[class=book]  {
+  margin-top: 1in;
+  margin-left: 1in;
+  margin-bottom: 1in;
+  line-height: 1.2;
+  background-color: white;
+  opacity: 1;
+}
+
+book, passage {
+  line-height: 1.5;
+  margin-left: 5em;
+  margin-right: 10em;
+  /* background: linen; */
+}
+
+p {
+    font-size: large;
+  /*  color: grey; */
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+wg[class=sentence] {
+} 
+
+wg[role]::before {
+  color: grey;
+  content: attr(role);
+  size: small;
+}
+
+wg[class=np] {
+ /* display: block; */
+}
+
+w[role=v][mood=participle]::before {
+  color: grey;
+  content: "v.part ";
+  size: small;
+}
+
+w[role=v][mood=infinitive]::before {
+  color: grey;
+  content: "v.inf ";
+  size: small;
+}
+
+w[role]::before {
+  color: grey;
+  content: attr(role) " ";
+  size: small;
+}
+
+w[discontinuous]::after {
+  content: "*";
+  vertical-align: super;
+  color: grey;
+  size: x-small;
+}
+
+w[class=conj] {
+ /* display: block; */
+}
+
+w[case=vocative]::before {
+  color: grey;
+  content: "voc ";
+  size: small;
+}
+
+w[case=vocative] {
+    position: relative;
+    margin-left: 15px;
+    padding-left: 5px;
+    display: block;  
+}
+
+wg[role] {
+    position: relative;
+    margin-left: 15px;
+    padding-left: 5px;
+    display: block;
+}
+
+
+w[role] {
+    position: relative;
+    margin-left: 15px;
+    padding-left: 5px;
+    display: block;
+}
+
+milestone {
+    font-size: small; 
+    color: blue;
+    display: block;
+}
+
+wg {
+/*   display: block; */
+}
