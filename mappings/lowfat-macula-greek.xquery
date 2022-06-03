@@ -135,7 +135,7 @@ declare function local:attributes($node)
 {
     $node/@Cat ! attribute class {lower-case(.)},
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
-    $node/@n,
+    $node/@xml:id,
     $node/@HasDet ! attribute articular {true()},
     $node/@UnicodeLemma ! attribute lemma {.},
     $node/@NormalizedForm ! attribute normalized {.},
