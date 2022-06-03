@@ -266,9 +266,14 @@
     <xsl:template match="Node[@morphId]">
         <xsl:variable name="USFMId" select="macula:USFMId(data(./@morphId))"/>
         <xsl:variable name="bookNumber" select="macula:node-book-number(data(./@morphId))"/>
+        
+        <xsl:variable name="shouldNotUsePrefix" select="true()"/> <!-- NOTE: disable if using prefixes on @n -->
         <xsl:copy>
-            <xsl:attribute name="n">
+            <xsl:attribute name="n"> <!-- @n is an id for alphabetical sorting in canonical order. See discussion at https://github.com/Clear-Bible/symphony-team/issues/38 -->
                 <xsl:choose>
+                    <xsl:when test="$shouldNotUsePrefix">
+                        <xsl:value-of select="./@morphId"/>
+                    </xsl:when>
                     <xsl:when test="$bookNumber > 39">
                         <!-- 'n' prefix for NT books -->
                         <xsl:value-of select="concat('n', ./@morphId)"/>
@@ -300,14 +305,9 @@
 
     <xsl:template match="Sentence">
         <xsl:copy>
-            <xsl:attribute name="startRef">
+            <xsl:attribute name="ref">
                 <xsl:value-of
-                    select="concat(macula:USFMBook((.//Node)[1]/@nodeId), ' ', macula:USFMVerseRangeRefs(./@ID)[1])"
-                />
-            </xsl:attribute>
-            <xsl:attribute name="endRef">
-                <xsl:value-of
-                    select="concat(macula:USFMBook((.//Node)[1]/@nodeId), ' ', macula:USFMVerseRangeRefs(./@ID)[2])"
+                    select="concat(macula:USFMBook((.//Node)[1]/@nodeId), ' ', macula:USFMVerseRangeRefs(./@ID)[1], '-', macula:USFMVerseRangeRefs(./@ID)[2])"
                 />
             </xsl:attribute>
             <xsl:apply-templates select="@* | node()"/>
