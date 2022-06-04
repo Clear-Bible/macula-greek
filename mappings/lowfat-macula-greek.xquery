@@ -136,7 +136,6 @@ declare function local:attributes($node)
     $node/@Cat ! attribute class {lower-case(.)},
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
-    $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
     $node/@HasDet ! attribute articular {true()},
     $node/@UnicodeLemma ! attribute lemma {.},
     $node/@NormalizedForm ! attribute normalized {.},
@@ -322,6 +321,7 @@ declare function local:word($node, $role)
             <w>
                 {
                     $role,
+                    $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
                     attribute after {substring($node, string-length($node), 1)},
                     local:attributes($node),
                     substring($node, 1, string-length($node) - 1)
@@ -332,6 +332,7 @@ declare function local:word($node, $role)
             <w>
                 {
                     $role,
+                    $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
                     local:attributes($node),
                     string($node)
                 }
