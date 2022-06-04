@@ -136,6 +136,7 @@ declare function local:attributes($node)
     $node/@Cat ! attribute class {lower-case(.)},
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
+    $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
     $node/@HasDet ! attribute articular {true()},
     $node/@UnicodeLemma ! attribute lemma {.},
     $node/@NormalizedForm ! attribute normalized {.},
@@ -321,11 +322,11 @@ declare function local:word($node, $role)
             <w>
                 {
                     $role,
+                    attribute after {substring($node, string-length($node), 1)},
                     local:attributes($node),
                     substring($node, 1, string-length($node) - 1)
                 }
-            </w>,
-            <pu>{substring($node, string-length($node), 1)}</pu>
+            </w>
             )
         else
             <w>
@@ -415,7 +416,7 @@ declare function local:sentence($node)
         {
             <p>
                 {
-                    for $verse in distinct-values($node//Node/@morphId ! local:USFMVerseId(.))
+                    for $verse in distinct-values($node//Node/@nodeId ! local:USFMVerseId(.))
                     return
                         (
                         <milestone
@@ -444,6 +445,7 @@ processing-instruction xml-stylesheet {'href="treedown.css"'},
 processing-instruction xml-stylesheet {'href="boxwood.css"'},
 <book>
     {
+        attribute id {local:USFMBook((//Node)[1]/@nodeId)},
         (:
             If a sentence has multiple interpretations, Sentence/Trees may contain
             multiple Tree nodes.  We want only the first.
