@@ -7,9 +7,13 @@
          <milestone unit="verse" id="PHM 1:1">PHM 1:1</milestone> 
          <milestone unit="verse" id="PHM 1:2">PHM 1:2</milestone> Παῦλος δέσμιος Χριστοῦ Ἰησοῦ καὶ Τιμόθεος ὁ ἀδελφὸς Φιλήμονι τῷ ἀγαπητῷ καὶ συνεργῷ ἡμῶν καὶ Ἀπφίᾳ τῇ ἀδελφῇ καὶ Ἀρχίππῳ τῷ συστρατιώτῃ ἡμῶν καὶ τῇ κατ’ οἶκόν σου ἐκκλησίᾳ·</p>
       <wg role="cl">
-         <wg class="cl" rule="S-IO">
-            <wg role="s" class="np" head="true" rule="NpaNp">
-               <wg class="np" head="true" rule="Np-Appos">
+         <wg class="cl" rule="S-IO" xml:id="570010010010290">
+            <wg role="s"
+                xml:id="570010010010081"
+                class="np"
+                head="true"
+                rule="NpaNp">
+               <wg class="np" head="true" rule="Np-Appos" xml:id="570010010010040">
                   <w ref="PHM 1:1!1"
                      class="noun"
                      type="proper"
@@ -21,7 +25,7 @@
                      gender="masculine"
                      case="nominative"
                      head="true">Παῦλος</w>
-                  <wg class="np" rule="NPofNP">
+                  <wg class="np" rule="NPofNP" xml:id="570010010020030">
                      <w ref="PHM 1:1!2"
                         class="noun"
                         type="common"
@@ -33,7 +37,7 @@
                         gender="masculine"
                         case="nominative"
                         head="true">δέσμιος</w>
-                     <wg class="np" rule="Np-Appos">
+                     <wg class="np" rule="Np-Appos" xml:id="570010010030020">
                         <w ref="PHM 1:1!3"
                            class="noun"
                            type="proper"
@@ -64,7 +68,7 @@
                   lemma="καί"
                   normalized="καί"
                   strong="2532">καὶ</w>
-               <wg class="np" rule="Np-Appos">
+               <wg class="np" rule="Np-Appos" xml:id="570010010060030">
                   <w ref="PHM 1:1!6"
                      class="noun"
                      type="proper"
@@ -76,7 +80,10 @@
                      gender="masculine"
                      case="nominative"
                      head="true">Τιμόθεος</w>
-                  <wg class="np" articular="true" rule="DetNP">
+                  <wg class="np"
+                      articular="true"
+                      rule="DetNP"
+                      xml:id="570010010070020">
                      <w ref="PHM 1:1!7"
                         class="det"
                         xml:id="n57001001007"
@@ -100,8 +107,8 @@
                   </wg>
                </wg>
             </wg>
-            <wg role="io" class="np" rule="Conj4Np">
-               <wg class="np" head="true" rule="Np-Appos">
+            <wg role="io" xml:id="570010010090211" class="np" rule="Conj4Np">
+               <wg class="np" head="true" rule="Np-Appos" xml:id="570010010090060">
                   <w ref="PHM 1:1!9"
                      class="noun"
                      type="proper"
@@ -113,7 +120,10 @@
                      gender="masculine"
                      case="dative"
                      head="true">Φιλήμονι</w>
-                  <wg class="np" articular="true" rule="DetNP">
+                  <wg class="np"
+                      articular="true"
+                      rule="DetNP"
+                      xml:id="570010010100050">
                      <w ref="PHM 1:1!10"
                         class="det"
                         xml:id="n57001001010"
@@ -123,9 +133,12 @@
                         number="singular"
                         gender="masculine"
                         case="dative">τῷ</w>
-                     <wg class="np" head="true" rule="NPofNP">
-                        <wg class="np" head="true" rule="Adj2NP">
-                           <wg class="adjp" head="true" rule="AdjpaAdjp">
+                     <wg class="np" head="true" rule="NPofNP" xml:id="570010010110040">
+                        <wg class="np" head="true" rule="Adj2NP" xml:id="570010010110031">
+                           <wg class="adjp"
+                               head="true"
+                               rule="AdjpaAdjp"
+                               xml:id="570010010110030">
                               <w ref="PHM 1:1!11"
                                  class="adj"
                                  xml:id="n57001001011"
@@ -171,7 +184,7 @@
                   lemma="καί"
                   normalized="καί"
                   strong="2532">καὶ</w>
-               <wg class="np" rule="Np-Appos">
+               <wg class="np" rule="Np-Appos" xml:id="570010020020030">
                   <w ref="PHM 1:2!2"
                      class="noun"
                      type="proper"
@@ -183,7 +196,10 @@
                      gender="feminine"
                      case="dative"
                      head="true">Ἀπφίᾳ</w>
-                  <wg class="np" articular="true" rule="DetNP">
+                  <wg class="np"
+                      articular="true"
+                      rule="DetNP"
+                      xml:id="570010020030020">
                      <w ref="PHM 1:2!3"
                         class="det"
                         xml:id="n57001002003"
@@ -212,7 +228,7 @@
                   lemma="καί"
                   normalized="καί"
                   strong="2532">καὶ</w>
-               <wg class="np" rule="Np-Appos">
+               <wg class="np" rule="Np-Appos" xml:id="570010020060040">
                   <w ref="PHM 1:2!6"
                      class="noun"
                      type="proper"
@@ -224,7 +240,10 @@
                      gender="masculine"
                      case="dative"
                      head="true">Ἀρχίππῳ</w>
-                  <wg class="np" articular="true" rule="DetNP">
+                  <wg class="np"
+                      articular="true"
+                      rule="DetNP"
+                      xml:id="570010020070030">
                      <w ref="PHM 1:2!7"
                         class="det"
                         xml:id="n57001002007"
@@ -234,7 +253,7 @@
                         number="singular"
                         gender="masculine"
                         case="dative">τῷ</w>
-                     <wg class="np" head="true" rule="NPofNP">
+                     <wg class="np" head="true" rule="NPofNP" xml:id="570010020080020">
                         <w ref="PHM 1:2!8"
                            class="noun"
                            type="common"
@@ -264,7 +283,10 @@
                   lemma="καί"
                   normalized="καί"
                   strong="2532">καὶ</w>
-               <wg class="np" articular="true" rule="DetNP">
+               <wg class="np"
+                   articular="true"
+                   rule="DetNP"
+                   xml:id="570010020110050">
                   <w ref="PHM 1:2!11"
                      class="det"
                      xml:id="n57001002011"
@@ -274,15 +296,15 @@
                      number="singular"
                      gender="feminine"
                      case="dative">τῇ</w>
-                  <wg class="np" head="true" rule="PpNp2Np">
-                     <wg class="pp" rule="PrepNp">
+                  <wg class="np" head="true" rule="PpNp2Np" xml:id="570010020120040">
+                     <wg class="pp" rule="PrepNp" xml:id="570010020120030">
                         <w ref="PHM 1:2!12"
                            class="prep"
                            xml:id="n57001002012"
                            lemma="κατά"
                            normalized="κατ’"
                            strong="2596">κατ’</w>
-                        <wg class="np" head="true" rule="NPofNP">
+                        <wg class="np" head="true" rule="NPofNP" xml:id="570010020130020">
                            <w ref="PHM 1:2!13"
                               class="noun"
                               type="common"
@@ -326,7 +348,7 @@
       <p>
          <milestone unit="verse" id="PHM 1:3">PHM 1:3</milestone> χάρις ὑμῖν καὶ εἰρήνη ἀπὸ Θεοῦ Πατρὸς ἡμῶν καὶ Κυρίου Ἰησοῦ Χριστοῦ.</p>
       <wg role="cl">
-         <wg class="cl" rule="IO-S-ADV">
+         <wg class="cl" rule="IO-S-ADV" xml:id="570010030020120">
             <w role="io"
                ref="PHM 1:3!2"
                class="pron"
@@ -338,7 +360,11 @@
                number="plural"
                case="dative"
                discontinuous="true">ὑμῖν</w>
-            <wg role="s" class="np" head="true" rule="NpaNp">
+            <wg role="s"
+                xml:id="570010030010031"
+                class="np"
+                head="true"
+                rule="NpaNp">
                <w ref="PHM 1:3!1"
                   class="noun"
                   type="common"
@@ -367,15 +393,15 @@
                   gender="feminine"
                   case="nominative">εἰρήνη</w>
             </wg>
-            <wg role="adv" class="pp" rule="PrepNp">
+            <wg role="adv" xml:id="570010030050081" class="pp" rule="PrepNp">
                <w ref="PHM 1:3!5"
                   class="prep"
                   xml:id="n57001003005"
                   lemma="ἀπό"
                   normalized="ἀπό"
                   strong="575">ἀπὸ</w>
-               <wg class="np" head="true" rule="NpaNp">
-                  <wg class="np" head="true" rule="Np-Appos">
+               <wg class="np" head="true" rule="NpaNp" xml:id="570010030060070">
+                  <wg class="np" head="true" rule="Np-Appos" xml:id="570010030060030">
                      <w ref="PHM 1:3!6"
                         class="noun"
                         type="common"
@@ -387,7 +413,7 @@
                         gender="masculine"
                         case="genitive"
                         head="true">Θεοῦ</w>
-                     <wg class="np" rule="NPofNP">
+                     <wg class="np" rule="NPofNP" xml:id="570010030070020">
                         <w ref="PHM 1:3!7"
                            class="noun"
                            type="common"
@@ -416,7 +442,7 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532">καὶ</w>
-                  <wg class="np" rule="Np-Appos">
+                  <wg class="np" rule="Np-Appos" xml:id="570010030100030">
                      <w ref="PHM 1:3!10"
                         class="noun"
                         type="common"
@@ -428,7 +454,7 @@
                         gender="masculine"
                         case="genitive"
                         head="true">Κυρίου</w>
-                     <wg class="np" rule="Np-Appos">
+                     <wg class="np" rule="Np-Appos" xml:id="570010030110020">
                         <w ref="PHM 1:3!11"
                            class="noun"
                            type="proper"
@@ -463,8 +489,11 @@
          <milestone unit="verse" id="PHM 1:5">PHM 1:5</milestone> 
          <milestone unit="verse" id="PHM 1:6">PHM 1:6</milestone> Εὐχαριστῶ τῷ Θεῷ μου πάντοτε μνείαν σου ποιούμενος ἐπὶ τῶν προσευχῶν μου, ἀκούων σου τὴν ἀγάπην καὶ τὴν πίστιν ἣν ἔχεις πρὸς τὸν Κύριον Ἰησοῦν καὶ εἰς πάντας τοὺς ἁγίους, ὅπως ἡ κοινωνία τῆς πίστεώς σου ἐνεργὴς γένηται ἐν ἐπιγνώσει παντὸς ἀγαθοῦ τοῦ ἐν ἡμῖν εἰς Χριστόν·</p>
       <wg role="cl">
-         <wg class="cl" rule="ClCl">
-            <wg class="cl" head="true" rule="V-O-ADV-ADV-ADV">
+         <wg class="cl" rule="ClCl" xml:id="570010040010470">
+            <wg class="cl"
+                head="true"
+                rule="V-O-ADV-ADV-ADV"
+                xml:id="570010040010300">
                <w role="v"
                   ref="PHM 1:4!1"
                   class="verb"
@@ -478,7 +507,11 @@
                   voice="active"
                   mood="indicative"
                   head="true">Εὐχαριστῶ</w>
-               <wg role="o" class="np" articular="true" rule="DetNP">
+               <wg role="o"
+                   xml:id="570010040020031"
+                   class="np"
+                   articular="true"
+                   rule="DetNP">
                   <w ref="PHM 1:4!2"
                      class="det"
                      xml:id="n57001004002"
@@ -488,7 +521,7 @@
                      number="singular"
                      gender="masculine"
                      case="dative">τῷ</w>
-                  <wg class="np" head="true" rule="NPofNP">
+                  <wg class="np" head="true" rule="NPofNP" xml:id="570010040030020">
                      <w ref="PHM 1:4!3"
                         class="noun"
                         type="common"
@@ -518,8 +551,8 @@
                   lemma="πάντοτε"
                   normalized="πάντοτε"
                   strong="3842">πάντοτε</w>
-               <wg role="adv" class="cl" rule="O-V-ADV">
-                  <wg role="o" class="np" rule="NPofNP">
+               <wg role="adv" xml:id="570010040060071" class="cl" rule="O-V-ADV">
+                  <wg role="o" xml:id="570010040060021" class="np" rule="NPofNP">
                      <w ref="PHM 1:4!6"
                         class="noun"
                         type="common"
@@ -556,14 +589,22 @@
                      mood="participle"
                      type="?"
                      head="true">ποιούμενος</w>
-                  <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                  <wg role="adv"
+                      xml:id="570010040090041"
+                      class="pp"
+                      articular="true"
+                      rule="PrepNp">
                      <w ref="PHM 1:4!9"
                         class="prep"
                         xml:id="n57001004009"
                         lemma="ἐπί"
                         normalized="ἐπί"
                         strong="1909">ἐπὶ</w>
-                     <wg class="np" articular="true" head="true" rule="DetNP">
+                     <wg class="np"
+                         articular="true"
+                         head="true"
+                         rule="DetNP"
+                         xml:id="570010040100030">
                         <w ref="PHM 1:4!10"
                            class="det"
                            xml:id="n57001004010"
@@ -573,7 +614,7 @@
                            number="plural"
                            gender="feminine"
                            case="genitive">τῶν</w>
-                        <wg class="np" head="true" rule="NPofNP">
+                        <wg class="np" head="true" rule="NPofNP" xml:id="570010040110020">
                            <w ref="PHM 1:4!11"
                               class="noun"
                               type="common"
@@ -598,7 +639,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg role="adv" class="cl" rule="V-O">
+               <wg role="adv" xml:id="570010050010181" class="cl" rule="V-O">
                   <w role="v"
                      ref="PHM 1:5!1"
                      class="verb"
@@ -614,8 +655,16 @@
                      mood="participle"
                      type="?"
                      head="true">ἀκούων</w>
-                  <wg role="o" class="np" articular="true" rule="NP-CL">
-                     <wg class="np" articular="true" head="true" rule="ofNPNP">
+                  <wg role="o"
+                      xml:id="570010050020171"
+                      class="np"
+                      articular="true"
+                      rule="NP-CL">
+                     <wg class="np"
+                         articular="true"
+                         head="true"
+                         rule="ofNPNP"
+                         xml:id="570010050020060">
                         <w ref="PHM 1:5!2"
                            class="pron"
                            type="personal"
@@ -625,8 +674,16 @@
                            strong="4771"
                            number="singular"
                            case="genitive">σου</w>
-                        <wg class="np" articular="true" head="true" rule="NpaNp">
-                           <wg class="np" articular="true" head="true" rule="DetNP">
+                        <wg class="np"
+                            articular="true"
+                            head="true"
+                            rule="NpaNp"
+                            xml:id="570010050030050">
+                           <wg class="np"
+                               articular="true"
+                               head="true"
+                               rule="DetNP"
+                               xml:id="570010050030020">
                               <w ref="PHM 1:5!3"
                                  class="det"
                                  xml:id="n57001005003"
@@ -654,7 +711,10 @@
                               lemma="καί"
                               normalized="καί"
                               strong="2532">καὶ</w>
-                           <wg class="np" articular="true" rule="DetNP">
+                           <wg class="np"
+                               articular="true"
+                               rule="DetNP"
+                               xml:id="570010050060020">
                               <w ref="PHM 1:5!6"
                                  class="det"
                                  xml:id="n57001005006"
@@ -678,7 +738,7 @@
                            </wg>
                         </wg>
                      </wg>
-                     <wg class="cl" rule="O-V-ADV">
+                     <wg class="cl" rule="O-V-ADV" xml:id="570010050080110">
                         <w role="o"
                            ref="PHM 1:5!8"
                            class="pron"
@@ -703,16 +763,32 @@
                            voice="active"
                            mood="indicative"
                            head="true">ἔχεις</w>
-                        <wg role="adv" class="pp" articular="true" rule="Conj2Pp">
-                           <wg class="pp" articular="true" head="true" rule="PrepNp">
+                        <wg role="adv"
+                            xml:id="570010050100091"
+                            class="pp"
+                            articular="true"
+                            rule="Conj2Pp">
+                           <wg class="pp"
+                               articular="true"
+                               head="true"
+                               rule="PrepNp"
+                               xml:id="570010050100040">
                               <w ref="PHM 1:5!10"
                                  class="prep"
                                  xml:id="n57001005010"
                                  lemma="πρός"
                                  normalized="πρός"
                                  strong="4314">πρὸς</w>
-                              <wg class="np" articular="true" head="true" rule="Np-Appos">
-                                 <wg class="np" articular="true" head="true" rule="DetNP">
+                              <wg class="np"
+                                  articular="true"
+                                  head="true"
+                                  rule="Np-Appos"
+                                  xml:id="570010050110030">
+                                 <wg class="np"
+                                     articular="true"
+                                     head="true"
+                                     rule="DetNP"
+                                     xml:id="570010050110020">
                                     <w ref="PHM 1:5!11"
                                        class="det"
                                        xml:id="n57001005011"
@@ -752,14 +828,21 @@
                               lemma="καί"
                               normalized="καί"
                               strong="2532">καὶ</w>
-                           <wg class="pp" articular="true" rule="PrepNp">
+                           <wg class="pp"
+                               articular="true"
+                               rule="PrepNp"
+                               xml:id="570010050150040">
                               <w ref="PHM 1:5!15"
                                  class="prep"
                                  xml:id="n57001005015"
                                  lemma="εἰς"
                                  normalized="εἰς"
                                  strong="1519">εἰς</w>
-                              <wg class="np" articular="true" head="true" rule="All-NP">
+                              <wg class="np"
+                                  articular="true"
+                                  head="true"
+                                  rule="All-NP"
+                                  xml:id="570010050160030">
                                  <w ref="PHM 1:5!16"
                                     class="adj"
                                     xml:id="n57001005016"
@@ -769,7 +852,11 @@
                                     number="plural"
                                     gender="masculine"
                                     case="accusative">πάντας</w>
-                                 <wg class="np" articular="true" head="true" rule="DetAdj">
+                                 <wg class="np"
+                                     articular="true"
+                                     head="true"
+                                     rule="DetAdj"
+                                     xml:id="570010050170020">
                                     <w ref="PHM 1:5!17"
                                        class="det"
                                        xml:id="n57001005017"
@@ -797,15 +884,19 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="570010060010170">
                <w ref="PHM 1:6!1"
                   class="conj"
                   xml:id="n57001006001"
                   lemma="ὅπως"
                   normalized="ὅπως"
                   strong="3704">ὅπως</w>
-               <wg class="cl" rule="S-P-VC-ADV">
-                  <wg role="s" class="np" articular="true" rule="DetNP">
+               <wg class="cl" rule="S-P-VC-ADV" xml:id="570010060020160">
+                  <wg role="s"
+                      xml:id="570010060020051"
+                      class="np"
+                      articular="true"
+                      rule="DetNP">
                      <w ref="PHM 1:6!2"
                         class="det"
                         xml:id="n57001006002"
@@ -815,7 +906,7 @@
                         number="singular"
                         gender="feminine"
                         case="nominative">ἡ</w>
-                     <wg class="np" head="true" rule="NPofNP">
+                     <wg class="np" head="true" rule="NPofNP" xml:id="570010060030040">
                         <w ref="PHM 1:6!3"
                            class="noun"
                            type="common"
@@ -827,7 +918,10 @@
                            gender="feminine"
                            case="nominative"
                            head="true">κοινωνία</w>
-                        <wg class="np" articular="true" rule="DetNP">
+                        <wg class="np"
+                            articular="true"
+                            rule="DetNP"
+                            xml:id="570010060040030">
                            <w ref="PHM 1:6!4"
                               class="det"
                               xml:id="n57001006004"
@@ -837,7 +931,7 @@
                               number="singular"
                               gender="feminine"
                               case="genitive">τῆς</w>
-                           <wg class="np" head="true" rule="NPofNP">
+                           <wg class="np" head="true" rule="NPofNP" xml:id="570010060050020">
                               <w ref="PHM 1:6!5"
                                  class="noun"
                                  type="common"
@@ -885,14 +979,14 @@
                      tense="aorist"
                      voice="middle"
                      mood="subjunctive">γένηται</w>
-                  <wg role="adv" class="pp" rule="PrepNp">
+                  <wg role="adv" xml:id="570010060090091" class="pp" rule="PrepNp">
                      <w ref="PHM 1:6!9"
                         class="prep"
                         xml:id="n57001006009"
                         lemma="ἐν"
                         normalized="ἐν"
                         strong="1722">ἐν</w>
-                     <wg class="np" head="true" rule="NPofNP">
+                     <wg class="np" head="true" rule="NPofNP" xml:id="570010060100080">
                         <w ref="PHM 1:6!10"
                            class="noun"
                            type="common"
@@ -904,7 +998,7 @@
                            gender="feminine"
                            case="dative"
                            head="true">ἐπιγνώσει</w>
-                        <wg class="np" rule="All-NP">
+                        <wg class="np" rule="All-NP" xml:id="570010060110070">
                            <w ref="PHM 1:6!11"
                               class="adj"
                               xml:id="n57001006011"
@@ -914,7 +1008,7 @@
                               number="singular"
                               gender="neuter"
                               case="genitive">παντὸς</w>
-                           <wg class="np" head="true" rule="Np-Appos">
+                           <wg class="np" head="true" rule="Np-Appos" xml:id="570010060120060">
                               <w ref="PHM 1:6!12"
                                  class="adj"
                                  xml:id="n57001006012"
@@ -925,7 +1019,7 @@
                                  gender="neuter"
                                  case="genitive"
                                  head="true">ἀγαθοῦ</w>
-                              <wg class="np" rule="NpPp">
+                              <wg class="np" rule="NpPp" xml:id="570010060130050">
                                  <w ref="PHM 1:6!13"
                                     class="det"
                                     xml:id="n57001006013"
@@ -936,8 +1030,8 @@
                                     gender="neuter"
                                     case="genitive"
                                     head="true">τοῦ</w>
-                                 <wg class="pp" rule="2Pp">
-                                    <wg class="pp" head="true" rule="PrepNp">
+                                 <wg class="pp" rule="2Pp" xml:id="570010060140040">
+                                    <wg class="pp" head="true" rule="PrepNp" xml:id="570010060140020">
                                        <w ref="PHM 1:6!14"
                                           class="prep"
                                           xml:id="n57001006014"
@@ -955,7 +1049,7 @@
                                           case="dative"
                                           head="true">ἡμῖν</w>
                                     </wg>
-                                    <wg class="pp" rule="PrepNp">
+                                    <wg class="pp" rule="PrepNp" xml:id="570010060160020">
                                        <w ref="PHM 1:6!16"
                                           class="prep"
                                           xml:id="n57001006016"
@@ -989,7 +1083,7 @@
       <p>
          <milestone unit="verse" id="PHM 1:7">PHM 1:7</milestone> χαρὰν γὰρ πολλὴν ἔσχον καὶ παράκλησιν ἐπὶ τῇ ἀγάπῃ σου, ὅτι τὰ σπλάγχνα τῶν ἁγίων ἀναπέπαυται διὰ σοῦ, ἀδελφέ.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="570010070020190">
             <w ref="PHM 1:7!2"
                class="conj"
                xml:id="n57001007002"
@@ -997,9 +1091,9 @@
                normalized="γάρ"
                strong="1063"
                discontinuous="true">γὰρ</w>
-            <wg class="cl" head="true" rule="O-V-ADV">
-               <wg role="o" class="np" rule="NpaNp">
-                  <wg class="np" head="true" rule="NpAdjp">
+            <wg class="cl" head="true" rule="O-V-ADV" xml:id="570010070010090">
+               <wg role="o" xml:id="570010070010041" class="np" rule="NpaNp">
+                  <wg class="np" head="true" rule="NpAdjp" xml:id="570010070010020">
                      <w ref="PHM 1:7!1"
                         class="noun"
                         type="common"
@@ -1052,14 +1146,22 @@
                   voice="active"
                   mood="indicative"
                   head="true">ἔσχον</w>
-               <wg role="adv" class="pp" articular="true" rule="PrepNp">
+               <wg role="adv"
+                   xml:id="570010070070041"
+                   class="pp"
+                   articular="true"
+                   rule="PrepNp">
                   <w ref="PHM 1:7!7"
                      class="prep"
                      xml:id="n57001007007"
                      lemma="ἐπί"
                      normalized="ἐπί"
                      strong="1909">ἐπὶ</w>
-                  <wg class="np" articular="true" head="true" rule="DetNP">
+                  <wg class="np"
+                      articular="true"
+                      head="true"
+                      rule="DetNP"
+                      xml:id="570010070080030">
                      <w ref="PHM 1:7!8"
                         class="det"
                         xml:id="n57001007008"
@@ -1069,7 +1171,7 @@
                         number="singular"
                         gender="feminine"
                         case="dative">τῇ</w>
-                     <wg class="np" head="true" rule="NPofNP">
+                     <wg class="np" head="true" rule="NPofNP" xml:id="570010070090020">
                         <w ref="PHM 1:7!9"
                            class="noun"
                            type="common"
@@ -1094,15 +1196,19 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="570010070110080">
                <w ref="PHM 1:7!11"
                   class="conj"
                   xml:id="n57001007011"
                   lemma="ὅτι"
                   normalized="ὅτι"
                   strong="3754">ὅτι</w>
-               <wg class="cl" rule="S-V-ADV">
-                  <wg role="s" class="np" articular="true" rule="DetNP">
+               <wg class="cl" rule="S-V-ADV" xml:id="570010070120070">
+                  <wg role="s"
+                      xml:id="570010070120041"
+                      class="np"
+                      articular="true"
+                      rule="DetNP">
                      <w ref="PHM 1:7!12"
                         class="det"
                         xml:id="n57001007012"
@@ -1112,7 +1218,7 @@
                         number="plural"
                         gender="neuter"
                         case="nominative">τὰ</w>
-                     <wg class="np" head="true" rule="NPofNP">
+                     <wg class="np" head="true" rule="NPofNP" xml:id="570010070130030">
                         <w ref="PHM 1:7!13"
                            class="noun"
                            type="common"
@@ -1124,7 +1230,10 @@
                            gender="neuter"
                            case="nominative"
                            head="true">σπλάγχνα</w>
-                        <wg class="np" articular="true" rule="DetAdj">
+                        <wg class="np"
+                            articular="true"
+                            rule="DetAdj"
+                            xml:id="570010070140020">
                            <w ref="PHM 1:7!14"
                               class="det"
                               xml:id="n57001007014"
@@ -1160,7 +1269,7 @@
                      voice="passive"
                      mood="indicative"
                      head="true">ἀναπέπαυται</w>
-                  <wg role="adv" class="pp" rule="PrepNp">
+                  <wg role="adv" xml:id="570010070170021" class="pp" rule="PrepNp">
                      <w ref="PHM 1:7!17"
                         class="prep"
                         xml:id="n57001007017"
@@ -1180,7 +1289,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" rule="Np2CL">
+            <wg class="cl" rule="Np2CL" xml:id="570010070190012">
                <w ref="PHM 1:7!19"
                   class="noun"
                   type="common"
@@ -1200,16 +1309,16 @@
          <milestone unit="verse" id="PHM 1:8">PHM 1:8</milestone> 
          <milestone unit="verse" id="PHM 1:9">PHM 1:9</milestone> Διό, πολλὴν ἐν Χριστῷ παρρησίαν ἔχων ἐπιτάσσειν σοι τὸ ἀνῆκον, διὰ τὴν ἀγάπην μᾶλλον παρακαλῶ, τοιοῦτος ὢν ὡς Παῦλος πρεσβύτης νυνὶ δὲ καὶ δέσμιος Χριστοῦ Ἰησοῦ,</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="570010080010260">
             <w ref="PHM 1:8!1"
                class="conj"
                xml:id="n57001008001"
                lemma="διό"
                normalized="Διό"
                strong="1352">Διό,</w>
-            <wg class="cl" rule="ADV-ADV-ADV-V-ADV">
-               <wg role="adv" class="cl" rule="O-V-ADV">
-                  <wg role="o" class="np" rule="AdjpNp">
+            <wg class="cl" rule="ADV-ADV-ADV-V-ADV" xml:id="570010080020250">
+               <wg role="adv" xml:id="570010080020091" class="cl" rule="O-V-ADV">
+                  <wg role="o" xml:id="570010080020041" class="np" rule="AdjpNp">
                      <w ref="PHM 1:8!2"
                         class="adj"
                         xml:id="n57001008002"
@@ -1219,8 +1328,8 @@
                         number="singular"
                         gender="feminine"
                         case="accusative">πολλὴν</w>
-                     <wg class="np" head="true" rule="PpNp2Np">
-                        <wg class="pp" rule="PrepNp">
+                     <wg class="np" head="true" rule="PpNp2Np" xml:id="570010080030030">
+                        <wg class="pp" rule="PrepNp" xml:id="570010080030020">
                            <w ref="PHM 1:8!3"
                               class="prep"
                               xml:id="n57001008003"
@@ -1267,7 +1376,7 @@
                      mood="participle"
                      type="?"
                      head="true">ἔχων</w>
-                  <wg role="adv" class="cl" rule="V-IO-O">
+                  <wg role="adv" xml:id="570010080070041" class="cl" rule="V-IO-O">
                      <w role="v"
                         ref="PHM 1:8!7"
                         class="verb"
@@ -1290,7 +1399,11 @@
                         strong="4771"
                         number="singular"
                         case="dative">σοι</w>
-                     <wg role="o" class="np" articular="true" rule="DetCL">
+                     <wg role="o"
+                         xml:id="570010080090021"
+                         class="np"
+                         articular="true"
+                         rule="DetCL">
                         <w ref="PHM 1:8!9"
                            class="det"
                            xml:id="n57001008009"
@@ -1300,7 +1413,7 @@
                            number="singular"
                            gender="neuter"
                            case="accusative">τὸ</w>
-                        <wg class="cl" head="true" rule="V2CL">
+                        <wg class="cl" head="true" rule="V2CL" xml:id="570010080100013">
                            <w role="v"
                               ref="PHM 1:8!10"
                               class="verb"
@@ -1320,14 +1433,22 @@
                      </wg>
                   </wg>
                </wg>
-               <wg role="adv" class="pp" articular="true" rule="PrepNp">
+               <wg role="adv"
+                   xml:id="570010090010031"
+                   class="pp"
+                   articular="true"
+                   rule="PrepNp">
                   <w ref="PHM 1:9!1"
                      class="prep"
                      xml:id="n57001009001"
                      lemma="διά"
                      normalized="διά"
                      strong="1223">διὰ</w>
-                  <wg class="np" articular="true" head="true" rule="DetNP">
+                  <wg class="np"
+                      articular="true"
+                      head="true"
+                      rule="DetNP"
+                      xml:id="570010090020020">
                      <w ref="PHM 1:9!2"
                         class="det"
                         xml:id="n57001009002"
@@ -1370,8 +1491,8 @@
                   voice="active"
                   mood="indicative"
                   head="true">παρακαλῶ,</w>
-               <wg role="adv" class="cl" rule="CLaCL">
-                  <wg class="cl" head="true" rule="P-VC-ADV">
+               <wg role="adv" xml:id="570010090060111" class="cl" rule="CLaCL">
+                  <wg class="cl" head="true" rule="P-VC-ADV" xml:id="570010090060050">
                      <w role="p"
                         ref="PHM 1:9!6"
                         class="pron"
@@ -1398,14 +1519,14 @@
                         voice="active"
                         mood="participle"
                         type="?">ὢν</w>
-                     <wg role="adv" class="pp" rule="PrepNp">
+                     <wg role="adv" xml:id="570010090080031" class="pp" rule="PrepNp">
                         <w ref="PHM 1:9!8"
                            class="conj"
                            xml:id="n57001009008"
                            lemma="ὡς"
                            normalized="ὡς"
                            strong="5613">ὡς</w>
-                        <wg class="np" head="true" rule="Np-Appos">
+                        <wg class="np" head="true" rule="Np-Appos" xml:id="570010090090020">
                            <w ref="PHM 1:9!9"
                               class="noun"
                               type="proper"
@@ -1437,7 +1558,7 @@
                      normalized="δέ"
                      strong="1161"
                      discontinuous="true">δὲ</w>
-                  <wg class="cl" rule="ADV-P">
+                  <wg class="cl" rule="ADV-P" xml:id="570010090110050">
                      <w role="adv"
                         ref="PHM 1:9!11"
                         class="adv"
@@ -1445,14 +1566,18 @@
                         lemma="νυνί"
                         normalized="νυνί"
                         strong="3570">νυνὶ</w>
-                     <wg role="p" class="np" head="true" rule="AdvpNp">
+                     <wg role="p"
+                         xml:id="570010090130041"
+                         class="np"
+                         head="true"
+                         rule="AdvpNp">
                         <w ref="PHM 1:9!13"
                            class="adv"
                            xml:id="n57001009013"
                            lemma="καί"
                            normalized="καί"
                            strong="2532">καὶ</w>
-                        <wg class="np" head="true" rule="NPofNP">
+                        <wg class="np" head="true" rule="NPofNP" xml:id="570010090140030">
                            <w ref="PHM 1:9!14"
                               class="noun"
                               type="common"
@@ -1464,7 +1589,7 @@
                               gender="masculine"
                               case="nominative"
                               head="true">δέσμιος</w>
-                           <wg class="np" rule="Np-Appos">
+                           <wg class="np" rule="Np-Appos" xml:id="570010090150020">
                               <w ref="PHM 1:9!15"
                                  class="noun"
                                  type="proper"
@@ -1502,7 +1627,7 @@
          <milestone unit="verse" id="PHM 1:12">PHM 1:12</milestone> 
          <milestone unit="verse" id="PHM 1:13">PHM 1:13</milestone> παρακαλῶ σε περὶ τοῦ ἐμοῦ τέκνου, ὃν ἐγέννησα ἐν τοῖς δεσμοῖς, Ὀνήσιμον, τόν ποτέ σοι ἄχρηστον νυνὶ δὲ καὶ σοὶ καὶ ἐμοὶ εὔχρηστον, ὃν ἀνέπεμψά σοι αὐτόν, τοῦτ’ ἔστιν τὰ ἐμὰ σπλάγχνα· ὃν ἐγὼ ἐβουλόμην πρὸς ἐμαυτὸν κατέχειν, ἵνα ὑπὲρ σοῦ μοι διακονῇ ἐν τοῖς δεσμοῖς τοῦ εὐαγγελίου,</p>
       <wg role="cl">
-         <wg class="cl" rule="V-O-ADV">
+         <wg class="cl" rule="V-O-ADV" xml:id="570010100010480">
             <w role="v"
                ref="PHM 1:10!1"
                class="verb"
@@ -1526,15 +1651,27 @@
                strong="4771"
                number="singular"
                case="accusative">σε</w>
-            <wg role="adv" class="pp" articular="true" rule="PrepNp">
+            <wg role="adv"
+                xml:id="570010100030461"
+                class="pp"
+                articular="true"
+                rule="PrepNp">
                <w ref="PHM 1:10!3"
                   class="prep"
                   xml:id="n57001010003"
                   lemma="περί"
                   normalized="περί"
                   strong="4012">περὶ</w>
-               <wg class="np" articular="true" head="true" rule="NP-CL">
-                  <wg class="np" articular="true" head="true" rule="DetNP">
+               <wg class="np"
+                   articular="true"
+                   head="true"
+                   rule="NP-CL"
+                   xml:id="570010100040450">
+                  <wg class="np"
+                      articular="true"
+                      head="true"
+                      rule="DetNP"
+                      xml:id="570010100040030">
                      <w ref="PHM 1:10!4"
                         class="det"
                         xml:id="n57001010004"
@@ -1544,7 +1681,7 @@
                         number="singular"
                         gender="neuter"
                         case="genitive">τοῦ</w>
-                     <wg class="np" head="true" rule="AdjpNp">
+                     <wg class="np" head="true" rule="AdjpNp" xml:id="570010100050020">
                         <w ref="PHM 1:10!5"
                            class="adj"
                            xml:id="n57001010005"
@@ -1567,7 +1704,7 @@
                            head="true">τέκνου,</w>
                      </wg>
                   </wg>
-                  <wg class="cl" rule="V-ADV-O">
+                  <wg class="cl" rule="V-ADV-O" xml:id="570010100080420">
                      <w role="v"
                         ref="PHM 1:10!8"
                         class="verb"
@@ -1581,14 +1718,22 @@
                         voice="active"
                         mood="indicative"
                         head="true">ἐγέννησα</w>
-                     <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                     <wg role="adv"
+                         xml:id="570010100090031"
+                         class="pp"
+                         articular="true"
+                         rule="PrepNp">
                         <w ref="PHM 1:10!9"
                            class="prep"
                            xml:id="n57001010009"
                            lemma="ἐν"
                            normalized="ἐν"
                            strong="1722">ἐν</w>
-                        <wg class="np" articular="true" head="true" rule="DetNP">
+                        <wg class="np"
+                            articular="true"
+                            head="true"
+                            rule="DetNP"
+                            xml:id="570010100100020">
                            <w ref="PHM 1:10!10"
                               class="det"
                               xml:id="n57001010010"
@@ -1612,7 +1757,7 @@
                               discontinuous="true">δεσμοῖς,</w>
                         </wg>
                      </wg>
-                     <wg role="o" class="np" rule="PronNP">
+                     <wg role="o" xml:id="570010100070381" class="np" rule="PronNP">
                         <w ref="PHM 1:10!7"
                            class="pron"
                            type="relative"
@@ -1623,9 +1768,9 @@
                            number="singular"
                            gender="masculine"
                            case="accusative">ὃν</w>
-                        <wg class="np" head="true" rule="NP-CL">
-                           <wg class="np" head="true" rule="NP-CL">
-                              <wg class="np" head="true" rule="Np-Appos">
+                        <wg class="np" head="true" rule="NP-CL" xml:id="570010100120370">
+                           <wg class="np" head="true" rule="NP-CL" xml:id="570010100120210">
+                              <wg class="np" head="true" rule="Np-Appos" xml:id="570010100120120">
                                  <w ref="PHM 1:10!12"
                                     class="noun"
                                     type="proper"
@@ -1637,7 +1782,10 @@
                                     gender="masculine"
                                     case="accusative"
                                     head="true">Ὀνήσιμον,</w>
-                                 <wg class="np" articular="true" rule="DetAdj">
+                                 <wg class="np"
+                                     articular="true"
+                                     rule="DetAdj"
+                                     xml:id="570010110010110">
                                     <w ref="PHM 1:11!1"
                                        class="det"
                                        xml:id="n57001011001"
@@ -1647,15 +1795,24 @@
                                        number="singular"
                                        gender="masculine"
                                        case="accusative">τόν</w>
-                                    <wg class="adjp" head="true" rule="AdjpaAdjp">
-                                       <wg class="adjp" head="true" rule="AdvpAdjp">
+                                    <wg class="adjp"
+                                        head="true"
+                                        rule="AdjpaAdjp"
+                                        xml:id="570010110020100">
+                                       <wg class="adjp"
+                                           head="true"
+                                           rule="AdvpAdjp"
+                                           xml:id="570010110020030">
                                           <w ref="PHM 1:11!2"
                                              class="adv"
                                              xml:id="n57001011002"
                                              lemma="ποτέ"
                                              normalized="ποτέ"
                                              strong="4218">ποτέ</w>
-                                          <wg class="adjp" head="true" rule="DativeAdjp">
+                                          <wg class="adjp"
+                                              head="true"
+                                              rule="DativeAdjp"
+                                              xml:id="570010110030020">
                                              <w ref="PHM 1:11!3"
                                                 class="pron"
                                                 type="personal"
@@ -1684,15 +1841,18 @@
                                           normalized="δέ"
                                           strong="1161"
                                           discontinuous="true">δὲ</w>
-                                       <wg class="adjp" rule="AdvpAdjp">
+                                       <wg class="adjp" rule="AdvpAdjp" xml:id="570010110050060">
                                           <w ref="PHM 1:11!5"
                                              class="adv"
                                              xml:id="n57001011005"
                                              lemma="νυνί"
                                              normalized="νυνί"
                                              strong="3570">νυνὶ</w>
-                                          <wg class="adjp" head="true" rule="DativeAdjp">
-                                             <wg class="np" rule="aNpaNp">
+                                          <wg class="adjp"
+                                              head="true"
+                                              rule="DativeAdjp"
+                                              xml:id="570010110070050">
+                                             <wg class="np" rule="aNpaNp" xml:id="570010110070040">
                                                 <w ref="PHM 1:11!7"
                                                    class="conj"
                                                    xml:id="n57001011007"
@@ -1740,7 +1900,7 @@
                                     </wg>
                                  </wg>
                               </wg>
-                              <wg class="cl" rule="V-IO-O">
+                              <wg class="cl" rule="V-IO-O" xml:id="570010120020090">
                                  <w role="v"
                                     ref="PHM 1:12!2"
                                     class="verb"
@@ -1765,7 +1925,7 @@
                                     number="singular"
                                     case="dative"
                                     discontinuous="true">σοι</w>
-                                 <wg role="o" class="np" rule="PronNP">
+                                 <wg role="o" xml:id="570010120010071" class="np" rule="PronNP">
                                     <w ref="PHM 1:12!1"
                                        class="pron"
                                        type="relative"
@@ -1776,7 +1936,7 @@
                                        number="singular"
                                        gender="masculine"
                                        case="accusative">ὃν</w>
-                                    <wg class="np" head="true" rule="NP-CL">
+                                    <wg class="np" head="true" rule="NP-CL" xml:id="570010120040060">
                                        <w ref="PHM 1:12!4"
                                           class="pron"
                                           type="personal"
@@ -1788,7 +1948,10 @@
                                           gender="masculine"
                                           case="accusative"
                                           head="true">αὐτόν,</w>
-                                       <wg class="cl" articular="true" rule="S-VC-P">
+                                       <wg class="cl"
+                                           articular="true"
+                                           rule="S-VC-P"
+                                           xml:id="570010120050050">
                                           <w role="s"
                                              ref="PHM 1:12!5"
                                              class="pron"
@@ -1813,6 +1976,7 @@
                                              voice="active"
                                              mood="indicative">ἔστιν</w>
                                           <wg role="p"
+                                              xml:id="570010120070031"
                                               class="np"
                                               articular="true"
                                               head="true"
@@ -1826,7 +1990,7 @@
                                                 number="plural"
                                                 gender="neuter"
                                                 case="nominative">τὰ</w>
-                                             <wg class="np" head="true" rule="AdjpNp">
+                                             <wg class="np" head="true" rule="AdjpNp" xml:id="570010120080020">
                                                 <w ref="PHM 1:12!8"
                                                    class="adj"
                                                    xml:id="n57001012008"
@@ -1854,7 +2018,7 @@
                                  </wg>
                               </wg>
                            </wg>
-                           <wg class="cl" head="true" rule="S-V-O">
+                           <wg class="cl" head="true" rule="S-V-O" xml:id="570010130020060">
                               <w role="s"
                                  ref="PHM 1:13!2"
                                  class="pron"
@@ -1879,7 +2043,7 @@
                                  mood="indicative"
                                  head="true"
                                  discontinuous="true">ἐβουλόμην</w>
-                              <wg role="o" class="cl" rule="O-ADV-V">
+                              <wg role="o" xml:id="570010130010041" class="cl" rule="O-ADV-V">
                                  <w role="o"
                                     ref="PHM 1:13!1"
                                     class="pron"
@@ -1891,7 +2055,7 @@
                                     number="singular"
                                     gender="masculine"
                                     case="accusative">ὃν</w>
-                                 <wg role="adv" class="pp" rule="PrepNp">
+                                 <wg role="adv" xml:id="570010130040021" class="pp" rule="PrepNp">
                                     <w ref="PHM 1:13!4"
                                        class="prep"
                                        xml:id="n57001013004"
@@ -1924,15 +2088,15 @@
                                     head="true">κατέχειν,</w>
                               </wg>
                            </wg>
-                           <wg class="cl" rule="sub-CL">
+                           <wg class="cl" rule="sub-CL" xml:id="570010130070100">
                               <w ref="PHM 1:13!7"
                                  class="conj"
                                  xml:id="n57001013007"
                                  lemma="ἵνα"
                                  normalized="ἵνα"
                                  strong="2443">ἵνα</w>
-                              <wg class="cl" rule="ADV-O-V-ADV">
-                                 <wg role="adv" class="pp" rule="PrepNp">
+                              <wg class="cl" rule="ADV-O-V-ADV" xml:id="570010130080090">
+                                 <wg role="adv" xml:id="570010130080021" class="pp" rule="PrepNp">
                                     <w ref="PHM 1:13!8"
                                        class="prep"
                                        xml:id="n57001013008"
@@ -1973,14 +2137,22 @@
                                     voice="active"
                                     mood="subjunctive"
                                     head="true">διακονῇ</w>
-                                 <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                                 <wg role="adv"
+                                     xml:id="570010130120051"
+                                     class="pp"
+                                     articular="true"
+                                     rule="PrepNp">
                                     <w ref="PHM 1:13!12"
                                        class="prep"
                                        xml:id="n57001013012"
                                        lemma="ἐν"
                                        normalized="ἐν"
                                        strong="1722">ἐν</w>
-                                    <wg class="np" articular="true" head="true" rule="DetNP">
+                                    <wg class="np"
+                                        articular="true"
+                                        head="true"
+                                        rule="DetNP"
+                                        xml:id="570010130130040">
                                        <w ref="PHM 1:13!13"
                                           class="det"
                                           xml:id="n57001013013"
@@ -1990,7 +2162,7 @@
                                           number="plural"
                                           gender="masculine"
                                           case="dative">τοῖς</w>
-                                       <wg class="np" head="true" rule="NPofNP">
+                                       <wg class="np" head="true" rule="NPofNP" xml:id="570010130140030">
                                           <w ref="PHM 1:13!14"
                                              class="noun"
                                              type="common"
@@ -2002,7 +2174,10 @@
                                              gender="masculine"
                                              case="dative"
                                              head="true">δεσμοῖς</w>
-                                          <wg class="np" articular="true" rule="DetNP">
+                                          <wg class="np"
+                                              articular="true"
+                                              rule="DetNP"
+                                              xml:id="570010130150020">
                                              <w ref="PHM 1:13!15"
                                                 class="det"
                                                 xml:id="n57001013015"
@@ -2041,7 +2216,7 @@
       <p>
          <milestone unit="verse" id="PHM 1:14">PHM 1:14</milestone> χωρὶς δὲ τῆς σῆς γνώμης οὐδὲν ἠθέλησα ποιῆσαι, ἵνα μὴ ὡς κατὰ ἀνάγκην τὸ ἀγαθόν σου ᾖ ἀλλὰ κατὰ ἑκούσιον.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="570010140020200">
             <w ref="PHM 1:14!2"
                class="conj"
                xml:id="n57001014002"
@@ -2049,15 +2224,23 @@
                normalized="δέ"
                strong="1161"
                discontinuous="true">δὲ</w>
-            <wg class="cl" head="true" rule="ADV-O-V">
-               <wg role="adv" class="pp" articular="true" rule="PrepNp">
+            <wg class="cl" head="true" rule="ADV-O-V" xml:id="570010140010070">
+               <wg role="adv"
+                   xml:id="570010140010041"
+                   class="pp"
+                   articular="true"
+                   rule="PrepNp">
                   <w ref="PHM 1:14!1"
                      class="prep"
                      xml:id="n57001014001"
                      lemma="χωρίς"
                      normalized="χωρίς"
                      strong="5565">χωρὶς</w>
-                  <wg class="np" articular="true" head="true" rule="DetNP">
+                  <wg class="np"
+                      articular="true"
+                      head="true"
+                      rule="DetNP"
+                      xml:id="570010140030030">
                      <w ref="PHM 1:14!3"
                         class="det"
                         xml:id="n57001014003"
@@ -2067,7 +2250,7 @@
                         number="singular"
                         gender="feminine"
                         case="genitive">τῆς</w>
-                     <wg class="np" head="true" rule="AdjpNp">
+                     <wg class="np" head="true" rule="AdjpNp" xml:id="570010140040020">
                         <w ref="PHM 1:14!4"
                            class="adj"
                            xml:id="n57001014004"
@@ -2091,7 +2274,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg role="o" class="cl" rule="O-V">
+               <wg role="o" xml:id="570010140060021" class="cl" rule="O-V">
                   <w role="o"
                      ref="PHM 1:14!6"
                      class="adj"
@@ -2130,29 +2313,33 @@
                   mood="indicative"
                   head="true">ἠθέλησα</w>
             </wg>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="570010140090120">
                <w ref="PHM 1:14!9"
                   class="conj"
                   xml:id="n57001014009"
                   lemma="ἵνα"
                   normalized="ἵνα"
                   strong="2443">ἵνα</w>
-               <wg class="cl" rule="notCLbutCL2CL">
+               <wg class="cl" rule="notCLbutCL2CL" xml:id="570010140100110">
                   <w ref="PHM 1:14!10"
                      class="adv"
                      xml:id="n57001014010"
                      lemma="μή"
                      normalized="μή"
                      strong="3361">μὴ</w>
-                  <wg class="cl" rule="P-S-VC">
-                     <wg role="p" class="pp" head="true" rule="AdvPp">
+                  <wg class="cl" rule="P-S-VC" xml:id="570010140110070">
+                     <wg role="p"
+                         xml:id="570010140110031"
+                         class="pp"
+                         head="true"
+                         rule="AdvPp">
                         <w ref="PHM 1:14!11"
                            class="conj"
                            xml:id="n57001014011"
                            lemma="ὡς"
                            normalized="ὡς"
                            strong="5613">ὡς</w>
-                        <wg class="pp" head="true" rule="PrepNp">
+                        <wg class="pp" head="true" rule="PrepNp" xml:id="570010140120020">
                            <w ref="PHM 1:14!12"
                               class="prep"
                               xml:id="n57001014012"
@@ -2172,7 +2359,11 @@
                               head="true">ἀνάγκην</w>
                         </wg>
                      </wg>
-                     <wg role="s" class="np" articular="true" rule="DetNP">
+                     <wg role="s"
+                         xml:id="570010140140031"
+                         class="np"
+                         articular="true"
+                         rule="DetNP">
                         <w ref="PHM 1:14!14"
                            class="det"
                            xml:id="n57001014014"
@@ -2182,7 +2373,7 @@
                            number="singular"
                            gender="neuter"
                            case="nominative">τὸ</w>
-                        <wg class="np" head="true" rule="NPofNP">
+                        <wg class="np" head="true" rule="NPofNP" xml:id="570010140150020">
                            <w ref="PHM 1:14!15"
                               class="adj"
                               xml:id="n57001014015"
@@ -2223,8 +2414,12 @@
                      lemma="ἀλλά"
                      normalized="ἀλλά"
                      strong="235">ἀλλὰ</w>
-                  <wg class="cl" head="true" rule="P2CL">
-                     <wg role="p" class="pp" head="true" rule="PrepNp">
+                  <wg class="cl" head="true" rule="P2CL" xml:id="570010140190022">
+                     <wg role="p"
+                         xml:id="570010140190021"
+                         class="pp"
+                         head="true"
+                         rule="PrepNp">
                         <w ref="PHM 1:14!19"
                            class="prep"
                            xml:id="n57001014019"
@@ -2253,7 +2448,7 @@
          <milestone unit="verse" id="PHM 1:15">PHM 1:15</milestone> 
          <milestone unit="verse" id="PHM 1:16">PHM 1:16</milestone> τάχα γὰρ διὰ τοῦτο ἐχωρίσθη πρὸς ὥραν, ἵνα αἰώνιον αὐτὸν ἀπέχῃς, οὐκέτι ὡς δοῦλον ἀλλὰ ὑπὲρ δοῦλον, ἀδελφὸν ἀγαπητόν, μάλιστα ἐμοί, πόσῳ δὲ μᾶλλον σοὶ καὶ ἐν σαρκὶ καὶ ἐν Κυρίῳ.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="570010150020310">
             <w ref="PHM 1:15!2"
                class="conj"
                xml:id="n57001015002"
@@ -2261,7 +2456,10 @@
                normalized="γάρ"
                strong="1063"
                discontinuous="true">γὰρ</w>
-            <wg class="cl" head="true" rule="ADV-ADV-V-ADV">
+            <wg class="cl"
+                head="true"
+                rule="ADV-ADV-V-ADV"
+                xml:id="570010150010060">
                <w role="adv"
                   ref="PHM 1:15!1"
                   class="adv"
@@ -2269,7 +2467,7 @@
                   lemma="τάχα"
                   normalized="τάχα"
                   strong="5029">τάχα</w>
-               <wg role="adv" class="pp" rule="PrepNp">
+               <wg role="adv" xml:id="570010150030021" class="pp" rule="PrepNp">
                   <w ref="PHM 1:15!3"
                      class="prep"
                      xml:id="n57001015003"
@@ -2301,7 +2499,7 @@
                   voice="passive"
                   mood="indicative"
                   head="true">ἐχωρίσθη</w>
-               <wg role="adv" class="pp" rule="PrepNp">
+               <wg role="adv" xml:id="570010150060021" class="pp" rule="PrepNp">
                   <w ref="PHM 1:15!6"
                      class="prep"
                      xml:id="n57001015006"
@@ -2321,14 +2519,17 @@
                      head="true">ὥραν,</w>
                </wg>
             </wg>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="570010150080240">
                <w ref="PHM 1:15!8"
                   class="conj"
                   xml:id="n57001015008"
                   lemma="ἵνα"
                   normalized="ἵνα"
                   strong="2443">ἵνα</w>
-               <wg class="cl" head="true" rule="ADV-O-V-ADV-O2">
+               <wg class="cl"
+                   head="true"
+                   rule="ADV-O-V-ADV-O2"
+                   xml:id="570010150090110">
                   <w role="adv"
                      ref="PHM 1:15!9"
                      class="adj"
@@ -2363,14 +2564,17 @@
                      voice="active"
                      mood="subjunctive"
                      head="true">ἀπέχῃς,</w>
-                  <wg role="adv" class="pp" rule="notPPbutPP">
+                  <wg role="adv"
+                      xml:id="570010160010061"
+                      class="pp"
+                      rule="notPPbutPP">
                      <w ref="PHM 1:16!1"
                         class="adv"
                         xml:id="n57001016001"
                         lemma="οὐκέτι"
                         normalized="οὐκέτι"
                         strong="3765">οὐκέτι</w>
-                     <wg class="pp" rule="PrepNp">
+                     <wg class="pp" rule="PrepNp" xml:id="570010160020020">
                         <w ref="PHM 1:16!2"
                            class="conj"
                            xml:id="n57001016002"
@@ -2395,7 +2599,7 @@
                         lemma="ἀλλά"
                         normalized="ἀλλά"
                         strong="235">ἀλλὰ</w>
-                     <wg class="pp" head="true" rule="PrepNp">
+                     <wg class="pp" head="true" rule="PrepNp" xml:id="570010160050020">
                         <w ref="PHM 1:16!5"
                            class="prep"
                            xml:id="n57001016005"
@@ -2415,7 +2619,7 @@
                            head="true">δοῦλον,</w>
                      </wg>
                   </wg>
-                  <wg role="o2" class="np" rule="NpAdjp">
+                  <wg role="o2" xml:id="570010160070021" class="np" rule="NpAdjp">
                      <w ref="PHM 1:16!7"
                         class="noun"
                         type="common"
@@ -2438,8 +2642,8 @@
                         case="accusative">ἀγαπητόν,</w>
                   </wg>
                </wg>
-               <wg class="cl" rule="CLaCL">
-                  <wg class="cl" head="true" rule="ADV-IO">
+               <wg class="cl" rule="CLaCL" xml:id="570010160090120">
+                  <wg class="cl" head="true" rule="ADV-IO" xml:id="570010160090020">
                      <w role="adv"
                         ref="PHM 1:16!9"
                         class="adv"
@@ -2466,8 +2670,11 @@
                      normalized="δέ"
                      strong="1161"
                      discontinuous="true">δὲ</w>
-                  <wg class="cl" rule="ADV-IO-ADV">
-                     <wg role="adv" class="advp" rule="2Advp_h2">
+                  <wg class="cl" rule="ADV-IO-ADV" xml:id="570010160110090">
+                     <wg role="adv"
+                         xml:id="570010160110021"
+                         class="advp"
+                         rule="2Advp_h2">
                         <w ref="PHM 1:16!11"
                            class="pron"
                            type="interrogative"
@@ -2497,14 +2704,14 @@
                         number="singular"
                         case="dative"
                         head="true">σοὶ</w>
-                     <wg role="adv" class="pp" rule="aPpaPp">
+                     <wg role="adv" xml:id="570010160150061" class="pp" rule="aPpaPp">
                         <w ref="PHM 1:16!15"
                            class="conj"
                            xml:id="n57001016015"
                            lemma="καί"
                            normalized="καί"
                            strong="2532">καὶ</w>
-                        <wg class="pp" head="true" rule="PrepNp">
+                        <wg class="pp" head="true" rule="PrepNp" xml:id="570010160160020">
                            <w ref="PHM 1:16!16"
                               class="prep"
                               xml:id="n57001016016"
@@ -2529,7 +2736,7 @@
                            lemma="καί"
                            normalized="καί"
                            strong="2532">καὶ</w>
-                        <wg class="pp" rule="PrepNp">
+                        <wg class="pp" rule="PrepNp" xml:id="570010160190020">
                            <w ref="PHM 1:16!19"
                               class="prep"
                               xml:id="n57001016019"
@@ -2559,7 +2766,7 @@
       <p>
          <milestone unit="verse" id="PHM 1:17">PHM 1:17</milestone> εἰ οὖν με ἔχεις κοινωνόν, προσλαβοῦ αὐτὸν ὡς ἐμέ.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="570010170020090">
             <w ref="PHM 1:17!2"
                class="conj"
                xml:id="n57001017002"
@@ -2567,14 +2774,14 @@
                normalized="οὖν"
                strong="3767"
                discontinuous="true">οὖν</w>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="570010170010040">
                <w ref="PHM 1:17!1"
                   class="conj"
                   xml:id="n57001017001"
                   lemma="εἰ"
                   normalized="εἰ"
                   strong="1487">εἰ</w>
-               <wg class="cl" rule="O-V-O2">
+               <wg class="cl" rule="O-V-O2" xml:id="570010170030030">
                   <w role="o"
                      ref="PHM 1:17!3"
                      class="pron"
@@ -2611,7 +2818,7 @@
                      case="accusative">κοινωνόν,</w>
                </wg>
             </wg>
-            <wg class="cl" head="true" rule="V-O">
+            <wg class="cl" head="true" rule="V-O" xml:id="570010170060020">
                <w role="v"
                   ref="PHM 1:17!6"
                   class="verb"
@@ -2637,14 +2844,14 @@
                   gender="masculine"
                   case="accusative">αὐτὸν</w>
             </wg>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="570010170080020">
                <w ref="PHM 1:17!8"
                   class="conj"
                   xml:id="n57001017008"
                   lemma="ὡς"
                   normalized="ὡς"
                   strong="5613">ὡς</w>
-               <wg class="cl" rule="O2CL">
+               <wg class="cl" rule="O2CL" xml:id="570010170090013">
                   <w role="o"
                      ref="PHM 1:17!9"
                      class="pron"
@@ -2664,7 +2871,7 @@
       <p>
          <milestone unit="verse" id="PHM 1:18">PHM 1:18</milestone> εἰ δέ τι ἠδίκησέν σε ἢ ὀφείλει, τοῦτο ἐμοὶ ἐλλόγα·</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="570010180020100">
             <w ref="PHM 1:18!2"
                class="conj"
                xml:id="n57001018002"
@@ -2672,15 +2879,15 @@
                normalized="δέ"
                strong="1161"
                discontinuous="true">δέ</w>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="570010180010060">
                <w ref="PHM 1:18!1"
                   class="conj"
                   xml:id="n57001018001"
                   lemma="εἰ"
                   normalized="εἰ"
                   strong="1487">εἰ</w>
-               <wg class="cl" rule="CLaCL">
-                  <wg class="cl" head="true" rule="ADV-O-V">
+               <wg class="cl" rule="CLaCL" xml:id="570010180030050">
+                  <wg class="cl" head="true" rule="ADV-O-V" xml:id="570010180030030">
                      <w role="adv"
                         ref="PHM 1:18!3"
                         class="pron"
@@ -2723,7 +2930,7 @@
                      lemma="ἤ"
                      normalized="ἤ"
                      strong="2228">ἢ</w>
-                  <wg class="cl" rule="V2CL">
+                  <wg class="cl" rule="V2CL" xml:id="570010180070013">
                      <w role="v"
                         ref="PHM 1:18!7"
                         class="verb"
@@ -2739,7 +2946,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" head="true" rule="O-IO-V">
+            <wg class="cl" head="true" rule="O-IO-V" xml:id="570010180080030">
                <w role="o"
                   ref="PHM 1:18!8"
                   class="pron"
@@ -2782,9 +2989,9 @@
       <p>
          <milestone unit="verse" id="PHM 1:19">PHM 1:19</milestone> ἐγὼ Παῦλος ἔγραψα τῇ ἐμῇ χειρί, ἐγὼ ἀποτίσω· ἵνα μὴ λέγω σοι ὅτι καὶ σεαυτόν μοι προσοφείλεις.</p>
       <wg role="cl">
-         <wg class="cl" rule="ClCl">
-            <wg class="cl" head="true" rule="S-V-ADV">
-               <wg role="s" class="np" rule="Np-Appos">
+         <wg class="cl" rule="ClCl" xml:id="570010190010170">
+            <wg class="cl" head="true" rule="S-V-ADV" xml:id="570010190010060">
+               <wg role="s" xml:id="570010190010021" class="np" rule="Np-Appos">
                   <w ref="PHM 1:19!1"
                      class="pron"
                      type="personal"
@@ -2819,7 +3026,11 @@
                   voice="active"
                   mood="indicative"
                   head="true">ἔγραψα</w>
-               <wg role="adv" class="np" articular="true" rule="DetNP">
+               <wg role="adv"
+                   xml:id="570010190040031"
+                   class="np"
+                   articular="true"
+                   rule="DetNP">
                   <w ref="PHM 1:19!4"
                      class="det"
                      xml:id="n57001019004"
@@ -2829,7 +3040,7 @@
                      number="singular"
                      gender="feminine"
                      case="dative">τῇ</w>
-                  <wg class="np" head="true" rule="AdjpNp">
+                  <wg class="np" head="true" rule="AdjpNp" xml:id="570010190050020">
                      <w ref="PHM 1:19!5"
                         class="adj"
                         xml:id="n57001019005"
@@ -2853,7 +3064,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" head="true" rule="S-V">
+            <wg class="cl" head="true" rule="S-V" xml:id="570010190070020">
                <w role="s"
                   ref="PHM 1:19!7"
                   class="pron"
@@ -2878,14 +3089,14 @@
                   mood="indicative"
                   head="true">ἀποτίσω·</w>
             </wg>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="570010190090090">
                <w ref="PHM 1:19!9"
                   class="conj"
                   xml:id="n57001019009"
                   lemma="ἵνα"
                   normalized="ἵνα"
                   strong="2443">ἵνα</w>
-               <wg class="cl" head="true" rule="ADV-V-IO">
+               <wg class="cl" head="true" rule="ADV-V-IO" xml:id="570010190100030">
                   <w role="adv"
                      ref="PHM 1:19!10"
                      class="adv"
@@ -2917,15 +3128,15 @@
                      number="singular"
                      case="dative">σοι</w>
                </wg>
-               <wg class="cl" rule="that-VP">
+               <wg class="cl" rule="that-VP" xml:id="570010190130050">
                   <w ref="PHM 1:19!13"
                      class="conj"
                      xml:id="n57001019013"
                      lemma="ὅτι"
                      normalized="ὅτι"
                      strong="3754">ὅτι</w>
-                  <wg class="cl" rule="O-IO-V">
-                     <wg role="o" class="np" rule="AdvpNp">
+                  <wg class="cl" rule="O-IO-V" xml:id="570010190140040">
+                     <wg role="o" xml:id="570010190140021" class="np" rule="AdvpNp">
                         <w ref="PHM 1:19!14"
                            class="adv"
                            xml:id="n57001019014"
@@ -2977,8 +3188,8 @@
       <p>
          <milestone unit="verse" id="PHM 1:20">PHM 1:20</milestone> ναί, ἀδελφέ, ἐγώ σου ὀναίμην ἐν Κυρίῳ·</p>
       <wg role="cl">
-         <wg class="cl" rule="ClCl2">
-            <wg class="cl" rule="Intj2CL">
+         <wg class="cl" rule="ClCl2" xml:id="570010200010070">
+            <wg class="cl" rule="Intj2CL" xml:id="570010200010012">
                <w ref="PHM 1:20!1"
                   class="ptcl"
                   xml:id="n57001020001"
@@ -2986,7 +3197,7 @@
                   normalized="ναί"
                   strong="3483">ναί,</w>
             </wg>
-            <wg class="cl" rule="Np2CL">
+            <wg class="cl" rule="Np2CL" xml:id="570010200020012">
                <w ref="PHM 1:20!2"
                   class="noun"
                   type="common"
@@ -2998,7 +3209,10 @@
                   gender="masculine"
                   case="vocative">ἀδελφέ,</w>
             </wg>
-            <wg class="cl" head="true" rule="S-ADV-V-ADV">
+            <wg class="cl"
+                head="true"
+                rule="S-ADV-V-ADV"
+                xml:id="570010200030050">
                <w role="s"
                   ref="PHM 1:20!3"
                   class="pron"
@@ -3032,7 +3246,7 @@
                   voice="middle"
                   mood="optative"
                   head="true">ὀναίμην</w>
-               <wg role="adv" class="pp" rule="PrepNp">
+               <wg role="adv" xml:id="570010200060021" class="pp" rule="PrepNp">
                   <w ref="PHM 1:20!6"
                      class="prep"
                      xml:id="n57001020006"
@@ -3059,7 +3273,7 @@
       <p>
          <milestone unit="verse" id="PHM 1:20">PHM 1:20</milestone> ἀνάπαυσόν μου τὰ σπλάγχνα ἐν Χριστῷ.</p>
       <wg role="cl">
-         <wg class="cl" rule="V-O-ADV">
+         <wg class="cl" rule="V-O-ADV" xml:id="570010200080060">
             <w role="v"
                ref="PHM 1:20!8"
                class="verb"
@@ -3073,7 +3287,11 @@
                voice="active"
                mood="imperative"
                head="true">ἀνάπαυσόν</w>
-            <wg role="o" class="np" articular="true" rule="ofNPNP">
+            <wg role="o"
+                xml:id="570010200090031"
+                class="np"
+                articular="true"
+                rule="ofNPNP">
                <w ref="PHM 1:20!9"
                   class="pron"
                   type="personal"
@@ -3083,7 +3301,11 @@
                   strong="1473"
                   number="singular"
                   case="genitive">μου</w>
-               <wg class="np" articular="true" head="true" rule="DetNP">
+               <wg class="np"
+                   articular="true"
+                   head="true"
+                   rule="DetNP"
+                   xml:id="570010200100020">
                   <w ref="PHM 1:20!10"
                      class="det"
                      xml:id="n57001020010"
@@ -3106,7 +3328,7 @@
                      head="true">σπλάγχνα</w>
                </wg>
             </wg>
-            <wg role="adv" class="pp" rule="PrepNp">
+            <wg role="adv" xml:id="570010200120021" class="pp" rule="PrepNp">
                <w ref="PHM 1:20!12"
                   class="prep"
                   xml:id="n57001020012"
@@ -3132,8 +3354,8 @@
       <p>
          <milestone unit="verse" id="PHM 1:21">PHM 1:21</milestone> Πεποιθὼς τῇ ὑπακοῇ σου ἔγραψά σοι, εἰδὼς ὅτι καὶ ὑπὲρ ἃ λέγω ποιήσεις.</p>
       <wg role="cl">
-         <wg class="cl" rule="ADV-V-IO-ADV">
-            <wg role="adv" class="cl" rule="V-ADV">
+         <wg class="cl" rule="ADV-V-IO-ADV" xml:id="570010210010130">
+            <wg role="adv" xml:id="570010210010041" class="cl" rule="V-ADV">
                <w role="v"
                   ref="PHM 1:21!1"
                   class="verb"
@@ -3149,7 +3371,11 @@
                   mood="participle"
                   type="?"
                   head="true">Πεποιθὼς</w>
-               <wg role="adv" class="np" articular="true" rule="DetNP">
+               <wg role="adv"
+                   xml:id="570010210020031"
+                   class="np"
+                   articular="true"
+                   rule="DetNP">
                   <w ref="PHM 1:21!2"
                      class="det"
                      xml:id="n57001021002"
@@ -3159,7 +3385,7 @@
                      number="singular"
                      gender="feminine"
                      case="dative">τῇ</w>
-                  <wg class="np" head="true" rule="NPofNP">
+                  <wg class="np" head="true" rule="NPofNP" xml:id="570010210030020">
                      <w ref="PHM 1:21!3"
                         class="noun"
                         type="common"
@@ -3206,8 +3432,8 @@
                strong="4771"
                number="singular"
                case="dative">σοι,</w>
-            <wg role="adv" class="cl" rule="ClCl">
-               <wg class="cl" head="true" rule="V2CL">
+            <wg role="adv" xml:id="570010210070071" class="cl" rule="ClCl">
+               <wg class="cl" head="true" rule="V2CL" xml:id="570010210070013">
                   <w role="v"
                      ref="PHM 1:21!7"
                      class="verb"
@@ -3224,30 +3450,30 @@
                      type="?"
                      head="true">εἰδὼς</w>
                </wg>
-               <wg class="cl" rule="that-VP">
+               <wg class="cl" rule="that-VP" xml:id="570010210080060">
                   <w ref="PHM 1:21!8"
                      class="conj"
                      xml:id="n57001021008"
                      lemma="ὅτι"
                      normalized="ὅτι"
                      strong="3754">ὅτι</w>
-                  <wg class="cl" rule="ADV-V">
-                     <wg role="adv" class="pp" rule="AdvPp">
+                  <wg class="cl" rule="ADV-V" xml:id="570010210090050">
+                     <wg role="adv" xml:id="570010210090041" class="pp" rule="AdvPp">
                         <w ref="PHM 1:21!9"
                            class="adv"
                            xml:id="n57001021009"
                            lemma="καί"
                            normalized="καί"
                            strong="2532">καὶ</w>
-                        <wg class="pp" head="true" rule="PrepNp">
+                        <wg class="pp" head="true" rule="PrepNp" xml:id="570010210100030">
                            <w ref="PHM 1:21!10"
                               class="prep"
                               xml:id="n57001021010"
                               lemma="ὑπέρ"
                               normalized="ὑπέρ"
                               strong="5228">ὑπὲρ</w>
-                           <wg class="np" head="true" rule="CL2NP">
-                              <wg class="cl" head="true" rule="O-V">
+                           <wg class="np" head="true" rule="CL2NP" xml:id="570010210110021">
+                              <wg class="cl" head="true" rule="O-V" xml:id="570010210110020">
                                  <w role="o"
                                     ref="PHM 1:21!11"
                                     class="pron"
@@ -3299,7 +3525,7 @@
       <p>
          <milestone unit="verse" id="PHM 1:22">PHM 1:22</milestone> ἅμα δὲ καὶ ἑτοίμαζέ μοι ξενίαν· ἐλπίζω γὰρ ὅτι διὰ τῶν προσευχῶν ὑμῶν χαρισθήσομαι ὑμῖν.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="570010220020150">
             <w ref="PHM 1:22!2"
                class="conj"
                xml:id="n57001022002"
@@ -3307,8 +3533,14 @@
                normalized="δέ"
                strong="1161"
                discontinuous="true">δὲ</w>
-            <wg class="cl" head="true" rule="ADV-V-IO-O">
-               <wg role="adv" class="advp" rule="2Advp_h1">
+            <wg class="cl"
+                head="true"
+                rule="ADV-V-IO-O"
+                xml:id="570010220010050">
+               <wg role="adv"
+                   xml:id="570010220010021"
+                   class="advp"
+                   rule="2Advp_h1">
                   <w ref="PHM 1:22!1"
                      class="adv"
                      xml:id="n57001022001"
@@ -3358,7 +3590,7 @@
                   gender="feminine"
                   case="accusative">ξενίαν·</w>
             </wg>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="570010220080090">
                <w ref="PHM 1:22!8"
                   class="conj"
                   xml:id="n57001022008"
@@ -3366,7 +3598,7 @@
                   normalized="γάρ"
                   strong="1063"
                   discontinuous="true">γὰρ</w>
-               <wg class="cl" head="true" rule="V2CL">
+               <wg class="cl" head="true" rule="V2CL" xml:id="570010220070013">
                   <w role="v"
                      ref="PHM 1:22!7"
                      class="verb"
@@ -3381,22 +3613,30 @@
                      mood="indicative"
                      head="true">ἐλπίζω</w>
                </wg>
-               <wg class="cl" rule="that-VP">
+               <wg class="cl" rule="that-VP" xml:id="570010220090070">
                   <w ref="PHM 1:22!9"
                      class="conj"
                      xml:id="n57001022009"
                      lemma="ὅτι"
                      normalized="ὅτι"
                      strong="3754">ὅτι</w>
-                  <wg class="cl" rule="ADV-V-IO">
-                     <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                  <wg class="cl" rule="ADV-V-IO" xml:id="570010220100060">
+                     <wg role="adv"
+                         xml:id="570010220100041"
+                         class="pp"
+                         articular="true"
+                         rule="PrepNp">
                         <w ref="PHM 1:22!10"
                            class="prep"
                            xml:id="n57001022010"
                            lemma="διά"
                            normalized="διά"
                            strong="1223">διὰ</w>
-                        <wg class="np" articular="true" head="true" rule="DetNP">
+                        <wg class="np"
+                            articular="true"
+                            head="true"
+                            rule="DetNP"
+                            xml:id="570010220110030">
                            <w ref="PHM 1:22!11"
                               class="det"
                               xml:id="n57001022011"
@@ -3406,7 +3646,7 @@
                               number="plural"
                               gender="feminine"
                               case="genitive">τῶν</w>
-                           <wg class="np" head="true" rule="NPofNP">
+                           <wg class="np" head="true" rule="NPofNP" xml:id="570010220120020">
                               <w ref="PHM 1:22!12"
                                  class="noun"
                                  type="common"
@@ -3464,7 +3704,7 @@
          <milestone unit="verse" id="PHM 1:23">PHM 1:23</milestone> 
          <milestone unit="verse" id="PHM 1:24">PHM 1:24</milestone> Ἀσπάζεταί σε Ἐπαφρᾶς ὁ συναιχμάλωτός μου ἐν Χριστῷ Ἰησοῦ, Μᾶρκος, Ἀρίσταρχος, Δημᾶς, Λουκᾶς, οἱ συνεργοί μου.</p>
       <wg role="cl">
-         <wg class="cl" rule="V-O-S">
+         <wg class="cl" rule="V-O-S" xml:id="570010230010160">
             <w role="v"
                ref="PHM 1:23!1"
                class="verb"
@@ -3488,8 +3728,8 @@
                strong="4771"
                number="singular"
                case="accusative">σε</w>
-            <wg role="s" class="np" rule="2Np">
-               <wg class="np" head="true" rule="Np-Appos">
+            <wg role="s" xml:id="570010230030141" class="np" rule="2Np">
+               <wg class="np" head="true" rule="Np-Appos" xml:id="570010230030070">
                   <w ref="PHM 1:23!3"
                      class="noun"
                      type="proper"
@@ -3501,7 +3741,10 @@
                      gender="masculine"
                      case="nominative"
                      head="true">Ἐπαφρᾶς</w>
-                  <wg class="np" articular="true" rule="DetNP">
+                  <wg class="np"
+                      articular="true"
+                      rule="DetNP"
+                      xml:id="570010230040060">
                      <w ref="PHM 1:23!4"
                         class="det"
                         xml:id="n57001023004"
@@ -3511,8 +3754,8 @@
                         number="singular"
                         gender="masculine"
                         case="nominative">ὁ</w>
-                     <wg class="np" head="true" rule="NpPp">
-                        <wg class="np" head="true" rule="NPofNP">
+                     <wg class="np" head="true" rule="NpPp" xml:id="570010230050050">
+                        <wg class="np" head="true" rule="NPofNP" xml:id="570010230050020">
                            <w ref="PHM 1:23!5"
                               class="adj"
                               type="common"
@@ -3534,14 +3777,14 @@
                               number="singular"
                               case="genitive">μου</w>
                         </wg>
-                        <wg class="pp" rule="PrepNp">
+                        <wg class="pp" rule="PrepNp" xml:id="570010230070030">
                            <w ref="PHM 1:23!7"
                               class="prep"
                               xml:id="n57001023007"
                               lemma="ἐν"
                               normalized="ἐν"
                               strong="1722">ἐν</w>
-                           <wg class="np" head="true" rule="Np-Appos">
+                           <wg class="np" head="true" rule="Np-Appos" xml:id="570010230080020">
                               <w ref="PHM 1:23!8"
                                  class="noun"
                                  type="proper"
@@ -3568,8 +3811,8 @@
                      </wg>
                   </wg>
                </wg>
-               <wg class="np" rule="Np-Appos">
-                  <wg class="np" head="true" rule="NpNpNpNp">
+               <wg class="np" rule="Np-Appos" xml:id="570010240010070">
+                  <wg class="np" head="true" rule="NpNpNpNp" xml:id="570010240010040">
                      <w ref="PHM 1:24!1"
                         class="noun"
                         type="proper"
@@ -3612,7 +3855,10 @@
                         gender="masculine"
                         case="nominative">Λουκᾶς,</w>
                   </wg>
-                  <wg class="np" articular="true" rule="DetNP">
+                  <wg class="np"
+                      articular="true"
+                      rule="DetNP"
+                      xml:id="570010240050030">
                      <w ref="PHM 1:24!5"
                         class="det"
                         xml:id="n57001024005"
@@ -3622,7 +3868,7 @@
                         number="plural"
                         gender="masculine"
                         case="nominative">οἱ</w>
-                     <wg class="np" head="true" rule="NPofNP">
+                     <wg class="np" head="true" rule="NPofNP" xml:id="570010240060020">
                         <w ref="PHM 1:24!6"
                            class="adj"
                            xml:id="n57001024006"
@@ -3653,8 +3899,12 @@
       <p>
          <milestone unit="verse" id="PHM 1:25">PHM 1:25</milestone> Ἠ χάρις τοῦ Κυρίου Ἰησοῦ Χριστοῦ μετὰ τοῦ πνεύματος ὑμῶν.</p>
       <wg role="cl">
-         <wg class="cl" articular="true" rule="S-P">
-            <wg role="s" class="np" articular="true" rule="DetNP">
+         <wg class="cl" articular="true" rule="S-P" xml:id="570010250010100">
+            <wg role="s"
+                xml:id="570010250010061"
+                class="np"
+                articular="true"
+                rule="DetNP">
                <w ref="PHM 1:25!1"
                   class="det"
                   xml:id="n57001025001"
@@ -3664,7 +3914,7 @@
                   number="singular"
                   gender="feminine"
                   case="nominative">Ἠ</w>
-               <wg class="np" head="true" rule="NPofNP">
+               <wg class="np" head="true" rule="NPofNP" xml:id="570010250020050">
                   <w ref="PHM 1:25!2"
                      class="noun"
                      type="common"
@@ -3676,8 +3926,15 @@
                      gender="feminine"
                      case="nominative"
                      head="true">χάρις</w>
-                  <wg class="np" articular="true" rule="Np-Appos">
-                     <wg class="np" articular="true" head="true" rule="DetNP">
+                  <wg class="np"
+                      articular="true"
+                      rule="Np-Appos"
+                      xml:id="570010250030040">
+                     <wg class="np"
+                         articular="true"
+                         head="true"
+                         rule="DetNP"
+                         xml:id="570010250030020">
                         <w ref="PHM 1:25!3"
                            class="det"
                            xml:id="n57001025003"
@@ -3699,7 +3956,7 @@
                            case="genitive"
                            head="true">Κυρίου</w>
                      </wg>
-                     <wg class="np" rule="Np-Appos">
+                     <wg class="np" rule="Np-Appos" xml:id="570010250050020">
                         <w ref="PHM 1:25!5"
                            class="noun"
                            type="proper"
@@ -3726,6 +3983,7 @@
                </wg>
             </wg>
             <wg role="p"
+                xml:id="570010250070041"
                 class="pp"
                 articular="true"
                 head="true"
@@ -3736,7 +3994,11 @@
                   lemma="μετά"
                   normalized="μετά"
                   strong="3326">μετὰ</w>
-               <wg class="np" articular="true" head="true" rule="DetNP">
+               <wg class="np"
+                   articular="true"
+                   head="true"
+                   rule="DetNP"
+                   xml:id="570010250080030">
                   <w ref="PHM 1:25!8"
                      class="det"
                      xml:id="n57001025008"
@@ -3746,7 +4008,7 @@
                      number="singular"
                      gender="neuter"
                      case="genitive">τοῦ</w>
-                  <wg class="np" head="true" rule="NPofNP">
+                  <wg class="np" head="true" rule="NPofNP" xml:id="570010250090020">
                      <w ref="PHM 1:25!9"
                         class="noun"
                         type="common"

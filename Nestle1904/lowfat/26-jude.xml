@@ -6,8 +6,12 @@
       <p>
          <milestone unit="verse" id="JUD 1:1">JUD 1:1</milestone> Ἰούδας Ἰησοῦ Χριστοῦ δοῦλος, ἀδελφὸς δὲ Ἰακώβου, τοῖς ἐν Θεῷ Πατρὶ ἠγαπημένοις καὶ Ἰησοῦ Χριστῷ τετηρημένοις κλητοῖς.</p>
       <wg role="cl">
-         <wg class="cl" rule="S-IO">
-            <wg role="s" class="np" head="true" rule="Np-Appos">
+         <wg class="cl" rule="S-IO" xml:id="650010010010170">
+            <wg role="s"
+                xml:id="650010010010071"
+                class="np"
+                head="true"
+                rule="Np-Appos">
                <w ref="JUD 1:1!1"
                   class="noun"
                   type="proper"
@@ -19,9 +23,9 @@
                   gender="masculine"
                   case="nominative"
                   head="true">Ἰούδας</w>
-               <wg class="np" rule="NpaNp">
-                  <wg class="np" head="true" rule="ofNPNP">
-                     <wg class="np" rule="Np-Appos">
+               <wg class="np" rule="NpaNp" xml:id="650010010020060">
+                  <wg class="np" head="true" rule="ofNPNP" xml:id="650010010020030">
+                     <wg class="np" rule="Np-Appos" xml:id="650010010020020">
                         <w ref="JUD 1:1!2"
                            class="noun"
                            type="proper"
@@ -63,7 +67,7 @@
                      normalized="δέ"
                      strong="1161"
                      discontinuous="true">δὲ</w>
-                  <wg class="np" rule="NPofNP">
+                  <wg class="np" rule="NPofNP" xml:id="650010010050020">
                      <w ref="JUD 1:1!5"
                         class="noun"
                         type="common"
@@ -88,7 +92,11 @@
                   </wg>
                </wg>
             </wg>
-            <wg role="io" class="np" articular="true" rule="DetNP">
+            <wg role="io"
+                xml:id="650010010080101"
+                class="np"
+                articular="true"
+                rule="DetNP">
                <w ref="JUD 1:1!8"
                   class="det"
                   xml:id="n65001001008"
@@ -98,18 +106,18 @@
                   number="plural"
                   gender="masculine"
                   case="dative">τοῖς</w>
-               <wg class="np" head="true" rule="AdjpNp">
-                  <wg class="adjp" rule="CL2Adjp">
-                     <wg class="cl" rule="CLaCL">
-                        <wg class="cl" head="true" rule="ADV-V">
-                           <wg role="adv" class="pp" rule="PrepNp">
+               <wg class="np" head="true" rule="AdjpNp" xml:id="650010010090090">
+                  <wg class="adjp" rule="CL2Adjp" xml:id="650010010090081">
+                     <wg class="cl" rule="CLaCL" xml:id="650010010090080">
+                        <wg class="cl" head="true" rule="ADV-V" xml:id="650010010090040">
+                           <wg role="adv" xml:id="650010010090031" class="pp" rule="PrepNp">
                               <w ref="JUD 1:1!9"
                                  class="prep"
                                  xml:id="n65001001009"
                                  lemma="ἐν"
                                  normalized="ἐν"
                                  strong="1722">ἐν</w>
-                              <wg class="np" head="true" rule="Np-Appos">
+                              <wg class="np" head="true" rule="Np-Appos" xml:id="650010010100020">
                                  <w ref="JUD 1:1!10"
                                     class="noun"
                                     type="common"
@@ -155,8 +163,8 @@
                            lemma="καί"
                            normalized="καί"
                            strong="2532">καὶ</w>
-                        <wg class="cl" rule="ADV-V">
-                           <wg role="adv" class="np" rule="Np-Appos">
+                        <wg class="cl" rule="ADV-V" xml:id="650010010140030">
+                           <wg role="adv" xml:id="650010010140021" class="np" rule="Np-Appos">
                               <w ref="JUD 1:1!14"
                                  class="noun"
                                  type="proper"
@@ -216,7 +224,7 @@
       <p>
          <milestone unit="verse" id="JUD 1:2">JUD 1:2</milestone> ἔλεος ὑμῖν καὶ εἰρήνη καὶ ἀγάπη πληθυνθείη.</p>
       <wg role="cl">
-         <wg class="cl" rule="IO-S-V">
+         <wg class="cl" rule="IO-S-V" xml:id="650010020020070">
             <w role="io"
                ref="JUD 1:2!2"
                class="pron"
@@ -228,7 +236,7 @@
                number="plural"
                case="dative"
                discontinuous="true">ὑμῖν</w>
-            <wg role="s" class="np" rule="Conj3Np">
+            <wg role="s" xml:id="650010020010051" class="np" rule="Conj3Np">
                <w ref="JUD 1:2!1"
                   class="noun"
                   type="common"
@@ -293,8 +301,8 @@
       <p>
          <milestone unit="verse" id="JUD 1:3">JUD 1:3</milestone> Ἀγαπητοί, πᾶσαν σπουδὴν ποιούμενος γράφειν ὑμῖν περὶ τῆς κοινῆς ἡμῶν σωτηρίας, ἀνάγκην ἔσχον γράψαι ὑμῖν παρακαλῶν ἐπαγωνίζεσθαι τῇ ἅπαξ παραδοθείσῃ τοῖς ἁγίοις πίστει.</p>
       <wg role="cl">
-         <wg class="cl" rule="ClCl2">
-            <wg class="cl" rule="Np2CL">
+         <wg class="cl" rule="ClCl2" xml:id="650010030010230">
+            <wg class="cl" rule="Np2CL" xml:id="650010030010013">
                <w ref="JUD 1:3!1"
                   class="adj"
                   xml:id="n65001003001"
@@ -305,9 +313,12 @@
                   gender="masculine"
                   case="vocative">Ἀγαπητοί,</w>
             </wg>
-            <wg class="cl" head="true" rule="ADV-O-V-ADV">
-               <wg role="adv" class="cl" rule="O-V-ADV">
-                  <wg role="o" class="np" rule="All-NP">
+            <wg class="cl"
+                head="true"
+                rule="ADV-O-V-ADV"
+                xml:id="650010030020220">
+               <wg role="adv" xml:id="650010030020101" class="cl" rule="O-V-ADV">
+                  <wg role="o" xml:id="650010030020021" class="np" rule="All-NP">
                      <w ref="JUD 1:3!2"
                         class="adj"
                         xml:id="n65001003002"
@@ -344,7 +355,7 @@
                      mood="participle"
                      type="?"
                      head="true">ποιούμενος</w>
-                  <wg role="adv" class="cl" rule="V-IO-ADV">
+                  <wg role="adv" xml:id="650010030050071" class="cl" rule="V-IO-ADV">
                      <w role="v"
                         ref="JUD 1:3!5"
                         class="verb"
@@ -367,14 +378,22 @@
                         strong="4771"
                         number="plural"
                         case="dative">ὑμῖν</w>
-                     <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                     <wg role="adv"
+                         xml:id="650010030070051"
+                         class="pp"
+                         articular="true"
+                         rule="PrepNp">
                         <w ref="JUD 1:3!7"
                            class="prep"
                            xml:id="n65001003007"
                            lemma="περί"
                            normalized="περί"
                            strong="4012">περὶ</w>
-                        <wg class="np" articular="true" head="true" rule="DetNP">
+                        <wg class="np"
+                            articular="true"
+                            head="true"
+                            rule="DetNP"
+                            xml:id="650010030080040">
                            <w ref="JUD 1:3!8"
                               class="det"
                               xml:id="n65001003008"
@@ -384,7 +403,7 @@
                               number="singular"
                               gender="feminine"
                               case="genitive">τῆς</w>
-                           <wg class="np" head="true" rule="AdjpNp">
+                           <wg class="np" head="true" rule="AdjpNp" xml:id="650010030090030">
                               <w ref="JUD 1:3!9"
                                  class="adj"
                                  xml:id="n65001003009"
@@ -394,7 +413,7 @@
                                  number="singular"
                                  gender="feminine"
                                  case="genitive">κοινῆς</w>
-                              <wg class="np" head="true" rule="ofNPNP">
+                              <wg class="np" head="true" rule="ofNPNP" xml:id="650010030100020">
                                  <w ref="JUD 1:3!10"
                                     class="pron"
                                     type="personal"
@@ -445,7 +464,7 @@
                   voice="active"
                   mood="indicative"
                   head="true">ἔσχον</w>
-               <wg role="adv" class="cl" rule="V-IO-ADV">
+               <wg role="adv" xml:id="650010030140101" class="cl" rule="V-IO-ADV">
                   <w role="v"
                      ref="JUD 1:3!14"
                      class="verb"
@@ -468,7 +487,7 @@
                      strong="4771"
                      number="plural"
                      case="dative">ὑμῖν</w>
-                  <wg role="adv" class="cl" rule="V-O">
+                  <wg role="adv" xml:id="650010030160081" class="cl" rule="V-O">
                      <w role="v"
                         ref="JUD 1:3!16"
                         class="verb"
@@ -484,7 +503,7 @@
                         mood="participle"
                         type="?"
                         head="true">παρακαλῶν</w>
-                     <wg role="o" class="cl" rule="V-ADV">
+                     <wg role="o" xml:id="650010030170071" class="cl" rule="V-ADV">
                         <w role="v"
                            ref="JUD 1:3!17"
                            class="verb"
@@ -497,7 +516,11 @@
                            mood="infinitive"
                            type="?"
                            head="true">ἐπαγωνίζεσθαι</w>
-                        <wg role="adv" class="np" articular="true" rule="DetNP">
+                        <wg role="adv"
+                            xml:id="650010030180061"
+                            class="np"
+                            articular="true"
+                            rule="DetNP">
                            <w ref="JUD 1:3!18"
                               class="det"
                               xml:id="n65001003018"
@@ -507,9 +530,9 @@
                               number="singular"
                               gender="feminine"
                               case="dative">τῇ</w>
-                           <wg class="np" head="true" rule="AdjpNp">
-                              <wg class="adjp" rule="CL2Adjp">
-                                 <wg class="cl" rule="ADV-V-IO">
+                           <wg class="np" head="true" rule="AdjpNp" xml:id="650010030190050">
+                              <wg class="adjp" rule="CL2Adjp" xml:id="650010030190041">
+                                 <wg class="cl" rule="ADV-V-IO" xml:id="650010030190040">
                                     <w role="adv"
                                        ref="JUD 1:3!19"
                                        class="adv"
@@ -532,7 +555,11 @@
                                        mood="participle"
                                        type="?"
                                        head="true">παραδοθείσῃ</w>
-                                    <wg role="io" class="np" articular="true" rule="DetAdj">
+                                    <wg role="io"
+                                        xml:id="650010030210021"
+                                        class="np"
+                                        articular="true"
+                                        rule="DetAdj">
                                        <w ref="JUD 1:3!21"
                                           class="det"
                                           xml:id="n65001003021"
@@ -579,7 +606,7 @@
       <p>
          <milestone unit="verse" id="JUD 1:4">JUD 1:4</milestone> παρεισεδύησαν γάρ τινες ἄνθρωποι, οἱ πάλαι προγεγραμμένοι εἰς τοῦτο τὸ κρίμα, ἀσεβεῖς, τὴν τοῦ Θεοῦ ἡμῶν χάριτα μετατιθέντες εἰς ἀσέλγειαν καὶ τὸν μόνον Δεσπότην καὶ Κύριον ἡμῶν Ἰησοῦν Χριστὸν ἀρνούμενοι.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="650010040020300">
             <w ref="JUD 1:4!2"
                class="conj"
                xml:id="n65001004002"
@@ -587,7 +614,7 @@
                normalized="γάρ"
                strong="1063"
                discontinuous="true">γάρ</w>
-            <wg class="cl" rule="V-S-ADV">
+            <wg class="cl" rule="V-S-ADV" xml:id="650010040010290">
                <w role="v"
                   ref="JUD 1:4!1"
                   class="verb"
@@ -601,9 +628,9 @@
                   voice="passive"
                   mood="indicative"
                   head="true">παρεισεδύησαν</w>
-               <wg role="s" class="np" rule="Np-Appos">
-                  <wg class="np" head="true" rule="Np-Appos">
-                     <wg class="np" head="true" rule="AdjpNp">
+               <wg role="s" xml:id="650010040030101" class="np" rule="Np-Appos">
+                  <wg class="np" head="true" rule="Np-Appos" xml:id="650010040030090">
+                     <wg class="np" head="true" rule="AdjpNp" xml:id="650010040030020">
                         <w ref="JUD 1:4!3"
                            class="pron"
                            type="indefinite"
@@ -626,7 +653,10 @@
                            case="nominative"
                            head="true">ἄνθρωποι,</w>
                      </wg>
-                     <wg class="np" articular="true" rule="DetCL">
+                     <wg class="np"
+                         articular="true"
+                         rule="DetCL"
+                         xml:id="650010040050070">
                         <w ref="JUD 1:4!5"
                            class="det"
                            xml:id="n65001004005"
@@ -636,7 +666,10 @@
                            number="plural"
                            gender="masculine"
                            case="nominative">οἱ</w>
-                        <wg class="cl" head="true" rule="ADV-V-ADV">
+                        <wg class="cl"
+                            head="true"
+                            rule="ADV-V-ADV"
+                            xml:id="650010040060060">
                            <w role="adv"
                               ref="JUD 1:4!6"
                               class="adv"
@@ -659,14 +692,22 @@
                               mood="participle"
                               type="?"
                               head="true">προγεγραμμένοι</w>
-                           <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                           <wg role="adv"
+                               xml:id="650010040080041"
+                               class="pp"
+                               articular="true"
+                               rule="PrepNp">
                               <w ref="JUD 1:4!8"
                                  class="prep"
                                  xml:id="n65001004008"
                                  lemma="εἰς"
                                  normalized="εἰς"
                                  strong="1519">εἰς</w>
-                              <wg class="np" articular="true" head="true" rule="Demo-NP">
+                              <wg class="np"
+                                  articular="true"
+                                  head="true"
+                                  rule="Demo-NP"
+                                  xml:id="650010040090030">
                                  <w ref="JUD 1:4!9"
                                     class="pron"
                                     type="demonstrative"
@@ -677,7 +718,11 @@
                                     number="singular"
                                     gender="neuter"
                                     case="accusative">τοῦτο</w>
-                                 <wg class="np" articular="true" head="true" rule="DetNP">
+                                 <wg class="np"
+                                     articular="true"
+                                     head="true"
+                                     rule="DetNP"
+                                     xml:id="650010040100020">
                                     <w ref="JUD 1:4!10"
                                        class="det"
                                        xml:id="n65001004010"
@@ -714,9 +759,13 @@
                      gender="masculine"
                      case="nominative">ἀσεβεῖς,</w>
                </wg>
-               <wg role="adv" class="cl" rule="CLaCL">
-                  <wg class="cl" head="true" rule="O-V-ADV">
-                     <wg role="o" class="np" articular="true" rule="DetNP">
+               <wg role="adv" xml:id="650010040130181" class="cl" rule="CLaCL">
+                  <wg class="cl" head="true" rule="O-V-ADV" xml:id="650010040130080">
+                     <wg role="o"
+                         xml:id="650010040130051"
+                         class="np"
+                         articular="true"
+                         rule="DetNP">
                         <w ref="JUD 1:4!13"
                            class="det"
                            xml:id="n65001004013"
@@ -726,8 +775,11 @@
                            number="singular"
                            gender="feminine"
                            case="accusative">τὴν</w>
-                        <wg class="np" head="true" rule="ofNPNP">
-                           <wg class="np" articular="true" rule="DetNP">
+                        <wg class="np" head="true" rule="ofNPNP" xml:id="650010040140040">
+                           <wg class="np"
+                               articular="true"
+                               rule="DetNP"
+                               xml:id="650010040140030">
                               <w ref="JUD 1:4!14"
                                  class="det"
                                  xml:id="n65001004014"
@@ -737,7 +789,7 @@
                                  number="singular"
                                  gender="masculine"
                                  case="genitive">τοῦ</w>
-                              <wg class="np" head="true" rule="NPofNP">
+                              <wg class="np" head="true" rule="NPofNP" xml:id="650010040150020">
                                  <w ref="JUD 1:4!15"
                                     class="noun"
                                     type="common"
@@ -788,7 +840,7 @@
                         mood="participle"
                         type="?"
                         head="true">μετατιθέντες</w>
-                     <wg role="adv" class="pp" rule="PrepNp">
+                     <wg role="adv" xml:id="650010040190021" class="pp" rule="PrepNp">
                         <w ref="JUD 1:4!19"
                            class="prep"
                            xml:id="n65001004019"
@@ -814,8 +866,12 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532">καὶ</w>
-                  <wg class="cl" rule="O-V">
-                     <wg role="o" class="np" articular="true" rule="DetNP">
+                  <wg class="cl" rule="O-V" xml:id="650010040220090">
+                     <wg role="o"
+                         xml:id="650010040220081"
+                         class="np"
+                         articular="true"
+                         rule="DetNP">
                         <w ref="JUD 1:4!22"
                            class="det"
                            xml:id="n65001004022"
@@ -825,8 +881,8 @@
                            number="singular"
                            gender="masculine"
                            case="accusative">τὸν</w>
-                        <wg class="np" head="true" rule="NpaNp">
-                           <wg class="np" head="true" rule="AdjpNp">
+                        <wg class="np" head="true" rule="NpaNp" xml:id="650010040230070">
+                           <wg class="np" head="true" rule="AdjpNp" xml:id="650010040230020">
                               <w ref="JUD 1:4!23"
                                  class="adj"
                                  xml:id="n65001004023"
@@ -854,8 +910,8 @@
                               lemma="καί"
                               normalized="καί"
                               strong="2532">καὶ</w>
-                           <wg class="np" rule="Np-Appos">
-                              <wg class="np" head="true" rule="NPofNP">
+                           <wg class="np" rule="Np-Appos" xml:id="650010040260040">
+                              <wg class="np" head="true" rule="NPofNP" xml:id="650010040260020">
                                  <w ref="JUD 1:4!26"
                                     class="noun"
                                     type="common"
@@ -877,7 +933,7 @@
                                     number="plural"
                                     case="genitive">ἡμῶν</w>
                               </wg>
-                              <wg class="np" rule="Np-Appos">
+                              <wg class="np" rule="Np-Appos" xml:id="650010040280020">
                                  <w ref="JUD 1:4!28"
                                     class="noun"
                                     type="proper"
@@ -930,14 +986,14 @@
          <milestone unit="verse" id="JUD 1:6">JUD 1:6</milestone> 
          <milestone unit="verse" id="JUD 1:7">JUD 1:7</milestone> Ὑπομνῆσαι δὲ ὑμᾶς βούλομαι, εἰδότας ἅπαξ πάντα, ὅτι Κύριος λαὸν ἐκ γῆς Αἰγύπτου σώσας τὸ δεύτερον τοὺς μὴ πιστεύσαντας ἀπώλεσεν, ἀγγέλους τε τοὺς μὴ τηρήσαντας τὴν ἑαυτῶν ἀρχὴν ἀλλὰ ἀπολιπόντας τὸ ἴδιον οἰκητήριον εἰς κρίσιν μεγάλης ἡμέρας δεσμοῖς ἀϊδίοις ὑπὸ ζόφον τετήρηκεν· ὡς Σόδομα καὶ Γόμορρα καὶ αἱ περὶ αὐτὰς πόλεις, τὸν ὅμοιον τρόπον τούτοις ἐκπορνεύσασαι καὶ ἀπελθοῦσαι ὀπίσω σαρκὸς ἑτέρας, πρόκεινται δεῖγμα πυρὸς αἰωνίου δίκην ὑπέχουσαι.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="650010050020670">
             <w ref="JUD 1:5!2"
                class="conj"
                xml:id="n65001005002"
                lemma="δέ"
                normalized="δέ"
                strong="1161">δὲ</w>
-            <wg class="cl" rule="V-ADV-O">
+            <wg class="cl" rule="V-ADV-O" xml:id="650010050040660">
                <w role="v"
                   ref="JUD 1:5!4"
                   class="verb"
@@ -951,7 +1007,7 @@
                   voice="middlepassive"
                   mood="indicative"
                   head="true">βούλομαι,</w>
-               <wg role="adv" class="cl" rule="V-ADV-O">
+               <wg role="adv" xml:id="650010050050031" class="cl" rule="V-ADV-O">
                   <w role="v"
                      ref="JUD 1:5!5"
                      class="verb"
@@ -986,8 +1042,8 @@
                      case="accusative"
                      discontinuous="true">πάντα,</w>
                </wg>
-               <wg role="o" class="cl" rule="ClCl">
-                  <wg class="cl" head="true" rule="V-O">
+               <wg role="o" xml:id="650010050010621" class="cl" rule="ClCl">
+                  <wg class="cl" head="true" rule="V-O" xml:id="650010050010020">
                      <w role="v"
                         ref="JUD 1:5!1"
                         class="verb"
@@ -1011,15 +1067,18 @@
                         number="plural"
                         case="accusative">ὑμᾶς</w>
                   </wg>
-                  <wg class="cl" head="true" rule="that-VP">
+                  <wg class="cl" head="true" rule="that-VP" xml:id="650010050080350">
                      <w ref="JUD 1:5!8"
                         class="conj"
                         xml:id="n65001005008"
                         lemma="ὅτι"
                         normalized="ὅτι"
                         strong="3754">ὅτι</w>
-                     <wg class="cl" rule="CLaCL">
-                        <wg class="cl" head="true" rule="S-ADV-ADV-O-V">
+                     <wg class="cl" rule="CLaCL" xml:id="650010050090340">
+                        <wg class="cl"
+                            head="true"
+                            rule="S-ADV-ADV-O-V"
+                            xml:id="650010050090120">
                            <w role="s"
                               ref="JUD 1:5!9"
                               class="noun"
@@ -1031,7 +1090,7 @@
                               number="singular"
                               gender="masculine"
                               case="nominative">Κύριος</w>
-                           <wg role="adv" class="cl" rule="O-ADV-V">
+                           <wg role="adv" xml:id="650010050100051" class="cl" rule="O-ADV-V">
                               <w role="o"
                                  ref="JUD 1:5!10"
                                  class="noun"
@@ -1043,14 +1102,14 @@
                                  number="singular"
                                  gender="masculine"
                                  case="accusative">λαὸν</w>
-                              <wg role="adv" class="pp" rule="PrepNp">
+                              <wg role="adv" xml:id="650010050110031" class="pp" rule="PrepNp">
                                  <w ref="JUD 1:5!11"
                                     class="prep"
                                     xml:id="n65001005011"
                                     lemma="ἐκ"
                                     normalized="ἐκ"
                                     strong="1537">ἐκ</w>
-                                 <wg class="np" head="true" rule="NPofNP">
+                                 <wg class="np" head="true" rule="NPofNP" xml:id="650010050120020">
                                     <w ref="JUD 1:5!12"
                                        class="noun"
                                        type="common"
@@ -1090,7 +1149,11 @@
                                  type="?"
                                  head="true">σώσας</w>
                            </wg>
-                           <wg role="adv" class="np" articular="true" rule="DetAdj">
+                           <wg role="adv"
+                               xml:id="650010050150021"
+                               class="np"
+                               articular="true"
+                               rule="DetAdj">
                               <w ref="JUD 1:5!15"
                                  class="det"
                                  xml:id="n65001005015"
@@ -1111,7 +1174,11 @@
                                  case="accusative"
                                  head="true">δεύτερον</w>
                            </wg>
-                           <wg role="o" class="np" articular="true" rule="DetCL">
+                           <wg role="o"
+                               xml:id="650010050170031"
+                               class="np"
+                               articular="true"
+                               rule="DetCL">
                               <w ref="JUD 1:5!17"
                                  class="det"
                                  xml:id="n65001005017"
@@ -1121,7 +1188,7 @@
                                  number="plural"
                                  gender="masculine"
                                  case="accusative">τοὺς</w>
-                              <wg class="cl" head="true" rule="ADV-V">
+                              <wg class="cl" head="true" rule="ADV-V" xml:id="650010050180020">
                                  <w role="adv"
                                     ref="JUD 1:5!18"
                                     class="adv"
@@ -1167,8 +1234,8 @@
                            normalized="τε"
                            strong="5037"
                            discontinuous="true">τε</w>
-                        <wg class="cl" rule="O-ADV-ADV-ADV-V">
-                           <wg role="o" class="np" rule="Np-Appos">
+                        <wg class="cl" rule="O-ADV-ADV-ADV-V" xml:id="650010060010210">
+                           <wg role="o" xml:id="650010060010121" class="np" rule="Np-Appos">
                               <w ref="JUD 1:6!1"
                                  class="noun"
                                  type="common"
@@ -1180,7 +1247,10 @@
                                  gender="masculine"
                                  case="accusative"
                                  head="true">ἀγγέλους</w>
-                              <wg class="np" articular="true" rule="DetCL">
+                              <wg class="np"
+                                  articular="true"
+                                  rule="DetCL"
+                                  xml:id="650010060030110">
                                  <w ref="JUD 1:6!3"
                                     class="det"
                                     xml:id="n65001006003"
@@ -1190,8 +1260,8 @@
                                     number="plural"
                                     gender="masculine"
                                     case="accusative">τοὺς</w>
-                                 <wg class="cl" head="true" rule="CLaCL">
-                                    <wg class="cl" head="true" rule="ADV-V-O">
+                                 <wg class="cl" head="true" rule="CLaCL" xml:id="650010060040100">
+                                    <wg class="cl" head="true" rule="ADV-V-O" xml:id="650010060040050">
                                        <w role="adv"
                                           ref="JUD 1:6!4"
                                           class="adv"
@@ -1214,7 +1284,11 @@
                                           mood="participle"
                                           type="?"
                                           head="true">τηρήσαντας</w>
-                                       <wg role="o" class="np" articular="true" rule="DetNP">
+                                       <wg role="o"
+                                           xml:id="650010060060031"
+                                           class="np"
+                                           articular="true"
+                                           rule="DetNP">
                                           <w ref="JUD 1:6!6"
                                              class="det"
                                              xml:id="n65001006006"
@@ -1224,7 +1298,7 @@
                                              number="singular"
                                              gender="feminine"
                                              case="accusative">τὴν</w>
-                                          <wg class="np" head="true" rule="ofNPNP">
+                                          <wg class="np" head="true" rule="ofNPNP" xml:id="650010060070020">
                                              <w ref="JUD 1:6!7"
                                                 class="pron"
                                                 type="personal"
@@ -1255,7 +1329,7 @@
                                        lemma="ἀλλά"
                                        normalized="ἀλλά"
                                        strong="235">ἀλλὰ</w>
-                                    <wg class="cl" rule="V-O">
+                                    <wg class="cl" rule="V-O" xml:id="650010060100040">
                                        <w role="v"
                                           ref="JUD 1:6!10"
                                           class="verb"
@@ -1271,7 +1345,11 @@
                                           mood="participle"
                                           type="?"
                                           head="true">ἀπολιπόντας</w>
-                                       <wg role="o" class="np" articular="true" rule="DetNP">
+                                       <wg role="o"
+                                           xml:id="650010060110031"
+                                           class="np"
+                                           articular="true"
+                                           rule="DetNP">
                                           <w ref="JUD 1:6!11"
                                              class="det"
                                              xml:id="n65001006011"
@@ -1281,7 +1359,7 @@
                                              number="singular"
                                              gender="neuter"
                                              case="accusative">τὸ</w>
-                                          <wg class="np" head="true" rule="AdjpNp">
+                                          <wg class="np" head="true" rule="AdjpNp" xml:id="650010060120020">
                                              <w ref="JUD 1:6!12"
                                                 class="adj"
                                                 xml:id="n65001006012"
@@ -1308,14 +1386,14 @@
                                  </wg>
                               </wg>
                            </wg>
-                           <wg role="adv" class="pp" rule="PrepNp">
+                           <wg role="adv" xml:id="650010060140041" class="pp" rule="PrepNp">
                               <w ref="JUD 1:6!14"
                                  class="prep"
                                  xml:id="n65001006014"
                                  lemma="εἰς"
                                  normalized="εἰς"
                                  strong="1519">εἰς</w>
-                              <wg class="np" head="true" rule="NPofNP">
+                              <wg class="np" head="true" rule="NPofNP" xml:id="650010060150030">
                                  <w ref="JUD 1:6!15"
                                     class="noun"
                                     type="common"
@@ -1327,7 +1405,7 @@
                                     gender="feminine"
                                     case="accusative"
                                     head="true">κρίσιν</w>
-                                 <wg class="np" rule="AdjpNp">
+                                 <wg class="np" rule="AdjpNp" xml:id="650010060160020">
                                     <w ref="JUD 1:6!16"
                                        class="adj"
                                        xml:id="n65001006016"
@@ -1351,7 +1429,7 @@
                                  </wg>
                               </wg>
                            </wg>
-                           <wg role="adv" class="np" rule="NpAdjp">
+                           <wg role="adv" xml:id="650010060180021" class="np" rule="NpAdjp">
                               <w ref="JUD 1:6!18"
                                  class="noun"
                                  type="common"
@@ -1373,7 +1451,7 @@
                                  gender="masculine"
                                  case="dative">ἀϊδίοις</w>
                            </wg>
-                           <wg role="adv" class="pp" rule="PrepNp">
+                           <wg role="adv" xml:id="650010060200021" class="pp" rule="PrepNp">
                               <w ref="JUD 1:6!20"
                                  class="prep"
                                  xml:id="n65001006020"
@@ -1408,15 +1486,15 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="cl" rule="sub-CL">
+                  <wg class="cl" rule="sub-CL" xml:id="650010070010250">
                      <w ref="JUD 1:7!1"
                         class="conj"
                         xml:id="n65001007001"
                         lemma="ὡς"
                         normalized="ὡς"
                         strong="5613">ὡς</w>
-                     <wg class="cl" rule="S-ADV-V-O-ADV">
-                        <wg role="s" class="np" rule="Conj3Np">
+                     <wg class="cl" rule="S-ADV-V-O-ADV" xml:id="650010070020240">
+                        <wg role="s" xml:id="650010070020081" class="np" rule="Conj3Np">
                            <w ref="JUD 1:7!2"
                               class="noun"
                               type="proper"
@@ -1450,7 +1528,10 @@
                               lemma="καί"
                               normalized="καί"
                               strong="2532">καὶ</w>
-                           <wg class="np" articular="true" rule="DetNP">
+                           <wg class="np"
+                               articular="true"
+                               rule="DetNP"
+                               xml:id="650010070060040">
                               <w ref="JUD 1:7!6"
                                  class="det"
                                  xml:id="n65001007006"
@@ -1460,8 +1541,8 @@
                                  number="plural"
                                  gender="feminine"
                                  case="nominative">αἱ</w>
-                              <wg class="np" head="true" rule="PpNp2Np">
-                                 <wg class="pp" rule="PrepNp">
+                              <wg class="np" head="true" rule="PpNp2Np" xml:id="650010070070030">
+                                 <wg class="pp" rule="PrepNp" xml:id="650010070070020">
                                     <w ref="JUD 1:7!7"
                                        class="prep"
                                        xml:id="n65001007007"
@@ -1494,9 +1575,13 @@
                               </wg>
                            </wg>
                         </wg>
-                        <wg role="adv" class="cl" rule="CLaCL">
-                           <wg class="cl" head="true" rule="O-ADV-V">
-                              <wg role="o" class="np" articular="true" rule="DetNP">
+                        <wg role="adv" xml:id="650010070100101" class="cl" rule="CLaCL">
+                           <wg class="cl" head="true" rule="O-ADV-V" xml:id="650010070100050">
+                              <wg role="o"
+                                  xml:id="650010070100031"
+                                  class="np"
+                                  articular="true"
+                                  rule="DetNP">
                                  <w ref="JUD 1:7!10"
                                     class="det"
                                     xml:id="n65001007010"
@@ -1506,7 +1591,7 @@
                                     number="singular"
                                     gender="masculine"
                                     case="accusative">τὸν</w>
-                                 <wg class="np" head="true" rule="AdjpNp">
+                                 <wg class="np" head="true" rule="AdjpNp" xml:id="650010070110020">
                                     <w ref="JUD 1:7!11"
                                        class="adj"
                                        xml:id="n65001007011"
@@ -1562,7 +1647,7 @@
                               lemma="καί"
                               normalized="καί"
                               strong="2532">καὶ</w>
-                           <wg class="cl" rule="V-ADV">
+                           <wg class="cl" rule="V-ADV" xml:id="650010070160040">
                               <w role="v"
                                  ref="JUD 1:7!16"
                                  class="verb"
@@ -1578,14 +1663,14 @@
                                  mood="participle"
                                  type="?"
                                  head="true">ἀπελθοῦσαι</w>
-                              <wg role="adv" class="pp" rule="PrepNp">
+                              <wg role="adv" xml:id="650010070170031" class="pp" rule="PrepNp">
                                  <w ref="JUD 1:7!17"
                                     class="prep"
                                     xml:id="n65001007017"
                                     lemma="ὀπίσω"
                                     normalized="ὀπίσω"
                                     strong="3694">ὀπίσω</w>
-                                 <wg class="np" head="true" rule="NpAdjp">
+                                 <wg class="np" head="true" rule="NpAdjp" xml:id="650010070180020">
                                     <w ref="JUD 1:7!18"
                                        class="noun"
                                        type="common"
@@ -1634,9 +1719,9 @@
                            number="singular"
                            gender="neuter"
                            case="accusative">δεῖγμα</w>
-                        <wg role="adv" class="cl" rule="O-V">
-                           <wg role="o" class="np" rule="ofNPNP">
-                              <wg class="np" rule="NpAdjp">
+                        <wg role="adv" xml:id="650010070220041" class="cl" rule="O-V">
+                           <wg role="o" xml:id="650010070220031" class="np" rule="ofNPNP">
+                              <wg class="np" rule="NpAdjp" xml:id="650010070220020">
                                  <w ref="JUD 1:7!22"
                                     class="noun"
                                     type="common"
@@ -1697,7 +1782,7 @@
       <p>
          <milestone unit="verse" id="JUD 1:8">JUD 1:8</milestone> Ὁμοίως μέντοι καὶ οὗτοι ἐνυπνιαζόμενοι σάρκα μὲν μιαίνουσιν, κυριότητα δὲ ἀθετοῦσιν, δόξας δὲ βλασφημοῦσιν.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="650010080020140">
             <w ref="JUD 1:8!2"
                class="conj"
                xml:id="n65001008002"
@@ -1705,7 +1790,7 @@
                normalized="μέντοι"
                strong="3305"
                discontinuous="true">μέντοι</w>
-            <wg class="cl" rule="ADV-S-V">
+            <wg class="cl" rule="ADV-S-V" xml:id="650010080010130">
                <w role="adv"
                   ref="JUD 1:8!1"
                   class="adv"
@@ -1713,14 +1798,14 @@
                   lemma="ὁμοίως"
                   normalized="Ὁμοίως"
                   strong="3668">Ὁμοίως</w>
-               <wg role="s" class="np" rule="AdvpNp">
+               <wg role="s" xml:id="650010080030031" class="np" rule="AdvpNp">
                   <w ref="JUD 1:8!3"
                      class="adv"
                      xml:id="n65001008003"
                      lemma="καί"
                      normalized="καί"
                      strong="2532">καὶ</w>
-                  <wg class="np" head="true" rule="Demo-NP">
+                  <wg class="np" head="true" rule="Demo-NP" xml:id="650010080040020">
                      <w ref="JUD 1:8!4"
                         class="pron"
                         type="demonstrative"
@@ -1747,8 +1832,15 @@
                         head="true">ἐνυπνιαζόμενοι</w>
                   </wg>
                </wg>
-               <wg role="v" class="vp" head="true" rule="CL2VP">
-                  <wg class="cl" head="true" rule="aCLaCLaCL">
+               <wg role="v"
+                   xml:id="650010080070092"
+                   class="vp"
+                   head="true"
+                   rule="CL2VP">
+                  <wg class="cl"
+                      head="true"
+                      rule="aCLaCLaCL"
+                      xml:id="650010080070090">
                      <w ref="JUD 1:8!7"
                         class="conj"
                         xml:id="n65001008007"
@@ -1756,7 +1848,7 @@
                         normalized="μέν"
                         strong="3303"
                         discontinuous="true">μὲν</w>
-                     <wg class="cl" head="true" rule="O-V">
+                     <wg class="cl" head="true" rule="O-V" xml:id="650010080060020">
                         <w role="o"
                            ref="JUD 1:8!6"
                            class="noun"
@@ -1789,7 +1881,7 @@
                         normalized="δέ"
                         strong="1161"
                         discontinuous="true">δὲ</w>
-                     <wg class="cl" rule="O-V">
+                     <wg class="cl" rule="O-V" xml:id="650010080090020">
                         <w role="o"
                            ref="JUD 1:8!9"
                            class="noun"
@@ -1822,7 +1914,7 @@
                         normalized="δέ"
                         strong="1161"
                         discontinuous="true">δὲ</w>
-                     <wg class="cl" rule="O-V">
+                     <wg class="cl" rule="O-V" xml:id="650010080120020">
                         <w role="o"
                            ref="JUD 1:8!12"
                            class="noun"
@@ -1858,23 +1950,27 @@
       <p>
          <milestone unit="verse" id="JUD 1:9">JUD 1:9</milestone> ὁ δὲ Μιχαὴλ ὁ ἀρχάγγελος, ὅτε τῷ διαβόλῳ διακρινόμενος διελέγετο περὶ τοῦ Μωϋσέως σώματος, οὐκ ἐτόλμησεν κρίσιν ἐπενεγκεῖν βλασφημίας, ἀλλὰ εἶπεν Ἐπιτιμήσαι σοι Κύριος.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="650010090020240">
             <w ref="JUD 1:9!2"
                class="conj"
                xml:id="n65001009002"
                lemma="δέ"
                normalized="δέ"
                strong="1161">δὲ</w>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="650010090060090">
                <w ref="JUD 1:9!6"
                   class="conj"
                   xml:id="n65001009006"
                   lemma="ὅτε"
                   normalized="ὅτε"
                   strong="3753">ὅτε</w>
-               <wg class="cl" rule="ADV-V-ADV">
-                  <wg role="adv" class="cl" rule="ADV-V">
-                     <wg role="adv" class="np" articular="true" rule="DetAdj">
+               <wg class="cl" rule="ADV-V-ADV" xml:id="650010090070080">
+                  <wg role="adv" xml:id="650010090070031" class="cl" rule="ADV-V">
+                     <wg role="adv"
+                         xml:id="650010090070021"
+                         class="np"
+                         articular="true"
+                         rule="DetAdj">
                         <w ref="JUD 1:9!7"
                            class="det"
                            xml:id="n65001009007"
@@ -1924,14 +2020,22 @@
                      voice="middlepassive"
                      mood="indicative"
                      head="true">διελέγετο</w>
-                  <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                  <wg role="adv"
+                      xml:id="650010090110041"
+                      class="pp"
+                      articular="true"
+                      rule="PrepNp">
                      <w ref="JUD 1:9!11"
                         class="prep"
                         xml:id="n65001009011"
                         lemma="περί"
                         normalized="περί"
                         strong="4012">περὶ</w>
-                     <wg class="np" articular="true" head="true" rule="DetNP">
+                     <wg class="np"
+                         articular="true"
+                         head="true"
+                         rule="DetNP"
+                         xml:id="650010090120030">
                         <w ref="JUD 1:9!12"
                            class="det"
                            xml:id="n65001009012"
@@ -1941,7 +2045,7 @@
                            number="singular"
                            gender="masculine"
                            case="genitive">τοῦ</w>
-                        <wg class="np" head="true" rule="ofNPNP">
+                        <wg class="np" head="true" rule="ofNPNP" xml:id="650010090130020">
                            <w ref="JUD 1:9!13"
                               class="noun"
                               type="proper"
@@ -1968,7 +2072,10 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" head="true" rule="notCLbutCL2CL">
+            <wg class="cl"
+                head="true"
+                rule="notCLbutCL2CL"
+                xml:id="650010090150140">
                <w ref="JUD 1:9!15"
                   class="adv"
                   xml:id="n65001009015"
@@ -1976,9 +2083,17 @@
                   normalized="οὐκ"
                   strong="3756"
                   discontinuous="true">οὐκ</w>
-               <wg class="cl" rule="S-V-O">
-                  <wg role="s" class="np" articular="true" rule="Np-Appos">
-                     <wg class="np" articular="true" head="true" rule="DetNP">
+               <wg class="cl" rule="S-V-O" xml:id="650010090010080">
+                  <wg role="s"
+                      xml:id="650010090010041"
+                      class="np"
+                      articular="true"
+                      rule="Np-Appos">
+                     <wg class="np"
+                         articular="true"
+                         head="true"
+                         rule="DetNP"
+                         xml:id="650010090010020">
                         <w ref="JUD 1:9!1"
                            class="det"
                            xml:id="n65001009001"
@@ -2000,7 +2115,10 @@
                            case="nominative"
                            head="true">Μιχαὴλ</w>
                      </wg>
-                     <wg class="np" articular="true" rule="DetNP">
+                     <wg class="np"
+                         articular="true"
+                         rule="DetNP"
+                         xml:id="650010090040020">
                         <w ref="JUD 1:9!4"
                            class="det"
                            xml:id="n65001009004"
@@ -2036,8 +2154,8 @@
                      voice="active"
                      mood="indicative"
                      head="true">ἐτόλμησεν</w>
-                  <wg role="o" class="cl" rule="O-V">
-                     <wg role="o" class="np" rule="NPofNP">
+                  <wg role="o" xml:id="650010090170031" class="cl" rule="O-V">
+                     <wg role="o" xml:id="650010090170021" class="np" rule="NPofNP">
                         <w ref="JUD 1:9!17"
                            class="noun"
                            type="common"
@@ -2081,7 +2199,7 @@
                   lemma="ἀλλά"
                   normalized="ἀλλά"
                   strong="235">ἀλλὰ</w>
-               <wg class="cl" head="true" rule="V2CL">
+               <wg class="cl" head="true" rule="V2CL" xml:id="650010090210013">
                   <w role="v"
                      ref="JUD 1:9!21"
                      class="verb"
@@ -2096,7 +2214,7 @@
                      mood="indicative"
                      head="true">εἶπεν</w>
                </wg>
-               <wg class="cl" rule="V-O-S">
+               <wg class="cl" rule="V-O-S" xml:id="650010090220030">
                   <w role="v"
                      ref="JUD 1:9!22"
                      class="verb"
@@ -2140,14 +2258,14 @@
       <p>
          <milestone unit="verse" id="JUD 1:10">JUD 1:10</milestone> οὗτοι δὲ ὅσα μὲν οὐκ οἴδασιν βλασφημοῦσιν, ὅσα δὲ φυσικῶς ὡς τὰ ἄλογα ζῷα ἐπίστανται, ἐν τούτοις φθείρονται.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="650010100020180">
             <w ref="JUD 1:10!2"
                class="conj"
                xml:id="n65001010002"
                lemma="δέ"
                normalized="δέ"
                strong="1161">δὲ</w>
-            <wg class="cl" rule="aCLaCL">
+            <wg class="cl" rule="aCLaCL" xml:id="650010100040170">
                <w ref="JUD 1:10!4"
                   class="conj"
                   xml:id="n65001010004"
@@ -2155,7 +2273,7 @@
                   normalized="μέν"
                   strong="3303"
                   discontinuous="true">μὲν</w>
-               <wg class="cl" head="true" rule="S-O-V">
+               <wg class="cl" head="true" rule="S-O-V" xml:id="650010100010050">
                   <w role="s"
                      ref="JUD 1:10!1"
                      class="pron"
@@ -2167,8 +2285,8 @@
                      number="plural"
                      gender="masculine"
                      case="nominative">οὗτοι</w>
-                  <wg role="o" class="np" rule="CL2NP">
-                     <wg class="cl" rule="O-ADV-V">
+                  <wg role="o" xml:id="650010100030032" class="np" rule="CL2NP">
+                     <wg class="cl" rule="O-ADV-V" xml:id="650010100030030">
                         <w role="o"
                            ref="JUD 1:10!3"
                            class="pron"
@@ -2223,7 +2341,7 @@
                   normalized="δέ"
                   strong="1161"
                   discontinuous="true">δὲ</w>
-               <wg class="cl" rule="O-ADV-ADV-V">
+               <wg class="cl" rule="O-ADV-ADV-V" xml:id="650010100080070">
                   <w role="o"
                      ref="JUD 1:10!8"
                      class="pron"
@@ -2242,15 +2360,26 @@
                      lemma="φυσικῶς"
                      normalized="φυσικῶς"
                      strong="5447">φυσικῶς</w>
-                  <wg role="adv" class="cl" articular="true" rule="sub-CL">
+                  <wg role="adv"
+                      xml:id="650010100110041"
+                      class="cl"
+                      articular="true"
+                      rule="sub-CL">
                      <w ref="JUD 1:10!11"
                         class="conj"
                         xml:id="n65001010011"
                         lemma="ὡς"
                         normalized="ὡς"
                         strong="5613">ὡς</w>
-                     <wg class="cl" articular="true" rule="S2CL">
-                        <wg role="s" class="np" articular="true" rule="DetNP">
+                     <wg class="cl"
+                         articular="true"
+                         rule="S2CL"
+                         xml:id="650010100120032">
+                        <wg role="s"
+                            xml:id="650010100120031"
+                            class="np"
+                            articular="true"
+                            rule="DetNP">
                            <w ref="JUD 1:10!12"
                               class="det"
                               xml:id="n65001010012"
@@ -2260,7 +2389,7 @@
                               number="plural"
                               gender="neuter"
                               case="nominative">τὰ</w>
-                           <wg class="np" head="true" rule="AdjpNp">
+                           <wg class="np" head="true" rule="AdjpNp" xml:id="650010100130020">
                               <w ref="JUD 1:10!13"
                                  class="adj"
                                  xml:id="n65001010013"
@@ -2299,8 +2428,8 @@
                      mood="indicative"
                      head="true">ἐπίστανται,</w>
                </wg>
-               <wg class="cl" head="true" rule="ADV-V">
-                  <wg role="adv" class="pp" rule="PrepNp">
+               <wg class="cl" head="true" rule="ADV-V" xml:id="650010100160030">
+                  <wg role="adv" xml:id="650010100160021" class="pp" rule="PrepNp">
                      <w ref="JUD 1:10!16"
                         class="prep"
                         xml:id="n65001010016"
@@ -2341,8 +2470,8 @@
       <p>
          <milestone unit="verse" id="JUD 1:11">JUD 1:11</milestone> οὐαὶ αὐτοῖς, ὅτι τῇ ὁδῷ τοῦ Κάϊν ἐπορεύθησαν, καὶ τῇ πλάνῃ τοῦ Βαλαὰμ μισθοῦ ἐξεχύθησαν, καὶ τῇ ἀντιλογίᾳ τοῦ Κόρε ἀπώλοντο.</p>
       <wg role="cl">
-         <wg class="cl" rule="ClCl">
-            <wg class="cl" head="true" rule="S-IO">
+         <wg class="cl" rule="ClCl" xml:id="650010110010210">
+            <wg class="cl" head="true" rule="S-IO" xml:id="650010110010020">
                <w role="s"
                   ref="JUD 1:11!1"
                   class="ptcl"
@@ -2363,16 +2492,20 @@
                   gender="masculine"
                   case="dative">αὐτοῖς,</w>
             </wg>
-            <wg class="cl" rule="sub-CL">
+            <wg class="cl" rule="sub-CL" xml:id="650010110030190">
                <w ref="JUD 1:11!3"
                   class="conj"
                   xml:id="n65001011003"
                   lemma="ὅτι"
                   normalized="ὅτι"
                   strong="3754">ὅτι</w>
-               <wg class="cl" rule="Conj3CL">
-                  <wg class="cl" head="true" rule="ADV-V">
-                     <wg role="adv" class="np" articular="true" rule="DetNP">
+               <wg class="cl" rule="Conj3CL" xml:id="650010110040180">
+                  <wg class="cl" head="true" rule="ADV-V" xml:id="650010110040050">
+                     <wg role="adv"
+                         xml:id="650010110040041"
+                         class="np"
+                         articular="true"
+                         rule="DetNP">
                         <w ref="JUD 1:11!4"
                            class="det"
                            xml:id="n65001011004"
@@ -2382,7 +2515,7 @@
                            number="singular"
                            gender="feminine"
                            case="dative">τῇ</w>
-                        <wg class="np" head="true" rule="NPofNP">
+                        <wg class="np" head="true" rule="NPofNP" xml:id="650010110050030">
                            <w ref="JUD 1:11!5"
                               class="noun"
                               type="common"
@@ -2394,7 +2527,10 @@
                               gender="feminine"
                               case="dative"
                               head="true">ὁδῷ</w>
-                           <wg class="np" articular="true" rule="DetNP">
+                           <wg class="np"
+                               articular="true"
+                               rule="DetNP"
+                               xml:id="650010110060020">
                               <w ref="JUD 1:11!6"
                                  class="det"
                                  xml:id="n65001011006"
@@ -2438,8 +2574,12 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532">καὶ</w>
-                  <wg class="cl" rule="ADV-V">
-                     <wg role="adv" class="np" articular="true" rule="DetNP">
+                  <wg class="cl" rule="ADV-V" xml:id="650010110100060">
+                     <wg role="adv"
+                         xml:id="650010110100051"
+                         class="np"
+                         articular="true"
+                         rule="DetNP">
                         <w ref="JUD 1:11!10"
                            class="det"
                            xml:id="n65001011010"
@@ -2449,7 +2589,7 @@
                            number="singular"
                            gender="feminine"
                            case="dative">τῇ</w>
-                        <wg class="np" head="true" rule="NPofNP">
+                        <wg class="np" head="true" rule="NPofNP" xml:id="650010110110040">
                            <w ref="JUD 1:11!11"
                               class="noun"
                               type="common"
@@ -2461,7 +2601,10 @@
                               gender="feminine"
                               case="dative"
                               head="true">πλάνῃ</w>
-                           <wg class="np" articular="true" rule="DetNP">
+                           <wg class="np"
+                               articular="true"
+                               rule="DetNP"
+                               xml:id="650010110120030">
                               <w ref="JUD 1:11!12"
                                  class="det"
                                  xml:id="n65001011012"
@@ -2471,7 +2614,7 @@
                                  number="singular"
                                  gender="masculine"
                                  case="genitive">τοῦ</w>
-                              <wg class="np" head="true" rule="ofNPNP">
+                              <wg class="np" head="true" rule="ofNPNP" xml:id="650010110130020">
                                  <w ref="JUD 1:11!13"
                                     class="noun"
                                     type="proper"
@@ -2517,8 +2660,12 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532">καὶ</w>
-                  <wg class="cl" rule="ADV-V">
-                     <wg role="adv" class="np" articular="true" rule="DetNP">
+                  <wg class="cl" rule="ADV-V" xml:id="650010110170050">
+                     <wg role="adv"
+                         xml:id="650010110170041"
+                         class="np"
+                         articular="true"
+                         rule="DetNP">
                         <w ref="JUD 1:11!17"
                            class="det"
                            xml:id="n65001011017"
@@ -2528,7 +2675,7 @@
                            number="singular"
                            gender="feminine"
                            case="dative">τῇ</w>
-                        <wg class="np" head="true" rule="NPofNP">
+                        <wg class="np" head="true" rule="NPofNP" xml:id="650010110180030">
                            <w ref="JUD 1:11!18"
                               class="noun"
                               type="common"
@@ -2540,7 +2687,10 @@
                               gender="feminine"
                               case="dative"
                               head="true">ἀντιλογίᾳ</w>
-                           <wg class="np" articular="true" rule="DetNP">
+                           <wg class="np"
+                               articular="true"
+                               rule="DetNP"
+                               xml:id="650010110190020">
                               <w ref="JUD 1:11!19"
                                  class="det"
                                  xml:id="n65001011019"
@@ -2588,8 +2738,15 @@
          <milestone unit="verse" id="JUD 1:12">JUD 1:12</milestone> 
          <milestone unit="verse" id="JUD 1:13">JUD 1:13</milestone> Οὗτοί εἰσιν οἱ ἐν ταῖς ἀγάπαις ὑμῶν σπιλάδες συνευωχούμενοι ἀφόβως, ἑαυτοὺς ποιμαίνοντες, νεφέλαι ἄνυδροι ὑπὸ ἀνέμων παραφερόμεναι, δένδρα φθινοπωρινὰ ἄκαρπα δὶς ἀποθανόντα ἐκριζωθέντα, κύματα ἄγρια θαλάσσης ἐπαφρίζοντα τὰς ἑαυτῶν αἰσχύνας, ἀστέρες πλανῆται, οἷς ὁ ζόφος τοῦ σκότους εἰς αἰῶνα τετήρηται.</p>
       <wg role="cl">
-         <wg class="cl" articular="true" rule="ClCl">
-            <wg class="cl" articular="true" head="true" rule="S-VC-P-ADV">
+         <wg class="cl"
+             articular="true"
+             rule="ClCl"
+             xml:id="650010120010400">
+            <wg class="cl"
+                articular="true"
+                head="true"
+                rule="S-VC-P-ADV"
+                xml:id="650010120010120">
                <w role="s"
                   ref="JUD 1:12!1"
                   class="pron"
@@ -2614,6 +2771,7 @@
                   voice="active"
                   mood="indicative">εἰσιν</w>
                <wg role="p"
+                   xml:id="650010120030061"
                    class="np"
                    articular="true"
                    head="true"
@@ -2627,15 +2785,22 @@
                      number="plural"
                      gender="masculine"
                      case="nominative">οἱ</w>
-                  <wg class="np" head="true" rule="PpNp2Np">
-                     <wg class="pp" articular="true" rule="PrepNp">
+                  <wg class="np" head="true" rule="PpNp2Np" xml:id="650010120040050">
+                     <wg class="pp"
+                         articular="true"
+                         rule="PrepNp"
+                         xml:id="650010120040040">
                         <w ref="JUD 1:12!4"
                            class="prep"
                            xml:id="n65001012004"
                            lemma="ἐν"
                            normalized="ἐν"
                            strong="1722">ἐν</w>
-                        <wg class="np" articular="true" head="true" rule="DetNP">
+                        <wg class="np"
+                            articular="true"
+                            head="true"
+                            rule="DetNP"
+                            xml:id="650010120050030">
                            <w ref="JUD 1:12!5"
                               class="det"
                               xml:id="n65001012005"
@@ -2645,7 +2810,7 @@
                               number="plural"
                               gender="feminine"
                               case="dative">ταῖς</w>
-                           <wg class="np" head="true" rule="NPofNP">
+                           <wg class="np" head="true" rule="NPofNP" xml:id="650010120060020">
                               <w ref="JUD 1:12!6"
                                  class="noun"
                                  type="common"
@@ -2682,8 +2847,8 @@
                         head="true">σπιλάδες</w>
                   </wg>
                </wg>
-               <wg role="adv" class="cl" rule="ClCl">
-                  <wg class="cl" head="true" rule="V-ADV">
+               <wg role="adv" xml:id="650010120090041" class="cl" rule="ClCl">
+                  <wg class="cl" head="true" rule="V-ADV" xml:id="650010120090020">
                      <w role="v"
                         ref="JUD 1:12!9"
                         class="verb"
@@ -2707,7 +2872,7 @@
                         normalized="ἀφόβως"
                         strong="870">ἀφόβως,</w>
                   </wg>
-                  <wg class="cl" rule="O-V">
+                  <wg class="cl" rule="O-V" xml:id="650010120110020">
                      <w role="o"
                         ref="JUD 1:12!11"
                         class="pron"
@@ -2737,10 +2902,10 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" rule="P2CL">
-               <wg role="p" class="np" rule="NpNpNpNp">
-                  <wg class="np" head="true" rule="NpAdjp">
-                     <wg class="np" head="true" rule="NpAdjp">
+            <wg class="cl" rule="P2CL" xml:id="650010120130282">
+               <wg role="p" xml:id="650010120130281" class="np" rule="NpNpNpNp">
+                  <wg class="np" head="true" rule="NpAdjp" xml:id="650010120130050">
+                     <wg class="np" head="true" rule="NpAdjp" xml:id="650010120130020">
                         <w ref="JUD 1:12!13"
                            class="noun"
                            type="common"
@@ -2762,9 +2927,9 @@
                            gender="feminine"
                            case="nominative">ἄνυδροι</w>
                      </wg>
-                     <wg class="adjp" rule="CL2Adjp">
-                        <wg class="cl" rule="ADV-V">
-                           <wg role="adv" class="pp" rule="PrepNp">
+                     <wg class="adjp" rule="CL2Adjp" xml:id="650010120150031">
+                        <wg class="cl" rule="ADV-V" xml:id="650010120150030">
+                           <wg role="adv" xml:id="650010120150021" class="pp" rule="PrepNp">
                               <w ref="JUD 1:12!15"
                                  class="prep"
                                  xml:id="n65001012015"
@@ -2801,10 +2966,10 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="np" rule="NpAdjp">
-                     <wg class="np" head="true" rule="NpAdjp">
-                        <wg class="np" head="true" rule="NpAdjp">
-                           <wg class="np" head="true" rule="NpAdjp">
+                  <wg class="np" rule="NpAdjp" xml:id="650010120180060">
+                     <wg class="np" head="true" rule="NpAdjp" xml:id="650010120180050">
+                        <wg class="np" head="true" rule="NpAdjp" xml:id="650010120180030">
+                           <wg class="np" head="true" rule="NpAdjp" xml:id="650010120180020">
                               <w ref="JUD 1:12!18"
                                  class="noun"
                                  type="common"
@@ -2836,8 +3001,8 @@
                               gender="neuter"
                               case="nominative">ἄκαρπα</w>
                         </wg>
-                        <wg class="adjp" rule="CL2Adjp">
-                           <wg class="cl" rule="ADV-V">
+                        <wg class="adjp" rule="CL2Adjp" xml:id="650010120210021">
+                           <wg class="cl" rule="ADV-V" xml:id="650010120210020">
                               <w role="adv"
                                  ref="JUD 1:12!21"
                                  class="adv"
@@ -2877,9 +3042,9 @@
                         mood="participle"
                         type="?">ἐκριζωθέντα,</w>
                   </wg>
-                  <wg class="np" rule="NpAdjp">
-                     <wg class="np" head="true" rule="NPofNP">
-                        <wg class="np" head="true" rule="NpAdjp">
+                  <wg class="np" rule="NpAdjp" xml:id="650010130010070">
+                     <wg class="np" head="true" rule="NPofNP" xml:id="650010130010030">
+                        <wg class="np" head="true" rule="NpAdjp" xml:id="650010130010020">
                            <w ref="JUD 1:13!1"
                               class="noun"
                               type="common"
@@ -2912,8 +3077,8 @@
                            gender="feminine"
                            case="genitive">θαλάσσης</w>
                      </wg>
-                     <wg class="adjp" rule="CL2Adjp">
-                        <wg class="cl" rule="V-O">
+                     <wg class="adjp" rule="CL2Adjp" xml:id="650010130040041">
+                        <wg class="cl" rule="V-O" xml:id="650010130040040">
                            <w role="v"
                               ref="JUD 1:13!4"
                               class="verb"
@@ -2929,7 +3094,11 @@
                               mood="participle"
                               type="?"
                               head="true">ἐπαφρίζοντα</w>
-                           <wg role="o" class="np" articular="true" rule="DetNP">
+                           <wg role="o"
+                               xml:id="650010130050031"
+                               class="np"
+                               articular="true"
+                               rule="DetNP">
                               <w ref="JUD 1:13!5"
                                  class="det"
                                  xml:id="n65001013005"
@@ -2939,7 +3108,7 @@
                                  number="plural"
                                  gender="feminine"
                                  case="accusative">τὰς</w>
-                              <wg class="np" head="true" rule="ofNPNP">
+                              <wg class="np" head="true" rule="ofNPNP" xml:id="650010130060020">
                                  <w ref="JUD 1:13!6"
                                     class="pron"
                                     type="personal"
@@ -2966,8 +3135,8 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="np" rule="NP-CL">
-                     <wg class="np" head="true" rule="Np-Appos">
+                  <wg class="np" rule="NP-CL" xml:id="650010130080100">
+                     <wg class="np" head="true" rule="Np-Appos" xml:id="650010130080020">
                         <w ref="JUD 1:13!8"
                            class="noun"
                            type="common"
@@ -2989,7 +3158,7 @@
                            gender="masculine"
                            case="nominative">πλανῆται,</w>
                      </wg>
-                     <wg class="cl" rule="IO-S-ADV-V">
+                     <wg class="cl" rule="IO-S-ADV-V" xml:id="650010130100080">
                         <w role="io"
                            ref="JUD 1:13!10"
                            class="pron"
@@ -3001,7 +3170,11 @@
                            number="plural"
                            gender="masculine"
                            case="dative">οἷς</w>
-                        <wg role="s" class="np" articular="true" rule="DetNP">
+                        <wg role="s"
+                            xml:id="650010130110041"
+                            class="np"
+                            articular="true"
+                            rule="DetNP">
                            <w ref="JUD 1:13!11"
                               class="det"
                               xml:id="n65001013011"
@@ -3011,7 +3184,7 @@
                               number="singular"
                               gender="masculine"
                               case="nominative">ὁ</w>
-                           <wg class="np" head="true" rule="NPofNP">
+                           <wg class="np" head="true" rule="NPofNP" xml:id="650010130120030">
                               <w ref="JUD 1:13!12"
                                  class="noun"
                                  type="common"
@@ -3023,7 +3196,10 @@
                                  gender="masculine"
                                  case="nominative"
                                  head="true">ζόφος</w>
-                              <wg class="np" articular="true" rule="DetNP">
+                              <wg class="np"
+                                  articular="true"
+                                  rule="DetNP"
+                                  xml:id="650010130130020">
                                  <w ref="JUD 1:13!13"
                                     class="det"
                                     xml:id="n65001013013"
@@ -3047,7 +3223,7 @@
                               </wg>
                            </wg>
                         </wg>
-                        <wg role="adv" class="pp" rule="PrepNp">
+                        <wg role="adv" xml:id="650010130150021" class="pp" rule="PrepNp">
                            <w ref="JUD 1:13!15"
                               class="prep"
                               xml:id="n65001013015"
@@ -3091,7 +3267,7 @@
          <milestone unit="verse" id="JUD 1:14">JUD 1:14</milestone> 
          <milestone unit="verse" id="JUD 1:15">JUD 1:15</milestone> Ἐπροφήτευσεν δὲ καὶ τούτοις ἕβδομος ἀπὸ Ἀδὰμ Ἑνὼχ λέγων Ἰδοὺ ἦλθεν Κύριος ἐν ἁγίαις μυριάσιν αὐτοῦ, ποιῆσαι κρίσιν κατὰ πάντων καὶ ἐλέγξαι πάντας τοὺς ἀσεβεῖς περὶ πάντων τῶν ἔργων ἀσεβείας αὐτῶν ὧν ἠσέβησαν καὶ περὶ πάντων τῶν σκληρῶν ὧν ἐλάλησαν κατ’ αὐτοῦ ἁμαρτωλοὶ ἀσεβεῖς.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="650010140020440">
             <w ref="JUD 1:14!2"
                class="conj"
                xml:id="n65001014002"
@@ -3099,7 +3275,7 @@
                normalized="δέ"
                strong="1161"
                discontinuous="true">δὲ</w>
-            <wg class="cl" rule="V-IO-S-ADV">
+            <wg class="cl" rule="V-IO-S-ADV" xml:id="650010140010430">
                <w role="v"
                   ref="JUD 1:14!1"
                   class="verb"
@@ -3113,7 +3289,7 @@
                   voice="active"
                   mood="indicative"
                   head="true">Ἐπροφήτευσεν</w>
-               <wg role="io" class="np" rule="AdvpNp">
+               <wg role="io" xml:id="650010140030021" class="np" rule="AdvpNp">
                   <w ref="JUD 1:14!3"
                      class="adv"
                      xml:id="n65001014003"
@@ -3132,8 +3308,8 @@
                      case="dative"
                      head="true">τούτοις</w>
                </wg>
-               <wg role="s" class="np" rule="Np-Appos">
-                  <wg class="np" head="true" rule="NpPp">
+               <wg role="s" xml:id="650010140050041" class="np" rule="Np-Appos">
+                  <wg class="np" head="true" rule="NpPp" xml:id="650010140050030">
                      <w ref="JUD 1:14!5"
                         class="adj"
                         xml:id="n65001014005"
@@ -3144,7 +3320,7 @@
                         gender="masculine"
                         case="nominative"
                         head="true">ἕβδομος</w>
-                     <wg class="pp" rule="PrepNp">
+                     <wg class="pp" rule="PrepNp" xml:id="650010140060020">
                         <w ref="JUD 1:14!6"
                            class="prep"
                            xml:id="n65001014006"
@@ -3175,8 +3351,8 @@
                      gender="masculine"
                      case="nominative">Ἑνὼχ</w>
                </wg>
-               <wg role="adv" class="cl" rule="ClCl">
-                  <wg class="cl" head="true" rule="V2CL">
+               <wg role="adv" xml:id="650010140090361" class="cl" rule="ClCl">
+                  <wg class="cl" head="true" rule="V2CL" xml:id="650010140090013">
                      <w role="v"
                         ref="JUD 1:14!9"
                         class="verb"
@@ -3193,7 +3369,7 @@
                         type="?"
                         head="true">λέγων</w>
                   </wg>
-                  <wg class="cl" rule="V2CL">
+                  <wg class="cl" rule="V2CL" xml:id="650010140100013">
                      <w role="v"
                         ref="JUD 1:14!10"
                         class="verb"
@@ -3207,7 +3383,10 @@
                         voice="middle"
                         mood="imperative">Ἰδοὺ</w>
                   </wg>
-                  <wg class="cl" head="true" rule="V-S-ADV-ADV">
+                  <wg class="cl"
+                      head="true"
+                      rule="V-S-ADV-ADV"
+                      xml:id="650010140110340">
                      <w role="v"
                         ref="JUD 1:14!11"
                         class="verb"
@@ -3232,14 +3411,14 @@
                         number="singular"
                         gender="masculine"
                         case="nominative">Κύριος</w>
-                     <wg role="adv" class="pp" rule="PrepNp">
+                     <wg role="adv" xml:id="650010140130041" class="pp" rule="PrepNp">
                         <w ref="JUD 1:14!13"
                            class="prep"
                            xml:id="n65001014013"
                            lemma="ἐν"
                            normalized="ἐν"
                            strong="1722">ἐν</w>
-                        <wg class="np" head="true" rule="AdjpNp">
+                        <wg class="np" head="true" rule="AdjpNp" xml:id="650010140140030">
                            <w ref="JUD 1:14!14"
                               class="adj"
                               xml:id="n65001014014"
@@ -3249,7 +3428,7 @@
                               number="plural"
                               gender="feminine"
                               case="dative">ἁγίαις</w>
-                           <wg class="np" head="true" rule="NPofNP">
+                           <wg class="np" head="true" rule="NPofNP" xml:id="650010140150020">
                               <w ref="JUD 1:14!15"
                                  class="noun"
                                  type="common"
@@ -3274,8 +3453,8 @@
                            </wg>
                         </wg>
                      </wg>
-                     <wg role="adv" class="cl" rule="CLaCL">
-                        <wg class="cl" head="true" rule="V-O-ADV">
+                     <wg role="adv" xml:id="650010150010281" class="cl" rule="CLaCL">
+                        <wg class="cl" head="true" rule="V-O-ADV" xml:id="650010150010040">
                            <w role="v"
                               ref="JUD 1:15!1"
                               class="verb"
@@ -3299,7 +3478,7 @@
                               number="singular"
                               gender="feminine"
                               case="accusative">κρίσιν</w>
-                           <wg role="adv" class="pp" rule="PrepNp">
+                           <wg role="adv" xml:id="650010150030021" class="pp" rule="PrepNp">
                               <w ref="JUD 1:15!3"
                                  class="prep"
                                  xml:id="n65001015003"
@@ -3324,7 +3503,7 @@
                            lemma="καί"
                            normalized="καί"
                            strong="2532">καὶ</w>
-                        <wg class="cl" rule="V-O-ADV">
+                        <wg class="cl" rule="V-O-ADV" xml:id="650010150060230">
                            <w role="v"
                               ref="JUD 1:15!6"
                               class="verb"
@@ -3337,7 +3516,11 @@
                               mood="infinitive"
                               type="?"
                               head="true">ἐλέγξαι</w>
-                           <wg role="o" class="np" articular="true" rule="All-NP">
+                           <wg role="o"
+                               xml:id="650010150070031"
+                               class="np"
+                               articular="true"
+                               rule="All-NP">
                               <w ref="JUD 1:15!7"
                                  class="adj"
                                  xml:id="n65001015007"
@@ -3347,7 +3530,11 @@
                                  number="plural"
                                  gender="masculine"
                                  case="accusative">πάντας</w>
-                              <wg class="np" articular="true" head="true" rule="DetAdj">
+                              <wg class="np"
+                                  articular="true"
+                                  head="true"
+                                  rule="DetAdj"
+                                  xml:id="650010150080020">
                                  <w ref="JUD 1:15!8"
                                     class="det"
                                     xml:id="n65001015008"
@@ -3369,15 +3556,27 @@
                                     head="true">ἀσεβεῖς</w>
                               </wg>
                            </wg>
-                           <wg role="adv" class="pp" articular="true" rule="Conj2Pp">
-                              <wg class="pp" articular="true" head="true" rule="PrepNp">
+                           <wg role="adv"
+                               xml:id="650010150100191"
+                               class="pp"
+                               articular="true"
+                               rule="Conj2Pp">
+                              <wg class="pp"
+                                  articular="true"
+                                  head="true"
+                                  rule="PrepNp"
+                                  xml:id="650010150100080">
                                  <w ref="JUD 1:15!10"
                                     class="prep"
                                     xml:id="n65001015010"
                                     lemma="περί"
                                     normalized="περί"
                                     strong="4012">περὶ</w>
-                                 <wg class="np" articular="true" head="true" rule="All-NP">
+                                 <wg class="np"
+                                     articular="true"
+                                     head="true"
+                                     rule="All-NP"
+                                     xml:id="650010150110070">
                                     <w ref="JUD 1:15!11"
                                        class="adj"
                                        xml:id="n65001015011"
@@ -3387,7 +3586,11 @@
                                        number="plural"
                                        gender="neuter"
                                        case="genitive">πάντων</w>
-                                    <wg class="np" articular="true" head="true" rule="DetNP">
+                                    <wg class="np"
+                                        articular="true"
+                                        head="true"
+                                        rule="DetNP"
+                                        xml:id="650010150120060">
                                        <w ref="JUD 1:15!12"
                                           class="det"
                                           xml:id="n65001015012"
@@ -3397,9 +3600,9 @@
                                           number="plural"
                                           gender="neuter"
                                           case="genitive">τῶν</w>
-                                       <wg class="np" head="true" rule="NP-CL">
-                                          <wg class="np" head="true" rule="NPofNP">
-                                             <wg class="np" head="true" rule="NPofNP">
+                                       <wg class="np" head="true" rule="NP-CL" xml:id="650010150130050">
+                                          <wg class="np" head="true" rule="NPofNP" xml:id="650010150130030">
+                                             <wg class="np" head="true" rule="NPofNP" xml:id="650010150130020">
                                                 <w ref="JUD 1:15!13"
                                                    class="noun"
                                                    type="common"
@@ -3433,7 +3636,7 @@
                                                 gender="masculine"
                                                 case="genitive">αὐτῶν</w>
                                           </wg>
-                                          <wg class="cl" rule="ADV-V">
+                                          <wg class="cl" rule="ADV-V" xml:id="650010150160020">
                                              <w role="adv"
                                                 ref="JUD 1:15!16"
                                                 class="pron"
@@ -3469,14 +3672,21 @@
                                  lemma="καί"
                                  normalized="καί"
                                  strong="2532">καὶ</w>
-                              <wg class="pp" articular="true" rule="PrepNp">
+                              <wg class="pp"
+                                  articular="true"
+                                  rule="PrepNp"
+                                  xml:id="650010150190100">
                                  <w ref="JUD 1:15!19"
                                     class="prep"
                                     xml:id="n65001015019"
                                     lemma="περί"
                                     normalized="περί"
                                     strong="4012">περὶ</w>
-                                 <wg class="np" articular="true" head="true" rule="All-NP">
+                                 <wg class="np"
+                                     articular="true"
+                                     head="true"
+                                     rule="All-NP"
+                                     xml:id="650010150200090">
                                     <w ref="JUD 1:15!20"
                                        class="adj"
                                        xml:id="n65001015020"
@@ -3486,7 +3696,11 @@
                                        number="plural"
                                        gender="neuter"
                                        case="genitive">πάντων</w>
-                                    <wg class="np" articular="true" head="true" rule="DetNP">
+                                    <wg class="np"
+                                        articular="true"
+                                        head="true"
+                                        rule="DetNP"
+                                        xml:id="650010150210080">
                                        <w ref="JUD 1:15!21"
                                           class="det"
                                           xml:id="n65001015021"
@@ -3496,7 +3710,7 @@
                                           number="plural"
                                           gender="neuter"
                                           case="genitive">τῶν</w>
-                                       <wg class="np" head="true" rule="NP-CL">
+                                       <wg class="np" head="true" rule="NP-CL" xml:id="650010150220070">
                                           <w ref="JUD 1:15!22"
                                              class="adj"
                                              xml:id="n65001015022"
@@ -3507,7 +3721,7 @@
                                              gender="neuter"
                                              case="genitive"
                                              head="true">σκληρῶν</w>
-                                          <wg class="cl" rule="O-V-ADV-S">
+                                          <wg class="cl" rule="O-V-ADV-S" xml:id="650010150230060">
                                              <w role="o"
                                                 ref="JUD 1:15!23"
                                                 class="pron"
@@ -3532,7 +3746,7 @@
                                                 voice="active"
                                                 mood="indicative"
                                                 head="true">ἐλάλησαν</w>
-                                             <wg role="adv" class="pp" rule="PrepNp">
+                                             <wg role="adv" xml:id="650010150250021" class="pp" rule="PrepNp">
                                                 <w ref="JUD 1:15!25"
                                                    class="prep"
                                                    xml:id="n65001015025"
@@ -3551,7 +3765,7 @@
                                                    case="genitive"
                                                    head="true">αὐτοῦ</w>
                                              </wg>
-                                             <wg role="s" class="np" rule="NpAdjp">
+                                             <wg role="s" xml:id="650010150270021" class="np" rule="NpAdjp">
                                                 <w ref="JUD 1:15!27"
                                                    class="adj"
                                                    xml:id="n65001015027"
@@ -3590,8 +3804,8 @@
       <p>
          <milestone unit="verse" id="JUD 1:16">JUD 1:16</milestone> Οὗτοί εἰσιν γογγυσταί, μεμψίμοιροι, κατὰ τὰς ἐπιθυμίας αὐτῶν πορευόμενοι, καὶ τὸ στόμα αὐτῶν λαλεῖ ὑπέρογκα, θαυμάζοντες πρόσωπα ὠφελείας χάριν.</p>
       <wg role="cl">
-         <wg class="cl" rule="CLaCL">
-            <wg class="cl" head="true" rule="S-VC-P">
+         <wg class="cl" rule="CLaCL" xml:id="650010160010190">
+            <wg class="cl" head="true" rule="S-VC-P" xml:id="650010160010090">
                <w role="s"
                   ref="JUD 1:16!1"
                   class="pron"
@@ -3615,8 +3829,12 @@
                   tense="present"
                   voice="active"
                   mood="indicative">εἰσιν</w>
-               <wg role="p" class="np" head="true" rule="NpAdjp">
-                  <wg class="np" head="true" rule="NpAdjp">
+               <wg role="p"
+                   xml:id="650010160030071"
+                   class="np"
+                   head="true"
+                   rule="NpAdjp">
+                  <wg class="np" head="true" rule="NpAdjp" xml:id="650010160030020">
                      <w ref="JUD 1:16!3"
                         class="noun"
                         type="common"
@@ -3638,16 +3856,24 @@
                         gender="masculine"
                         case="nominative">μεμψίμοιροι,</w>
                   </wg>
-                  <wg class="adjp" rule="CL2Adjp">
-                     <wg class="cl" rule="ADV-V">
-                        <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                  <wg class="adjp" rule="CL2Adjp" xml:id="650010160050051">
+                     <wg class="cl" rule="ADV-V" xml:id="650010160050050">
+                        <wg role="adv"
+                            xml:id="650010160050041"
+                            class="pp"
+                            articular="true"
+                            rule="PrepNp">
                            <w ref="JUD 1:16!5"
                               class="prep"
                               xml:id="n65001016005"
                               lemma="κατά"
                               normalized="κατά"
                               strong="2596">κατὰ</w>
-                           <wg class="np" articular="true" head="true" rule="DetNP">
+                           <wg class="np"
+                               articular="true"
+                               head="true"
+                               rule="DetNP"
+                               xml:id="650010160060030">
                               <w ref="JUD 1:16!6"
                                  class="det"
                                  xml:id="n65001016006"
@@ -3657,7 +3883,7 @@
                                  number="plural"
                                  gender="feminine"
                                  case="accusative">τὰς</w>
-                              <wg class="np" head="true" rule="NPofNP">
+                              <wg class="np" head="true" rule="NPofNP" xml:id="650010160070020">
                                  <w ref="JUD 1:16!7"
                                     class="noun"
                                     type="common"
@@ -3707,8 +3933,12 @@
                lemma="καί"
                normalized="καί"
                strong="2532">καὶ</w>
-            <wg class="cl" rule="S-V-O-ADV">
-               <wg role="s" class="np" articular="true" rule="DetNP">
+            <wg class="cl" rule="S-V-O-ADV" xml:id="650010160110090">
+               <wg role="s"
+                   xml:id="650010160110031"
+                   class="np"
+                   articular="true"
+                   rule="DetNP">
                   <w ref="JUD 1:16!11"
                      class="det"
                      xml:id="n65001016011"
@@ -3718,7 +3948,7 @@
                      number="singular"
                      gender="neuter"
                      case="nominative">τὸ</w>
-                  <wg class="np" head="true" rule="NPofNP">
+                  <wg class="np" head="true" rule="NPofNP" xml:id="650010160120020">
                      <w ref="JUD 1:16!12"
                         class="noun"
                         type="common"
@@ -3765,7 +3995,7 @@
                   number="plural"
                   gender="neuter"
                   case="accusative">ὑπέρογκα,</w>
-               <wg role="adv" class="cl" rule="V-O-ADV">
+               <wg role="adv" xml:id="650010160160041" class="cl" rule="V-O-ADV">
                   <w role="v"
                      ref="JUD 1:16!16"
                      class="verb"
@@ -3792,7 +4022,7 @@
                      number="plural"
                      gender="neuter"
                      case="accusative">πρόσωπα</w>
-                  <wg role="adv" class="pp" rule="NP-Prep">
+                  <wg role="adv" xml:id="650010160180021" class="pp" rule="NP-Prep">
                      <w ref="JUD 1:16!18"
                         class="noun"
                         type="common"
@@ -3820,14 +4050,14 @@
       <p>
          <milestone unit="verse" id="JUD 1:17">JUD 1:17</milestone> Ὑμεῖς δέ, ἀγαπητοί, μνήσθητε τῶν ῥημάτων τῶν προειρημένων ὑπὸ τῶν ἀποστόλων τοῦ Κυρίου ἡμῶν Ἰησοῦ Χριστοῦ,</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="650010170020160">
             <w ref="JUD 1:17!2"
                class="conj"
                xml:id="n65001017002"
                lemma="δέ"
                normalized="δέ"
                strong="1161">δέ,</w>
-            <wg class="cl" rule="Np2CL">
+            <wg class="cl" rule="Np2CL" xml:id="650010170030013">
                <w ref="JUD 1:17!3"
                   class="adj"
                   xml:id="n65001017003"
@@ -3839,7 +4069,7 @@
                   case="vocative"
                   discontinuous="true">ἀγαπητοί,</w>
             </wg>
-            <wg class="cl" head="true" rule="S-V-O">
+            <wg class="cl" head="true" rule="S-V-O" xml:id="650010170010140">
                <w role="s"
                   ref="JUD 1:17!1"
                   class="pron"
@@ -3863,8 +4093,16 @@
                   voice="passive"
                   mood="imperative"
                   head="true">μνήσθητε</w>
-               <wg role="o" class="np" articular="true" rule="Np-Appos">
-                  <wg class="np" articular="true" head="true" rule="DetNP">
+               <wg role="o"
+                   xml:id="650010170050121"
+                   class="np"
+                   articular="true"
+                   rule="Np-Appos">
+                  <wg class="np"
+                      articular="true"
+                      head="true"
+                      rule="DetNP"
+                      xml:id="650010170050020">
                      <w ref="JUD 1:17!5"
                         class="det"
                         xml:id="n65001017005"
@@ -3886,7 +4124,10 @@
                         case="genitive"
                         head="true">ῥημάτων</w>
                   </wg>
-                  <wg class="np" articular="true" rule="DetCL">
+                  <wg class="np"
+                      articular="true"
+                      rule="DetCL"
+                      xml:id="650010170070100">
                      <w ref="JUD 1:17!7"
                         class="det"
                         xml:id="n65001017007"
@@ -3896,7 +4137,7 @@
                         number="plural"
                         gender="neuter"
                         case="genitive">τῶν</w>
-                     <wg class="cl" head="true" rule="V-ADV">
+                     <wg class="cl" head="true" rule="V-ADV" xml:id="650010170080090">
                         <w role="v"
                            ref="JUD 1:17!8"
                            class="verb"
@@ -3912,14 +4153,22 @@
                            mood="participle"
                            type="?"
                            head="true">προειρημένων</w>
-                        <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                        <wg role="adv"
+                            xml:id="650010170090081"
+                            class="pp"
+                            articular="true"
+                            rule="PrepNp">
                            <w ref="JUD 1:17!9"
                               class="prep"
                               xml:id="n65001017009"
                               lemma="ὑπό"
                               normalized="ὑπό"
                               strong="5259">ὑπὸ</w>
-                           <wg class="np" articular="true" head="true" rule="DetNP">
+                           <wg class="np"
+                               articular="true"
+                               head="true"
+                               rule="DetNP"
+                               xml:id="650010170100070">
                               <w ref="JUD 1:17!10"
                                  class="det"
                                  xml:id="n65001017010"
@@ -3929,7 +4178,7 @@
                                  number="plural"
                                  gender="masculine"
                                  case="genitive">τῶν</w>
-                              <wg class="np" head="true" rule="NPofNP">
+                              <wg class="np" head="true" rule="NPofNP" xml:id="650010170110060">
                                  <w ref="JUD 1:17!11"
                                     class="noun"
                                     type="common"
@@ -3941,8 +4190,15 @@
                                     gender="masculine"
                                     case="genitive"
                                     head="true">ἀποστόλων</w>
-                                 <wg class="np" articular="true" rule="Np-Appos">
-                                    <wg class="np" articular="true" head="true" rule="DetNP">
+                                 <wg class="np"
+                                     articular="true"
+                                     rule="Np-Appos"
+                                     xml:id="650010170120050">
+                                    <wg class="np"
+                                        articular="true"
+                                        head="true"
+                                        rule="DetNP"
+                                        xml:id="650010170120030">
                                        <w ref="JUD 1:17!12"
                                           class="det"
                                           xml:id="n65001017012"
@@ -3952,7 +4208,7 @@
                                           number="singular"
                                           gender="masculine"
                                           case="genitive">τοῦ</w>
-                                       <wg class="np" head="true" rule="NPofNP">
+                                       <wg class="np" head="true" rule="NPofNP" xml:id="650010170130020">
                                           <w ref="JUD 1:17!13"
                                              class="noun"
                                              type="common"
@@ -3975,7 +4231,7 @@
                                              case="genitive">ἡμῶν</w>
                                        </wg>
                                     </wg>
-                                    <wg class="np" rule="Np-Appos">
+                                    <wg class="np" rule="Np-Appos" xml:id="650010170150020">
                                        <w ref="JUD 1:17!15"
                                           class="noun"
                                           type="proper"
@@ -4013,14 +4269,14 @@
       <p>
          <milestone unit="verse" id="JUD 1:18">JUD 1:18</milestone> ὅτι ἔλεγον ὑμῖν Ἐπ’ ἐσχάτου τοῦ χρόνου ἔσονται ἐμπαῖκται κατὰ τὰς ἑαυτῶν ἐπιθυμίας πορευόμενοι τῶν ἀσεβειῶν.</p>
       <wg role="cl">
-         <wg class="cl" rule="that-VP">
+         <wg class="cl" rule="that-VP" xml:id="650010180010160">
             <w ref="JUD 1:18!1"
                class="conj"
                xml:id="n65001018001"
                lemma="ὅτι"
                normalized="ὅτι"
                strong="3754">ὅτι</w>
-            <wg class="cl" head="true" rule="V-IO">
+            <wg class="cl" head="true" rule="V-IO" xml:id="650010180020020">
                <w role="v"
                   ref="JUD 1:18!2"
                   class="verb"
@@ -4045,8 +4301,12 @@
                   number="plural"
                   case="dative">ὑμῖν</w>
             </wg>
-            <wg class="cl" articular="true" rule="P-VC-S">
+            <wg class="cl"
+                articular="true"
+                rule="P-VC-S"
+                xml:id="650010180040130">
                <wg role="p"
+                   xml:id="650010180040041"
                    class="pp"
                    articular="true"
                    head="true"
@@ -4057,7 +4317,11 @@
                      lemma="ἐπί"
                      normalized="Ἐπ’"
                      strong="1909">Ἐπ’</w>
-                  <wg class="np" articular="true" head="true" rule="AdjpNp">
+                  <wg class="np"
+                      articular="true"
+                      head="true"
+                      rule="AdjpNp"
+                      xml:id="650010180050030">
                      <w ref="JUD 1:18!5"
                         class="adj"
                         xml:id="n65001018005"
@@ -4068,7 +4332,11 @@
                         gender="masculine"
                         case="genitive"
                         degree="superlative">ἐσχάτου</w>
-                     <wg class="np" articular="true" head="true" rule="DetNP">
+                     <wg class="np"
+                         articular="true"
+                         head="true"
+                         rule="DetNP"
+                         xml:id="650010180060020">
                         <w ref="JUD 1:18!6"
                            class="det"
                            xml:id="n65001018006"
@@ -4104,7 +4372,7 @@
                   tense="future"
                   voice="middle"
                   mood="indicative">ἔσονται</w>
-               <wg role="s" class="np" rule="NpAdjp">
+               <wg role="s" xml:id="650010180090081" class="np" rule="NpAdjp">
                   <w ref="JUD 1:18!9"
                      class="noun"
                      type="common"
@@ -4116,8 +4384,8 @@
                      gender="masculine"
                      case="nominative"
                      head="true">ἐμπαῖκται</w>
-                  <wg class="adjp" rule="CL2Adjp">
-                     <wg class="cl" rule="V-ADV">
+                  <wg class="adjp" rule="CL2Adjp" xml:id="650010180140071">
+                     <wg class="cl" rule="V-ADV" xml:id="650010180140070">
                         <w role="v"
                            ref="JUD 1:18!14"
                            class="verb"
@@ -4134,14 +4402,22 @@
                            type="?"
                            head="true"
                            discontinuous="true">πορευόμενοι</w>
-                        <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                        <wg role="adv"
+                            xml:id="650010180100061"
+                            class="pp"
+                            articular="true"
+                            rule="PrepNp">
                            <w ref="JUD 1:18!10"
                               class="prep"
                               xml:id="n65001018010"
                               lemma="κατά"
                               normalized="κατά"
                               strong="2596">κατὰ</w>
-                           <wg class="np" articular="true" head="true" rule="DetNP">
+                           <wg class="np"
+                               articular="true"
+                               head="true"
+                               rule="DetNP"
+                               xml:id="650010180110050">
                               <w ref="JUD 1:18!11"
                                  class="det"
                                  xml:id="n65001018011"
@@ -4151,7 +4427,7 @@
                                  number="plural"
                                  gender="feminine"
                                  case="accusative">τὰς</w>
-                              <wg class="np" head="true" rule="ofNPNP">
+                              <wg class="np" head="true" rule="ofNPNP" xml:id="650010180120040">
                                  <w ref="JUD 1:18!12"
                                     class="pron"
                                     type="personal"
@@ -4162,7 +4438,7 @@
                                     number="plural"
                                     gender="masculine"
                                     case="genitive">ἑαυτῶν</w>
-                                 <wg class="np" head="true" rule="NPofNP">
+                                 <wg class="np" head="true" rule="NPofNP" xml:id="650010180130030">
                                     <w ref="JUD 1:18!13"
                                        class="noun"
                                        type="common"
@@ -4174,7 +4450,10 @@
                                        gender="feminine"
                                        case="accusative"
                                        head="true">ἐπιθυμίας</w>
-                                    <wg class="np" articular="true" rule="DetNP">
+                                    <wg class="np"
+                                        articular="true"
+                                        rule="DetNP"
+                                        xml:id="650010180150020">
                                        <w ref="JUD 1:18!15"
                                           class="det"
                                           xml:id="n65001018015"
@@ -4211,7 +4490,10 @@
       <p>
          <milestone unit="verse" id="JUD 1:19">JUD 1:19</milestone> Οὗτοί εἰσιν οἱ ἀποδιορίζοντες, ψυχικοί, Πνεῦμα μὴ ἔχοντες.</p>
       <wg role="cl">
-         <wg class="cl" articular="true" rule="S-VC-P">
+         <wg class="cl"
+             articular="true"
+             rule="S-VC-P"
+             xml:id="650010190010080">
             <w role="s"
                ref="JUD 1:19!1"
                class="pron"
@@ -4236,11 +4518,16 @@
                voice="active"
                mood="indicative">εἰσιν</w>
             <wg role="p"
+                xml:id="650010190030061"
                 class="np"
                 articular="true"
                 head="true"
                 rule="NpNpNp">
-               <wg class="np" articular="true" head="true" rule="DetCL">
+               <wg class="np"
+                   articular="true"
+                   head="true"
+                   rule="DetCL"
+                   xml:id="650010190030020">
                   <w ref="JUD 1:19!3"
                      class="det"
                      xml:id="n65001019003"
@@ -4250,7 +4537,7 @@
                      number="plural"
                      gender="masculine"
                      case="nominative">οἱ</w>
-                  <wg class="cl" head="true" rule="V2CL">
+                  <wg class="cl" head="true" rule="V2CL" xml:id="650010190040013">
                      <w role="v"
                         ref="JUD 1:19!4"
                         class="verb"
@@ -4277,8 +4564,8 @@
                   number="plural"
                   gender="masculine"
                   case="nominative">ψυχικοί,</w>
-               <wg class="np" rule="CL2NP">
-                  <wg class="cl" rule="O-ADV-V">
+               <wg class="np" rule="CL2NP" xml:id="650010190060031">
+                  <wg class="cl" rule="O-ADV-V" xml:id="650010190060030">
                      <w role="o"
                         ref="JUD 1:19!6"
                         class="noun"
@@ -4323,14 +4610,14 @@
          <milestone unit="verse" id="JUD 1:20">JUD 1:20</milestone> 
          <milestone unit="verse" id="JUD 1:21">JUD 1:21</milestone> ὑμεῖς δέ, ἀγαπητοί, ἐποικοδομοῦντες ἑαυτοὺς τῇ ἁγιωτάτῃ ὑμῶν πίστει, ἐν Πνεύματι Ἁγίῳ προσευχόμενοι, ἑαυτοὺς ἐν ἀγάπῃ Θεοῦ τηρήσατε, προσδεχόμενοι τὸ ἔλεος τοῦ Κυρίου ἡμῶν Ἰησοῦ Χριστοῦ εἰς ζωὴν αἰώνιον.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="650010200020290">
             <w ref="JUD 1:20!2"
                class="conj"
                xml:id="n65001020002"
                lemma="δέ"
                normalized="δέ"
                strong="1161">δέ,</w>
-            <wg class="cl" rule="Np2CL">
+            <wg class="cl" rule="Np2CL" xml:id="650010200030013">
                <w ref="JUD 1:20!3"
                   class="adj"
                   xml:id="n65001020003"
@@ -4342,7 +4629,10 @@
                   case="vocative"
                   discontinuous="true">ἀγαπητοί,</w>
             </wg>
-            <wg class="cl" head="true" rule="S-ADV-O-ADV-V-ADV">
+            <wg class="cl"
+                head="true"
+                rule="S-ADV-O-ADV-V-ADV"
+                xml:id="650010200010270">
                <w role="s"
                   ref="JUD 1:20!1"
                   class="pron"
@@ -4353,8 +4643,8 @@
                   strong="4771"
                   number="plural"
                   case="nominative">ὑμεῖς</w>
-               <wg role="adv" class="cl" rule="ClCl">
-                  <wg class="cl" head="true" rule="V-O-ADV">
+               <wg role="adv" xml:id="650010200040101" class="cl" rule="ClCl">
+                  <wg class="cl" head="true" rule="V-O-ADV" xml:id="650010200040060">
                      <w role="v"
                         ref="JUD 1:20!4"
                         class="verb"
@@ -4381,7 +4671,11 @@
                         number="plural"
                         gender="masculine"
                         case="accusative">ἑαυτοὺς</w>
-                     <wg role="adv" class="np" articular="true" rule="DetNP">
+                     <wg role="adv"
+                         xml:id="650010200060041"
+                         class="np"
+                         articular="true"
+                         rule="DetNP">
                         <w ref="JUD 1:20!6"
                            class="det"
                            xml:id="n65001020006"
@@ -4391,7 +4685,7 @@
                            number="singular"
                            gender="feminine"
                            case="dative">τῇ</w>
-                        <wg class="np" head="true" rule="AdjpNp">
+                        <wg class="np" head="true" rule="AdjpNp" xml:id="650010200070030">
                            <w ref="JUD 1:20!7"
                               class="adj"
                               xml:id="n65001020007"
@@ -4402,7 +4696,7 @@
                               gender="feminine"
                               case="dative"
                               degree="superlative">ἁγιωτάτῃ</w>
-                           <wg class="np" head="true" rule="ofNPNP">
+                           <wg class="np" head="true" rule="ofNPNP" xml:id="650010200080020">
                               <w ref="JUD 1:20!8"
                                  class="pron"
                                  type="personal"
@@ -4427,15 +4721,15 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="cl" rule="ADV-V">
-                     <wg role="adv" class="pp" rule="PrepNp">
+                  <wg class="cl" rule="ADV-V" xml:id="650010200100040">
+                     <wg role="adv" xml:id="650010200100031" class="pp" rule="PrepNp">
                         <w ref="JUD 1:20!10"
                            class="prep"
                            xml:id="n65001020010"
                            lemma="ἐν"
                            normalized="ἐν"
                            strong="1722">ἐν</w>
-                        <wg class="np" head="true" rule="NpAdjp">
+                        <wg class="np" head="true" rule="NpAdjp" xml:id="650010200110020">
                            <w ref="JUD 1:20!11"
                               class="noun"
                               type="common"
@@ -4486,14 +4780,14 @@
                   number="plural"
                   gender="masculine"
                   case="accusative">ἑαυτοὺς</w>
-               <wg role="adv" class="pp" rule="PrepNp">
+               <wg role="adv" xml:id="650010210020031" class="pp" rule="PrepNp">
                   <w ref="JUD 1:21!2"
                      class="prep"
                      xml:id="n65001021002"
                      lemma="ἐν"
                      normalized="ἐν"
                      strong="1722">ἐν</w>
-                  <wg class="np" head="true" rule="NPofNP">
+                  <wg class="np" head="true" rule="NPofNP" xml:id="650010210030020">
                      <w ref="JUD 1:21!3"
                         class="noun"
                         type="common"
@@ -4530,7 +4824,7 @@
                   voice="active"
                   mood="imperative"
                   head="true">τηρήσατε,</w>
-               <wg role="adv" class="cl" rule="V-O-ADV">
+               <wg role="adv" xml:id="650010210060111" class="cl" rule="V-O-ADV">
                   <w role="v"
                      ref="JUD 1:21!6"
                      class="verb"
@@ -4546,7 +4840,11 @@
                      mood="participle"
                      type="?"
                      head="true">προσδεχόμενοι</w>
-                  <wg role="o" class="np" articular="true" rule="DetNP">
+                  <wg role="o"
+                      xml:id="650010210070071"
+                      class="np"
+                      articular="true"
+                      rule="DetNP">
                      <w ref="JUD 1:21!7"
                         class="det"
                         xml:id="n65001021007"
@@ -4556,7 +4854,7 @@
                         number="singular"
                         gender="neuter"
                         case="accusative">τὸ</w>
-                     <wg class="np" head="true" rule="NPofNP">
+                     <wg class="np" head="true" rule="NPofNP" xml:id="650010210080060">
                         <w ref="JUD 1:21!8"
                            class="noun"
                            type="common"
@@ -4568,8 +4866,15 @@
                            gender="neuter"
                            case="accusative"
                            head="true">ἔλεος</w>
-                        <wg class="np" articular="true" rule="Np-Appos">
-                           <wg class="np" articular="true" head="true" rule="DetNP">
+                        <wg class="np"
+                            articular="true"
+                            rule="Np-Appos"
+                            xml:id="650010210090050">
+                           <wg class="np"
+                               articular="true"
+                               head="true"
+                               rule="DetNP"
+                               xml:id="650010210090030">
                               <w ref="JUD 1:21!9"
                                  class="det"
                                  xml:id="n65001021009"
@@ -4579,7 +4884,7 @@
                                  number="singular"
                                  gender="masculine"
                                  case="genitive">τοῦ</w>
-                              <wg class="np" head="true" rule="NPofNP">
+                              <wg class="np" head="true" rule="NPofNP" xml:id="650010210100020">
                                  <w ref="JUD 1:21!10"
                                     class="noun"
                                     type="common"
@@ -4602,7 +4907,7 @@
                                     case="genitive">ἡμῶν</w>
                               </wg>
                            </wg>
-                           <wg class="np" rule="Np-Appos">
+                           <wg class="np" rule="Np-Appos" xml:id="650010210120020">
                               <w ref="JUD 1:21!12"
                                  class="noun"
                                  type="proper"
@@ -4628,14 +4933,14 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg role="adv" class="pp" rule="PrepNp">
+                  <wg role="adv" xml:id="650010210140031" class="pp" rule="PrepNp">
                      <w ref="JUD 1:21!14"
                         class="prep"
                         xml:id="n65001021014"
                         lemma="εἰς"
                         normalized="εἰς"
                         strong="1519">εἰς</w>
-                     <wg class="np" head="true" rule="NpAdjp">
+                     <wg class="np" head="true" rule="NpAdjp" xml:id="650010210150020">
                         <w ref="JUD 1:21!15"
                            class="noun"
                            type="common"
@@ -4668,14 +4973,14 @@
          <milestone unit="verse" id="JUD 1:22">JUD 1:22</milestone> 
          <milestone unit="verse" id="JUD 1:23">JUD 1:23</milestone> καὶ οὓς μὲν ἐλεᾶτε διακρινομένους σῴζετε ἐκ πυρὸς ἁρπάζοντες, οὓς δὲ ἐλεᾶτε ἐν φόβῳ, μισοῦντες καὶ τὸν ἀπὸ τῆς σαρκὸς ἐσπιλωμένον χιτῶνα.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="650010220010220">
             <w ref="JUD 1:22!1"
                class="conj"
                xml:id="n65001022001"
                lemma="καί"
                normalized="καί"
                strong="2532">καὶ</w>
-            <wg class="cl" rule="aCLaCL">
+            <wg class="cl" rule="aCLaCL" xml:id="650010220030210">
                <w ref="JUD 1:22!3"
                   class="conj"
                   xml:id="n65001022003"
@@ -4683,8 +4988,8 @@
                   normalized="μέν"
                   strong="3303"
                   discontinuous="true">μὲν</w>
-               <wg class="cl" rule="O-V">
-                  <wg role="o" class="np" rule="NpAdjp">
+               <wg class="cl" rule="O-V" xml:id="650010220020030">
+                  <wg role="o" xml:id="650010220020021" class="np" rule="NpAdjp">
                      <w ref="JUD 1:22!2"
                         class="pron"
                         type="relative"
@@ -4725,7 +5030,7 @@
                      mood="imperative"
                      head="true">ἐλεᾶτε</w>
                </wg>
-               <wg class="cl" head="true" rule="V-ADV">
+               <wg class="cl" head="true" rule="V-ADV" xml:id="650010230010040">
                   <w role="v"
                      ref="JUD 1:23!1"
                      class="verb"
@@ -4739,8 +5044,8 @@
                      voice="active"
                      mood="imperative"
                      head="true">σῴζετε</w>
-                  <wg role="adv" class="cl" rule="ADV-V">
-                     <wg role="adv" class="pp" rule="PrepNp">
+                  <wg role="adv" xml:id="650010230020031" class="cl" rule="ADV-V">
+                     <wg role="adv" xml:id="650010230020021" class="pp" rule="PrepNp">
                         <w ref="JUD 1:23!2"
                            class="prep"
                            xml:id="n65001023002"
@@ -4783,7 +5088,7 @@
                   normalized="δέ"
                   strong="1161"
                   discontinuous="true">δὲ</w>
-               <wg class="cl" rule="O-V-ADV-ADV">
+               <wg class="cl" rule="O-V-ADV-ADV" xml:id="650010230050120">
                   <w role="o"
                      ref="JUD 1:23!5"
                      class="pron"
@@ -4808,7 +5113,7 @@
                      voice="active"
                      mood="imperative"
                      head="true">ἐλεᾶτε</w>
-                  <wg role="adv" class="pp" rule="PrepNp">
+                  <wg role="adv" xml:id="650010230080021" class="pp" rule="PrepNp">
                      <w ref="JUD 1:23!8"
                         class="prep"
                         xml:id="n65001023008"
@@ -4827,7 +5132,7 @@
                         case="dative"
                         head="true">φόβῳ,</w>
                   </wg>
-                  <wg role="adv" class="cl" rule="V-O">
+                  <wg role="adv" xml:id="650010230100081" class="cl" rule="V-O">
                      <w role="v"
                         ref="JUD 1:23!10"
                         class="verb"
@@ -4843,14 +5148,22 @@
                         mood="participle"
                         type="?"
                         head="true">μισοῦντες</w>
-                     <wg role="o" class="np" articular="true" rule="AdvpNp">
+                     <wg role="o"
+                         xml:id="650010230110071"
+                         class="np"
+                         articular="true"
+                         rule="AdvpNp">
                         <w ref="JUD 1:23!11"
                            class="adv"
                            xml:id="n65001023011"
                            lemma="καί"
                            normalized="καί"
                            strong="2532">καὶ</w>
-                        <wg class="np" articular="true" head="true" rule="DetNP">
+                        <wg class="np"
+                            articular="true"
+                            head="true"
+                            rule="DetNP"
+                            xml:id="650010230120060">
                            <w ref="JUD 1:23!12"
                               class="det"
                               xml:id="n65001023012"
@@ -4860,17 +5173,25 @@
                               number="singular"
                               gender="masculine"
                               case="accusative">τὸν</w>
-                           <wg class="np" head="true" rule="AdjpNp">
-                              <wg class="adjp" rule="CL2Adjp">
-                                 <wg class="cl" rule="ADV-V">
-                                    <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                           <wg class="np" head="true" rule="AdjpNp" xml:id="650010230130050">
+                              <wg class="adjp" rule="CL2Adjp" xml:id="650010230130041">
+                                 <wg class="cl" rule="ADV-V" xml:id="650010230130040">
+                                    <wg role="adv"
+                                        xml:id="650010230130031"
+                                        class="pp"
+                                        articular="true"
+                                        rule="PrepNp">
                                        <w ref="JUD 1:23!13"
                                           class="prep"
                                           xml:id="n65001023013"
                                           lemma="ἀπό"
                                           normalized="ἀπό"
                                           strong="575">ἀπὸ</w>
-                                       <wg class="np" articular="true" head="true" rule="DetNP">
+                                       <wg class="np"
+                                           articular="true"
+                                           head="true"
+                                           rule="DetNP"
+                                           xml:id="650010230140020">
                                           <w ref="JUD 1:23!14"
                                              class="det"
                                              xml:id="n65001023014"
@@ -4935,7 +5256,7 @@
          <milestone unit="verse" id="JUD 1:24">JUD 1:24</milestone> 
          <milestone unit="verse" id="JUD 1:25">JUD 1:25</milestone> Τῷ δὲ δυναμένῳ φυλάξαι ὑμᾶς ἀπταίστους καὶ στῆσαι κατενώπιον τῆς δόξης αὐτοῦ ἀμώμους ἐν ἀγαλλιάσει, μόνῳ Θεῷ Σωτῆρι ἡμῶν διὰ Ἰησοῦ Χριστοῦ τοῦ Κυρίου ἡμῶν δόξα μεγαλωσύνη κράτος καὶ ἐξουσία πρὸ παντὸς τοῦ αἰῶνος καὶ νῦν καὶ εἰς πάντας τοὺς αἰῶνας· ἀμήν.</p>
       <wg role="cl">
-         <wg class="cl" rule="Conj-CL">
+         <wg class="cl" rule="Conj-CL" xml:id="650010240020420">
             <w ref="JUD 1:24!2"
                class="conj"
                xml:id="n65001024002"
@@ -4943,9 +5264,20 @@
                normalized="δέ"
                strong="1161"
                discontinuous="true">δὲ</w>
-            <wg class="cl" head="true" rule="IO-ADV-S-ADV">
-               <wg role="io" class="np" articular="true" rule="Np-Appos">
-                  <wg class="np" articular="true" head="true" rule="DetNP">
+            <wg class="cl"
+                head="true"
+                rule="IO-ADV-S-ADV"
+                xml:id="650010240010400">
+               <wg role="io"
+                   xml:id="650010240010181"
+                   class="np"
+                   articular="true"
+                   rule="Np-Appos">
+                  <wg class="np"
+                      articular="true"
+                      head="true"
+                      rule="DetNP"
+                      xml:id="650010240010140">
                      <w ref="JUD 1:24!1"
                         class="det"
                         xml:id="n65001024001"
@@ -4955,8 +5287,8 @@
                         number="singular"
                         gender="masculine"
                         case="dative">Τῷ</w>
-                     <wg class="np" head="true" rule="CL2NP">
-                        <wg class="cl" head="true" rule="V-O">
+                     <wg class="np" head="true" rule="CL2NP" xml:id="650010240030131">
+                        <wg class="cl" head="true" rule="V-O" xml:id="650010240030130">
                            <w role="v"
                               ref="JUD 1:24!3"
                               class="verb"
@@ -4972,8 +5304,8 @@
                               mood="participle"
                               type="?"
                               head="true">δυναμένῳ</w>
-                           <wg role="o" class="cl" rule="CLaCL">
-                              <wg class="cl" head="true" rule="V-O-O2">
+                           <wg role="o" xml:id="650010240040121" class="cl" rule="CLaCL">
+                              <wg class="cl" head="true" rule="V-O-O2" xml:id="650010240040030">
                                  <w role="v"
                                     ref="JUD 1:24!4"
                                     class="verb"
@@ -5013,7 +5345,7 @@
                                  lemma="καί"
                                  normalized="καί"
                                  strong="2532">καὶ</w>
-                              <wg class="cl" rule="V-ADV-O2-ADV">
+                              <wg class="cl" rule="V-ADV-O2-ADV" xml:id="650010240080080">
                                  <w role="v"
                                     ref="JUD 1:24!8"
                                     class="verb"
@@ -5026,14 +5358,22 @@
                                     mood="infinitive"
                                     type="?"
                                     head="true">στῆσαι</w>
-                                 <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                                 <wg role="adv"
+                                     xml:id="650010240090041"
+                                     class="pp"
+                                     articular="true"
+                                     rule="PrepNp">
                                     <w ref="JUD 1:24!9"
                                        class="prep"
                                        xml:id="n65001024009"
                                        lemma="κατενώπιον"
                                        normalized="κατενώπιον"
                                        strong="2714">κατενώπιον</w>
-                                    <wg class="np" articular="true" head="true" rule="DetNP">
+                                    <wg class="np"
+                                        articular="true"
+                                        head="true"
+                                        rule="DetNP"
+                                        xml:id="650010240100030">
                                        <w ref="JUD 1:24!10"
                                           class="det"
                                           xml:id="n65001024010"
@@ -5043,7 +5383,7 @@
                                           number="singular"
                                           gender="feminine"
                                           case="genitive">τῆς</w>
-                                       <wg class="np" head="true" rule="NPofNP">
+                                       <wg class="np" head="true" rule="NPofNP" xml:id="650010240110020">
                                           <w ref="JUD 1:24!11"
                                              class="noun"
                                              type="common"
@@ -5078,7 +5418,7 @@
                                     number="plural"
                                     gender="masculine"
                                     case="accusative">ἀμώμους</w>
-                                 <wg role="adv" class="pp" rule="PrepNp">
+                                 <wg role="adv" xml:id="650010240140021" class="pp" rule="PrepNp">
                                     <w ref="JUD 1:24!14"
                                        class="prep"
                                        xml:id="n65001024014"
@@ -5102,8 +5442,8 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="np" rule="Np-Appos">
-                     <wg class="np" head="true" rule="AdjpNp">
+                  <wg class="np" rule="Np-Appos" xml:id="650010250010040">
+                     <wg class="np" head="true" rule="AdjpNp" xml:id="650010250010020">
                         <w ref="JUD 1:25!1"
                            class="adj"
                            xml:id="n65001025001"
@@ -5125,7 +5465,7 @@
                            case="dative"
                            head="true">Θεῷ</w>
                      </wg>
-                     <wg class="np" rule="NPofNP">
+                     <wg class="np" rule="NPofNP" xml:id="650010250030020">
                         <w ref="JUD 1:25!3"
                            class="noun"
                            type="common"
@@ -5149,15 +5489,15 @@
                      </wg>
                   </wg>
                </wg>
-               <wg role="adv" class="pp" rule="PrepNp">
+               <wg role="adv" xml:id="650010250050061" class="pp" rule="PrepNp">
                   <w ref="JUD 1:25!5"
                      class="prep"
                      xml:id="n65001025005"
                      lemma="διά"
                      normalized="διά"
                      strong="1223">διὰ</w>
-                  <wg class="np" head="true" rule="Np-Appos">
-                     <wg class="np" head="true" rule="Np-Appos">
+                  <wg class="np" head="true" rule="Np-Appos" xml:id="650010250060050">
+                     <wg class="np" head="true" rule="Np-Appos" xml:id="650010250060020">
                         <w ref="JUD 1:25!6"
                            class="noun"
                            type="proper"
@@ -5180,7 +5520,10 @@
                            gender="masculine"
                            case="genitive">Χριστοῦ</w>
                      </wg>
-                     <wg class="np" articular="true" rule="DetNP">
+                     <wg class="np"
+                         articular="true"
+                         rule="DetNP"
+                         xml:id="650010250080030">
                         <w ref="JUD 1:25!8"
                            class="det"
                            xml:id="n65001025008"
@@ -5190,7 +5533,7 @@
                            number="singular"
                            gender="masculine"
                            case="genitive">τοῦ</w>
-                        <wg class="np" head="true" rule="NPofNP">
+                        <wg class="np" head="true" rule="NPofNP" xml:id="650010250090020">
                            <w ref="JUD 1:25!9"
                               class="noun"
                               type="common"
@@ -5215,7 +5558,11 @@
                      </wg>
                   </wg>
                </wg>
-               <wg role="s" class="np" head="true" rule="3NpaNp">
+               <wg role="s"
+                   xml:id="650010250110051"
+                   class="np"
+                   head="true"
+                   rule="3NpaNp">
                   <w ref="JUD 1:25!11"
                      class="noun"
                      type="common"
@@ -5264,8 +5611,9 @@
                      gender="feminine"
                      case="nominative">ἐξουσία</w>
                </wg>
-               <wg role="adv">
+               <wg role="adv" xml:id="650010250160110">
                   <wg role="adv"
+                      xml:id="650010250160041"
                       class="pp"
                       articular="true"
                       head="true"
@@ -5276,7 +5624,11 @@
                         lemma="πρό"
                         normalized="πρό"
                         strong="4253">πρὸ</w>
-                     <wg class="np" articular="true" head="true" rule="All-NP">
+                     <wg class="np"
+                         articular="true"
+                         head="true"
+                         rule="All-NP"
+                         xml:id="650010250170030">
                         <w ref="JUD 1:25!17"
                            class="adj"
                            xml:id="n65001025017"
@@ -5286,7 +5638,11 @@
                            number="singular"
                            gender="masculine"
                            case="genitive">παντὸς</w>
-                        <wg class="np" articular="true" head="true" rule="DetNP">
+                        <wg class="np"
+                            articular="true"
+                            head="true"
+                            rule="DetNP"
+                            xml:id="650010250180020">
                            <w ref="JUD 1:25!18"
                               class="det"
                               xml:id="n65001025018"
@@ -5329,14 +5685,22 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532">καὶ</w>
-                  <wg role="adv" class="pp" articular="true" rule="PrepNp">
+                  <wg role="adv"
+                      xml:id="650010250230041"
+                      class="pp"
+                      articular="true"
+                      rule="PrepNp">
                      <w ref="JUD 1:25!23"
                         class="prep"
                         xml:id="n65001025023"
                         lemma="εἰς"
                         normalized="εἰς"
                         strong="1519">εἰς</w>
-                     <wg class="np" articular="true" head="true" rule="All-NP">
+                     <wg class="np"
+                         articular="true"
+                         head="true"
+                         rule="All-NP"
+                         xml:id="650010250240030">
                         <w ref="JUD 1:25!24"
                            class="adj"
                            xml:id="n65001025024"
@@ -5346,7 +5710,11 @@
                            number="plural"
                            gender="masculine"
                            case="accusative">πάντας</w>
-                        <wg class="np" articular="true" head="true" rule="DetNP">
+                        <wg class="np"
+                            articular="true"
+                            head="true"
+                            rule="DetNP"
+                            xml:id="650010250250020">
                            <w ref="JUD 1:25!25"
                               class="det"
                               xml:id="n65001025025"
@@ -5372,7 +5740,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" rule="Intj2CL">
+            <wg class="cl" rule="Intj2CL" xml:id="650010250270012">
                <w ref="JUD 1:25!27"
                   class="ptcl"
                   xml:id="n65001025027"
