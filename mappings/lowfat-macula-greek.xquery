@@ -214,6 +214,7 @@ declare function local:sub-CL-adjunct-parent($node)
             <wg>
                 {
                     local:attributes($second),
+                    $node/@nodeId ! attribute xml:id {.},
                     <!-- one -->,
                     $first ! local:node(.),
                     $second/Node ! local:node(.)
@@ -224,6 +225,7 @@ declare function local:sub-CL-adjunct-parent($node)
                 <wg>
                     {
                         local:attributes($first),
+                        $node/@nodeId ! attribute xml:id {.},
                         <!-- two -->,
                         $first/Node ! local:node(.),
                         $second ! local:node(.)
@@ -248,6 +250,7 @@ declare function local:clause($node)
         <wg>
             {
                 local:attributes($node),
+                $node/@nodeId ! attribute xml:id {.},
                 $node/Node ! local:node(.)
             }
         </wg>
@@ -265,6 +268,7 @@ declare function local:phrase($node)
         <wg>
             {
                 local:attributes($node),
+                $node/@nodeId ! attribute xml:id {.},
                 $node/Node ! local:node(.)
             }
         </wg>
@@ -289,6 +293,7 @@ declare function local:role($node)
                 <wg>
                     {
                         $role,
+                        $node/@nodeId ! attribute xml:id {.},
                         $node/Node ! local:node(.)
                     }
                 </wg>
@@ -296,6 +301,7 @@ declare function local:role($node)
                 <wg>
                     {
                         $role,
+                        $node/@nodeId ! attribute xml:id {.},
                         local:attributes($node/Node),
                         $node/Node/Node ! local:node(.)
                     }
