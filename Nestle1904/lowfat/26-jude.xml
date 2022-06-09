@@ -37,7 +37,7 @@
                       <w ref="JUD 1:1!11" class="noun" type="common" xml:id="n65001001011" lemma="πατήρ" normalized="Πατρί" strong="3962" number="singular" gender="masculine" case="dative" gloss="[the] Father">Πατρὶ</w>
                     </wg>
                   </wg>
-                  <w role="v" ref="JUD 1:1!12" class="verb" xml:id="n65001001012" lemma="ἀγαπάω" normalized="ἠγαπημένοις" strong="25" number="plural" gender="masculine" case="dative" tense="perfect" voice="passive" mood="participle" type="?" head="true" gloss="having been loved">ἠγαπημένοις</w>
+                  <w role="v" ref="JUD 1:1!12" class="verb" xml:id="n65001001012" lemma="ἀγαπάω" normalized="ἠγαπημένοις" strong="25" number="plural" gender="masculine" case="dative" tense="perfect" voice="passive" mood="participle" type="?" head="true" gloss="having been loved" SubjRef="n65001001017" Frame="A1:n65001001017">ἠγαπημένοις</w>
                 </wg>
                 <w ref="JUD 1:1!13" class="conj" xml:id="n65001001013" lemma="καί" normalized="καί" strong="2532" gloss="and">καὶ</w>
                 <wg class="cl" rule="ADV-V" xml:id="n650010010140030">
@@ -45,7 +45,7 @@
                     <w ref="JUD 1:1!14" class="noun" type="proper" xml:id="n65001001014" lemma="Ἰησοῦς" normalized="Ἰησοῦ" strong="2424" number="singular" gender="masculine" case="dative" head="true" gloss="in Jesus">Ἰησοῦ</w>
                     <w ref="JUD 1:1!15" class="noun" type="proper" xml:id="n65001001015" lemma="Χριστός" normalized="Χριστῷ" strong="5547" number="singular" gender="masculine" case="dative" gloss="Christ">Χριστῷ</w>
                   </wg>
-                  <w role="v" ref="JUD 1:1!16" class="verb" xml:id="n65001001016" lemma="τηρέω" normalized="τετηρημένοις" strong="5083" number="plural" gender="masculine" case="dative" tense="perfect" voice="passive" mood="participle" type="?" head="true" gloss="having been kept">τετηρημένοις</w>
+                  <w role="v" ref="JUD 1:1!16" class="verb" xml:id="n65001001016" lemma="τηρέω" normalized="τετηρημένοις" strong="5083" number="plural" gender="masculine" case="dative" tense="perfect" voice="passive" mood="participle" type="?" head="true" gloss="having been kept" SubjRef="n65001001017" Frame="A1:n65001001017">τετηρημένοις</w>
                 </wg>
               </wg>
             </wg>
@@ -60,7 +60,7 @@
       <milestone unit="verse" id="JUD 1:2">JUD 1:2</milestone>ἔλεος ὑμῖν καὶ εἰρήνη καὶ ἀγάπη πληθυνθείη.</p>
     <wg role="cl">
       <wg class="cl" rule="IO-S-V" xml:id="n650010020020070">
-        <w role="io" ref="JUD 1:2!2" class="pron" type="personal" xml:id="n65001002002" lemma="σύ" normalized="ὑμῖν" strong="4771" number="plural" case="dative" discontinuous="true" gloss="to you">ὑμῖν</w>
+        <w role="io" ref="JUD 1:2!2" class="pron" type="personal" xml:id="n65001002002" lemma="σύ" normalized="ὑμῖν" strong="4771" number="plural" case="dative" discontinuous="true" gloss="to you" Ref="n65001001017">ὑμῖν</w>
         <wg role="s" xml:id="n650010020010051" class="np" rule="Conj3Np">
           <w ref="JUD 1:2!1" class="noun" type="common" xml:id="n65001002001" lemma="ἔλεος" normalized="ἔλεος" strong="1656" number="singular" gender="neuter" case="nominative" head="true" gloss="Mercy">ἔλεος</w>
           <w ref="JUD 1:2!3" class="conj" xml:id="n65001002003" lemma="καί" normalized="καί" strong="2532" gloss="and">καὶ</w>
@@ -68,7 +68,7 @@
           <w ref="JUD 1:2!5" class="conj" xml:id="n65001002005" lemma="καί" normalized="καί" strong="2532" gloss="and">καὶ</w>
           <w ref="JUD 1:2!6" class="noun" type="common" xml:id="n65001002006" lemma="ἀγάπη" normalized="ἀγάπη" strong="26" number="singular" gender="feminine" case="nominative" gloss="love">ἀγάπη</w>
         </wg>
-        <w role="v" ref="JUD 1:2!7" class="verb" xml:id="n65001002007" lemma="πληθύνω" normalized="πληθυνθείη" strong="4129" number="singular" person="third" tense="aorist" voice="passive" mood="optative" head="true" gloss="be multiplied">πληθυνθείη.</w>
+        <w role="v" ref="JUD 1:2!7" class="verb" xml:id="n65001002007" lemma="πληθύνω" normalized="πληθυνθείη" strong="4129" number="singular" person="third" tense="aorist" voice="passive" mood="optative" head="true" gloss="be multiplied" Frame="A2:n65001002002 A1:n65001002001;n65001002004;n65001002006">πληθυνθείη.</w>
       </wg>
     </wg>
   </sentence>
@@ -86,10 +86,10 @@
               <w ref="JUD 1:3!2" class="adj" xml:id="n65001003002" lemma="πᾶς" normalized="πᾶσαν" strong="3956" number="singular" gender="feminine" case="accusative" gloss="all">πᾶσαν</w>
               <w ref="JUD 1:3!3" class="noun" type="common" xml:id="n65001003003" lemma="σπουδή" normalized="σπουδήν" strong="4710" number="singular" gender="feminine" case="accusative" head="true" gloss="diligence">σπουδὴν</w>
             </wg>
-            <w role="v" ref="JUD 1:3!4" class="verb" xml:id="n65001003004" lemma="ποιέω" normalized="ποιούμενος" strong="4160" number="singular" gender="masculine" case="nominative" tense="present" voice="middle" mood="participle" type="?" head="true" gloss="using">ποιούμενος</w>
+            <w role="v" ref="JUD 1:3!4" class="verb" xml:id="n65001003004" lemma="ποιέω" normalized="ποιούμενος" strong="4160" number="singular" gender="masculine" case="nominative" tense="present" voice="middle" mood="participle" type="?" head="true" gloss="using" SubjRef="n65001001001" Frame="A0:n65001001001 A1:n65001003003">ποιούμενος</w>
             <wg role="adv" xml:id="n650010030050071" class="cl" rule="V-IO-ADV">
-              <w role="v" ref="JUD 1:3!5" class="verb" xml:id="n65001003005" lemma="γράφω" normalized="γράφειν" strong="1125" tense="present" voice="active" mood="infinitive" type="?" head="true" gloss="to write">γράφειν</w>
-              <w role="io" ref="JUD 1:3!6" class="pron" type="personal" xml:id="n65001003006" lemma="σύ" normalized="ὑμῖν" strong="4771" number="plural" case="dative" gloss="to you">ὑμῖν</w>
+              <w role="v" ref="JUD 1:3!5" class="verb" xml:id="n65001003005" lemma="γράφω" normalized="γράφειν" strong="1125" tense="present" voice="active" mood="infinitive" type="?" head="true" gloss="to write" SubjRef="n65001001001" Frame="A0:n65001001001 A2:n65001003006">γράφειν</w>
+              <w role="io" ref="JUD 1:3!6" class="pron" type="personal" xml:id="n65001003006" lemma="σύ" normalized="ὑμῖν" strong="4771" number="plural" case="dative" gloss="to you" Ref="n65001003001">ὑμῖν</w>
               <wg role="adv" xml:id="n650010030070051" class="pp" articular="true" rule="PrepNp">
                 <w ref="JUD 1:3!7" class="prep" xml:id="n65001003007" lemma="περί" normalized="περί" strong="4012" gloss="concerning">περὶ</w>
                 <wg class="np" articular="true" head="true" rule="DetNP" xml:id="n650010030080040">
@@ -97,7 +97,7 @@
                   <wg class="np" head="true" rule="AdjpNp" xml:id="n650010030090030">
                     <w ref="JUD 1:3!9" class="adj" xml:id="n65001003009" lemma="κοινός" normalized="κοινῆς" strong="2839" number="singular" gender="feminine" case="genitive" gloss="common">κοινῆς</w>
                     <wg class="np" head="true" rule="ofNPNP" xml:id="n650010030100020">
-                      <w ref="JUD 1:3!10" class="pron" type="personal" xml:id="n65001003010" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us">ἡμῶν</w>
+                      <w ref="JUD 1:3!10" class="pron" type="personal" xml:id="n65001003010" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us" Ref="n65001001001 n65001001007 n65001003001">ἡμῶν</w>
                       <w ref="JUD 1:3!11" class="noun" type="common" xml:id="n65001003011" lemma="σωτηρία" normalized="σωτηρίας" strong="4991" number="singular" gender="feminine" case="genitive" head="true" gloss="salvation">σωτηρίας,</w>
                     </wg>
                   </wg>
@@ -106,21 +106,21 @@
             </wg>
           </wg>
           <w role="o" ref="JUD 1:3!12" class="noun" type="common" xml:id="n65001003012" lemma="ἀνάγκη" normalized="ἀνάγκην" strong="318" number="singular" gender="feminine" case="accusative" gloss="necessity">ἀνάγκην</w>
-          <w role="v" ref="JUD 1:3!13" class="verb" xml:id="n65001003013" lemma="ἔχω" normalized="ἔσχον" strong="2192" number="singular" person="first" tense="aorist" voice="active" mood="indicative" head="true" gloss="I had">ἔσχον</w>
+          <w role="v" ref="JUD 1:3!13" class="verb" xml:id="n65001003013" lemma="ἔχω" normalized="ἔσχον" strong="2192" number="singular" person="first" tense="aorist" voice="active" mood="indicative" head="true" gloss="I had" SubjRef="n65001001001" Frame="A0:n65001001001 A1:n65001003012">ἔσχον</w>
           <wg role="adv" xml:id="n650010030140101" class="cl" rule="V-IO-ADV">
-            <w role="v" ref="JUD 1:3!14" class="verb" xml:id="n65001003014" lemma="γράφω" normalized="γράψαι" strong="1125" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to write">γράψαι</w>
-            <w role="io" ref="JUD 1:3!15" class="pron" type="personal" xml:id="n65001003015" lemma="σύ" normalized="ὑμῖν" strong="4771" number="plural" case="dative" gloss="to you">ὑμῖν</w>
+            <w role="v" ref="JUD 1:3!14" class="verb" xml:id="n65001003014" lemma="γράφω" normalized="γράψαι" strong="1125" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to write" SubjRef="n65001001001" Frame="A0:n65001001001 A2:n65001003015">γράψαι</w>
+            <w role="io" ref="JUD 1:3!15" class="pron" type="personal" xml:id="n65001003015" lemma="σύ" normalized="ὑμῖν" strong="4771" number="plural" case="dative" gloss="to you" Ref="n65001003001">ὑμῖν</w>
             <wg role="adv" xml:id="n650010030160081" class="cl" rule="V-O">
-              <w role="v" ref="JUD 1:3!16" class="verb" xml:id="n65001003016" lemma="παρακαλέω" normalized="παρακαλῶν" strong="3870" number="singular" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="exhorting [you]">παρακαλῶν</w>
+              <w role="v" ref="JUD 1:3!16" class="verb" xml:id="n65001003016" lemma="παρακαλέω" normalized="παρακαλῶν" strong="3870" number="singular" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="exhorting [you]" SubjRef="n65001001001" Frame="A0:n65001001001 A1:n65001003017">παρακαλῶν</w>
               <wg role="o" xml:id="n650010030170071" class="cl" rule="V-ADV">
-                <w role="v" ref="JUD 1:3!17" class="verb" xml:id="n65001003017" lemma="ἐπαγωνίζομαι" normalized="ἐπαγωνίζεσθαι" strong="1864" tense="present" voice="middlepassive" mood="infinitive" type="?" head="true" gloss="to contend earnestly">ἐπαγωνίζεσθαι</w>
+                <w role="v" ref="JUD 1:3!17" class="verb" xml:id="n65001003017" lemma="ἐπαγωνίζομαι" normalized="ἐπαγωνίζεσθαι" strong="1864" tense="present" voice="middlepassive" mood="infinitive" type="?" head="true" gloss="to contend earnestly" SubjRef="n65001003001" Frame="A0:n65001003001">ἐπαγωνίζεσθαι</w>
                 <wg role="adv" xml:id="n650010030180061" class="np" articular="true" rule="DetNP">
                   <w ref="JUD 1:3!18" class="det" xml:id="n65001003018" lemma="ὁ" normalized="τῇ" strong="3588" number="singular" gender="feminine" case="dative" gloss="for the">τῇ</w>
                   <wg class="np" head="true" rule="AdjpNp" xml:id="n650010030190050">
                     <wg class="adjp" rule="CL2Adjp" xml:id="n650010030190041">
                       <wg class="cl" rule="ADV-V-IO" xml:id="n650010030190040">
                         <w role="adv" ref="JUD 1:3!19" class="adv" xml:id="n65001003019" lemma="ἅπαξ" normalized="ἅπαξ" strong="530" gloss="once for all">ἅπαξ</w>
-                        <w role="v" ref="JUD 1:3!20" class="verb" xml:id="n65001003020" lemma="παραδίδωμι" normalized="παραδοθείσῃ" strong="3860" number="singular" gender="feminine" case="dative" tense="aorist" voice="passive" mood="participle" type="?" head="true" gloss="having been delivered">παραδοθείσῃ</w>
+                        <w role="v" ref="JUD 1:3!20" class="verb" xml:id="n65001003020" lemma="παραδίδωμι" normalized="παραδοθείσῃ" strong="3860" number="singular" gender="feminine" case="dative" tense="aorist" voice="passive" mood="participle" type="?" head="true" gloss="having been delivered" SubjRef="n65001003023" Frame="A1:n65001003023 A2:n65001003022">παραδοθείσῃ</w>
                         <wg role="io" xml:id="n650010030210021" class="np" articular="true" rule="DetAdj">
                           <w ref="JUD 1:3!21" class="det" xml:id="n65001003021" lemma="ὁ" normalized="τοῖς" strong="3588" number="plural" gender="masculine" case="dative" gloss="to the">τοῖς</w>
                           <w ref="JUD 1:3!22" class="adj" xml:id="n65001003022" lemma="ἅγιος" normalized="ἁγίοις" strong="40" number="plural" gender="masculine" case="dative" head="true" gloss="saints">ἁγίοις</w>
@@ -144,7 +144,7 @@
       <wg class="cl" rule="Conj-CL" xml:id="n650010040020300">
         <w ref="JUD 1:4!2" class="conj" xml:id="n65001004002" lemma="γάρ" normalized="γάρ" strong="1063" discontinuous="true" gloss="for">γάρ</w>
         <wg class="cl" rule="V-S-ADV" xml:id="n650010040010290">
-          <w role="v" ref="JUD 1:4!1" class="verb" xml:id="n65001004001" lemma="παρεισδύω" normalized="παρεισεδύησαν" strong="3921" number="plural" person="third" tense="aorist" voice="passive" mood="indicative" head="true" gloss="Came in stealthily">παρεισεδύησαν</w>
+          <w role="v" ref="JUD 1:4!1" class="verb" xml:id="n65001004001" lemma="παρεισδύω" normalized="παρεισεδύησαν" strong="3921" number="plural" person="third" tense="aorist" voice="passive" mood="indicative" head="true" gloss="Came in stealthily" Frame="A0:n65001004004">παρεισεδύησαν</w>
           <wg role="s" xml:id="n650010040030101" class="np" rule="Np-Appos">
             <wg class="np" head="true" rule="Np-Appos" xml:id="n650010040030090">
               <wg class="np" head="true" rule="AdjpNp" xml:id="n650010040030020">
@@ -155,7 +155,7 @@
                 <w ref="JUD 1:4!5" class="det" xml:id="n65001004005" lemma="ὁ" normalized="οἱ" strong="3588" number="plural" gender="masculine" case="nominative" gloss="those">οἱ</w>
                 <wg class="cl" head="true" rule="ADV-V-ADV" xml:id="n650010040060060">
                   <w role="adv" ref="JUD 1:4!6" class="adv" xml:id="n65001004006" lemma="πάλαι" normalized="πάλαι" strong="3819" gloss="long ago">πάλαι</w>
-                  <w role="v" ref="JUD 1:4!7" class="verb" xml:id="n65001004007" lemma="προγράφω" normalized="προγεγραμμένοι" strong="4270" number="plural" gender="masculine" case="nominative" tense="perfect" voice="passive" mood="participle" type="?" head="true" gloss="having been designated">προγεγραμμένοι</w>
+                  <w role="v" ref="JUD 1:4!7" class="verb" xml:id="n65001004007" lemma="προγράφω" normalized="προγεγραμμένοι" strong="4270" number="plural" gender="masculine" case="nominative" tense="perfect" voice="passive" mood="participle" type="?" head="true" gloss="having been designated" SubjRef="n65001004004" Frame="A1:n65001004004">προγεγραμμένοι</w>
                   <wg role="adv" xml:id="n650010040080041" class="pp" articular="true" rule="PrepNp">
                     <w ref="JUD 1:4!8" class="prep" xml:id="n65001004008" lemma="εἰς" normalized="εἰς" strong="1519" gloss="unto">εἰς</w>
                     <wg class="np" articular="true" head="true" rule="Demo-NP" xml:id="n650010040090030">
@@ -180,13 +180,13 @@
                     <w ref="JUD 1:4!14" class="det" xml:id="n65001004014" lemma="ὁ" normalized="τοῦ" strong="3588" number="singular" gender="masculine" case="genitive" gloss="of the">τοῦ</w>
                     <wg class="np" head="true" rule="NPofNP" xml:id="n650010040150020">
                       <w ref="JUD 1:4!15" class="noun" type="common" xml:id="n65001004015" lemma="θεός" normalized="Θεοῦ" strong="2316" number="singular" gender="masculine" case="genitive" head="true" gloss="God">Θεοῦ</w>
-                      <w ref="JUD 1:4!16" class="pron" type="personal" xml:id="n65001004016" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us">ἡμῶν</w>
+                      <w ref="JUD 1:4!16" class="pron" type="personal" xml:id="n65001004016" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us" Ref="n65001001001 n65001001007 n65001003001 n65001003022">ἡμῶν</w>
                     </wg>
                   </wg>
                   <w ref="JUD 1:4!17" class="noun" type="common" xml:id="n65001004017" lemma="χάρις" normalized="χάριτα" strong="5485" number="singular" gender="feminine" case="accusative" head="true" gloss="grace">χάριτα</w>
                 </wg>
               </wg>
-              <w role="v" ref="JUD 1:4!18" class="verb" xml:id="n65001004018" lemma="μετατίθημι" normalized="μετατιθέντες" strong="3346" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="changing">μετατιθέντες</w>
+              <w role="v" ref="JUD 1:4!18" class="verb" xml:id="n65001004018" lemma="μετατίθημι" normalized="μετατιθέντες" strong="3346" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="changing" SubjRef="n65001004004" Frame="A0:n65001004004 A1:n65001004017">μετατιθέντες</w>
               <wg role="adv" xml:id="n650010040190021" class="pp" rule="PrepNp">
                 <w ref="JUD 1:4!19" class="prep" xml:id="n65001004019" lemma="εἰς" normalized="εἰς" strong="1519" gloss="into">εἰς</w>
                 <w ref="JUD 1:4!20" class="noun" type="common" xml:id="n65001004020" lemma="ἀσέλγεια" normalized="ἀσέλγειαν" strong="766" number="singular" gender="feminine" case="accusative" head="true" gloss="sensuality">ἀσέλγειαν</w>
@@ -205,7 +205,7 @@
                   <wg class="np" rule="Np-Appos" xml:id="n650010040260040">
                     <wg class="np" head="true" rule="NPofNP" xml:id="n650010040260020">
                       <w ref="JUD 1:4!26" class="noun" type="common" xml:id="n65001004026" lemma="κύριος" normalized="Κύριον" strong="2962" number="singular" gender="masculine" case="accusative" head="true" gloss="Lord">Κύριον</w>
-                      <w ref="JUD 1:4!27" class="pron" type="personal" xml:id="n65001004027" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us">ἡμῶν</w>
+                      <w ref="JUD 1:4!27" class="pron" type="personal" xml:id="n65001004027" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us" Ref="n65001001001 n65001001007 n65001003001 n65001003022">ἡμῶν</w>
                     </wg>
                     <wg class="np" rule="Np-Appos" xml:id="n650010040280020">
                       <w ref="JUD 1:4!28" class="noun" type="proper" xml:id="n65001004028" lemma="Ἰησοῦς" normalized="Ἰησοῦν" strong="2424" number="singular" gender="masculine" case="accusative" head="true" gloss="Jesus">Ἰησοῦν</w>
@@ -214,7 +214,7 @@
                   </wg>
                 </wg>
               </wg>
-              <w role="v" ref="JUD 1:4!30" class="verb" xml:id="n65001004030" lemma="ἀρνέομαι" normalized="ἀρνούμενοι" strong="720" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="denying">ἀρνούμενοι.</w>
+              <w role="v" ref="JUD 1:4!30" class="verb" xml:id="n65001004030" lemma="ἀρνέομαι" normalized="ἀρνούμενοι" strong="720" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="denying" SubjRef="n65001004004" Frame="A0:n65001004004 A1:n65001004024;n65001004026">ἀρνούμενοι.</w>
             </wg>
           </wg>
         </wg>
@@ -230,16 +230,16 @@
       <wg class="cl" rule="Conj-CL" xml:id="n650010050020670">
         <w ref="JUD 1:5!2" class="conj" xml:id="n65001005002" lemma="δέ" normalized="δέ" strong="1161" gloss="now">δὲ</w>
         <wg class="cl" rule="V-ADV-O" xml:id="n650010050040660">
-          <w role="v" ref="JUD 1:5!4" class="verb" xml:id="n65001005004" lemma="βούλομαι" normalized="βούλομαι" strong="1014" number="singular" person="first" tense="present" voice="middlepassive" mood="indicative" head="true" gloss="I want">βούλομαι,</w>
+          <w role="v" ref="JUD 1:5!4" class="verb" xml:id="n65001005004" lemma="βούλομαι" normalized="βούλομαι" strong="1014" number="singular" person="first" tense="present" voice="middlepassive" mood="indicative" head="true" gloss="I want" SubjRef="n65001001001" Frame="A0:n65001001001 A1:n65001005001">βούλομαι,</w>
           <wg role="adv" xml:id="n650010050050031" class="cl" rule="V-ADV-O">
-            <w role="v" ref="JUD 1:5!5" class="verb" xml:id="n65001005005" lemma="οἶδα" normalized="εἰδότας" strong="1492" number="plural" gender="masculine" case="accusative" tense="perfect" voice="active" mood="participle" type="?" head="true" gloss="having known">εἰδότας</w>
+            <w role="v" ref="JUD 1:5!5" class="verb" xml:id="n65001005005" lemma="οἶδα" normalized="εἰδότας" strong="1492" number="plural" gender="masculine" case="accusative" tense="perfect" voice="active" mood="participle" type="?" head="true" gloss="having known" SubjRef="n65001003001" Frame="A0:n65001003001 A1:n65001005007">εἰδότας</w>
             <w role="adv" ref="JUD 1:5!6" class="adv" xml:id="n65001005006" lemma="ἅπαξ" normalized="ἅπαξ" strong="530" gloss="at one time">ἅπαξ</w>
             <w role="o" ref="JUD 1:5!7" class="adj" xml:id="n65001005007" lemma="πᾶς" normalized="πάντα" strong="3956" number="plural" gender="neuter" case="accusative" discontinuous="true" gloss="all this">πάντα,</w>
           </wg>
           <wg role="o" xml:id="n650010050010621" class="cl" rule="ClCl">
             <wg class="cl" head="true" rule="V-O" xml:id="n650010050010020">
-              <w role="v" ref="JUD 1:5!1" class="verb" xml:id="n65001005001" lemma="ὑπομιμνῄσκω" normalized="Ὑπομνῆσαι" strong="5279" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="To remind">Ὑπομνῆσαι</w>
-              <w role="o" ref="JUD 1:5!3" class="pron" type="personal" xml:id="n65001005003" lemma="σύ" normalized="ὑμᾶς" strong="4771" number="plural" case="accusative" gloss="you">ὑμᾶς</w>
+              <w role="v" ref="JUD 1:5!1" class="verb" xml:id="n65001005001" lemma="ὑπομιμνῄσκω" normalized="Ὑπομνῆσαι" strong="5279" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="To remind" SubjRef="n65001001001" Frame="A0:n65001001001 A1:n65001005003">Ὑπομνῆσαι</w>
+              <w role="o" ref="JUD 1:5!3" class="pron" type="personal" xml:id="n65001005003" lemma="σύ" normalized="ὑμᾶς" strong="4771" number="plural" case="accusative" gloss="you" Ref="n65001003001">ὑμᾶς</w>
             </wg>
             <wg class="cl" head="true" rule="that-VP" xml:id="n650010050080350">
               <w ref="JUD 1:5!8" class="conj" xml:id="n65001005008" lemma="ὅτι" normalized="ὅτι" strong="3754" gloss="that">ὅτι</w>
@@ -255,7 +255,7 @@
                         <w ref="JUD 1:5!13" class="noun" type="proper" xml:id="n65001005013" lemma="Αἴγυπτος" normalized="Αἰγύπτου" strong="125" number="singular" gender="feminine" case="genitive" gloss="of Egypt">Αἰγύπτου</w>
                       </wg>
                     </wg>
-                    <w role="v" ref="JUD 1:5!14" class="verb" xml:id="n65001005014" lemma="σῴζω" normalized="σώσας" strong="4982" number="singular" gender="masculine" case="nominative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having saved">σώσας</w>
+                    <w role="v" ref="JUD 1:5!14" class="verb" xml:id="n65001005014" lemma="σῴζω" normalized="σώσας" strong="4982" number="singular" gender="masculine" case="nominative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having saved" SubjRef="n65001005009" Frame="A0:n65001005009 A1:n65001005010">σώσας</w>
                   </wg>
                   <wg role="adv" xml:id="n650010050150021" class="np" articular="true" rule="DetAdj">
                     <w ref="JUD 1:5!15" class="det" xml:id="n65001005015" lemma="ὁ" normalized="τό" strong="3588" number="singular" gender="neuter" case="accusative" gloss="-">τὸ</w>
@@ -265,10 +265,10 @@
                     <w ref="JUD 1:5!17" class="det" xml:id="n65001005017" lemma="ὁ" normalized="τούς" strong="3588" number="plural" gender="masculine" case="accusative" gloss="those">τοὺς</w>
                     <wg class="cl" head="true" rule="ADV-V" xml:id="n650010050180020">
                       <w role="adv" ref="JUD 1:5!18" class="adv" xml:id="n65001005018" lemma="μή" normalized="μή" strong="3361" gloss="not">μὴ</w>
-                      <w role="v" ref="JUD 1:5!19" class="verb" xml:id="n65001005019" lemma="πιστεύω" normalized="πιστεύσαντας" strong="4100" number="plural" gender="masculine" case="accusative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having believed">πιστεύσαντας</w>
+                      <w role="v" ref="JUD 1:5!19" class="verb" xml:id="n65001005019" lemma="πιστεύω" normalized="πιστεύσαντας" strong="4100" number="plural" gender="masculine" case="accusative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having believed" Frame="A0:n00000000000">πιστεύσαντας</w>
                     </wg>
                   </wg>
-                  <w role="v" ref="JUD 1:5!20" class="verb" xml:id="n65001005020" lemma="ἀπόλλυμι" normalized="ἀπώλεσεν" strong="622" number="singular" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="He destroyed">ἀπώλεσεν,</w>
+                  <w role="v" ref="JUD 1:5!20" class="verb" xml:id="n65001005020" lemma="ἀπόλλυμι" normalized="ἀπώλεσεν" strong="622" number="singular" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="He destroyed" Frame="A0:n65001005009 A1:n65001005019">ἀπώλεσεν,</w>
                 </wg>
                 <w ref="JUD 1:6!2" class="conj" xml:id="n65001006002" lemma="τέ" normalized="τε" strong="5037" discontinuous="true" gloss="both">τε</w>
                 <wg class="cl" rule="O-ADV-ADV-ADV-V" xml:id="n650010060010210">
@@ -279,22 +279,22 @@
                       <wg class="cl" head="true" rule="CLaCL" xml:id="n650010060040100">
                         <wg class="cl" head="true" rule="ADV-V-O" xml:id="n650010060040050">
                           <w role="adv" ref="JUD 1:6!4" class="adv" xml:id="n65001006004" lemma="μή" normalized="μή" strong="3361" gloss="not">μὴ</w>
-                          <w role="v" ref="JUD 1:6!5" class="verb" xml:id="n65001006005" lemma="τηρέω" normalized="τηρήσαντας" strong="5083" number="plural" gender="masculine" case="accusative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having kept">τηρήσαντας</w>
+                          <w role="v" ref="JUD 1:6!5" class="verb" xml:id="n65001006005" lemma="τηρέω" normalized="τηρήσαντας" strong="5083" number="plural" gender="masculine" case="accusative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having kept" SubjRef="n65001006001" Frame="A0:n65001006001 A1:n65001006008">τηρήσαντας</w>
                           <wg role="o" xml:id="n650010060060031" class="np" articular="true" rule="DetNP">
                             <w ref="JUD 1:6!6" class="det" xml:id="n65001006006" lemma="ὁ" normalized="τήν" strong="3588" number="singular" gender="feminine" case="accusative" gloss="[own]">τὴν</w>
                             <wg class="np" head="true" rule="ofNPNP" xml:id="n650010060070020">
-                              <w ref="JUD 1:6!7" class="pron" type="personal" xml:id="n65001006007" lemma="ἑαυτοῦ" normalized="ἑαυτῶν" strong="1438" number="plural" gender="masculine" case="genitive" gloss="their">ἑαυτῶν</w>
+                              <w ref="JUD 1:6!7" class="pron" type="personal" xml:id="n65001006007" lemma="ἑαυτοῦ" normalized="ἑαυτῶν" strong="1438" number="plural" gender="masculine" case="genitive" gloss="their" Ref="n65001006001">ἑαυτῶν</w>
                               <w ref="JUD 1:6!8" class="noun" type="common" xml:id="n65001006008" lemma="ἀρχή" normalized="ἀρχήν" strong="746" number="singular" gender="feminine" case="accusative" head="true" gloss="domain">ἀρχὴν</w>
                             </wg>
                           </wg>
                         </wg>
                         <w ref="JUD 1:6!9" class="conj" xml:id="n65001006009" lemma="ἀλλά" normalized="ἀλλά" strong="235" gloss="but">ἀλλὰ</w>
                         <wg class="cl" rule="V-O" xml:id="n650010060100040">
-                          <w role="v" ref="JUD 1:6!10" class="verb" xml:id="n65001006010" lemma="ἀπολείπω" normalized="ἀπολιπόντας" strong="620" number="plural" gender="masculine" case="accusative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having left">ἀπολιπόντας</w>
+                          <w role="v" ref="JUD 1:6!10" class="verb" xml:id="n65001006010" lemma="ἀπολείπω" normalized="ἀπολιπόντας" strong="620" number="plural" gender="masculine" case="accusative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having left" SubjRef="n65001006001" Frame="A0:n65001006001 A1:n65001006013">ἀπολιπόντας</w>
                           <wg role="o" xml:id="n650010060110031" class="np" articular="true" rule="DetNP">
                             <w ref="JUD 1:6!11" class="det" xml:id="n65001006011" lemma="ὁ" normalized="τό" strong="3588" number="singular" gender="neuter" case="accusative" gloss="the">τὸ</w>
                             <wg class="np" head="true" rule="AdjpNp" xml:id="n650010060120020">
-                              <w ref="JUD 1:6!12" class="adj" xml:id="n65001006012" lemma="ἴδιος" normalized="ἴδιον" strong="2398" number="singular" gender="neuter" case="accusative" gloss="own">ἴδιον</w>
+                              <w ref="JUD 1:6!12" class="adj" xml:id="n65001006012" lemma="ἴδιος" normalized="ἴδιον" strong="2398" number="singular" gender="neuter" case="accusative" gloss="own" Ref="n65001006001">ἴδιον</w>
                               <w ref="JUD 1:6!13" class="noun" type="common" xml:id="n65001006013" lemma="οἰκητήριον" normalized="οἰκητήριον" strong="3613" number="singular" gender="neuter" case="accusative" head="true" gloss="dwelling">οἰκητήριον</w>
                             </wg>
                           </wg>
@@ -320,7 +320,7 @@
                     <w ref="JUD 1:6!20" class="prep" xml:id="n65001006020" lemma="ὑπό" normalized="ὑπό" strong="5259" gloss="under">ὑπὸ</w>
                     <w ref="JUD 1:6!21" class="noun" type="common" xml:id="n65001006021" lemma="ζόφος" normalized="ζόφον" strong="2217" number="singular" gender="masculine" case="accusative" head="true" gloss="darkness">ζόφον</w>
                   </wg>
-                  <w role="v" ref="JUD 1:6!22" class="verb" xml:id="n65001006022" lemma="τηρέω" normalized="τετήρηκεν" strong="5083" number="singular" person="third" tense="perfect" voice="active" mood="indicative" head="true" gloss="He keeps">τετήρηκεν·</w>
+                  <w role="v" ref="JUD 1:6!22" class="verb" xml:id="n65001006022" lemma="τηρέω" normalized="τετήρηκεν" strong="5083" number="singular" person="third" tense="perfect" voice="active" mood="indicative" head="true" gloss="He keeps" SubjRef="n65001005009" Frame="A0:n65001005009 A1:n65001006001">τετήρηκεν·</w>
                 </wg>
               </wg>
             </wg>
@@ -337,7 +337,7 @@
                     <wg class="np" head="true" rule="PpNp2Np" xml:id="n650010070070030">
                       <wg class="pp" rule="PrepNp" xml:id="n650010070070020">
                         <w ref="JUD 1:7!7" class="prep" xml:id="n65001007007" lemma="περί" normalized="περί" strong="4012" gloss="around">περὶ</w>
-                        <w ref="JUD 1:7!8" class="pron" type="personal" xml:id="n65001007008" lemma="αὐτός" normalized="αὐτάς" strong="846" number="plural" gender="feminine" case="accusative" head="true" gloss="them">αὐτὰς</w>
+                        <w ref="JUD 1:7!8" class="pron" type="personal" xml:id="n65001007008" lemma="αὐτός" normalized="αὐτάς" strong="846" number="plural" gender="feminine" case="accusative" head="true" gloss="them" Ref="n65001007002 n65001007004">αὐτὰς</w>
                       </wg>
                       <w ref="JUD 1:7!9" class="noun" type="common" xml:id="n65001007009" lemma="πόλις" normalized="πόλεις" strong="4172" number="plural" gender="feminine" case="nominative" head="true" gloss="cities">πόλεις,</w>
                     </wg>
@@ -352,12 +352,12 @@
                         <w ref="JUD 1:7!12" class="noun" type="common" xml:id="n65001007012" lemma="τρόπος" normalized="τρόπον" strong="5158" number="singular" gender="masculine" case="accusative" head="true" gloss="manner">τρόπον</w>
                       </wg>
                     </wg>
-                    <w role="adv" ref="JUD 1:7!13" class="pron" type="demonstrative" xml:id="n65001007013" lemma="οὗτος" normalized="τούτοις" strong="3778" number="plural" gender="masculine" case="dative" gloss="with them">τούτοις</w>
-                    <w role="v" ref="JUD 1:7!14" class="verb" xml:id="n65001007014" lemma="ἐκπορνεύω" normalized="ἐκπορνεύσασαι" strong="1608" number="plural" gender="feminine" case="nominative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having indulged in sexual immorality">ἐκπορνεύσασαι</w>
+                    <w role="adv" ref="JUD 1:7!13" class="pron" type="demonstrative" xml:id="n65001007013" lemma="οὗτος" normalized="τούτοις" strong="3778" number="plural" gender="masculine" case="dative" gloss="with them" Ref="n65001006001">τούτοις</w>
+                    <w role="v" ref="JUD 1:7!14" class="verb" xml:id="n65001007014" lemma="ἐκπορνεύω" normalized="ἐκπορνεύσασαι" strong="1608" number="plural" gender="feminine" case="nominative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having indulged in sexual immorality" SubjRef="n65001007002 n65001007004 n65001007009" Frame="A0:n65001007002;n65001007004;n65001007009 A1:n65001007012">ἐκπορνεύσασαι</w>
                   </wg>
                   <w ref="JUD 1:7!15" class="conj" xml:id="n65001007015" lemma="καί" normalized="καί" strong="2532" gloss="and">καὶ</w>
                   <wg class="cl" rule="V-ADV" xml:id="n650010070160040">
-                    <w role="v" ref="JUD 1:7!16" class="verb" xml:id="n65001007016" lemma="ἀπέρχομαι" normalized="ἀπελθοῦσαι" strong="565" number="plural" gender="feminine" case="nominative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having gone">ἀπελθοῦσαι</w>
+                    <w role="v" ref="JUD 1:7!16" class="verb" xml:id="n65001007016" lemma="ἀπέρχομαι" normalized="ἀπελθοῦσαι" strong="565" number="plural" gender="feminine" case="nominative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having gone" SubjRef="n65001007002 n65001007004 n65001007009" Frame="A0:n65001007002;n65001007004;n65001007009">ἀπελθοῦσαι</w>
                     <wg role="adv" xml:id="n650010070170031" class="pp" rule="PrepNp">
                       <w ref="JUD 1:7!17" class="prep" xml:id="n65001007017" lemma="ὀπίσω" normalized="ὀπίσω" strong="3694" gloss="after">ὀπίσω</w>
                       <wg class="np" head="true" rule="NpAdjp" xml:id="n650010070180020">
@@ -367,7 +367,7 @@
                     </wg>
                   </wg>
                 </wg>
-                <w role="v" ref="JUD 1:7!20" class="verb" xml:id="n65001007020" lemma="πρόκειμαι" normalized="πρόκεινται" strong="4295" number="plural" person="third" tense="present" voice="middlepassive" mood="indicative" head="true" gloss="are set forth as">πρόκεινται</w>
+                <w role="v" ref="JUD 1:7!20" class="verb" xml:id="n65001007020" lemma="πρόκειμαι" normalized="πρόκεινται" strong="4295" number="plural" person="third" tense="present" voice="middlepassive" mood="indicative" head="true" gloss="are set forth as" Frame="A0:n65001007002;n65001007004;n65001007009 A1:n65001007021">πρόκεινται</w>
                 <w role="o" ref="JUD 1:7!21" class="noun" type="common" xml:id="n65001007021" lemma="δεῖγμα" normalized="δεῖγμα" strong="1164" number="singular" gender="neuter" case="accusative" gloss="an example">δεῖγμα</w>
                 <wg role="adv" xml:id="n650010070220041" class="cl" rule="O-V">
                   <wg role="o" xml:id="n650010070220031" class="np" rule="ofNPNP">
@@ -377,7 +377,7 @@
                     </wg>
                     <w ref="JUD 1:7!24" class="noun" type="common" xml:id="n65001007024" lemma="δίκη" normalized="δίκην" strong="1349" number="singular" gender="feminine" case="accusative" head="true" gloss="[the] penalty">δίκην</w>
                   </wg>
-                  <w role="v" ref="JUD 1:7!25" class="verb" xml:id="n65001007025" lemma="ὑπέχω" normalized="ὑπέχουσαι" strong="5254" number="plural" gender="feminine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="undergoing">ὑπέχουσαι.</w>
+                  <w role="v" ref="JUD 1:7!25" class="verb" xml:id="n65001007025" lemma="ὑπέχω" normalized="ὑπέχουσαι" strong="5254" number="plural" gender="feminine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="undergoing" SubjRef="n65001007002 n65001007004 n65001007009" Frame="A0:n65001007002;n65001007004;n65001007009 A1:n65001007024">ὑπέχουσαι.</w>
                 </wg>
               </wg>
             </wg>
@@ -397,8 +397,8 @@
           <wg role="s" xml:id="n650010080030031" class="np" rule="AdvpNp">
             <w ref="JUD 1:8!3" class="adv" xml:id="n65001008003" lemma="καί" normalized="καί" strong="2532" gloss="also">καὶ</w>
             <wg class="np" head="true" rule="Demo-NP" xml:id="n650010080040020">
-              <w ref="JUD 1:8!4" class="pron" type="demonstrative" xml:id="n65001008004" lemma="οὗτος" normalized="οὗτοι" strong="3778" number="plural" gender="masculine" case="nominative" gloss="these">οὗτοι</w>
-              <w ref="JUD 1:8!5" class="verb" xml:id="n65001008005" lemma="ἐνυπνιάζομαι" normalized="ἐνυπνιαζόμενοι" strong="1797" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="dreaming [ones]">ἐνυπνιαζόμενοι</w>
+              <w ref="JUD 1:8!4" class="pron" type="demonstrative" xml:id="n65001008004" lemma="οὗτος" normalized="οὗτοι" strong="3778" number="plural" gender="masculine" case="nominative" gloss="these" Ref="n65001004004">οὗτοι</w>
+              <w ref="JUD 1:8!5" class="verb" xml:id="n65001008005" lemma="ἐνυπνιάζομαι" normalized="ἐνυπνιαζόμενοι" strong="1797" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="dreaming [ones]" Frame="A0:n00000000000">ἐνυπνιαζόμενοι</w>
             </wg>
           </wg>
           <wg role="v" xml:id="n650010080070092" class="vp" head="true" rule="CL2VP">
@@ -406,17 +406,17 @@
               <w ref="JUD 1:8!7" class="conj" xml:id="n65001008007" lemma="μέν" normalized="μέν" strong="3303" discontinuous="true" gloss="indeed">μὲν</w>
               <wg class="cl" head="true" rule="O-V" xml:id="n650010080060020">
                 <w role="o" ref="JUD 1:8!6" class="noun" type="common" xml:id="n65001008006" lemma="σάρξ" normalized="σάρκα" strong="4561" number="singular" gender="feminine" case="accusative" gloss="[the] flesh">σάρκα</w>
-                <w role="v" ref="JUD 1:8!8" class="verb" xml:id="n65001008008" lemma="μιαίνω" normalized="μιαίνουσιν" strong="3392" number="plural" person="third" tense="present" voice="active" mood="indicative" head="true" gloss="defile">μιαίνουσιν,</w>
+                <w role="v" ref="JUD 1:8!8" class="verb" xml:id="n65001008008" lemma="μιαίνω" normalized="μιαίνουσιν" strong="3392" number="plural" person="third" tense="present" voice="active" mood="indicative" head="true" gloss="defile" Frame="A0:n00000000000 A1:n65001008006">μιαίνουσιν,</w>
               </wg>
               <w ref="JUD 1:8!10" class="conj" xml:id="n65001008010" lemma="δέ" normalized="δέ" strong="1161" discontinuous="true" gloss="then">δὲ</w>
               <wg class="cl" rule="O-V" xml:id="n650010080090020">
                 <w role="o" ref="JUD 1:8!9" class="noun" type="common" xml:id="n65001008009" lemma="κυριότης" normalized="κυριότητα" strong="2963" number="singular" gender="feminine" case="accusative" gloss="authority">κυριότητα</w>
-                <w role="v" ref="JUD 1:8!11" class="verb" xml:id="n65001008011" lemma="ἀθετέω" normalized="ἀθετοῦσιν" strong="114" number="plural" person="third" tense="present" voice="active" mood="indicative" head="true" gloss="set aside">ἀθετοῦσιν,</w>
+                <w role="v" ref="JUD 1:8!11" class="verb" xml:id="n65001008011" lemma="ἀθετέω" normalized="ἀθετοῦσιν" strong="114" number="plural" person="third" tense="present" voice="active" mood="indicative" head="true" gloss="set aside" Frame="A0:n00000000000 A1:n65001008009">ἀθετοῦσιν,</w>
               </wg>
               <w ref="JUD 1:8!13" class="conj" xml:id="n65001008013" lemma="δέ" normalized="δέ" strong="1161" discontinuous="true" gloss="and">δὲ</w>
               <wg class="cl" rule="O-V" xml:id="n650010080120020">
                 <w role="o" ref="JUD 1:8!12" class="noun" type="common" xml:id="n65001008012" lemma="δόξα" normalized="δόξας" strong="1391" number="plural" gender="feminine" case="accusative" gloss="glorious [ones]">δόξας</w>
-                <w role="v" ref="JUD 1:8!14" class="verb" xml:id="n65001008014" lemma="βλασφημέω" normalized="βλασφημοῦσιν" strong="987" number="plural" person="third" tense="present" voice="active" mood="indicative" head="true" gloss="blaspheme">βλασφημοῦσιν.</w>
+                <w role="v" ref="JUD 1:8!14" class="verb" xml:id="n65001008014" lemma="βλασφημέω" normalized="βλασφημοῦσιν" strong="987" number="plural" person="third" tense="present" voice="active" mood="indicative" head="true" gloss="blaspheme" Frame="A0:n00000000000 A1:n65001008012">βλασφημοῦσιν.</w>
               </wg>
             </wg>
           </wg>
@@ -438,9 +438,9 @@
                 <w ref="JUD 1:9!7" class="det" xml:id="n65001009007" lemma="ὁ" normalized="τῷ" strong="3588" number="singular" gender="masculine" case="dative" gloss="with the">τῷ</w>
                 <w ref="JUD 1:9!8" class="adj" xml:id="n65001009008" lemma="διάβολος" normalized="διαβόλῳ" strong="1228" number="singular" gender="masculine" case="dative" head="true" gloss="devil">διαβόλῳ</w>
               </wg>
-              <w role="v" ref="JUD 1:9!9" class="verb" xml:id="n65001009009" lemma="διακρίνω" normalized="διακρινόμενος" strong="1252" number="singular" gender="masculine" case="nominative" tense="present" voice="middle" mood="participle" type="?" head="true" gloss="disputing">διακρινόμενος</w>
+              <w role="v" ref="JUD 1:9!9" class="verb" xml:id="n65001009009" lemma="διακρίνω" normalized="διακρινόμενος" strong="1252" number="singular" gender="masculine" case="nominative" tense="present" voice="middle" mood="participle" type="?" head="true" gloss="disputing" SubjRef="n65001009003" Frame="A0:n65001009003">διακρινόμενος</w>
             </wg>
-            <w role="v" ref="JUD 1:9!10" class="verb" xml:id="n65001009010" lemma="διαλέγομαι" normalized="διελέγετο" strong="1256" number="singular" person="third" tense="imperfect" voice="middlepassive" mood="indicative" head="true" gloss="he was reasoning">διελέγετο</w>
+            <w role="v" ref="JUD 1:9!10" class="verb" xml:id="n65001009010" lemma="διαλέγομαι" normalized="διελέγετο" strong="1256" number="singular" person="third" tense="imperfect" voice="middlepassive" mood="indicative" head="true" gloss="he was reasoning" SubjRef="n65001009003" Frame="A0:n65001009003">διελέγετο</w>
             <wg role="adv" xml:id="n650010090110041" class="pp" articular="true" rule="PrepNp">
               <w ref="JUD 1:9!11" class="prep" xml:id="n65001009011" lemma="περί" normalized="περί" strong="4012" gloss="about">περὶ</w>
               <wg class="np" articular="true" head="true" rule="DetNP" xml:id="n650010090120030">
@@ -466,22 +466,22 @@
                 <w ref="JUD 1:9!5" class="noun" type="common" xml:id="n65001009005" lemma="ἀρχάγγελος" normalized="ἀρχάγγελος" strong="743" number="singular" gender="masculine" case="nominative" head="true" gloss="archangel">ἀρχάγγελος,</w>
               </wg>
             </wg>
-            <w role="v" ref="JUD 1:9!16" class="verb" xml:id="n65001009016" lemma="τολμάω" normalized="ἐτόλμησεν" strong="5111" number="singular" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="did dare">ἐτόλμησεν</w>
+            <w role="v" ref="JUD 1:9!16" class="verb" xml:id="n65001009016" lemma="τολμάω" normalized="ἐτόλμησεν" strong="5111" number="singular" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="did dare" Frame="A0:n65001009003 A1:n65001009018">ἐτόλμησεν</w>
             <wg role="o" xml:id="n650010090170031" class="cl" rule="O-V">
               <wg role="o" xml:id="n650010090170021" class="np" rule="NPofNP">
                 <w ref="JUD 1:9!17" class="noun" type="common" xml:id="n65001009017" lemma="κρίσις" normalized="κρίσιν" strong="2920" number="singular" gender="feminine" case="accusative" head="true" gloss="a judgment">κρίσιν</w>
                 <w ref="JUD 1:9!19" class="noun" type="common" xml:id="n65001009019" lemma="βλασφημία" normalized="βλασφημίας" strong="988" number="singular" gender="feminine" case="genitive" discontinuous="true" gloss="blasphemous">βλασφημίας,</w>
               </wg>
-              <w role="v" ref="JUD 1:9!18" class="verb" xml:id="n65001009018" lemma="ἐπιφέρω" normalized="ἐπενεγκεῖν" strong="2018" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to bring against [him]">ἐπενεγκεῖν</w>
+              <w role="v" ref="JUD 1:9!18" class="verb" xml:id="n65001009018" lemma="ἐπιφέρω" normalized="ἐπενεγκεῖν" strong="2018" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to bring against [him]" SubjRef="n65001009003" Frame="A0:n65001009003 A1:n65001009017">ἐπενεγκεῖν</w>
             </wg>
           </wg>
           <w ref="JUD 1:9!20" class="conj" xml:id="n65001009020" lemma="ἀλλά" normalized="ἀλλά" strong="235" gloss="but">ἀλλὰ</w>
           <wg class="cl" head="true" rule="V2CL" xml:id="n650010090210013">
-            <w role="v" ref="JUD 1:9!21" class="verb" xml:id="n65001009021" lemma="λέγω" normalized="εἶπεν" strong="3004" number="singular" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="said">εἶπεν</w>
+            <w role="v" ref="JUD 1:9!21" class="verb" xml:id="n65001009021" lemma="λέγω" normalized="εἶπεν" strong="3004" number="singular" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="said" SubjRef="n65001009003" Frame="A0:n65001009003">εἶπεν</w>
           </wg>
           <wg class="cl" rule="V-O-S" xml:id="n650010090220030">
-            <w role="v" ref="JUD 1:9!22" class="verb" xml:id="n65001009022" lemma="ἐπιτιμάω" normalized="Ἐπιτιμήσαι" strong="2008" number="singular" person="third" tense="aorist" voice="active" mood="optative" head="true" gloss="Rebuke">Ἐπιτιμήσαι</w>
-            <w role="o" ref="JUD 1:9!23" class="pron" type="personal" xml:id="n65001009023" lemma="σύ" normalized="σοι" strong="4771" number="singular" case="dative" gloss="you">σοι</w>
+            <w role="v" ref="JUD 1:9!22" class="verb" xml:id="n65001009022" lemma="ἐπιτιμάω" normalized="Ἐπιτιμήσαι" strong="2008" number="singular" person="third" tense="aorist" voice="active" mood="optative" head="true" gloss="Rebuke" Frame="A1:n65001009023 A0:n65001009024">Ἐπιτιμήσαι</w>
+            <w role="o" ref="JUD 1:9!23" class="pron" type="personal" xml:id="n65001009023" lemma="σύ" normalized="σοι" strong="4771" number="singular" case="dative" gloss="you" Ref="n65001009008">σοι</w>
             <w role="s" ref="JUD 1:9!24" class="noun" type="common" xml:id="n65001009024" lemma="κύριος" normalized="Κύριος" strong="2962" number="singular" gender="masculine" case="nominative" gloss="[the] Lord">Κύριος.</w>
           </wg>
         </wg>
@@ -497,15 +497,15 @@
         <wg class="cl" rule="aCLaCL" xml:id="n650010100040170">
           <w ref="JUD 1:10!4" class="conj" xml:id="n65001010004" lemma="μέν" normalized="μέν" strong="3303" discontinuous="true" gloss="indeed">μὲν</w>
           <wg class="cl" head="true" rule="S-O-V" xml:id="n650010100010050">
-            <w role="s" ref="JUD 1:10!1" class="pron" type="demonstrative" xml:id="n65001010001" lemma="οὗτος" normalized="οὗτοι" strong="3778" number="plural" gender="masculine" case="nominative" gloss="These">οὗτοι</w>
+            <w role="s" ref="JUD 1:10!1" class="pron" type="demonstrative" xml:id="n65001010001" lemma="οὗτος" normalized="οὗτοι" strong="3778" number="plural" gender="masculine" case="nominative" gloss="These" Ref="n65001008005">οὗτοι</w>
             <wg role="o" xml:id="n650010100030032" class="np" rule="CL2NP">
               <wg class="cl" rule="O-ADV-V" xml:id="n650010100030030">
                 <w role="o" ref="JUD 1:10!3" class="pron" type="relative" xml:id="n65001010003" lemma="ὅσος" normalized="ὅσα" strong="3745" number="plural" gender="neuter" case="accusative" gloss="whatever things">ὅσα</w>
                 <w role="adv" ref="JUD 1:10!5" class="adv" xml:id="n65001010005" lemma="οὐ" normalized="οὐκ" strong="3756" gloss="not">οὐκ</w>
-                <w role="v" ref="JUD 1:10!6" class="verb" xml:id="n65001010006" lemma="οἶδα" normalized="οἴδασιν" strong="1492" number="plural" person="third" tense="perfect" voice="active" mood="indicative" head="true" gloss="they have seen">οἴδασιν</w>
+                <w role="v" ref="JUD 1:10!6" class="verb" xml:id="n65001010006" lemma="οἶδα" normalized="οἴδασιν" strong="1492" number="plural" person="third" tense="perfect" voice="active" mood="indicative" head="true" gloss="they have seen" SubjRef="n65001008005" Frame="A0:n65001008005 A1:n65001010003">οἴδασιν</w>
               </wg>
             </wg>
-            <w role="v" ref="JUD 1:10!7" class="verb" xml:id="n65001010007" lemma="βλασφημέω" normalized="βλασφημοῦσιν" strong="987" number="plural" person="third" tense="present" voice="active" mood="indicative" head="true" gloss="they speak evil of">βλασφημοῦσιν,</w>
+            <w role="v" ref="JUD 1:10!7" class="verb" xml:id="n65001010007" lemma="βλασφημέω" normalized="βλασφημοῦσιν" strong="987" number="plural" person="third" tense="present" voice="active" mood="indicative" head="true" gloss="they speak evil of" Frame="A0:n65001010001 A1:n65001010006">βλασφημοῦσιν,</w>
           </wg>
           <w ref="JUD 1:10!9" class="conj" xml:id="n65001010009" lemma="δέ" normalized="δέ" strong="1161" discontinuous="true" gloss="then">δὲ</w>
           <wg class="cl" rule="O-ADV-ADV-V" xml:id="n650010100080070">
@@ -523,14 +523,14 @@
                 </wg>
               </wg>
             </wg>
-            <w role="v" ref="JUD 1:10!15" class="verb" xml:id="n65001010015" lemma="ἐπίσταμαι" normalized="ἐπίστανται" strong="1987" number="plural" person="third" tense="present" voice="middlepassive" mood="indicative" head="true" gloss="they understand">ἐπίστανται,</w>
+            <w role="v" ref="JUD 1:10!15" class="verb" xml:id="n65001010015" lemma="ἐπίσταμαι" normalized="ἐπίστανται" strong="1987" number="plural" person="third" tense="present" voice="middlepassive" mood="indicative" head="true" gloss="they understand" SubjRef="n65001008005" Frame="A0:n65001008005 A1:n65001010008">ἐπίστανται,</w>
           </wg>
           <wg class="cl" head="true" rule="ADV-V" xml:id="n650010100160030">
             <wg role="adv" xml:id="n650010100160021" class="pp" rule="PrepNp">
               <w ref="JUD 1:10!16" class="prep" xml:id="n65001010016" lemma="ἐν" normalized="ἐν" strong="1722" gloss="in">ἐν</w>
-              <w ref="JUD 1:10!17" class="pron" type="demonstrative" xml:id="n65001010017" lemma="οὗτος" normalized="τούτοις" strong="3778" number="plural" gender="neuter" case="dative" head="true" gloss="these things">τούτοις</w>
+              <w ref="JUD 1:10!17" class="pron" type="demonstrative" xml:id="n65001010017" lemma="οὗτος" normalized="τούτοις" strong="3778" number="plural" gender="neuter" case="dative" head="true" gloss="these things" Ref="n65001010015">τούτοις</w>
             </wg>
-            <w role="v" ref="JUD 1:10!18" class="verb" xml:id="n65001010018" lemma="φθείρω" normalized="φθείρονται" strong="5351" number="plural" person="third" tense="present" voice="passive" mood="indicative" head="true" gloss="they corrupt themselves">φθείρονται.</w>
+            <w role="v" ref="JUD 1:10!18" class="verb" xml:id="n65001010018" lemma="φθείρω" normalized="φθείρονται" strong="5351" number="plural" person="third" tense="present" voice="passive" mood="indicative" head="true" gloss="they corrupt themselves" SubjRef="n65001008005" Frame="A1:n65001008005">φθείρονται.</w>
           </wg>
         </wg>
       </wg>
@@ -543,7 +543,7 @@
       <wg class="cl" rule="ClCl" xml:id="n650010110010210">
         <wg class="cl" head="true" rule="S-IO" xml:id="n650010110010020">
           <w role="s" ref="JUD 1:11!1" class="ptcl" xml:id="n65001011001" lemma="οὐαί" normalized="οὐαί" strong="3759" head="true" gloss="Woe">οὐαὶ</w>
-          <w role="io" ref="JUD 1:11!2" class="pron" type="personal" xml:id="n65001011002" lemma="αὐτός" normalized="αὐτοῖς" strong="846" number="plural" gender="masculine" case="dative" gloss="to them">αὐτοῖς,</w>
+          <w role="io" ref="JUD 1:11!2" class="pron" type="personal" xml:id="n65001011002" lemma="αὐτός" normalized="αὐτοῖς" strong="846" number="plural" gender="masculine" case="dative" gloss="to them" Ref="n65001008005">αὐτοῖς,</w>
         </wg>
         <wg class="cl" rule="sub-CL" xml:id="n650010110030190">
           <w ref="JUD 1:11!3" class="conj" xml:id="n65001011003" lemma="ὅτι" normalized="ὅτι" strong="3754" gloss="because">ὅτι</w>
@@ -559,7 +559,7 @@
                   </wg>
                 </wg>
               </wg>
-              <w role="v" ref="JUD 1:11!8" class="verb" xml:id="n65001011008" lemma="πορεύομαι" normalized="ἐπορεύθησαν" strong="4198" number="plural" person="third" tense="aorist" voice="passive" mood="indicative" head="true" gloss="they went">ἐπορεύθησαν,</w>
+              <w role="v" ref="JUD 1:11!8" class="verb" xml:id="n65001011008" lemma="πορεύομαι" normalized="ἐπορεύθησαν" strong="4198" number="plural" person="third" tense="aorist" voice="passive" mood="indicative" head="true" gloss="they went" SubjRef="n65001008005" Frame="A1:n65001008005">ἐπορεύθησαν,</w>
             </wg>
             <w ref="JUD 1:11!9" class="conj" xml:id="n65001011009" lemma="καί" normalized="καί" strong="2532" gloss="and">καὶ</w>
             <wg class="cl" rule="ADV-V" xml:id="n650010110100060">
@@ -576,7 +576,7 @@
                   </wg>
                 </wg>
               </wg>
-              <w role="v" ref="JUD 1:11!15" class="verb" xml:id="n65001011015" lemma="ἐκχέω" normalized="ἐξεχύθησαν" strong="1632" number="plural" person="third" tense="aorist" voice="passive" mood="indicative" head="true" gloss="they rushed">ἐξεχύθησαν,</w>
+              <w role="v" ref="JUD 1:11!15" class="verb" xml:id="n65001011015" lemma="ἐκχέω" normalized="ἐξεχύθησαν" strong="1632" number="plural" person="third" tense="aorist" voice="passive" mood="indicative" head="true" gloss="they rushed" SubjRef="n65001008005" Frame="A1:n65001008005">ἐξεχύθησαν,</w>
             </wg>
             <w ref="JUD 1:11!16" class="conj" xml:id="n65001011016" lemma="καί" normalized="καί" strong="2532" gloss="and">καὶ</w>
             <wg class="cl" rule="ADV-V" xml:id="n650010110170050">
@@ -590,7 +590,7 @@
                   </wg>
                 </wg>
               </wg>
-              <w role="v" ref="JUD 1:11!21" class="verb" xml:id="n65001011021" lemma="ἀπόλλυμι" normalized="ἀπώλοντο" strong="622" number="plural" person="third" tense="aorist" voice="middle" mood="indicative" head="true" gloss="they perished">ἀπώλοντο.</w>
+              <w role="v" ref="JUD 1:11!21" class="verb" xml:id="n65001011021" lemma="ἀπόλλυμι" normalized="ἀπώλοντο" strong="622" number="plural" person="third" tense="aorist" voice="middle" mood="indicative" head="true" gloss="they perished" SubjRef="n65001008005" Frame="A0:n65001008005">ἀπώλοντο.</w>
             </wg>
           </wg>
         </wg>
@@ -604,7 +604,7 @@
     <wg role="cl">
       <wg class="cl" articular="true" rule="ClCl" xml:id="n650010120010400">
         <wg class="cl" articular="true" head="true" rule="S-VC-P-ADV" xml:id="n650010120010120">
-          <w role="s" ref="JUD 1:12!1" class="pron" type="demonstrative" xml:id="n65001012001" lemma="οὗτος" normalized="Οὗτοι" strong="3778" number="plural" gender="masculine" case="nominative" gloss="These">Οὗτοί</w>
+          <w role="s" ref="JUD 1:12!1" class="pron" type="demonstrative" xml:id="n65001012001" lemma="οὗτος" normalized="Οὗτοι" strong="3778" number="plural" gender="masculine" case="nominative" gloss="These" Ref="n65001008005">Οὗτοί</w>
           <w role="vc" ref="JUD 1:12!2" class="verb" xml:id="n65001012002" lemma="εἰμί" normalized="εἰσιν" strong="1510" number="plural" person="third" tense="present" voice="active" mood="indicative" gloss="are">εἰσιν</w>
           <wg role="p" xml:id="n650010120030061" class="np" articular="true" head="true" rule="DetNP">
             <w ref="JUD 1:12!3" class="det" xml:id="n65001012003" lemma="ὁ" normalized="οἱ" strong="3588" number="plural" gender="masculine" case="nominative" gloss="the ones">οἱ</w>
@@ -615,7 +615,7 @@
                   <w ref="JUD 1:12!5" class="det" xml:id="n65001012005" lemma="ὁ" normalized="ταῖς" strong="3588" number="plural" gender="feminine" case="dative" gloss="the">ταῖς</w>
                   <wg class="np" head="true" rule="NPofNP" xml:id="n650010120060020">
                     <w ref="JUD 1:12!6" class="noun" type="common" xml:id="n65001012006" lemma="ἀγάπη" normalized="ἀγάπαις" strong="26" number="plural" gender="feminine" case="dative" head="true" gloss="love feasts">ἀγάπαις</w>
-                    <w ref="JUD 1:12!7" class="pron" type="personal" xml:id="n65001012007" lemma="σύ" normalized="ὑμῶν" strong="4771" number="plural" case="genitive" gloss="of you">ὑμῶν</w>
+                    <w ref="JUD 1:12!7" class="pron" type="personal" xml:id="n65001012007" lemma="σύ" normalized="ὑμῶν" strong="4771" number="plural" case="genitive" gloss="of you" Ref="n65001003001">ὑμῶν</w>
                   </wg>
                 </wg>
               </wg>
@@ -624,12 +624,12 @@
           </wg>
           <wg role="adv" xml:id="n650010120090041" class="cl" rule="ClCl">
             <wg class="cl" head="true" rule="V-ADV" xml:id="n650010120090020">
-              <w role="v" ref="JUD 1:12!9" class="verb" xml:id="n65001012009" lemma="συνευωχέομαι" normalized="συνευωχούμενοι" strong="4910" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="feasting together [with you]">συνευωχούμενοι</w>
+              <w role="v" ref="JUD 1:12!9" class="verb" xml:id="n65001012009" lemma="συνευωχέομαι" normalized="συνευωχούμενοι" strong="4910" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="feasting together [with you]" SubjRef="n65001008005" Frame="A0:n65001008005">συνευωχούμενοι</w>
               <w role="adv" ref="JUD 1:12!10" class="adv" xml:id="n65001012010" lemma="ἀφόβως" normalized="ἀφόβως" strong="870" gloss="fearlessly">ἀφόβως,</w>
             </wg>
             <wg class="cl" rule="O-V" xml:id="n650010120110020">
-              <w role="o" ref="JUD 1:12!11" class="pron" type="personal" xml:id="n65001012011" lemma="ἑαυτοῦ" normalized="ἑαυτούς" strong="1438" number="plural" gender="masculine" case="accusative" gloss="themselves">ἑαυτοὺς</w>
-              <w role="v" ref="JUD 1:12!12" class="verb" xml:id="n65001012012" lemma="ποιμαίνω" normalized="ποιμαίνοντες" strong="4165" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="shepherding">ποιμαίνοντες,</w>
+              <w role="o" ref="JUD 1:12!11" class="pron" type="personal" xml:id="n65001012011" lemma="ἑαυτοῦ" normalized="ἑαυτούς" strong="1438" number="plural" gender="masculine" case="accusative" gloss="themselves" Ref="n65001008005">ἑαυτοὺς</w>
+              <w role="v" ref="JUD 1:12!12" class="verb" xml:id="n65001012012" lemma="ποιμαίνω" normalized="ποιμαίνοντες" strong="4165" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="shepherding" SubjRef="n65001008005" Frame="A0:n65001008005 A1:n65001012011">ποιμαίνοντες,</w>
             </wg>
           </wg>
         </wg>
@@ -646,7 +646,7 @@
                     <w ref="JUD 1:12!15" class="prep" xml:id="n65001012015" lemma="ὑπό" normalized="ὑπό" strong="5259" gloss="by">ὑπὸ</w>
                     <w ref="JUD 1:12!16" class="noun" type="common" xml:id="n65001012016" lemma="ἄνεμος" normalized="ἀνέμων" strong="417" number="plural" gender="masculine" case="genitive" head="true" gloss="winds">ἀνέμων</w>
                   </wg>
-                  <w role="v" ref="JUD 1:12!17" class="verb" xml:id="n65001012017" lemma="παραφέρω" normalized="παραφερόμεναι" strong="3911" number="plural" gender="feminine" case="nominative" tense="present" voice="passive" mood="participle" type="?" head="true" gloss="being carried about">παραφερόμεναι,</w>
+                  <w role="v" ref="JUD 1:12!17" class="verb" xml:id="n65001012017" lemma="παραφέρω" normalized="παραφερόμεναι" strong="3911" number="plural" gender="feminine" case="nominative" tense="present" voice="passive" mood="participle" type="?" head="true" gloss="being carried about" SubjRef="n65001012013" Frame="A1:n65001012013">παραφερόμεναι,</w>
                 </wg>
               </wg>
             </wg>
@@ -662,11 +662,11 @@
                 <wg class="adjp" rule="CL2Adjp" xml:id="n650010120210021">
                   <wg class="cl" rule="ADV-V" xml:id="n650010120210020">
                     <w role="adv" ref="JUD 1:12!21" class="adv" xml:id="n65001012021" lemma="δίς" normalized="δίς" strong="1364" gloss="twice">δὶς</w>
-                    <w role="v" ref="JUD 1:12!22" class="verb" xml:id="n65001012022" lemma="ἀποθνῄσκω" normalized="ἀποθανόντα" strong="599" number="plural" gender="neuter" case="nominative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having died">ἀποθανόντα</w>
+                    <w role="v" ref="JUD 1:12!22" class="verb" xml:id="n65001012022" lemma="ἀποθνῄσκω" normalized="ἀποθανόντα" strong="599" number="plural" gender="neuter" case="nominative" tense="aorist" voice="active" mood="participle" type="?" head="true" gloss="having died" SubjRef="n65001012018" Frame="A0:n65001012018">ἀποθανόντα</w>
                   </wg>
                 </wg>
               </wg>
-              <w ref="JUD 1:12!23" class="verb" xml:id="n65001012023" lemma="ἐκριζόω" normalized="ἐκριζωθέντα" strong="1610" number="plural" gender="neuter" case="nominative" tense="aorist" voice="passive" mood="participle" type="?" gloss="having been uprooted">ἐκριζωθέντα,</w>
+              <w ref="JUD 1:12!23" class="verb" xml:id="n65001012023" lemma="ἐκριζόω" normalized="ἐκριζωθέντα" strong="1610" number="plural" gender="neuter" case="nominative" tense="aorist" voice="passive" mood="participle" type="?" gloss="having been uprooted" SubjRef="n65001012018" Frame="A1:n65001012018">ἐκριζωθέντα,</w>
             </wg>
             <wg class="np" rule="NpAdjp" xml:id="n650010130010070">
               <wg class="np" head="true" rule="NPofNP" xml:id="n650010130010030">
@@ -678,11 +678,11 @@
               </wg>
               <wg class="adjp" rule="CL2Adjp" xml:id="n650010130040041">
                 <wg class="cl" rule="V-O" xml:id="n650010130040040">
-                  <w role="v" ref="JUD 1:13!4" class="verb" xml:id="n65001013004" lemma="ἐπαφρίζω" normalized="ἐπαφρίζοντα" strong="1890" number="plural" gender="neuter" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="foaming out">ἐπαφρίζοντα</w>
+                  <w role="v" ref="JUD 1:13!4" class="verb" xml:id="n65001013004" lemma="ἐπαφρίζω" normalized="ἐπαφρίζοντα" strong="1890" number="plural" gender="neuter" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="foaming out" SubjRef="n65001013001" Frame="A0:n65001013001 A1:n65001013007">ἐπαφρίζοντα</w>
                   <wg role="o" xml:id="n650010130050031" class="np" articular="true" rule="DetNP">
                     <w ref="JUD 1:13!5" class="det" xml:id="n65001013005" lemma="ὁ" normalized="τάς" strong="3588" number="plural" gender="feminine" case="accusative" gloss="-">τὰς</w>
                     <wg class="np" head="true" rule="ofNPNP" xml:id="n650010130060020">
-                      <w ref="JUD 1:13!6" class="pron" type="personal" xml:id="n65001013006" lemma="ἑαυτοῦ" normalized="ἑαυτῶν" strong="1438" number="plural" gender="neuter" case="genitive" gloss="of their">ἑαυτῶν</w>
+                      <w ref="JUD 1:13!6" class="pron" type="personal" xml:id="n65001013006" lemma="ἑαυτοῦ" normalized="ἑαυτῶν" strong="1438" number="plural" gender="neuter" case="genitive" gloss="of their" Ref="n65001013001">ἑαυτῶν</w>
                       <w ref="JUD 1:13!7" class="noun" type="common" xml:id="n65001013007" lemma="αἰσχύνη" normalized="αἰσχύνας" strong="152" number="plural" gender="feminine" case="accusative" head="true" gloss="shame">αἰσχύνας,</w>
                     </wg>
                   </wg>
@@ -695,7 +695,7 @@
                 <w ref="JUD 1:13!9" class="noun" xml:id="n65001013009" lemma="πλανήτης" normalized="πλανῆται" strong="4107" number="plural" gender="masculine" case="nominative" gloss="wandering">πλανῆται,</w>
               </wg>
               <wg class="cl" rule="IO-S-ADV-V" xml:id="n650010130100080">
-                <w role="io" ref="JUD 1:13!10" class="pron" type="relative" xml:id="n65001013010" lemma="ὅς" normalized="οἷς" strong="3739" number="plural" gender="masculine" case="dative" gloss="to whom">οἷς</w>
+                <w role="io" ref="JUD 1:13!10" class="pron" type="relative" xml:id="n65001013010" lemma="ὅς" normalized="οἷς" strong="3739" number="plural" gender="masculine" case="dative" gloss="to whom" Ref="n65001013008">οἷς</w>
                 <wg role="s" xml:id="n650010130110041" class="np" articular="true" rule="DetNP">
                   <w ref="JUD 1:13!11" class="det" xml:id="n65001013011" lemma="ὁ" normalized="ὁ" strong="3588" number="singular" gender="masculine" case="nominative" gloss="the">ὁ</w>
                   <wg class="np" head="true" rule="NPofNP" xml:id="n650010130120030">
@@ -710,7 +710,7 @@
                   <w ref="JUD 1:13!15" class="prep" xml:id="n65001013015" lemma="εἰς" normalized="εἰς" strong="1519" gloss="to">εἰς</w>
                   <w ref="JUD 1:13!16" class="noun" type="common" xml:id="n65001013016" lemma="αἰών" normalized="αἰῶνα" strong="165" number="singular" gender="masculine" case="accusative" head="true" gloss="[the] age">αἰῶνα</w>
                 </wg>
-                <w role="v" ref="JUD 1:13!17" class="verb" xml:id="n65001013017" lemma="τηρέω" normalized="τετήρηται" strong="5083" number="singular" person="third" tense="perfect" voice="passive" mood="indicative" head="true" gloss="has been reserved">τετήρηται.</w>
+                <w role="v" ref="JUD 1:13!17" class="verb" xml:id="n65001013017" lemma="τηρέω" normalized="τετήρηται" strong="5083" number="singular" person="third" tense="perfect" voice="passive" mood="indicative" head="true" gloss="has been reserved" Frame="A2:n65001013010 A1:n65001013012">τετήρηται.</w>
               </wg>
             </wg>
           </wg>
@@ -726,10 +726,10 @@
       <wg class="cl" rule="Conj-CL" xml:id="n650010140020440">
         <w ref="JUD 1:14!2" class="conj" xml:id="n65001014002" lemma="δέ" normalized="δέ" strong="1161" discontinuous="true" gloss="then">δὲ</w>
         <wg class="cl" rule="V-IO-S-ADV" xml:id="n650010140010430">
-          <w role="v" ref="JUD 1:14!1" class="verb" xml:id="n65001014001" lemma="προφητεύω" normalized="Ἐπροφήτευσεν" strong="4395" number="singular" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="Prophesied">Ἐπροφήτευσεν</w>
+          <w role="v" ref="JUD 1:14!1" class="verb" xml:id="n65001014001" lemma="προφητεύω" normalized="Ἐπροφήτευσεν" strong="4395" number="singular" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="Prophesied" Frame="A2:n65001014004 A1:n00000000000 A0:n65001014005">Ἐπροφήτευσεν</w>
           <wg role="io" xml:id="n650010140030021" class="np" rule="AdvpNp">
             <w ref="JUD 1:14!3" class="adv" xml:id="n65001014003" lemma="καί" normalized="καί" strong="2532" gloss="also">καὶ</w>
-            <w ref="JUD 1:14!4" class="pron" type="demonstrative" xml:id="n65001014004" lemma="οὗτος" normalized="τούτοις" strong="3778" number="plural" gender="masculine" case="dative" head="true" gloss="as to these">τούτοις</w>
+            <w ref="JUD 1:14!4" class="pron" type="demonstrative" xml:id="n65001014004" lemma="οὗτος" normalized="τούτοις" strong="3778" number="plural" gender="masculine" case="dative" head="true" gloss="as to these" Ref="n65001008005">τούτοις</w>
           </wg>
           <wg role="s" xml:id="n650010140050041" class="np" rule="Np-Appos">
             <wg class="np" head="true" rule="NpPp" xml:id="n650010140050030">
@@ -743,13 +743,13 @@
           </wg>
           <wg role="adv" xml:id="n650010140090361" class="cl" rule="ClCl">
             <wg class="cl" head="true" rule="V2CL" xml:id="n650010140090013">
-              <w role="v" ref="JUD 1:14!9" class="verb" xml:id="n65001014009" lemma="λέγω" normalized="λέγων" strong="3004" number="singular" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="saying">λέγων</w>
+              <w role="v" ref="JUD 1:14!9" class="verb" xml:id="n65001014009" lemma="λέγω" normalized="λέγων" strong="3004" number="singular" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="saying" SubjRef="n65001014005" Frame="A0:n65001014005">λέγων</w>
             </wg>
             <wg class="cl" rule="V2CL" xml:id="n650010140100013">
               <w role="v" ref="JUD 1:14!10" class="verb" xml:id="n65001014010" lemma="ὁράω" normalized="Ἰδού" strong="3708" number="singular" person="second" tense="aorist" voice="middle" mood="imperative" gloss="Behold">Ἰδοὺ</w>
             </wg>
             <wg class="cl" head="true" rule="V-S-ADV-ADV" xml:id="n650010140110340">
-              <w role="v" ref="JUD 1:14!11" class="verb" xml:id="n65001014011" lemma="ἔρχομαι" normalized="ἦλθεν" strong="2064" number="singular" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="has come">ἦλθεν</w>
+              <w role="v" ref="JUD 1:14!11" class="verb" xml:id="n65001014011" lemma="ἔρχομαι" normalized="ἦλθεν" strong="2064" number="singular" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="has come" Frame="A0:n65001014012">ἦλθεν</w>
               <w role="s" ref="JUD 1:14!12" class="noun" type="common" xml:id="n65001014012" lemma="κύριος" normalized="Κύριος" strong="2962" number="singular" gender="masculine" case="nominative" gloss="[the] Lord">Κύριος</w>
               <wg role="adv" xml:id="n650010140130041" class="pp" rule="PrepNp">
                 <w ref="JUD 1:14!13" class="prep" xml:id="n65001014013" lemma="ἐν" normalized="ἐν" strong="1722" gloss="amidst">ἐν</w>
@@ -757,13 +757,13 @@
                   <w ref="JUD 1:14!14" class="adj" xml:id="n65001014014" lemma="ἅγιος" normalized="ἁγίαις" strong="40" number="plural" gender="feminine" case="dative" gloss="holy [ones]">ἁγίαις</w>
                   <wg class="np" head="true" rule="NPofNP" xml:id="n650010140150020">
                     <w ref="JUD 1:14!15" class="noun" type="common" xml:id="n65001014015" lemma="μυριάς" normalized="μυριάσιν" strong="3461" number="plural" gender="feminine" case="dative" head="true" gloss="myriads">μυριάσιν</w>
-                    <w ref="JUD 1:14!16" class="pron" type="personal" xml:id="n65001014016" lemma="αὐτός" normalized="αὐτοῦ" strong="846" number="singular" gender="masculine" case="genitive" gloss="of His">αὐτοῦ,</w>
+                    <w ref="JUD 1:14!16" class="pron" type="personal" xml:id="n65001014016" lemma="αὐτός" normalized="αὐτοῦ" strong="846" number="singular" gender="masculine" case="genitive" gloss="of His" Ref="n65001014012">αὐτοῦ,</w>
                   </wg>
                 </wg>
               </wg>
               <wg role="adv" xml:id="n650010150010281" class="cl" rule="CLaCL">
                 <wg class="cl" head="true" rule="V-O-ADV" xml:id="n650010150010040">
-                  <w role="v" ref="JUD 1:15!1" class="verb" xml:id="n65001015001" lemma="ποιέω" normalized="ποιῆσαι" strong="4160" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to execute">ποιῆσαι</w>
+                  <w role="v" ref="JUD 1:15!1" class="verb" xml:id="n65001015001" lemma="ποιέω" normalized="ποιῆσαι" strong="4160" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to execute" SubjRef="n65001014012" Frame="A0:n65001014012 A1:n65001015002">ποιῆσαι</w>
                   <w role="o" ref="JUD 1:15!2" class="noun" type="common" xml:id="n65001015002" lemma="κρίσις" normalized="κρίσιν" strong="2920" number="singular" gender="feminine" case="accusative" gloss="judgment">κρίσιν</w>
                   <wg role="adv" xml:id="n650010150030021" class="pp" rule="PrepNp">
                     <w ref="JUD 1:15!3" class="prep" xml:id="n65001015003" lemma="κατά" normalized="κατά" strong="2596" gloss="against">κατὰ</w>
@@ -772,7 +772,7 @@
                 </wg>
                 <w ref="JUD 1:15!5" class="conj" xml:id="n65001015005" lemma="καί" normalized="καί" strong="2532" gloss="and">καὶ</w>
                 <wg class="cl" rule="V-O-ADV" xml:id="n650010150060230">
-                  <w role="v" ref="JUD 1:15!6" class="verb" xml:id="n65001015006" lemma="ἐλέγχω" normalized="ἐλέγξαι" strong="1651" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to convict">ἐλέγξαι</w>
+                  <w role="v" ref="JUD 1:15!6" class="verb" xml:id="n65001015006" lemma="ἐλέγχω" normalized="ἐλέγξαι" strong="1651" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to convict" SubjRef="n65001014012" Frame="A0:n65001014012 A1:n65001015009">ἐλέγξαι</w>
                   <wg role="o" xml:id="n650010150070031" class="np" articular="true" rule="All-NP">
                     <w ref="JUD 1:15!7" class="adj" xml:id="n65001015007" lemma="πᾶς" normalized="πάντας" strong="3956" number="plural" gender="masculine" case="accusative" gloss="all">πάντας</w>
                     <wg class="np" articular="true" head="true" rule="DetAdj" xml:id="n650010150080020">
@@ -793,11 +793,11 @@
                                 <w ref="JUD 1:15!13" class="noun" type="common" xml:id="n65001015013" lemma="ἔργον" normalized="ἔργων" strong="2041" number="plural" gender="neuter" case="genitive" head="true" gloss="works">ἔργων</w>
                                 <w ref="JUD 1:15!14" class="noun" type="common" xml:id="n65001015014" lemma="ἀσέβεια" normalized="ἀσεβείας" strong="763" number="singular" gender="feminine" case="genitive" gloss="of ungodliness">ἀσεβείας</w>
                               </wg>
-                              <w ref="JUD 1:15!15" class="pron" type="personal" xml:id="n65001015015" lemma="αὐτός" normalized="αὐτῶν" strong="846" number="plural" gender="masculine" case="genitive" gloss="of them">αὐτῶν</w>
+                              <w ref="JUD 1:15!15" class="pron" type="personal" xml:id="n65001015015" lemma="αὐτός" normalized="αὐτῶν" strong="846" number="plural" gender="masculine" case="genitive" gloss="of them" Ref="n65001015009">αὐτῶν</w>
                             </wg>
                             <wg class="cl" rule="ADV-V" xml:id="n650010150160020">
-                              <w role="adv" ref="JUD 1:15!16" class="pron" type="relative" xml:id="n65001015016" lemma="ὅς" normalized="ὧν" strong="3739" number="plural" gender="neuter" case="genitive" gloss="which">ὧν</w>
-                              <w role="v" ref="JUD 1:15!17" class="verb" xml:id="n65001015017" lemma="ἀσεβέω" normalized="ἠσέβησαν" strong="764" number="plural" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="they have done in an ungodly way">ἠσέβησαν</w>
+                              <w role="adv" ref="JUD 1:15!16" class="pron" type="relative" xml:id="n65001015016" lemma="ὅς" normalized="ὧν" strong="3739" number="plural" gender="neuter" case="genitive" gloss="which" Ref="n65001015013">ὧν</w>
+                              <w role="v" ref="JUD 1:15!17" class="verb" xml:id="n65001015017" lemma="ἀσεβέω" normalized="ἠσέβησαν" strong="764" number="plural" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="they have done in an ungodly way" SubjRef="n65001015009" Frame="A0:n65001015009">ἠσέβησαν</w>
                             </wg>
                           </wg>
                         </wg>
@@ -813,11 +813,11 @@
                           <wg class="np" head="true" rule="NP-CL" xml:id="n650010150220070">
                             <w ref="JUD 1:15!22" class="adj" xml:id="n65001015022" lemma="σκληρός" normalized="σκληρῶν" strong="4642" number="plural" gender="neuter" case="genitive" head="true" gloss="harsh [things]">σκληρῶν</w>
                             <wg class="cl" rule="O-V-ADV-S" xml:id="n650010150230060">
-                              <w role="o" ref="JUD 1:15!23" class="pron" type="relative" xml:id="n65001015023" lemma="ὅς" normalized="ὧν" strong="3739" number="plural" gender="neuter" case="genitive" gloss="that">ὧν</w>
-                              <w role="v" ref="JUD 1:15!24" class="verb" xml:id="n65001015024" lemma="λαλέω" normalized="ἐλάλησαν" strong="2980" number="plural" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="have spoken">ἐλάλησαν</w>
+                              <w role="o" ref="JUD 1:15!23" class="pron" type="relative" xml:id="n65001015023" lemma="ὅς" normalized="ὧν" strong="3739" number="plural" gender="neuter" case="genitive" gloss="that" Ref="n65001015022">ὧν</w>
+                              <w role="v" ref="JUD 1:15!24" class="verb" xml:id="n65001015024" lemma="λαλέω" normalized="ἐλάλησαν" strong="2980" number="plural" person="third" tense="aorist" voice="active" mood="indicative" head="true" gloss="have spoken" Frame="A1:n65001015023 A0:n65001015027">ἐλάλησαν</w>
                               <wg role="adv" xml:id="n650010150250021" class="pp" rule="PrepNp">
                                 <w ref="JUD 1:15!25" class="prep" xml:id="n65001015025" lemma="κατά" normalized="κατ’" strong="2596" gloss="against">κατ’</w>
-                                <w ref="JUD 1:15!26" class="pron" type="personal" xml:id="n65001015026" lemma="αὐτός" normalized="αὐτοῦ" strong="846" number="singular" gender="masculine" case="genitive" head="true" gloss="Him">αὐτοῦ</w>
+                                <w ref="JUD 1:15!26" class="pron" type="personal" xml:id="n65001015026" lemma="αὐτός" normalized="αὐτοῦ" strong="846" number="singular" gender="masculine" case="genitive" head="true" gloss="Him" Ref="n65001014012">αὐτοῦ</w>
                               </wg>
                               <wg role="s" xml:id="n650010150270021" class="np" rule="NpAdjp">
                                 <w ref="JUD 1:15!27" class="adj" xml:id="n65001015027" lemma="ἁμαρτωλός" normalized="ἁμαρτωλοί" strong="268" number="plural" gender="masculine" case="nominative" head="true" gloss="sinners">ἁμαρτωλοὶ</w>
@@ -843,7 +843,7 @@
     <wg role="cl">
       <wg class="cl" rule="CLaCL" xml:id="n650010160010190">
         <wg class="cl" head="true" rule="S-VC-P" xml:id="n650010160010090">
-          <w role="s" ref="JUD 1:16!1" class="pron" type="demonstrative" xml:id="n65001016001" lemma="οὗτος" normalized="Οὗτοι" strong="3778" number="plural" gender="masculine" case="nominative" gloss="These">Οὗτοί</w>
+          <w role="s" ref="JUD 1:16!1" class="pron" type="demonstrative" xml:id="n65001016001" lemma="οὗτος" normalized="Οὗτοι" strong="3778" number="plural" gender="masculine" case="nominative" gloss="These" Ref="n65001008005">Οὗτοί</w>
           <w role="vc" ref="JUD 1:16!2" class="verb" xml:id="n65001016002" lemma="εἰμί" normalized="εἰσιν" strong="1510" number="plural" person="third" tense="present" voice="active" mood="indicative" gloss="are">εἰσιν</w>
           <wg role="p" xml:id="n650010160030071" class="np" head="true" rule="NpAdjp">
             <wg class="np" head="true" rule="NpAdjp" xml:id="n650010160030020">
@@ -858,11 +858,11 @@
                     <w ref="JUD 1:16!6" class="det" xml:id="n65001016006" lemma="ὁ" normalized="τάς" strong="3588" number="plural" gender="feminine" case="accusative" gloss="the">τὰς</w>
                     <wg class="np" head="true" rule="NPofNP" xml:id="n650010160070020">
                       <w ref="JUD 1:16!7" class="noun" type="common" xml:id="n65001016007" lemma="ἐπιθυμία" normalized="ἐπιθυμίας" strong="1939" number="plural" gender="feminine" case="accusative" head="true" gloss="lusts">ἐπιθυμίας</w>
-                      <w ref="JUD 1:16!8" class="pron" type="personal" xml:id="n65001016008" lemma="αὐτός" normalized="αὐτῶν" strong="846" number="plural" gender="masculine" case="genitive" gloss="own">αὐτῶν</w>
+                      <w ref="JUD 1:16!8" class="pron" type="personal" xml:id="n65001016008" lemma="αὐτός" normalized="αὐτῶν" strong="846" number="plural" gender="masculine" case="genitive" gloss="own" Ref="n65001008005">αὐτῶν</w>
                     </wg>
                   </wg>
                 </wg>
-                <w role="v" ref="JUD 1:16!9" class="verb" xml:id="n65001016009" lemma="πορεύομαι" normalized="πορευόμενοι" strong="4198" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="following">πορευόμενοι,</w>
+                <w role="v" ref="JUD 1:16!9" class="verb" xml:id="n65001016009" lemma="πορεύομαι" normalized="πορευόμενοι" strong="4198" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="following" SubjRef="n65001016003" Frame="A0:n65001016003">πορευόμενοι,</w>
               </wg>
             </wg>
           </wg>
@@ -873,13 +873,13 @@
             <w ref="JUD 1:16!11" class="det" xml:id="n65001016011" lemma="ὁ" normalized="τό" strong="3588" number="singular" gender="neuter" case="nominative" gloss="the">τὸ</w>
             <wg class="np" head="true" rule="NPofNP" xml:id="n650010160120020">
               <w ref="JUD 1:16!12" class="noun" type="common" xml:id="n65001016012" lemma="στόμα" normalized="στόμα" strong="4750" number="singular" gender="neuter" case="nominative" head="true" gloss="mouth">στόμα</w>
-              <w ref="JUD 1:16!13" class="pron" type="personal" xml:id="n65001016013" lemma="αὐτός" normalized="αὐτῶν" strong="846" number="plural" gender="masculine" case="genitive" gloss="of them">αὐτῶν</w>
+              <w ref="JUD 1:16!13" class="pron" type="personal" xml:id="n65001016013" lemma="αὐτός" normalized="αὐτῶν" strong="846" number="plural" gender="masculine" case="genitive" gloss="of them" Ref="n65001008005">αὐτῶν</w>
             </wg>
           </wg>
-          <w role="v" ref="JUD 1:16!14" class="verb" xml:id="n65001016014" lemma="λαλέω" normalized="λαλεῖ" strong="2980" number="singular" person="third" tense="present" voice="active" mood="indicative" head="true" gloss="speaks">λαλεῖ</w>
+          <w role="v" ref="JUD 1:16!14" class="verb" xml:id="n65001016014" lemma="λαλέω" normalized="λαλεῖ" strong="2980" number="singular" person="third" tense="present" voice="active" mood="indicative" head="true" gloss="speaks" Frame="A0:n65001016012 A1:n65001016015">λαλεῖ</w>
           <w role="o" ref="JUD 1:16!15" class="adj" xml:id="n65001016015" lemma="ὑπέρογκος" normalized="ὑπέρογκα" strong="5246" number="plural" gender="neuter" case="accusative" gloss="great swelling [words]">ὑπέρογκα,</w>
           <wg role="adv" xml:id="n650010160160041" class="cl" rule="V-O-ADV">
-            <w role="v" ref="JUD 1:16!16" class="verb" xml:id="n65001016016" lemma="θαυμάζω" normalized="θαυμάζοντες" strong="2296" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="flattering">θαυμάζοντες</w>
+            <w role="v" ref="JUD 1:16!16" class="verb" xml:id="n65001016016" lemma="θαυμάζω" normalized="θαυμάζοντες" strong="2296" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="flattering" SubjRef="n65001008005" Frame="A0:n65001008005 A1:n65001016017">θαυμάζοντες</w>
             <w role="o" ref="JUD 1:16!17" class="noun" type="common" xml:id="n65001016017" lemma="πρόσωπον" normalized="πρόσωπα" strong="4383" number="plural" gender="neuter" case="accusative" gloss="faces">πρόσωπα</w>
             <wg role="adv" xml:id="n650010160180021" class="pp" rule="NP-Prep">
               <w ref="JUD 1:16!18" class="noun" type="common" xml:id="n65001016018" lemma="ὠφέλεια" normalized="ὠφελείας" strong="5622" number="singular" gender="feminine" case="genitive" head="true" gloss="profit">ὠφελείας</w>
@@ -900,8 +900,8 @@
           <w ref="JUD 1:17!3" class="adj" xml:id="n65001017003" lemma="ἀγαπητός" normalized="ἀγαπητοί" strong="27" number="plural" gender="masculine" case="vocative" discontinuous="true" gloss="beloved">ἀγαπητοί,</w>
         </wg>
         <wg class="cl" head="true" rule="S-V-O" xml:id="n650010170010140">
-          <w role="s" ref="JUD 1:17!1" class="pron" type="personal" xml:id="n65001017001" lemma="σύ" normalized="Ὑμεῖς" strong="4771" number="plural" case="nominative" gloss="You">Ὑμεῖς</w>
-          <w role="v" ref="JUD 1:17!4" class="verb" xml:id="n65001017004" lemma="μιμνῄσκω" normalized="μνήσθητε" strong="3403" number="plural" person="second" tense="aorist" voice="passive" mood="imperative" head="true" gloss="remember">μνήσθητε</w>
+          <w role="s" ref="JUD 1:17!1" class="pron" type="personal" xml:id="n65001017001" lemma="σύ" normalized="Ὑμεῖς" strong="4771" number="plural" case="nominative" gloss="You" Ref="n65001017003">Ὑμεῖς</w>
+          <w role="v" ref="JUD 1:17!4" class="verb" xml:id="n65001017004" lemma="μιμνῄσκω" normalized="μνήσθητε" strong="3403" number="plural" person="second" tense="aorist" voice="passive" mood="imperative" head="true" gloss="remember" Frame="A1:n65001017001 A1:n65001017006">μνήσθητε</w>
           <wg role="o" xml:id="n650010170050121" class="np" articular="true" rule="Np-Appos">
             <wg class="np" articular="true" head="true" rule="DetNP" xml:id="n650010170050020">
               <w ref="JUD 1:17!5" class="det" xml:id="n65001017005" lemma="ὁ" normalized="τῶν" strong="3588" number="plural" gender="neuter" case="genitive" gloss="the">τῶν</w>
@@ -910,7 +910,7 @@
             <wg class="np" articular="true" rule="DetCL" xml:id="n650010170070100">
               <w ref="JUD 1:17!7" class="det" xml:id="n65001017007" lemma="ὁ" normalized="τῶν" strong="3588" number="plural" gender="neuter" case="genitive" gloss="-">τῶν</w>
               <wg class="cl" head="true" rule="V-ADV" xml:id="n650010170080090">
-                <w role="v" ref="JUD 1:17!8" class="verb" xml:id="n65001017008" lemma="προλέγω" normalized="προειρημένων" strong="4302" number="plural" gender="neuter" case="genitive" tense="perfect" voice="passive" mood="participle" type="?" head="true" gloss="having been spoken beforehand">προειρημένων</w>
+                <w role="v" ref="JUD 1:17!8" class="verb" xml:id="n65001017008" lemma="προλέγω" normalized="προειρημένων" strong="4302" number="plural" gender="neuter" case="genitive" tense="perfect" voice="passive" mood="participle" type="?" head="true" gloss="having been spoken beforehand" SubjRef="n65001017006" Frame="A1:n65001017006">προειρημένων</w>
                 <wg role="adv" xml:id="n650010170090081" class="pp" articular="true" rule="PrepNp">
                   <w ref="JUD 1:17!9" class="prep" xml:id="n65001017009" lemma="ὑπό" normalized="ὑπό" strong="5259" gloss="by">ὑπὸ</w>
                   <wg class="np" articular="true" head="true" rule="DetNP" xml:id="n650010170100070">
@@ -922,7 +922,7 @@
                           <w ref="JUD 1:17!12" class="det" xml:id="n65001017012" lemma="ὁ" normalized="τοῦ" strong="3588" number="singular" gender="masculine" case="genitive" gloss="of the">τοῦ</w>
                           <wg class="np" head="true" rule="NPofNP" xml:id="n650010170130020">
                             <w ref="JUD 1:17!13" class="noun" type="common" xml:id="n65001017013" lemma="κύριος" normalized="Κυρίου" strong="2962" number="singular" gender="masculine" case="genitive" head="true" gloss="Lord">Κυρίου</w>
-                            <w ref="JUD 1:17!14" class="pron" type="personal" xml:id="n65001017014" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us">ἡμῶν</w>
+                            <w ref="JUD 1:17!14" class="pron" type="personal" xml:id="n65001017014" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us" Ref="n65001001001 n65001001007 n65001017003 n65001003022 n65001014005">ἡμῶν</w>
                           </wg>
                         </wg>
                         <wg class="np" rule="Np-Appos" xml:id="n650010170150020">
@@ -947,8 +947,8 @@
       <wg class="cl" rule="that-VP" xml:id="n650010180010160">
         <w ref="JUD 1:18!1" class="conj" xml:id="n65001018001" lemma="ὅτι" normalized="ὅτι" strong="3754" gloss="that">ὅτι</w>
         <wg class="cl" head="true" rule="V-IO" xml:id="n650010180020020">
-          <w role="v" ref="JUD 1:18!2" class="verb" xml:id="n65001018002" lemma="λέγω" normalized="ἔλεγον" strong="3004" number="plural" person="third" tense="imperfect" voice="active" mood="indicative" head="true" gloss="they were saying">ἔλεγον</w>
-          <w role="io" ref="JUD 1:18!3" class="pron" type="personal" xml:id="n65001018003" lemma="σύ" normalized="ὑμῖν" strong="4771" number="plural" case="dative" gloss="to you">ὑμῖν</w>
+          <w role="v" ref="JUD 1:18!2" class="verb" xml:id="n65001018002" lemma="λέγω" normalized="ἔλεγον" strong="3004" number="plural" person="third" tense="imperfect" voice="active" mood="indicative" head="true" gloss="they were saying" SubjRef="n65001017011" Frame="A0:n65001017011 A2:n65001018003">ἔλεγον</w>
+          <w role="io" ref="JUD 1:18!3" class="pron" type="personal" xml:id="n65001018003" lemma="σύ" normalized="ὑμῖν" strong="4771" number="plural" case="dative" gloss="to you" Ref="n65001017003">ὑμῖν</w>
         </wg>
         <wg class="cl" articular="true" rule="P-VC-S" xml:id="n650010180040130">
           <wg role="p" xml:id="n650010180040041" class="pp" articular="true" head="true" rule="PrepNp">
@@ -966,13 +966,13 @@
             <w ref="JUD 1:18!9" class="noun" type="common" xml:id="n65001018009" lemma="ἐμπαίκτης" normalized="ἐμπαῖκται" strong="1703" number="plural" gender="masculine" case="nominative" head="true" gloss="scoffers">ἐμπαῖκται</w>
             <wg class="adjp" rule="CL2Adjp" xml:id="n650010180140071">
               <wg class="cl" rule="V-ADV" xml:id="n650010180140070">
-                <w role="v" ref="JUD 1:18!14" class="verb" xml:id="n65001018014" lemma="πορεύομαι" normalized="πορευόμενοι" strong="4198" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" discontinuous="true" gloss="following">πορευόμενοι</w>
+                <w role="v" ref="JUD 1:18!14" class="verb" xml:id="n65001018014" lemma="πορεύομαι" normalized="πορευόμενοι" strong="4198" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" discontinuous="true" gloss="following" SubjRef="n65001018009" Frame="A0:n65001018009">πορευόμενοι</w>
                 <wg role="adv" xml:id="n650010180100061" class="pp" articular="true" rule="PrepNp">
                   <w ref="JUD 1:18!10" class="prep" xml:id="n65001018010" lemma="κατά" normalized="κατά" strong="2596" gloss="after">κατὰ</w>
                   <wg class="np" articular="true" head="true" rule="DetNP" xml:id="n650010180110050">
                     <w ref="JUD 1:18!11" class="det" xml:id="n65001018011" lemma="ὁ" normalized="τάς" strong="3588" number="plural" gender="feminine" case="accusative" gloss="-">τὰς</w>
                     <wg class="np" head="true" rule="ofNPNP" xml:id="n650010180120040">
-                      <w ref="JUD 1:18!12" class="pron" type="personal" xml:id="n65001018012" lemma="ἑαυτοῦ" normalized="ἑαυτῶν" strong="1438" number="plural" gender="masculine" case="genitive" gloss="their own">ἑαυτῶν</w>
+                      <w ref="JUD 1:18!12" class="pron" type="personal" xml:id="n65001018012" lemma="ἑαυτοῦ" normalized="ἑαυτῶν" strong="1438" number="plural" gender="masculine" case="genitive" gloss="their own" Ref="n65001018009">ἑαυτῶν</w>
                       <wg class="np" head="true" rule="NPofNP" xml:id="n650010180130030">
                         <w ref="JUD 1:18!13" class="noun" type="common" xml:id="n65001018013" lemma="ἐπιθυμία" normalized="ἐπιθυμίας" strong="1939" number="plural" gender="feminine" case="accusative" head="true" gloss="passions">ἐπιθυμίας</w>
                         <wg class="np" articular="true" rule="DetNP" xml:id="n650010180150020">
@@ -995,13 +995,13 @@
       <milestone unit="verse" id="JUD 1:19">JUD 1:19</milestone>Οὗτοί εἰσιν οἱ ἀποδιορίζοντες, ψυχικοί, Πνεῦμα μὴ ἔχοντες.</p>
     <wg role="cl">
       <wg class="cl" articular="true" rule="S-VC-P" xml:id="n650010190010080">
-        <w role="s" ref="JUD 1:19!1" class="pron" type="demonstrative" xml:id="n65001019001" lemma="οὗτος" normalized="Οὗτοι" strong="3778" number="plural" gender="masculine" case="nominative" gloss="These">Οὗτοί</w>
+        <w role="s" ref="JUD 1:19!1" class="pron" type="demonstrative" xml:id="n65001019001" lemma="οὗτος" normalized="Οὗτοι" strong="3778" number="plural" gender="masculine" case="nominative" gloss="These" Ref="n65001018009">Οὗτοί</w>
         <w role="vc" ref="JUD 1:19!2" class="verb" xml:id="n65001019002" lemma="εἰμί" normalized="εἰσιν" strong="1510" number="plural" person="third" tense="present" voice="active" mood="indicative" gloss="are">εἰσιν</w>
         <wg role="p" xml:id="n650010190030061" class="np" articular="true" head="true" rule="NpNpNp">
           <wg class="np" articular="true" head="true" rule="DetCL" xml:id="n650010190030020">
             <w ref="JUD 1:19!3" class="det" xml:id="n65001019003" lemma="ὁ" normalized="οἱ" strong="3588" number="plural" gender="masculine" case="nominative" gloss="those">οἱ</w>
             <wg class="cl" head="true" rule="V2CL" xml:id="n650010190040013">
-              <w role="v" ref="JUD 1:19!4" class="verb" xml:id="n65001019004" lemma="ἀποδιορίζω" normalized="ἀποδιορίζοντες" strong="592" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="causing divisions">ἀποδιορίζοντες,</w>
+              <w role="v" ref="JUD 1:19!4" class="verb" xml:id="n65001019004" lemma="ἀποδιορίζω" normalized="ἀποδιορίζοντες" strong="592" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="causing divisions" SubjRef="n65001008005" Frame="A0:n65001008005">ἀποδιορίζοντες,</w>
             </wg>
           </wg>
           <w ref="JUD 1:19!5" class="adj" xml:id="n65001019005" lemma="ψυχικός" normalized="ψυχικοί" strong="5591" number="plural" gender="masculine" case="nominative" gloss="worldly-minded">ψυχικοί,</w>
@@ -1009,7 +1009,7 @@
             <wg class="cl" rule="O-ADV-V" xml:id="n650010190060030">
               <w role="o" ref="JUD 1:19!6" class="noun" type="common" xml:id="n65001019006" lemma="πνεῦμα" normalized="Πνεῦμα" strong="4151" number="singular" gender="neuter" case="accusative" gloss="[the] Spirit">Πνεῦμα</w>
               <w role="adv" ref="JUD 1:19!7" class="adv" xml:id="n65001019007" lemma="μή" normalized="μή" strong="3361" gloss="not">μὴ</w>
-              <w role="v" ref="JUD 1:19!8" class="verb" xml:id="n65001019008" lemma="ἔχω" normalized="ἔχοντες" strong="2192" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="having">ἔχοντες.</w>
+              <w role="v" ref="JUD 1:19!8" class="verb" xml:id="n65001019008" lemma="ἔχω" normalized="ἔχοντες" strong="2192" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="having" SubjRef="n65001008005" Frame="A0:n65001008005 A1:n65001019006">ἔχοντες.</w>
             </wg>
           </wg>
         </wg>
@@ -1027,17 +1027,17 @@
           <w ref="JUD 1:20!3" class="adj" xml:id="n65001020003" lemma="ἀγαπητός" normalized="ἀγαπητοί" strong="27" number="plural" gender="masculine" case="vocative" discontinuous="true" gloss="beloved">ἀγαπητοί,</w>
         </wg>
         <wg class="cl" head="true" rule="S-ADV-O-ADV-V-ADV" xml:id="n650010200010270">
-          <w role="s" ref="JUD 1:20!1" class="pron" type="personal" xml:id="n65001020001" lemma="σύ" normalized="ὑμεῖς" strong="4771" number="plural" case="nominative" gloss="You">ὑμεῖς</w>
+          <w role="s" ref="JUD 1:20!1" class="pron" type="personal" xml:id="n65001020001" lemma="σύ" normalized="ὑμεῖς" strong="4771" number="plural" case="nominative" gloss="You" Ref="n65001020003">ὑμεῖς</w>
           <wg role="adv" xml:id="n650010200040101" class="cl" rule="ClCl">
             <wg class="cl" head="true" rule="V-O-ADV" xml:id="n650010200040060">
-              <w role="v" ref="JUD 1:20!4" class="verb" xml:id="n65001020004" lemma="ἐποικοδομέω" normalized="ἐποικοδομοῦντες" strong="2026" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="building up">ἐποικοδομοῦντες</w>
-              <w role="o" ref="JUD 1:20!5" class="pron" type="personal" xml:id="n65001020005" lemma="ἑαυτοῦ" normalized="ἑαυτούς" strong="1438" number="plural" gender="masculine" case="accusative" gloss="yourselves">ἑαυτοὺς</w>
+              <w role="v" ref="JUD 1:20!4" class="verb" xml:id="n65001020004" lemma="ἐποικοδομέω" normalized="ἐποικοδομοῦντες" strong="2026" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="building up" SubjRef="n65001020003" Frame="A0:n65001020003 A1:n65001020005">ἐποικοδομοῦντες</w>
+              <w role="o" ref="JUD 1:20!5" class="pron" type="personal" xml:id="n65001020005" lemma="ἑαυτοῦ" normalized="ἑαυτούς" strong="1438" number="plural" gender="masculine" case="accusative" gloss="yourselves" Ref="n65001020003">ἑαυτοὺς</w>
               <wg role="adv" xml:id="n650010200060041" class="np" articular="true" rule="DetNP">
                 <w ref="JUD 1:20!6" class="det" xml:id="n65001020006" lemma="ὁ" normalized="τῇ" strong="3588" number="singular" gender="feminine" case="dative" gloss="in the">τῇ</w>
                 <wg class="np" head="true" rule="AdjpNp" xml:id="n650010200070030">
                   <w ref="JUD 1:20!7" class="adj" xml:id="n65001020007" lemma="ἅγιος" normalized="ἁγιωτάτῃ" strong="40" number="singular" gender="feminine" case="dative" degree="superlative" gloss="most holy">ἁγιωτάτῃ</w>
                   <wg class="np" head="true" rule="ofNPNP" xml:id="n650010200080020">
-                    <w ref="JUD 1:20!8" class="pron" type="personal" xml:id="n65001020008" lemma="σύ" normalized="ὑμῶν" strong="4771" number="plural" case="genitive" gloss="of you">ὑμῶν</w>
+                    <w ref="JUD 1:20!8" class="pron" type="personal" xml:id="n65001020008" lemma="σύ" normalized="ὑμῶν" strong="4771" number="plural" case="genitive" gloss="of you" Ref="n65001020003">ὑμῶν</w>
                     <w ref="JUD 1:20!9" class="noun" type="common" xml:id="n65001020009" lemma="πίστις" normalized="πίστει" strong="4102" number="singular" gender="feminine" case="dative" head="true" gloss="faith">πίστει,</w>
                   </wg>
                 </wg>
@@ -1051,10 +1051,10 @@
                   <w ref="JUD 1:20!12" class="adj" xml:id="n65001020012" lemma="ἅγιος" normalized="Ἁγίῳ" strong="40" number="singular" gender="neuter" case="dative" gloss="Holy">Ἁγίῳ</w>
                 </wg>
               </wg>
-              <w role="v" ref="JUD 1:20!13" class="verb" xml:id="n65001020013" lemma="προσεύχομαι" normalized="προσευχόμενοι" strong="4336" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="praying">προσευχόμενοι,</w>
+              <w role="v" ref="JUD 1:20!13" class="verb" xml:id="n65001020013" lemma="προσεύχομαι" normalized="προσευχόμενοι" strong="4336" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="praying" SubjRef="n65001020003" Frame="A0:n65001020003">προσευχόμενοι,</w>
             </wg>
           </wg>
-          <w role="o" ref="JUD 1:21!1" class="pron" type="personal" xml:id="n65001021001" lemma="ἑαυτοῦ" normalized="ἑαυτούς" strong="1438" number="plural" gender="masculine" case="accusative" gloss="yourselves">ἑαυτοὺς</w>
+          <w role="o" ref="JUD 1:21!1" class="pron" type="personal" xml:id="n65001021001" lemma="ἑαυτοῦ" normalized="ἑαυτούς" strong="1438" number="plural" gender="masculine" case="accusative" gloss="yourselves" Ref="n65001020003">ἑαυτοὺς</w>
           <wg role="adv" xml:id="n650010210020031" class="pp" rule="PrepNp">
             <w ref="JUD 1:21!2" class="prep" xml:id="n65001021002" lemma="ἐν" normalized="ἐν" strong="1722" gloss="in">ἐν</w>
             <wg class="np" head="true" rule="NPofNP" xml:id="n650010210030020">
@@ -1062,9 +1062,9 @@
               <w ref="JUD 1:21!4" class="noun" type="common" xml:id="n65001021004" lemma="θεός" normalized="Θεοῦ" strong="2316" number="singular" gender="masculine" case="genitive" gloss="of God">Θεοῦ</w>
             </wg>
           </wg>
-          <w role="v" ref="JUD 1:21!5" class="verb" xml:id="n65001021005" lemma="τηρέω" normalized="τηρήσατε" strong="5083" number="plural" person="second" tense="aorist" voice="active" mood="imperative" head="true" gloss="keep">τηρήσατε,</w>
+          <w role="v" ref="JUD 1:21!5" class="verb" xml:id="n65001021005" lemma="τηρέω" normalized="τηρήσατε" strong="5083" number="plural" person="second" tense="aorist" voice="active" mood="imperative" head="true" gloss="keep" SubjRef="n65001020001" Frame="A0:n65001020001 A1:n65001021001">τηρήσατε,</w>
           <wg role="adv" xml:id="n650010210060111" class="cl" rule="V-O-ADV">
-            <w role="v" ref="JUD 1:21!6" class="verb" xml:id="n65001021006" lemma="προσδέχομαι" normalized="προσδεχόμενοι" strong="4327" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="awaiting">προσδεχόμενοι</w>
+            <w role="v" ref="JUD 1:21!6" class="verb" xml:id="n65001021006" lemma="προσδέχομαι" normalized="προσδεχόμενοι" strong="4327" number="plural" gender="masculine" case="nominative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="awaiting" SubjRef="n65001020003" Frame="A0:n65001020003 A1:n65001021008">προσδεχόμενοι</w>
             <wg role="o" xml:id="n650010210070071" class="np" articular="true" rule="DetNP">
               <w ref="JUD 1:21!7" class="det" xml:id="n65001021007" lemma="ὁ" normalized="τό" strong="3588" number="singular" gender="neuter" case="accusative" gloss="the">τὸ</w>
               <wg class="np" head="true" rule="NPofNP" xml:id="n650010210080060">
@@ -1074,7 +1074,7 @@
                     <w ref="JUD 1:21!9" class="det" xml:id="n65001021009" lemma="ὁ" normalized="τοῦ" strong="3588" number="singular" gender="masculine" case="genitive" gloss="of the">τοῦ</w>
                     <wg class="np" head="true" rule="NPofNP" xml:id="n650010210100020">
                       <w ref="JUD 1:21!10" class="noun" type="common" xml:id="n65001021010" lemma="κύριος" normalized="Κυρίου" strong="2962" number="singular" gender="masculine" case="genitive" head="true" gloss="Lord">Κυρίου</w>
-                      <w ref="JUD 1:21!11" class="pron" type="personal" xml:id="n65001021011" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us">ἡμῶν</w>
+                      <w ref="JUD 1:21!11" class="pron" type="personal" xml:id="n65001021011" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us" Ref="n65001001001 n65001001007 n65001020003 n65001003022 n65001014005">ἡμῶν</w>
                     </wg>
                   </wg>
                   <wg class="np" rule="Np-Appos" xml:id="n650010210120020">
@@ -1108,30 +1108,30 @@
           <wg class="cl" rule="O-V" xml:id="n650010220020030">
             <wg role="o" xml:id="n650010220020021" class="np" rule="NpAdjp">
               <w ref="JUD 1:22!2" class="pron" type="relative" xml:id="n65001022002" lemma="ὅς" normalized="οὕς" strong="3739" number="plural" gender="masculine" case="accusative" head="true" gloss="those who">οὓς</w>
-              <w ref="JUD 1:22!5" class="verb" xml:id="n65001022005" lemma="διακρίνω" normalized="διακρινομένους" strong="1252" number="plural" gender="masculine" case="accusative" tense="present" voice="middle" mood="participle" type="?" discontinuous="true" gloss="are doubting">διακρινομένους</w>
+              <w ref="JUD 1:22!5" class="verb" xml:id="n65001022005" lemma="διακρίνω" normalized="διακρινομένους" strong="1252" number="plural" gender="masculine" case="accusative" tense="present" voice="middle" mood="participle" type="?" discontinuous="true" gloss="are doubting" SubjRef="n65001022002" Frame="A0:n65001022002">διακρινομένους</w>
             </wg>
-            <w role="v" ref="JUD 1:22!4" class="verb" xml:id="n65001022004" lemma="ἐλεάω" normalized="ἐλεᾶτε" strong="1653" number="plural" person="second" tense="present" voice="active" mood="imperative" head="true" gloss="have mercy on">ἐλεᾶτε</w>
+            <w role="v" ref="JUD 1:22!4" class="verb" xml:id="n65001022004" lemma="ἐλεάω" normalized="ἐλεᾶτε" strong="1653" number="plural" person="second" tense="present" voice="active" mood="imperative" head="true" gloss="have mercy on" SubjRef="n65001020003" Frame="A0:n65001020003 A1:n65001022002">ἐλεᾶτε</w>
           </wg>
           <wg class="cl" head="true" rule="V-ADV" xml:id="n650010230010040">
-            <w role="v" ref="JUD 1:23!1" class="verb" xml:id="n65001023001" lemma="σῴζω" normalized="σῴζετε" strong="4982" number="plural" person="second" tense="present" voice="active" mood="imperative" head="true" gloss="save">σῴζετε</w>
+            <w role="v" ref="JUD 1:23!1" class="verb" xml:id="n65001023001" lemma="σῴζω" normalized="σῴζετε" strong="4982" number="plural" person="second" tense="present" voice="active" mood="imperative" head="true" gloss="save" SubjRef="n65001020003" Frame="A0:n65001020003 A1:n65001022002">σῴζετε</w>
             <wg role="adv" xml:id="n650010230020031" class="cl" rule="ADV-V">
               <wg role="adv" xml:id="n650010230020021" class="pp" rule="PrepNp">
                 <w ref="JUD 1:23!2" class="prep" xml:id="n65001023002" lemma="ἐκ" normalized="ἐκ" strong="1537" gloss="out of">ἐκ</w>
                 <w ref="JUD 1:23!3" class="noun" type="common" xml:id="n65001023003" lemma="πῦρ" normalized="πυρός" strong="4442" number="singular" gender="neuter" case="genitive" head="true" gloss="[the] fire">πυρὸς</w>
               </wg>
-              <w role="v" ref="JUD 1:23!4" class="verb" xml:id="n65001023004" lemma="ἁρπάζω" normalized="ἁρπάζοντες" strong="726" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="snatching">ἁρπάζοντες,</w>
+              <w role="v" ref="JUD 1:23!4" class="verb" xml:id="n65001023004" lemma="ἁρπάζω" normalized="ἁρπάζοντες" strong="726" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="snatching" SubjRef="n65001020003" Frame="A0:n65001020003 A1:n65001022002">ἁρπάζοντες,</w>
             </wg>
           </wg>
           <w ref="JUD 1:23!6" class="conj" xml:id="n65001023006" lemma="δέ" normalized="δέ" strong="1161" discontinuous="true" gloss="then">δὲ</w>
           <wg class="cl" rule="O-V-ADV-ADV" xml:id="n650010230050120">
             <w role="o" ref="JUD 1:23!5" class="pron" type="relative" xml:id="n65001023005" lemma="ὅς" normalized="οὕς" strong="3739" number="plural" gender="masculine" case="accusative" gloss="to others">οὓς</w>
-            <w role="v" ref="JUD 1:23!7" class="verb" xml:id="n65001023007" lemma="ἐλεάω" normalized="ἐλεᾶτε" strong="1653" number="plural" person="second" tense="present" voice="active" mood="imperative" head="true" gloss="show mercy">ἐλεᾶτε</w>
+            <w role="v" ref="JUD 1:23!7" class="verb" xml:id="n65001023007" lemma="ἐλεάω" normalized="ἐλεᾶτε" strong="1653" number="plural" person="second" tense="present" voice="active" mood="imperative" head="true" gloss="show mercy" SubjRef="n65001020003" Frame="A0:n65001020003 A1:n65001023005">ἐλεᾶτε</w>
             <wg role="adv" xml:id="n650010230080021" class="pp" rule="PrepNp">
               <w ref="JUD 1:23!8" class="prep" xml:id="n65001023008" lemma="ἐν" normalized="ἐν" strong="1722" gloss="with">ἐν</w>
               <w ref="JUD 1:23!9" class="noun" type="common" xml:id="n65001023009" lemma="φόβος" normalized="φόβῳ" strong="5401" number="singular" gender="masculine" case="dative" head="true" gloss="fear">φόβῳ,</w>
             </wg>
             <wg role="adv" xml:id="n650010230100081" class="cl" rule="V-O">
-              <w role="v" ref="JUD 1:23!10" class="verb" xml:id="n65001023010" lemma="μισέω" normalized="μισοῦντες" strong="3404" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="hating">μισοῦντες</w>
+              <w role="v" ref="JUD 1:23!10" class="verb" xml:id="n65001023010" lemma="μισέω" normalized="μισοῦντες" strong="3404" number="plural" gender="masculine" case="nominative" tense="present" voice="active" mood="participle" type="?" head="true" gloss="hating" SubjRef="n65001020003" Frame="A0:n65001020003 A1:n65001023017">μισοῦντες</w>
               <wg role="o" xml:id="n650010230110071" class="np" articular="true" rule="AdvpNp">
                 <w ref="JUD 1:23!11" class="adv" xml:id="n65001023011" lemma="καί" normalized="καί" strong="2532" gloss="even">καὶ</w>
                 <wg class="np" articular="true" head="true" rule="DetNP" xml:id="n650010230120060">
@@ -1146,7 +1146,7 @@
                             <w ref="JUD 1:23!15" class="noun" type="common" xml:id="n65001023015" lemma="σάρξ" normalized="σαρκός" strong="4561" number="singular" gender="feminine" case="genitive" head="true" gloss="flesh">σαρκὸς</w>
                           </wg>
                         </wg>
-                        <w role="v" ref="JUD 1:23!16" class="verb" xml:id="n65001023016" lemma="σπιλόω" normalized="ἐσπιλωμένον" strong="4695" number="singular" gender="masculine" case="accusative" tense="perfect" voice="passive" mood="participle" type="?" head="true" gloss="having been stained">ἐσπιλωμένον</w>
+                        <w role="v" ref="JUD 1:23!16" class="verb" xml:id="n65001023016" lemma="σπιλόω" normalized="ἐσπιλωμένον" strong="4695" number="singular" gender="masculine" case="accusative" tense="perfect" voice="passive" mood="participle" type="?" head="true" gloss="having been stained" SubjRef="n65001023017" Frame="A1:n65001023017">ἐσπιλωμένον</w>
                       </wg>
                     </wg>
                     <w ref="JUD 1:23!17" class="noun" type="common" xml:id="n65001023017" lemma="χιτών" normalized="χιτῶνα" strong="5509" number="singular" gender="masculine" case="accusative" head="true" gloss="clothing">χιτῶνα.</w>
@@ -1172,23 +1172,23 @@
               <w ref="JUD 1:24!1" class="det" xml:id="n65001024001" lemma="ὁ" normalized="Τῷ" strong="3588" number="singular" gender="masculine" case="dative" gloss="To Him">Τῷ</w>
               <wg class="np" head="true" rule="CL2NP" xml:id="n650010240030131">
                 <wg class="cl" head="true" rule="V-O" xml:id="n650010240030130">
-                  <w role="v" ref="JUD 1:24!3" class="verb" xml:id="n65001024003" lemma="δύναμαι" normalized="δυναμένῳ" strong="1410" number="singular" gender="masculine" case="dative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="being able">δυναμένῳ</w>
+                  <w role="v" ref="JUD 1:24!3" class="verb" xml:id="n65001024003" lemma="δύναμαι" normalized="δυναμένῳ" strong="1410" number="singular" gender="masculine" case="dative" tense="present" voice="middlepassive" mood="participle" type="?" head="true" gloss="being able" SubjRef="n65001025002" Frame="A0:n65001025002 A1:n65001024004;n65001024008">δυναμένῳ</w>
                   <wg role="o" xml:id="n650010240040121" class="cl" rule="CLaCL">
                     <wg class="cl" head="true" rule="V-O-O2" xml:id="n650010240040030">
-                      <w role="v" ref="JUD 1:24!4" class="verb" xml:id="n65001024004" lemma="φυλάσσω" normalized="φυλάξαι" strong="5442" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to keep">φυλάξαι</w>
-                      <w role="o" ref="JUD 1:24!5" class="pron" type="personal" xml:id="n65001024005" lemma="σύ" normalized="ὑμᾶς" strong="4771" number="plural" case="accusative" gloss="you">ὑμᾶς</w>
+                      <w role="v" ref="JUD 1:24!4" class="verb" xml:id="n65001024004" lemma="φυλάσσω" normalized="φυλάξαι" strong="5442" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to keep" SubjRef="n65001025002" Frame="A0:n65001025002 A1:n65001024005">φυλάξαι</w>
+                      <w role="o" ref="JUD 1:24!5" class="pron" type="personal" xml:id="n65001024005" lemma="σύ" normalized="ὑμᾶς" strong="4771" number="plural" case="accusative" gloss="you" Ref="n65001020003">ὑμᾶς</w>
                       <w role="o2" ref="JUD 1:24!6" class="adj" xml:id="n65001024006" lemma="ἄπταιστος" normalized="ἀπταίστους" strong="679" number="plural" gender="masculine" case="accusative" gloss="from stumbling">ἀπταίστους</w>
                     </wg>
                     <w ref="JUD 1:24!7" class="conj" xml:id="n65001024007" lemma="καί" normalized="καί" strong="2532" gloss="and">καὶ</w>
                     <wg class="cl" rule="V-ADV-O2-ADV" xml:id="n650010240080080">
-                      <w role="v" ref="JUD 1:24!8" class="verb" xml:id="n65001024008" lemma="ἵστημι" normalized="στῆσαι" strong="2476" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to present [you]">στῆσαι</w>
+                      <w role="v" ref="JUD 1:24!8" class="verb" xml:id="n65001024008" lemma="ἵστημι" normalized="στῆσαι" strong="2476" tense="aorist" voice="active" mood="infinitive" type="?" head="true" gloss="to present [you]" SubjRef="n65001025002" Frame="A0:n65001025002">στῆσαι</w>
                       <wg role="adv" xml:id="n650010240090041" class="pp" articular="true" rule="PrepNp">
                         <w ref="JUD 1:24!9" class="prep" xml:id="n65001024009" lemma="κατενώπιον" normalized="κατενώπιον" strong="2714" gloss="in the presence of">κατενώπιον</w>
                         <wg class="np" articular="true" head="true" rule="DetNP" xml:id="n650010240100030">
                           <w ref="JUD 1:24!10" class="det" xml:id="n65001024010" lemma="ὁ" normalized="τῆς" strong="3588" number="singular" gender="feminine" case="genitive" gloss="the">τῆς</w>
                           <wg class="np" head="true" rule="NPofNP" xml:id="n650010240110020">
                             <w ref="JUD 1:24!11" class="noun" type="common" xml:id="n65001024011" lemma="δόξα" normalized="δόξης" strong="1391" number="singular" gender="feminine" case="genitive" head="true" gloss="glory">δόξης</w>
-                            <w ref="JUD 1:24!12" class="pron" type="personal" xml:id="n65001024012" lemma="αὐτός" normalized="αὐτοῦ" strong="846" number="singular" gender="masculine" case="genitive" gloss="of Him">αὐτοῦ</w>
+                            <w ref="JUD 1:24!12" class="pron" type="personal" xml:id="n65001024012" lemma="αὐτός" normalized="αὐτοῦ" strong="846" number="singular" gender="masculine" case="genitive" gloss="of Him" Ref="n65001025002">αὐτοῦ</w>
                           </wg>
                         </wg>
                       </wg>
@@ -1209,7 +1209,7 @@
               </wg>
               <wg class="np" rule="NPofNP" xml:id="n650010250030020">
                 <w ref="JUD 1:25!3" class="noun" type="common" xml:id="n65001025003" lemma="σωτήρ" normalized="Σωτῆρι" strong="4990" number="singular" gender="masculine" case="dative" head="true" gloss="Savior">Σωτῆρι</w>
-                <w ref="JUD 1:25!4" class="pron" type="personal" xml:id="n65001025004" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us">ἡμῶν</w>
+                <w ref="JUD 1:25!4" class="pron" type="personal" xml:id="n65001025004" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us" Ref="n65001001001 n65001001007 n65001020003 n65001003022 n65001014005">ἡμῶν</w>
               </wg>
             </wg>
           </wg>
@@ -1224,7 +1224,7 @@
                 <w ref="JUD 1:25!8" class="det" xml:id="n65001025008" lemma="ὁ" normalized="τοῦ" strong="3588" number="singular" gender="masculine" case="genitive" gloss="the">τοῦ</w>
                 <wg class="np" head="true" rule="NPofNP" xml:id="n650010250090020">
                   <w ref="JUD 1:25!9" class="noun" type="common" xml:id="n65001025009" lemma="κύριος" normalized="Κυρίου" strong="2962" number="singular" gender="masculine" case="genitive" head="true" gloss="Lord">Κυρίου</w>
-                  <w ref="JUD 1:25!10" class="pron" type="personal" xml:id="n65001025010" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us">ἡμῶν</w>
+                  <w ref="JUD 1:25!10" class="pron" type="personal" xml:id="n65001025010" lemma="ἐγώ" normalized="ἡμῶν" strong="1473" number="plural" case="genitive" gloss="of us" Ref="n65001001001 n65001001007 n65001020003 n65001003022 n65001014005">ἡμῶν</w>
                 </wg>
               </wg>
             </wg>
