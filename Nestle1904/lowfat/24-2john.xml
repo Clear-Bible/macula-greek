@@ -15,6 +15,7 @@
                 articular="true"
                 head="true"
                 rule="S-IO"
+                ClType="VerbElided"
                 xml:id="630010010010310">
                <wg role="s"
                    xml:id="630010010010021"
@@ -33,7 +34,10 @@
                      case="nominative"
                      gloss="The"
                      domain="092004"
-                     ln="92.24">Ὁ</w>
+                     ln="92.24"
+                     FunctionalTag="T-NSM"
+                     Type=""
+                     Unicode="Ὁ">Ὁ</w>
                   <w ref="2JN 1:1!2"
                      class="adj"
                      xml:id="n63001001002"
@@ -47,7 +51,10 @@
                      head="true"
                      gloss="elder"
                      domain="053009"
-                     ln="53.77">πρεσβύτερος</w>
+                     ln="53.77"
+                     FunctionalTag="A-NSM-C"
+                     Type=""
+                     Unicode="πρεσβύτερος">πρεσβύτερος</w>
                </wg>
                <wg role="io" xml:id="630010010030291" class="np" rule="NP-CL">
                   <wg class="np" head="true" rule="NpaNp" xml:id="630010010030060">
@@ -63,7 +70,10 @@
                            case="dative"
                            gloss="To [the] elect"
                            domain="030006"
-                           ln="30.93">ἐκλεκτῇ</w>
+                           ln="30.93"
+                           FunctionalTag="A-DSF"
+                           Type=""
+                           Unicode="ἐκλεκτῇ">ἐκλεκτῇ</w>
                         <w ref="2JN 1:1!4"
                            class="noun"
                            type="common"
@@ -77,7 +87,10 @@
                            head="true"
                            gloss="lady"
                            domain="087003"
-                           ln="87.54">κυρίᾳ</w>
+                           ln="87.54"
+                           FunctionalTag="N-DSF"
+                           Type="Common"
+                           Unicode="κυρίᾳ">κυρίᾳ</w>
                      </wg>
                      <w ref="2JN 1:1!5"
                         class="conj"
@@ -85,7 +98,10 @@
                         lemma="καί"
                         normalized="καί"
                         strong="2532"
-                        gloss="and">καὶ</w>
+                        gloss="and"
+                        FunctionalTag="CONJ"
+                        Type=""
+                        Unicode="καὶ">καὶ</w>
                      <wg class="np"
                          articular="true"
                          rule="DetNP"
@@ -101,7 +117,10 @@
                            case="dative"
                            gloss="the"
                            domain="092004"
-                           ln="92.24">τοῖς</w>
+                           ln="92.24"
+                           FunctionalTag="T-DPN"
+                           Type=""
+                           Unicode="τοῖς">τοῖς</w>
                         <wg class="np" head="true" rule="NPofNP" xml:id="630010010070020">
                            <w ref="2JN 1:1!7"
                               class="noun"
@@ -116,7 +135,10 @@
                               head="true"
                               gloss="children"
                               domain="010002"
-                              ln="10.36">τέκνοις</w>
+                              ln="10.36"
+                              FunctionalTag="N-DPN"
+                              Type="Common"
+                              Unicode="τέκνοις">τέκνοις</w>
                            <w ref="2JN 1:1!8"
                               class="pron"
                               type="personal"
@@ -127,7 +149,11 @@
                               number="singular"
                               gender="feminine"
                               case="genitive"
-                              gloss="of her">αὐτῆς,</w>
+                              gloss="of her"
+                              FunctionalTag="P-GSF"
+                              Type="Personal"
+                              Unicode="αὐτῆς,"
+                              referent="n63001001004">αὐτῆς,</w>
                         </wg>
                      </wg>
                   </wg>
@@ -143,7 +169,11 @@
                         number="plural"
                         gender="masculine"
                         case="accusative"
-                        gloss="whom">οὓς</w>
+                        gloss="whom"
+                        FunctionalTag="R-APM"
+                        Type="Relative"
+                        Unicode="οὓς"
+                        referent="n63001001004 n63001001007">οὓς</w>
                      <w role="v"
                         ref="2JN 1:1!11"
                         class="verb"
@@ -159,7 +189,11 @@
                         head="true"
                         gloss="love"
                         domain="025003"
-                        ln="25.43">ἀγαπῶ</w>
+                        ln="25.43"
+                        FunctionalTag="V-PAI-1S"
+                        Type=""
+                        Unicode="ἀγαπῶ"
+                        Frame="A1:n63001001009 A0:n63001001010;n63001001015;n63001001016;n63001001022">ἀγαπῶ</w>
                      <wg role="adv" xml:id="630010010120021" class="pp" rule="PrepNp">
                         <w ref="2JN 1:1!12"
                            class="prep"
@@ -169,7 +203,10 @@
                            strong="1722"
                            gloss="in"
                            domain=""
-                           ln="70.4">ἐν</w>
+                           ln="70.4"
+                           FunctionalTag="PREP"
+                           Type=""
+                           Unicode="ἐν">ἐν</w>
                         <w ref="2JN 1:1!13"
                            class="noun"
                            type="common"
@@ -184,7 +221,10 @@
                            discontinuous="true"
                            gloss="truth"
                            domain=""
-                           ln="70.4">ἀληθείᾳ,</w>
+                           ln="70.4"
+                           FunctionalTag="N-DSF"
+                           Type="Common"
+                           Unicode="ἀληθείᾳ,">ἀληθείᾳ,</w>
                      </wg>
                      <wg role="s" xml:id="630010010100121" class="np" rule="NpaNp">
                         <w ref="2JN 1:1!10"
@@ -199,14 +239,21 @@
                            head="true"
                            gloss="I"
                            domain="092001"
-                           ln="92.1">ἐγὼ</w>
+                           ln="92.1"
+                           FunctionalTag="P-1NS"
+                           Type="Personal"
+                           Unicode="ἐγὼ"
+                           referent="n63001001002">ἐγὼ</w>
                         <w ref="2JN 1:1!14"
                            class="conj"
                            xml:id="n63001001014"
                            lemma="καί"
                            normalized="καί"
                            strong="2532"
-                           gloss="and">καὶ</w>
+                           gloss="and"
+                           FunctionalTag="CONJ"
+                           Type=""
+                           Unicode="καὶ">καὶ</w>
                         <wg class="np"
                             articular="true"
                             rule="notNPbutNP"
@@ -217,7 +264,10 @@
                               lemma="οὐ"
                               normalized="οὐκ"
                               strong="3756"
-                              gloss="not">οὐκ</w>
+                              gloss="not"
+                              FunctionalTag="PRT-N"
+                              Type=""
+                              Unicode="οὐκ">οὐκ</w>
                            <wg class="np" rule="NpAdjp" xml:id="630010010160020">
                               <w ref="2JN 1:1!16"
                                  class="pron"
@@ -231,7 +281,11 @@
                                  head="true"
                                  gloss="I"
                                  domain="092001"
-                                 ln="92.1">ἐγὼ</w>
+                                 ln="92.1"
+                                 FunctionalTag="P-1NS"
+                                 Type="Personal"
+                                 Unicode="ἐγὼ"
+                                 referent="n63001001002">ἐγὼ</w>
                               <w ref="2JN 1:1!17"
                                  class="adj"
                                  xml:id="n63001001017"
@@ -243,7 +297,10 @@
                                  case="nominative"
                                  gloss="only"
                                  domain="058007"
-                                 ln="58.51">μόνος</w>
+                                 ln="58.51"
+                                 FunctionalTag="A-NSM"
+                                 Type=""
+                                 Unicode="μόνος">μόνος</w>
                            </wg>
                            <w ref="2JN 1:1!18"
                               class="conj"
@@ -253,7 +310,10 @@
                               strong="235"
                               gloss="but"
                               domain="089023"
-                              ln="89.125">ἀλλὰ</w>
+                              ln="89.125"
+                              FunctionalTag="CONJ"
+                              Type=""
+                              Unicode="ἀλλὰ">ἀλλὰ</w>
                            <wg class="np"
                                articular="true"
                                head="true"
@@ -265,7 +325,10 @@
                                  lemma="καί"
                                  normalized="καί"
                                  strong="2532"
-                                 gloss="also">καὶ</w>
+                                 gloss="also"
+                                 FunctionalTag="CONJ"
+                                 Type=""
+                                 Unicode="καὶ">καὶ</w>
                               <wg class="np"
                                   articular="true"
                                   head="true"
@@ -282,7 +345,10 @@
                                     case="nominative"
                                     gloss="all"
                                     domain="059003"
-                                    ln="59.24">πάντες</w>
+                                    ln="59.24"
+                                    FunctionalTag="A-NPM"
+                                    Type=""
+                                    Unicode="πάντες">πάντες</w>
                                  <wg class="np"
                                      articular="true"
                                      head="true"
@@ -299,7 +365,10 @@
                                        case="nominative"
                                        gloss="those"
                                        domain="092004"
-                                       ln="92.24">οἱ</w>
+                                       ln="92.24"
+                                       FunctionalTag="T-NPM"
+                                       Type=""
+                                       Unicode="οἱ">οἱ</w>
                                     <wg class="cl" head="true" rule="V-O" xml:id="630010010220030">
                                        <w role="v"
                                           ref="2JN 1:1!22"
@@ -318,7 +387,11 @@
                                           head="true"
                                           gloss="having known"
                                           domain="032002"
-                                          ln="32.16">ἐγνωκότες</w>
+                                          ln="32.16"
+                                          FunctionalTag="V-RAP-NPM"
+                                          Type=""
+                                          Unicode="ἐγνωκότες"
+                                          Frame="A0:n00000000000 A1:n63001001024">ἐγνωκότες</w>
                                        <wg role="o"
                                            xml:id="630010010230021"
                                            class="np"
@@ -335,7 +408,10 @@
                                              case="accusative"
                                              gloss="the"
                                              domain="092004"
-                                             ln="92.24">τὴν</w>
+                                             ln="92.24"
+                                             FunctionalTag="T-ASF"
+                                             Type=""
+                                             Unicode="τὴν">τὴν</w>
                                           <w ref="2JN 1:1!24"
                                              class="noun"
                                              type="common"
@@ -349,7 +425,10 @@
                                              head="true"
                                              gloss="truth"
                                              domain="072001"
-                                             ln="72.2">ἀλήθειαν,</w>
+                                             ln="72.2"
+                                             FunctionalTag="N-ASF"
+                                             Type="Common"
+                                             Unicode="ἀλήθειαν,">ἀλήθειαν,</w>
                                        </wg>
                                     </wg>
                                  </wg>
@@ -370,7 +449,10 @@
                            strong="1223"
                            gloss="because of"
                            domain="089007"
-                           ln="89.26">διὰ</w>
+                           ln="89.26"
+                           FunctionalTag="PREP"
+                           Type=""
+                           Unicode="διὰ">διὰ</w>
                         <wg class="np"
                             articular="true"
                             head="true"
@@ -392,7 +474,10 @@
                                  case="accusative"
                                  gloss="the"
                                  domain="092004"
-                                 ln="92.24">τὴν</w>
+                                 ln="92.24"
+                                 FunctionalTag="T-ASF"
+                                 Type=""
+                                 Unicode="τὴν">τὴν</w>
                               <w ref="2JN 1:2!3"
                                  class="noun"
                                  type="common"
@@ -406,7 +491,10 @@
                                  head="true"
                                  gloss="truth"
                                  domain="072001"
-                                 ln="72.2">ἀλήθειαν</w>
+                                 ln="72.2"
+                                 FunctionalTag="N-ASF"
+                                 Type="Common"
+                                 Unicode="ἀλήθειαν">ἀλήθειαν</w>
                            </wg>
                            <wg class="np"
                                articular="true"
@@ -423,7 +511,10 @@
                                  case="accusative"
                                  gloss="-"
                                  domain="092004"
-                                 ln="92.24">τὴν</w>
+                                 ln="92.24"
+                                 FunctionalTag="T-ASF"
+                                 Type=""
+                                 Unicode="τὴν">τὴν</w>
                               <wg class="cl" head="true" rule="V-ADV" xml:id="630010020050030">
                                  <w role="v"
                                     ref="2JN 1:2!5"
@@ -442,7 +533,12 @@
                                     head="true"
                                     gloss="abiding"
                                     domain="068002"
-                                    ln="68.11">μένουσαν</w>
+                                    ln="68.11"
+                                    FunctionalTag="V-PAP-ASF"
+                                    Type=""
+                                    Unicode="μένουσαν"
+                                    Frame="A0:n63001002003"
+                                    SubjRef="n63001002003">μένουσαν</w>
                                  <wg role="adv" xml:id="630010020060021" class="pp" rule="PrepNp">
                                     <w ref="2JN 1:2!6"
                                        class="prep"
@@ -452,7 +548,10 @@
                                        strong="1722"
                                        gloss="in"
                                        domain="089020"
-                                       ln="89.119">ἐν</w>
+                                       ln="89.119"
+                                       FunctionalTag="PREP"
+                                       Type=""
+                                       Unicode="ἐν">ἐν</w>
                                     <w ref="2JN 1:2!7"
                                        class="pron"
                                        type="personal"
@@ -465,7 +564,11 @@
                                        head="true"
                                        gloss="us"
                                        domain="092002"
-                                       ln="92.4">ἡμῖν,</w>
+                                       ln="92.4"
+                                       FunctionalTag="P-1DP"
+                                       Type="Personal"
+                                       Unicode="ἡμῖν,"
+                                       referent="n63001001002 n63001001004 n63001001007 n63001001022">ἡμῖν,</w>
                                  </wg>
                               </wg>
                            </wg>
@@ -480,7 +583,10 @@
                lemma="καί"
                normalized="καί"
                strong="2532"
-               gloss="and">καὶ</w>
+               gloss="and"
+               FunctionalTag="CONJ"
+               Type=""
+               Unicode="καὶ">καὶ</w>
             <wg class="cl" rule="P-VC-ADV" xml:id="630010020090060">
                <wg role="p"
                    xml:id="630010020090021"
@@ -495,7 +601,10 @@
                      strong="3326"
                      gloss="with"
                      domain="089020"
-                     ln="89.108">μεθ’</w>
+                     ln="89.108"
+                     FunctionalTag="PREP"
+                     Type=""
+                     Unicode="μεθ’">μεθ’</w>
                   <w ref="2JN 1:2!10"
                      class="pron"
                      type="personal"
@@ -508,7 +617,11 @@
                      head="true"
                      gloss="us"
                      domain="092002"
-                     ln="92.4">ἡμῶν</w>
+                     ln="92.4"
+                     FunctionalTag="P-1GP"
+                     Type="Personal"
+                     Unicode="ἡμῶν"
+                     referent="n63001001002 n63001001004 n63001001007 n63001001022">ἡμῶν</w>
                </wg>
                <w role="vc"
                   ref="2JN 1:2!11"
@@ -522,7 +635,11 @@
                   tense="future"
                   voice="middle"
                   mood="indicative"
-                  gloss="that will be">ἔσται</w>
+                  gloss="that will be"
+                  FunctionalTag="V-FDI-3S"
+                  Type=""
+                  Unicode="ἔσται"
+                  SubjRef="n63001002003">ἔσται</w>
                <wg role="adv"
                    xml:id="630010020120031"
                    class="pp"
@@ -534,7 +651,10 @@
                      lemma="εἰς"
                      normalized="εἰς"
                      strong="1519"
-                     gloss="to">εἰς</w>
+                     gloss="to"
+                     FunctionalTag="PREP"
+                     Type=""
+                     Unicode="εἰς">εἰς</w>
                   <wg class="np"
                       articular="true"
                       head="true"
@@ -551,7 +671,10 @@
                         case="accusative"
                         gloss="the"
                         domain="092004"
-                        ln="92.24">τὸν</w>
+                        ln="92.24"
+                        FunctionalTag="T-ASM"
+                        Type=""
+                        Unicode="τὸν">τὸν</w>
                      <w ref="2JN 1:2!14"
                         class="noun"
                         type="common"
@@ -565,7 +688,10 @@
                         head="true"
                         gloss="age"
                         domain="067005"
-                        ln="67.95">αἰῶνα.</w>
+                        ln="67.95"
+                        FunctionalTag="N-ASM"
+                        Type="Common"
+                        Unicode="αἰῶνα.">αἰῶνα.</w>
                   </wg>
                </wg>
             </wg>
@@ -591,7 +717,10 @@
                mood="indicative"
                gloss="Will be"
                domain="013001"
-               ln="13.1">ἔσται</w>
+               ln="13.1"
+               FunctionalTag="V-FDI-3S"
+               Type=""
+               Unicode="ἔσται">ἔσται</w>
             <wg role="p"
                 xml:id="630010030020021"
                 class="pp"
@@ -605,7 +734,10 @@
                   strong="3326"
                   gloss="with"
                   domain="090013"
-                  ln="90.60">μεθ’</w>
+                  ln="90.60"
+                  FunctionalTag="PREP"
+                  Type=""
+                  Unicode="μεθ’">μεθ’</w>
                <w ref="2JN 1:3!3"
                   class="pron"
                   type="personal"
@@ -618,7 +750,11 @@
                   head="true"
                   gloss="us"
                   domain="092002"
-                  ln="92.4">ἡμῶν</w>
+                  ln="92.4"
+                  FunctionalTag="P-1GP"
+                  Type="Personal"
+                  Unicode="ἡμῶν"
+                  referent="n63001001002 n63001001004 n63001001007 n63001001022">ἡμῶν</w>
             </wg>
             <wg role="s" xml:id="630010030040141" class="np" rule="NpPp">
                <wg class="np" head="true" rule="NpNpNp" xml:id="630010030040030">
@@ -635,7 +771,10 @@
                      head="true"
                      gloss="grace"
                      domain="088009"
-                     ln="88.66">χάρις</w>
+                     ln="88.66"
+                     FunctionalTag="N-NSF"
+                     Type="Common"
+                     Unicode="χάρις">χάρις</w>
                   <w ref="2JN 1:3!5"
                      class="noun"
                      type="common"
@@ -648,7 +787,10 @@
                      case="nominative"
                      gloss="mercy"
                      domain="088010"
-                     ln="88.76">ἔλεος</w>
+                     ln="88.76"
+                     FunctionalTag="N-NSN"
+                     Type="Common"
+                     Unicode="ἔλεος">ἔλεος</w>
                   <w ref="2JN 1:3!6"
                      class="noun"
                      type="common"
@@ -661,7 +803,10 @@
                      case="nominative"
                      gloss="[and] peace"
                      domain="022007"
-                     ln="22.42">εἰρήνη</w>
+                     ln="22.42"
+                     FunctionalTag="N-NSF"
+                     Type="Common"
+                     Unicode="εἰρήνη">εἰρήνη</w>
                </wg>
                <wg class="pp" rule="Conj2Pp" xml:id="630010030070110">
                   <wg class="pp" head="true" rule="PrepNp" xml:id="630010030070030">
@@ -673,7 +818,10 @@
                         strong="3844"
                         gloss="from"
                         domain="090003"
-                        ln="90.14">παρὰ</w>
+                        ln="90.14"
+                        FunctionalTag="PREP"
+                        Type=""
+                        Unicode="παρὰ">παρὰ</w>
                      <wg class="np" head="true" rule="Np-Appos" xml:id="630010030080020">
                         <w ref="2JN 1:3!8"
                            class="noun"
@@ -688,7 +836,10 @@
                            head="true"
                            gloss="God"
                            domain="012001"
-                           ln="12.1">Θεοῦ</w>
+                           ln="12.1"
+                           FunctionalTag="N-GSM"
+                           Type="Common"
+                           Unicode="Θεοῦ">Θεοῦ</w>
                         <w ref="2JN 1:3!9"
                            class="noun"
                            type="common"
@@ -701,7 +852,10 @@
                            case="genitive"
                            gloss="[the] Father"
                            domain="012001"
-                           ln="12.12">Πατρός,</w>
+                           ln="12.12"
+                           FunctionalTag="N-GSM"
+                           Type="Common"
+                           Unicode="Πατρός,">Πατρός,</w>
                      </wg>
                   </wg>
                   <w ref="2JN 1:3!10"
@@ -710,7 +864,10 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="and">καὶ</w>
+                     gloss="and"
+                     FunctionalTag="CONJ"
+                     Type=""
+                     Unicode="καὶ">καὶ</w>
                   <wg class="pp" rule="PrepNp" xml:id="630010030110070">
                      <w ref="2JN 1:3!11"
                         class="prep"
@@ -718,7 +875,10 @@
                         lemma="παρά"
                         normalized="παρά"
                         strong="3844"
-                        gloss="from">παρὰ</w>
+                        gloss="from"
+                        FunctionalTag="PREP"
+                        Type=""
+                        Unicode="παρὰ">παρὰ</w>
                      <wg class="np" head="true" rule="Np-Appos" xml:id="630010030120060">
                         <wg class="np" head="true" rule="Np-Appos" xml:id="630010030120020">
                            <w ref="2JN 1:3!12"
@@ -734,7 +894,10 @@
                               head="true"
                               gloss="Jesus"
                               domain="093001"
-                              ln="93.169a">Ἰησοῦ</w>
+                              ln="93.169a"
+                              FunctionalTag="N-GSM"
+                              Type="Proper"
+                              Unicode="Ἰησοῦ">Ἰησοῦ</w>
                            <w ref="2JN 1:3!13"
                               class="noun"
                               type="proper"
@@ -747,7 +910,10 @@
                               case="genitive"
                               gloss="Christ"
                               domain="093001"
-                              ln="93.387">Χριστοῦ</w>
+                              ln="93.387"
+                              FunctionalTag="N-GSM"
+                              Type="Proper"
+                              Unicode="Χριστοῦ">Χριστοῦ</w>
                         </wg>
                         <wg class="np"
                             articular="true"
@@ -764,7 +930,10 @@
                               case="genitive"
                               gloss="the"
                               domain="092004"
-                              ln="92.24">τοῦ</w>
+                              ln="92.24"
+                              FunctionalTag="T-GSM"
+                              Type=""
+                              Unicode="τοῦ">τοῦ</w>
                            <wg class="np" head="true" rule="NPofNP" xml:id="630010030150030">
                               <w ref="2JN 1:3!15"
                                  class="noun"
@@ -779,7 +948,10 @@
                                  head="true"
                                  gloss="Son"
                                  domain="012001"
-                                 ln="12.15">Υἱοῦ</w>
+                                 ln="12.15"
+                                 FunctionalTag="N-GSM"
+                                 Type="Common"
+                                 Unicode="Υἱοῦ">Υἱοῦ</w>
                               <wg class="np"
                                   articular="true"
                                   rule="DetNP"
@@ -795,7 +967,10 @@
                                     case="genitive"
                                     gloss="of the"
                                     domain="092004"
-                                    ln="92.24">τοῦ</w>
+                                    ln="92.24"
+                                    FunctionalTag="T-GSM"
+                                    Type=""
+                                    Unicode="τοῦ">τοῦ</w>
                                  <w ref="2JN 1:3!17"
                                     class="noun"
                                     type="common"
@@ -809,7 +984,10 @@
                                     head="true"
                                     gloss="Father"
                                     domain="012001"
-                                    ln="12.12">Πατρός,</w>
+                                    ln="12.12"
+                                    FunctionalTag="N-GSM"
+                                    Type="Common"
+                                    Unicode="Πατρός,">Πατρός,</w>
                               </wg>
                            </wg>
                         </wg>
@@ -826,7 +1004,10 @@
                   strong="1722"
                   gloss="in"
                   domain="089013089007"
-                  ln="89.80">ἐν</w>
+                  ln="89.80"
+                  FunctionalTag="PREP"
+                  Type=""
+                  Unicode="ἐν">ἐν</w>
                <wg class="np" head="true" rule="NpaNp" xml:id="630010030190030">
                   <w ref="2JN 1:3!19"
                      class="noun"
@@ -841,14 +1022,20 @@
                      head="true"
                      gloss="truth"
                      domain="072001"
-                     ln="72.2">ἀληθείᾳ</w>
+                     ln="72.2"
+                     FunctionalTag="N-DSF"
+                     Type="Common"
+                     Unicode="ἀληθείᾳ">ἀληθείᾳ</w>
                   <w ref="2JN 1:3!20"
                      class="conj"
                      xml:id="n63001003020"
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="and">καὶ</w>
+                     gloss="and"
+                     FunctionalTag="CONJ"
+                     Type=""
+                     Unicode="καὶ">καὶ</w>
                   <w ref="2JN 1:3!21"
                      class="noun"
                      type="common"
@@ -861,7 +1048,10 @@
                      case="dative"
                      gloss="love"
                      domain="025003"
-                     ln="25.43">ἀγάπῃ.</w>
+                     ln="25.43"
+                     FunctionalTag="N-DSF"
+                     Type="Common"
+                     Unicode="ἀγάπῃ.">ἀγάπῃ.</w>
                </wg>
             </wg>
          </wg>
@@ -888,7 +1078,12 @@
                   head="true"
                   gloss="I rejoiced"
                   domain="025011"
-                  ln="25.125">Ἐχάρην</w>
+                  ln="25.125"
+                  FunctionalTag="V-2AOI-1S"
+                  Type=""
+                  Unicode="Ἐχάρην"
+                  Frame="A1:n63001001002"
+                  SubjRef="n63001001002">Ἐχάρην</w>
                <w role="adv"
                   ref="2JN 1:4!2"
                   class="adv"
@@ -898,7 +1093,10 @@
                   strong="3029"
                   gloss="exceedingly"
                   domain="078001"
-                  ln="78.1">λίαν</w>
+                  ln="78.1"
+                  FunctionalTag="ADV"
+                  Type=""
+                  Unicode="λίαν">λίαν</w>
             </wg>
             <wg class="cl" rule="sub-CL" xml:id="630010040030150">
                <w ref="2JN 1:4!3"
@@ -909,7 +1107,10 @@
                   strong="3754"
                   gloss="that"
                   domain="089007"
-                  ln="89.33">ὅτι</w>
+                  ln="89.33"
+                  FunctionalTag="CONJ"
+                  Type=""
+                  Unicode="ὅτι">ὅτι</w>
                <wg class="cl" rule="V-O" xml:id="630010040040140">
                   <w role="v"
                      ref="2JN 1:4!4"
@@ -926,7 +1127,12 @@
                      head="true"
                      gloss="I have found"
                      domain="027001"
-                     ln="27.1">εὕρηκα</w>
+                     ln="27.1"
+                     FunctionalTag="V-RAI-1S"
+                     Type=""
+                     Unicode="εὕρηκα"
+                     Frame="A0:n63001001002 A1:n63001004009"
+                     SubjRef="n63001001002">εὕρηκα</w>
                   <wg role="o" xml:id="630010040050131" class="cl" rule="ClCl">
                      <wg class="cl"
                          head="true"
@@ -943,7 +1149,10 @@
                               lemma="ἐκ"
                               normalized="ἐκ"
                               strong="1537"
-                              gloss="[some] of">ἐκ</w>
+                              gloss="[some] of"
+                              FunctionalTag="PREP"
+                              Type=""
+                              Unicode="ἐκ">ἐκ</w>
                            <wg class="np"
                                articular="true"
                                head="true"
@@ -960,7 +1169,10 @@
                                  case="genitive"
                                  gloss="the"
                                  domain="092004"
-                                 ln="92.24">τῶν</w>
+                                 ln="92.24"
+                                 FunctionalTag="T-GPN"
+                                 Type=""
+                                 Unicode="τῶν">τῶν</w>
                               <wg class="np" head="true" rule="NPofNP" xml:id="630010040070020">
                                  <w ref="2JN 1:4!7"
                                     class="noun"
@@ -975,7 +1187,10 @@
                                     head="true"
                                     gloss="children"
                                     domain="010002"
-                                    ln="10.36">τέκνων</w>
+                                    ln="10.36"
+                                    FunctionalTag="N-GPN"
+                                    Type="Common"
+                                    Unicode="τέκνων">τέκνων</w>
                                  <w ref="2JN 1:4!8"
                                     class="pron"
                                     type="personal"
@@ -985,7 +1200,11 @@
                                     strong="4771"
                                     number="singular"
                                     case="genitive"
-                                    gloss="of you">σου</w>
+                                    gloss="of you"
+                                    FunctionalTag="P-2GS"
+                                    Type="Personal"
+                                    Unicode="σου"
+                                    referent="n63001001004">σου</w>
                               </wg>
                            </wg>
                         </wg>
@@ -1006,7 +1225,11 @@
                            head="true"
                            gloss="walking"
                            domain="041001"
-                           ln="41.11">περιπατοῦντας</w>
+                           ln="41.11"
+                           FunctionalTag="V-PAP-APM"
+                           Type=""
+                           Unicode="περιπατοῦντας"
+                           Frame="A0:n00000000000">περιπατοῦντας</w>
                         <wg role="adv" xml:id="630010040100021" class="pp" rule="PrepNp">
                            <w ref="2JN 1:4!10"
                               class="prep"
@@ -1016,7 +1239,10 @@
                               strong="1722"
                               gloss="in"
                               domain=""
-                              ln="70.4">ἐν</w>
+                              ln="70.4"
+                              FunctionalTag="PREP"
+                              Type=""
+                              Unicode="ἐν">ἐν</w>
                            <w ref="2JN 1:4!11"
                               class="noun"
                               type="common"
@@ -1030,7 +1256,10 @@
                               head="true"
                               gloss="truth"
                               domain=""
-                              ln="70.4">ἀληθείᾳ,</w>
+                              ln="70.4"
+                              FunctionalTag="N-DSF"
+                              Type="Common"
+                              Unicode="ἀληθείᾳ,">ἀληθείᾳ,</w>
                         </wg>
                      </wg>
                      <wg class="cl" rule="sub-CL" xml:id="630010040120060">
@@ -1042,7 +1271,10 @@
                            strong="2531"
                            gloss="just as"
                            domain=""
-                           ln="64.14">καθὼς</w>
+                           ln="64.14"
+                           FunctionalTag="ADV"
+                           Type=""
+                           Unicode="καθὼς">καθὼς</w>
                         <wg class="cl" rule="O-V-ADV" xml:id="630010040130050">
                            <w role="o"
                               ref="2JN 1:4!13"
@@ -1057,7 +1289,10 @@
                               case="accusative"
                               gloss="commandment"
                               domain="033032"
-                              ln="33.330">ἐντολὴν</w>
+                              ln="33.330"
+                              FunctionalTag="N-ASF"
+                              Type="Common"
+                              Unicode="ἐντολὴν">ἐντολὴν</w>
                            <w role="v"
                               ref="2JN 1:4!14"
                               class="verb"
@@ -1073,7 +1308,12 @@
                               head="true"
                               gloss="we received"
                               domain="057009"
-                              ln="57.125">ἐλάβομεν</w>
+                              ln="57.125"
+                              FunctionalTag="V-2AAI-1P"
+                              Type=""
+                              Unicode="ἐλάβομεν"
+                              Frame="A0:n63001001002;n63001001004;n63001001007;n63001001022 A1:n63001004013"
+                              SubjRef="n63001001002 n63001001004 n63001001007 n63001001022">ἐλάβομεν</w>
                            <wg role="adv"
                                xml:id="630010040150031"
                                class="pp"
@@ -1087,7 +1327,10 @@
                                  strong="3844"
                                  gloss="from"
                                  domain="090003"
-                                 ln="90.14">παρὰ</w>
+                                 ln="90.14"
+                                 FunctionalTag="PREP"
+                                 Type=""
+                                 Unicode="παρὰ">παρὰ</w>
                               <wg class="np"
                                   articular="true"
                                   head="true"
@@ -1104,7 +1347,10 @@
                                     case="genitive"
                                     gloss="the"
                                     domain="092004"
-                                    ln="92.24">τοῦ</w>
+                                    ln="92.24"
+                                    FunctionalTag="T-GSM"
+                                    Type=""
+                                    Unicode="τοῦ">τοῦ</w>
                                  <w ref="2JN 1:4!17"
                                     class="noun"
                                     type="common"
@@ -1118,7 +1364,10 @@
                                     head="true"
                                     gloss="Father"
                                     domain="012001"
-                                    ln="12.12">Πατρός.</w>
+                                    ln="12.12"
+                                    FunctionalTag="N-GSM"
+                                    Type="Common"
+                                    Unicode="Πατρός.">Πατρός.</w>
                               </wg>
                            </wg>
                         </wg>
@@ -1142,8 +1391,11 @@
                strong="2532"
                gloss="And"
                domain="089015"
-               ln="89.87">καὶ</w>
-            <wg class="cl" rule="Np2CL" xml:id="630010050050012">
+               ln="89.87"
+               FunctionalTag="CONJ"
+               Type=""
+               Unicode="καὶ">καὶ</w>
+            <wg class="cl" rule="Np2CL" ClType="Minor" xml:id="630010050050012">
                <w ref="2JN 1:5!5"
                   class="noun"
                   type="common"
@@ -1157,7 +1409,10 @@
                   discontinuous="true"
                   gloss="lady"
                   domain="087003"
-                  ln="87.54">κυρία,</w>
+                  ln="87.54"
+                  FunctionalTag="N-VSF"
+                  Type="Common"
+                  Unicode="κυρία,">κυρία,</w>
             </wg>
             <wg class="cl"
                 head="true"
@@ -1172,7 +1427,10 @@
                   strong="3568"
                   gloss="now"
                   domain="067002"
-                  ln="67.38">νῦν</w>
+                  ln="67.38"
+                  FunctionalTag="ADV"
+                  Type=""
+                  Unicode="νῦν">νῦν</w>
                <w role="v"
                   ref="2JN 1:5!3"
                   class="verb"
@@ -1188,7 +1446,12 @@
                   head="true"
                   gloss="I implore"
                   domain="033012"
-                  ln="33.161">ἐρωτῶ</w>
+                  ln="33.161"
+                  FunctionalTag="V-PAI-1S"
+                  Type=""
+                  Unicode="ἐρωτῶ"
+                  Frame="A0:n63001001002 A1:n63001005004"
+                  SubjRef="n63001001002">ἐρωτῶ</w>
                <w role="o"
                   ref="2JN 1:5!4"
                   class="pron"
@@ -1199,7 +1462,11 @@
                   strong="4771"
                   number="singular"
                   case="accusative"
-                  gloss="you">σε,</w>
+                  gloss="you"
+                  FunctionalTag="P-2AS"
+                  Type="Personal"
+                  Unicode="σε,"
+                  referent="n63001005005">σε,</w>
                <wg role="adv" xml:id="630010050090111" class="cl" rule="V-IO-ADV">
                   <w role="v"
                      ref="2JN 1:5!9"
@@ -1218,7 +1485,12 @@
                      head="true"
                      gloss="I am writing"
                      domain="033005"
-                     ln="33.61">γράφων</w>
+                     ln="33.61"
+                     FunctionalTag="V-PAP-NSM"
+                     Type=""
+                     Unicode="γράφων"
+                     Frame="A0:n63001001002 A2:n63001005010"
+                     SubjRef="n63001001002">γράφων</w>
                   <w role="io"
                      ref="2JN 1:5!10"
                      class="pron"
@@ -1230,7 +1502,11 @@
                      number="singular"
                      case="dative"
                      discontinuous="true"
-                     gloss="to you">σοι</w>
+                     gloss="to you"
+                     FunctionalTag="P-2DS"
+                     Type="Personal"
+                     Unicode="σοι"
+                     referent="n63001005005">σοι</w>
                   <wg role="adv"
                       xml:id="630010050060091"
                       class="cl"
@@ -1241,7 +1517,10 @@
                         lemma="οὐ"
                         normalized="οὐχ"
                         strong="3756"
-                        gloss="not">οὐχ</w>
+                        gloss="not"
+                        FunctionalTag="PRT-N"
+                        Type=""
+                        Unicode="οὐχ">οὐχ</w>
                      <wg class="cl" rule="sub-CL" xml:id="630010050070030">
                         <w ref="2JN 1:5!7"
                            class="conj"
@@ -1251,8 +1530,14 @@
                            strong="5613"
                            gloss="as"
                            domain=""
-                           ln="64.12">ὡς</w>
-                        <wg class="cl" rule="O2CL" xml:id="630010050080022">
+                           ln="64.12"
+                           FunctionalTag="ADV"
+                           Type=""
+                           Unicode="ὡς">ὡς</w>
+                        <wg class="cl"
+                            rule="O2CL"
+                            ClType="VerbElided"
+                            xml:id="630010050080022">
                            <wg role="o" xml:id="630010050080021" class="np" rule="NpAdjp">
                               <w ref="2JN 1:5!8"
                                  class="noun"
@@ -1267,7 +1552,10 @@
                                  head="true"
                                  gloss="a commandment"
                                  domain="033032"
-                                 ln="33.330">ἐντολὴν</w>
+                                 ln="33.330"
+                                 FunctionalTag="N-ASF"
+                                 Type="Common"
+                                 Unicode="ἐντολὴν">ἐντολὴν</w>
                               <w ref="2JN 1:5!11"
                                  class="adj"
                                  xml:id="n63001005011"
@@ -1279,7 +1567,10 @@
                                  case="accusative"
                                  gloss="new"
                                  domain="028003"
-                                 ln="28.33">καινὴν,</w>
+                                 ln="28.33"
+                                 FunctionalTag="A-ASF"
+                                 Type=""
+                                 Unicode="καινὴν,">καινὴν,</w>
                            </wg>
                         </wg>
                      </wg>
@@ -1291,7 +1582,10 @@
                         strong="235"
                         gloss="but"
                         domain="089023"
-                        ln="89.125">ἀλλὰ</w>
+                        ln="89.125"
+                        FunctionalTag="CONJ"
+                        Type=""
+                        Unicode="ἀλλὰ">ἀλλὰ</w>
                      <wg class="cl" head="true" rule="O-V-ADV" xml:id="630010050130040">
                         <w role="o"
                            ref="2JN 1:5!13"
@@ -1304,7 +1598,10 @@
                            number="singular"
                            gender="feminine"
                            case="accusative"
-                           gloss="that which">ἣν</w>
+                           gloss="that which"
+                           FunctionalTag="R-ASF"
+                           Type="Relative"
+                           Unicode="ἣν">ἣν</w>
                         <w role="v"
                            ref="2JN 1:5!14"
                            class="verb"
@@ -1320,7 +1617,12 @@
                            head="true"
                            gloss="we have had"
                            domain="090013"
-                           ln="90.65">εἴχαμεν</w>
+                           ln="90.65"
+                           FunctionalTag="V-IAI-1P"
+                           Type=""
+                           Unicode="εἴχαμεν"
+                           Frame="A0:n63001001002;n63001005005;n63001001007;n63001001022 A1:n63001005013"
+                           SubjRef="n63001001002 n63001005005 n63001001007 n63001001022">εἴχαμεν</w>
                         <wg role="adv" xml:id="630010050150021" class="pp" rule="PrepNp">
                            <w ref="2JN 1:5!15"
                               class="prep"
@@ -1330,7 +1632,10 @@
                               strong="575"
                               gloss="from"
                               domain="067006"
-                              ln="67.131">ἀπ’</w>
+                              ln="67.131"
+                              FunctionalTag="PREP"
+                              Type=""
+                              Unicode="ἀπ’">ἀπ’</w>
                            <w ref="2JN 1:5!16"
                               class="noun"
                               type="common"
@@ -1344,7 +1649,10 @@
                               head="true"
                               gloss="[the] beginning"
                               domain="067003"
-                              ln="67.65">ἀρχῆς,</w>
+                              ln="67.65"
+                              FunctionalTag="N-GSF"
+                              Type="Common"
+                              Unicode="ἀρχῆς,">ἀρχῆς,</w>
                         </wg>
                      </wg>
                   </wg>
@@ -1359,7 +1667,10 @@
                   strong="2443"
                   gloss="that"
                   domain="090006"
-                  ln="90.22">ἵνα</w>
+                  ln="90.22"
+                  FunctionalTag="CONJ"
+                  Type=""
+                  Unicode="ἵνα">ἵνα</w>
                <wg class="cl" rule="V-O" xml:id="630010050180020">
                   <w role="v"
                      ref="2JN 1:5!18"
@@ -1376,7 +1687,12 @@
                      head="true"
                      gloss="we should love"
                      domain="025003"
-                     ln="25.43">ἀγαπῶμεν</w>
+                     ln="25.43"
+                     FunctionalTag="V-PAS-1P"
+                     Type=""
+                     Unicode="ἀγαπῶμεν"
+                     Frame="A0:n63001001002;n63001005005;n63001001007;n63001001022 A1:n63001005019"
+                     SubjRef="n63001001002 n63001005005 n63001001007 n63001001022">ἀγαπῶμεν</w>
                   <w role="o"
                      ref="2JN 1:5!19"
                      class="pron"
@@ -1390,7 +1706,11 @@
                      case="accusative"
                      gloss="one another"
                      domain="092005"
-                     ln="92.26">ἀλλήλους.</w>
+                     ln="92.26"
+                     FunctionalTag="C-APM"
+                     Type="Personal"
+                     Unicode="ἀλλήλους."
+                     referent="n63001001002 n63001005005 n63001001007 n63001001022">ἀλλήλους.</w>
                </wg>
             </wg>
          </wg>
@@ -1409,7 +1729,10 @@
                strong="2532"
                gloss="And"
                domain="089015"
-               ln="89.87">καὶ</w>
+               ln="89.87"
+               FunctionalTag="CONJ"
+               Type=""
+               Unicode="καὶ">καὶ</w>
             <wg class="cl" head="true" rule="P-VC-S" xml:id="630010060020040">
                <w role="p"
                   ref="2JN 1:6!2"
@@ -1423,7 +1746,11 @@
                   gender="feminine"
                   case="nominative"
                   head="true"
-                  gloss="this">αὕτη</w>
+                  gloss="this"
+                  FunctionalTag="D-NSF"
+                  Type="Demonstrative"
+                  Unicode="αὕτη"
+                  referent="n63001006007">αὕτη</w>
                <w role="vc"
                   ref="2JN 1:6!3"
                   class="verb"
@@ -1436,7 +1763,10 @@
                   tense="present"
                   voice="active"
                   mood="indicative"
-                  gloss="is">ἐστὶν</w>
+                  gloss="is"
+                  FunctionalTag="V-PAI-3S"
+                  Type=""
+                  Unicode="ἐστὶν">ἐστὶν</w>
                <wg role="s"
                    xml:id="630010060040021"
                    class="np"
@@ -1453,7 +1783,10 @@
                      case="nominative"
                      gloss="-"
                      domain="092004"
-                     ln="92.24">ἡ</w>
+                     ln="92.24"
+                     FunctionalTag="T-NSF"
+                     Type=""
+                     Unicode="ἡ">ἡ</w>
                   <w ref="2JN 1:6!5"
                      class="noun"
                      type="common"
@@ -1467,7 +1800,10 @@
                      head="true"
                      gloss="love"
                      domain="025003"
-                     ln="25.43">ἀγάπη,</w>
+                     ln="25.43"
+                     FunctionalTag="N-NSF"
+                     Type="Common"
+                     Unicode="ἀγάπη,">ἀγάπη,</w>
                </wg>
             </wg>
             <wg class="cl" rule="that-VP" xml:id="630010060060060">
@@ -1479,7 +1815,10 @@
                   strong="2443"
                   gloss="that"
                   domain="090006"
-                  ln="90.22">ἵνα</w>
+                  ln="90.22"
+                  FunctionalTag="CONJ"
+                  Type=""
+                  Unicode="ἵνα">ἵνα</w>
                <wg class="cl" rule="V-ADV" xml:id="630010060070050">
                   <w role="v"
                      ref="2JN 1:6!7"
@@ -1496,7 +1835,12 @@
                      head="true"
                      gloss="we should walk"
                      domain="041001"
-                     ln="41.11">περιπατῶμεν</w>
+                     ln="41.11"
+                     FunctionalTag="V-PAS-1P"
+                     Type=""
+                     Unicode="περιπατῶμεν"
+                     Frame="A0:n63001001002;n63001005005;n63001001007;n63001001022"
+                     SubjRef="n63001001002 n63001005005 n63001001007 n63001001022">περιπατῶμεν</w>
                   <wg role="adv"
                       xml:id="630010060080041"
                       class="pp"
@@ -1510,7 +1854,10 @@
                         strong="2596"
                         gloss="according to"
                         domain="089005"
-                        ln="89.8">κατὰ</w>
+                        ln="89.8"
+                        FunctionalTag="PREP"
+                        Type=""
+                        Unicode="κατὰ">κατὰ</w>
                      <wg class="np"
                          articular="true"
                          head="true"
@@ -1527,7 +1874,10 @@
                            case="accusative"
                            gloss="the"
                            domain="092004"
-                           ln="92.24">τὰς</w>
+                           ln="92.24"
+                           FunctionalTag="T-APF"
+                           Type=""
+                           Unicode="τὰς">τὰς</w>
                         <wg class="np" head="true" rule="NPofNP" xml:id="630010060100020">
                            <w ref="2JN 1:6!10"
                               class="noun"
@@ -1542,7 +1892,10 @@
                               head="true"
                               gloss="commandments"
                               domain="033032"
-                              ln="33.330">ἐντολὰς</w>
+                              ln="33.330"
+                              FunctionalTag="N-APF"
+                              Type="Common"
+                              Unicode="ἐντολὰς">ἐντολὰς</w>
                            <w ref="2JN 1:6!11"
                               class="pron"
                               type="personal"
@@ -1553,7 +1906,11 @@
                               number="singular"
                               gender="masculine"
                               case="genitive"
-                              gloss="of Him">αὐτοῦ·</w>
+                              gloss="of Him"
+                              FunctionalTag="P-GSM"
+                              Type="Personal"
+                              Unicode="αὐτοῦ·"
+                              referent="n63001004017">αὐτοῦ·</w>
                         </wg>
                      </wg>
                   </wg>
@@ -1580,7 +1937,11 @@
                   gender="feminine"
                   case="nominative"
                   head="true"
-                  gloss="This">αὕτη</w>
+                  gloss="This"
+                  FunctionalTag="D-NSF"
+                  Type="Demonstrative"
+                  Unicode="αὕτη"
+                  referent="n63001006023">αὕτη</w>
                <wg role="s"
                    xml:id="630010060130021"
                    class="np"
@@ -1597,7 +1958,10 @@
                      case="nominative"
                      gloss="the"
                      domain="092004"
-                     ln="92.24">ἡ</w>
+                     ln="92.24"
+                     FunctionalTag="T-NSF"
+                     Type=""
+                     Unicode="ἡ">ἡ</w>
                   <w ref="2JN 1:6!14"
                      class="noun"
                      type="common"
@@ -1611,7 +1975,10 @@
                      head="true"
                      gloss="commandment"
                      domain="033032"
-                     ln="33.330">ἐντολή</w>
+                     ln="33.330"
+                     FunctionalTag="N-NSF"
+                     Type="Common"
+                     Unicode="ἐντολή">ἐντολή</w>
                </wg>
                <w role="vc"
                   ref="2JN 1:6!15"
@@ -1625,7 +1992,10 @@
                   tense="present"
                   voice="active"
                   mood="indicative"
-                  gloss="is">ἐστιν,</w>
+                  gloss="is"
+                  FunctionalTag="V-PAI-3S"
+                  Type=""
+                  Unicode="ἐστιν,">ἐστιν,</w>
             </wg>
             <wg class="cl" rule="sub-CL" xml:id="630010060160040">
                <w ref="2JN 1:6!16"
@@ -1636,7 +2006,10 @@
                   strong="2531"
                   gloss="just as"
                   domain=""
-                  ln="64.14">καθὼς</w>
+                  ln="64.14"
+                  FunctionalTag="ADV"
+                  Type=""
+                  Unicode="καθὼς">καθὼς</w>
                <wg class="cl" rule="V-ADV" xml:id="630010060170030">
                   <w role="v"
                      ref="2JN 1:6!17"
@@ -1653,7 +2026,12 @@
                      head="true"
                      gloss="you have heard"
                      domain="024002"
-                     ln="24.52">ἠκούσατε</w>
+                     ln="24.52"
+                     FunctionalTag="V-AAI-2P"
+                     Type=""
+                     Unicode="ἠκούσατε"
+                     Frame="A0:n63001005005;n63001001007"
+                     SubjRef="n63001005005 n63001001007">ἠκούσατε</w>
                   <wg role="adv" xml:id="630010060180021" class="pp" rule="PrepNp">
                      <w ref="2JN 1:6!18"
                         class="prep"
@@ -1661,7 +2039,10 @@
                         lemma="ἀπό"
                         normalized="ἀπ’"
                         strong="575"
-                        gloss="from">ἀπ’</w>
+                        gloss="from"
+                        FunctionalTag="PREP"
+                        Type=""
+                        Unicode="ἀπ’">ἀπ’</w>
                      <w ref="2JN 1:6!19"
                         class="noun"
                         type="common"
@@ -1675,7 +2056,10 @@
                         head="true"
                         gloss="[the] beginning"
                         domain="067003"
-                        ln="67.65">ἀρχῆς,</w>
+                        ln="67.65"
+                        FunctionalTag="N-GSF"
+                        Type="Common"
+                        Unicode="ἀρχῆς,">ἀρχῆς,</w>
                   </wg>
                </wg>
             </wg>
@@ -1688,7 +2072,10 @@
                   strong="2443"
                   gloss="so that"
                   domain="090006"
-                  ln="90.22">ἵνα</w>
+                  ln="90.22"
+                  FunctionalTag="CONJ"
+                  Type=""
+                  Unicode="ἵνα">ἵνα</w>
                <wg class="cl" rule="ADV-V" xml:id="630010060210030">
                   <wg role="adv" xml:id="630010060210021" class="pp" rule="PrepNp">
                      <w ref="2JN 1:6!21"
@@ -1699,7 +2086,10 @@
                         strong="1722"
                         gloss="in"
                         domain="089012"
-                        ln="89.76">ἐν</w>
+                        ln="89.76"
+                        FunctionalTag="PREP"
+                        Type=""
+                        Unicode="ἐν">ἐν</w>
                      <w ref="2JN 1:6!22"
                         class="pron"
                         type="personal"
@@ -1711,7 +2101,11 @@
                         gender="feminine"
                         case="dative"
                         head="true"
-                        gloss="it">αὐτῇ</w>
+                        gloss="it"
+                        FunctionalTag="P-DSF"
+                        Type="Personal"
+                        Unicode="αὐτῇ"
+                        referent="n63001006005">αὐτῇ</w>
                   </wg>
                   <w role="v"
                      ref="2JN 1:6!23"
@@ -1728,7 +2122,12 @@
                      head="true"
                      gloss="you should walk"
                      domain="041001"
-                     ln="41.11">περιπατῆτε.</w>
+                     ln="41.11"
+                     FunctionalTag="V-PAS-2P"
+                     Type=""
+                     Unicode="περιπατῆτε."
+                     Frame="A0:n63001005005;n63001001007"
+                     SubjRef="n63001005005 n63001001007">περιπατῆτε.</w>
                </wg>
             </wg>
          </wg>
@@ -1747,7 +2146,10 @@
                strong="3754"
                gloss="For"
                domain="089007"
-               ln="89.33">ὅτι</w>
+               ln="89.33"
+               FunctionalTag="CONJ"
+               Type=""
+               Unicode="ὅτι">ὅτι</w>
             <wg class="cl" rule="V-ADV-S" xml:id="630010070040140">
                <w role="v"
                   ref="2JN 1:7!4"
@@ -1764,7 +2166,11 @@
                   head="true"
                   gloss="have entered"
                   domain="015004"
-                  ln="15.40">ἐξῆλθον</w>
+                  ln="15.40"
+                  FunctionalTag="V-2AAI-3P"
+                  Type=""
+                  Unicode="ἐξῆλθον"
+                  Frame="A0:n63001007003">ἐξῆλθον</w>
                <wg role="adv"
                    xml:id="630010070050031"
                    class="pp"
@@ -1778,7 +2184,10 @@
                      strong="1519"
                      gloss="into"
                      domain="084002"
-                     ln="84.22">εἰς</w>
+                     ln="84.22"
+                     FunctionalTag="PREP"
+                     Type=""
+                     Unicode="εἰς">εἰς</w>
                   <wg class="np"
                       articular="true"
                       head="true"
@@ -1795,7 +2204,10 @@
                         case="accusative"
                         gloss="the"
                         domain="092004"
-                        ln="92.24">τὸν</w>
+                        ln="92.24"
+                        FunctionalTag="T-ASM"
+                        Type=""
+                        Unicode="τὸν">τὸν</w>
                      <w ref="2JN 1:7!7"
                         class="noun"
                         type="common"
@@ -1810,7 +2222,10 @@
                         discontinuous="true"
                         gloss="world"
                         domain="041003"
-                        ln="41.38">κόσμον,</w>
+                        ln="41.38"
+                        FunctionalTag="N-ASM"
+                        Type="Common"
+                        Unicode="κόσμον,">κόσμον,</w>
                   </wg>
                </wg>
                <wg role="s" xml:id="630010070020101" class="np" rule="Np-Appos">
@@ -1826,7 +2241,10 @@
                         case="nominative"
                         gloss="many"
                         domain="059001"
-                        ln="59.1">πολλοὶ</w>
+                        ln="59.1"
+                        FunctionalTag="A-NPM"
+                        Type=""
+                        Unicode="πολλοὶ">πολλοὶ</w>
                      <w ref="2JN 1:7!3"
                         class="adj"
                         xml:id="n63001007003"
@@ -1839,7 +2257,10 @@
                         head="true"
                         gloss="deceivers"
                         domain="031002"
-                        ln="31.9">πλάνοι</w>
+                        ln="31.9"
+                        FunctionalTag="A-NPM"
+                        Type=""
+                        Unicode="πλάνοι">πλάνοι</w>
                   </wg>
                   <wg class="np"
                       articular="true"
@@ -1856,7 +2277,10 @@
                         case="nominative"
                         gloss="those"
                         domain="092004"
-                        ln="92.24">οἱ</w>
+                        ln="92.24"
+                        FunctionalTag="T-NPM"
+                        Type=""
+                        Unicode="οἱ">οἱ</w>
                      <wg class="cl" head="true" rule="ADV-V-O" xml:id="630010070090070">
                         <w role="adv"
                            ref="2JN 1:7!9"
@@ -1865,7 +2289,10 @@
                            lemma="μή"
                            normalized="μή"
                            strong="3361"
-                           gloss="not">μὴ</w>
+                           gloss="not"
+                           FunctionalTag="PRT-N"
+                           Type=""
+                           Unicode="μὴ">μὴ</w>
                         <w role="v"
                            ref="2JN 1:7!10"
                            class="verb"
@@ -1883,7 +2310,12 @@
                            head="true"
                            gloss="confessing"
                            domain="033021"
-                           ln="33.274">ὁμολογοῦντες</w>
+                           ln="33.274"
+                           FunctionalTag="V-PAP-NPM"
+                           Type=""
+                           Unicode="ὁμολογοῦντες"
+                           Frame="A0:n63001007003 A1:n63001007013"
+                           SubjRef="n63001007003">ὁμολογοῦντες</w>
                         <wg role="o" xml:id="630010070110051" class="cl" rule="S-V-ADV">
                            <wg role="s" xml:id="630010070110021" class="np" rule="Np-Appos">
                               <w ref="2JN 1:7!11"
@@ -1899,7 +2331,10 @@
                                  head="true"
                                  gloss="Jesus"
                                  domain="093001"
-                                 ln="93.169a">Ἰησοῦν</w>
+                                 ln="93.169a"
+                                 FunctionalTag="N-ASM"
+                                 Type="Proper"
+                                 Unicode="Ἰησοῦν">Ἰησοῦν</w>
                               <w ref="2JN 1:7!12"
                                  class="noun"
                                  type="proper"
@@ -1912,7 +2347,10 @@
                                  case="accusative"
                                  gloss="Christ"
                                  domain="093001"
-                                 ln="93.387">Χριστὸν</w>
+                                 ln="93.387"
+                                 FunctionalTag="N-ASM"
+                                 Type="Proper"
+                                 Unicode="Χριστὸν">Χριστὸν</w>
                            </wg>
                            <w role="v"
                               ref="2JN 1:7!13"
@@ -1931,7 +2369,11 @@
                               head="true"
                               gloss="coming"
                               domain="015006"
-                              ln="15.81">ἐρχόμενον</w>
+                              ln="15.81"
+                              FunctionalTag="V-PNP-ASM"
+                              Type=""
+                              Unicode="ἐρχόμενον"
+                              Frame="A0:n63001007011">ἐρχόμενον</w>
                            <wg role="adv" xml:id="630010070140021" class="pp" rule="PrepNp">
                               <w ref="2JN 1:7!14"
                                  class="prep"
@@ -1941,7 +2383,10 @@
                                  strong="1722"
                                  gloss="in"
                                  domain="013001"
-                                 ln="13.8">ἐν</w>
+                                 ln="13.8"
+                                 FunctionalTag="PREP"
+                                 Type=""
+                                 Unicode="ἐν">ἐν</w>
                               <w ref="2JN 1:7!15"
                                  class="noun"
                                  type="common"
@@ -1955,7 +2400,10 @@
                                  head="true"
                                  gloss="flesh"
                                  domain="009001"
-                                 ln="9.12">σαρκί·</w>
+                                 ln="9.12"
+                                 FunctionalTag="N-DSF"
+                                 Type="Common"
+                                 Unicode="σαρκί·">σαρκί·</w>
                            </wg>
                         </wg>
                      </wg>
@@ -1984,7 +2432,11 @@
                number="singular"
                gender="masculine"
                case="nominative"
-               gloss="This">οὗτός</w>
+               gloss="This"
+               FunctionalTag="D-NSM"
+               Type="Demonstrative"
+               Unicode="οὗτός"
+               referent="n63001007003">οὗτός</w>
             <w role="vc"
                ref="2JN 1:7!17"
                class="verb"
@@ -1997,7 +2449,10 @@
                tense="present"
                voice="active"
                mood="indicative"
-               gloss="is">ἐστιν</w>
+               gloss="is"
+               FunctionalTag="V-PAI-3S"
+               Type=""
+               Unicode="ἐστιν">ἐστιν</w>
             <wg role="p"
                 xml:id="630010070180051"
                 class="np"
@@ -2020,7 +2475,10 @@
                      case="nominative"
                      gloss="the"
                      domain="092004"
-                     ln="92.24">ὁ</w>
+                     ln="92.24"
+                     FunctionalTag="T-NSM"
+                     Type=""
+                     Unicode="ὁ">ὁ</w>
                   <w ref="2JN 1:7!19"
                      class="adj"
                      xml:id="n63001007019"
@@ -2033,7 +2491,10 @@
                      head="true"
                      gloss="deceiver"
                      domain="031002"
-                     ln="31.9">πλάνος</w>
+                     ln="31.9"
+                     FunctionalTag="A-NSM"
+                     Type=""
+                     Unicode="πλάνος">πλάνος</w>
                </wg>
                <w ref="2JN 1:7!20"
                   class="conj"
@@ -2043,7 +2504,10 @@
                   strong="2532"
                   gloss="and"
                   domain="089017"
-                  ln="89.92">καὶ</w>
+                  ln="89.92"
+                  FunctionalTag="CONJ"
+                  Type=""
+                  Unicode="καὶ">καὶ</w>
                <wg class="np"
                    articular="true"
                    rule="DetNP"
@@ -2059,7 +2523,10 @@
                      case="nominative"
                      gloss="the"
                      domain="092004"
-                     ln="92.24">ὁ</w>
+                     ln="92.24"
+                     FunctionalTag="T-NSM"
+                     Type=""
+                     Unicode="ὁ">ὁ</w>
                   <w ref="2JN 1:7!22"
                      class="noun"
                      type="common"
@@ -2073,7 +2540,10 @@
                      head="true"
                      gloss="antichrist"
                      domain="053009"
-                     ln="53.83">ἀντίχριστος.</w>
+                     ln="53.83"
+                     FunctionalTag="N-NSM"
+                     Type="Common"
+                     Unicode="ἀντίχριστος.">ἀντίχριστος.</w>
                </wg>
             </wg>
          </wg>
@@ -2100,7 +2570,12 @@
                   head="true"
                   gloss="Watch"
                   domain="027006"
-                  ln="27.58">βλέπετε</w>
+                  ln="27.58"
+                  FunctionalTag="V-PAM-2P"
+                  Type=""
+                  Unicode="βλέπετε"
+                  Frame="A0:n63001005005;n63001001007 A1:n63001008002"
+                  SubjRef="n63001005005 n63001001007">βλέπετε</w>
                <w role="o"
                   ref="2JN 1:8!2"
                   class="pron"
@@ -2112,7 +2587,11 @@
                   number="plural"
                   gender="masculine"
                   case="accusative"
-                  gloss="yourselves">ἑαυτούς,</w>
+                  gloss="yourselves"
+                  FunctionalTag="F-2APM"
+                  Type="Personal"
+                  Unicode="ἑαυτούς,"
+                  referent="n63001005005 n63001001007">ἑαυτούς,</w>
             </wg>
             <wg class="cl" rule="sub-CL" xml:id="630010080030090">
                <w ref="2JN 1:8!3"
@@ -2123,7 +2602,10 @@
                   strong="2443"
                   gloss="so that"
                   domain="089008"
-                  ln="89.49">ἵνα</w>
+                  ln="89.49"
+                  FunctionalTag="CONJ"
+                  Type=""
+                  Unicode="ἵνα">ἵνα</w>
                <wg class="cl" rule="notCLbutCL2CL" xml:id="630010080040080">
                   <w ref="2JN 1:8!4"
                      class="adv"
@@ -2131,7 +2613,10 @@
                      lemma="μή"
                      normalized="μή"
                      strong="3361"
-                     gloss="not">μὴ</w>
+                     gloss="not"
+                     FunctionalTag="PRT-N"
+                     Type=""
+                     Unicode="μὴ">μὴ</w>
                   <wg class="cl" rule="V-O" xml:id="630010080050030">
                      <w role="v"
                         ref="2JN 1:8!5"
@@ -2148,7 +2633,12 @@
                         head="true"
                         gloss="you should lose"
                         domain="057007"
-                        ln="57.68">ἀπολέσητε</w>
+                        ln="57.68"
+                        FunctionalTag="V-AAS-2P"
+                        Type=""
+                        Unicode="ἀπολέσητε"
+                        Frame="A0:n63001005005;n63001001007 A1:n63001008007"
+                        SubjRef="n63001005005 n63001001007">ἀπολέσητε</w>
                      <wg role="o" xml:id="630010080060022" class="np" rule="CL2NP">
                         <wg class="cl" rule="O-V" xml:id="630010080060020">
                            <w role="o"
@@ -2162,7 +2652,10 @@
                               number="plural"
                               gender="neuter"
                               case="accusative"
-                              gloss="what things">ἃ</w>
+                              gloss="what things"
+                              FunctionalTag="R-APN"
+                              Type="Relative"
+                              Unicode="ἃ">ἃ</w>
                            <w role="v"
                               ref="2JN 1:8!7"
                               class="verb"
@@ -2178,7 +2671,12 @@
                               head="true"
                               gloss="we have worked for"
                               domain="042004"
-                              ln="42.41">ἠργασάμεθα,</w>
+                              ln="42.41"
+                              FunctionalTag="V-ADI-1P"
+                              Type=""
+                              Unicode="ἠργασάμεθα,"
+                              Frame="A0:n63001001002;n63001005005;n63001001007;n63001001022 A1:n63001008006"
+                              SubjRef="n63001001002 n63001005005 n63001001007 n63001001022">ἠργασάμεθα,</w>
                         </wg>
                      </wg>
                   </wg>
@@ -2190,7 +2688,10 @@
                      strong="235"
                      gloss="but"
                      domain="089023"
-                     ln="89.125">ἀλλὰ</w>
+                     ln="89.125"
+                     FunctionalTag="CONJ"
+                     Type=""
+                     Unicode="ἀλλὰ">ἀλλὰ</w>
                   <wg class="cl" head="true" rule="O-V" xml:id="630010080090030">
                      <wg role="o" xml:id="630010080090021" class="np" rule="NpAdjp">
                         <w ref="2JN 1:8!9"
@@ -2206,7 +2707,10 @@
                            head="true"
                            gloss="a reward"
                            domain="038002"
-                           ln="38.14">μισθὸν</w>
+                           ln="38.14"
+                           FunctionalTag="N-ASM"
+                           Type="Common"
+                           Unicode="μισθὸν">μισθὸν</w>
                         <w ref="2JN 1:8!10"
                            class="adj"
                            xml:id="n63001008010"
@@ -2218,7 +2722,10 @@
                            case="accusative"
                            gloss="full"
                            domain="059003"
-                           ln="59.31">πλήρη</w>
+                           ln="59.31"
+                           FunctionalTag="A-ASM"
+                           Type=""
+                           Unicode="πλήρη">πλήρη</w>
                      </wg>
                      <w role="v"
                         ref="2JN 1:8!11"
@@ -2235,7 +2742,12 @@
                         head="true"
                         gloss="you may receive"
                         domain="057009"
-                        ln="57.128">ἀπολάβητε.</w>
+                        ln="57.128"
+                        FunctionalTag="V-2AAS-2P"
+                        Type=""
+                        Unicode="ἀπολάβητε."
+                        Frame="A0:n63001005005;n63001001007 A1:n63001008009"
+                        SubjRef="n63001005005 n63001001007">ἀπολάβητε.</w>
                   </wg>
                </wg>
             </wg>
@@ -2263,7 +2775,10 @@
                   case="nominative"
                   gloss="Anyone"
                   domain="059003"
-                  ln="59.24">πᾶς</w>
+                  ln="59.24"
+                  FunctionalTag="A-NSM"
+                  Type=""
+                  Unicode="πᾶς">πᾶς</w>
                <wg class="np"
                    articular="true"
                    head="true"
@@ -2280,7 +2795,10 @@
                      case="nominative"
                      gloss="-"
                      domain="092004"
-                     ln="92.24">ὁ</w>
+                     ln="92.24"
+                     FunctionalTag="T-NSM"
+                     Type=""
+                     Unicode="ὁ">ὁ</w>
                   <wg class="cl" head="true" rule="CLaCL" xml:id="630010090030090">
                      <wg class="cl" head="true" rule="V2CL" xml:id="630010090030013">
                         <w role="v"
@@ -2300,7 +2818,11 @@
                            head="true"
                            gloss="going on ahead"
                            domain="036003"
-                           ln="36.25">προάγων</w>
+                           ln="36.25"
+                           FunctionalTag="V-PAP-NSM"
+                           Type=""
+                           Unicode="προάγων"
+                           Frame="A0:n00000000000">προάγων</w>
                      </wg>
                      <w ref="2JN 1:9!4"
                         class="conj"
@@ -2308,7 +2830,10 @@
                         lemma="καί"
                         normalized="καί"
                         strong="2532"
-                        gloss="and">καὶ</w>
+                        gloss="and"
+                        FunctionalTag="CONJ"
+                        Type=""
+                        Unicode="καὶ">καὶ</w>
                      <wg class="cl" rule="ADV-V-ADV" xml:id="630010090050070">
                         <w role="adv"
                            ref="2JN 1:9!5"
@@ -2317,7 +2842,10 @@
                            lemma="μή"
                            normalized="μή"
                            strong="3361"
-                           gloss="not">μὴ</w>
+                           gloss="not"
+                           FunctionalTag="PRT-N"
+                           Type=""
+                           Unicode="μὴ">μὴ</w>
                         <w role="v"
                            ref="2JN 1:9!6"
                            class="verb"
@@ -2335,7 +2863,11 @@
                            head="true"
                            gloss="abiding"
                            domain="068002"
-                           ln="68.11">μένων</w>
+                           ln="68.11"
+                           FunctionalTag="V-PAP-NSM"
+                           Type=""
+                           Unicode="μένων"
+                           Frame="A0:n00000000000">μένων</w>
                         <wg role="adv"
                             xml:id="630010090070051"
                             class="pp"
@@ -2347,7 +2879,10 @@
                               lemma="ἐν"
                               normalized="ἐν"
                               strong="1722"
-                              gloss="in">ἐν</w>
+                              gloss="in"
+                              FunctionalTag="PREP"
+                              Type=""
+                              Unicode="ἐν">ἐν</w>
                            <wg class="np"
                                articular="true"
                                head="true"
@@ -2364,7 +2899,10 @@
                                  case="dative"
                                  gloss="the"
                                  domain="092004"
-                                 ln="92.24">τῇ</w>
+                                 ln="92.24"
+                                 FunctionalTag="T-DSF"
+                                 Type=""
+                                 Unicode="τῇ">τῇ</w>
                               <wg class="np" head="true" rule="NPofNP" xml:id="630010090090030">
                                  <w ref="2JN 1:9!9"
                                     class="noun"
@@ -2379,7 +2917,10 @@
                                     head="true"
                                     gloss="teaching"
                                     domain="033017"
-                                    ln="33.236">διδαχῇ</w>
+                                    ln="33.236"
+                                    FunctionalTag="N-DSF"
+                                    Type="Common"
+                                    Unicode="διδαχῇ">διδαχῇ</w>
                                  <wg class="np"
                                      articular="true"
                                      rule="DetNP"
@@ -2395,7 +2936,10 @@
                                        case="genitive"
                                        gloss="-"
                                        domain="092004"
-                                       ln="92.24">τοῦ</w>
+                                       ln="92.24"
+                                       FunctionalTag="T-GSM"
+                                       Type=""
+                                       Unicode="τοῦ">τοῦ</w>
                                     <w ref="2JN 1:9!11"
                                        class="noun"
                                        type="proper"
@@ -2409,7 +2953,10 @@
                                        head="true"
                                        gloss="of Christ"
                                        domain="093001"
-                                       ln="93.387">Χριστοῦ</w>
+                                       ln="93.387"
+                                       FunctionalTag="N-GSM"
+                                       Type="Proper"
+                                       Unicode="Χριστοῦ">Χριστοῦ</w>
                                  </wg>
                               </wg>
                            </wg>
@@ -2431,7 +2978,10 @@
                case="accusative"
                gloss="God"
                domain="012001"
-               ln="12.1">Θεὸν</w>
+               ln="12.1"
+               FunctionalTag="N-ASM"
+               Type="Common"
+               Unicode="Θεὸν">Θεὸν</w>
             <w role="adv"
                ref="2JN 1:9!13"
                class="adv"
@@ -2439,7 +2989,10 @@
                lemma="οὐ"
                normalized="οὐκ"
                strong="3756"
-               gloss="not">οὐκ</w>
+               gloss="not"
+               FunctionalTag="PRT-N"
+               Type=""
+               Unicode="οὐκ">οὐκ</w>
             <w role="v"
                ref="2JN 1:9!14"
                class="verb"
@@ -2455,7 +3008,11 @@
                head="true"
                gloss="has"
                domain="090013"
-               ln="90.65">ἔχει·</w>
+               ln="90.65"
+               FunctionalTag="V-PAI-3S"
+               Type=""
+               Unicode="ἔχει·"
+               Frame="A0:n63001009003;n63001009006 A1:n63001009012">ἔχει·</w>
          </wg>
       </wg>
    </sentence>
@@ -2467,6 +3024,7 @@
             <wg class="cl"
                 articular="true"
                 rule="Np2CL"
+                ClType="Minor"
                 xml:id="630010090150051">
                <wg class="np"
                    articular="true"
@@ -2483,7 +3041,10 @@
                      case="nominative"
                      gloss="The [one]"
                      domain="092004"
-                     ln="92.24">ὁ</w>
+                     ln="92.24"
+                     FunctionalTag="T-NSM"
+                     Type=""
+                     Unicode="ὁ">ὁ</w>
                   <wg class="cl" head="true" rule="V-ADV" xml:id="630010090160040">
                      <w role="v"
                         ref="2JN 1:9!16"
@@ -2502,7 +3063,11 @@
                         head="true"
                         gloss="abiding"
                         domain="068002"
-                        ln="68.11">μένων</w>
+                        ln="68.11"
+                        FunctionalTag="V-PAP-NSM"
+                        Type=""
+                        Unicode="μένων"
+                        Frame="A0:n00000000000">μένων</w>
                      <wg role="adv"
                          xml:id="630010090170031"
                          class="pp"
@@ -2514,7 +3079,10 @@
                            lemma="ἐν"
                            normalized="ἐν"
                            strong="1722"
-                           gloss="in">ἐν</w>
+                           gloss="in"
+                           FunctionalTag="PREP"
+                           Type=""
+                           Unicode="ἐν">ἐν</w>
                         <wg class="np"
                             articular="true"
                             head="true"
@@ -2531,7 +3099,10 @@
                               case="dative"
                               gloss="the"
                               domain="092004"
-                              ln="92.24">τῇ</w>
+                              ln="92.24"
+                              FunctionalTag="T-DSF"
+                              Type=""
+                              Unicode="τῇ">τῇ</w>
                            <w ref="2JN 1:9!19"
                               class="noun"
                               type="common"
@@ -2545,7 +3116,10 @@
                               head="true"
                               gloss="teaching"
                               domain="033017"
-                              ln="33.236">διδαχῇ,</w>
+                              ln="33.236"
+                              FunctionalTag="N-DSF"
+                              Type="Common"
+                              Unicode="διδαχῇ,">διδαχῇ,</w>
                         </wg>
                      </wg>
                   </wg>
@@ -2563,7 +3137,11 @@
                   number="singular"
                   gender="masculine"
                   case="nominative"
-                  gloss="this [one]">οὗτος</w>
+                  gloss="this [one]"
+                  FunctionalTag="D-NSM"
+                  Type="Demonstrative"
+                  Unicode="οὗτος"
+                  referent="n63001009016">οὗτος</w>
                <wg role="o"
                    xml:id="630010090210061"
                    class="np"
@@ -2577,7 +3155,10 @@
                      strong="2532"
                      gloss="both"
                      domain="089017"
-                     ln="89.92">καὶ</w>
+                     ln="89.92"
+                     FunctionalTag="CONJ"
+                     Type=""
+                     Unicode="καὶ">καὶ</w>
                   <wg class="np"
                       articular="true"
                       head="true"
@@ -2594,7 +3175,10 @@
                         case="accusative"
                         gloss="the"
                         domain="092004"
-                        ln="92.24">τὸν</w>
+                        ln="92.24"
+                        FunctionalTag="T-ASM"
+                        Type=""
+                        Unicode="τὸν">τὸν</w>
                      <w ref="2JN 1:9!23"
                         class="noun"
                         type="common"
@@ -2608,7 +3192,10 @@
                         head="true"
                         gloss="Father"
                         domain="012001"
-                        ln="12.12">Πατέρα</w>
+                        ln="12.12"
+                        FunctionalTag="N-ASM"
+                        Type="Common"
+                        Unicode="Πατέρα">Πατέρα</w>
                   </wg>
                   <w ref="2JN 1:9!24"
                      class="conj"
@@ -2616,7 +3203,10 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="and">καὶ</w>
+                     gloss="and"
+                     FunctionalTag="CONJ"
+                     Type=""
+                     Unicode="καὶ">καὶ</w>
                   <wg class="np"
                       articular="true"
                       rule="DetNP"
@@ -2632,7 +3222,10 @@
                         case="accusative"
                         gloss="the"
                         domain="092004"
-                        ln="92.24">τὸν</w>
+                        ln="92.24"
+                        FunctionalTag="T-ASM"
+                        Type=""
+                        Unicode="τὸν">τὸν</w>
                      <w ref="2JN 1:9!26"
                         class="noun"
                         type="common"
@@ -2646,7 +3239,10 @@
                         head="true"
                         gloss="Son"
                         domain="012001"
-                        ln="12.15">Υἱὸν</w>
+                        ln="12.15"
+                        FunctionalTag="N-ASM"
+                        Type="Common"
+                        Unicode="Υἱὸν">Υἱὸν</w>
                   </wg>
                </wg>
                <w role="v"
@@ -2662,7 +3258,11 @@
                   voice="active"
                   mood="indicative"
                   head="true"
-                  gloss="has">ἔχει.</w>
+                  gloss="has"
+                  FunctionalTag="V-PAI-3S"
+                  Type=""
+                  Unicode="ἔχει."
+                  Frame="A0:n63001009020 A1:n63001009023;n63001009026">ἔχει.</w>
             </wg>
          </wg>
       </wg>
@@ -2681,7 +3281,10 @@
                   strong="1487"
                   gloss="If"
                   domain="089010"
-                  ln="89.65">εἴ</w>
+                  ln="89.65"
+                  FunctionalTag="COND"
+                  Type=""
+                  Unicode="εἴ">εἴ</w>
                <wg class="cl" rule="CLaCL" xml:id="630010100020100">
                   <wg class="cl" head="true" rule="S-V-ADV" xml:id="630010100020040">
                      <w role="s"
@@ -2695,7 +3298,10 @@
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="anyone">τις</w>
+                        gloss="anyone"
+                        FunctionalTag="X-NSM"
+                        Type="Indefinite"
+                        Unicode="τις">τις</w>
                      <w role="v"
                         ref="2JN 1:10!3"
                         class="verb"
@@ -2711,7 +3317,11 @@
                         head="true"
                         gloss="comes"
                         domain="015001"
-                        ln="15.7">ἔρχεται</w>
+                        ln="15.7"
+                        FunctionalTag="V-PNI-3S"
+                        Type=""
+                        Unicode="ἔρχεται"
+                        Frame="A0:n63001010002">ἔρχεται</w>
                      <wg role="adv" xml:id="630010100040021" class="pp" rule="PrepNp">
                         <w ref="2JN 1:10!4"
                            class="prep"
@@ -2721,7 +3331,10 @@
                            strong="4314"
                            gloss="to"
                            domain="084002"
-                           ln="84.18">πρὸς</w>
+                           ln="84.18"
+                           FunctionalTag="PREP"
+                           Type=""
+                           Unicode="πρὸς">πρὸς</w>
                         <w ref="2JN 1:10!5"
                            class="pron"
                            type="personal"
@@ -2732,7 +3345,11 @@
                            number="plural"
                            case="accusative"
                            head="true"
-                           gloss="you">ὑμᾶς</w>
+                           gloss="you"
+                           FunctionalTag="P-2AP"
+                           Type="Personal"
+                           Unicode="ὑμᾶς"
+                           referent="n63001005005 n63001001007">ὑμᾶς</w>
                      </wg>
                   </wg>
                   <w ref="2JN 1:10!6"
@@ -2741,7 +3358,10 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="and">καὶ</w>
+                     gloss="and"
+                     FunctionalTag="CONJ"
+                     Type=""
+                     Unicode="καὶ">καὶ</w>
                   <wg class="cl" rule="O-ADV-V" xml:id="630010100070050">
                      <wg role="o"
                          xml:id="630010100070031"
@@ -2758,7 +3378,10 @@
                            number="singular"
                            gender="feminine"
                            case="accusative"
-                           gloss="this">ταύτην</w>
+                           gloss="this"
+                           FunctionalTag="D-ASF"
+                           Type="Demonstrative"
+                           Unicode="ταύτην">ταύτην</w>
                         <wg class="np"
                             articular="true"
                             head="true"
@@ -2775,7 +3398,10 @@
                               case="accusative"
                               gloss="-"
                               domain="092004"
-                              ln="92.24">τὴν</w>
+                              ln="92.24"
+                              FunctionalTag="T-ASF"
+                              Type=""
+                              Unicode="τὴν">τὴν</w>
                            <w ref="2JN 1:10!9"
                               class="noun"
                               type="common"
@@ -2789,7 +3415,10 @@
                               head="true"
                               gloss="teaching"
                               domain="033017"
-                              ln="33.236">διδαχὴν</w>
+                              ln="33.236"
+                              FunctionalTag="N-ASF"
+                              Type="Common"
+                              Unicode="διδαχὴν">διδαχὴν</w>
                         </wg>
                      </wg>
                      <w role="adv"
@@ -2799,7 +3428,10 @@
                         lemma="οὐ"
                         normalized="οὐ"
                         strong="3756"
-                        gloss="not">οὐ</w>
+                        gloss="not"
+                        FunctionalTag="PRT-N"
+                        Type=""
+                        Unicode="οὐ">οὐ</w>
                      <w role="v"
                         ref="2JN 1:10!11"
                         class="verb"
@@ -2815,7 +3447,12 @@
                         head="true"
                         gloss="does bring"
                         domain="015023"
-                        ln="15.166">φέρει,</w>
+                        ln="15.166"
+                        FunctionalTag="V-PAI-3S"
+                        Type=""
+                        Unicode="φέρει,"
+                        Frame="A0:n63001010002 A1:n63001010009"
+                        SubjRef="n63001010002">φέρει,</w>
                   </wg>
                </wg>
             </wg>
@@ -2831,7 +3468,10 @@
                      lemma="μή"
                      normalized="μή"
                      strong="3361"
-                     gloss="not">μὴ</w>
+                     gloss="not"
+                     FunctionalTag="PRT-N"
+                     Type=""
+                     Unicode="μὴ">μὴ</w>
                   <w role="v"
                      ref="2JN 1:10!13"
                      class="verb"
@@ -2847,7 +3487,12 @@
                      head="true"
                      gloss="receive"
                      domain="057009"
-                     ln="57.125">λαμβάνετε</w>
+                     ln="57.125"
+                     FunctionalTag="V-PAM-2P"
+                     Type=""
+                     Unicode="λαμβάνετε"
+                     Frame="A0:n63001005005;n63001001007 A1:n63001010014"
+                     SubjRef="n63001005005 n63001001007">λαμβάνετε</w>
                   <w role="o"
                      ref="2JN 1:10!14"
                      class="pron"
@@ -2859,7 +3504,11 @@
                      number="singular"
                      gender="masculine"
                      case="accusative"
-                     gloss="him">αὐτὸν</w>
+                     gloss="him"
+                     FunctionalTag="P-ASM"
+                     Type="Personal"
+                     Unicode="αὐτὸν"
+                     referent="n63001010002">αὐτὸν</w>
                   <wg role="adv" xml:id="630010100150021" class="pp" rule="PrepNp">
                      <w ref="2JN 1:10!15"
                         class="prep"
@@ -2867,7 +3516,10 @@
                         lemma="εἰς"
                         normalized="εἰς"
                         strong="1519"
-                        gloss="into">εἰς</w>
+                        gloss="into"
+                        FunctionalTag="PREP"
+                        Type=""
+                        Unicode="εἰς">εἰς</w>
                      <w ref="2JN 1:10!16"
                         class="noun"
                         type="common"
@@ -2881,7 +3533,10 @@
                         head="true"
                         gloss="[the] house"
                         domain="007002"
-                        ln="7.3">οἰκίαν,</w>
+                        ln="7.3"
+                        FunctionalTag="N-ASF"
+                        Type="Common"
+                        Unicode="οἰκίαν,">οἰκίαν,</w>
                   </wg>
                </wg>
                <w ref="2JN 1:10!17"
@@ -2890,7 +3545,10 @@
                   lemma="καί"
                   normalized="καί"
                   strong="2532"
-                  gloss="and">καὶ</w>
+                  gloss="and"
+                  FunctionalTag="CONJ"
+                  Type=""
+                  Unicode="καὶ">καὶ</w>
                <wg class="cl" rule="O-IO-ADV-V" xml:id="630010100180040">
                   <w role="o"
                      ref="2JN 1:10!18"
@@ -2905,7 +3563,12 @@
                      type="?"
                      gloss="to rejoice"
                      domain="033003"
-                     ln="33.22">χαίρειν</w>
+                     ln="33.22"
+                     FunctionalTag="V-PAN"
+                     Type=""
+                     Unicode="χαίρειν"
+                     Frame="A0:n63001005005;n63001001007"
+                     SubjRef="n63001005005 n63001001007">χαίρειν</w>
                   <w role="io"
                      ref="2JN 1:10!19"
                      class="pron"
@@ -2917,7 +3580,11 @@
                      number="singular"
                      gender="masculine"
                      case="dative"
-                     gloss="him">αὐτῷ</w>
+                     gloss="him"
+                     FunctionalTag="P-DSM"
+                     Type="Personal"
+                     Unicode="αὐτῷ"
+                     referent="n63001010002">αὐτῷ</w>
                   <w role="adv"
                      ref="2JN 1:10!20"
                      class="adv"
@@ -2925,7 +3592,10 @@
                      lemma="μή"
                      normalized="μή"
                      strong="3361"
-                     gloss="not">μὴ</w>
+                     gloss="not"
+                     FunctionalTag="PRT-N"
+                     Type=""
+                     Unicode="μὴ">μὴ</w>
                   <w role="v"
                      ref="2JN 1:10!21"
                      class="verb"
@@ -2941,7 +3611,12 @@
                      head="true"
                      gloss="tell"
                      domain="033006"
-                     ln="33.69">λέγετε·</w>
+                     ln="33.69"
+                     FunctionalTag="V-PAM-2P"
+                     Type=""
+                     Unicode="λέγετε·"
+                     Frame="A0:n63001005005;n63001001007 A1:n63001010018 A2:n63001010019"
+                     SubjRef="n63001005005 n63001001007">λέγετε·</w>
                </wg>
             </wg>
          </wg>
@@ -2961,7 +3636,10 @@
                discontinuous="true"
                gloss="for"
                domain="089007"
-               ln="89.23">γὰρ</w>
+               ln="89.23"
+               FunctionalTag="CONJ"
+               Type=""
+               Unicode="γὰρ">γὰρ</w>
             <wg class="cl" rule="S-V-ADV" xml:id="630010110010100">
                <wg role="s"
                    xml:id="630010110010041"
@@ -2979,7 +3657,10 @@
                      case="nominative"
                      gloss="the [one]"
                      domain="092004"
-                     ln="92.24">ὁ</w>
+                     ln="92.24"
+                     FunctionalTag="T-NSM"
+                     Type=""
+                     Unicode="ὁ">ὁ</w>
                   <wg class="cl" head="true" rule="V-IO-O" xml:id="630010110020030">
                      <w role="v"
                         ref="2JN 1:11!2"
@@ -2998,7 +3679,11 @@
                         head="true"
                         gloss="telling"
                         domain="033006"
-                        ln="33.69">λέγων</w>
+                        ln="33.69"
+                        FunctionalTag="V-PAP-NSM"
+                        Type=""
+                        Unicode="λέγων"
+                        Frame="A0:n00000000000 A2:n63001011004 A1:n63001011005">λέγων</w>
                      <w role="io"
                         ref="2JN 1:11!4"
                         class="pron"
@@ -3010,7 +3695,11 @@
                         number="singular"
                         gender="masculine"
                         case="dative"
-                        gloss="him">αὐτῷ</w>
+                        gloss="him"
+                        FunctionalTag="P-DSM"
+                        Type="Personal"
+                        Unicode="αὐτῷ"
+                        referent="n63001010002">αὐτῷ</w>
                      <w role="o"
                         ref="2JN 1:11!5"
                         class="verb"
@@ -3024,7 +3713,12 @@
                         type="?"
                         gloss="to rejoice"
                         domain="033003"
-                        ln="33.22">χαίρειν</w>
+                        ln="33.22"
+                        FunctionalTag="V-PAN"
+                        Type=""
+                        Unicode="χαίρειν"
+                        Frame="A0:n63001011002"
+                        SubjRef="n63001011002">χαίρειν</w>
                   </wg>
                </wg>
                <w role="v"
@@ -3042,7 +3736,11 @@
                   head="true"
                   gloss="partakes"
                   domain="057008"
-                  ln="57.98">κοινωνεῖ</w>
+                  ln="57.98"
+                  FunctionalTag="V-PAI-3S"
+                  Type=""
+                  Unicode="κοινωνεῖ"
+                  Frame="A0:n63001011002">κοινωνεῖ</w>
                <wg role="adv"
                    xml:id="630010110070051"
                    class="np"
@@ -3059,7 +3757,10 @@
                      case="dative"
                      gloss="in the"
                      domain="092004"
-                     ln="92.24">τοῖς</w>
+                     ln="92.24"
+                     FunctionalTag="T-DPN"
+                     Type=""
+                     Unicode="τοῖς">τοῖς</w>
                   <wg class="np" head="true" rule="NPDetAdj" xml:id="630010110080040">
                      <wg class="np" head="true" rule="NPofNP" xml:id="630010110080020">
                         <w ref="2JN 1:11!8"
@@ -3075,7 +3776,10 @@
                            head="true"
                            gloss="works"
                            domain="042002"
-                           ln="42.11">ἔργοις</w>
+                           ln="42.11"
+                           FunctionalTag="N-DPN"
+                           Type="Common"
+                           Unicode="ἔργοις">ἔργοις</w>
                         <w ref="2JN 1:11!9"
                            class="pron"
                            type="personal"
@@ -3086,7 +3790,11 @@
                            number="singular"
                            gender="masculine"
                            case="genitive"
-                           gloss="of him">αὐτοῦ</w>
+                           gloss="of him"
+                           FunctionalTag="P-GSM"
+                           Type="Personal"
+                           Unicode="αὐτοῦ"
+                           referent="n63001010002">αὐτοῦ</w>
                      </wg>
                      <wg class="np"
                          articular="true"
@@ -3103,7 +3811,10 @@
                            case="dative"
                            gloss="-"
                            domain="092004"
-                           ln="92.24">τοῖς</w>
+                           ln="92.24"
+                           FunctionalTag="T-DPN"
+                           Type=""
+                           Unicode="τοῖς">τοῖς</w>
                         <w ref="2JN 1:11!11"
                            class="adj"
                            xml:id="n63001011011"
@@ -3116,7 +3827,10 @@
                            head="true"
                            gloss="evil"
                            domain="088015"
-                           ln="88.110">πονηροῖς.</w>
+                           ln="88.110"
+                           FunctionalTag="A-DPN"
+                           Type=""
+                           Unicode="πονηροῖς.">πονηροῖς.</w>
                      </wg>
                   </wg>
                </wg>
@@ -3150,7 +3864,12 @@
                      type="?"
                      head="true"
                      discontinuous="true"
-                     gloss="having">ἔχων</w>
+                     gloss="having"
+                     FunctionalTag="V-PAP-NSM"
+                     Type=""
+                     Unicode="ἔχων"
+                     Frame="A0:n63001001002 A1:n63001012004"
+                     SubjRef="n63001001002">ἔχων</w>
                   <wg role="o" xml:id="630010120010031" class="cl" rule="O-IO-V">
                      <w role="o"
                         ref="2JN 1:12!1"
@@ -3162,7 +3881,10 @@
                         number="plural"
                         gender="neuter"
                         case="accusative"
-                        gloss="Many things">Πολλὰ</w>
+                        gloss="Many things"
+                        FunctionalTag="A-APN"
+                        Type=""
+                        Unicode="Πολλὰ">Πολλὰ</w>
                      <w role="io"
                         ref="2JN 1:12!3"
                         class="pron"
@@ -3173,7 +3895,11 @@
                         strong="4771"
                         number="plural"
                         case="dative"
-                        gloss="to you">ὑμῖν</w>
+                        gloss="to you"
+                        FunctionalTag="P-2DP"
+                        Type="Personal"
+                        Unicode="ὑμῖν"
+                        referent="n63001005005 n63001001007">ὑμῖν</w>
                      <w role="v"
                         ref="2JN 1:12!4"
                         class="verb"
@@ -3188,7 +3914,12 @@
                         head="true"
                         gloss="to write"
                         domain="033005"
-                        ln="33.61">γράφειν</w>
+                        ln="33.61"
+                        FunctionalTag="V-PAN"
+                        Type=""
+                        Unicode="γράφειν"
+                        Frame="A0:n63001001002 A1:n63001012001 A2:n63001012003"
+                        SubjRef="n63001001002">γράφειν</w>
                   </wg>
                </wg>
                <w role="adv"
@@ -3198,7 +3929,10 @@
                   lemma="οὐ"
                   normalized="οὐκ"
                   strong="3756"
-                  gloss="not">οὐκ</w>
+                  gloss="not"
+                  FunctionalTag="PRT-N"
+                  Type=""
+                  Unicode="οὐκ">οὐκ</w>
                <w role="v"
                   ref="2JN 1:12!6"
                   class="verb"
@@ -3214,7 +3948,12 @@
                   head="true"
                   gloss="I purposed"
                   domain="025001"
-                  ln="25.3">ἐβουλήθην</w>
+                  ln="25.3"
+                  FunctionalTag="V-AOI-1S"
+                  Type=""
+                  Unicode="ἐβουλήθην"
+                  Frame="A1:n63001001002"
+                  SubjRef="n63001001002">ἐβουλήθην</w>
                <wg role="adv" xml:id="630010120070041" class="pp" rule="PrepNp">
                   <w ref="2JN 1:12!7"
                      class="prep"
@@ -3224,7 +3963,10 @@
                      strong="1223"
                      gloss="with"
                      domain="090002"
-                     ln="90.8">διὰ</w>
+                     ln="90.8"
+                     FunctionalTag="PREP"
+                     Type=""
+                     Unicode="διὰ">διὰ</w>
                   <wg class="np" head="true" rule="NpaNp" xml:id="630010120080030">
                      <w ref="2JN 1:12!8"
                         class="noun"
@@ -3239,14 +3981,20 @@
                         head="true"
                         gloss="paper"
                         domain="006010"
-                        ln="6.58">χάρτου</w>
+                        ln="6.58"
+                        FunctionalTag="N-GSM"
+                        Type="Common"
+                        Unicode="χάρτου">χάρτου</w>
                      <w ref="2JN 1:12!9"
                         class="conj"
                         xml:id="n63001012009"
                         lemma="καί"
                         normalized="καί"
                         strong="2532"
-                        gloss="and">καὶ</w>
+                        gloss="and"
+                        FunctionalTag="CONJ"
+                        Type=""
+                        Unicode="καὶ">καὶ</w>
                      <w ref="2JN 1:12!10"
                         class="adj"
                         xml:id="n63001012010"
@@ -3258,7 +4006,10 @@
                         case="genitive"
                         gloss="ink"
                         domain="006010"
-                        ln="6.57">μέλανος,</w>
+                        ln="6.57"
+                        FunctionalTag="A-GSN"
+                        Type=""
+                        Unicode="μέλανος,">μέλανος,</w>
                   </wg>
                </wg>
             </wg>
@@ -3270,7 +4021,10 @@
                strong="235"
                gloss="but"
                domain="089023"
-               ln="89.125">ἀλλὰ</w>
+               ln="89.125"
+               FunctionalTag="CONJ"
+               Type=""
+               Unicode="ἀλλὰ">ἀλλὰ</w>
             <wg class="cl" head="true" rule="V-O" xml:id="630010120120090">
                <w role="v"
                   ref="2JN 1:12!12"
@@ -3287,7 +4041,12 @@
                   head="true"
                   gloss="I hope"
                   domain="030003"
-                  ln="30.54">ἐλπίζω</w>
+                  ln="30.54"
+                  FunctionalTag="V-PAI-1S"
+                  Type=""
+                  Unicode="ἐλπίζω"
+                  Frame="A0:n63001001002 A1:n63001012015;n63001012020"
+                  SubjRef="n63001001002">ἐλπίζω</w>
                <wg role="o" xml:id="630010120130081" class="cl" rule="CLaCL">
                   <wg class="cl" head="true" rule="VC-P" xml:id="630010120130030">
                      <w role="vc"
@@ -3303,7 +4062,11 @@
                         type="?"
                         gloss="to come"
                         domain="085001"
-                        ln="85.7">γενέσθαι</w>
+                        ln="85.7"
+                        FunctionalTag="V-2ADN"
+                        Type=""
+                        Unicode="γενέσθαι"
+                        SubjRef="n63001001002">γενέσθαι</w>
                      <wg role="p"
                          xml:id="630010120140021"
                          class="pp"
@@ -3315,7 +4078,10 @@
                            lemma="πρός"
                            normalized="πρός"
                            strong="4314"
-                           gloss="to">πρὸς</w>
+                           gloss="to"
+                           FunctionalTag="PREP"
+                           Type=""
+                           Unicode="πρὸς">πρὸς</w>
                         <w ref="2JN 1:12!15"
                            class="pron"
                            type="personal"
@@ -3326,7 +4092,11 @@
                            number="plural"
                            case="accusative"
                            head="true"
-                           gloss="you">ὑμᾶς</w>
+                           gloss="you"
+                           FunctionalTag="P-2AP"
+                           Type="Personal"
+                           Unicode="ὑμᾶς"
+                           referent="n63001005005 n63001001007">ὑμᾶς</w>
                      </wg>
                   </wg>
                   <w ref="2JN 1:12!16"
@@ -3335,7 +4105,10 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="and">καὶ</w>
+                     gloss="and"
+                     FunctionalTag="CONJ"
+                     Type=""
+                     Unicode="καὶ">καὶ</w>
                   <wg class="cl" rule="ADV-V" xml:id="630010120170040">
                      <wg role="adv" xml:id="630010120170031" class="np" rule="NpPp">
                         <w ref="2JN 1:12!17"
@@ -3351,7 +4124,10 @@
                            head="true"
                            gloss="mouth"
                            domain="083006"
-                           ln="83.39">στόμα</w>
+                           ln="83.39"
+                           FunctionalTag="N-ASN"
+                           Type="Common"
+                           Unicode="στόμα">στόμα</w>
                         <wg class="pp" rule="PrepNp" xml:id="630010120180020">
                            <w ref="2JN 1:12!18"
                               class="prep"
@@ -3359,7 +4135,10 @@
                               lemma="πρός"
                               normalized="πρός"
                               strong="4314"
-                              gloss="to">πρὸς</w>
+                              gloss="to"
+                              FunctionalTag="PREP"
+                              Type=""
+                              Unicode="πρὸς">πρὸς</w>
                            <w ref="2JN 1:12!19"
                               class="noun"
                               type="common"
@@ -3373,7 +4152,10 @@
                               head="true"
                               gloss="mouth"
                               domain="083006"
-                              ln="83.39">στόμα</w>
+                              ln="83.39"
+                              FunctionalTag="N-ASN"
+                              Type="Common"
+                              Unicode="στόμα">στόμα</w>
                         </wg>
                      </wg>
                      <w role="v"
@@ -3390,7 +4172,12 @@
                         head="true"
                         gloss="to speak"
                         domain="033006"
-                        ln="33.70">λαλῆσαι,</w>
+                        ln="33.70"
+                        FunctionalTag="V-AAN"
+                        Type=""
+                        Unicode="λαλῆσαι,"
+                        Frame="A0:n63001001002"
+                        SubjRef="n63001001002">λαλῆσαι,</w>
                   </wg>
                </wg>
             </wg>
@@ -3403,7 +4190,10 @@
                   strong="2443"
                   gloss="so that"
                   domain="089008"
-                  ln="89.49">ἵνα</w>
+                  ln="89.49"
+                  FunctionalTag="CONJ"
+                  Type=""
+                  Unicode="ἵνα">ἵνα</w>
                <wg class="cl" rule="S-V" xml:id="630010120220050">
                   <wg role="s"
                       xml:id="630010120220031"
@@ -3421,7 +4211,10 @@
                         case="nominative"
                         gloss="the"
                         domain="092004"
-                        ln="92.24">ἡ</w>
+                        ln="92.24"
+                        FunctionalTag="T-NSF"
+                        Type=""
+                        Unicode="ἡ">ἡ</w>
                      <wg class="np" head="true" rule="NPofNP" xml:id="630010120230020">
                         <w ref="2JN 1:12!23"
                            class="noun"
@@ -3436,7 +4229,10 @@
                            head="true"
                            gloss="joy"
                            domain="025011"
-                           ln="25.123">χαρὰ</w>
+                           ln="25.123"
+                           FunctionalTag="N-NSF"
+                           Type="Common"
+                           Unicode="χαρὰ">χαρὰ</w>
                         <w ref="2JN 1:12!24"
                            class="pron"
                            type="personal"
@@ -3448,7 +4244,11 @@
                            case="genitive"
                            gloss="of us"
                            domain="092002"
-                           ln="92.4">ἡμῶν</w>
+                           ln="92.4"
+                           FunctionalTag="P-1GP"
+                           Type="Personal"
+                           Unicode="ἡμῶν"
+                           referent="n63001001002 n63001005005 n63001001007 n63001001022">ἡμῶν</w>
                      </wg>
                   </wg>
                   <wg role="v"
@@ -3472,7 +4272,11 @@
                         head="true"
                         gloss="having been completed"
                         domain="078004"
-                        ln="78.46">πεπληρωμένη</w>
+                        ln="78.46"
+                        FunctionalTag="V-RPP-NSF"
+                        Type=""
+                        Unicode="πεπληρωμένη"
+                        Frame="A1:n63001012023">πεπληρωμένη</w>
                      <w ref="2JN 1:12!26"
                         class="verb"
                         xml:id="n63001012026"
@@ -3484,7 +4288,10 @@
                         tense="present"
                         voice="active"
                         mood="subjunctive"
-                        gloss="may be">ᾖ.</w>
+                        gloss="may be"
+                        FunctionalTag="V-PAS-3S"
+                        Type=""
+                        Unicode="ᾖ.">ᾖ.</w>
                   </wg>
                </wg>
             </wg>
@@ -3511,7 +4318,11 @@
                head="true"
                gloss="Greet"
                domain="033003"
-               ln="33.20">Ἀσπάζεταί</w>
+               ln="33.20"
+               FunctionalTag="V-PNI-3S"
+               Type=""
+               Unicode="Ἀσπάζεταί"
+               Frame="A1:n63001013002 A0:n63001013004">Ἀσπάζεταί</w>
             <w role="o"
                ref="2JN 1:13!2"
                class="pron"
@@ -3522,7 +4333,11 @@
                strong="4771"
                number="singular"
                case="accusative"
-               gloss="you">σε</w>
+               gloss="you"
+               FunctionalTag="P-2AS"
+               Type="Personal"
+               Unicode="σε"
+               referent="n63001005005">σε</w>
             <wg role="s"
                 xml:id="630010130030071"
                 class="np"
@@ -3539,7 +4354,10 @@
                   case="nominative"
                   gloss="the"
                   domain="092004"
-                  ln="92.24">τὰ</w>
+                  ln="92.24"
+                  FunctionalTag="T-NPN"
+                  Type=""
+                  Unicode="τὰ">τὰ</w>
                <wg class="np" head="true" rule="NPofNP" xml:id="630010130040060">
                   <w ref="2JN 1:13!4"
                      class="noun"
@@ -3554,7 +4372,10 @@
                      head="true"
                      gloss="children"
                      domain="010002"
-                     ln="10.36">τέκνα</w>
+                     ln="10.36"
+                     FunctionalTag="N-NPN"
+                     Type="Common"
+                     Unicode="τέκνα">τέκνα</w>
                   <wg class="np"
                       articular="true"
                       rule="DetNP"
@@ -3570,7 +4391,10 @@
                         case="genitive"
                         gloss="of the"
                         domain="092004"
-                        ln="92.24">τῆς</w>
+                        ln="92.24"
+                        FunctionalTag="T-GSF"
+                        Type=""
+                        Unicode="τῆς">τῆς</w>
                      <wg class="np" head="true" rule="NPDetAdj" xml:id="630010130060040">
                         <wg class="np" head="true" rule="NPofNP" xml:id="630010130060020">
                            <w ref="2JN 1:13!6"
@@ -3586,7 +4410,10 @@
                               head="true"
                               gloss="sister"
                               domain="010003"
-                              ln="10.50">ἀδελφῆς</w>
+                              ln="10.50"
+                              FunctionalTag="N-GSF"
+                              Type="Common"
+                              Unicode="ἀδελφῆς">ἀδελφῆς</w>
                            <w ref="2JN 1:13!7"
                               class="pron"
                               type="personal"
@@ -3596,7 +4423,11 @@
                               strong="4771"
                               number="singular"
                               case="genitive"
-                              gloss="of you">σου</w>
+                              gloss="of you"
+                              FunctionalTag="P-2GS"
+                              Type="Personal"
+                              Unicode="σου"
+                              referent="n63001005005">σου</w>
                         </wg>
                         <wg class="np"
                             articular="true"
@@ -3613,7 +4444,10 @@
                               case="genitive"
                               gloss="-"
                               domain="092004"
-                              ln="92.24">τῆς</w>
+                              ln="92.24"
+                              FunctionalTag="T-GSF"
+                              Type=""
+                              Unicode="τῆς">τῆς</w>
                            <w ref="2JN 1:13!9"
                               class="adj"
                               xml:id="n63001013009"
@@ -3626,7 +4460,10 @@
                               head="true"
                               gloss="elect"
                               domain="030006"
-                              ln="30.93">ἐκλεκτῆς.</w>
+                              ln="30.93"
+                              FunctionalTag="A-GSF"
+                              Type=""
+                              Unicode="ἐκλεκτῆς.">ἐκλεκτῆς.</w>
                         </wg>
                      </wg>
                   </wg>
