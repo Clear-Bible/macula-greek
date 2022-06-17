@@ -154,7 +154,14 @@ declare function local:attributes($node)
     $node/@Rule ! attribute rule {.},
     $node/@Gloss ! attribute gloss {.},
     $node/@domain,
-    $node/@ln
+    $node/@ln,
+    $node/@ClType,
+    $node/@FunctionalTag,
+    $node/@Type,
+    $node/@Unicode,
+    $node/@Frame,
+    $node/@Ref ! attribute referent {.},
+    $node/@SubjRef
 };
 
 (: TODO: the USFM id does not need to be computed from the Nodes trees, since USFM ids are now included on verses and words :)
