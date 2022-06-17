@@ -152,6 +152,7 @@ declare function local:attributes($node)
     local:head($node),
     $node[empty(*)] ! attribute discontinuous {"true"}[$node/following::Node[empty(*)][1]/@morphId lt $node/@morphId],
     $node/@Rule ! attribute rule {.},
+    $node/@Gloss ! attribute gloss {.},
     $node/@Domain ! attribute domain {.},
     $node/@SDBG ! attribute sdbg {.}
 };
