@@ -153,8 +153,8 @@ declare function local:attributes($node)
     $node[empty(*)] ! attribute discontinuous {"true"}[$node/following::Node[empty(*)][1]/@morphId lt $node/@morphId],
     $node/@Rule ! attribute rule {.},
     $node/@Gloss ! attribute gloss {.},
-    $node/@Domain ! attribute domain {.},
-    $node/@SDBG ! attribute sdbg {.}
+    $node/@domain,
+    $node/@ln
 };
 
 (: TODO: the USFM id does not need to be computed from the Nodes trees, since USFM ids are now included on verses and words :)
