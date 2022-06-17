@@ -155,13 +155,12 @@ declare function local:attributes($node)
     $node/@Gloss ! attribute gloss {.},
     $node/@domain,
     $node/@ln,
-    $node/@ClType,
-    $node/@FunctionalTag,
-    $node/@Type,
-    $node/@Unicode,
-    $node/@Frame,
+    $node/@ClType !attribute cltype {.},
+    $node/@FunctionalTag ! attribute morph {.},
+    $node/@Unicode !attribute unicode {.},
+    $node/@Frame !attribute frame {.},
     $node/@Ref ! attribute referent {.},
-    $node/@SubjRef
+    $node/@SubjRef !attribute subjref {.}
 };
 
 (: TODO: the USFM id does not need to be computed from the Nodes trees, since USFM ids are now included on verses and words :)
