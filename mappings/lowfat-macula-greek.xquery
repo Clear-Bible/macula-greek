@@ -329,7 +329,7 @@ declare function local:word($node, $role)
     then
         (element error {$role, $node})
     else
-        if (string-length($node) = string-length($node/@Unicode) + 1)
+        if (string-length($node) = string-length($node/@NormalizedForm) + 1)
         then
             (: place punctuation in a separate node :)
             (
