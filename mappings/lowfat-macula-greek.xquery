@@ -327,12 +327,14 @@ declare function local:word($node, $role)
 {
 let $wordContent := $node/text()
 let $wordContentWithoutBrackets := replace($node/text(), '([\(\)\[\]])', '')
+let $normalizedFormWordLength := string-length($node/@NormalizedForm)
+let $normalizedFormWithPunctuationLength := $normalizedFormWordLength + 1
 return
     if ($node/*)
     then
         (element error {$role, $node})
     else
-        if (string-length($wordContentWithoutBrackets) = string-length($node/@NormalizedForm) + 1)
+        if (string-length($wordContentWithoutBrackets) = $normalizedFormWithPunctuationLength)
         then
             (: place punctuation in a separate node :)
             (
@@ -351,6 +353,7 @@ return
                 {
                     $role,
                     $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
+                    attribute after {' '},
                     local:attributes($node),
                     string($wordContentWithoutBrackets)
                 }
