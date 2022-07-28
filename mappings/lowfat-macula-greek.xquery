@@ -325,11 +325,16 @@ declare function local:word($node)
 declare function local:word($node, $role)
 (: $role can contain a role attribute or a null sequence :)
 {
+let $wordContent := $node/text()
+let $wordContentWithoutBrackets := replace($node/text(), '([\(\)\[\]])', '')
+let $normalizedFormWordLength := string-length($node/@NormalizedForm)
+let $normalizedFormWithPunctuationLength := $normalizedFormWordLength + 1
+return
     if ($node/*)
     then
         (element error {$role, $node})
     else
-        if (string-length($node) = string-length($node/@Unicode) + 1)
+        if (string-length($wordContentWithoutBrackets) = $normalizedFormWithPunctuationLength)
         then
             (: place punctuation in a separate node :)
             (
@@ -337,9 +342,9 @@ declare function local:word($node, $role)
                 {
                     $role,
                     $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
-                    attribute after {substring($node, string-length($node), 1)},
+                    attribute after {substring($wordContentWithoutBrackets, string-length($wordContentWithoutBrackets), 1)},
                     local:attributes($node),
-                    substring($node, 1, string-length($node) - 1)
+                    substring($wordContentWithoutBrackets, 1, string-length($wordContentWithoutBrackets) - 1)
                 }
             </w>
             )
@@ -348,8 +353,9 @@ declare function local:word($node, $role)
                 {
                     $role,
                     $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
+                    attribute after {' '},
                     local:attributes($node),
-                    string($node)
+                    string($wordContentWithoutBrackets)
                 }
             </w>
 };
