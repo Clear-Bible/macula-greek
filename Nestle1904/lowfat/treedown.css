@@ -164,3 +164,9 @@ wg[class=cl] {
   margin-left: 1em;
   position: relative;
 }
+
+wg[class=cl][role]::before {
+  /* Move the role for constituent clauses outside of the clause border */
+  margin-left: -2em;
+  margin-right: 1em;
+}
