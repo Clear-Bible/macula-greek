@@ -94,8 +94,8 @@
                 <xsl:when test="@unit = 'icoll' and not(ancestor::w[1]/m[@name = '#mannerism'])">adjp</xsl:when>
                 <xsl:when test="@unit = 'ecoll'">advp</xsl:when>
                 <xsl:when test="@unit = 'num'">nump</xsl:when>
-                <xsl:when test="@name = 'sequence'">coordination-group</xsl:when>
-                <xsl:when test="@name = 'junction'">junc</xsl:when>
+                <xsl:when test="@name = 'sequence'">coordination-wrapper</xsl:when>
+                <xsl:when test="@name = 'junction'">coordination-wrapper</xsl:when>
                 <xsl:when test="@name = 'apposition'">appos</xsl:when>
                 <xsl:when test="@name = 'operation'">oper</xsl:when>
                 <xsl:when test="@name = '#positional_association'">p</xsl:when>
@@ -182,6 +182,7 @@
                                 <xsl:with-param name="passed-class" tunnel="yes" as="xs:string?" select="$class"/>
                             </xsl:apply-templates>
                         </xsl:if>
+                        
                         <xsl:if test="not($path)">                     
                             <wg>
                                 <xsl:if test="$role">
@@ -194,6 +195,9 @@
                                         </xsl:when>
                                         <xsl:when test="$class = 'sc'">
                                             <xsl:attribute name="role" select="'adv'"/> <!-- Force subord. clauses to be '+' -->
+                                        </xsl:when>
+                                        <xsl:when test="$class = 'appos'">
+                                            <xsl:attribute name="rule" select="'Np-Appos'"/> <!-- Force subord. clauses to be '+' -->
                                         </xsl:when>
                                         <xsl:when test="$class = 'vp'"> <!-- Force verb phrases to be the child m node name or no role -->
                                             <!-- Only use child m name if it does not start with $, which would be the verb -->
