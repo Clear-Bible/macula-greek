@@ -336,23 +336,25 @@ return
     else
         if (string-length($wordContentWithoutBrackets) = $normalizedFormWithPunctuationLength)
         then
-            (: place punctuation in a separate node :)
+            (: place punctuation in an 'after' attribute :)
             (
             <w>
                 {
                     $role,
-                    $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
+                    attribute ref {local:USFMId($node/@nodeId)},
                     attribute after {substring($wordContentWithoutBrackets, string-length($wordContentWithoutBrackets), 1)},
                     local:attributes($node),
                     substring($wordContentWithoutBrackets, 1, string-length($wordContentWithoutBrackets) - 1)
                 }
+
+
             </w>
             )
         else
             <w>
                 {
                     $role,
-                    $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
+                    attribute ref {local:USFMId($node/@nodeId)},
                     attribute after {' '},
                     local:attributes($node),
                     string($wordContentWithoutBrackets)
