@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "macula-greek"
+version = "0.1.0"
+description = "Syntax trees, morphology, and linguistic annotations for the Greek Bible"
+authors = ["Your Name <you@example.com>"]
+license = "CC BY 4.0"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+lxml = "^4.9.1"
+pytest = "latest"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
