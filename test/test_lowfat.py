@@ -1,4 +1,4 @@
-from test import __lowfat_files__
+import pytest
 
-def test_number_of_files():
-    assert len(__lowfat_files__) == 27
+def test_number_of_files(lowfat_files):
+    assert len(lowfat_files) == 27
