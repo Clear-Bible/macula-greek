@@ -1,3 +1,5 @@
+from lxml import etree
+
 desired_filenames = [
     "01-matthew.xml",
     "02-mark.xml",
@@ -36,3 +38,12 @@ __nodes_files__ = list(map(lambda x: nodes_path + x, desired_filenames))
 
 tei_path = "./Nestle1904/tei/"
 __tei_files__ = list(map(lambda x: tei_path + x, desired_filenames))
+
+
+def all_node_elements(node_files):
+    all_node_elements = []
+    for node_file in node_files:
+        tree = etree.parse(node_file)
+        nodes = tree.xpath("//Node")
+        all_node_elements.concat(nodes)
+    return all_node_elements

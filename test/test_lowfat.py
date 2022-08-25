@@ -16,6 +16,7 @@ def test_file_is_valid_utf8(lowfat_file):
     lines = codecs.open(lowfat_file, encoding="utf-8", errors="strict").readlines()
     assert lines != ""
 
+
 # `etree.parse` throws errors is the xml is not valid.
 # This includes checking the format and uniqueness of @xml:id
 @pytest.mark.parametrize("lowfat_file", __lowfat_files__)
