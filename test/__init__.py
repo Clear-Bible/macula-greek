@@ -39,6 +39,7 @@ __nodes_files__ = list(map(lambda x: nodes_path + x, desired_filenames))
 tei_path = "./Nestle1904/tei/"
 __tei_files__ = list(map(lambda x: tei_path + x, desired_filenames))
 
+
 def run_xpath_for_file(xpath, file):
     tree = etree.parse(file)
     return tree.xpath(xpath)
