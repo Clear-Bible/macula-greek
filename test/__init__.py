@@ -1,7 +1,4 @@
-import os
-from lxml import etree
-
-desired_lowfat_filenames = [
+desired_filenames = [
     "01-matthew.xml",
     "02-mark.xml",
     "03-luke.xml",
@@ -26,9 +23,16 @@ desired_lowfat_filenames = [
     "22-2peter.xml",
     "23-1john.xml",
     "24-2john.xml",
+    "25-3john.xml",
     "26-jude.xml",
     "27-revelation.xml",
 ]
 
 lowfat_path = "./Nestle1904/lowfat/"
-__lowfat_files__ = list(map(lambda x: lowfat_path + x, desired_lowfat_filenames))
+__lowfat_files__ = list(map(lambda x: lowfat_path + x, desired_filenames))
+
+nodes_path = "./Nestle1904/nodes/"
+__nodes_files__ = list(map(lambda x: nodes_path + x, desired_filenames))
+
+tei_path = "./Nestle1904/tei/"
+__tei_files__ = list(map(lambda x: tei_path + x, desired_filenames))
