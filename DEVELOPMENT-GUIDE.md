@@ -27,8 +27,8 @@ from test import __tei_files__
 Example: this test will run for each file defined in the `__nodes_files__` list:
 
 ```python
+@pytest.mark.parametrize("nodes_file", __nodes_files__)
 def test_file_is_valid_xml(nodes_file):
-  @pytest.mark.parametrize("nodes_file", __nodes_files__)
     assert etree.parse(nodes_file)
 ```
 
