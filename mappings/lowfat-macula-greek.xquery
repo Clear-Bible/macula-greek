@@ -1,8 +1,8 @@
 (:
     Convert GBI trees to Lowfat format.
 
-	NOTE: this should normally be used only by the MACULA team.  
-  Lowfat is already available as part of the distribution.
+    NOTE: this should normally be used only by the MACULA team.  
+    Lowfat is already available as part of the distribution.
 
 :)
 
@@ -206,44 +206,6 @@ declare function local:oneword($node)
             $node
 };
 
-declare function local:sub-CL-adjunct($node)
-{
-    
-    
-};
-
-declare function local:sub-CL-adjunct-parent($node)
-{
-(:
-    ### TODO:  Rewrite based on what we have learned.
-:)   
-    let $first := $node/Node[1]
-    let $second := $node/Node[2]
-    return
-        if ($first[@Rule = 'sub-CL']) then
-            <wg>
-                {
-                    local:attributes($second),
-                    $node/@nodeId ! local:nodeId2xmlId(.),
-                    <!-- one -->,
-                    $first ! local:node(.),
-                    $second/Node ! local:node(.)
-                }
-            </wg>
-        else
-            if ($second[@Rule = 'sub-CL']) then
-                <wg>
-                    {
-                        local:attributes($first),
-                        $node/@nodeId ! local:nodeId2xmlId(.),
-                        <!-- two -->,
-                        $first/Node ! local:node(.),
-                        $second ! local:node(.)
-                    }
-                </wg>
-            else
-                <error>{"Something went wrong.", "First:", $first, "Second:", $second}</error>
-};
 
 declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL", 
     "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
@@ -251,9 +213,7 @@ declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL",
 
 declare function local:clause($node)
 (:  
-   #### TODO: Rewrite.  Just rewrite. 
    See https://github.com/Clear-Bible/symphony-team/issues/91  
-   #### TODO: Don't forget minor clauses !!!
 :)
 {
     if ($node/@ClType = "Minor") then
@@ -272,19 +232,12 @@ declare function local:clause($node)
             $node/@Rule ! attribute rule { lower-case(.) },
             $node/Node ! local:node(.)
          }
-        </wg>
-    (:
-        Potential bug:   
-        
-          ClCl/ClCl or ClCl/ClCl2 etc. - are the main clause's next-level's arguments correctly handled?
-
-    :)        
+        </wg>    
     else if ($node/@Rule="ClCl") then
         <wg>
          {
             let $first := $node/*[1]
             let $second := $node/*[2]
-            let $third := if ($node/*[3]) then fn:error("ClCl should have only two children") else ()
             return (
                 local:attributes($first),
                 $first/@nodeId ! local:nodeId2xmlId(.),
@@ -300,7 +253,6 @@ declare function local:clause($node)
          {
             let $first := $node/*[1]
             let $second := $node/*[2]
-            let $third := if ($node/*[3]) then fn:error("ClCl2 should have only two children") else ()
             return (
                 local:attributes($second),
                 $second/@nodeId ! local:nodeId2xmlId(.),
@@ -312,7 +264,6 @@ declare function local:clause($node)
             )
           }
           </wg>
-          (: 
     else if ($node/@Rule="CLandCL2") then
         <wg>
          {
@@ -323,13 +274,13 @@ declare function local:clause($node)
                 local:attributes($third),
                 $third/@nodeId ! local:nodeId2xmlId(.),
                 attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule, $third/@Rule),"!")},
-                $first/* ! local:node(.),
-                $second ! local:node(.),
-                $third/* ! local:node(.)
+                
+                local:node($first),
+                local:node($second),
+                local:node($third)/*
             )
            }
          </wg>
-         :)
     else if ($node/@Rule=("Conj-CL","PtclCL","sub-CL","that-VP")) then
       <wg>
        {
