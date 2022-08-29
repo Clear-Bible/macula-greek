@@ -1,17 +1,8 @@
 (:
     Convert GBI trees to Lowfat format.
 
-	NOTE: this should rarely be used now that the lowfat trees
-	are being independently, but I am keeping it in the repo
-	for documentation purposes and also for quality assurance,
-	as a way of testing the lowfat trees against GBI as we
-	move forward.
-
-	If it is used, remember to do the following steps:
-
-	- Search for duplicate IDs, removing the second GBI interpretation when there are duplicate subtrees.
-	- Search for the single instance where a word is not in any word group, but directly in a sentence.
-	- Do a diff to make sure things make sense.
+	NOTE: this should normally be used only by the MACULA team.  
+  Lowfat is already available as part of the distribution.
 
 :)
 
@@ -272,8 +263,9 @@ declare function local:clause($node)
          }
         </wg>
     else if (starts-with($node/@Rule, "ClClCl")
-     or $node/@Rule = $group-rules
-    )then
+           or $node/@Rule = $group-rules  
+         (:  #### Not sure this is right - $group-rules may need to be handled differently, see 420070220120130 ### :)
+    ) then
         <wg role="g" class="g">
          {
             $node/@nodeId ! local:nodeId2xmlId(.),
@@ -281,24 +273,25 @@ declare function local:clause($node)
             $node/Node ! local:node(.)
          }
         </wg>
+    (:
+        Potential bug:   
+        
+          ClCl/ClCl or ClCl/ClCl2 etc. - are the main clause's next-level's arguments correctly handled?
+
+    :)        
     else if ($node/@Rule="ClCl") then
         <wg>
          {
             let $first := $node/*[1]
             let $second := $node/*[2]
+            let $third := if ($node/*[3]) then fn:error("ClCl should have only two children") else ()
             return (
                 local:attributes($first),
                 $first/@nodeId ! local:nodeId2xmlId(.),
                 attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule),"!")},
-                $first/* ! local:node(.),
-                <wg>
-                  {
-                     attribute class {"n-cl"},
-                     local:attributes($second)[name(.) ne "class"],
-                     $second/* ! local:node(.)
-                  }
-                 </wg>
-               
+                
+                local:node($first)/*,
+                local:node($second)
             )
           }
           </wg>       
@@ -307,19 +300,15 @@ declare function local:clause($node)
          {
             let $first := $node/*[1]
             let $second := $node/*[2]
+            let $third := if ($node/*[3]) then fn:error("ClCl2 should have only two children") else ()
             return (
                 local:attributes($second),
                 $second/@nodeId ! local:nodeId2xmlId(.),
                 attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule),"!")},
-                <wg>
-                  {
-                     attribute class {"n-cl"},
-                     local:attributes($first)[name(.) ne "class"],
-                     $first/* ! local:node(.)
-                  }
-                 </wg>
+                
+                local:node($first)
                  ,
-                $second/* ! local:node(.)
+                local:node($second)/*
             )
           }
           </wg>
@@ -341,6 +330,15 @@ declare function local:clause($node)
            }
          </wg>
          :)
+    else if ($node/@Rule=("Conj-CL","PtclCL","sub-CL","that-VP")) then
+      <wg>
+       {
+            local:attributes($node)[name(.) ne "class"],
+            attribute class {"wg"},
+            $node/@nodeId ! local:nodeId2xmlId(.),
+            $node/Node ! local:node(.)         
+       }
+      </wg>
     else
         <wg>
          {
