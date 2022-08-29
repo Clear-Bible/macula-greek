@@ -153,7 +153,7 @@ declare function local:attributes($node)
     $node[empty(*)] ! attribute discontinuous {"true"}[$node/following::Node[empty(*)][1]/@morphId lt $node/@morphId],
     $node/@Rule ! attribute rule {.},
     $node/@Gloss ! attribute gloss {.},
-    $node/@Domain ! attribute domain {.},
+    $node/@LexDomain ! attribute domain {.},
     $node/@LN ! attribute ln {.},
     $node/@ClType !attribute cltype {.},
     $node/@FunctionalTag ! attribute morph {.},
@@ -193,6 +193,11 @@ else
     )
 };
 
+declare function local:nodeId2xmlId($nodeId)
+{
+   attribute xml:id { concat("n", $nodeId) }
+};
+
 declare function local:oneword($node)
 (: If the Node governs a single word, return that word. :)
 {
@@ -223,7 +228,7 @@ declare function local:sub-CL-adjunct-parent($node)
             <wg>
                 {
                     local:attributes($second),
-                    $node/@nodeId ! attribute xml:id {.},
+                    $node/@nodeId ! local:nodeId2xmlId(.),
                     <!-- one -->,
                     $first ! local:node(.),
                     $second/Node ! local:node(.)
@@ -234,7 +239,7 @@ declare function local:sub-CL-adjunct-parent($node)
                 <wg>
                     {
                         local:attributes($first),
-                        $node/@nodeId ! attribute xml:id {.},
+                        $node/@nodeId ! local:nodeId2xmlId(.),
                         <!-- two -->,
                         $first/Node ! local:node(.),
                         $second ! local:node(.)
@@ -259,7 +264,7 @@ declare function local:clause($node)
         <wg>
             {
                 local:attributes($node),
-                $node/@nodeId ! attribute xml:id {.},
+                $node/@nodeId ! local:nodeId2xmlId(.),
                 $node/Node ! local:node(.)
             }
         </wg>
@@ -277,7 +282,7 @@ declare function local:phrase($node)
         <wg>
             {
                 local:attributes($node),
-                $node/@nodeId ! attribute xml:id {.},
+                $node/@nodeId ! local:nodeId2xmlId(.),
                 $node/Node ! local:node(.)
             }
         </wg>
@@ -302,7 +307,7 @@ declare function local:role($node)
                 <wg>
                     {
                         $role,
-                        $node/@nodeId ! attribute xml:id {.},
+                        $node/@nodeId ! local:nodeId2xmlId(.),
                         $node/Node ! local:node(.)
                     }
                 </wg>
@@ -310,7 +315,7 @@ declare function local:role($node)
                 <wg>
                     {
                         $role,
-                        $node/@nodeId ! attribute xml:id {.},
+                        $node/@nodeId ! local:nodeId2xmlId(.),
                         local:attributes($node/Node),
                         $node/Node/Node ! local:node(.)
                     }
