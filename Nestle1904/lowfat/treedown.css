@@ -71,11 +71,6 @@ w[role] {
     display: block;
 }
 
-w[case=vocative] {
-    position: relative;
-    display: block;
-}
-
 /* Generated Text */
 
 /*
@@ -127,11 +122,15 @@ w[discontinuous]::after {
   font-size: small;
 }
 
-w[case=vocative]::before {
+w[role=aux]::before {
   color: cadetblue;
-  content: "voc" " ";
+  content: "~" " ";
 }
 
+wg[role=aux]::before {
+  color: cadetblue;
+  content: "~" " ";
+}
 
 /* -----  Experimental stuff goes here -------- */
 

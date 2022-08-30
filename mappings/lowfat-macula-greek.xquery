@@ -207,6 +207,7 @@ declare function local:oneword($node)
 };
 
 
+(: Most confident of EitherOr4CL, EitherOr7CL, aCLaCL, aCLaCLaCL:)
 declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL", 
     "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
     "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL" );
