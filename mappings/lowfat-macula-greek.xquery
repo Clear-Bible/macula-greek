@@ -127,6 +127,7 @@ declare function local:attributes($node)
     $node/@Cat ! attribute class {lower-case(.)},
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
+    $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),
     $node/@HasDet ! attribute articular {true()},
     $node/@UnicodeLemma ! attribute lemma {.},
     $node/@NormalizedForm ! attribute normalized {.},
@@ -189,28 +190,11 @@ declare function local:nodeId2xmlId($nodeId)
    attribute xml:id { concat("n", $nodeId) }
 };
 
-declare function local:oneword($node)
-(: If the Node governs a single word, return that word. 
-
-   ### TODO: Consider restoring this.  See https://github.com/Clear-Bible/symphony-team/issues/96
-:)
-{
-    if (count($node/Node) > 1)
-    then
-        ()
-    else
-        if ($node/Node)
-        then
-            local:oneword($node/Node)
-        else
-            $node
-};
-
 
 (: Most confident of EitherOr4CL, EitherOr7CL, aCLaCL, aCLaCLaCL:)
 declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL", 
     "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
-    "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL" );
+    "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL", "notCLbutCL2CL" );
 
 declare function local:clause($node)
 (:  
@@ -220,6 +204,8 @@ declare function local:clause($node)
     if ($node/@ClType = "Minor") then
         <wg role="aux" class="minor">
          {
+            $node/@nodeId ! local:nodeId2xmlId(.),
+            $node/@Rule ! attribute rule { lower-case(.) },           
             $node/Node ! local:node(.)
          }
         </wg>
@@ -241,7 +227,6 @@ declare function local:clause($node)
             let $second := $node/*[2]
             return (
                 local:attributes($first),
-                $first/@nodeId ! local:nodeId2xmlId(.),
                 attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule),"!")},
                 
                 local:node($first)/*,
@@ -256,7 +241,6 @@ declare function local:clause($node)
             let $second := $node/*[2]
             return (
                 local:attributes($second),
-                $second/@nodeId ! local:nodeId2xmlId(.),
                 attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule),"!")},
                 
                 local:node($first)
@@ -273,7 +257,6 @@ declare function local:clause($node)
             let $third := $node/*[3]
             return (
                 local:attributes($third),
-                $third/@nodeId ! local:nodeId2xmlId(.),
                 attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule, $third/@Rule),"!")},
                 
                 local:node($first),
@@ -282,20 +265,28 @@ declare function local:clause($node)
             )
            }
          </wg>
-    else if ($node/@Rule=("Conj-CL","PtclCL","sub-CL","that-VP")) then
+    else if ($node/@Rule=("PtclCL","sub-CL","that-VP", "AdvpCL")) then
+      <wg>
+       {
+            local:attributes($node)[not(name(.) = ("class","role"))],
+            attribute class {"wg"},
+            attribute role {"adv"},
+            $node/Node ! local:node(.)         
+       }
+      </wg>
+     else if ($node/@Rule=("Conj-CL")) then
       <wg>
        {
             local:attributes($node)[name(.) ne "class"],
             attribute class {"wg"},
-            $node/@nodeId ! local:nodeId2xmlId(.),
             $node/Node ! local:node(.)         
        }
-      </wg>
+      </wg>  
+    
     else
         <wg>
          {
             local:attributes($node),
-            $node/@nodeId ! local:nodeId2xmlId(.),
             $node/Node ! local:node(.)
          }
         </wg>
@@ -310,7 +301,6 @@ declare function local:phrase($node)
         <wg>
             {
                 local:attributes($node),
-                $node/@nodeId ! local:nodeId2xmlId(.),
                 $node/Node ! local:node(.)
             }
         </wg>
@@ -339,7 +329,6 @@ declare function local:role($node)
             <wg>
                 {
                     $role,
-                    $node/@nodeId ! local:nodeId2xmlId(.),
                     local:attributes($node/Node),
                     $node/Node/Node ! local:node(.)
                 }
