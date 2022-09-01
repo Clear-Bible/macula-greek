@@ -57,8 +57,6 @@ wg[class=cl] {
   display: block;
 }
 
-wg[rule=that-VP],
-wg[rule=sub-CL],
 wg[role] {
     position: relative;
     display: block;
@@ -87,8 +85,6 @@ wg[role]::before {
   content: attr(role);
 }
 
-wg[rule=that-VP]::before,
-wg[rule=sub-CL]::before,
 wg[role=adv]::before {
   color: cadetblue;
   content: "+ ";
