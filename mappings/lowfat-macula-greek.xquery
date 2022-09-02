@@ -221,6 +221,7 @@ declare function local:clause($node)
          }
         </wg>    
     else if ($node/@Rule="ClCl") then
+    (: This is underspecified - see https://github.com/Clear-Bible/symphony-team/issues/126 :)
         <wg>
          {
             let $first := $node/*[1]
@@ -235,6 +236,7 @@ declare function local:clause($node)
           }
           </wg>       
     else if ($node/@Rule="ClCl2") then
+    (: This is underspecified - see https://github.com/Clear-Bible/symphony-team/issues/126 :)
         <wg>
          {
             let $first := $node/*[1]
@@ -265,7 +267,15 @@ declare function local:clause($node)
             )
            }
          </wg>
-    else if ($node/@Rule=("PtclCL","sub-CL","that-VP", "AdvpCL")) then
+    else if ($node/@Rule=("that-VP")) then 
+      <wg>     
+        {
+            local:attributes($node)[not(name(.) = ("role"))],
+            attribute role {"o"},
+            $node/Node ! local:node(.)         
+       }     
+      </wg>
+    else if ($node/@Rule=("PtclCL","sub-CL", "AdvpCL")) then
       <wg>
        {
             local:attributes($node)[not(name(.) = ("class","role"))],
@@ -282,7 +292,6 @@ declare function local:clause($node)
             $node/Node ! local:node(.)         
        }
       </wg>  
-    
     else
         <wg>
          {
