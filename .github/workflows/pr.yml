@@ -16,5 +16,9 @@ jobs:
         run: poetry install
       - name: Execute pytest
         working-directory: ./test
-        run: poetry run pytest
-
+        run: poetry run pytest | tee output.log
+      - name: Archive test run output
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-run-output
+          path: ./test/output.log
