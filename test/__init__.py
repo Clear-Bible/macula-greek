@@ -30,13 +30,13 @@ desired_filenames = [
     "27-revelation.xml",
 ]
 
-lowfat_path = "./Nestle1904/lowfat/"
+lowfat_path = "../Nestle1904/lowfat/"
 __lowfat_files__ = list(map(lambda x: lowfat_path + x, desired_filenames))
 
-nodes_path = "./Nestle1904/nodes/"
+nodes_path = "../Nestle1904/nodes/"
 __nodes_files__ = list(map(lambda x: nodes_path + x, desired_filenames))
 
-tei_path = "./Nestle1904/tei/"
+tei_path = "../Nestle1904/tei/"
 __tei_files__ = list(map(lambda x: tei_path + x, desired_filenames))
 
 
