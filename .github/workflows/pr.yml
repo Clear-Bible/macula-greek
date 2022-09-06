@@ -1,5 +1,12 @@
 name: Pull Request Actions
-on: [push]
+on:
+  push:
+    branches:
+      - main
+      - test-suite
+  pull_request:
+    branches:
+      - main
 jobs:
   Run-Tests:
     runs-on: ubuntu-latest
