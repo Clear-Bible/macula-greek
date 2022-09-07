@@ -21,7 +21,7 @@ jobs:
           path: ~/.local
           key: poetry-1.1.14-0
       - name: install poetry
-      - uses: snok/install-poetry@v1
+        uses: snok/install-poetry@v1
         with:
           version: 1.1.14
           virtualenvs-create: true
