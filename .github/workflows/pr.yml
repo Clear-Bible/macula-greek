@@ -39,6 +39,8 @@ jobs:
         if: steps.cache-deps.outputs.cache-hit != 'true'
       - name: execute pytest
         working-directory: ./test
+        # `tee` obscures exit code.
+        # `-o pipefail` forces an early fail.
         run: set -o pipefail; poetry run pytest | tee output.log
       - name: Archive test run output
         uses: actions/upload-artifact@v3
