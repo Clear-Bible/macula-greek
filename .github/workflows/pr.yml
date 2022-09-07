@@ -40,6 +40,7 @@ jobs:
       - name: execute pytest
         working-directory: ./test
         run: poetry run pytest | tee output.log
+        shell: bash
       - name: Archive test run output
         uses: actions/upload-artifact@v3
         with:
