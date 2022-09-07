@@ -20,7 +20,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: ~/.local
-          key: poetry-1.1.14-0
+          key: poetry-1.1.14-1
       - name: install poetry
         uses: snok/install-poetry@v1
         with:
@@ -32,7 +32,7 @@ jobs:
         uses: actions/cache@v2
         with:
           path: .venv
-          key: pydeps-${{ hashFiles('**/poetry.lock') }}-0
+          key: pydeps-${{ hashFiles('**/poetry.lock') }}-1
       - name: install dependencies
         run: poetry install --no-interaction
         working-directory: ./test
