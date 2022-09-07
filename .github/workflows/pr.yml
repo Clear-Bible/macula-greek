@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  # Poetry and dependencies are cached to improve performance.
+  # Poetry and dependencies are cached.
   # Caching cribbed from https://jacobian.org/til/github-actions-poetry/
   Run-Tests:
     runs-on: ubuntu-latest
