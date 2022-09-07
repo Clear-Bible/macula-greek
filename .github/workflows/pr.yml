@@ -39,14 +39,14 @@ jobs:
           key: pydeps-${{ hashFiles('**/poetry.lock') }}-0
       - name: install dependencies
         run: poetry install --no-interaction
-        working-directory: test
+        working-directory: ${{ github.workspace }}/test
         if: steps.cache-deps.outputs.cache-hit != 'true'
   Run-Tests:
     runs-on: ubuntu-latest
     needs: [Install-Python-And-Poetry, Install-Dependencies]
     steps:
       - name: execute pytest
-        working-directory: test
+        working-directory: ${{ github.workspace }}/test
         run: poetry run pytest | tee output.log
       - name: Archive test run output
         uses: actions/upload-artifact@v3
