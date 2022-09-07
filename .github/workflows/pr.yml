@@ -7,7 +7,7 @@ on:
     branches:
       - main
 jobs:
-  # Poetry and dependencies are cached.
+  # Poetry and dependencies are cached to improve performance.
   # Caching cribbed from https://jacobian.org/til/github-actions-poetry/
   Run-Tests:
     runs-on: ubuntu-latest
@@ -39,8 +39,7 @@ jobs:
         if: steps.cache-deps.outputs.cache-hit != 'true'
       - name: execute pytest
         working-directory: ./test
-        run: poetry run pytest | tee output.log
-        # shell: bash
+        run: set -o pipefail; poetry run pytest | tee output.log
       - name: Archive test run output
         uses: actions/upload-artifact@v3
         with:
