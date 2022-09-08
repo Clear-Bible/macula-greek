@@ -278,7 +278,7 @@ declare function local:clause($node)
         </wg>       
         
      else if ($node/@Rule=("that-VP")) then 
-      (: ###  Except for a list of lemmas  ### :)
+      (: ###  Except for a list of lemmas  - hina should be adverbial, hoti is a complement (object) ### :)
           <wg>     
             {
                 local:attributes($node)[not(name(.) = ("role"))],
