@@ -6,7 +6,6 @@
 
 :)
 
-
 declare variable $retain-singletons := false();
 
 declare function local:USFMBook($nodeId)
@@ -85,7 +84,7 @@ else
 };
 
 declare function local:verbal-noun-type($node)
-(:  This realy doesn't work yet. Not even close. :)
+(:  This really doesn't work yet. Not even close. :)
 {
     switch ($node/parent::Node/@Cat)
         case 'adjp'
@@ -155,6 +154,17 @@ declare function local:attributes($node)
     $node/@SubjRef !attribute subjref {.}
 };
 
+declare function local:oneword($node)
+(: If the Node governs a single word, return that word. :)
+{
+     if (count($node/Node) > 1)
+     then ()
+     else if ($node/Node)
+     then local:oneword($node/Node)
+     else $node
+};
+
+
 (: TODO: the USFM id does not need to be computed from the Nodes trees, since USFM ids are now included on verses and words :)
 declare function local:USFMId($nodeId)
 {
@@ -196,6 +206,55 @@ declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL",
     "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
     "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL", "notCLbutCL2CL" );
 
+declare function local:raise-first-of-two-siblings($node)
+{
+    <wg>
+     {
+        let $first := $node/*[1]
+        let $second := $node/*[2]
+        return (
+            local:attributes($first),
+            attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule),"!")},
+            
+            local:node($first)/*,
+            local:node($second)
+        )
+      }
+      </wg>     
+};
+
+declare function local:raise-second-of-two-siblings($node)
+{
+    <wg>
+     {
+        let $first := $node/*[1]
+        let $second := $node/*[2]
+        return (
+            if (false()) then ()
+            else (
+                local:attributes($second),
+                attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule),"!")},
+            
+                local:node($first)    (: Make sure that this becomes an adjunct :)
+                ,
+                local:node($second)/*
+            )
+        )
+      }
+      </wg>
+};
+
+declare function local:keep-siblings-as-siblings($node)
+{
+    <wg>
+      {
+        $node/@nodeId ! local:nodeId2xmlId(.),
+        $node/@Rule ! attribute rule { lower-case(.) },           
+        $node/Node ! local:node(.)
+     }           
+    </wg>
+};
+
 declare function local:clause($node)
 (:  
    See https://github.com/Clear-Bible/symphony-team/issues/91  
@@ -209,48 +268,65 @@ declare function local:clause($node)
             $node/Node ! local:node(.)
          }
         </wg>
-    else if (starts-with($node/@Rule, "ClClCl")
-           or $node/@Rule = $group-rules  
-         (:  #### Not sure this is right - $group-rules may need to be handled differently, see 420070220120130 ### :)
-    ) then
-        <wg role="g" class="g">
+          
+    else if ($node/@Rule = "sub-CL") then
+        <wg role="adv">
+          {
+                local:attributes($node)[not(name(.) = ("role"))],
+                $node/Node ! local:node(.)         
+           }     
+        </wg>       
+        
+     else if ($node/@Rule=("that-VP")) then 
+      (: ###  Except for a list of lemmas  ### :)
+          <wg>     
+            {
+                local:attributes($node)[not(name(.) = ("role"))],
+                attribute role {"o"},
+                $node/Node ! local:node(.)         
+           }     
+          </wg>      
+       else if ($node/@Rule=("PtclCL", "AdvpCL", "Conj-CL") and $node/parent::*/@Rule=("ClCl", "ClCl2")) then
+          <wg>
+           {
+                local:attributes($node)[not(name(.) = ("class","role"))],
+                attribute class {"wg"},
+                attribute role {"adv"},
+                $node/Node ! local:node(.)         
+           }
+          </wg> 
+          
+     else if ($node/parent::Node/@Rule=("ClCl2","ClCl") 
+            and $node/Node[@Cat="V"]/descendant::Node[@Mood="Participle" and @Case=("Genitive", "Accusative")] ) then
+        <wg role="adv" dbg="#########">
+          {
+                local:attributes($node)[not(name(.) = ("role"))],
+                $node/Node ! local:node(.)         
+           }     
+        </wg>    
+   
+     else if ($node/@Rule=("Conj-CL")) then
+             $node/Node ! local:node(.)         
+
+    else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
+          (: ### TODO:  Handle groups of groups :)
+        <wg role="g" class="group">
          {
             $node/@nodeId ! local:nodeId2xmlId(.),
             $node/@Rule ! attribute rule { lower-case(.) },
             $node/Node ! local:node(.)
          }
         </wg>    
+        
     else if ($node/@Rule="ClCl") then
-    (: This is underspecified - see https://github.com/Clear-Bible/symphony-team/issues/126 :)
-        <wg>
-         {
-            let $first := $node/*[1]
-            let $second := $node/*[2]
-            return (
-                local:attributes($first),
-                attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule),"!")},
-                
-                local:node($first)/*,
-                local:node($second)
-            )
-          }
-          </wg>       
+    (: This is underspecified - see https://github.com/Clear-Bible/symphony-team/issues/126    :)
+            local:raise-first-of-two-siblings($node)
     else if ($node/@Rule="ClCl2") then
-    (: This is underspecified - see https://github.com/Clear-Bible/symphony-team/issues/126 :)
-        <wg>
-         {
-            let $first := $node/*[1]
-            let $second := $node/*[2]
-            return (
-                local:attributes($second),
-                attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule),"!")},
-                
-                local:node($first)
-                 ,
-                local:node($second)/*
-            )
-          }
-          </wg>
+    (: TODO:  Adverbial participles - genitive absolute, accusative absolute - might be able to generate a @type at the same time! 
+    
+        A genitive or accusative participle that is immediately under a ClCl or ClCl2 ...
+    :)
+              local:raise-second-of-two-siblings($node)
     else if ($node/@Rule="CLandCL2") then
         <wg>
          {
@@ -267,31 +343,6 @@ declare function local:clause($node)
             )
            }
          </wg>
-    else if ($node/@Rule=("that-VP")) then 
-      <wg>     
-        {
-            local:attributes($node)[not(name(.) = ("role"))],
-            attribute role {"o"},
-            $node/Node ! local:node(.)         
-       }     
-      </wg>
-    else if ($node/@Rule=("PtclCL","sub-CL", "AdvpCL")) then
-      <wg>
-       {
-            local:attributes($node)[not(name(.) = ("class","role"))],
-            attribute class {"wg"},
-            attribute role {"adv"},
-            $node/Node ! local:node(.)         
-       }
-      </wg>
-     else if ($node/@Rule=("Conj-CL")) then
-      <wg>
-       {
-            local:attributes($node)[name(.) ne "class"],
-            attribute class {"wg"},
-            $node/Node ! local:node(.)         
-       }
-      </wg>  
     else
         <wg>
          {
@@ -303,9 +354,6 @@ declare function local:clause($node)
 
 
 declare function local:phrase($node)
-(:
-   ### TODO: Get rid of conditional logic.  That just might be all we need.
-:)
 {
         <wg>
             {

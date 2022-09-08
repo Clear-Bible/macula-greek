@@ -7,7 +7,7 @@
          <milestone unit="verse" id="2JN 1:1">2JN 1:1</milestone>
          <milestone unit="verse" id="2JN 1:2">2JN 1:2</milestone> Ὁ πρεσβύτερος ἐκλεκτῇ κυρίᾳ καὶ τοῖς τέκνοις αὐτῆς, οὓς ἐγὼ ἀγαπῶ ἐν ἀληθείᾳ, καὶ οὐκ ἐγὼ μόνος ἀλλὰ καὶ πάντες οἱ ἐγνωκότες τὴν ἀλήθειαν, διὰ τὴν ἀλήθειαν τὴν μένουσαν ἐν ἡμῖν, καὶ μεθ’ ἡμῶν ἔσται εἰς τὸν αἰῶνα.</p>
       <wg>
-         <wg role="g" class="g" xml:id="n630010010010380" rule="clacl">
+         <wg role="g" class="group" xml:id="n630010010010380" rule="clacl">
             <wg class="cl"
                 xml:id="n630010010010310"
                 articular="true"
@@ -1194,7 +1194,7 @@
                   morph="ADV"
                   unicode="λίαν">λίαν</w>
             </wg>
-            <wg xml:id="n630010040030150" rule="sub-CL" class="wg" role="adv">
+            <wg role="adv" class="cl" xml:id="n630010040030150" rule="sub-CL">
                <w ref="2JN 1:4!3"
                   after=" "
                   class="conj"
@@ -1235,7 +1235,9 @@
                         subjref="n63001001002">εὕρηκα</w>
                   </wg>
                   <wg role="o" class="cl" xml:id="n630010040050130" rule="ClCl">
-                     <wg class="cl"
+                     <wg role="adv"
+                         dbg="#########"
+                         class="cl"
                          xml:id="n630010040050070"
                          head="true"
                          rule="ADV-V-ADV">
@@ -1374,7 +1376,7 @@
                            </wg>
                         </wg>
                      </wg>
-                     <wg xml:id="n630010040120060" rule="sub-CL" class="wg" role="adv">
+                     <wg role="adv" class="cl" xml:id="n630010040120060" rule="sub-CL">
                         <w ref="2JN 1:4!12"
                            after=" "
                            class="conj"
@@ -1502,373 +1504,371 @@
       <p>
          <milestone unit="verse" id="2JN 1:5">2JN 1:5</milestone> καὶ νῦν ἐρωτῶ σε, κυρία, οὐχ ὡς ἐντολὴν γράφων σοι καινὴν, ἀλλὰ ἣν εἴχαμεν ἀπ’ ἀρχῆς, ἵνα ἀγαπῶμεν ἀλλήλους.</p>
       <wg>
-         <wg xml:id="n630010050010190" rule="Conj-CL" class="wg">
-            <w ref="2JN 1:5!1"
-               after=" "
-               class="conj"
-               xml:id="n63001005001"
-               lemma="καί"
-               normalized="καί"
-               strong="2532"
-               gloss="And"
-               domain="089015"
-               ln="89.87"
-               morph="CONJ"
-               unicode="καὶ">καὶ</w>
-            <wg class="cl"
-                xml:id="n630010050020170"
+         <w ref="2JN 1:5!1"
+            after=" "
+            class="conj"
+            xml:id="n63001005001"
+            lemma="καί"
+            normalized="καί"
+            strong="2532"
+            gloss="And"
+            domain="089015"
+            ln="89.87"
+            morph="CONJ"
+            unicode="καὶ">καὶ</w>
+         <wg class="cl"
+             xml:id="n630010050020170"
+             head="true"
+             rule="ClCl"
+             rewrite="ClCl2!Np2CL!ClCl">
+            <wg role="aux" class="minor" xml:id="n630010050050012" rule="np2cl">
+               <wg class="np" xml:id="n630010050050011" rule="N2NP">
+                  <w ref="2JN 1:5!5"
+                     after=","
+                     class="noun"
+                     type="common"
+                     xml:id="n63001005005"
+                     lemma="κυρία"
+                     normalized="κυρία"
+                     strong="2959"
+                     number="singular"
+                     gender="feminine"
+                     case="vocative"
+                     discontinuous="true"
+                     gloss="lady"
+                     domain="087003"
+                     ln="87.54"
+                     morph="N-VSF"
+                     unicode="κυρία,">κυρία</w>
+               </wg>
+            </wg>
+            <wg role="adv"
+                class="advp"
+                xml:id="n630010050020011"
+                rule="Adv2Advp">
+               <w ref="2JN 1:5!2"
+                  after=" "
+                  class="adv"
+                  xml:id="n63001005002"
+                  lemma="νῦν"
+                  normalized="νῦν"
+                  strong="3568"
+                  gloss="now"
+                  domain="067002"
+                  ln="67.38"
+                  morph="ADV"
+                  unicode="νῦν">νῦν</w>
+            </wg>
+            <wg role="v"
+                class="vp"
+                xml:id="n630010050030011"
                 head="true"
-                rule="ClCl"
-                rewrite="ClCl2!Np2CL!ClCl">
-               <wg role="aux" class="minor" xml:id="n630010050050012" rule="np2cl">
-                  <wg class="np" xml:id="n630010050050011" rule="N2NP">
-                     <w ref="2JN 1:5!5"
-                        after=","
-                        class="noun"
-                        type="common"
-                        xml:id="n63001005005"
-                        lemma="κυρία"
-                        normalized="κυρία"
-                        strong="2959"
-                        number="singular"
-                        gender="feminine"
-                        case="vocative"
-                        discontinuous="true"
-                        gloss="lady"
-                        domain="087003"
-                        ln="87.54"
-                        morph="N-VSF"
-                        unicode="κυρία,">κυρία</w>
-                  </wg>
-               </wg>
-               <wg role="adv"
-                   class="advp"
-                   xml:id="n630010050020011"
-                   rule="Adv2Advp">
-                  <w ref="2JN 1:5!2"
-                     after=" "
-                     class="adv"
-                     xml:id="n63001005002"
-                     lemma="νῦν"
-                     normalized="νῦν"
-                     strong="3568"
-                     gloss="now"
-                     domain="067002"
-                     ln="67.38"
-                     morph="ADV"
-                     unicode="νῦν">νῦν</w>
-               </wg>
+                rule="V2VP">
+               <w ref="2JN 1:5!3"
+                  after=" "
+                  class="verb"
+                  xml:id="n63001005003"
+                  lemma="ἐρωτάω"
+                  normalized="ἐρωτῶ"
+                  strong="2065"
+                  number="singular"
+                  person="first"
+                  tense="present"
+                  voice="active"
+                  mood="indicative"
+                  head="true"
+                  gloss="I implore"
+                  domain="033012"
+                  ln="33.161"
+                  morph="V-PAI-1S"
+                  unicode="ἐρωτῶ"
+                  frame="A0:n63001001002 A1:n63001005004"
+                  subjref="n63001001002">ἐρωτῶ</w>
+            </wg>
+            <wg role="o" class="np" xml:id="n630010050040011" rule="Pron2NP">
+               <w ref="2JN 1:5!4"
+                  after=","
+                  class="pron"
+                  type="personal"
+                  xml:id="n63001005004"
+                  lemma="σύ"
+                  normalized="σε"
+                  strong="4771"
+                  number="singular"
+                  case="accusative"
+                  gloss="you"
+                  morph="P-2AS"
+                  unicode="σε,"
+                  referent="n63001005005">σε</w>
+            </wg>
+            <wg role="adv" class="cl" xml:id="n630010050090110" rule="V-IO-ADV">
                <wg role="v"
                    class="vp"
-                   xml:id="n630010050030011"
+                   xml:id="n630010050090011"
                    head="true"
                    rule="V2VP">
-                  <w ref="2JN 1:5!3"
+                  <w ref="2JN 1:5!9"
                      after=" "
                      class="verb"
-                     xml:id="n63001005003"
-                     lemma="ἐρωτάω"
-                     normalized="ἐρωτῶ"
-                     strong="2065"
+                     xml:id="n63001005009"
+                     lemma="γράφω"
+                     normalized="γράφων"
+                     strong="1125"
                      number="singular"
-                     person="first"
+                     gender="masculine"
+                     case="nominative"
                      tense="present"
                      voice="active"
-                     mood="indicative"
+                     mood="participle"
+                     type="?"
                      head="true"
-                     gloss="I implore"
-                     domain="033012"
-                     ln="33.161"
-                     morph="V-PAI-1S"
-                     unicode="ἐρωτῶ"
-                     frame="A0:n63001001002 A1:n63001005004"
-                     subjref="n63001001002">ἐρωτῶ</w>
+                     gloss="I am writing"
+                     domain="033005"
+                     ln="33.61"
+                     morph="V-PAP-NSM"
+                     unicode="γράφων"
+                     frame="A0:n63001001002 A2:n63001005010"
+                     subjref="n63001001002">γράφων</w>
                </wg>
-               <wg role="o" class="np" xml:id="n630010050040011" rule="Pron2NP">
-                  <w ref="2JN 1:5!4"
-                     after=","
+               <wg role="io" class="np" xml:id="n630010050100011" rule="Pron2NP">
+                  <w ref="2JN 1:5!10"
+                     after=" "
                      class="pron"
                      type="personal"
-                     xml:id="n63001005004"
+                     xml:id="n63001005010"
                      lemma="σύ"
-                     normalized="σε"
+                     normalized="σοι"
                      strong="4771"
                      number="singular"
-                     case="accusative"
-                     gloss="you"
-                     morph="P-2AS"
-                     unicode="σε,"
-                     referent="n63001005005">σε</w>
+                     case="dative"
+                     discontinuous="true"
+                     gloss="to you"
+                     morph="P-2DS"
+                     unicode="σοι"
+                     referent="n63001005005">σοι</w>
                </wg>
-               <wg role="adv" class="cl" xml:id="n630010050090110" rule="V-IO-ADV">
-                  <wg role="v"
-                      class="vp"
-                      xml:id="n630010050090011"
-                      head="true"
-                      rule="V2VP">
-                     <w ref="2JN 1:5!9"
+               <wg role="adv"
+                   class="cl"
+                   xml:id="n630010050060090"
+                   rule="notCLbutCL2CL">
+                  <wg class="advp" xml:id="n630010050060011" rule="Adv2Advp">
+                     <w ref="2JN 1:5!6"
                         after=" "
-                        class="verb"
-                        xml:id="n63001005009"
-                        lemma="γράφω"
-                        normalized="γράφων"
-                        strong="1125"
-                        number="singular"
-                        gender="masculine"
-                        case="nominative"
-                        tense="present"
-                        voice="active"
-                        mood="participle"
-                        type="?"
-                        head="true"
-                        gloss="I am writing"
-                        domain="033005"
-                        ln="33.61"
-                        morph="V-PAP-NSM"
-                        unicode="γράφων"
-                        frame="A0:n63001001002 A2:n63001005010"
-                        subjref="n63001001002">γράφων</w>
+                        class="adv"
+                        xml:id="n63001005006"
+                        lemma="οὐ"
+                        normalized="οὐχ"
+                        strong="3756"
+                        gloss="not"
+                        morph="PRT-N"
+                        unicode="οὐχ">οὐχ</w>
                   </wg>
-                  <wg role="io" class="np" xml:id="n630010050100011" rule="Pron2NP">
-                     <w ref="2JN 1:5!10"
-                        after=" "
-                        class="pron"
-                        type="personal"
-                        xml:id="n63001005010"
-                        lemma="σύ"
-                        normalized="σοι"
-                        strong="4771"
-                        number="singular"
-                        case="dative"
-                        discontinuous="true"
-                        gloss="to you"
-                        morph="P-2DS"
-                        unicode="σοι"
-                        referent="n63001005005">σοι</w>
-                  </wg>
-                  <wg role="adv"
-                      class="cl"
-                      xml:id="n630010050060090"
-                      rule="notCLbutCL2CL">
-                     <wg class="advp" xml:id="n630010050060011" rule="Adv2Advp">
-                        <w ref="2JN 1:5!6"
-                           after=" "
-                           class="adv"
-                           xml:id="n63001005006"
-                           lemma="οὐ"
-                           normalized="οὐχ"
-                           strong="3756"
-                           gloss="not"
-                           morph="PRT-N"
-                           unicode="οὐχ">οὐχ</w>
-                     </wg>
-                     <wg xml:id="n630010050070030" rule="sub-CL" class="wg" role="adv">
-                        <w ref="2JN 1:5!7"
-                           after=" "
-                           class="conj"
-                           xml:id="n63001005007"
-                           lemma="ὡς"
-                           normalized="ὡς"
-                           strong="5613"
-                           gloss="as"
-                           domain="064"
-                           ln="64.12"
-                           morph="ADV"
-                           unicode="ὡς">ὡς</w>
-                        <wg class="cl"
-                            xml:id="n630010050080022"
-                            rule="O2CL"
-                            cltype="VerbElided">
-                           <wg role="o" class="np" xml:id="n630010050080020" rule="NpAdjp">
-                              <wg class="np" xml:id="n630010050080011" head="true" rule="N2NP">
-                                 <w ref="2JN 1:5!8"
-                                    after=" "
-                                    class="noun"
-                                    type="common"
-                                    xml:id="n63001005008"
-                                    lemma="ἐντολή"
-                                    normalized="ἐντολήν"
-                                    strong="1785"
-                                    number="singular"
-                                    gender="feminine"
-                                    case="accusative"
-                                    head="true"
-                                    gloss="a commandment"
-                                    domain="033032"
-                                    ln="33.330"
-                                    morph="N-ASF"
-                                    unicode="ἐντολὴν">ἐντολὴν</w>
-                              </wg>
-                              <wg class="adjp" xml:id="n630010050110011" rule="Adj2Adjp">
-                                 <w ref="2JN 1:5!11"
-                                    after=","
-                                    class="adj"
-                                    xml:id="n63001005011"
-                                    lemma="καινός"
-                                    normalized="καινήν"
-                                    strong="2537"
-                                    number="singular"
-                                    gender="feminine"
-                                    case="accusative"
-                                    gloss="new"
-                                    domain="028003"
-                                    ln="28.33"
-                                    morph="A-ASF"
-                                    unicode="καινὴν,">καινὴν</w>
-                              </wg>
-                           </wg>
-                        </wg>
-                     </wg>
-                     <w ref="2JN 1:5!12"
+                  <wg role="adv" class="cl" xml:id="n630010050070030" rule="sub-CL">
+                     <w ref="2JN 1:5!7"
                         after=" "
                         class="conj"
-                        xml:id="n63001005012"
-                        lemma="ἀλλά"
-                        normalized="ἀλλά"
-                        strong="235"
-                        gloss="but"
-                        domain="089023"
-                        ln="89.125"
-                        morph="CONJ"
-                        unicode="ἀλλὰ">ἀλλὰ</w>
-                     <wg class="cl" xml:id="n630010050130040" head="true" rule="O-V-ADV">
-                        <wg role="o" class="np" xml:id="n630010050130011" rule="Pron2NP">
-                           <w ref="2JN 1:5!13"
-                              after=" "
-                              class="pron"
-                              type="relative"
-                              xml:id="n63001005013"
-                              lemma="ὅς"
-                              normalized="ἥν"
-                              strong="3739"
-                              number="singular"
-                              gender="feminine"
-                              case="accusative"
-                              gloss="that which"
-                              morph="R-ASF"
-                              unicode="ἣν">ἣν</w>
-                        </wg>
-                        <wg role="v"
-                            class="vp"
-                            xml:id="n630010050140011"
-                            head="true"
-                            rule="V2VP">
-                           <w ref="2JN 1:5!14"
-                              after=" "
-                              class="verb"
-                              xml:id="n63001005014"
-                              lemma="ἔχω"
-                              normalized="εἴχαμεν"
-                              strong="2192"
-                              number="plural"
-                              person="first"
-                              tense="imperfect"
-                              voice="active"
-                              mood="indicative"
-                              head="true"
-                              gloss="we have had"
-                              domain="090013"
-                              ln="90.65"
-                              morph="V-IAI-1P"
-                              unicode="εἴχαμεν"
-                              frame="A0:n63001001002;n63001005005;n63001001007;n63001001022 A1:n63001005013"
-                              subjref="n63001001002 n63001005005 n63001001007 n63001001022">εἴχαμεν</w>
-                        </wg>
-                        <wg role="adv" class="pp" xml:id="n630010050150020" rule="PrepNp">
-                           <w ref="2JN 1:5!15"
-                              after=" "
-                              class="prep"
-                              xml:id="n63001005015"
-                              lemma="ἀπό"
-                              normalized="ἀπ’"
-                              strong="575"
-                              gloss="from"
-                              domain="067006"
-                              ln="67.131"
-                              morph="PREP"
-                              unicode="ἀπ’">ἀπ’</w>
-                           <wg class="np" xml:id="n630010050160011" head="true" rule="N2NP">
-                              <w ref="2JN 1:5!16"
-                                 after=","
+                        xml:id="n63001005007"
+                        lemma="ὡς"
+                        normalized="ὡς"
+                        strong="5613"
+                        gloss="as"
+                        domain="064"
+                        ln="64.12"
+                        morph="ADV"
+                        unicode="ὡς">ὡς</w>
+                     <wg class="cl"
+                         xml:id="n630010050080022"
+                         rule="O2CL"
+                         cltype="VerbElided">
+                        <wg role="o" class="np" xml:id="n630010050080020" rule="NpAdjp">
+                           <wg class="np" xml:id="n630010050080011" head="true" rule="N2NP">
+                              <w ref="2JN 1:5!8"
+                                 after=" "
                                  class="noun"
                                  type="common"
-                                 xml:id="n63001005016"
-                                 lemma="ἀρχή"
-                                 normalized="ἀρχῆς"
-                                 strong="746"
+                                 xml:id="n63001005008"
+                                 lemma="ἐντολή"
+                                 normalized="ἐντολήν"
+                                 strong="1785"
                                  number="singular"
                                  gender="feminine"
-                                 case="genitive"
+                                 case="accusative"
                                  head="true"
-                                 gloss="[the] beginning"
-                                 domain="067003"
-                                 ln="67.65"
-                                 morph="N-GSF"
-                                 unicode="ἀρχῆς,">ἀρχῆς</w>
+                                 gloss="a commandment"
+                                 domain="033032"
+                                 ln="33.330"
+                                 morph="N-ASF"
+                                 unicode="ἐντολὴν">ἐντολὴν</w>
+                           </wg>
+                           <wg class="adjp" xml:id="n630010050110011" rule="Adj2Adjp">
+                              <w ref="2JN 1:5!11"
+                                 after=","
+                                 class="adj"
+                                 xml:id="n63001005011"
+                                 lemma="καινός"
+                                 normalized="καινήν"
+                                 strong="2537"
+                                 number="singular"
+                                 gender="feminine"
+                                 case="accusative"
+                                 gloss="new"
+                                 domain="028003"
+                                 ln="28.33"
+                                 morph="A-ASF"
+                                 unicode="καινὴν,">καινὴν</w>
                            </wg>
                         </wg>
                      </wg>
                   </wg>
-               </wg>
-               <wg xml:id="n630010050170030" rule="sub-CL" class="wg" role="adv">
-                  <w ref="2JN 1:5!17"
+                  <w ref="2JN 1:5!12"
                      after=" "
                      class="conj"
-                     xml:id="n63001005017"
-                     lemma="ἵνα"
-                     normalized="ἵνα"
-                     strong="2443"
-                     gloss="that"
-                     domain="090006"
-                     ln="90.22"
+                     xml:id="n63001005012"
+                     lemma="ἀλλά"
+                     normalized="ἀλλά"
+                     strong="235"
+                     gloss="but"
+                     domain="089023"
+                     ln="89.125"
                      morph="CONJ"
-                     unicode="ἵνα">ἵνα</w>
-                  <wg class="cl" xml:id="n630010050180020" rule="V-O">
+                     unicode="ἀλλὰ">ἀλλὰ</w>
+                  <wg class="cl" xml:id="n630010050130040" head="true" rule="O-V-ADV">
+                     <wg role="o" class="np" xml:id="n630010050130011" rule="Pron2NP">
+                        <w ref="2JN 1:5!13"
+                           after=" "
+                           class="pron"
+                           type="relative"
+                           xml:id="n63001005013"
+                           lemma="ὅς"
+                           normalized="ἥν"
+                           strong="3739"
+                           number="singular"
+                           gender="feminine"
+                           case="accusative"
+                           gloss="that which"
+                           morph="R-ASF"
+                           unicode="ἣν">ἣν</w>
+                     </wg>
                      <wg role="v"
                          class="vp"
-                         xml:id="n630010050180011"
+                         xml:id="n630010050140011"
                          head="true"
                          rule="V2VP">
-                        <w ref="2JN 1:5!18"
+                        <w ref="2JN 1:5!14"
                            after=" "
                            class="verb"
-                           xml:id="n63001005018"
-                           lemma="ἀγαπάω"
-                           normalized="ἀγαπῶμεν"
-                           strong="25"
+                           xml:id="n63001005014"
+                           lemma="ἔχω"
+                           normalized="εἴχαμεν"
+                           strong="2192"
                            number="plural"
                            person="first"
-                           tense="present"
+                           tense="imperfect"
                            voice="active"
-                           mood="subjunctive"
+                           mood="indicative"
                            head="true"
-                           gloss="we should love"
-                           domain="025003"
-                           ln="25.43"
-                           morph="V-PAS-1P"
-                           unicode="ἀγαπῶμεν"
-                           frame="A0:n63001001002;n63001005005;n63001001007;n63001001022 A1:n63001005019"
-                           subjref="n63001001002 n63001005005 n63001001007 n63001001022">ἀγαπῶμεν</w>
+                           gloss="we have had"
+                           domain="090013"
+                           ln="90.65"
+                           morph="V-IAI-1P"
+                           unicode="εἴχαμεν"
+                           frame="A0:n63001001002;n63001005005;n63001001007;n63001001022 A1:n63001005013"
+                           subjref="n63001001002 n63001005005 n63001001007 n63001001022">εἴχαμεν</w>
                      </wg>
-                     <wg role="o" class="np" xml:id="n630010050190011" rule="Pron2NP">
-                        <w ref="2JN 1:5!19"
-                           after="."
-                           class="pron"
-                           type="personal"
-                           xml:id="n63001005019"
-                           lemma="ἀλλήλων"
-                           normalized="ἀλλήλους"
-                           strong="240"
-                           number="plural"
-                           gender="masculine"
-                           case="accusative"
-                           gloss="one another"
-                           domain="092005"
-                           ln="92.26"
-                           morph="C-APM"
-                           unicode="ἀλλήλους."
-                           referent="n63001001002 n63001005005 n63001001007 n63001001022">ἀλλήλους</w>
+                     <wg role="adv" class="pp" xml:id="n630010050150020" rule="PrepNp">
+                        <w ref="2JN 1:5!15"
+                           after=" "
+                           class="prep"
+                           xml:id="n63001005015"
+                           lemma="ἀπό"
+                           normalized="ἀπ’"
+                           strong="575"
+                           gloss="from"
+                           domain="067006"
+                           ln="67.131"
+                           morph="PREP"
+                           unicode="ἀπ’">ἀπ’</w>
+                        <wg class="np" xml:id="n630010050160011" head="true" rule="N2NP">
+                           <w ref="2JN 1:5!16"
+                              after=","
+                              class="noun"
+                              type="common"
+                              xml:id="n63001005016"
+                              lemma="ἀρχή"
+                              normalized="ἀρχῆς"
+                              strong="746"
+                              number="singular"
+                              gender="feminine"
+                              case="genitive"
+                              head="true"
+                              gloss="[the] beginning"
+                              domain="067003"
+                              ln="67.65"
+                              morph="N-GSF"
+                              unicode="ἀρχῆς,">ἀρχῆς</w>
+                        </wg>
                      </wg>
+                  </wg>
+               </wg>
+            </wg>
+            <wg role="adv" class="cl" xml:id="n630010050170030" rule="sub-CL">
+               <w ref="2JN 1:5!17"
+                  after=" "
+                  class="conj"
+                  xml:id="n63001005017"
+                  lemma="ἵνα"
+                  normalized="ἵνα"
+                  strong="2443"
+                  gloss="that"
+                  domain="090006"
+                  ln="90.22"
+                  morph="CONJ"
+                  unicode="ἵνα">ἵνα</w>
+               <wg class="cl" xml:id="n630010050180020" rule="V-O">
+                  <wg role="v"
+                      class="vp"
+                      xml:id="n630010050180011"
+                      head="true"
+                      rule="V2VP">
+                     <w ref="2JN 1:5!18"
+                        after=" "
+                        class="verb"
+                        xml:id="n63001005018"
+                        lemma="ἀγαπάω"
+                        normalized="ἀγαπῶμεν"
+                        strong="25"
+                        number="plural"
+                        person="first"
+                        tense="present"
+                        voice="active"
+                        mood="subjunctive"
+                        head="true"
+                        gloss="we should love"
+                        domain="025003"
+                        ln="25.43"
+                        morph="V-PAS-1P"
+                        unicode="ἀγαπῶμεν"
+                        frame="A0:n63001001002;n63001005005;n63001001007;n63001001022 A1:n63001005019"
+                        subjref="n63001001002 n63001005005 n63001001007 n63001001022">ἀγαπῶμεν</w>
+                  </wg>
+                  <wg role="o" class="np" xml:id="n630010050190011" rule="Pron2NP">
+                     <w ref="2JN 1:5!19"
+                        after="."
+                        class="pron"
+                        type="personal"
+                        xml:id="n63001005019"
+                        lemma="ἀλλήλων"
+                        normalized="ἀλλήλους"
+                        strong="240"
+                        number="plural"
+                        gender="masculine"
+                        case="accusative"
+                        gloss="one another"
+                        domain="092005"
+                        ln="92.26"
+                        morph="C-APM"
+                        unicode="ἀλλήλους."
+                        referent="n63001001002 n63001005005 n63001001007 n63001001022">ἀλλήλους</w>
                   </wg>
                </wg>
             </wg>
@@ -1879,219 +1879,217 @@
       <p>
          <milestone unit="verse" id="2JN 1:6">2JN 1:6</milestone> καὶ αὕτη ἐστὶν ἡ ἀγάπη, ἵνα περιπατῶμεν κατὰ τὰς ἐντολὰς αὐτοῦ·</p>
       <wg>
-         <wg xml:id="n630010060010110" rule="Conj-CL" class="wg">
-            <w ref="2JN 1:6!1"
-               after=" "
-               class="conj"
-               xml:id="n63001006001"
-               lemma="καί"
-               normalized="καί"
-               strong="2532"
-               gloss="And"
-               domain="089015"
-               ln="89.87"
-               morph="CONJ"
-               unicode="καὶ">καὶ</w>
-            <wg class="cl"
-                xml:id="n630010060020040"
+         <w ref="2JN 1:6!1"
+            after=" "
+            class="conj"
+            xml:id="n63001006001"
+            lemma="καί"
+            normalized="καί"
+            strong="2532"
+            gloss="And"
+            domain="089015"
+            ln="89.87"
+            morph="CONJ"
+            unicode="καὶ">καὶ</w>
+         <wg class="cl"
+             xml:id="n630010060020040"
+             head="true"
+             rule="P-VC-S"
+             rewrite="ClCl!P-VC-S!that-VP">
+            <wg role="p"
+                class="np"
+                xml:id="n630010060020011"
                 head="true"
-                rule="P-VC-S"
-                rewrite="ClCl!P-VC-S!that-VP">
-               <wg role="p"
-                   class="np"
-                   xml:id="n630010060020011"
-                   head="true"
-                   rule="Pron2NP">
-                  <w ref="2JN 1:6!2"
-                     after=" "
-                     class="pron"
-                     type="demonstrative"
-                     xml:id="n63001006002"
-                     lemma="οὗτος"
-                     normalized="αὕτη"
-                     strong="3778"
+                rule="Pron2NP">
+               <w ref="2JN 1:6!2"
+                  after=" "
+                  class="pron"
+                  type="demonstrative"
+                  xml:id="n63001006002"
+                  lemma="οὗτος"
+                  normalized="αὕτη"
+                  strong="3778"
+                  number="singular"
+                  gender="feminine"
+                  case="nominative"
+                  head="true"
+                  gloss="this"
+                  morph="D-NSF"
+                  unicode="αὕτη"
+                  referent="n63001006007">αὕτη</w>
+            </wg>
+            <wg role="vc" class="vp" xml:id="n630010060030011" rule="V2VP">
+               <w ref="2JN 1:6!3"
+                  after=" "
+                  class="verb"
+                  xml:id="n63001006003"
+                  lemma="εἰμί"
+                  normalized="ἐστίν"
+                  strong="1510"
+                  number="singular"
+                  person="third"
+                  tense="present"
+                  voice="active"
+                  mood="indicative"
+                  gloss="is"
+                  morph="V-PAI-3S"
+                  unicode="ἐστὶν">ἐστὶν</w>
+            </wg>
+            <wg role="s"
+                class="np"
+                xml:id="n630010060040020"
+                articular="true"
+                rule="DetNP">
+               <w ref="2JN 1:6!4"
+                  after=" "
+                  class="det"
+                  xml:id="n63001006004"
+                  lemma="ὁ"
+                  normalized="ἡ"
+                  strong="3588"
+                  number="singular"
+                  gender="feminine"
+                  case="nominative"
+                  gloss="-"
+                  domain="092004"
+                  ln="92.24"
+                  morph="T-NSF"
+                  unicode="ἡ">ἡ</w>
+               <wg class="np" xml:id="n630010060050011" head="true" rule="N2NP">
+                  <w ref="2JN 1:6!5"
+                     after=","
+                     class="noun"
+                     type="common"
+                     xml:id="n63001006005"
+                     lemma="ἀγάπη"
+                     normalized="ἀγάπη"
+                     strong="26"
                      number="singular"
                      gender="feminine"
                      case="nominative"
                      head="true"
-                     gloss="this"
-                     morph="D-NSF"
-                     unicode="αὕτη"
-                     referent="n63001006007">αὕτη</w>
+                     gloss="love"
+                     domain="025003"
+                     ln="25.43"
+                     morph="N-NSF"
+                     unicode="ἀγάπη,">ἀγάπη</w>
                </wg>
-               <wg role="vc" class="vp" xml:id="n630010060030011" rule="V2VP">
-                  <w ref="2JN 1:6!3"
+            </wg>
+            <wg class="cl" xml:id="n630010060060060" rule="that-VP" role="o">
+               <wg class="conj" xml:id="n630010060060011" rule="Adv2Conj">
+                  <w ref="2JN 1:6!6"
                      after=" "
-                     class="verb"
-                     xml:id="n63001006003"
-                     lemma="εἰμί"
-                     normalized="ἐστίν"
-                     strong="1510"
-                     number="singular"
-                     person="third"
-                     tense="present"
-                     voice="active"
-                     mood="indicative"
-                     gloss="is"
-                     morph="V-PAI-3S"
-                     unicode="ἐστὶν">ἐστὶν</w>
+                     class="adv"
+                     xml:id="n63001006006"
+                     lemma="ἵνα"
+                     normalized="ἵνα"
+                     strong="2443"
+                     gloss="that"
+                     domain="090006"
+                     ln="90.22"
+                     morph="CONJ"
+                     unicode="ἵνα">ἵνα</w>
                </wg>
-               <wg role="s"
-                   class="np"
-                   xml:id="n630010060040020"
-                   articular="true"
-                   rule="DetNP">
-                  <w ref="2JN 1:6!4"
-                     after=" "
-                     class="det"
-                     xml:id="n63001006004"
-                     lemma="ὁ"
-                     normalized="ἡ"
-                     strong="3588"
-                     number="singular"
-                     gender="feminine"
-                     case="nominative"
-                     gloss="-"
-                     domain="092004"
-                     ln="92.24"
-                     morph="T-NSF"
-                     unicode="ἡ">ἡ</w>
-                  <wg class="np" xml:id="n630010060050011" head="true" rule="N2NP">
-                     <w ref="2JN 1:6!5"
-                        after=","
-                        class="noun"
-                        type="common"
-                        xml:id="n63001006005"
-                        lemma="ἀγάπη"
-                        normalized="ἀγάπη"
-                        strong="26"
-                        number="singular"
-                        gender="feminine"
-                        case="nominative"
-                        head="true"
-                        gloss="love"
-                        domain="025003"
-                        ln="25.43"
-                        morph="N-NSF"
-                        unicode="ἀγάπη,">ἀγάπη</w>
-                  </wg>
-               </wg>
-               <wg class="cl" xml:id="n630010060060060" rule="that-VP" role="o">
-                  <wg class="conj" xml:id="n630010060060011" rule="Adv2Conj">
-                     <w ref="2JN 1:6!6"
+               <wg class="cl" xml:id="n630010060070050" rule="V-ADV">
+                  <wg role="v"
+                      class="vp"
+                      xml:id="n630010060070011"
+                      head="true"
+                      rule="V2VP">
+                     <w ref="2JN 1:6!7"
                         after=" "
-                        class="adv"
-                        xml:id="n63001006006"
-                        lemma="ἵνα"
-                        normalized="ἵνα"
-                        strong="2443"
-                        gloss="that"
-                        domain="090006"
-                        ln="90.22"
-                        morph="CONJ"
-                        unicode="ἵνα">ἵνα</w>
+                        class="verb"
+                        xml:id="n63001006007"
+                        lemma="περιπατέω"
+                        normalized="περιπατῶμεν"
+                        strong="4043"
+                        number="plural"
+                        person="first"
+                        tense="present"
+                        voice="active"
+                        mood="subjunctive"
+                        head="true"
+                        gloss="we should walk"
+                        domain="041001"
+                        ln="41.11"
+                        morph="V-PAS-1P"
+                        unicode="περιπατῶμεν"
+                        frame="A0:n63001001002;n63001005005;n63001001007;n63001001022"
+                        subjref="n63001001002 n63001005005 n63001001007 n63001001022">περιπατῶμεν</w>
                   </wg>
-                  <wg class="cl" xml:id="n630010060070050" rule="V-ADV">
-                     <wg role="v"
-                         class="vp"
-                         xml:id="n630010060070011"
-                         head="true"
-                         rule="V2VP">
-                        <w ref="2JN 1:6!7"
-                           after=" "
-                           class="verb"
-                           xml:id="n63001006007"
-                           lemma="περιπατέω"
-                           normalized="περιπατῶμεν"
-                           strong="4043"
-                           number="plural"
-                           person="first"
-                           tense="present"
-                           voice="active"
-                           mood="subjunctive"
-                           head="true"
-                           gloss="we should walk"
-                           domain="041001"
-                           ln="41.11"
-                           morph="V-PAS-1P"
-                           unicode="περιπατῶμεν"
-                           frame="A0:n63001001002;n63001005005;n63001001007;n63001001022"
-                           subjref="n63001001002 n63001005005 n63001001007 n63001001022">περιπατῶμεν</w>
-                     </wg>
-                     <wg role="adv"
-                         class="pp"
-                         xml:id="n630010060080040"
+                  <wg role="adv"
+                      class="pp"
+                      xml:id="n630010060080040"
+                      articular="true"
+                      rule="PrepNp">
+                     <w ref="2JN 1:6!8"
+                        after=" "
+                        class="prep"
+                        xml:id="n63001006008"
+                        lemma="κατά"
+                        normalized="κατά"
+                        strong="2596"
+                        gloss="according to"
+                        domain="089005"
+                        ln="89.8"
+                        morph="PREP"
+                        unicode="κατὰ">κατὰ</w>
+                     <wg class="np"
+                         xml:id="n630010060090030"
                          articular="true"
-                         rule="PrepNp">
-                        <w ref="2JN 1:6!8"
+                         head="true"
+                         rule="DetNP">
+                        <w ref="2JN 1:6!9"
                            after=" "
-                           class="prep"
-                           xml:id="n63001006008"
-                           lemma="κατά"
-                           normalized="κατά"
-                           strong="2596"
-                           gloss="according to"
-                           domain="089005"
-                           ln="89.8"
-                           morph="PREP"
-                           unicode="κατὰ">κατὰ</w>
-                        <wg class="np"
-                            xml:id="n630010060090030"
-                            articular="true"
-                            head="true"
-                            rule="DetNP">
-                           <w ref="2JN 1:6!9"
-                              after=" "
-                              class="det"
-                              xml:id="n63001006009"
-                              lemma="ὁ"
-                              normalized="τάς"
-                              strong="3588"
-                              number="plural"
-                              gender="feminine"
-                              case="accusative"
-                              gloss="the"
-                              domain="092004"
-                              ln="92.24"
-                              morph="T-APF"
-                              unicode="τὰς">τὰς</w>
-                           <wg class="np" xml:id="n630010060100020" head="true" rule="NPofNP">
-                              <wg class="np" xml:id="n630010060100011" head="true" rule="N2NP">
-                                 <w ref="2JN 1:6!10"
-                                    after=" "
-                                    class="noun"
-                                    type="common"
-                                    xml:id="n63001006010"
-                                    lemma="ἐντολή"
-                                    normalized="ἐντολάς"
-                                    strong="1785"
-                                    number="plural"
-                                    gender="feminine"
-                                    case="accusative"
-                                    head="true"
-                                    gloss="commandments"
-                                    domain="033032"
-                                    ln="33.330"
-                                    morph="N-APF"
-                                    unicode="ἐντολὰς">ἐντολὰς</w>
-                              </wg>
-                              <wg class="np" xml:id="n630010060110011" rule="Pron2NP">
-                                 <w ref="2JN 1:6!11"
-                                    after="·"
-                                    class="pron"
-                                    type="personal"
-                                    xml:id="n63001006011"
-                                    lemma="αὐτός"
-                                    normalized="αὐτοῦ"
-                                    strong="846"
-                                    number="singular"
-                                    gender="masculine"
-                                    case="genitive"
-                                    gloss="of Him"
-                                    morph="P-GSM"
-                                    unicode="αὐτοῦ·"
-                                    referent="n63001004017">αὐτοῦ</w>
-                              </wg>
+                           class="det"
+                           xml:id="n63001006009"
+                           lemma="ὁ"
+                           normalized="τάς"
+                           strong="3588"
+                           number="plural"
+                           gender="feminine"
+                           case="accusative"
+                           gloss="the"
+                           domain="092004"
+                           ln="92.24"
+                           morph="T-APF"
+                           unicode="τὰς">τὰς</w>
+                        <wg class="np" xml:id="n630010060100020" head="true" rule="NPofNP">
+                           <wg class="np" xml:id="n630010060100011" head="true" rule="N2NP">
+                              <w ref="2JN 1:6!10"
+                                 after=" "
+                                 class="noun"
+                                 type="common"
+                                 xml:id="n63001006010"
+                                 lemma="ἐντολή"
+                                 normalized="ἐντολάς"
+                                 strong="1785"
+                                 number="plural"
+                                 gender="feminine"
+                                 case="accusative"
+                                 head="true"
+                                 gloss="commandments"
+                                 domain="033032"
+                                 ln="33.330"
+                                 morph="N-APF"
+                                 unicode="ἐντολὰς">ἐντολὰς</w>
+                           </wg>
+                           <wg class="np" xml:id="n630010060110011" rule="Pron2NP">
+                              <w ref="2JN 1:6!11"
+                                 after="·"
+                                 class="pron"
+                                 type="personal"
+                                 xml:id="n63001006011"
+                                 lemma="αὐτός"
+                                 normalized="αὐτοῦ"
+                                 strong="846"
+                                 number="singular"
+                                 gender="masculine"
+                                 case="genitive"
+                                 gloss="of Him"
+                                 morph="P-GSM"
+                                 unicode="αὐτοῦ·"
+                                 referent="n63001004017">αὐτοῦ</w>
                            </wg>
                         </wg>
                      </wg>
@@ -2189,7 +2187,7 @@
                   morph="V-PAI-3S"
                   unicode="ἐστιν,">ἐστιν</w>
             </wg>
-            <wg xml:id="n630010060160040" rule="sub-CL" class="wg" role="adv">
+            <wg role="adv" class="cl" xml:id="n630010060160040" rule="sub-CL">
                <w ref="2JN 1:6!16"
                   after=" "
                   class="conj"
@@ -2345,7 +2343,7 @@
       <p>
          <milestone unit="verse" id="2JN 1:7">2JN 1:7</milestone> ὅτι πολλοὶ πλάνοι ἐξῆλθον εἰς τὸν κόσμον, οἱ μὴ ὁμολογοῦντες Ἰησοῦν Χριστὸν ἐρχόμενον ἐν σαρκί·</p>
       <wg>
-         <wg xml:id="n630010070010150" rule="sub-CL" class="wg" role="adv">
+         <wg role="adv" class="cl" xml:id="n630010070010150" rule="sub-CL">
             <w ref="2JN 1:7!1"
                after=" "
                class="conj"
@@ -2854,7 +2852,7 @@
                   unicode="ἑαυτούς,"
                   referent="n63001005005 n63001001007">ἑαυτούς</w>
             </wg>
-            <wg xml:id="n630010080030090" rule="sub-CL" class="wg" role="adv">
+            <wg role="adv" class="cl" xml:id="n630010080030090" rule="sub-CL">
                <w ref="2JN 1:8!3"
                   after=" "
                   class="conj"
@@ -2868,7 +2866,7 @@
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
                <wg role="g"
-                   class="g"
+                   class="group"
                    xml:id="n630010080040080"
                    rule="notclbutcl2cl">
                   <wg class="advp" xml:id="n630010080040011" rule="Adv2Advp">
@@ -3087,7 +3085,7 @@
                      ln="92.24"
                      morph="T-NSM"
                      unicode="ὁ">ὁ</w>
-                  <wg role="g" class="g" xml:id="n630010090030090" rule="clacl">
+                  <wg role="g" class="group" xml:id="n630010090030090" rule="clacl">
                      <wg class="cl" xml:id="n630010090030013" head="true" rule="V2CL">
                         <wg role="v"
                             class="vp"
@@ -3607,7 +3605,7 @@
              head="true"
              rule="CLaCL"
              rewrite="ClCl2!sub-CL!CLaCL">
-            <wg xml:id="n630010100010110" rule="sub-CL" class="wg" role="adv">
+            <wg role="adv" class="cl" xml:id="n630010100010110" rule="sub-CL">
                <w ref="2JN 1:10!1"
                   after=" "
                   class="conj"
@@ -3620,7 +3618,7 @@
                   ln="89.65"
                   morph="COND"
                   unicode="εἴ">εἴ</w>
-               <wg role="g" class="g" xml:id="n630010100020100" rule="clacl">
+               <wg role="g" class="group" xml:id="n630010100020100" rule="clacl">
                   <wg class="cl" xml:id="n630010100020040" head="true" rule="S-V-ADV">
                      <wg role="s" class="np" xml:id="n630010100020011" rule="Pron2NP">
                         <w ref="2JN 1:10!2"
@@ -4005,237 +4003,235 @@
       <p>
          <milestone unit="verse" id="2JN 1:11">2JN 1:11</milestone> ὁ λέγων γὰρ αὐτῷ χαίρειν κοινωνεῖ τοῖς ἔργοις αὐτοῦ τοῖς πονηροῖς.</p>
       <wg>
-         <wg xml:id="n630010110030110" rule="Conj-CL" class="wg">
-            <w ref="2JN 1:11!3"
-               after=" "
-               class="conj"
-               xml:id="n63001011003"
-               lemma="γάρ"
-               normalized="γάρ"
-               strong="1063"
-               discontinuous="true"
-               gloss="for"
-               domain="089007"
-               ln="89.23"
-               morph="CONJ"
-               unicode="γὰρ">γὰρ</w>
-            <wg class="cl" xml:id="n630010110010100" rule="S-V-ADV">
-               <wg role="s"
-                   class="np"
-                   xml:id="n630010110010040"
-                   articular="true"
-                   rule="DetCL">
-                  <w ref="2JN 1:11!1"
-                     after=" "
-                     class="det"
-                     xml:id="n63001011001"
-                     lemma="ὁ"
-                     normalized="ὁ"
-                     strong="3588"
-                     number="singular"
-                     gender="masculine"
-                     case="nominative"
-                     gloss="the [one]"
-                     domain="092004"
-                     ln="92.24"
-                     morph="T-NSM"
-                     unicode="ὁ">ὁ</w>
-                  <wg class="cl" xml:id="n630010110020030" head="true" rule="V-IO-O">
-                     <wg role="v"
-                         class="vp"
-                         xml:id="n630010110020011"
-                         head="true"
-                         rule="V2VP">
-                        <w ref="2JN 1:11!2"
+         <w ref="2JN 1:11!3"
+            after=" "
+            class="conj"
+            xml:id="n63001011003"
+            lemma="γάρ"
+            normalized="γάρ"
+            strong="1063"
+            discontinuous="true"
+            gloss="for"
+            domain="089007"
+            ln="89.23"
+            morph="CONJ"
+            unicode="γὰρ">γὰρ</w>
+         <wg class="cl" xml:id="n630010110010100" rule="S-V-ADV">
+            <wg role="s"
+                class="np"
+                xml:id="n630010110010040"
+                articular="true"
+                rule="DetCL">
+               <w ref="2JN 1:11!1"
+                  after=" "
+                  class="det"
+                  xml:id="n63001011001"
+                  lemma="ὁ"
+                  normalized="ὁ"
+                  strong="3588"
+                  number="singular"
+                  gender="masculine"
+                  case="nominative"
+                  gloss="the [one]"
+                  domain="092004"
+                  ln="92.24"
+                  morph="T-NSM"
+                  unicode="ὁ">ὁ</w>
+               <wg class="cl" xml:id="n630010110020030" head="true" rule="V-IO-O">
+                  <wg role="v"
+                      class="vp"
+                      xml:id="n630010110020011"
+                      head="true"
+                      rule="V2VP">
+                     <w ref="2JN 1:11!2"
+                        after=" "
+                        class="verb"
+                        xml:id="n63001011002"
+                        lemma="λέγω"
+                        normalized="λέγων"
+                        strong="3004"
+                        number="singular"
+                        gender="masculine"
+                        case="nominative"
+                        tense="present"
+                        voice="active"
+                        mood="participle"
+                        type="?"
+                        head="true"
+                        gloss="telling"
+                        domain="033006"
+                        ln="33.69"
+                        morph="V-PAP-NSM"
+                        unicode="λέγων"
+                        frame="A0:n00000000000 A2:n63001011004 A1:n63001011005">λέγων</w>
+                  </wg>
+                  <wg role="io" class="np" xml:id="n630010110040011" rule="Pron2NP">
+                     <w ref="2JN 1:11!4"
+                        after=" "
+                        class="pron"
+                        type="personal"
+                        xml:id="n63001011004"
+                        lemma="αὐτός"
+                        normalized="αὐτῷ"
+                        strong="846"
+                        number="singular"
+                        gender="masculine"
+                        case="dative"
+                        gloss="him"
+                        morph="P-DSM"
+                        unicode="αὐτῷ"
+                        referent="n63001010002">αὐτῷ</w>
+                  </wg>
+                  <wg role="o" class="cl" xml:id="n630010110050013" rule="V2CL">
+                     <wg role="v" class="vp" xml:id="n630010110050011" rule="V2VP">
+                        <w ref="2JN 1:11!5"
                            after=" "
                            class="verb"
-                           xml:id="n63001011002"
-                           lemma="λέγω"
-                           normalized="λέγων"
-                           strong="3004"
-                           number="singular"
-                           gender="masculine"
-                           case="nominative"
+                           xml:id="n63001011005"
+                           lemma="χαίρω"
+                           normalized="χαίρειν"
+                           strong="5463"
                            tense="present"
                            voice="active"
-                           mood="participle"
+                           mood="infinitive"
                            type="?"
-                           head="true"
-                           gloss="telling"
-                           domain="033006"
-                           ln="33.69"
-                           morph="V-PAP-NSM"
-                           unicode="λέγων"
-                           frame="A0:n00000000000 A2:n63001011004 A1:n63001011005">λέγων</w>
-                     </wg>
-                     <wg role="io" class="np" xml:id="n630010110040011" rule="Pron2NP">
-                        <w ref="2JN 1:11!4"
-                           after=" "
-                           class="pron"
-                           type="personal"
-                           xml:id="n63001011004"
-                           lemma="αὐτός"
-                           normalized="αὐτῷ"
-                           strong="846"
-                           number="singular"
-                           gender="masculine"
-                           case="dative"
-                           gloss="him"
-                           morph="P-DSM"
-                           unicode="αὐτῷ"
-                           referent="n63001010002">αὐτῷ</w>
-                     </wg>
-                     <wg role="o" class="cl" xml:id="n630010110050013" rule="V2CL">
-                        <wg role="v" class="vp" xml:id="n630010110050011" rule="V2VP">
-                           <w ref="2JN 1:11!5"
-                              after=" "
-                              class="verb"
-                              xml:id="n63001011005"
-                              lemma="χαίρω"
-                              normalized="χαίρειν"
-                              strong="5463"
-                              tense="present"
-                              voice="active"
-                              mood="infinitive"
-                              type="?"
-                              gloss="to rejoice"
-                              domain="033003"
-                              ln="33.22"
-                              morph="V-PAN"
-                              unicode="χαίρειν"
-                              frame="A0:n63001011002"
-                              subjref="n63001011002">χαίρειν</w>
-                        </wg>
+                           gloss="to rejoice"
+                           domain="033003"
+                           ln="33.22"
+                           morph="V-PAN"
+                           unicode="χαίρειν"
+                           frame="A0:n63001011002"
+                           subjref="n63001011002">χαίρειν</w>
                      </wg>
                   </wg>
                </wg>
-               <wg role="v"
-                   class="vp"
-                   xml:id="n630010110060011"
+            </wg>
+            <wg role="v"
+                class="vp"
+                xml:id="n630010110060011"
+                head="true"
+                rule="V2VP">
+               <w ref="2JN 1:11!6"
+                  after=" "
+                  class="verb"
+                  xml:id="n63001011006"
+                  lemma="κοινωνέω"
+                  normalized="κοινωνεῖ"
+                  strong="2841"
+                  number="singular"
+                  person="third"
+                  tense="present"
+                  voice="active"
+                  mood="indicative"
+                  head="true"
+                  gloss="partakes"
+                  domain="057008"
+                  ln="57.98"
+                  morph="V-PAI-3S"
+                  unicode="κοινωνεῖ"
+                  frame="A0:n63001011002">κοινωνεῖ</w>
+            </wg>
+            <wg role="adv"
+                class="np"
+                xml:id="n630010110070050"
+                articular="true"
+                rule="DetNP">
+               <w ref="2JN 1:11!7"
+                  after=" "
+                  class="det"
+                  xml:id="n63001011007"
+                  lemma="ὁ"
+                  normalized="τοῖς"
+                  strong="3588"
+                  number="plural"
+                  gender="neuter"
+                  case="dative"
+                  gloss="in the"
+                  domain="092004"
+                  ln="92.24"
+                  morph="T-DPN"
+                  unicode="τοῖς">τοῖς</w>
+               <wg class="np"
+                   xml:id="n630010110080040"
                    head="true"
-                   rule="V2VP">
-                  <w ref="2JN 1:11!6"
-                     after=" "
-                     class="verb"
-                     xml:id="n63001011006"
-                     lemma="κοινωνέω"
-                     normalized="κοινωνεῖ"
-                     strong="2841"
-                     number="singular"
-                     person="third"
-                     tense="present"
-                     voice="active"
-                     mood="indicative"
-                     head="true"
-                     gloss="partakes"
-                     domain="057008"
-                     ln="57.98"
-                     morph="V-PAI-3S"
-                     unicode="κοινωνεῖ"
-                     frame="A0:n63001011002">κοινωνεῖ</w>
-               </wg>
-               <wg role="adv"
-                   class="np"
-                   xml:id="n630010110070050"
-                   articular="true"
-                   rule="DetNP">
-                  <w ref="2JN 1:11!7"
-                     after=" "
-                     class="det"
-                     xml:id="n63001011007"
-                     lemma="ὁ"
-                     normalized="τοῖς"
-                     strong="3588"
-                     number="plural"
-                     gender="neuter"
-                     case="dative"
-                     gloss="in the"
-                     domain="092004"
-                     ln="92.24"
-                     morph="T-DPN"
-                     unicode="τοῖς">τοῖς</w>
-                  <wg class="np"
-                      xml:id="n630010110080040"
-                      head="true"
-                      rule="NPDetAdj">
-                     <wg class="np" xml:id="n630010110080020" head="true" rule="NPofNP">
-                        <wg class="np" xml:id="n630010110080011" head="true" rule="N2NP">
-                           <w ref="2JN 1:11!8"
-                              after=" "
-                              class="noun"
-                              type="common"
-                              xml:id="n63001011008"
-                              lemma="ἔργον"
-                              normalized="ἔργοις"
-                              strong="2041"
-                              number="plural"
-                              gender="neuter"
-                              case="dative"
-                              head="true"
-                              gloss="works"
-                              domain="042002"
-                              ln="42.11"
-                              morph="N-DPN"
-                              unicode="ἔργοις">ἔργοις</w>
-                        </wg>
-                        <wg class="np" xml:id="n630010110090011" rule="Pron2NP">
-                           <w ref="2JN 1:11!9"
-                              after=" "
-                              class="pron"
-                              type="personal"
-                              xml:id="n63001011009"
-                              lemma="αὐτός"
-                              normalized="αὐτοῦ"
-                              strong="846"
-                              number="singular"
-                              gender="masculine"
-                              case="genitive"
-                              gloss="of him"
-                              morph="P-GSM"
-                              unicode="αὐτοῦ"
-                              referent="n63001010002">αὐτοῦ</w>
-                        </wg>
-                     </wg>
-                     <wg class="np"
-                         xml:id="n630010110100020"
-                         articular="true"
-                         rule="DetAdj">
-                        <w ref="2JN 1:11!10"
+                   rule="NPDetAdj">
+                  <wg class="np" xml:id="n630010110080020" head="true" rule="NPofNP">
+                     <wg class="np" xml:id="n630010110080011" head="true" rule="N2NP">
+                        <w ref="2JN 1:11!8"
                            after=" "
-                           class="det"
-                           xml:id="n63001011010"
-                           lemma="ὁ"
-                           normalized="τοῖς"
-                           strong="3588"
+                           class="noun"
+                           type="common"
+                           xml:id="n63001011008"
+                           lemma="ἔργον"
+                           normalized="ἔργοις"
+                           strong="2041"
                            number="plural"
                            gender="neuter"
                            case="dative"
-                           gloss="-"
-                           domain="092004"
-                           ln="92.24"
-                           morph="T-DPN"
-                           unicode="τοῖς">τοῖς</w>
-                        <wg class="adjp"
-                            xml:id="n630010110110011"
-                            head="true"
-                            rule="Adj2Adjp">
-                           <w ref="2JN 1:11!11"
-                              after="."
-                              class="adj"
-                              xml:id="n63001011011"
-                              lemma="πονηρός"
-                              normalized="πονηροῖς"
-                              strong="4190"
-                              number="plural"
-                              gender="neuter"
-                              case="dative"
-                              head="true"
-                              gloss="evil"
-                              domain="088015"
-                              ln="88.110"
-                              morph="A-DPN"
-                              unicode="πονηροῖς.">πονηροῖς</w>
-                        </wg>
+                           head="true"
+                           gloss="works"
+                           domain="042002"
+                           ln="42.11"
+                           morph="N-DPN"
+                           unicode="ἔργοις">ἔργοις</w>
+                     </wg>
+                     <wg class="np" xml:id="n630010110090011" rule="Pron2NP">
+                        <w ref="2JN 1:11!9"
+                           after=" "
+                           class="pron"
+                           type="personal"
+                           xml:id="n63001011009"
+                           lemma="αὐτός"
+                           normalized="αὐτοῦ"
+                           strong="846"
+                           number="singular"
+                           gender="masculine"
+                           case="genitive"
+                           gloss="of him"
+                           morph="P-GSM"
+                           unicode="αὐτοῦ"
+                           referent="n63001010002">αὐτοῦ</w>
+                     </wg>
+                  </wg>
+                  <wg class="np"
+                      xml:id="n630010110100020"
+                      articular="true"
+                      rule="DetAdj">
+                     <w ref="2JN 1:11!10"
+                        after=" "
+                        class="det"
+                        xml:id="n63001011010"
+                        lemma="ὁ"
+                        normalized="τοῖς"
+                        strong="3588"
+                        number="plural"
+                        gender="neuter"
+                        case="dative"
+                        gloss="-"
+                        domain="092004"
+                        ln="92.24"
+                        morph="T-DPN"
+                        unicode="τοῖς">τοῖς</w>
+                     <wg class="adjp"
+                         xml:id="n630010110110011"
+                         head="true"
+                         rule="Adj2Adjp">
+                        <w ref="2JN 1:11!11"
+                           after="."
+                           class="adj"
+                           xml:id="n63001011011"
+                           lemma="πονηρός"
+                           normalized="πονηροῖς"
+                           strong="4190"
+                           number="plural"
+                           gender="neuter"
+                           case="dative"
+                           head="true"
+                           gloss="evil"
+                           domain="088015"
+                           ln="88.110"
+                           morph="A-DPN"
+                           unicode="πονηροῖς.">πονηροῖς</w>
                      </wg>
                   </wg>
                </wg>
@@ -4247,7 +4243,7 @@
       <p>
          <milestone unit="verse" id="2JN 1:12">2JN 1:12</milestone> Πολλὰ ἔχων ὑμῖν γράφειν οὐκ ἐβουλήθην διὰ χάρτου καὶ μέλανος, ἀλλὰ ἐλπίζω γενέσθαι πρὸς ὑμᾶς καὶ στόμα πρὸς στόμα λαλῆσαι, ἵνα ἡ χαρὰ ἡμῶν πεπληρωμένη ᾖ.</p>
       <wg>
-         <wg role="g" class="g" xml:id="n630010120020260" rule="clacl">
+         <wg role="g" class="group" xml:id="n630010120020260" rule="clacl">
             <wg class="cl"
                 xml:id="n630010120020100"
                 head="true"
@@ -4635,7 +4631,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg xml:id="n630010120210060" rule="sub-CL" class="wg" role="adv">
+               <wg role="adv" class="cl" xml:id="n630010120210060" rule="sub-CL">
                   <w ref="2JN 1:12!21"
                      after=" "
                      class="conj"
