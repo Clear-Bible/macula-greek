@@ -272,7 +272,8 @@ declare function local:clause($node)
     else if ($node/@Rule = "sub-CL") then
         <wg role="adv">
           {
-                local:attributes($node)[not(name(.) = ("role"))],
+                local:attributes($node)[not(name(.) = ("role", "class"))],
+                attribute class {"wg"},
                 $node/Node ! local:node(.)         
            }     
         </wg>       
@@ -281,8 +282,9 @@ declare function local:clause($node)
       (: ###  Except for a list of lemmas  - hina should be adverbial, hoti is a complement (object) ### :)
           <wg>     
             {
-                local:attributes($node)[not(name(.) = ("role"))],
+                local:attributes($node)[not(name(.) = ("role", "class"))],
                 attribute role {"o"},
+                attribute class {"wg"},
                 $node/Node ! local:node(.)         
            }     
           </wg>      
@@ -298,16 +300,36 @@ declare function local:clause($node)
           
      else if ($node/parent::Node/@Rule=("ClCl2","ClCl") 
             and $node/Node[@Cat="V"]/descendant::Node[@Mood="Participle" and @Case=("Genitive", "Accusative")] ) then
-        <wg role="adv" dbg="#########">
+        <wg role="adv">
           {
                 local:attributes($node)[not(name(.) = ("role"))],
                 $node/Node ! local:node(.)         
            }     
         </wg>    
    
+     else if ($node/@Rule="V2CL") then 
+         <wg>
+           {
+              if  ($node/*[@Cat="V"]/descendant::Node[@LN="91.13"]) then (
+                  attribute role {"aux"},
+                  attribute class {"minor"},
+                   local:attributes($node)[not(name(.) = ("role","class"))]
+              )
+              else
+                   local:attributes($node)
+              ,
+              $node/Node ! local:node(.)
+           }
+          </wg>
+   
      else if ($node/@Rule=("Conj-CL")) then
-             $node/Node ! local:node(.)         
-
+         <wg>
+           {
+                local:attributes($node)[not(name(.) = ("class"))],
+                attribute class {"wg"},
+                $node/Node ! local:node(.)         
+            }
+          </wg>
     else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
           (: ### TODO:  Handle groups of groups :)
         <wg role="g" class="group">
