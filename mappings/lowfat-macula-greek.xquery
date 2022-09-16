@@ -210,35 +210,49 @@ declare function local:raise-first-of-two-siblings($node)
 {
     <wg>
      {
-        let $first := $node/*[1]
-        let $second := $node/*[2]
+        let $first := local:node($node/*[1])
+        let $second := local:node($node/*[2])
         return (
-            local:attributes($first),
-            attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule),"!")},
-            
-            local:node($first)/*,
-            local:node($second)
-        )
+            $first/@*,
+            $first/*,
+            $second
+         )
       }
       </wg>     
+};
+
+declare function local:force-to-adjunct-or-aux($node)
+{
+   let $xfrm := local:node($node)
+   let $attrs := $xfrm/@*
+   let $content := $xfrm/*
+   let $ename := name($xfrm)
+   return 
+        if ($xfrm/@role) then $xfrm
+        else if ($xfrm/@ClType="Minor") then element { $ename } {
+               $attrs[name(.) ne "class"],
+               attribute role {"aux"},
+               attribute class {"minor"},
+               $content
+           }
+        else element { $ename } {
+               $attrs,
+               attribute role {"adv"},
+               $content
+        }
 };
 
 declare function local:raise-second-of-two-siblings($node)
 {
     <wg>
      {
-        let $first := $node/*[1]
-        let $second := $node/*[2]
+        let $first := local:node($node/*[1])
+        let $second := local:node($node/*[2])
         return (
-            if (false()) then ()
-            else (
-                local:attributes($second),
-                attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule),"!")},
-            
-                local:node($first)    (: Make sure that this becomes an adjunct :)
-                ,
-                local:node($second)/*
-            )
+            $second/@*,        
+            $first
+            ,
+            $second/*
         )
       }
       </wg>
@@ -299,7 +313,7 @@ declare function local:clause($node)
           </wg> 
           
      else if ($node/parent::Node/@Rule=("ClCl2","ClCl") 
-            and $node/Node[@Cat="V"]/descendant::Node[@Mood="Participle" and @Case=("Genitive", "Accusative")] ) then
+            and $node/Node[@Cat=("V","VC")]/Node[@Mood="Participle" and @Case=("Genitive", "Accusative","Dative")] ) then
         <wg role="adv">
           {
                 local:attributes($node)[not(name(.) = ("role"))],
@@ -313,7 +327,7 @@ declare function local:clause($node)
               if  ($node/*[@Cat="V"]/descendant::Node[@LN="91.13"]) then (
                   attribute role {"aux"},
                   attribute class {"minor"},
-                   local:attributes($node)[not(name(.) = ("role","class"))]
+                  local:attributes($node)[not(name(.) = ("role","class"))]
               )
               else
                    local:attributes($node)
@@ -386,12 +400,6 @@ declare function local:phrase($node)
 };
 
 declare function local:role($node)
-(:
-  A role node can have more than one child in some
-  corner cases in the GBI trees, e.g. Gal 4:18, where
-  an ADV node contains ADV conj ADV.  I imagine this
-  occurs only for conjunctions, but I am not sure.
-:)
 {
     let $role := attribute role {lower-case($node/@Cat)}
     return

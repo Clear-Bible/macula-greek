@@ -569,8 +569,7 @@
          <wg class="cl"
              xml:id="n510010030010510"
              head="true"
-             rule="V-O-ADV-ADV-ADV"
-             rewrite="ClCl!V-O-ADV-ADV-ADV!sub-CL">
+             rule="V-O-ADV-ADV-ADV">
             <wg role="v"
                 class="vp"
                 xml:id="n510010030010011"
@@ -1675,11 +1674,7 @@
                   ln="64.14"
                   morph="ADV"
                   unicode="καθὼς">καθὼς</w>
-               <wg class="cl"
-                   xml:id="n510010060060090"
-                   head="true"
-                   rule="ADV-V"
-                   rewrite="ClCl!ADV-V!sub-CL">
+               <wg class="cl" xml:id="n510010060060090" head="true" rule="ADV-V">
                   <wg role="adv"
                       class="pp"
                       xml:id="n510010060060050"
@@ -1879,8 +1874,7 @@
                          xml:id="n510010060160150"
                          head="true"
                          rule="ADV-ADV"
-                         cltype="VerbElided"
-                         rewrite="ClCl!ADV-ADV!sub-CL">
+                         cltype="VerbElided">
                         <wg role="adv" class="pp" xml:id="n510010060160030" rule="AdvPp">
                            <wg class="advp" xml:id="n510010060160011" rule="Adv2Advp">
                               <w ref="COL 1:6!16"
@@ -4821,11 +4815,11 @@
                                                       </wg>
                                                    </wg>
                                                 </wg>
-                                                <wg class="cl"
+                                                <wg role="adv"
                                                     xml:id="n510010160010260"
                                                     head="true"
                                                     rule="sub-CL"
-                                                    rewrite="ClCl2!S-VC-P!sub-CL">
+                                                    class="wg">
                                                    <wg class="cl" xml:id="n510010150010100" rule="S-VC-P">
                                                       <wg role="s" class="np" xml:id="n510010150010011" rule="Pron2NP">
                                                          <w ref="COL 1:15!1"
@@ -5943,8 +5937,7 @@
                 xml:id="n510010180020080"
                 articular="true"
                 head="true"
-                rule="S-VC-P"
-                rewrite="ClCl!S-VC-P!ClCl">
+                rule="S-VC-P">
                <wg role="s" class="np" xml:id="n510010180020011" rule="Pron2NP">
                   <w ref="COL 1:18!2"
                      after=" "
@@ -6110,11 +6103,11 @@
                      </wg>
                   </wg>
                </wg>
-               <wg class="cl"
-                   xml:id="n510010180100130"
+               <wg role="adv"
+                   xml:id="n510010180170060"
                    head="true"
-                   rule="ClCl2"
-                   rewrite="ClCl!ClCl2!sub-CL">
+                   rule="sub-CL"
+                   class="wg">
                   <wg class="cl" xml:id="n510010180100070" rule="S-VC-P">
                      <wg role="s" class="np" xml:id="n510010180100011" rule="Pron2NP">
                         <w ref="COL 1:18!10"
@@ -6569,8 +6562,7 @@
                            <wg class="cl"
                                xml:id="n510010200020140"
                                head="true"
-                               rule="ADV-V-O-ADV-ADV"
-                               rewrite="ClCl!ADV-V-O-ADV-ADV!ADV-O">
+                               rule="ADV-V-O-ADV-ADV">
                               <wg role="adv" class="pp" xml:id="n510010200020020" rule="PrepNp">
                                  <w ref="COL 1:20!2"
                                     after=" "
@@ -7395,8 +7387,7 @@
                <wg class="cl"
                    xml:id="n510010220010200"
                    head="true"
-                   rule="ADV-V-ADV-ADV-ADV"
-                   rewrite="ClCl!ADV-V-ADV-ADV-ADV!sub-CL">
+                   rule="ADV-V-ADV-ADV-ADV">
                   <wg role="adv"
                       class="advp"
                       xml:id="n510010220010011"
@@ -9679,8 +9670,7 @@
             <wg class="cl"
                 xml:id="n510010260120300"
                 head="true"
-                rule="ADV-V-IO"
-                rewrite="ClCl!ADV-V-IO!ClCl">
+                rule="ADV-V-IO">
                <wg role="adv"
                    class="advp"
                    xml:id="n510010260120011"
@@ -10337,8 +10327,7 @@
                <wg class="cl"
                    xml:id="n510010280010130"
                    head="true"
-                   rule="O-S-V-ADV"
-                   rewrite="ClCl!O-S-V-ADV!sub-CL">
+                   rule="O-S-V-ADV">
                   <wg role="o" class="np" xml:id="n510010280010011" rule="Pron2NP">
                      <w ref="COL 1:28!1"
                         after=" "
@@ -10627,8 +10616,7 @@
                      <wg class="cl"
                          xml:id="n510010280150060"
                          head="true"
-                         rule="V-O-O2-ADV"
-                         rewrite="ClCl!V-O-O2-ADV!ADV-ADV-V-ADV">
+                         rule="V-O-O2-ADV">
                         <wg role="v"
                             class="vp"
                             xml:id="n510010280150011"
@@ -11084,11 +11072,7 @@
                gloss="for"
                morph="CONJ"
                unicode="γὰρ">γὰρ</w>
-            <wg class="cl"
-                xml:id="n510020010010210"
-                head="true"
-                rule="V-O"
-                rewrite="ClCl!V-O!sub-CL">
+            <wg class="cl" xml:id="n510020010010210" head="true" rule="V-O">
                <wg role="v"
                    class="vp"
                    xml:id="n510020010010011"
@@ -12171,11 +12155,7 @@
       <p>
          <milestone unit="verse" id="COL 2:4">COL 2:4</milestone> Τοῦτο λέγω ἵνα μηδεὶς ὑμᾶς παραλογίζηται ἐν πιθανολογίᾳ.</p>
       <wg>
-         <wg class="cl"
-             xml:id="n510020040010020"
-             head="true"
-             rule="O-V"
-             rewrite="ClCl!O-V!sub-CL">
+         <wg class="cl" xml:id="n510020040010020" head="true" rule="O-V">
             <wg role="o" class="np" xml:id="n510020040010011" rule="Pron2NP">
                <w ref="COL 2:4!1"
                   after=" "
@@ -12352,11 +12332,11 @@
                ln="89.23"
                morph="CONJ"
                unicode="γὰρ">γὰρ</w>
-            <wg class="cl"
-                xml:id="n510020050070200"
+            <wg xml:id="n510020050070200"
                 head="true"
                 rule="Conj-CL"
-                rewrite="ClCl2!sub-CL!Conj-CL">
+                class="wg"
+                role="adv">
                <wg role="adv" xml:id="n510020050010050" rule="sub-CL" class="wg">
                   <w ref="COL 2:5!1"
                      after=" "
@@ -12883,8 +12863,7 @@
             <wg class="cl"
                 xml:id="n510020060090170"
                 head="true"
-                rule="ADV-V-ADV-ADV"
-                rewrite="ClCl2!sub-CL!ADV-V-ADV-ADV">
+                rule="ADV-V-ADV-ADV">
                <wg role="adv" xml:id="n510020060010070" rule="sub-CL" class="wg">
                   <w ref="COL 2:6!1"
                      after=" "
@@ -13205,11 +13184,7 @@
                      ln="89.92"
                      morph="CONJ"
                      unicode="καὶ">καὶ</w>
-                  <wg class="cl"
-                      xml:id="n510020070070030"
-                      head="true"
-                      rule="V-ADV"
-                      rewrite="ClCl!V-ADV!sub-CL">
+                  <wg class="cl" xml:id="n510020070070030" head="true" rule="V-ADV">
                      <wg role="v"
                          class="vp"
                          xml:id="n510020070070011"
@@ -13392,11 +13367,7 @@
          <milestone unit="verse" id="COL 2:11">COL 2:11</milestone>
          <milestone unit="verse" id="COL 2:12">COL 2:12</milestone> Βλέπετε μή τις ὑμᾶς ἔσται ὁ συλαγωγῶν διὰ τῆς φιλοσοφίας καὶ κενῆς ἀπάτης κατὰ τὴν παράδοσιν τῶν ἀνθρώπων, κατὰ τὰ στοιχεῖα τοῦ κόσμου καὶ οὐ κατὰ Χριστόν· ὅτι ἐν αὐτῷ κατοικεῖ πᾶν τὸ πλήρωμα τῆς Θεότητος σωματικῶς, καὶ ἐστὲ ἐν αὐτῷ πεπληρωμένοι, ὅς ἐστιν ἡ κεφαλὴ πάσης ἀρχῆς καὶ ἐξουσίας, ἐν ᾧ καὶ περιετμήθητε περιτομῇ ἀχειροποιήτῳ ἐν τῇ ἀπεκδύσει τοῦ σώματος τῆς σαρκός, ἐν τῇ περιτομῇ τοῦ Χριστοῦ, συνταφέντες αὐτῷ ἐν τῷ βαπτίσματι, ἐν ᾧ καὶ συνηγέρθητε διὰ τῆς πίστεως τῆς ἐνεργείας τοῦ Θεοῦ τοῦ ἐγείραντος αὐτὸν ἐκ νεκρῶν·</p>
       <wg>
-         <wg class="cl"
-             xml:id="n510020080010270"
-             head="true"
-             rule="ClCl"
-             rewrite="ClCl!ClCl!sub-CL">
+         <wg class="cl" xml:id="n510020080010013" head="true" rule="V2CL">
             <wg role="v"
                 class="vp"
                 xml:id="n510020080010011"
@@ -17827,10 +17798,9 @@
          <milestone unit="verse" id="COL 2:23">COL 2:23</milestone> Εἰ ἀπεθάνετε σὺν Χριστῷ ἀπὸ τῶν στοιχείων τοῦ κόσμου, τί ὡς ζῶντες ἐν κόσμῳ δογματίζεσθε Μὴ ἅψῃ μηδὲ γεύσῃ μηδὲ θίγῃς, ἅ ἐστιν πάντα εἰς φθορὰν τῇ ἀποχρήσει, κατὰ τὰ ἐντάλματα καὶ διδασκαλίας τῶν ἀνθρώπων; ἅτινά ἐστιν λόγον μὲν ἔχοντα σοφίας ἐν ἐθελοθρησκίᾳ καὶ ταπεινοφροσύνῃ καὶ ἀφειδίᾳ σώματος, οὐκ ἐν τιμῇ τινι πρὸς πλησμονὴν τῆς σαρκός.</p>
       <wg>
          <wg class="cl"
-             xml:id="n510020200010150"
+             xml:id="n510020200100060"
              head="true"
-             rule="ClCl2"
-             rewrite="ClCl!ClCl2!ClCl">
+             rule="ADV-ADV-V">
             <wg role="adv" xml:id="n510020200010090" rule="sub-CL" class="wg">
                <w ref="COL 2:20!1"
                   after=" "
@@ -18126,11 +18096,7 @@
                   frame="A1:n51001002007"
                   subjref="n51001002007">δογματίζεσθε</w>
             </wg>
-            <wg class="cl"
-                xml:id="n510020210010200"
-                head="true"
-                rule="ClCl"
-                rewrite="ClCl!ClCl!S-VC-ADV-ADV-P-ADV">
+            <wg class="cl" xml:id="n510020210010060" head="true" rule="ADV-V">
                <wg role="adv"
                    class="advp"
                    xml:id="n510020210010011"
@@ -18924,11 +18890,7 @@
                ln="89.50"
                morph="CONJ"
                unicode="οὖν">οὖν</w>
-            <wg class="cl"
-                xml:id="n510030010060120"
-                head="true"
-                rule="ClCl"
-                rewrite="ClCl2!sub-CL!ClCl">
+            <wg class="cl" xml:id="n510030010060030" head="true" rule="O-V">
                <wg role="adv" xml:id="n510030010010040" rule="sub-CL" class="wg">
                   <w ref="COL 3:1!1"
                      after=" "
@@ -19269,11 +19231,7 @@
       <p>
          <milestone unit="verse" id="COL 3:2">COL 3:2</milestone> τὰ ἄνω φρονεῖτε, μὴ τὰ ἐπὶ τῆς γῆς.</p>
       <wg>
-         <wg class="cl"
-             xml:id="n510030020010030"
-             head="true"
-             rule="O-V"
-             rewrite="ClCl!O-V!ADV-O">
+         <wg class="cl" xml:id="n510030020010030" head="true" rule="O-V">
             <wg role="o"
                 class="np"
                 xml:id="n510030020010020"
@@ -19720,8 +19678,7 @@
          <wg class="cl"
              xml:id="n510030040080080"
              head="true"
-             rule="ADV-S-ADV-V-ADV"
-             rewrite="ClCl2!sub-CL!ADV-S-ADV-V-ADV">
+             rule="ADV-S-ADV-V-ADV">
             <wg role="adv" xml:id="n510030040010070" rule="sub-CL" class="wg">
                <w ref="COL 3:4!1"
                   after=" "
@@ -20555,8 +20512,7 @@
                               <wg class="cl"
                                   xml:id="n510030070020050"
                                   head="true"
-                                  rule="ADV-S-V-ADV"
-                                  rewrite="ClCl!ADV-S-V-ADV!sub-CL">
+                                  rule="ADV-S-V-ADV">
                                  <wg role="adv" class="np" xml:id="n510030070020011" rule="Pron2NP">
                                     <w ref="COL 3:7!2"
                                        after=" "
@@ -21065,8 +21021,7 @@
          <wg class="cl"
              xml:id="n510030090010250"
              head="true"
-             rule="ADV-V-ADV-ADV"
-             rewrite="ClCl!ADV-V-ADV-ADV!sub-CL">
+             rule="ADV-V-ADV-ADV">
             <wg role="adv"
                 class="advp"
                 xml:id="n510030090010011"
@@ -21985,8 +21940,7 @@
             <wg class="cl"
                 xml:id="n510030120010190"
                 head="true"
-                rule="V-ADV-O-ADV"
-                rewrite="ClCl!V-ADV-O-ADV!sub-CL">
+                rule="V-ADV-O-ADV">
                <wg role="v"
                    class="vp"
                    xml:id="n510030120010011"
@@ -22504,8 +22458,7 @@
              xml:id="n510030130180030"
              head="true"
              rule="ADV-S"
-             cltype="VerbElided"
-             rewrite="ClCl2!sub-CL!ADV-S">
+             cltype="VerbElided">
             <wg role="adv" xml:id="n510030130120060" rule="sub-CL" class="wg">
                <w ref="COL 3:13!12"
                   after=" "
@@ -22928,11 +22881,7 @@
                ln="89.92"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg class="cl"
-                xml:id="n510030150020090"
-                head="true"
-                rule="S-V-ADV"
-                rewrite="ClCl!S-V-ADV!ADV-ADV-V-ADV">
+            <wg class="cl" xml:id="n510030150020090" head="true" rule="S-V-ADV">
                <wg role="s"
                    class="np"
                    xml:id="n510030150020040"
@@ -23928,8 +23877,7 @@
                 xml:id="n510030170120110"
                 head="true"
                 rule="O-ADV-ADV"
-                cltype="VerbElided"
-                rewrite="ClCl2!Np2CL!O-ADV-ADV">
+                cltype="VerbElided">
                <wg role="aux" class="minor" xml:id="n510030170020101" rule="np2cl">
                   <wg class="np" xml:id="n510030170020100" rule="All-NP">
                      <wg class="adjp" xml:id="n510030170020011" rule="Adj2Adjp">
@@ -24351,11 +24299,7 @@
       <p>
          <milestone unit="verse" id="COL 3:18">COL 3:18</milestone> Αἱ γυναῖκες, ὑποτάσσεσθε τοῖς ἀνδράσιν, ὡς ἀνῆκεν ἐν Κυρίῳ.</p>
       <wg>
-         <wg class="cl"
-             xml:id="n510030180030070"
-             head="true"
-             rule="ClCl"
-             rewrite="ClCl2!Np2CL!ClCl">
+         <wg class="cl" xml:id="n510030180030030" head="true" rule="V-IO">
             <wg role="aux" class="minor" xml:id="n510030180010021" rule="np2cl">
                <wg class="np"
                    xml:id="n510030180010020"
@@ -24545,11 +24489,7 @@
       <p>
          <milestone unit="verse" id="COL 3:19">COL 3:19</milestone> Οἱ ἄνδρες, ἀγαπᾶτε τὰς γυναῖκας καὶ μὴ πικραίνεσθε πρὸς αὐτάς.</p>
       <wg>
-         <wg class="cl"
-             xml:id="n510030190030080"
-             head="true"
-             rule="CLaCL"
-             rewrite="ClCl2!Np2CL!CLaCL">
+         <wg role="g" class="group" xml:id="n510030190030080" rule="clacl">
             <wg role="aux" class="minor" xml:id="n510030190010021" rule="np2cl">
                <wg class="np"
                    xml:id="n510030190010020"
@@ -24757,11 +24697,7 @@
       <p>
          <milestone unit="verse" id="COL 3:20">COL 3:20</milestone> Τὰ τέκνα, ὑπακούετε τοῖς γονεῦσιν κατὰ πάντα, τοῦτο γὰρ εὐάρεστόν ἐστιν ἐν Κυρίῳ.</p>
       <wg>
-         <wg class="cl"
-             xml:id="n510030200010070"
-             head="true"
-             rule="ClCl2"
-             rewrite="ClCl!ClCl2!sub-CL">
+         <wg class="cl" xml:id="n510030200030050" head="true" rule="V-O-ADV">
             <wg role="aux" class="minor" xml:id="n510030200010021" rule="np2cl">
                <wg class="np"
                    xml:id="n510030200010020"
@@ -25023,11 +24959,7 @@
       <p>
          <milestone unit="verse" id="COL 3:21">COL 3:21</milestone> Οἱ πατέρες, μὴ ἐρεθίζετε τὰ τέκνα ὑμῶν, ἵνα μὴ ἀθυμῶσιν.</p>
       <wg>
-         <wg class="cl"
-             xml:id="n510030210030080"
-             head="true"
-             rule="ClCl"
-             rewrite="ClCl2!Np2CL!ClCl">
+         <wg class="cl" xml:id="n510030210030050" head="true" rule="ADV-V-O">
             <wg role="aux" class="minor" xml:id="n510030210010021" rule="np2cl">
                <wg class="np"
                    xml:id="n510030210010020"
@@ -25234,11 +25166,7 @@
       <p>
          <milestone unit="verse" id="COL 3:22">COL 3:22</milestone> Οἱ δοῦλοι, ὑπακούετε κατὰ πάντα τοῖς κατὰ σάρκα κυρίοις, μὴ ἐν ὀφθαλμοδουλίαις, ὡς ἀνθρωπάρεσκοι, ἀλλ’ ἐν ἁπλότητι καρδίας φοβούμενοι τὸν Κύριον.</p>
       <wg>
-         <wg class="cl"
-             xml:id="n510030220030190"
-             head="true"
-             rule="ClCl"
-             rewrite="ClCl2!Np2CL!ClCl">
+         <wg class="cl" xml:id="n510030220030070" head="true" rule="V-ADV-O">
             <wg role="aux" class="minor" xml:id="n510030220010021" rule="np2cl">
                <wg class="np"
                    xml:id="n510030220010020"
@@ -25440,8 +25368,7 @@
                    xml:id="n510030220110022"
                    head="true"
                    rule="ADV2CL"
-                   cltype="VerbElided"
-                   rewrite="ClCl!ADV2CL!sub-CL">
+                   cltype="VerbElided">
                   <wg role="adv"
                       class="pp"
                       xml:id="n510030220110020"
@@ -26420,8 +26347,7 @@
          <wg class="cl"
              xml:id="n510040010030160"
              head="true"
-             rule="O-IO-V-ADV"
-             rewrite="ClCl2!Np2CL!O-IO-V-ADV">
+             rule="O-IO-V-ADV">
             <wg role="aux" class="minor" xml:id="n510040010010021" rule="np2cl">
                <wg class="np"
                    xml:id="n510040010010020"
@@ -26965,8 +26891,7 @@
                <wg class="cl"
                    xml:id="n510040030010050"
                    head="true"
-                   rule="V-ADV-ADV"
-                   rewrite="ClCl!V-ADV-ADV!that-VP">
+                   rule="V-ADV-ADV">
                   <wg role="v"
                       class="vp"
                       xml:id="n510040030010011"
@@ -27425,11 +27350,7 @@
                      ln="89.59"
                      morph="CONJ"
                      unicode="ἵνα">ἵνα</w>
-                  <wg class="cl"
-                      xml:id="n510040040020020"
-                      head="true"
-                      rule="V-O"
-                      rewrite="ClCl!V-O!sub-CL">
+                  <wg class="cl" xml:id="n510040040020020" head="true" rule="V-O">
                      <wg role="v"
                          class="vp"
                          xml:id="n510040040020011"
@@ -29316,11 +29237,7 @@
                            </wg>
                         </wg>
                      </wg>
-                     <wg class="cl"
-                         xml:id="n510040100160060"
-                         head="true"
-                         rule="ClCl2"
-                         rewrite="ClCl2!ADV-V-O!ClCl2">
+                     <wg class="cl" xml:id="n510040100200020" head="true" rule="V-O">
                         <wg class="cl" xml:id="n510040100120040" rule="ADV-V-O">
                            <wg role="adv" class="pp" xml:id="n510040100120020" rule="PrepNp">
                               <w ref="COL 4:10!12"
@@ -29717,8 +29634,7 @@
              xml:id="n510040110100080"
              head="true"
              rule="S-P-ADV"
-             cltype="Verbless"
-             rewrite="ClCl!S-P-ADV!S-VC-ADV-P">
+             cltype="Verbless">
             <wg role="s" class="np" xml:id="n510040110100011" rule="Pron2NP">
                <w ref="COL 4:11!10"
                   after=" "
@@ -30513,11 +30429,7 @@
                gloss="for"
                morph="CONJ"
                unicode="γὰρ">γὰρ</w>
-            <wg class="cl"
-                xml:id="n510040130010020"
-                head="true"
-                rule="V-IO"
-                rewrite="ClCl!V-IO!that-VP">
+            <wg class="cl" xml:id="n510040130010020" head="true" rule="V-IO">
                <wg role="v"
                    class="vp"
                    xml:id="n510040130010011"
@@ -31271,11 +31183,7 @@
                gloss="And"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg class="cl"
-                xml:id="n510040160080160"
-                head="true"
-                rule="ClCl"
-                rewrite="ClCl2!sub-CL!ClCl">
+            <wg class="cl" xml:id="n510040160080013" head="true" rule="V2CL">
                <wg role="adv" xml:id="n510040160020060" rule="sub-CL" class="wg">
                   <w ref="COL 4:16!2"
                      after=" "
@@ -31723,11 +31631,7 @@
                gloss="And"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg class="cl"
-                xml:id="n510040170020020"
-                head="true"
-                rule="V-IO"
-                rewrite="ClCl!V-IO!ClCl">
+            <wg class="cl" xml:id="n510040170020020" head="true" rule="V-IO">
                <wg role="v"
                    class="vp"
                    xml:id="n510040170020011"
@@ -31772,11 +31676,7 @@
                      morph="N-DSM"
                      unicode="Ἀρχίππῳ">Ἀρχίππῳ</w>
                </wg>
-               <wg class="cl"
-                   xml:id="n510040170040070"
-                   head="true"
-                   rule="V-O"
-                   rewrite="ClCl!V-O!sub-CL">
+               <wg class="cl" xml:id="n510040170040070" head="true" rule="V-O">
                   <wg role="v"
                       class="vp"
                       xml:id="n510040170040011"
