@@ -146,7 +146,6 @@ declare function local:attributes($node)
     $node/@Gloss ! attribute gloss {.},
     $node/@LexDomain ! attribute domain {.},
     $node/@LN ! attribute ln {.},
-    $node/@ClType !attribute cltype {.},
     $node/@FunctionalTag ! attribute morph {.},
     $node/@Unicode !attribute unicode {.},
     $node/@Frame !attribute frame {.},
@@ -206,20 +205,6 @@ declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL",
     "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
     "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL", "notCLbutCL2CL" );
 
-declare function local:raise-first-of-two-siblings($node)
-{
-    <wg>
-     {
-        let $first := local:node($node/*[1])
-        let $second := local:node($node/*[2])
-        return (
-            $first/@*,
-            $first/*,
-            $second
-         )
-      }
-      </wg>     
-};
 
 declare function local:force-to-adjunct-or-aux($node)
 {
@@ -242,20 +227,22 @@ declare function local:force-to-adjunct-or-aux($node)
         }
 };
 
-declare function local:raise-second-of-two-siblings($node)
+
+declare function local:raise-sibling($node, $node-to-raise)
 {
     <wg>
      {
-        let $first := local:node($node/*[1])
-        let $second := local:node($node/*[2])
+        let $processed-node-to-raise := local:node($node-to-raise)
+        let $before := $node/*[. << $node-to-raise]
+        let $after := $node/*[. >> $node-to-raise]
         return (
-            $second/@*,        
-            $first
-            ,
-            $second/*
+            $processed-node-to-raise/@*,
+            $before ! local:node(.),
+            $processed-node-to-raise/node(),
+            $after ! local:node(.)
         )
-      }
-      </wg>
+     }
+    </wg>
 };
 
 declare function local:keep-siblings-as-siblings($node)
@@ -301,7 +288,17 @@ declare function local:clause($node)
                 attribute class {"wg"},
                 $node/Node ! local:node(.)         
            }     
-          </wg>      
+          </wg> 
+       else if ($node/parent::Node/@Rule=("ClCl2","ClCl") 
+            and $node/Node[@Cat=("V","VC")]/Node[@Mood="Participle" and @Case=("Genitive", "Accusative","Dative")] ) then
+        <wg role="adv">
+          {
+                local:attributes($node)[not(name(.) = ("role"))],
+                <!-- Circumstantial Participle  -->,
+                $node/Node ! local:node(.)         
+           }     
+        </wg>    
+          
        else if ($node/@Rule=("PtclCL", "AdvpCL", "Conj-CL") and $node/parent::*/@Rule=("ClCl", "ClCl2")) then
           <wg>
            {
@@ -311,15 +308,6 @@ declare function local:clause($node)
                 $node/Node ! local:node(.)         
            }
           </wg> 
-          
-     else if ($node/parent::Node/@Rule=("ClCl2","ClCl") 
-            and $node/Node[@Cat=("V","VC")]/Node[@Mood="Participle" and @Case=("Genitive", "Accusative","Dative")] ) then
-        <wg role="adv">
-          {
-                local:attributes($node)[not(name(.) = ("role"))],
-                $node/Node ! local:node(.)         
-           }     
-        </wg>    
    
      else if ($node/@Rule="V2CL") then 
          <wg>
@@ -356,29 +344,15 @@ declare function local:clause($node)
         
     else if ($node/@Rule="ClCl") then
     (: This is underspecified - see https://github.com/Clear-Bible/symphony-team/issues/126    :)
-            local:raise-first-of-two-siblings($node)
+            local:raise-sibling($node, $node/*[1])
     else if ($node/@Rule="ClCl2") then
     (: TODO:  Adverbial participles - genitive absolute, accusative absolute - might be able to generate a @type at the same time! 
     
         A genitive or accusative participle that is immediately under a ClCl or ClCl2 ...
     :)
-              local:raise-second-of-two-siblings($node)
+              local:raise-sibling($node, $node/*[2])
     else if ($node/@Rule="CLandCL2") then
-        <wg>
-         {
-            let $first := $node/*[1]
-            let $second := $node/*[2]
-            let $third := $node/*[3]
-            return (
-                local:attributes($third),
-                attribute rewrite { string-join(($node/@Rule, $first/@Rule, $second/@Rule, $third/@Rule),"!")},
-                
-                local:node($first),
-                local:node($second),
-                local:node($third)/*
-            )
-           }
-         </wg>
+        local:raise-sibling($node, $node/*[3])
     else
         <wg>
          {

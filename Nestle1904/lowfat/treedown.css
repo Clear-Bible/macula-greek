@@ -128,6 +128,17 @@ wg[role=aux]::before {
   content: "~" " ";
 }
 
+wg[role=g]::before {
+  color: cadetblue;
+  content: "g" " ";
+}
+
+wg[role=g] {
+  display: block;
+  margin-left: 2em;
+}
+
+
 /* -----  Experimental stuff goes here -------- */
 
 /* Apposition */
