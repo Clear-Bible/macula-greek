@@ -83,23 +83,6 @@ else
         default return "###"
 };
 
-declare function local:verbal-noun-type($node)
-(:  This really doesn't work yet. Not even close. :)
-{
-    switch ($node/parent::Node/@Cat)
-        case 'adjp'
-            return
-                attribute type {'adjectival'}
-        case 'advp'
-            return
-                attribute type {'adverbial'}
-        case 'np'
-            return
-                attribute type {'nominal'}
-        default return
-            attribute type {'?'}
-};
-
 declare function local:head($node)
 {
     if ($node)
@@ -138,7 +121,6 @@ declare function local:attributes($node)
     $node/@Tense ! attribute tense {lower-case(.)},
     $node/@Voice ! attribute voice {lower-case(.)},
     $node/@Mood ! attribute mood {lower-case(.)},
-    $node/@Mood[. = ('Participle', 'Infinitive')] ! attribute type {local:verbal-noun-type($node)},
     $node/@Degree ! attribute degree {lower-case(.)},
     local:head($node),
     $node[empty(*)] ! attribute discontinuous {"true"}[$node/following::Node[empty(*)][1]/@morphId lt $node/@morphId],
@@ -289,8 +271,10 @@ declare function local:clause($node)
                 $node/Node ! local:node(.)         
            }     
           </wg> 
-       else if ($node/parent::Node/@Rule=("ClCl2","ClCl") 
-            and $node/Node[@Cat=("V","VC")]/Node[@Mood="Participle" and @Case=("Genitive", "Accusative","Dative")] ) then
+       else if  ($node
+                    /Node[@Cat=("V","VC")]
+                    /Node[@Cat="vp"]
+                    /Node[@Cat="verb" and @Mood="Participle" and @Case=("Genitive", "Accusative","Dative")]) then
         <wg role="adv">
           {
                 local:attributes($node)[not(name(.) = ("role"))],
@@ -344,13 +328,9 @@ declare function local:clause($node)
         
     else if ($node/@Rule="ClCl") then
     (: This is underspecified - see https://github.com/Clear-Bible/symphony-team/issues/126    :)
-            local:raise-sibling($node, $node/*[1])
+        local:raise-sibling($node, $node/*[1])
     else if ($node/@Rule="ClCl2") then
-    (: TODO:  Adverbial participles - genitive absolute, accusative absolute - might be able to generate a @type at the same time! 
-    
-        A genitive or accusative participle that is immediately under a ClCl or ClCl2 ...
-    :)
-              local:raise-sibling($node, $node/*[2])
+        local:raise-sibling($node, $node/*[2])
     else if ($node/@Rule="CLandCL2") then
         local:raise-sibling($node, $node/*[3])
     else
