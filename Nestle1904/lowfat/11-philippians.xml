@@ -6,7 +6,10 @@
       <p>
          <milestone unit="verse" id="PHP 1:1">PHP 1:1</milestone> Παῦλος καὶ Τιμόθεος δοῦλοι Χριστοῦ Ἰησοῦ πᾶσιν τοῖς ἁγίοις ἐν Χριστῷ Ἰησοῦ τοῖς οὖσιν ἐν Φιλίπποις σὺν ἐπισκόποις καὶ διακόνοις·</p>
       <wg>
-         <wg class="cl" xml:id="n500010010010200" rule="S-IO">
+         <wg class="cl"
+             xml:id="n500010010010200"
+             rule="S-IO"
+             cltype="VerbElided">
             <wg role="s"
                 class="np"
                 xml:id="n500010010010060"
@@ -273,11 +276,10 @@
                         ln="92.24"
                         morph="T-DPM"
                         unicode="τοῖς">τοῖς</w>
-                     <wg role="adv"
-                         class="cl"
+                     <wg class="cl"
                          xml:id="n500010010140070"
                          head="true"
-                         rule="VC-P-ADV"><!-- Circumstantial Participle  -->
+                         rule="VC-P-ADV">
                         <wg role="vc" class="vp" xml:id="n500010010140011" rule="V2VP">
                            <w ref="PHP 1:1!14"
                               after=" "
@@ -412,7 +414,10 @@
       <p>
          <milestone unit="verse" id="PHP 1:2">PHP 1:2</milestone> χάρις ὑμῖν καὶ εἰρήνη ἀπὸ Θεοῦ Πατρὸς ἡμῶν καὶ Κυρίου Ἰησοῦ Χριστοῦ.</p>
       <wg>
-         <wg class="cl" xml:id="n500010020020120" rule="IO-S-ADV">
+         <wg class="cl"
+             xml:id="n500010020020120"
+             rule="IO-S-ADV"
+             cltype="VerbElided">
             <wg role="io" class="np" xml:id="n500010020020011" rule="Pron2NP">
                <w ref="PHP 1:2!2"
                   after=" "
@@ -652,7 +657,7 @@
          <wg class="cl"
              xml:id="n500010030010510"
              head="true"
-             rule="V-O-ADV-ADV-ADV-ADV">
+             rule="V-O-ADV-ADV-ADV-ADV"><!--ClCl V-O-ADV-ADV-ADV-ADV 1-->
             <wg role="v"
                 class="vp"
                 xml:id="n500010030010011"
@@ -1368,71 +1373,73 @@
                   </wg>
                </wg>
             </wg>
-            <wg role="adv" class="cl" xml:id="n500010060010150" rule="ClCl">
-               <wg class="cl" xml:id="n500010060010030" head="true" rule="V-O">
-                  <wg role="v"
-                      class="vp"
-                      xml:id="n500010060010011"
-                      head="true"
-                      rule="V2VP">
-                     <w ref="PHP 1:6!1"
-                        after=" "
-                        class="verb"
-                        xml:id="n50001006001"
-                        lemma="πείθω"
-                        normalized="πεποιθώς"
-                        strong="3982"
-                        number="singular"
-                        gender="masculine"
-                        case="nominative"
-                        tense="perfect"
-                        voice="active"
-                        mood="participle"
-                        head="true"
-                        gloss="being persuaded of"
-                        domain="033028"
-                        ln="33.301"
-                        morph="V-2RAP-NSM"
-                        unicode="πεποιθὼς"
-                        frame="A0:n50001001001 A1:n50001006003"
-                        subjref="n50001001001">πεποιθὼς</w>
-                  </wg>
-                  <wg role="o" class="np" xml:id="n500010060020020" rule="PronNP">
-                     <w ref="PHP 1:6!2"
-                        after=" "
+            <wg role="adv"
+                class="cl"
+                xml:id="n500010060010030"
+                head="true"
+                rule="V-O"><!--ClCl V-O 1-->
+               <wg role="v"
+                   class="vp"
+                   xml:id="n500010060010011"
+                   head="true"
+                   rule="V2VP">
+                  <w ref="PHP 1:6!1"
+                     after=" "
+                     class="verb"
+                     xml:id="n50001006001"
+                     lemma="πείθω"
+                     normalized="πεποιθώς"
+                     strong="3982"
+                     number="singular"
+                     gender="masculine"
+                     case="nominative"
+                     tense="perfect"
+                     voice="active"
+                     mood="participle"
+                     head="true"
+                     gloss="being persuaded of"
+                     domain="033028"
+                     ln="33.301"
+                     morph="V-2RAP-NSM"
+                     unicode="πεποιθὼς"
+                     frame="A0:n50001001001 A1:n50001006003"
+                     subjref="n50001001001">πεποιθὼς</w>
+               </wg>
+               <wg role="o" class="np" xml:id="n500010060020020" rule="PronNP">
+                  <w ref="PHP 1:6!2"
+                     after=" "
+                     class="pron"
+                     xml:id="n50001006002"
+                     lemma="αὐτός"
+                     normalized="αὐτό"
+                     strong="846"
+                     number="singular"
+                     gender="neuter"
+                     case="accusative"
+                     gloss="[the] very thing"
+                     domain="058005"
+                     ln="58.31"
+                     morph="P-ASN"
+                     unicode="αὐτὸ">αὐτὸ</w>
+                  <wg class="np" xml:id="n500010060030011" head="true" rule="Pron2NP">
+                     <w ref="PHP 1:6!3"
+                        after=","
                         class="pron"
-                        xml:id="n50001006002"
-                        lemma="αὐτός"
-                        normalized="αὐτό"
-                        strong="846"
+                        type="demonstrative"
+                        xml:id="n50001006003"
+                        lemma="οὗτος"
+                        normalized="τοῦτο"
+                        strong="3778"
                         number="singular"
                         gender="neuter"
                         case="accusative"
-                        gloss="[the] very thing"
-                        domain="058005"
-                        ln="58.31"
-                        morph="P-ASN"
-                        unicode="αὐτὸ">αὐτὸ</w>
-                     <wg class="np" xml:id="n500010060030011" head="true" rule="Pron2NP">
-                        <w ref="PHP 1:6!3"
-                           after=","
-                           class="pron"
-                           type="demonstrative"
-                           xml:id="n50001006003"
-                           lemma="οὗτος"
-                           normalized="τοῦτο"
-                           strong="3778"
-                           number="singular"
-                           gender="neuter"
-                           case="accusative"
-                           head="true"
-                           gloss="this"
-                           domain="092007"
-                           ln="92.29"
-                           morph="D-ASN"
-                           unicode="τοῦτο,"
-                           referent="n50001006011">τοῦτο</w>
-                     </wg>
+                        head="true"
+                        gloss="this"
+                        domain="092007"
+                        ln="92.29"
+                        morph="D-ASN"
+                        unicode="τοῦτο,"
+                        referent="n50001006011">τοῦτο</w>
                   </wg>
                </wg>
                <wg xml:id="n500010060040120" rule="that-VP" role="o" class="wg">
@@ -2413,7 +2420,11 @@
                ln="89.23"
                morph="CONJ"
                unicode="γάρ">γάρ</w>
-            <wg class="cl" xml:id="n500010080010040" head="true" rule="P-S">
+            <wg class="cl"
+                xml:id="n500010080010040"
+                head="true"
+                rule="P-S"
+                cltype="Verbless"><!--ClCl P-S 1-->
                <wg role="p"
                    class="np"
                    xml:id="n500010080010020"
@@ -2676,7 +2687,7 @@
                ln="89.93"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg class="cl" xml:id="n500010090020020" head="true" rule="O-V">
+            <wg class="cl" xml:id="n500010090020020" head="true" rule="O-V"><!--ClCl O-V 1-->
                <wg role="o" class="np" xml:id="n500010090020011" rule="Pron2NP">
                   <w ref="PHP 1:9!2"
                      after=" "
@@ -2740,7 +2751,7 @@
                   <wg class="cl"
                       xml:id="n500010090050190"
                       head="true"
-                      rule="S-ADV-ADV-V-ADV-ADV">
+                      rule="S-ADV-ADV-V-ADV-ADV"><!--ClCl S-ADV-ADV-V-ADV-ADV 1-->
                      <wg role="s"
                          class="np"
                          xml:id="n500010090050030"
@@ -3077,11 +3088,7 @@
                                     ln="92.24"
                                     morph="T-APN"
                                     unicode="τὰ">τὰ</w>
-                                 <wg role="adv"
-                                     class="cl"
-                                     xml:id="n500010100060013"
-                                     head="true"
-                                     rule="V2CL"><!-- Circumstantial Participle  -->
+                                 <wg class="cl" xml:id="n500010100060013" head="true" rule="V2CL">
                                     <wg role="v"
                                         class="vp"
                                         xml:id="n500010100060011"
@@ -3515,7 +3522,7 @@
                gloss="now"
                morph="CONJ"
                unicode="δὲ">δὲ</w>
-            <wg class="cl" xml:id="n500010120040480" head="true" rule="V-O">
+            <wg class="cl" xml:id="n500010120040480" head="true" rule="V-O"><!--ClCl2 V-O 2-->
                <wg role="aux" class="minor" xml:id="n500010120050012" rule="np2cl">
                   <wg class="np" xml:id="n500010120050011" rule="N2NP">
                      <w ref="PHP 1:12!5"
@@ -3564,49 +3571,51 @@
                      frame="A0:n50001001001 A1:n50001012001"
                      subjref="n50001001001">βούλομαι</w>
                </wg>
-               <wg role="o" class="cl" xml:id="n500010120010470" rule="ClCl">
-                  <wg class="cl" xml:id="n500010120010020" head="true" rule="V-S">
-                     <wg role="v"
-                         class="vp"
-                         xml:id="n500010120010011"
-                         head="true"
-                         rule="V2VP">
-                        <w ref="PHP 1:12!1"
-                           after=" "
-                           class="verb"
-                           xml:id="n50001012001"
-                           lemma="γινώσκω"
-                           normalized="Γινώσκειν"
-                           strong="1097"
-                           tense="present"
-                           voice="active"
-                           mood="infinitive"
-                           head="true"
-                           gloss="To know"
-                           domain="028001"
-                           ln="28.1"
-                           morph="V-PAN"
-                           unicode="Γινώσκειν"
-                           frame="A0:n50001012003">Γινώσκειν</w>
-                     </wg>
-                     <wg role="s" class="np" xml:id="n500010120030011" rule="Pron2NP">
-                        <w ref="PHP 1:12!3"
-                           after=" "
-                           class="pron"
-                           type="personal"
-                           xml:id="n50001012003"
-                           lemma="σύ"
-                           normalized="ὑμᾶς"
-                           strong="4771"
-                           number="plural"
-                           case="accusative"
-                           gloss="you"
-                           domain="092003"
-                           ln="92.7"
-                           morph="P-2AP"
-                           unicode="ὑμᾶς"
-                           referent="n50001012005">ὑμᾶς</w>
-                     </wg>
+               <wg role="o"
+                   class="cl"
+                   xml:id="n500010120010020"
+                   head="true"
+                   rule="V-S"><!--ClCl V-S 1-->
+                  <wg role="v"
+                      class="vp"
+                      xml:id="n500010120010011"
+                      head="true"
+                      rule="V2VP">
+                     <w ref="PHP 1:12!1"
+                        after=" "
+                        class="verb"
+                        xml:id="n50001012001"
+                        lemma="γινώσκω"
+                        normalized="Γινώσκειν"
+                        strong="1097"
+                        tense="present"
+                        voice="active"
+                        mood="infinitive"
+                        head="true"
+                        gloss="To know"
+                        domain="028001"
+                        ln="28.1"
+                        morph="V-PAN"
+                        unicode="Γινώσκειν"
+                        frame="A0:n50001012003">Γινώσκειν</w>
+                  </wg>
+                  <wg role="s" class="np" xml:id="n500010120030011" rule="Pron2NP">
+                     <w ref="PHP 1:12!3"
+                        after=" "
+                        class="pron"
+                        type="personal"
+                        xml:id="n50001012003"
+                        lemma="σύ"
+                        normalized="ὑμᾶς"
+                        strong="4771"
+                        number="plural"
+                        case="accusative"
+                        gloss="you"
+                        domain="092003"
+                        ln="92.7"
+                        morph="P-2AP"
+                        unicode="ὑμᾶς"
+                        referent="n50001012005">ὑμᾶς</w>
                   </wg>
                   <wg xml:id="n500010120060450" rule="that-VP" role="o" class="wg">
                      <w ref="PHP 1:12!6"
@@ -3789,7 +3798,7 @@
                               unicode="ἐλήλυθεν,"
                               frame="A0:n50001012007">ἐλήλυθεν</w>
                         </wg>
-                        <wg role="adv" class="cl" xml:id="n500010130010350" rule="sub-CL">
+                        <wg role="adv" xml:id="n500010130010350" rule="sub-CL" class="wg">
                            <w ref="PHP 1:13!1"
                               after=" "
                               class="conj"
@@ -4512,7 +4521,11 @@
                ln="89.136"
                morph="PRT"
                unicode="μὲν">μὲν</w>
-            <wg class="cl" xml:id="n500010150010060" head="true" rule="S-ADV">
+            <wg class="cl"
+                xml:id="n500010150010060"
+                head="true"
+                rule="S-ADV"
+                cltype="VerbElided">
                <wg role="s"
                    class="np"
                    xml:id="n500010150010011"
@@ -4786,7 +4799,8 @@
             <wg class="cl"
                 xml:id="n500010160010100"
                 head="true"
-                rule="S-ADV-ADV">
+                rule="S-ADV-ADV"
+                cltype="VerbElided">
                <wg role="s"
                    class="np"
                    xml:id="n500010160010011"
@@ -4843,35 +4857,37 @@
                         unicode="ἀγάπης,">ἀγάπης</w>
                   </wg>
                </wg>
-               <wg role="adv" class="cl" xml:id="n500010160050070" rule="ClCl">
-                  <wg class="cl" xml:id="n500010160050013" head="true" rule="V2CL">
-                     <wg role="v"
-                         class="vp"
-                         xml:id="n500010160050011"
-                         head="true"
-                         rule="V2VP">
-                        <w ref="PHP 1:16!5"
-                           after=" "
-                           class="verb"
-                           xml:id="n50001016005"
-                           lemma="οἶδα"
-                           normalized="εἰδότες"
-                           strong="1492"
-                           number="plural"
-                           gender="masculine"
-                           case="nominative"
-                           tense="perfect"
-                           voice="active"
-                           mood="participle"
-                           head="true"
-                           gloss="knowing"
-                           domain="028001"
-                           ln="28.1"
-                           morph="V-RAP-NPM"
-                           unicode="εἰδότες"
-                           frame="A0:n50001015008"
-                           subjref="n50001015008">εἰδότες</w>
-                     </wg>
+               <wg role="adv"
+                   class="cl"
+                   xml:id="n500010160050013"
+                   head="true"
+                   rule="V2CL"><!--ClCl V2CL 1-->
+                  <wg role="v"
+                      class="vp"
+                      xml:id="n500010160050011"
+                      head="true"
+                      rule="V2VP">
+                     <w ref="PHP 1:16!5"
+                        after=" "
+                        class="verb"
+                        xml:id="n50001016005"
+                        lemma="οἶδα"
+                        normalized="εἰδότες"
+                        strong="1492"
+                        number="plural"
+                        gender="masculine"
+                        case="nominative"
+                        tense="perfect"
+                        voice="active"
+                        mood="participle"
+                        head="true"
+                        gloss="knowing"
+                        domain="028001"
+                        ln="28.1"
+                        morph="V-RAP-NPM"
+                        unicode="εἰδότες"
+                        frame="A0:n50001015008"
+                        subjref="n50001015008">εἰδότες</w>
                   </wg>
                   <wg xml:id="n500010160060060" rule="that-VP" role="o" class="wg">
                      <w ref="PHP 1:16!6"
@@ -5007,7 +5023,7 @@
             <wg class="cl"
                 xml:id="n500010170010060"
                 head="true"
-                rule="S-ADV-O-V">
+                rule="S-ADV-O-V"><!--ClCl S-ADV-O-V 1-->
                <wg role="s" class="np" xml:id="n500010170010011" rule="Det2NP">
                   <w ref="PHP 1:17!1"
                      after=" "
@@ -5124,7 +5140,10 @@
                      unicode="καταγγέλλουσιν,"
                      frame="A0:n50001017001 A1:n50001017006">καταγγέλλουσιν</w>
                </wg>
-               <wg class="cl" xml:id="n500010170080080" rule="ADV-ADV-ADV">
+               <wg class="cl"
+                   xml:id="n500010170080080"
+                   rule="ADV-ADV-ADV"
+                   cltype="VerbElided">
                   <wg role="adv"
                       class="advp"
                       xml:id="n500010170080011"
@@ -5317,7 +5336,10 @@
                ln="91.1"
                morph="CONJ"
                unicode="γάρ;">γάρ</w>
-            <wg class="cl" xml:id="n500010180010013" rule="S2CL">
+            <wg class="cl"
+                xml:id="n500010180010013"
+                rule="S2CL"
+                cltype="VerbElided">
                <wg role="s" class="np" xml:id="n500010180010011" rule="Pron2NP">
                   <w ref="PHP 1:18!1"
                      after=" "
@@ -5616,7 +5638,7 @@
                ln="91.2"
                morph="CONJ"
                unicode="ἀλλὰ">ἀλλὰ</w>
-            <wg class="cl" xml:id="n500010180180020" head="true" rule="ADV-V">
+            <wg class="cl" xml:id="n500010180180020" head="true" rule="ADV-V"><!--ClCl ADV-V 1-->
                <wg role="adv"
                    class="advp"
                    xml:id="n500010180180011"
@@ -5674,7 +5696,7 @@
                      ln="89.23"
                      morph="CONJ"
                      unicode="γὰρ">γὰρ</w>
-                  <wg class="cl" xml:id="n500010190010013" head="true" rule="V2CL">
+                  <wg class="cl" xml:id="n500010190010013" head="true" rule="V2CL"><!--ClCl V2CL 1-->
                      <wg role="v"
                          class="vp"
                          xml:id="n500010190010011"
@@ -6584,7 +6606,11 @@
                morph="CONJ"
                unicode="γὰρ">γὰρ</w>
             <wg role="g" class="group" xml:id="n500010210010080" rule="clacl">
-               <wg class="cl" xml:id="n500010210010040" head="true" rule="ADV-S-P">
+               <wg class="cl"
+                   xml:id="n500010210010040"
+                   head="true"
+                   rule="ADV-S-P"
+                   cltype="Verbless">
                   <wg role="adv" class="np" xml:id="n500010210010011" rule="Pron2NP">
                      <w ref="PHP 1:21!1"
                         after=" "
@@ -6685,7 +6711,10 @@
                   ln="89.92"
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
-               <wg class="cl" xml:id="n500010210070030" rule="S-P">
+               <wg class="cl"
+                   xml:id="n500010210070030"
+                   rule="S-P"
+                   cltype="Verbless">
                   <wg role="s"
                       class="np"
                       xml:id="n500010210070020"
@@ -6778,7 +6807,11 @@
                ln="89.124"
                morph="CONJ"
                unicode="δὲ">δὲ</w>
-            <wg class="cl" xml:id="n500010220070040" head="true" rule="S-ADV-P">
+            <wg class="cl"
+                xml:id="n500010220070040"
+                head="true"
+                rule="S-ADV-P"
+                cltype="Verbless"><!--ClCl2 S-ADV-P 2-->
                <wg role="adv"
                    xml:id="n500010220010050"
                    articular="true"
@@ -6799,7 +6832,8 @@
                   <wg class="cl"
                       xml:id="n500010220030042"
                       articular="true"
-                      rule="S2CL">
+                      rule="S2CL"
+                      cltype="VerbElided">
                      <wg role="s"
                          class="np"
                          xml:id="n500010220030040"
@@ -7094,7 +7128,7 @@
             <wg class="cl"
                 xml:id="n500010230010140"
                 head="true"
-                rule="V-ADV-ADV">
+                rule="V-ADV-ADV"><!--ClCl V-ADV-ADV 1-->
                <wg role="v"
                    class="vp"
                    xml:id="n500010230010011"
@@ -7397,7 +7431,10 @@
                      ln="89.23"
                      morph="CONJ"
                      unicode="γὰρ">γὰρ</w>
-                  <wg class="cl" xml:id="n500010230160030" rule="ADV-ADV-P">
+                  <wg class="cl"
+                      xml:id="n500010230160030"
+                      rule="ADV-ADV-P"
+                      cltype="Verbless">
                      <wg role="adv"
                          class="adjp"
                          xml:id="n500010230160011"
@@ -7482,7 +7519,10 @@
                ln="89.124"
                morph="CONJ"
                unicode="δὲ">δὲ</w>
-            <wg class="cl" xml:id="n500010240010070" rule="S-P-ADV">
+            <wg class="cl"
+                xml:id="n500010240010070"
+                rule="S-P-ADV"
+                cltype="Verbless">
                <wg role="s"
                    class="np"
                    xml:id="n500010240010040"
@@ -7646,7 +7686,7 @@
                gloss="And"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg class="cl" xml:id="n500010250020030" head="true" rule="ADV-V">
+            <wg class="cl" xml:id="n500010250020030" head="true" rule="ADV-V"><!--ClCl ADV-V 1-->
                <wg role="adv" class="cl" xml:id="n500010250020020" rule="O-V">
                   <wg role="o" class="np" xml:id="n500010250020011" rule="Pron2NP">
                      <w ref="PHP 1:25!2"
@@ -7737,7 +7777,7 @@
                   <wg class="cl"
                       xml:id="n500010250060130"
                       head="true"
-                      rule="V-ADV-ADV">
+                      rule="V-ADV-ADV"><!--ClCl V-ADV-ADV 1-->
                      <wg role="v"
                          class="vp"
                          xml:id="n500010250060030"
@@ -8328,7 +8368,7 @@
          <wg class="cl"
              xml:id="n500010270010070"
              head="true"
-             rule="ADV-ADV-ADV-V">
+             rule="ADV-ADV-ADV-V"><!--ClCl ClCl 1--><!--ClCl ADV-ADV-ADV-V 1-->
             <wg role="adv"
                 class="adjp"
                 xml:id="n500010270010011"
@@ -8484,8 +8524,11 @@
                   ln="89.49"
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
-               <wg class="cl" xml:id="n500010270090110" head="true" rule="ADV-V-O">
-                  <wg role="adv" class="cl" xml:id="n500010270090070" rule="aCLaCL">
+               <wg class="cl" xml:id="n500010270090110" head="true" rule="ADV-V-O"><!--ClCl ADV-V-O 1-->
+                  <wg role="adv"
+                      class="group"
+                      xml:id="n500010270090070"
+                      rule="aclacl">
                      <w ref="PHP 1:27!9"
                         after=" "
                         class="conj"
@@ -8722,7 +8765,7 @@
                      <wg class="cl"
                          xml:id="n500010270210190"
                          head="true"
-                         rule="V-ADV-ADV">
+                         rule="V-ADV-ADV"><!--ClCl V-ADV-ADV 1-->
                         <wg role="v"
                             class="vp"
                             xml:id="n500010270210011"
@@ -9088,11 +9131,7 @@
                                        ln="92.24"
                                        morph="T-GPM"
                                        unicode="τῶν">τῶν</w>
-                                    <wg role="adv"
-                                        class="cl"
-                                        xml:id="n500010280080013"
-                                        head="true"
-                                        rule="V2CL"><!-- Circumstantial Participle  -->
+                                    <wg class="cl" xml:id="n500010280080013" head="true" rule="V2CL">
                                        <wg role="v"
                                            class="vp"
                                            xml:id="n500010280080011"
@@ -9242,7 +9281,10 @@
                                  ln="89.124"
                                  morph="CONJ"
                                  unicode="δὲ">δὲ</w>
-                              <wg class="cl" xml:id="n500010280140022" rule="P2CL">
+                              <wg class="cl"
+                                  xml:id="n500010280140022"
+                                  rule="P2CL"
+                                  cltype="Verbless">
                                  <wg role="p" class="np" xml:id="n500010280140020" rule="ofNPNP">
                                     <wg class="np" xml:id="n500010280140011" rule="Pron2NP">
                                        <w ref="PHP 1:28!14"
@@ -9294,7 +9336,10 @@
                               gloss="and"
                               morph="CONJ"
                               unicode="καὶ">καὶ</w>
-                           <wg class="cl" xml:id="n500010280180030" rule="S-P">
+                           <wg class="cl"
+                               xml:id="n500010280180030"
+                               rule="S-P"
+                               cltype="Verbless">
                               <wg role="s" class="np" xml:id="n500010280180011" rule="Pron2NP">
                                  <w ref="PHP 1:28!18"
                                     after=" "
@@ -9989,7 +10034,7 @@
                gloss="therefore"
                morph="CONJ"
                unicode="οὖν">οὖν</w>
-            <wg class="cl" xml:id="n500020020010040" head="true" rule="V-O">
+            <wg class="cl" xml:id="n500020020010040" head="true" rule="V-O"><!--ClCl2 ClCl 2-->
                <wg role="g"
                    class="group"
                    xml:id="n500020010010180"
@@ -10011,7 +10056,10 @@
                         ln="89.65"
                         morph="COND"
                         unicode="Εἴ">Εἴ</w>
-                     <wg class="cl" xml:id="n500020010020040" rule="S-P">
+                     <wg class="cl"
+                         xml:id="n500020010020040"
+                         rule="S-P"
+                         cltype="Verbless">
                         <wg role="s" class="np" xml:id="n500020010020020" rule="AdjpNp">
                            <wg class="adjp" xml:id="n500020010020012" rule="Adj2Adjp">
                               <wg class="adj" xml:id="n500020010020011" rule="pron2adj">
@@ -10105,7 +10153,10 @@
                         ln="89.65"
                         morph="COND"
                         unicode="εἴ">εἴ</w>
-                     <wg class="cl" xml:id="n500020010080032" rule="S2CL">
+                     <wg class="cl"
+                         xml:id="n500020010080032"
+                         rule="S2CL"
+                         cltype="VerbElided">
                         <wg role="s" class="np" xml:id="n500020010080030" rule="AdjpNp">
                            <wg class="adjp" xml:id="n500020010080012" rule="Adj2Adjp">
                               <wg class="adj" xml:id="n500020010080011" rule="pron2adj">
@@ -10182,7 +10233,10 @@
                         ln="89.65"
                         morph="COND"
                         unicode="εἴ">εἴ</w>
-                     <wg class="cl" xml:id="n500020010120032" rule="S2CL">
+                     <wg class="cl"
+                         xml:id="n500020010120032"
+                         rule="S2CL"
+                         cltype="VerbElided">
                         <wg role="s" class="np" xml:id="n500020010120030" rule="AdjpNp">
                            <wg class="adjp" xml:id="n500020010120012" rule="Adj2Adjp">
                               <wg class="adj" xml:id="n500020010120011" rule="pron2adj">
@@ -10259,7 +10313,10 @@
                         ln="89.65"
                         morph="COND"
                         unicode="εἴ">εἴ</w>
-                     <wg class="cl" xml:id="n500020010160042" rule="S2CL">
+                     <wg class="cl"
+                         xml:id="n500020010160042"
+                         rule="S2CL"
+                         cltype="VerbElided">
                         <wg role="s" class="np" xml:id="n500020010160040" rule="AdjpNp">
                            <wg class="adjp" xml:id="n500020010160012" rule="Adj2Adjp">
                               <wg class="adj" xml:id="n500020010160011" rule="pron2adj">
@@ -10336,6 +10393,7 @@
                      </wg>
                   </wg>
                </wg>
+               <!--ClCl V-O 1-->
                <wg role="v"
                    class="vp"
                    xml:id="n500020020010011"
@@ -10442,7 +10500,7 @@
                   <wg class="cl"
                       xml:id="n500020020060110"
                       head="true"
-                      rule="O-V-ADV-ADV-ADV">
+                      rule="O-V-ADV-ADV-ADV"><!--ClCl O-V-ADV-ADV-ADV 1-->
                      <wg role="o"
                          class="np"
                          xml:id="n500020020060020"
@@ -10687,7 +10745,11 @@
                         </wg>
                      </wg>
                      <wg role="g" class="group" xml:id="n500020030010230" rule="clacl">
-                        <wg class="cl" xml:id="n500020030010060" head="true" rule="O-ADV">
+                        <wg class="cl"
+                            xml:id="n500020030010060"
+                            head="true"
+                            rule="O-ADV"
+                            cltype="VerbElided">
                            <wg role="o"
                                class="np"
                                xml:id="n500020030010012"
@@ -10811,7 +10873,7 @@
                         <wg class="cl"
                             xml:id="n500020030080060"
                             head="true"
-                            rule="ADV-O-V-O2">
+                            rule="ADV-O-V-O2"><!--ClCl ADV-O-V-O2 1-->
                            <wg role="adv"
                                class="np"
                                xml:id="n500020030080020"
@@ -11061,7 +11123,11 @@
                                  ln="89.125"
                                  morph="CONJ"
                                  unicode="ἀλλὰ">ἀλλὰ</w>
-                              <wg class="cl" xml:id="n500020040070040" head="true" rule="O-ADV">
+                              <wg class="cl"
+                                  xml:id="n500020040070040"
+                                  head="true"
+                                  rule="O-ADV"
+                                  cltype="VerbElided">
                                  <wg role="o"
                                      class="np"
                                      xml:id="n500020040070030"
@@ -11157,7 +11223,7 @@
          <milestone unit="verse" id="PHP 2:6">PHP 2:6</milestone>
          <milestone unit="verse" id="PHP 2:7">PHP 2:7</milestone> τοῦτο φρονεῖτε ἐν ὑμῖν ὃ καὶ ἐν Χριστῷ Ἰησοῦ, ὃς ἐν μορφῇ Θεοῦ ὑπάρχων οὐχ ἁρπαγμὸν ἡγήσατο τὸ εἶναι ἴσα Θεῷ, ἀλλὰ ἑαυτὸν ἐκένωσεν μορφὴν δούλου λαβών, ἐν ὁμοιώματι ἀνθρώπων γενόμενος·</p>
       <wg>
-         <wg class="cl" xml:id="n500020050010040" head="true" rule="O-V-ADV">
+         <wg class="cl" xml:id="n500020050010040" head="true" rule="O-V-ADV"><!--ClCl O-V-ADV 1-->
             <wg role="o" class="np" xml:id="n500020050010011" rule="Pron2NP">
                <w ref="PHP 2:5!1"
                   after=" "
@@ -11236,7 +11302,11 @@
                      referent="n50001012005">ὑμῖν</w>
                </wg>
             </wg>
-            <wg class="cl" xml:id="n500020050050050" head="true" rule="S-ADV-P">
+            <wg class="cl"
+                xml:id="n500020050050050"
+                head="true"
+                rule="S-ADV-P"
+                cltype="Verbless"><!--ClCl S-ADV-P 1-->
                <wg role="s" class="np" xml:id="n500020050050011" rule="Pron2NP">
                   <w ref="PHP 2:5!5"
                      after=" "
@@ -11815,53 +11885,55 @@
                morph="CONJ"
                unicode="καὶ">καὶ</w>
             <wg class="cl" xml:id="n500020070120130" rule="ADV-V-O-ADV">
-               <wg role="adv" class="cl" xml:id="n500020070120040" rule="ClCl">
-                  <wg class="cl" xml:id="n500020070120020" head="true" rule="ADV-V">
-                     <wg role="adv" class="np" xml:id="n500020070120011" rule="N2NP">
-                        <w ref="PHP 2:7!12"
-                           after=" "
-                           class="noun"
-                           type="common"
-                           xml:id="n50002007012"
-                           lemma="σχῆμα"
-                           normalized="σχήματι"
-                           strong="4976"
-                           number="singular"
-                           gender="neuter"
-                           case="dative"
-                           gloss="in appearance"
-                           domain="058002"
-                           ln="58.17"
-                           morph="N-DSN"
-                           unicode="σχήματι">σχήματι</w>
-                     </wg>
-                     <wg role="v"
-                         class="vp"
-                         xml:id="n500020070130011"
-                         head="true"
-                         rule="V2VP">
-                        <w ref="PHP 2:7!13"
-                           after=" "
-                           class="verb"
-                           xml:id="n50002007013"
-                           lemma="εὑρίσκω"
-                           normalized="εὑρεθείς"
-                           strong="2147"
-                           number="singular"
-                           gender="masculine"
-                           case="nominative"
-                           tense="aorist"
-                           voice="passive"
-                           mood="participle"
-                           head="true"
-                           gloss="having been found"
-                           domain="013001"
-                           ln="13.7"
-                           morph="V-APP-NSM"
-                           unicode="εὑρεθεὶς"
-                           frame="A1:n50002005008"
-                           subjref="n50002005008">εὑρεθεὶς</w>
-                     </wg>
+               <wg role="adv"
+                   class="cl"
+                   xml:id="n500020070120020"
+                   head="true"
+                   rule="ADV-V"><!--ClCl ADV-V 1-->
+                  <wg role="adv" class="np" xml:id="n500020070120011" rule="N2NP">
+                     <w ref="PHP 2:7!12"
+                        after=" "
+                        class="noun"
+                        type="common"
+                        xml:id="n50002007012"
+                        lemma="σχῆμα"
+                        normalized="σχήματι"
+                        strong="4976"
+                        number="singular"
+                        gender="neuter"
+                        case="dative"
+                        gloss="in appearance"
+                        domain="058002"
+                        ln="58.17"
+                        morph="N-DSN"
+                        unicode="σχήματι">σχήματι</w>
+                  </wg>
+                  <wg role="v"
+                      class="vp"
+                      xml:id="n500020070130011"
+                      head="true"
+                      rule="V2VP">
+                     <w ref="PHP 2:7!13"
+                        after=" "
+                        class="verb"
+                        xml:id="n50002007013"
+                        lemma="εὑρίσκω"
+                        normalized="εὑρεθείς"
+                        strong="2147"
+                        number="singular"
+                        gender="masculine"
+                        case="nominative"
+                        tense="aorist"
+                        voice="passive"
+                        mood="participle"
+                        head="true"
+                        gloss="having been found"
+                        domain="013001"
+                        ln="13.7"
+                        morph="V-APP-NSM"
+                        unicode="εὑρεθεὶς"
+                        frame="A1:n50002005008"
+                        subjref="n50002005008">εὑρεθεὶς</w>
                   </wg>
                   <wg role="adv" xml:id="n500020070140020" rule="sub-CL" class="wg">
                      <w ref="PHP 2:7!14"
@@ -11876,7 +11948,10 @@
                         ln="64.12"
                         morph="ADV"
                         unicode="ὡς">ὡς</w>
-                     <wg class="cl" xml:id="n500020070150013" rule="S2CL">
+                     <wg class="cl"
+                         xml:id="n500020070150013"
+                         rule="S2CL"
+                         cltype="VerbElided">
                         <wg role="s" class="np" xml:id="n500020070150011" rule="N2NP">
                            <w ref="PHP 2:7!15"
                               after=" "
@@ -12096,7 +12171,7 @@
                ln="89.47"
                morph="CONJ"
                unicode="διὸ">διὸ</w>
-            <wg role="g" class="group" xml:id="n500020090020140" rule="clacl">
+            <wg role="g" class="group" xml:id="n500020090020140" rule="clacl"><!--ClCl CLaCL 1-->
                <wg class="cl" xml:id="n500020090020050" head="true" rule="S-O-V">
                   <wg role="s"
                       class="np"
@@ -12703,7 +12778,7 @@
                               unicode="ἐξομολογήσηται"
                               frame="A0:n50002011003 A1:n50002011006">ἐξομολογήσηται</w>
                         </wg>
-                        <wg role="o" class="cl" xml:id="n500020110050040" rule="that-VP">
+                        <wg role="o" xml:id="n500020110050040" rule="that-VP" class="wg">
                            <w ref="PHP 2:11!5"
                               after=" "
                               class="conj"
@@ -12716,7 +12791,10 @@
                               ln="90.21"
                               morph="CONJ"
                               unicode="ὅτι">ὅτι</w>
-                           <wg class="cl" xml:id="n500020110060030" rule="P-S">
+                           <wg class="cl"
+                               xml:id="n500020110060030"
+                               rule="P-S"
+                               cltype="Verbless">
                               <wg role="p"
                                   class="np"
                                   xml:id="n500020110060011"
@@ -12879,7 +12957,7 @@
                ln="89.52"
                morph="CONJ"
                unicode="Ὥστε,">Ὥστε</w>
-            <wg class="cl" xml:id="n500020120220080" head="true" rule="ADV-O-V">
+            <wg class="cl" xml:id="n500020120220080" head="true" rule="ADV-O-V"><!--ClCl2 ClCl2 2-->
                <wg role="aux" class="minor" xml:id="n500020120020021" rule="np2cl">
                   <wg class="np" xml:id="n500020120020020" rule="NPofNP">
                      <wg class="np" xml:id="n500020120020012" head="true" rule="Adj2NP">
@@ -12925,6 +13003,7 @@
                      </wg>
                   </wg>
                </wg>
+               <!--ClCl2 ADV-O-V 2-->
                <wg role="adv" xml:id="n500020120040180" rule="sub-CL" class="wg">
                   <w ref="PHP 2:12!4"
                      after=" "
@@ -12983,10 +13062,10 @@
                            subjref="n50002012002">ὑπηκούσατε</w>
                      </wg>
                      <wg role="adv"
-                         class="cl"
                          xml:id="n500020120080150"
                          articular="true"
-                         rule="sub-CL">
+                         rule="sub-CL"
+                         class="wg">
                         <w ref="PHP 2:12!8"
                            after=" "
                            class="conj"
@@ -13021,7 +13100,8 @@
                            <wg class="cl"
                                xml:id="n500020120090050"
                                articular="true"
-                               rule="P-ADV">
+                               rule="P-ADV"
+                               cltype="Verbless">
                               <wg role="p"
                                   class="pp"
                                   xml:id="n500020120090040"
@@ -13136,7 +13216,8 @@
                                xml:id="n500020120150070"
                                articular="true"
                                head="true"
-                               rule="ADV-ADV-P">
+                               rule="ADV-ADV-P"
+                               cltype="Verbless">
                               <wg role="adv"
                                   class="advp"
                                   xml:id="n500020120150011"
@@ -13770,7 +13851,7 @@
          <milestone unit="verse" id="PHP 2:15">PHP 2:15</milestone>
          <milestone unit="verse" id="PHP 2:16">PHP 2:16</milestone> πάντα ποιεῖτε χωρὶς γογγυσμῶν καὶ διαλογισμῶν, ἵνα γένησθε ἄμεμπτοι καὶ ἀκέραιοι, τέκνα Θεοῦ ἄμωμα μέσον γενεᾶς σκολιᾶς καὶ διεστραμμένης, ἐν οἷς φαίνεσθε ὡς φωστῆρες ἐν κόσμῳ, λόγον ζωῆς ἐπέχοντες, εἰς καύχημα ἐμοὶ εἰς ἡμέραν Χριστοῦ, ὅτι οὐκ εἰς κενὸν ἔδραμον οὐδὲ εἰς κενὸν ἐκοπίασα.</p>
       <wg>
-         <wg class="cl" xml:id="n500020140010060" head="true" rule="O-V-ADV">
+         <wg class="cl" xml:id="n500020140010060" head="true" rule="O-V-ADV"><!--ClCl O-V-ADV 1-->
             <wg role="o" class="np" xml:id="n500020140010012" rule="Adj2NP">
                <wg class="adjp" xml:id="n500020140010011" rule="Adj2Adjp">
                   <w ref="PHP 2:14!1"
@@ -14114,7 +14195,7 @@
                                  morph="CONJ"
                                  unicode="καὶ">καὶ</w>
                               <wg class="adjp" xml:id="n500020150130014" rule="CL2Adjp">
-                                 <wg role="adv" class="cl" xml:id="n500020150130013" rule="V2CL"><!-- Circumstantial Participle  -->
+                                 <wg class="cl" xml:id="n500020150130013" rule="V2CL">
                                     <wg role="v" class="vp" xml:id="n500020150130011" rule="V2VP">
                                        <w ref="PHP 2:15!13"
                                           after=","
@@ -14145,7 +14226,7 @@
                             xml:id="n500020160100090"
                             head="true"
                             rule="sub-CL"
-                            class="wg">
+                            class="wg"><!--ClCl2 sub-CL 2-->
                            <wg class="cl" xml:id="n500020150140160" rule="ADV-V-ADV-ADV-ADV">
                               <wg role="adv" class="pp" xml:id="n500020150140020" rule="PrepNp">
                                  <w ref="PHP 2:15!14"
@@ -14207,7 +14288,7 @@
                                     frame="A0:n50002012002"
                                     subjref="n50002012002">φαίνεσθε</w>
                               </wg>
-                              <wg role="adv" class="cl" xml:id="n500020150170020" rule="sub-CL">
+                              <wg role="adv" xml:id="n500020150170020" rule="sub-CL" class="wg">
                                  <w ref="PHP 2:15!17"
                                     after=" "
                                     class="conj"
@@ -14220,7 +14301,10 @@
                                     ln="64.12"
                                     morph="ADV"
                                     unicode="ὡς">ὡς</w>
-                                 <wg class="cl" xml:id="n500020150180013" rule="S2CL">
+                                 <wg class="cl"
+                                     xml:id="n500020150180013"
+                                     rule="S2CL"
+                                     cltype="VerbElided">
                                     <wg role="s" class="np" xml:id="n500020150180011" rule="N2NP">
                                        <w ref="PHP 2:15!18"
                                           after=" "
@@ -14654,7 +14738,7 @@
                ln="91.2"
                morph="CONJ"
                unicode="Ἀλλὰ">Ἀλλὰ</w>
-            <wg role="g" class="group" xml:id="n500020170130050" rule="clacl">
+            <wg role="g" class="group" xml:id="n500020170130050" rule="clacl"><!--ClCl2 CLaCL 2-->
                <wg role="adv" xml:id="n500020170020110" rule="sub-CL" class="wg">
                   <w ref="PHP 2:17!2"
                      after=" "
@@ -15171,7 +15255,7 @@
                gloss="however"
                morph="CONJ"
                unicode="δὲ">δὲ</w>
-            <wg class="cl" xml:id="n500020190010080" head="true" rule="V-ADV-O">
+            <wg class="cl" xml:id="n500020190010080" head="true" rule="V-ADV-O"><!--ClCl V-ADV-O 1-->
                <wg role="v"
                    class="vp"
                    xml:id="n500020190010011"
@@ -15497,7 +15581,7 @@
                ln="89.23"
                morph="CONJ"
                unicode="γὰρ">γὰρ</w>
-            <wg class="cl" xml:id="n500020200010030" head="true" rule="O-V">
+            <wg class="cl" xml:id="n500020200010030" head="true" rule="O-V"><!--ClCl ClCl 1--><!--ClCl O-V 1-->
                <wg role="o" class="np" xml:id="n500020200010020" rule="NpAdjp">
                   <wg class="np" xml:id="n500020200010012" head="true" rule="Adj2NP">
                      <wg class="adjp"
@@ -15693,7 +15777,7 @@
                      gloss="for"
                      morph="CONJ"
                      unicode="γὰρ">γὰρ</w>
-                  <wg class="cl" xml:id="n500020210010050" head="true" rule="S-O-V">
+                  <wg class="cl" xml:id="n500020210010050" head="true" rule="S-O-V"><!--ClCl S-O-V 1-->
                      <wg role="s"
                          class="np"
                          xml:id="n500020210010020"
@@ -15800,7 +15884,10 @@
                            unicode="ζητοῦσιν,"
                            frame="A0:n50002021002 A1:n50002021004">ζητοῦσιν</w>
                      </wg>
-                     <wg class="cl" xml:id="n500020210070040" rule="ADV-O">
+                     <wg class="cl"
+                         xml:id="n500020210070040"
+                         rule="ADV-O"
+                         cltype="VerbElided">
                         <wg role="adv"
                             class="advp"
                             xml:id="n500020210070011"
@@ -15906,7 +15993,7 @@
                ln="89.124"
                morph="CONJ"
                unicode="δὲ">δὲ</w>
-            <wg class="cl" xml:id="n500020220010040" head="true" rule="O-V">
+            <wg class="cl" xml:id="n500020220010040" head="true" rule="O-V"><!--ClCl O-V 1-->
                <wg role="o"
                    class="np"
                    xml:id="n500020220010030"
@@ -16012,7 +16099,7 @@
                   <wg class="cl"
                       xml:id="n500020220100060"
                       head="true"
-                      rule="ADV-V-ADV">
+                      rule="ADV-V-ADV"><!--ClCl2 ADV-V-ADV 2-->
                      <wg role="adv" xml:id="n500020220070030" rule="sub-CL" class="wg">
                         <w ref="PHP 2:22!7"
                            after=" "
@@ -16026,7 +16113,10 @@
                            ln="64.12"
                            morph="ADV"
                            unicode="ὡς">ὡς</w>
-                        <wg class="cl" xml:id="n500020220080020" rule="ADV-S">
+                        <wg class="cl"
+                            xml:id="n500020220080020"
+                            rule="ADV-S"
+                            cltype="VerbElided">
                            <wg role="adv" class="np" xml:id="n500020220080011" rule="N2NP">
                               <w ref="PHP 2:22!8"
                                  after=" "
@@ -16300,7 +16390,7 @@
                            frame="A0:n50001001001 A1:n50002023001"
                            subjref="n50001001001">πέμψαι</w>
                      </wg>
-                     <wg role="adv" class="cl" xml:id="n500020230060060" rule="sub-CL">
+                     <wg role="adv" xml:id="n500020230060060" rule="sub-CL" class="wg">
                         <w ref="PHP 2:23!6"
                            after=" "
                            class="conj"
@@ -16441,7 +16531,7 @@
                   ln="89.136"
                   morph="CONJ"
                   unicode="δὲ">δὲ</w>
-               <wg class="cl" xml:id="n500020240010030" head="true" rule="V-ADV">
+               <wg class="cl" xml:id="n500020240010030" head="true" rule="V-ADV"><!--ClCl V-ADV 1-->
                   <wg role="v"
                       class="vp"
                       xml:id="n500020240010011"
@@ -16616,7 +16706,7 @@
                ln="89.124"
                morph="CONJ"
                unicode="δὲ">δὲ</w>
-            <wg class="cl" xml:id="n500020250030210" head="true" rule="V-O2-O">
+            <wg class="cl" xml:id="n500020250030210" head="true" rule="V-O2-O"><!--ClCl V-O2-O 1-->
                <wg role="v"
                    class="vp"
                    xml:id="n500020250030011"
@@ -17127,7 +17217,7 @@
                         ln="89.92"
                         morph="CONJ"
                         unicode="καὶ">καὶ</w>
-                     <wg class="cl" xml:id="n500020260070013" head="true" rule="V2CL">
+                     <wg class="cl" xml:id="n500020260070013" head="true" rule="V2CL"><!--ClCl V2CL 1-->
                         <wg role="v"
                             class="vp"
                             xml:id="n500020260070011"
@@ -17168,7 +17258,7 @@
                               ln="89.26"
                               morph="CONJ"
                               unicode="διότι">διότι</w>
-                           <wg class="cl" xml:id="n500020260090013" head="true" rule="V2CL">
+                           <wg class="cl" xml:id="n500020260090013" head="true" rule="V2CL"><!--ClCl V2CL 1-->
                               <wg role="v"
                                   class="vp"
                                   xml:id="n500020260090011"
@@ -17364,7 +17454,7 @@
                ln="89.125"
                morph="CONJ"
                unicode="ἀλλὰ">ἀλλὰ</w>
-            <wg class="cl" xml:id="n500020270070110" head="true" rule="S-V-O">
+            <wg class="cl" xml:id="n500020270070110" head="true" rule="S-V-O"><!--ClCl S-V-O 1-->
                <wg role="s"
                    class="np"
                    xml:id="n500020270070020"
@@ -17695,7 +17785,7 @@
                ln="89.50"
                morph="CONJ"
                unicode="οὖν">οὖν</w>
-            <wg class="cl" xml:id="n500020280010030" head="true" rule="ADV-V-O">
+            <wg class="cl" xml:id="n500020280010030" head="true" rule="ADV-V-O"><!--ClCl ADV-V-O 1-->
                <wg role="adv"
                    class="advp"
                    xml:id="n500020280010011"
@@ -17771,7 +17861,7 @@
                      ln="89.59"
                      morph="CONJ"
                      unicode="ἵνα">ἵνα</w>
-                  <wg class="cl" xml:id="n500020280060040" head="true" rule="ADV-V">
+                  <wg class="cl" xml:id="n500020280060040" head="true" rule="ADV-V"><!--ClCl ADV-V 1-->
                      <wg role="adv" class="cl" xml:id="n500020280060030" rule="V-O-ADV">
                         <wg role="v"
                             class="vp"
@@ -17950,7 +18040,7 @@
                ln="89.50"
                morph="CONJ"
                unicode="οὖν">οὖν</w>
-            <wg role="g" class="group" xml:id="n500020290010120" rule="clacl">
+            <wg role="g" class="group" xml:id="n500020290010120" rule="clacl"><!--ClCl CLaCL 1-->
                <wg class="cl"
                    xml:id="n500020290010070"
                    head="true"
@@ -18202,7 +18292,7 @@
                   <wg class="cl"
                       xml:id="n500020300020100"
                       head="true"
-                      rule="ADV-ADV-V-ADV">
+                      rule="ADV-ADV-V-ADV"><!--ClCl ADV-ADV-V-ADV 1-->
                      <wg role="adv"
                          class="pp"
                          xml:id="n500020300020040"
@@ -18600,7 +18690,7 @@
          <wg class="cl"
              xml:id="n500030010010050"
              head="true"
-             rule="ADV-V-ADV">
+             rule="ADV-V-ADV"><!--ClCl2 ADV-V-ADV 2-->
             <wg role="aux" class="minor" xml:id="n500030010030021" rule="np2cl">
                <wg class="np" xml:id="n500030010030020" rule="NPofNP">
                   <wg class="np" xml:id="n500030010030011" head="true" rule="N2NP">
@@ -18751,7 +18841,10 @@
       <p>
          <milestone unit="verse" id="PHP 3:1">PHP 3:1</milestone> τὰ αὐτὰ γράφειν ὑμῖν ἐμοὶ μὲν οὐκ ὀκνηρόν, ὑμῖν δὲ ἀσφαλές.</p>
       <wg>
-         <wg class="cl" xml:id="n500030010080110" rule="S-P">
+         <wg class="cl"
+             xml:id="n500030010080110"
+             rule="S-P"
+             cltype="Verbless">
             <wg role="s" class="np" xml:id="n500030010080041" rule="CL2NP">
                <wg class="cl" xml:id="n500030010080040" rule="O-V-IO">
                   <wg role="o"
@@ -18837,11 +18930,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg role="p"
-                class="cl"
-                xml:id="n500030010130070"
-                head="true"
-                rule="aCLaCL">
+            <wg role="p" class="group" xml:id="n500030010130070" rule="aclacl">
                <w ref="PHP 3:1!13"
                   after=" "
                   class="conj"
@@ -18858,7 +18947,8 @@
                <wg class="cl"
                    xml:id="n500030010120030"
                    head="true"
-                   rule="ADV-ADV-P">
+                   rule="ADV-ADV-P"
+                   cltype="Verbless">
                   <wg role="adv" class="np" xml:id="n500030010120011" rule="Pron2NP">
                      <w ref="PHP 3:1!12"
                         after=" "
@@ -18930,7 +19020,10 @@
                   ln="89.136"
                   morph="CONJ"
                   unicode="δὲ">δὲ</w>
-               <wg class="cl" xml:id="n500030010160020" rule="ADV-P">
+               <wg class="cl"
+                   xml:id="n500030010160020"
+                   rule="ADV-P"
+                   cltype="Verbless">
                   <wg role="adv" class="np" xml:id="n500030010160011" rule="Pron2NP">
                      <w ref="PHP 3:1!16"
                         after=" "
@@ -19583,7 +19676,7 @@
                                  unicode="πεποιθότες,"
                                  frame="A0:n00000000000">πεποιθότες</w>
                            </wg>
-                           <wg role="adv" class="cl" xml:id="n500030040010070" rule="sub-CL">
+                           <wg role="adv" xml:id="n500030040010070" rule="sub-CL" class="wg">
                               <w ref="PHP 3:4!1"
                                  after=" "
                                  class="conj"
@@ -19722,7 +19815,11 @@
       <p>
          <milestone unit="verse" id="PHP 3:4">PHP 3:4</milestone> Εἴ τις δοκεῖ ἄλλος πεποιθέναι ἐν σαρκί, ἐγὼ μᾶλλον·</p>
       <wg>
-         <wg class="cl" xml:id="n500030040150020" head="true" rule="S-ADV">
+         <wg class="cl"
+             xml:id="n500030040150020"
+             head="true"
+             rule="S-ADV"
+             cltype="VerbElided"><!--ClCl2 S-ADV 2-->
             <wg role="adv" xml:id="n500030040080070" rule="sub-CL" class="wg">
                <w ref="PHP 3:4!8"
                   after=" "
@@ -19914,7 +20011,11 @@
              class="group"
              xml:id="n500030050010250"
              rule="clclclclclclcl">
-            <wg class="cl" xml:id="n500030050010020" head="true" rule="ADV-P">
+            <wg class="cl"
+                xml:id="n500030050010020"
+                head="true"
+                rule="ADV-P"
+                cltype="Verbless">
                <wg role="adv" class="np" xml:id="n500030050010011" rule="N2NP">
                   <w ref="PHP 3:5!1"
                      after=" "
@@ -19956,7 +20057,10 @@
                      unicode="ὀκταήμερος,">ὀκταήμερος</w>
                </wg>
             </wg>
-            <wg class="cl" xml:id="n500030050030032" rule="P2CL">
+            <wg class="cl"
+                xml:id="n500030050030032"
+                rule="P2CL"
+                cltype="Verbless">
                <wg role="p" class="pp" xml:id="n500030050030030" rule="PrepNp">
                   <w ref="PHP 3:5!3"
                      after=" "
@@ -20011,7 +20115,10 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" xml:id="n500030050060022" rule="P2CL">
+            <wg class="cl"
+                xml:id="n500030050060022"
+                rule="P2CL"
+                cltype="Verbless">
                <wg role="p" class="np" xml:id="n500030050060020" rule="NPofNP">
                   <wg class="np" xml:id="n500030050060011" head="true" rule="N2NP">
                      <w ref="PHP 3:5!6"
@@ -20052,7 +20159,10 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" xml:id="n500030050080032" rule="P2CL">
+            <wg class="cl"
+                xml:id="n500030050080032"
+                rule="P2CL"
+                cltype="Verbless">
                <wg role="p" class="np" xml:id="n500030050080030" rule="NpPp">
                   <wg class="np" xml:id="n500030050080012" head="true" rule="Adj2NP">
                      <wg class="adjp"
@@ -20118,7 +20228,10 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" xml:id="n500030050110030" rule="ADV-P">
+            <wg class="cl"
+                xml:id="n500030050110030"
+                rule="ADV-P"
+                cltype="Verbless">
                <wg role="adv" class="pp" xml:id="n500030050110020" rule="PrepNp">
                   <w ref="PHP 3:5!11"
                      after=" "
@@ -20176,7 +20289,10 @@
                      unicode="Φαρισαῖος,">Φαρισαῖος</w>
                </wg>
             </wg>
-            <wg class="cl" xml:id="n500030060010050" rule="ADV-P">
+            <wg class="cl"
+                xml:id="n500030060010050"
+                rule="ADV-P"
+                cltype="Verbless">
                <wg role="adv" class="pp" xml:id="n500030060010020" rule="PrepNp">
                   <w ref="PHP 3:6!1"
                      after=" "
@@ -20445,7 +20561,7 @@
             <wg class="cl"
                 xml:id="n500030070060060"
                 head="true"
-                rule="O-V-ADV-O2">
+                rule="O-V-ADV-O2"><!--ClCl2 O-V-ADV-O2 2-->
                <wg class="cl" xml:id="n500030070020040" rule="S-VC-ADV-P">
                   <wg role="s" class="np" xml:id="n500030070020011" rule="Pron2NP">
                      <w ref="PHP 3:7!2"
@@ -20709,7 +20825,7 @@
                      <wg class="cl"
                          xml:id="n500030080050230"
                          head="true"
-                         rule="ADV-V-O-ADV">
+                         rule="ADV-V-O-ADV"><!--ClCl ClCl 1--><!--ClCl ADV-V-O-ADV 1-->
                         <wg role="adv"
                             class="advp"
                             xml:id="n500030080050011"
@@ -20854,11 +20970,7 @@
                                     ln="92.24"
                                     morph="T-ASN"
                                     unicode="τὸ">τὸ</w>
-                                 <wg role="adv"
-                                     class="cl"
-                                     xml:id="n500030080120013"
-                                     head="true"
-                                     rule="V2CL"><!-- Circumstantial Participle  -->
+                                 <wg class="cl" xml:id="n500030080120013" head="true" rule="V2CL">
                                     <wg role="v"
                                         class="vp"
                                         xml:id="n500030080120011"
@@ -22379,7 +22491,7 @@
                ln="89.124"
                morph="CONJ"
                unicode="δὲ">δὲ</w>
-            <wg class="cl" xml:id="n500030120080013" head="true" rule="V2CL">
+            <wg class="cl" xml:id="n500030120080013" head="true" rule="V2CL"><!--ClCl V2CL 1-->
                <wg role="v"
                    class="vp"
                    xml:id="n500030120080011"
@@ -22612,7 +22724,7 @@
          <wg class="cl"
              xml:id="n500030130020050"
              head="true"
-             rule="S-ADV-V-O">
+             rule="S-ADV-V-O"><!--ClCl2 S-ADV-V-O 2-->
             <wg role="aux" class="minor" xml:id="n500030130010012" rule="np2cl">
                <wg class="np" xml:id="n500030130010011" rule="N2NP">
                   <w ref="PHP 3:13!1"
@@ -22758,7 +22870,11 @@
                ln="89.124"
                morph="CONJ"
                unicode="δέ,">δέ</w>
-            <wg class="cl" xml:id="n500030130070014" head="true" rule="O2CL">
+            <wg class="cl"
+                xml:id="n500030130070014"
+                head="true"
+                rule="O2CL"
+                cltype="VerbElided"><!--ClCl O2CL 1-->
                <wg role="o"
                    class="np"
                    xml:id="n500030130070012"
@@ -22787,7 +22903,10 @@
                   </wg>
                </wg>
                <wg class="cl" xml:id="n500030130100220" rule="ADV-ADV-V-ADV">
-                  <wg role="adv" class="cl" xml:id="n500030130100080" rule="aCLaCL">
+                  <wg role="adv"
+                      class="group"
+                      xml:id="n500030130100080"
+                      rule="aclacl">
                      <w ref="PHP 3:13!10"
                         after=" "
                         class="conj"
@@ -23249,8 +23368,11 @@
                ln="89.50"
                morph="CONJ"
                unicode="οὖν">οὖν</w>
-            <wg class="cl" xml:id="n500030150040020" head="true" rule="O-V">
-               <wg class="cl" xml:id="n500030150010020" rule="S-P">
+            <wg class="cl" xml:id="n500030150040020" head="true" rule="O-V"><!--ClCl2 O-V 2-->
+               <wg class="cl"
+                   xml:id="n500030150010020"
+                   rule="S-P"
+                   cltype="Verbless">
                   <wg role="s" class="np" xml:id="n500030150010011" rule="Pron2NP">
                      <w ref="PHP 3:15!1"
                         after=" "
@@ -23361,7 +23483,7 @@
             <wg class="cl"
                 xml:id="n500030150110060"
                 head="true"
-                rule="O-S-IO-V">
+                rule="O-S-IO-V"><!--ClCl2 O-S-IO-V 2-->
                <wg role="adv" xml:id="n500030150070040" rule="sub-CL" class="wg">
                   <w ref="PHP 3:15!7"
                      after=" "
@@ -23579,8 +23701,11 @@
                ln="89.130"
                morph="ADV"
                unicode="πλὴν">πλὴν</w>
-            <wg class="cl" xml:id="n500030160050030" head="true" rule="ADV-V">
-               <wg class="cl" xml:id="n500030160020032" rule="ADV2CL">
+            <wg class="cl" xml:id="n500030160050030" head="true" rule="ADV-V"><!--ClCl2 ADV-V 2-->
+               <wg class="cl"
+                   xml:id="n500030160020032"
+                   rule="ADV2CL"
+                   cltype="VerbElided">
                   <wg role="adv" class="pp" xml:id="n500030160020030" rule="PrepNp">
                      <w ref="PHP 3:16!2"
                         after=" "
@@ -23716,7 +23841,7 @@
       <p>
          <milestone unit="verse" id="PHP 3:17">PHP 3:17</milestone> Συνμιμηταί μου γίνεσθε, ἀδελφοί, καὶ σκοπεῖτε τοὺς οὕτως περιπατοῦντας καθὼς ἔχετε τύπον ἡμᾶς.</p>
       <wg>
-         <wg role="g" class="group" xml:id="n500030170010120" rule="clacl">
+         <wg role="g" class="group" xml:id="n500030170010120" rule="clacl"><!--ClCl2 CLaCL 2-->
             <wg role="aux" class="minor" xml:id="n500030170040012" rule="np2cl">
                <wg class="np" xml:id="n500030170040011" rule="N2NP">
                   <w ref="PHP 3:17!4"
@@ -23866,7 +23991,7 @@
                       class="cl"
                       xml:id="n500030170080020"
                       head="true"
-                      rule="ADV-V"><!-- Circumstantial Participle  -->
+                      rule="ADV-V"><!--ClCl ADV-V 1--><!-- Absolute Participle  -->
                      <wg role="adv"
                          class="advp"
                          xml:id="n500030170080011"
@@ -24013,7 +24138,7 @@
                ln="89.23"
                morph="CONJ"
                unicode="γὰρ">γὰρ</w>
-            <wg class="cl" xml:id="n500030180010020" head="true" rule="S-V">
+            <wg class="cl" xml:id="n500030180010020" head="true" rule="S-V"><!--ClCl ClCl 1--><!--ClCl ClCl 1--><!--ClCl ClCl 1--><!--ClCl S-V 1-->
                <wg role="s" class="np" xml:id="n500030180010012" rule="Adj2NP">
                   <wg class="adjp" xml:id="n500030180010011" rule="Adj2Adjp">
                      <w ref="PHP 3:18!1"
@@ -24246,7 +24371,8 @@
                          class="cl"
                          xml:id="n500030180130062"
                          articular="true"
-                         rule="P2CL">
+                         rule="P2CL"
+                         cltype="Verbless">
                         <wg role="p"
                             class="np"
                             xml:id="n500030180130060"
@@ -24376,7 +24502,10 @@
                      </wg>
                   </wg>
                </wg>
-               <wg class="cl" xml:id="n500030190010040" rule="S-P">
+               <wg class="cl"
+                   xml:id="n500030190010040"
+                   rule="S-P"
+                   cltype="Verbless">
                   <wg role="s"
                       class="np"
                       xml:id="n500030190010030"
@@ -24471,7 +24600,8 @@
                       xml:id="n500030190050050"
                       articular="true"
                       head="true"
-                      rule="S-P">
+                      rule="S-P"
+                      cltype="Verbless">
                      <wg role="s"
                          class="np"
                          xml:id="n500030190050030"
@@ -24594,7 +24724,8 @@
                   <wg class="cl"
                       xml:id="n500030190110060"
                       articular="true"
-                      rule="S-P">
+                      rule="S-P"
+                      cltype="Verbless">
                      <wg role="s"
                          class="np"
                          xml:id="n500030190110020"
@@ -24720,7 +24851,8 @@
                <wg class="cl"
                    xml:id="n500030190170042"
                    articular="true"
-                   rule="P2CL">
+                   rule="P2CL"
+                   cltype="Verbless">
                   <wg role="p"
                       class="np"
                       xml:id="n500030190170040"
@@ -24834,7 +24966,7 @@
                gloss="for"
                morph="CONJ"
                unicode="γὰρ">γὰρ</w>
-            <wg class="cl" xml:id="n500030200010060" head="true" rule="S-ADV-V">
+            <wg class="cl" xml:id="n500030200010060" head="true" rule="S-ADV-V"><!--ClCl S-ADV-V 1-->
                <wg role="s"
                    class="np"
                    xml:id="n500030200010030"
@@ -25647,7 +25779,7 @@
             <wg class="cl"
                 xml:id="n500040010110040"
                 head="true"
-                rule="ADV-V-ADV">
+                rule="ADV-V-ADV"><!--ClCl2 ClCl 2-->
                <wg role="aux" class="minor" xml:id="n500040010020091" rule="np2cl">
                   <wg class="np" xml:id="n500040010020090" rule="Np-Appos">
                      <wg class="np" xml:id="n500040010020050" head="true" rule="NpAdjp">
@@ -25816,6 +25948,7 @@
                      </wg>
                   </wg>
                </wg>
+               <!--ClCl ADV-V-ADV 1-->
                <wg role="adv"
                    class="advp"
                    xml:id="n500040010110011"
@@ -25921,7 +26054,7 @@
       <p>
          <milestone unit="verse" id="PHP 4:2">PHP 4:2</milestone> Εὐοδίαν παρακαλῶ καὶ Συντύχην παρακαλῶ τὸ αὐτὸ φρονεῖν ἐν Κυρίῳ.</p>
       <wg>
-         <wg role="g" class="group" xml:id="n500040020010050" rule="clacl">
+         <wg role="g" class="group" xml:id="n500040020010050" rule="clacl"><!--ClCl CLaCL 1-->
             <wg class="cl" xml:id="n500040020010020" head="true" rule="O-V">
                <wg role="o" class="np" xml:id="n500040020010011" rule="N2NP">
                   <w ref="PHP 4:2!1"
@@ -26131,7 +26264,7 @@
       <p>
          <milestone unit="verse" id="PHP 4:3">PHP 4:3</milestone> ναὶ ἐρωτῶ καὶ σέ, γνήσιε σύνζυγε, συνλαμβάνου αὐταῖς, αἵτινες ἐν τῷ εὐαγγελίῳ συνήθλησάν μοι μετὰ καὶ Κλήμεντος καὶ τῶν λοιπῶν συνεργῶν μου, ὧν τὰ ὀνόματα ἐν βίβλῳ ζωῆς.</p>
       <wg>
-         <wg class="cl" xml:id="n500040030020030" head="true" rule="V-O">
+         <wg class="cl" xml:id="n500040030020030" head="true" rule="V-O"><!--ClCl2 ClCl 2-->
             <wg role="aux"
                 class="minor"
                 xml:id="n500040030010012"
@@ -26151,6 +26284,8 @@
                      unicode="ναὶ">ναὶ</w>
                </wg>
             </wg>
+            <!--ClCl ClCl 1-->
+            <!--ClCl V-O 1-->
             <wg role="v"
                 class="vp"
                 xml:id="n500040030020011"
@@ -26561,7 +26696,10 @@
                                              referent="n50001001001">μου</w>
                                        </wg>
                                     </wg>
-                                    <wg class="cl" xml:id="n500040030230060" rule="S-P">
+                                    <wg class="cl"
+                                        xml:id="n500040030230060"
+                                        rule="S-P"
+                                        cltype="Verbless">
                                        <wg role="s"
                                            class="np"
                                            xml:id="n500040030230030"
@@ -26784,7 +26922,7 @@
       <p>
          <milestone unit="verse" id="PHP 4:4">PHP 4:4</milestone> πάλιν ἐρῶ, χαίρετε.</p>
       <wg>
-         <wg class="cl" xml:id="n500040040050020" head="true" rule="ADV-V">
+         <wg class="cl" xml:id="n500040040050020" head="true" rule="ADV-V"><!--ClCl ADV-V 1-->
             <wg role="adv"
                 class="advp"
                 xml:id="n500040040050011"
@@ -26993,7 +27131,10 @@
       <p>
          <milestone unit="verse" id="PHP 4:5">PHP 4:5</milestone> ὁ Κύριος ἐγγύς·</p>
       <wg>
-         <wg class="cl" xml:id="n500040050070030" rule="S-P">
+         <wg class="cl"
+             xml:id="n500040050070030"
+             rule="S-P"
+             cltype="Verbless">
             <wg role="s"
                 class="np"
                 xml:id="n500040050070020"
@@ -27857,7 +27998,7 @@
              head="true"
              rule="AdvpCL"
              class="wg"
-             role="adv">
+             role="adv"><!--ClCl2 AdvpCL 2-->
             <wg role="aux" class="minor" xml:id="n500040080030012" rule="np2cl">
                <wg class="np" xml:id="n500040080030011" rule="N2NP">
                   <w ref="PHP 4:8!3"
@@ -27925,7 +28066,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" xml:id="n500040080240020" head="true" rule="O-V">
+            <wg class="cl" xml:id="n500040080240020" head="true" rule="O-V"><!--ClCl2 ClCl2 2-->
                <wg role="aux" class="minor" xml:id="n500040080040131" rule="np2cl">
                   <wg class="np" xml:id="n500040080040130" rule="NpNpNpNpNpNp">
                      <wg class="np" xml:id="n500040080040031" head="true" rule="CL2NP">
@@ -27992,7 +28133,10 @@
                         </wg>
                      </wg>
                      <wg class="np" xml:id="n500040080070021" rule="CL2NP">
-                        <wg class="cl" xml:id="n500040080070020" rule="S-P">
+                        <wg class="cl"
+                            xml:id="n500040080070020"
+                            rule="S-P"
+                            cltype="Verbless">
                            <wg role="s" class="np" xml:id="n500040080070011" rule="Pron2NP">
                               <w ref="PHP 4:8!7"
                                  after=" "
@@ -28036,7 +28180,10 @@
                         </wg>
                      </wg>
                      <wg class="np" xml:id="n500040080090021" rule="CL2NP">
-                        <wg class="cl" xml:id="n500040080090020" rule="S-P">
+                        <wg class="cl"
+                            xml:id="n500040080090020"
+                            rule="S-P"
+                            cltype="Verbless">
                            <wg role="s" class="np" xml:id="n500040080090011" rule="Pron2NP">
                               <w ref="PHP 4:8!9"
                                  after=" "
@@ -28080,7 +28227,10 @@
                         </wg>
                      </wg>
                      <wg class="np" xml:id="n500040080110021" rule="CL2NP">
-                        <wg class="cl" xml:id="n500040080110020" rule="S-P">
+                        <wg class="cl"
+                            xml:id="n500040080110020"
+                            rule="S-P"
+                            cltype="Verbless">
                            <wg role="s" class="np" xml:id="n500040080110011" rule="Pron2NP">
                               <w ref="PHP 4:8!11"
                                  after=" "
@@ -28124,7 +28274,10 @@
                         </wg>
                      </wg>
                      <wg class="np" xml:id="n500040080130021" rule="CL2NP">
-                        <wg class="cl" xml:id="n500040080130020" rule="S-P">
+                        <wg class="cl"
+                            xml:id="n500040080130020"
+                            rule="S-P"
+                            cltype="Verbless">
                            <wg role="s" class="np" xml:id="n500040080130011" rule="Pron2NP">
                               <w ref="PHP 4:8!13"
                                  after=" "
@@ -28168,7 +28321,10 @@
                         </wg>
                      </wg>
                      <wg class="np" xml:id="n500040080150021" rule="CL2NP">
-                        <wg class="cl" xml:id="n500040080150020" rule="S-P">
+                        <wg class="cl"
+                            xml:id="n500040080150020"
+                            rule="S-P"
+                            cltype="Verbless">
                            <wg role="s" class="np" xml:id="n500040080150011" rule="Pron2NP">
                               <w ref="PHP 4:8!15"
                                  after=" "
@@ -28213,6 +28369,7 @@
                      </wg>
                   </wg>
                </wg>
+               <!--ClCl2 O-V 2-->
                <wg role="g" class="group" xml:id="n500040080170070" rule="clacl">
                   <wg role="adv"
                       xml:id="n500040080170030"
@@ -28231,7 +28388,10 @@
                         ln="89.65"
                         morph="COND"
                         unicode="εἴ">εἴ</w>
-                     <wg class="cl" xml:id="n500040080180020" rule="S-P">
+                     <wg class="cl"
+                         xml:id="n500040080180020"
+                         rule="S-P"
+                         cltype="Verbless">
                         <wg role="s" class="np" xml:id="n500040080180011" rule="Pron2NP">
                            <w ref="PHP 4:8!18"
                               after=" "
@@ -28300,7 +28460,10 @@
                         ln="89.65"
                         morph="COND"
                         unicode="εἴ">εἴ</w>
-                     <wg class="cl" xml:id="n500040080220020" rule="S-P">
+                     <wg class="cl"
+                         xml:id="n500040080220020"
+                         rule="S-P"
+                         cltype="Verbless">
                         <wg role="s" class="np" xml:id="n500040080220011" rule="Pron2NP">
                            <w ref="PHP 4:8!22"
                               after=" "
@@ -28398,7 +28561,7 @@
       <p>
          <milestone unit="verse" id="PHP 4:9">PHP 4:9</milestone> ἃ καὶ ἐμάθετε καὶ παρελάβετε καὶ ἠκούσατε καὶ εἴδετε ἐν ἐμοί, ταῦτα πράσσετε·</p>
       <wg>
-         <wg class="cl" xml:id="n500040090120020" head="true" rule="O-V">
+         <wg class="cl" xml:id="n500040090120020" head="true" rule="O-V"><!--ClCl2 O-V 2-->
             <wg class="cl" xml:id="n500040090010110" rule="O-V-ADV">
                <wg role="o" class="np" xml:id="n500040090010011" rule="Pron2NP">
                   <w ref="PHP 4:9!1"
@@ -28815,7 +28978,7 @@
             <wg class="cl"
                 xml:id="n500040100010040"
                 head="true"
-                rule="V-ADV-ADV">
+                rule="V-ADV-ADV"><!--ClCl V-ADV-ADV 1-->
                <wg role="v"
                    class="vp"
                    xml:id="n500040100010011"
@@ -28908,7 +29071,7 @@
                   <wg class="cl"
                       xml:id="n500040100070070"
                       head="true"
-                      rule="ADV-ADV-V-O">
+                      rule="ADV-ADV-V-O"><!--ClCl ADV-ADV-V-O 1-->
                      <wg role="adv"
                          class="advp"
                          xml:id="n500040100070011"
@@ -29177,7 +29340,11 @@
       <p>
          <milestone unit="verse" id="PHP 4:11">PHP 4:11</milestone> οὐχ ὅτι καθ’ ὑστέρησιν λέγω· ἐγὼ γὰρ ἔμαθον ἐν οἷς εἰμι αὐτάρκης εἶναι.</p>
       <wg>
-         <wg class="cl" xml:id="n500040110010050" head="true" rule="P-S">
+         <wg class="cl"
+             xml:id="n500040110010050"
+             head="true"
+             rule="P-S"
+             cltype="Verbless"><!--ClCl P-S 1-->
             <wg role="p"
                 class="advp"
                 xml:id="n500040110010011"
@@ -29197,7 +29364,7 @@
                   morph="PRT-N"
                   unicode="οὐχ">οὐχ</w>
             </wg>
-            <wg role="s" class="cl" xml:id="n500040110020040" rule="that-VP">
+            <wg role="s" xml:id="n500040110020040" rule="that-VP" class="wg">
                <w ref="PHP 4:11!2"
                   after=" "
                   class="conj"
@@ -29442,7 +29609,7 @@
       <p>
          <milestone unit="verse" id="PHP 4:12">PHP 4:12</milestone> οἶδα καὶ ταπεινοῦσθαι, οἶδα καὶ περισσεύειν·</p>
       <wg>
-         <wg class="cl" xml:id="n500040120010030" head="true" rule="V-O">
+         <wg class="cl" xml:id="n500040120010030" head="true" rule="V-O"><!--ClCl V-O 1-->
             <wg role="v"
                 class="vp"
                 xml:id="n500040120010011"
@@ -29709,78 +29876,79 @@
                   frame="A1:n50001001001"
                   subjref="n50001001001">μεμύημαι</w>
             </wg>
-            <wg role="adv" class="cl" xml:id="n500040120130080" rule="ClCl">
-               <wg role="g" class="group" xml:id="n500040120130040" rule="aclacl">
-                  <w ref="PHP 4:12!13"
-                     after=" "
-                     class="conj"
-                     xml:id="n50004012013"
-                     lemma="καί"
-                     normalized="καί"
-                     strong="2532"
-                     gloss="also"
-                     domain="089017"
-                     ln="89.102"
-                     morph="CONJ"
-                     unicode="καὶ">καὶ</w>
-                  <wg class="cl" xml:id="n500040120140013" head="true" rule="V2CL">
-                     <wg role="v"
-                         class="vp"
-                         xml:id="n500040120140011"
-                         head="true"
-                         rule="V2VP">
-                        <w ref="PHP 4:12!14"
-                           after=" "
-                           class="verb"
-                           xml:id="n50004012014"
-                           lemma="χορτάζω"
-                           normalized="χορτάζεσθαι"
-                           strong="5526"
-                           tense="present"
-                           voice="passive"
-                           mood="infinitive"
-                           head="true"
-                           gloss="to be full"
-                           domain="023001"
-                           ln="23.16"
-                           morph="V-PPN"
-                           unicode="χορτάζεσθαι"
-                           frame="A1:n50001001001"
-                           subjref="n50001001001">χορτάζεσθαι</w>
-                     </wg>
+            <wg role="adv"
+                class="group"
+                xml:id="n500040120130040"
+                rule="aclacl"><!--ClCl aCLaCL 1-->
+               <w ref="PHP 4:12!13"
+                  after=" "
+                  class="conj"
+                  xml:id="n50004012013"
+                  lemma="καί"
+                  normalized="καί"
+                  strong="2532"
+                  gloss="also"
+                  domain="089017"
+                  ln="89.102"
+                  morph="CONJ"
+                  unicode="καὶ">καὶ</w>
+               <wg class="cl" xml:id="n500040120140013" head="true" rule="V2CL">
+                  <wg role="v"
+                      class="vp"
+                      xml:id="n500040120140011"
+                      head="true"
+                      rule="V2VP">
+                     <w ref="PHP 4:12!14"
+                        after=" "
+                        class="verb"
+                        xml:id="n50004012014"
+                        lemma="χορτάζω"
+                        normalized="χορτάζεσθαι"
+                        strong="5526"
+                        tense="present"
+                        voice="passive"
+                        mood="infinitive"
+                        head="true"
+                        gloss="to be full"
+                        domain="023001"
+                        ln="23.16"
+                        morph="V-PPN"
+                        unicode="χορτάζεσθαι"
+                        frame="A1:n50001001001"
+                        subjref="n50001001001">χορτάζεσθαι</w>
                   </wg>
-                  <w ref="PHP 4:12!15"
-                     after=" "
-                     class="conj"
-                     xml:id="n50004012015"
-                     lemma="καί"
-                     normalized="καί"
-                     strong="2532"
-                     gloss="and"
-                     domain="089017"
-                     ln="89.102"
-                     morph="CONJ"
-                     unicode="καὶ">καὶ</w>
-                  <wg class="cl" xml:id="n500040120160013" rule="V2CL">
-                     <wg role="v" class="vp" xml:id="n500040120160011" rule="V2VP">
-                        <w ref="PHP 4:12!16"
-                           after=","
-                           class="verb"
-                           xml:id="n50004012016"
-                           lemma="πεινάω"
-                           normalized="πεινᾶν"
-                           strong="3983"
-                           tense="present"
-                           voice="active"
-                           mood="infinitive"
-                           gloss="to hunger"
-                           domain="023001"
-                           ln="23.29"
-                           morph="V-PAN"
-                           unicode="πεινᾶν,"
-                           frame="A0:n50001001001"
-                           subjref="n50001001001">πεινᾶν</w>
-                     </wg>
+               </wg>
+               <w ref="PHP 4:12!15"
+                  after=" "
+                  class="conj"
+                  xml:id="n50004012015"
+                  lemma="καί"
+                  normalized="καί"
+                  strong="2532"
+                  gloss="and"
+                  domain="089017"
+                  ln="89.102"
+                  morph="CONJ"
+                  unicode="καὶ">καὶ</w>
+               <wg class="cl" xml:id="n500040120160013" rule="V2CL">
+                  <wg role="v" class="vp" xml:id="n500040120160011" rule="V2VP">
+                     <w ref="PHP 4:12!16"
+                        after=","
+                        class="verb"
+                        xml:id="n50004012016"
+                        lemma="πεινάω"
+                        normalized="πεινᾶν"
+                        strong="3983"
+                        tense="present"
+                        voice="active"
+                        mood="infinitive"
+                        gloss="to hunger"
+                        domain="023001"
+                        ln="23.29"
+                        morph="V-PAN"
+                        unicode="πεινᾶν,"
+                        frame="A0:n50001001001"
+                        subjref="n50001001001">πεινᾶν</w>
                   </wg>
                </wg>
                <wg role="g" class="group" xml:id="n500040120170040" rule="aclacl">
@@ -29947,11 +30115,7 @@
                      ln="92.24"
                      morph="T-DSM"
                      unicode="τῷ">τῷ</w>
-                  <wg role="adv"
-                      class="cl"
-                      xml:id="n500040130050020"
-                      head="true"
-                      rule="V-O"><!-- Circumstantial Participle  -->
+                  <wg class="cl" xml:id="n500040130050020" head="true" rule="V-O">
                      <wg role="v"
                          class="vp"
                          xml:id="n500040130050011"
@@ -30178,7 +30342,7 @@
                ln="89.94"
                morph="CONJ"
                unicode="δὲ">δὲ</w>
-            <wg class="cl" xml:id="n500040150010030" head="true" rule="V-S">
+            <wg class="cl" xml:id="n500040150010030" head="true" rule="V-S"><!--ClCl2 ClCl 2-->
                <wg role="aux" class="minor" xml:id="n500040150050012" rule="np2cl">
                   <wg class="np" xml:id="n500040150050011" rule="N2NP">
                      <w ref="PHP 4:15!5"
@@ -30200,6 +30364,8 @@
                         unicode="Φιλιππήσιοι,">Φιλιππήσιοι</w>
                   </wg>
                </wg>
+               <!--ClCl ClCl 1-->
+               <!--ClCl V-S 1-->
                <wg role="v"
                    class="vp"
                    xml:id="n500040150010011"
@@ -30276,7 +30442,7 @@
                   <wg class="cl"
                       xml:id="n500040150070130"
                       head="true"
-                      rule="ADV-S-ADV-V-ADV">
+                      rule="ADV-S-ADV-V-ADV"><!--ClCl2 ClCl 2-->
                      <wg role="adv" xml:id="n500040150110040" rule="sub-CL" class="wg">
                         <wg class="conj" xml:id="n500040150110011" rule="Adv2Conj">
                            <w ref="PHP 4:15!11"
@@ -30353,6 +30519,7 @@
                            </wg>
                         </wg>
                      </wg>
+                     <!--ClCl ADV-S-ADV-V-ADV 1-->
                      <wg role="adv" class="pp" xml:id="n500040150070040" rule="PrepNp">
                         <w ref="PHP 4:15!7"
                            after=" "
@@ -30608,7 +30775,10 @@
                            ln="89.131"
                            morph="COND"
                            unicode="εἰ">εἰ</w>
-                        <wg class="cl" xml:id="n500040150250030" rule="ADV-S">
+                        <wg class="cl"
+                            xml:id="n500040150250030"
+                            rule="ADV-S"
+                            cltype="VerbElided">
                            <wg role="adv"
                                class="advp"
                                xml:id="n500040150250011"
@@ -31109,11 +31279,7 @@
                         ln="92.24"
                         morph="T-ASM"
                         unicode="τὸν">τὸν</w>
-                     <wg role="adv"
-                         class="cl"
-                         xml:id="n500040170110040"
-                         head="true"
-                         rule="V-ADV"><!-- Circumstantial Participle  -->
+                     <wg class="cl" xml:id="n500040170110040" head="true" rule="V-ADV">
                         <wg role="v"
                             class="vp"
                             xml:id="n500040170110011"
@@ -31965,7 +32131,8 @@
                 xml:id="n500040200010120"
                 articular="true"
                 head="true"
-                rule="IO-S-ADV">
+                rule="IO-S-ADV"
+                cltype="VerbElided"><!--ClCl IO-S-ADV 1-->
                <wg role="io"
                    class="np"
                    xml:id="n500040200010050"
@@ -32605,7 +32772,10 @@
                gloss="now"
                morph="CONJ"
                unicode="δὲ">δὲ</w>
-            <wg class="cl" xml:id="n500040220060060" rule="ADV-S">
+            <wg class="cl"
+                xml:id="n500040220060060"
+                rule="ADV-S"
+                cltype="VerbElided">
                <wg role="adv"
                    class="advp"
                    xml:id="n500040220060011"
@@ -32735,7 +32905,8 @@
          <wg class="cl"
              xml:id="n500040230010100"
              articular="true"
-             rule="S-P">
+             rule="S-P"
+             cltype="Verbless">
             <wg role="s"
                 class="np"
                 xml:id="n500040230010060"

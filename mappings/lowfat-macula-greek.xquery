@@ -129,10 +129,11 @@ declare function local:attributes($node)
     $node/@LexDomain ! attribute domain {.},
     $node/@LN ! attribute ln {.},
     $node/@FunctionalTag ! attribute morph {.},
-    $node/@Unicode !attribute unicode {.},
-    $node/@Frame !attribute frame {.},
+    $node/@Unicode ! attribute unicode {.},
+    $node/@Frame ! attribute frame {.},
     $node/@Ref ! attribute referent {.},
-    $node/@SubjRef !attribute subjref {.}
+    $node/@SubjRef  ! attribute subjref {.},
+    $node/@ClType ! attribute cltype {.}  (:  ### Remove later - for debugging purposes #### :)
 };
 
 declare function local:oneword($node)
@@ -188,28 +189,6 @@ declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL",
     "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL", "notCLbutCL2CL" );
 
 
-declare function local:force-to-adjunct-or-aux($node)
-{
-   let $xfrm := local:node($node)
-   let $attrs := $xfrm/@*
-   let $content := $xfrm/*
-   let $ename := name($xfrm)
-   return 
-        if ($xfrm/@role) then $xfrm
-        else if ($xfrm/@ClType="Minor") then element { $ename } {
-               $attrs[name(.) ne "class"],
-               attribute role {"aux"},
-               attribute class {"minor"},
-               $content
-           }
-        else element { $ename } {
-               $attrs,
-               attribute role {"adv"},
-               $content
-        }
-};
-
-
 declare function local:raise-sibling($node, $node-to-raise)
 {
     <wg>
@@ -219,6 +198,7 @@ declare function local:raise-sibling($node, $node-to-raise)
         let $after := $node/*[. >> $node-to-raise]
         return (
             $processed-node-to-raise/@*,
+            comment{ $node/@Rule, $node-to-raise/@Rule  },
             $before ! local:node(.),
             $processed-node-to-raise/node(),
             $after ! local:node(.)
@@ -271,14 +251,15 @@ declare function local:clause($node)
                 $node/Node ! local:node(.)         
            }     
           </wg> 
-       else if  ($node
-                    /Node[@Cat=("V","VC")]
+       else if  ($node/parent::Node[@Cat="CL"]
+                    and
+                    $node/Node[@Cat=("V","VC")]
                     /Node[@Cat="vp"]
                     /Node[@Cat="verb" and @Mood="Participle" and @Case=("Genitive", "Accusative","Dative")]) then
         <wg role="adv">
           {
                 local:attributes($node)[not(name(.) = ("role"))],
-                <!-- Circumstantial Participle  -->,
+                <!-- Absolute Participle  -->,
                 $node/Node ! local:node(.)         
            }     
         </wg>    
@@ -296,7 +277,12 @@ declare function local:clause($node)
      else if ($node/@Rule="V2CL") then 
          <wg>
            {
-              if  ($node/*[@Cat="V"]/descendant::Node[@LN="91.13"]) then (
+              if  ($node/*[@Cat="V"]/descendant::Node[@LN="91.13"]) then (  
+              (:    Prompters of Attention
+                    ἄγε     look	91.13
+                    ἴδε     look!	91.13
+                    ἰδού    a look!        91.13
+               :)
                   attribute role {"aux"},
                   attribute class {"minor"},
                   local:attributes($node)[not(name(.) = ("role","class"))]
@@ -367,13 +353,15 @@ declare function local:role($node)
                 }
             </wg>
         else
-            <wg>
+            element {if ($node/Node/Node) then "wg" else "w"}
                 {
-                    $role,
-                    local:attributes($node/Node),
-                    $node/Node/Node ! local:node(.)
+                    let $child := local:node($node/Node)
+                    return (
+                        $role,
+                        $child/@* except $child/@role,
+                        $child/node()
+                    )
                 }
-            </wg>
 };
 
 declare function local:word($node)
