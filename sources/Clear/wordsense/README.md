@@ -2,8 +2,11 @@
 
 Source:
 https://www.dropbox.com/s/a0h30je3dm6hgo6/GreekSenses.zip?dl=0
+
 --> GreekSenses.mdb
+
 --> extract to csv
+
 --> GreekSenses/Senses.csv
 
 
