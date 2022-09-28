@@ -136,16 +136,6 @@ declare function local:attributes($node)
     $node/@ClType ! attribute cltype {.}  (:  ### Remove later - for debugging purposes #### :)
 };
 
-declare function local:oneword($node)
-(: If the Node governs a single word, return that word. :)
-{
-     if (count($node/Node) > 1)
-     then ()
-     else if ($node/Node)
-     then local:oneword($node/Node)
-     else $node
-};
-
 
 (: TODO: the USFM id does not need to be computed from the Nodes trees, since USFM ids are now included on verses and words :)
 declare function local:USFMId($nodeId)
@@ -189,16 +179,16 @@ declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL",
     "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL", "notCLbutCL2CL" );
 
 
-declare function local:raise-sibling($node, $node-to-raise)
+declare function local:raise-sibling($parent-node, $child-node-to-raise)
 {
     <wg>
      {
-        let $processed-node-to-raise := local:node($node-to-raise)
-        let $before := $node/*[. << $node-to-raise]
-        let $after := $node/*[. >> $node-to-raise]
+        let $processed-node-to-raise := local:node($child-node-to-raise)
+        let $before := $parent-node/*[. << $child-node-to-raise]
+        let $after := $parent-node/*[. >> $child-node-to-raise]
         return (
             $processed-node-to-raise/@*,
-            comment{ $node/@Rule, $node-to-raise/@Rule  },
+            comment{ $parent-node/@Rule, $child-node-to-raise/@Rule, count($parent-node/*[.<<$child-node-to-raise]) +1  },
             $before ! local:node(.),
             $processed-node-to-raise/node(),
             $after ! local:node(.)
@@ -251,7 +241,7 @@ declare function local:clause($node)
                 $node/Node ! local:node(.)         
            }     
           </wg> 
-       else if  ($node/parent::Node[@Cat="CL"]
+       else if  ($node/parent::Node[@Cat="CL" and @Rule=("ClCl","ClCl2")]
                     and
                     $node/Node[@Cat=("V","VC")]
                     /Node[@Cat="vp"]
@@ -317,8 +307,10 @@ declare function local:clause($node)
         local:raise-sibling($node, $node/*[1])
     else if ($node/@Rule="ClCl2") then
         local:raise-sibling($node, $node/*[2])
+        (:
     else if ($node/@Rule="CLandCL2") then
         local:raise-sibling($node, $node/*[3])
+    :)
     else
         <wg>
          {
@@ -329,8 +321,46 @@ declare function local:clause($node)
 };
 
 
+(:  
+    The "singleton phrases" rules have these things in common:
+    
+    1. They always have a single child that represents a word
+    2. They never live in elements that represent clauses
+    3. Their descendants are singletons at each level
+    4. The @Cat attribute is one of the following, and does not represent a role:
+    
+        adj
+        adjp
+        adv
+        advp
+        conj
+        intj
+        np
+        nump
+        prep
+        pron
+        ptcl
+        vp
+:)
+
+declare variable $singleton-phrases := (
+      "Adj2Adjp","Adj2Advp","Adv2Adj","Adv2Advp", "Adv2Conj", "Adv2Prep", "Adv2Ptcl", 
+      "Conj2Adv", "Conj2Prep", "Conj2Pron", "Conj2Ptcl", "Det2NP", "N2NP", "Num2Nump", 
+      "Prep2Adv", "Pron2NP", "Ptcl2Adv", "Ptcl2Conj", "Ptcl2Intj", "Ptcl2Np", "V2VP", "intj2Np","pron2adj"
+ );
+
 declare function local:phrase($node)
 {
+(:
+     #### BUG - I might have various levels of children at this point.  Still not out of the water. #####
+     #### BUG - roles with participles, infinitiives  (v.part, v.inf)
+:)
+
+
+    if ($node/@Rule=$singleton-phrases and count($node/descendant::Node[empty(Node)]) eq 1)
+    then
+        $node/descendant::Node[empty(Node)] ! local:node(.)
+    else
         <wg>
             {
                 local:attributes($node),
@@ -372,41 +402,37 @@ declare function local:word($node)
 declare function local:word($node, $role)
 (: $role can contain a role attribute or a null sequence :)
 {
-let $wordContent := $node/text()
-let $wordContentWithoutBrackets := replace($node/text(), '([\(\)\[\]])', '')
-let $normalizedFormWordLength := string-length($node/@NormalizedForm)
-let $normalizedFormWithPunctuationLength := $normalizedFormWordLength + 1
-return
-    if ($node/*)
-    then
-        (element error {$role, $node})
-    else
-        if (string-length($wordContentWithoutBrackets) = $normalizedFormWithPunctuationLength)
+    let $wordContent := $node/text()
+    let $wordContentWithoutBrackets := replace($node/text(), '([\(\)\[\]])', '') 
+    let $normalizedFormWordLength := string-length($node/@NormalizedForm)
+    let $normalizedFormWithPunctuationLength := $normalizedFormWordLength + 1
+    return
+        if ($node/*)
         then
-            (: place punctuation in an 'after' attribute :)
-            (
-            <w>
-                {
-                    $role,
-                    attribute ref {local:USFMId($node/@nodeId)},
-                    attribute after {substring($wordContentWithoutBrackets, string-length($wordContentWithoutBrackets), 1)},
-                    local:attributes($node),
-                    substring($wordContentWithoutBrackets, 1, string-length($wordContentWithoutBrackets) - 1)
-                }
-
-
-            </w>
-            )
+            (element error {$role, $node})
         else
-            <w>
-                {
-                    $role,
-                    attribute ref {local:USFMId($node/@nodeId)},
-                    attribute after {' '},
-                    local:attributes($node),
-                    string($wordContentWithoutBrackets)
-                }
-            </w>
+            if (string-length($wordContentWithoutBrackets) = $normalizedFormWithPunctuationLength)
+            then
+                (: place punctuation in an 'after' attribute :)
+                <w>
+                    {
+                        $role,
+                        attribute ref {local:USFMId($node/@nodeId)},
+                        attribute after {substring($wordContentWithoutBrackets, string-length($wordContentWithoutBrackets), 1)},
+                        local:attributes($node),
+                        substring($wordContentWithoutBrackets, 1, string-length($wordContentWithoutBrackets) - 1)
+                    }
+                </w>
+            else
+                <w>
+                    {
+                        $role,
+                        attribute ref {local:USFMId($node/@nodeId)},
+                        attribute after {' '},
+                        local:attributes($node),
+                        string($wordContentWithoutBrackets)
+                    }
+                </w>
 };
 
 declare function local:node-type($node as element(Node))
