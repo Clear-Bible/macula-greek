@@ -241,6 +241,7 @@ declare function local:clause($node)
                 $node/Node ! local:node(.)         
            }     
           </wg> 
+  (:        
        else if  ($node/parent::Node[@Cat="CL" and @Rule=("ClCl","ClCl2")]
                     and
                     $node/Node[@Cat=("V","VC")]
@@ -253,7 +254,8 @@ declare function local:clause($node)
                 $node/Node ! local:node(.)         
            }     
         </wg>    
-          
+    :)
+    
        else if ($node/@Rule=("PtclCL", "AdvpCL", "Conj-CL") and $node/parent::*/@Rule=("ClCl", "ClCl2")) then
           <wg>
            {
@@ -264,23 +266,29 @@ declare function local:clause($node)
            }
           </wg> 
    
-     else if ($node/@Rule="V2CL") then 
+     else if ($node/@Rule="V2CL"  and $node/*[@Cat="V"]/descendant::Node[@LN="91.13"]) then 
          <wg>
            {
-              if  ($node/*[@Cat="V"]/descendant::Node[@LN="91.13"]) then (  
               (:    Prompters of Attention
                     ἄγε     look	91.13
                     ἴδε     look!	91.13
                     ἰδού    a look!        91.13
+                    
+                    
+                    In theory, the above condition is too general, but applying the following path to the result
+                    shows that it did not result in false positives:
+                    
+                    //comment()[ contains(string(.), "91.3") and count(following-sibling::*[1]/descendant::w) ne 1]
+                    => empty
+                    
+                    //comment()[ contains(string(.), "91.3") and count(following-sibling::*[1]/descendant::w) eq 1]
+                    => 157 items
                :)
                   attribute role {"aux"},
                   attribute class {"minor"},
-                  local:attributes($node)[not(name(.) = ("role","class"))]
-              )
-              else
-                   local:attributes($node)
-              ,
-              $node/Node ! local:node(.)
+                  local:attributes($node)[not(name(.) = ("role","class"))],
+                  comment { "Prompters of attention - LN 91.3 - peripheral"},
+                  $node/Node ! local:node(.)
            }
           </wg>
    
@@ -348,19 +356,25 @@ declare variable $singleton-phrases := (
       "Conj2Adv", "Conj2Prep", "Conj2Pron", "Conj2Ptcl", "Det2NP", "N2NP", "Num2Nump", 
       "Prep2Adv", "Pron2NP", "Ptcl2Adv", "Ptcl2Conj", "Ptcl2Intj", "Ptcl2Np", "V2VP", "intj2Np","pron2adj"
  );
+ 
+ declare function local:singleton($node)
+ {
+    <singleton>{ 
+        $node/descendant::Node[empty(Node)] ! local:node(.)    
+    }</singleton>
+ };
 
 declare function local:phrase($node)
 {
 (:
      #### BUG - I might have various levels of children at this point.  Still not out of the water. #####
      #### BUG - roles with participles, infinitiives  (v.part, v.inf)
-:)
 
 
     if ($node/@Rule=$singleton-phrases and count($node/descendant::Node[empty(Node)]) eq 1)
-    then
-        $node/descendant::Node[empty(Node)] ! local:node(.)
+    then local:singleton($node)
     else
+:)
         <wg>
             {
                 local:attributes($node),
@@ -379,6 +393,7 @@ declare function local:role($node)
                 {
                     $role,
                     $node/@nodeId ! local:nodeId2xmlId(.),
+                    comment { "Role created from ", $node/@Rule },
                     $node/Node ! local:node(.)
                 }
             </wg>
@@ -389,6 +404,7 @@ declare function local:role($node)
                     return (
                         $role,
                         $child/@* except $child/@role,
+                        comment { "Role created from ", $node/@Rule },
                         $child/node()
                     )
                 }
