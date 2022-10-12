@@ -90,6 +90,13 @@ wg[role=adv]::before {
   content: "+ ";
 }
 
+/*
+  This no longer works because local:oneword() is no longer called.
+  Probably need to restore that.
+
+  For participial clauses, consider whether we need to do something
+  for multiple words.
+*/
 
 w[role=v][mood=participle]::before {
   color: cadetblue;
@@ -130,7 +137,9 @@ wg[role=aux]::before {
 
 wg[role=g]::before {
   color: cadetblue;
-  content: "g" " ";
+  content: "g";
+  margin-left: -1em;
+  margin-right: 1em;
 }
 
 wg[role=g] {
@@ -179,6 +188,23 @@ wg[class=cl] {
 }
 
 wg[class=cl][role]::before {
+  /* Move the role for constituent clauses outside of the clause border */
+  margin-left: -2em;
+  margin-right: 1em;
+}
+
+wg[class=minor] {
+  margin-left: 1em;
+  position: relative;
+}
+
+wg[class=minor][role]::before {
+  /* Move the role for constituent clauses outside of the clause border */
+  margin-left: -1em;
+  margin-right: 1em;
+}
+
+w[role]::before {
   /* Move the role for constituent clauses outside of the clause border */
   margin-left: -2em;
   margin-right: 1em;
