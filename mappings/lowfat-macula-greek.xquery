@@ -187,6 +187,7 @@ declare function local:raise-sibling($parent-node, $child-node-to-raise)
         let $before := $parent-node/*[. << $child-node-to-raise]
         let $after := $parent-node/*[. >> $child-node-to-raise]
         return (
+            (:  A ClCl or ClCl2 always has @Cat="CL", so it will never have a role. If the raised hcild has a role, use it. :)
             $processed-node-to-raise/@*,
             comment{ $parent-node/@Rule, $child-node-to-raise/@Rule, count($parent-node/*[.<<$child-node-to-raise]) +1  },
             $before ! local:node(.),
@@ -241,7 +242,7 @@ declare function local:clause($node)
                 $node/Node ! local:node(.)         
            }     
           </wg> 
-  (:        
+
        else if  ($node/parent::Node[@Cat="CL" and @Rule=("ClCl","ClCl2")]
                     and
                     $node/Node[@Cat=("V","VC")]
@@ -254,7 +255,6 @@ declare function local:clause($node)
                 $node/Node ! local:node(.)         
            }     
         </wg>    
-    :)
     
        else if ($node/@Rule=("PtclCL", "AdvpCL", "Conj-CL") and $node/parent::*/@Rule=("ClCl", "ClCl2")) then
           <wg>
@@ -311,18 +311,17 @@ declare function local:clause($node)
         </wg>    
         
     else if ($node/@Rule="ClCl") then
-    (: This is underspecified - see https://github.com/Clear-Bible/symphony-team/issues/126    :)
+    (: ### This is underspecified - see https://github.com/Clear-Bible/symphony-team/issues/126    :)
         local:raise-sibling($node, $node/*[1])
+
     else if ($node/@Rule="ClCl2") then
         local:raise-sibling($node, $node/*[2])
-        (:
-    else if ($node/@Rule="CLandCL2") then
-        local:raise-sibling($node, $node/*[3])
-    :)
+
     else
         <wg>
          {
             local:attributes($node),
+            comment { "local:clause(), else" },
             $node/Node ! local:node(.)
          }
         </wg>
