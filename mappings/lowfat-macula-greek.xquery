@@ -172,11 +172,64 @@ declare function local:nodeId2xmlId($nodeId)
    attribute xml:id { concat("n", $nodeId) }
 };
 
+declare function local:is-peripheral($node)
+{
+    $node/@ClType="Minor"
+    or
+    $node/*[@Cat="V"]/descendant::Node[@LN="91.13"]
+    (:    Prompters of Attention
+        ἄγε     look	91.13
+        ἴδε     look!	91.13
+        ἰδού    a look!        91.13
+        
+        
+        In theory, the above condition is too general, but applying the following path to the result
+        shows that it did not result in false positives:
+        
+        //comment()[ contains(string(.), "91.3") and count(following-sibling::*[1]/descendant::w) ne 1]
+        => empty
+        
+        //comment()[ contains(string(.), "91.3") and count(following-sibling::*[1]/descendant::w) eq 1]
+        => 157 items
+    :)
+};
+
+declare function local:is-adjunct-cl($node)
+{
+    $node/@Rule = "sub-CL"
+    or
+    (
+        $node/parent::Node[@Cat="CL" and @Rule=("ClCl","ClCl2")]
+        and
+        $node/Node[@Cat=("V","VC")]
+        /Node[@Cat="vp"]
+        /Node[@Cat="verb" and @Mood="Participle" 
+        and 
+        @Case=("Genitive", "Accusative","Dative")]
+    )
+};
+
+declare function local:is-adjunct-wg($node)
+{
+    $node/@Rule=("PtclCL", "AdvpCL", "Conj-CL") 
+    and 
+    $node/parent::*/@Rule=("ClCl", "ClCl2")
+};
+
+declare function local:is-object-thatVP($node)
+{
+    $node/@Rule=("that-VP")
+};
 
 (: Most confident of EitherOr4CL, EitherOr7CL, aCLaCL, aCLaCLaCL:)
 declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL", 
     "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
     "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL", "notCLbutCL2CL" );
+
+declare function local:is-group($node)
+{
+    starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules
+};
 
 
 declare function local:raise-sibling($parent-node, $child-node-to-raise)
@@ -214,93 +267,47 @@ declare function local:clause($node)
    See https://github.com/Clear-Bible/symphony-team/issues/91  
 :)
 {
-    if ($node/@ClType = "Minor") then
+    if ( $node=>local:is-peripheral() ) then
         <wg role="aux" class="minor">
          {
-            $node/@nodeId ! local:nodeId2xmlId(.),
-            $node/@Rule ! attribute rule { lower-case(.) },           
+            local:attributes($node)[not(name(.) = ("role","class"))], 
             $node/Node ! local:node(.)
          }
         </wg>
           
-    else if ($node/@Rule = "sub-CL") then
-        <wg role="adv">
+    else if ( $node=>local:is-adjunct-wg() ) then
+        <wg role="adv" class="wg">
           {
-                local:attributes($node)[not(name(.) = ("role", "class"))],
-                attribute class {"wg"},
+                local:attributes($node)[not(name(.) = ("role","class"))],
                 $node/Node ! local:node(.)         
            }     
-        </wg>       
+        </wg>
         
-     else if ($node/@Rule=("that-VP")) then 
-      (: ###  Except for a list of lemmas  - hina should be adverbial, hoti is a complement (object) ### :)
-          <wg>     
+    else if ( $node=>local:is-adjunct-cl() ) then
+        <wg role="adv" class="cl">
+          {
+                local:attributes($node)[not(name(.) = ("role","class"))],
+                $node/Node ! local:node(.)         
+           }     
+        </wg>         
+        
+     else if ( $node =>local:is-object-thatVP() ) then 
+          <wg role="o" class="wg"> 
             {
                 local:attributes($node)[not(name(.) = ("role", "class"))],
-                attribute role {"o"},
-                attribute class {"wg"},
                 $node/Node ! local:node(.)         
            }     
           </wg> 
 
-       else if  ($node/parent::Node[@Cat="CL" and @Rule=("ClCl","ClCl2")]
-                    and
-                    $node/Node[@Cat=("V","VC")]
-                    /Node[@Cat="vp"]
-                    /Node[@Cat="verb" and @Mood="Participle" and @Case=("Genitive", "Accusative","Dative")]) then
-        <wg role="adv">
-          {
-                local:attributes($node)[not(name(.) = ("role"))],
-                <!-- Absolute Participle  -->,
-                $node/Node ! local:node(.)         
-           }     
-        </wg>    
-    
-       else if ($node/@Rule=("PtclCL", "AdvpCL", "Conj-CL") and $node/parent::*/@Rule=("ClCl", "ClCl2")) then
-          <wg>
-           {
-                local:attributes($node)[not(name(.) = ("class","role"))],
-                attribute class {"wg"},
-                attribute role {"adv"},
-                $node/Node ! local:node(.)         
-           }
-          </wg> 
-   
-     else if ($node/@Rule="V2CL"  and $node/*[@Cat="V"]/descendant::Node[@LN="91.13"]) then 
-         <wg>
-           {
-              (:    Prompters of Attention
-                    ἄγε     look	91.13
-                    ἴδε     look!	91.13
-                    ἰδού    a look!        91.13
-                    
-                    
-                    In theory, the above condition is too general, but applying the following path to the result
-                    shows that it did not result in false positives:
-                    
-                    //comment()[ contains(string(.), "91.3") and count(following-sibling::*[1]/descendant::w) ne 1]
-                    => empty
-                    
-                    //comment()[ contains(string(.), "91.3") and count(following-sibling::*[1]/descendant::w) eq 1]
-                    => 157 items
-               :)
-                  attribute role {"aux"},
-                  attribute class {"minor"},
-                  local:attributes($node)[not(name(.) = ("role","class"))],
-                  comment { "Prompters of attention - LN 91.3 - peripheral"},
-                  $node/Node ! local:node(.)
-           }
-          </wg>
-   
      else if ($node/@Rule=("Conj-CL")) then
-         <wg>
+         <wg class="wg">
            {
                 local:attributes($node)[not(name(.) = ("class"))],
-                attribute class {"wg"},
                 $node/Node ! local:node(.)         
             }
           </wg>
-    else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
+
+else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
           (: ### TODO:  Handle groups of groups :)
         <wg role="g" class="group">
          {
@@ -310,9 +317,28 @@ declare function local:clause($node)
          }
         </wg>    
         
-    else if ($node/@Rule="ClCl") then
-    (: ### This is underspecified - see https://github.com/Clear-Bible/symphony-team/issues/126    :)
-        local:raise-sibling($node, $node/*[1])
+    else if (
+            some $child in $node/* satisfies (
+                $child => local:is-peripheral()
+                or
+                $child => local:is-adjunct-wg() 
+                or
+                $child => local:is-adjunct-cl() 
+                or
+                $child =>local:is-object-thatVP())
+            and
+                $node/@Rule="ClCl"
+    ) 
+        then local:raise-sibling($node, $node/*[1])
+    else if ( $node/@Rule="ClCl" )
+        then
+         <wg class="wg">
+           {
+                local:attributes($node)[not(name(.) = ("class"))],
+                comment { "Flat ClCl" },
+                $node/Node ! local:node(.)         
+            }
+          </wg>        
 
     else if ($node/@Rule="ClCl2") then
         local:raise-sibling($node, $node/*[2])
