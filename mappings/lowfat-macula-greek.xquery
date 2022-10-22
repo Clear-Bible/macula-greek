@@ -300,6 +300,28 @@ declare function local:clause($node)
             }
           </wg>
 
+     else if ($node/@Rule=("PtclCL","AdvpCL")) then
+        let $ptcl := $node/Node[1]  ! local:node(.)
+        let $cl := $node/Node[2] ! local:node(.)
+        let $firstafter := $cl/*[descendant-or-self::w[1]/@xml:id > $ptcl/@xml:id][1]
+        return 
+         <wg>
+           {
+                $cl/@*
+                ,
+                comment { "Rule: ", $node/@Rule }
+                ,
+                for $child in $cl/*
+                return
+                    if ($child is $firstafter) then (
+                        $ptcl ! <w>{ attribute role { "adv"}, @*, text() }</w>,
+                        $child 
+                    )
+                    else
+                        $child
+            }
+          </wg>
+
 else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
           (: ### TODO:  Handle groups of groups :)
         <wg role="g" class="group">
