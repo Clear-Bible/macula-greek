@@ -209,12 +209,13 @@ declare function local:is-adjunct-cl($node)
     )
 };
 
-declare function local:is-adjunct-wg($node)
-{
-    $node/@Rule=("PtclCL", "AdvpCL", "Conj-CL") 
-    and 
-    $node/parent::*/@Rule=("ClCl", "ClCl2")
-};
+
+(:
+    TODO:   
+        (1) PtclCL and AdvCL should be refactored as in # bug 
+        (2) Conj-CL should be turned into unheaded groups.
+
+:)
 
 declare function local:is-object-thatVP($node)
 {
@@ -275,14 +276,6 @@ declare function local:clause($node)
          }
         </wg>
           
-    else if ( $node=>local:is-adjunct-wg() ) then
-        <wg role="adv" class="wg">
-          {
-                local:attributes($node)[not(name(.) = ("role","class"))],
-                $node/Node ! local:node(.)         
-           }     
-        </wg>
-        
     else if ( $node=>local:is-adjunct-cl() ) then
         <wg role="adv" class="cl">
           {
@@ -320,8 +313,6 @@ else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
     else if (
             some $child in $node/* satisfies (
                 $child => local:is-peripheral()
-                or
-                $child => local:is-adjunct-wg() 
                 or
                 $child => local:is-adjunct-cl() 
                 or

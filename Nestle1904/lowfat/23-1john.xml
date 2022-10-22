@@ -5557,7 +5557,7 @@
                 xml:id="n620020050080080"
                 head="true"
                 rule="ADV-ADV-S-V"><!--ClCl2 ADV-ADV-S-V 2-->
-               <wg role="adv" class="wg" xml:id="n620020050030060" rule="PtclCL">
+               <wg class="cl" xml:id="n620020050030060" rule="PtclCL"><!--local:clause(), else-->
                   <w ref="1JN 2:5!3"
                      after=" "
                      class="ptcl"
@@ -11657,11 +11657,7 @@
                ln="89.23"
                morph="CONJ"
                unicode="γὰρ">γὰρ</w>
-            <wg role="adv"
-                class="wg"
-                xml:id="n620020190150040"
-                head="true"
-                rule="PtclCL"><!--ClCl2 PtclCL 2-->
+            <wg class="cl" xml:id="n620020190150040" head="true" rule="PtclCL"><!--ClCl2 PtclCL 2-->
                <wg role="adv" class="cl" xml:id="n620020190090040" rule="sub-CL">
                   <w ref="1JN 2:19!9"
                      after=" "
@@ -11731,6 +11727,7 @@
                      </wg>
                   </wg>
                </wg>
+               <!--local:clause(), else-->
                <w ref="1JN 2:19!15"
                   after=" "
                   class="ptcl"
@@ -22445,7 +22442,7 @@
                 xml:id="n620030170230080"
                 head="true"
                 rule="ADV-S-V-ADV"><!--ClCl2 ADV-S-V-ADV 2-->
-               <wg role="adv" class="wg" xml:id="n620030170030210" rule="PtclCL">
+               <wg class="cl" xml:id="n620030170030210" rule="PtclCL"><!--local:clause(), else-->
                   <w ref="1JN 3:17!3"
                      after=" "
                      class="ptcl"
@@ -25556,78 +25553,79 @@
                ln="89.125"
                morph="CONJ"
                unicode="ἀλλὰ">ἀλλὰ</w>
-            <wg class="cl" xml:id="n620040010070030" head="true" rule="V-O"><!--ClCl V-O 1--><!--local:clause(), else-->
-               <wg role="v"
-                   class="vp"
-                   xml:id="n620040010070011"
-                   head="true"
-                   rule="V2VP"><!--Role created from  Vp2V-->
-                  <w ref="1JN 4:1!7"
-                     after=" "
-                     class="verb"
-                     xml:id="n62004001007"
-                     lemma="δοκιμάζω"
-                     normalized="δοκιμάζετε"
-                     strong="1381"
-                     number="plural"
-                     person="second"
-                     tense="present"
-                     voice="active"
-                     mood="imperative"
-                     head="true"
-                     gloss="test"
-                     domain="027004"
-                     ln="27.45"
-                     morph="V-PAM-2P"
-                     unicode="δοκιμάζετε"
-                     frame="A0:n62004001001 A1:n62004001009"
-                     subjref="n62004001001">δοκιμάζετε</w>
-               </wg>
-               <wg role="o"
-                   class="np"
-                   xml:id="n620040010080020"
-                   articular="true"
-                   rule="DetNP"><!--Role created from  Np2O-->
-                  <w ref="1JN 4:1!8"
-                     after=" "
-                     class="det"
-                     xml:id="n62004001008"
-                     lemma="ὁ"
-                     normalized="τά"
-                     strong="3588"
-                     number="plural"
-                     gender="neuter"
-                     case="accusative"
-                     gloss="the"
-                     domain="092004"
-                     ln="92.24"
-                     morph="T-APN"
-                     unicode="τὰ">τὰ</w>
-                  <wg class="np" xml:id="n620040010090011" head="true" rule="N2NP">
-                     <w ref="1JN 4:1!9"
+            <wg class="wg" xml:id="n620040010070080" head="true" rule="ClCl"><!--Flat ClCl-->
+               <wg class="cl" xml:id="n620040010070030" head="true" rule="V-O"><!--local:clause(), else-->
+                  <wg role="v"
+                      class="vp"
+                      xml:id="n620040010070011"
+                      head="true"
+                      rule="V2VP"><!--Role created from  Vp2V-->
+                     <w ref="1JN 4:1!7"
                         after=" "
-                        class="noun"
-                        type="common"
-                        xml:id="n62004001009"
-                        lemma="πνεῦμα"
-                        normalized="πνεύματα"
-                        strong="4151"
+                        class="verb"
+                        xml:id="n62004001007"
+                        lemma="δοκιμάζω"
+                        normalized="δοκιμάζετε"
+                        strong="1381"
+                        number="plural"
+                        person="second"
+                        tense="present"
+                        voice="active"
+                        mood="imperative"
+                        head="true"
+                        gloss="test"
+                        domain="027004"
+                        ln="27.45"
+                        morph="V-PAM-2P"
+                        unicode="δοκιμάζετε"
+                        frame="A0:n62004001001 A1:n62004001009"
+                        subjref="n62004001001">δοκιμάζετε</w>
+                  </wg>
+                  <wg role="o"
+                      class="np"
+                      xml:id="n620040010080020"
+                      articular="true"
+                      rule="DetNP"><!--Role created from  Np2O-->
+                     <w ref="1JN 4:1!8"
+                        after=" "
+                        class="det"
+                        xml:id="n62004001008"
+                        lemma="ὁ"
+                        normalized="τά"
+                        strong="3588"
                         number="plural"
                         gender="neuter"
                         case="accusative"
-                        head="true"
-                        gloss="spirits"
-                        domain="012001"
-                        ln="12.33"
-                        morph="N-APN"
-                        unicode="πνεύματα">πνεύματα</w>
+                        gloss="the"
+                        domain="092004"
+                        ln="92.24"
+                        morph="T-APN"
+                        unicode="τὰ">τὰ</w>
+                     <wg class="np" xml:id="n620040010090011" head="true" rule="N2NP">
+                        <w ref="1JN 4:1!9"
+                           after=" "
+                           class="noun"
+                           type="common"
+                           xml:id="n62004001009"
+                           lemma="πνεῦμα"
+                           normalized="πνεύματα"
+                           strong="4151"
+                           number="plural"
+                           gender="neuter"
+                           case="accusative"
+                           head="true"
+                           gloss="spirits"
+                           domain="012001"
+                           ln="12.33"
+                           morph="N-APN"
+                           unicode="πνεύματα">πνεύματα</w>
+                     </wg>
                   </wg>
                </wg>
-               <wg role="adv"
-                   class="wg"
+               <wg class="cl"
                    xml:id="n620040010100050"
                    articular="true"
-                   rule="PtclCL">
+                   rule="PtclCL"><!--local:clause(), else-->
                   <w ref="1JN 4:1!10"
                      after=" "
                      class="ptcl"
@@ -31259,11 +31257,10 @@
          <milestone unit="verse" id="1JN 4:15">1JN 4:15</milestone> ὃς ἐὰν ὁμολογήσῃ ὅτι Ἰησοῦς ἐστιν ὁ Υἱὸς τοῦ Θεοῦ, ὁ Θεὸς ἐν αὐτῷ μένει καὶ αὐτὸς ἐν τῷ Θεῷ.</p>
       <wg>
          <wg role="g" class="group" xml:id="n620040150110100" rule="clacl"><!--ClCl2 CLaCL 2-->
-            <wg role="adv"
-                class="wg"
+            <wg class="cl"
                 xml:id="n620040150020100"
                 articular="true"
-                rule="PtclCL">
+                rule="PtclCL"><!--local:clause(), else-->
                <w ref="1JN 4:15!2"
                   after=" "
                   class="ptcl"
@@ -37721,7 +37718,7 @@
          <milestone unit="verse" id="1JN 5:9">1JN 5:9</milestone> εἰ τὴν μαρτυρίαν τῶν ἀνθρώπων λαμβάνομεν, ἡ μαρτυρία τοῦ Θεοῦ μείζων ἐστίν, ὅτι αὕτη ἐστὶν ἡ μαρτυρία τοῦ Θεοῦ ὅτι μεμαρτύρηκεν περὶ τοῦ Υἱοῦ αὐτοῦ.</p>
       <wg>
          <wg class="cl" xml:id="n620050090070060" head="true" rule="S-P-VC"><!--ClCl ClCl2 1--><!--ClCl2 S-P-VC 2-->
-            <wg role="adv" class="wg" xml:id="n620050090010060" rule="Conj-CL">
+            <wg class="wg" xml:id="n620050090010060" rule="Conj-CL">
                <w ref="1JN 5:9!1"
                   after=" "
                   class="conj"
