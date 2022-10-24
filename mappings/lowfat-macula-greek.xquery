@@ -301,9 +301,8 @@ declare function local:clause($node)
           </wg>
 
      else if ($node/@Rule=("PtclCL","AdvpCL")) then
-        let $ptcl := $node/Node[1]  ! local:node(.)
+        let $ptcl := $node/Node[1]  ! local:node(.)/descendant-or-self::w ! <w>{ attribute role { "adv"}, @*, text() }</w>
         let $cl := $node/Node[2] ! local:node(.)
-        let $firstafter := $cl/*[descendant-or-self::w[1]/@xml:id > $ptcl/@xml:id][1]
         return 
          <wg>
            {
@@ -311,14 +310,9 @@ declare function local:clause($node)
                 ,
                 comment { "Rule: ", $node/@Rule }
                 ,
-                for $child in $cl/*
-                return
-                    if ($child is $firstafter) then (
-                        $ptcl ! <w>{ attribute role { "adv"}, @*, text() }</w>,
-                        $child 
-                    )
-                    else
-                        $child
+                for $child in ($ptcl, $cl/*)
+                order by $child/descendant-or-self::w[1]/@xml:id
+                return $child
             }
           </wg>
 
