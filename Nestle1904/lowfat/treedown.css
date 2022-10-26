@@ -152,28 +152,6 @@ wg[role=g] {
 
 /* Apposition */
 
-wg[rule=Np-Appos] > wg:not(:first-child)::before,
-wg[rule=Np-Appos] > w:not(:first-child)::before {
-    content: ": ";
-    color: cadetblue;
-    margin-left: 1em;
-}
-
-wg[rule=Np-Appos] > wg:not(:first-child),
-wg[rule=Np-Appos] > w:not(:first-child) {
-    display: block;
-}
-
-/* Probably want to put brackets around single words, but right now it cascades badly. */
-
-wg[rule=Np-Appos] > wg:first-child::before {
-    content: "[";
-    color: cadetblue;
-}
-
-wg[rule=Np-Appos]> wg:first-child::after {
-    content: "]";
-    color: cadetblue;
 }
 
 pc::before {
