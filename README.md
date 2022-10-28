@@ -5,7 +5,7 @@ This repository contains the MACULA linguistic datasets for the Greek New Testam
 
 1. [Nestle1904](https://github.com/biblicalhumanities/Nestle1904) Greek New Testament, edited by Eberhard Nestle, published in 1904 by the British and Foreign Bible Society. Transcription by Diego Santos, morphology by Ulrik Sandborg-Petersen, markup by Jonathan Robie. 
 2. Syntax trees developed by Clear Bible, Inc.
-3. Glosses from the Berean Study Bible
+3. English glosses from the Berean Study Bible
 4. Word sense data from the United Bible Societies [MARBLE](https://semanticdictionary.org/) project, based on Louw & Nida's semantic domains.
 5. Semantic roles: Who does what to whom? (Agent, Verb, Patient …)
 6. Participant referents: Who is “he,” “she,” or “it” in this sentence?
