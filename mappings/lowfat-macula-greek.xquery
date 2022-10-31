@@ -231,11 +231,18 @@ declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL",
 
 These should be flattened (converted to a wg, not a cl) - but kept together when nested - unheaded:
 
+Candidates for keeping as groups or something special:
+
 - EitherOr4CL
 - EitherOr7CL
 - notCLbutCL2CL
 - aCLaCL
 - aCLaCLaCL
+
+Look for MEN ... treat consistently 
+
+Candidates for treating as simple sequences:
+
 - CLaCL
 - CLa2CL
 - 2CLaCL
@@ -294,10 +301,8 @@ declare function local:strip-attributes-from-subtree($subroot as element(), $att
         for $n in $subroot/node()
         return
             typeswitch($n)
-                case comment() return $n
                 case element() return local:strip-attributes-from-subtree($n, $attnames)
-                case text() return $n
-                default return ()
+                default return $n
     }
 };
 
@@ -310,11 +315,10 @@ declare function local:clause($node)
         <wg role="aux" class="minor">
          {
             local:attributes($node)[not(name(.) = ("role","class"))],
-            for $child in $node/Node ! local:node(.)
-            return
-                copy $strip-roles := $child
-                modify delete node $strip-roles/descendant-or-self::*/@role
-                return $strip-roles
+            for $child in $node/Node  ! local:node(.)
+            return 
+                if ($child[@role]) then $child/* 
+                else $child
          }
         </wg>
           

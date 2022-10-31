@@ -1301,7 +1301,11 @@
                         </wg>
                         <wg class="adjp" xml:id="n520010040030041" rule="CL2Adjp">
                             <wg class="cl" xml:id="n520010040030040" rule="V-ADV"><!--local:clause(), else-->
-                                <wg class="vp" xml:id="n520010040030011" head="true" rule="V2VP"><!--Role created from  Vp2V-->
+                                <wg role="v"
+                                    class="vp"
+                                    xml:id="n520010040030011"
+                                    head="true"
+                                    rule="V2VP"><!--Role created from  Vp2V-->
                                     <w ref="1TH 1:4!3"
                                        after=" "
                                        class="verb"
@@ -1324,7 +1328,8 @@
                                        frame="A1:n52001004002"
                                        subjref="n52001004002">ἠγαπημένοι</w>
                                 </wg>
-                                <wg class="pp"
+                                <wg role="adv"
+                                    class="pp"
                                     xml:id="n520010040040030"
                                     articular="true"
                                     rule="PrepNp"><!--Role created from  pp2ADV-->

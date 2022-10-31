@@ -23883,7 +23883,7 @@
                                        unicode="τι">τι</w>
                                 </wg>
                                 <wg class="cl" xml:id="n510030170030070" head="true" rule="O-V-ADV"><!--Rule:  PtclCL-->
-                                    <wg class="np" xml:id="n510030170030011" rule="Pron2NP"><!--Role created from  Np2O-->
+                                    <wg role="o" class="np" xml:id="n510030170030011" rule="Pron2NP"><!--Role created from  Np2O-->
                                         <w ref="COL 3:17!3"
                                            after=" "
                                            class="pron"
@@ -23902,7 +23902,8 @@
                                            unicode="ὅ"
                                            referent="n51003017004">ὅ</w>
                                     </wg>
-                                    <w ref="COL 3:17!5"
+                                    <w role="adv"
+                                       ref="COL 3:17!5"
                                        after=" "
                                        class="ptcl"
                                        xml:id="n51003017005"
@@ -23915,7 +23916,11 @@
                                        ln="71.8"
                                        morph="COND"
                                        unicode="ἐὰν">ἐὰν</w>
-                                    <wg class="vp" xml:id="n510030170060011" head="true" rule="V2VP"><!--Role created from  Vp2V-->
+                                    <wg role="v"
+                                        class="vp"
+                                        xml:id="n510030170060011"
+                                        head="true"
+                                        rule="V2VP"><!--Role created from  Vp2V-->
                                         <w ref="COL 3:17!6"
                                            after=" "
                                            class="verb"
@@ -23937,7 +23942,7 @@
                                            frame="A0:n51001002007 A1:n51003017003"
                                            subjref="n51001002007">ποιῆτε</w>
                                     </wg>
-                                    <wg class="pp" xml:id="n510030170070050" rule="Conj2Pp"><!--Role created from  pp2ADV-->
+                                    <wg role="adv" class="pp" xml:id="n510030170070050" rule="Conj2Pp"><!--Role created from  pp2ADV-->
                                         <wg class="pp" xml:id="n510030170070020" head="true" rule="PrepNp">
                                             <w ref="COL 3:17!7"
                                                after=" "

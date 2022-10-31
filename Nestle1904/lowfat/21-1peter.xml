@@ -9461,25 +9461,23 @@
                     </wg>
                     <wg role="g" class="group" xml:id="n600020060060150" rule="clacl"><!--ClCl2 CLaCL 2-->
                         <wg role="aux" class="minor" xml:id="n600020060050013" rule="V2CL">
-                            <wg class="vp" xml:id="n600020060050011" rule="V2VP"><!--Role created from  Vp2V-->
-                                <w ref="1PE 2:6!5"
-                                   after=" "
-                                   class="verb"
-                                   xml:id="n60002006005"
-                                   lemma="ὁράω"
-                                   normalized="Ἰδού"
-                                   strong="3708"
-                                   number="singular"
-                                   person="second"
-                                   tense="aorist"
-                                   voice="middle"
-                                   mood="imperative"
-                                   gloss="Behold"
-                                   domain="091003"
-                                   ln="91.13"
-                                   morph="V-2AMM-2S"
-                                   unicode="Ἰδοὺ">Ἰδοὺ</w>
-                            </wg>
+                            <w ref="1PE 2:6!5"
+                               after=" "
+                               class="verb"
+                               xml:id="n60002006005"
+                               lemma="ὁράω"
+                               normalized="Ἰδού"
+                               strong="3708"
+                               number="singular"
+                               person="second"
+                               tense="aorist"
+                               voice="middle"
+                               mood="imperative"
+                               gloss="Behold"
+                               domain="091003"
+                               ln="91.13"
+                               morph="V-2AMM-2S"
+                               unicode="Ἰδοὺ">Ἰδοὺ</w>
                         </wg>
                         <wg class="cl" xml:id="n600020060060070" head="true" rule="V-ADV-O"><!--local:clause(), else-->
                             <wg role="v"
@@ -9993,7 +9991,7 @@
                                                unicode="λίθος">λίθος</w>
                                         </wg>
                                         <wg class="cl" xml:id="n600020070100040" rule="O-V-S"><!--local:clause(), else-->
-                                            <wg class="np" xml:id="n600020070100011" rule="Pron2NP"><!--Role created from  Np2O-->
+                                            <wg role="o" class="np" xml:id="n600020070100011" rule="Pron2NP"><!--Role created from  Np2O-->
                                                 <w ref="1PE 2:7!10"
                                                    after=" "
                                                    class="pron"
@@ -10010,7 +10008,11 @@
                                                    unicode="ὃν"
                                                    referent="n60002007009">ὃν</w>
                                             </wg>
-                                            <wg class="vp" xml:id="n600020070110011" head="true" rule="V2VP"><!--Role created from  Vp2V-->
+                                            <wg role="v"
+                                                class="vp"
+                                                xml:id="n600020070110011"
+                                                head="true"
+                                                rule="V2VP"><!--Role created from  Vp2V-->
                                                 <w ref="1PE 2:7!11"
                                                    after=" "
                                                    class="verb"
@@ -10031,7 +10033,8 @@
                                                    unicode="ἀπεδοκίμασαν"
                                                    frame="A1:n60002007010 A0:n60002007013">ἀπεδοκίμασαν</w>
                                             </wg>
-                                            <wg class="np"
+                                            <wg role="s"
+                                                class="np"
                                                 xml:id="n600020070120020"
                                                 articular="true"
                                                 rule="DetCL"><!--Role created from  Np2S-->
@@ -10051,7 +10054,11 @@
                                                    morph="T-NPM"
                                                    unicode="οἱ">οἱ</w>
                                                 <wg class="cl" xml:id="n600020070130013" head="true" rule="V2CL"><!--local:clause(), else-->
-                                                    <wg class="vp" xml:id="n600020070130011" head="true" rule="V2VP"><!--Role created from  Vp2V-->
+                                                    <wg role="v"
+                                                        class="vp"
+                                                        xml:id="n600020070130011"
+                                                        head="true"
+                                                        rule="V2VP"><!--Role created from  Vp2V-->
                                                         <w ref="1PE 2:7!13"
                                                            after=","
                                                            class="verb"
@@ -32342,7 +32349,11 @@
                                         xml:id="n600050100070090"
                                         head="true"
                                         rule="V-O-ADV-ADV"><!--local:clause(), else-->
-                                        <wg class="vp" xml:id="n600050100070011" head="true" rule="V2VP"><!--Role created from  Vp2V-->
+                                        <wg role="v"
+                                            class="vp"
+                                            xml:id="n600050100070011"
+                                            head="true"
+                                            rule="V2VP"><!--Role created from  Vp2V-->
                                             <w ref="1PE 5:10!7"
                                                after=" "
                                                class="verb"
@@ -32365,7 +32376,7 @@
                                                frame="A0:n60005010003 A1:n60005010008"
                                                subjref="n60005010003">καλέσας</w>
                                         </wg>
-                                        <wg class="np" xml:id="n600050100080011" rule="Pron2NP"><!--Role created from  Np2O-->
+                                        <wg role="o" class="np" xml:id="n600050100080011" rule="Pron2NP"><!--Role created from  Np2O-->
                                             <w ref="1PE 5:10!8"
                                                after=" "
                                                class="pron"
@@ -32381,7 +32392,8 @@
                                                unicode="ὑμᾶς"
                                                referent="n60004012001">ὑμᾶς</w>
                                         </wg>
-                                        <wg class="pp"
+                                        <wg role="adv"
+                                            class="pp"
                                             xml:id="n600050100090050"
                                             articular="true"
                                             rule="PrepNp"><!--Role created from  pp2ADV-->
@@ -32474,7 +32486,7 @@
                                                 </wg>
                                             </wg>
                                         </wg>
-                                        <wg class="pp" xml:id="n600050100140020" rule="PrepNp"><!--Role created from  pp2ADV-->
+                                        <wg role="adv" class="pp" xml:id="n600050100140020" rule="PrepNp"><!--Role created from  pp2ADV-->
                                             <w ref="1PE 5:10!14"
                                                after=" "
                                                class="prep"
