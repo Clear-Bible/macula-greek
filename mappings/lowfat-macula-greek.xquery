@@ -226,6 +226,30 @@ declare function local:is-object-thatVP($node)
 declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL", 
     "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
     "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL", "notCLbutCL2CL" );
+    
+ (:
+
+These should be flattened (converted to a wg, not a cl) - but kept together when nested - unheaded:
+
+- EitherOr4CL
+- EitherOr7CL
+- notCLbutCL2CL
+- aCLaCL
+- aCLaCLaCL
+- CLaCL
+- CLa2CL
+- 2CLaCL
+- 2CLaCLaCL
+
+Definitely do these as we do now, they look good:
+
+ "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
+    "Conj7CL", 
+    
+    "CLandClClandClandClandCl"
+    
+    But ... look at nesting and .css.
+ :)
 
 declare function local:is-group($node)
 {
@@ -241,7 +265,7 @@ declare function local:raise-sibling($parent-node, $child-node-to-raise)
         let $before := $parent-node/*[. << $child-node-to-raise]
         let $after := $parent-node/*[. >> $child-node-to-raise]
         return (
-            (:  A ClCl or ClCl2 always has @Cat="CL", so it will never have a role. If the raised hcild has a role, use it. :)
+            (:  A ClCl or ClCl2 always has @Cat="CL", so it will never have a role. If the raised child has a role, use it. :)
             $processed-node-to-raise/@*,
             comment{ $parent-node/@Rule, $child-node-to-raise/@Rule, count($parent-node/*[.<<$child-node-to-raise]) +1  },
             $before ! local:node(.),
@@ -263,6 +287,20 @@ declare function local:keep-siblings-as-siblings($node)
     </wg>
 };
 
+declare function local:strip-attributes-from-subtree($subroot as element(), $attnames as xs:string+)
+{
+    element { name($subroot) } {
+        $subroot/@*[not(name(.) = $attnames)],
+        for $n in $subroot/node()
+        return
+            typeswitch($n)
+                case comment() return $n
+                case element() return local:strip-attributes-from-subtree($n, $attnames)
+                case text() return $n
+                default return ()
+    }
+};
+
 declare function local:clause($node)
 (:  
    See https://github.com/Clear-Bible/symphony-team/issues/91  
@@ -271,14 +309,19 @@ declare function local:clause($node)
     if ( $node=>local:is-peripheral() ) then
         <wg role="aux" class="minor">
          {
-            local:attributes($node)[not(name(.) = ("role","class"))], 
-            $node/Node ! local:node(.)
+            local:attributes($node)[not(name(.) = ("role","class"))],
+            for $child in $node/Node ! local:node(.)
+            return
+                copy $strip-roles := $child
+                modify delete node $strip-roles/descendant-or-self::*/@role
+                return $strip-roles
          }
         </wg>
           
     else if ( $node=>local:is-adjunct-cl() ) then
-        <wg role="adv" class="cl">
+        <wg role="adv">
           {
+                attribute class { if ($node/@Rule = "sub-CL") then "wg" else "cl" },
                 local:attributes($node)[not(name(.) = ("role","class"))],
                 $node/Node ! local:node(.)         
            }     
