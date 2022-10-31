@@ -135,23 +135,28 @@ wg[role=aux]::before {
   content: "~" " ";
 }
 
+/* -----  Experimental stuff goes here -------- */
+
+wg[class=cl] + wg[class=cl] {
+  margin-top: 1.5em;
+}
+
 wg[role=g]::before {
   color: cadetblue;
-  content: "g";
-  margin-left: -1em;
-  margin-right: 1em;
+  content: "g" " ";
+}
+
+wg[role=g] > wg,
+wg[role=g] > w {
+  margin-left: 1em;
+  margin-bottom: 1.5em;
 }
 
 wg[role=g] {
   display: block;
-  margin-left: 2em;
-}
-
-
-/* -----  Experimental stuff goes here -------- */
-
-/* Apposition */
-
+  margin-left: 1em;
+  padding-left: 1em;
+  margin-top: 1em;
 }
 
 pc::before {

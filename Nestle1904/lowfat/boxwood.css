@@ -18,7 +18,21 @@ wg[class=cl] {
   border-left: 1px inset grey;
   border-top: 1px inset grey;
   border-bottom: 1px inset grey; 
+  border-right: none;
 }
+
+wg[role=g] {
+  display: block;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  padding-left: 1em;
+
+  border-style: dashed;
+  border-right: none;
+  border-width: 1px;
+  border-color: lightslategrey;
+}
+
 
 sentence>wg[class="cl"] {
   border-left: none;
