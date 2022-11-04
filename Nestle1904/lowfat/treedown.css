@@ -2,15 +2,15 @@
 
 sentence > wg {
   display: block;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  padding-left: 1em;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
 } 
 
 wg[class=header] {
     display: block;
     position: fixed;
-    width: 6em;
+    width: 6rem;
     top: 5px;
     left: 5px;
     background-color: white;
@@ -25,8 +25,8 @@ milestone {
 }
 
 p {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 div[class=book]  {
@@ -40,8 +40,8 @@ div[class=book]  {
 
 book, passage,root {
   line-height: 1.5;
-  margin-left: 5em;
-  margin-right: 10em;
+  margin-left: 5rem;
+  margin-right: 10rem;
   /* background: linen; */
 }
 
@@ -52,8 +52,8 @@ wg[class=sentence] {
 }
 
 wg[class=cl] {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
   display: block;
 }
 
@@ -61,6 +61,7 @@ wg[role] {
     position: relative;
     display: block;
 }
+
 
 /* Words */
 
@@ -83,6 +84,10 @@ wg[class=sentence] wg[class=cl]::before {
 wg[role]::before {
   color: cadetblue;
   content: attr(role);
+}
+
+wg[role=g]::before {
+  content: "";
 }
 
 wg[role=adv]::before {
@@ -138,25 +143,12 @@ wg[role=aux]::before {
 /* -----  Experimental stuff goes here -------- */
 
 wg[class=cl] + wg[class=cl] {
-  margin-top: 1.5em;
-}
-
-wg[role=g]::before {
-  color: cadetblue;
-  content: "g" " ";
+  margin-top: 2rem;
 }
 
 wg[role=g] > wg,
 wg[role=g] > w {
-  margin-left: 1em;
-  margin-bottom: 1.5em;
-}
-
-wg[role=g] {
-  display: block;
-  margin-left: 1em;
-  padding-left: 1em;
-  margin-top: 1em;
+  margin-bottom: 2rem;
 }
 
 pc::before {
@@ -166,24 +158,35 @@ pc::before {
 /* ------ Left spacing --------- */
 
 wg[class=cl] {
-  margin-left: 1em;
   position: relative;
 }
 
 wg[class=cl][role]::before {
   /* Move the role for constituent clauses outside of the clause border */
-  margin-left: -2em;
-  margin-right: 1em;
+  margin-top: -2rem;
+  margin-left: -1rem;
+  float: left;
+}
+
+wg[role]{
+  margin-left: 1rem;
+}
+
+wg[class=cl][role] {
+  /* Move the role for constituent clauses outside of the clause border */
+  margin-left: 1rem;
+  margin-top: 2rem;
 }
 
 wg[class=minor] {
-  margin-left: 1em;
+  margin-top: 2rem;
+  margin-left: 1rem;
   position: relative;
 }
 
 wg[class=minor][role]::before {
   /* Move the role for constituent clauses outside of the clause border */
-  margin-left: -1em;
-  margin-right: 1em;
+  margin-left: -1rem;
+  float: left;
 }
 
