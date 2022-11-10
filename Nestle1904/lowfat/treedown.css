@@ -140,6 +140,23 @@ wg[role=aux]::before {
   content: "~" " ";
 }
 
+/* ----- Apposition - this ain't quite right, but better than nothing ---------*/
+
+
+/* Apposition */
+
+wg[rule=Np-Appos] > wg:not(:first-child)::before,
+wg[rule=Np-Appos] > w:not(:first-child)::before {
+    content: ": ";
+    color: cadetblue;
+    margin-left: 1em;
+}
+
+wg[rule=Np-Appos] > wg:not(:first-child),
+wg[rule=Np-Appos] > w:not(:first-child) {
+    display: block;
+}
+
 /* -----  Experimental stuff goes here -------- */
 
 wg[class=cl] + wg[class=cl] {
@@ -179,7 +196,6 @@ wg[class=cl][role] {
 }
 
 wg[class=minor] {
-  margin-top: 2rem;
   margin-left: 1rem;
   position: relative;
 }
