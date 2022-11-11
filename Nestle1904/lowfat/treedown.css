@@ -48,7 +48,9 @@ book, passage,root {
 
 /* WGs */
 
-wg[class=sentence] {
+wg > .wg {
+  display: flex;
+  flex-direction: column;
 }
 
 wg[class=cl] {
