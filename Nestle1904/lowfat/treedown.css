@@ -53,39 +53,58 @@ wg > .wg {
   flex-direction: column;
 }
 
-wg[class=cl] {
+.cl, .wg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  padding-left: 0.25em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cl + .cl, .cl + .wg  {
+  margin-top: 1rem;
+}
+
+.minor {
+  margin-left: 1rem;
+  position: relative;
+}
+
+.minor[role]::before {
+  /* Move the role for constituent clauses outside of the clause border */
+  margin-left: -1rem;
+}
+
+/* Roles */
+
+*[role] {
+  position: relative;
   display: block;
 }
 
-wg[role] {
-    position: relative;
-    display: block;
+.cl[role]::before, .wg[role]::before {
+  /* Move the role for constituent clauses outside of the clause border */
+  margin-left: -1rem;
+  position: absolute;
 }
 
-
-/* Words */
-
-w[role] {
-    position: relative;
-    display: block;
+.cl[role], .wg[role], w[role] {
+  margin-left: 0.8rem;
 }
 
-/* Generated Text */
-
-/*
-  Spacing problem:  generated text usually belongs on the previous level,
-  not on the new indent leve.  Not sure how to do that with CSS.
-*/
-
-wg[class=sentence] wg[class=cl]::before {
-  content: initial;
+.cl[role] > *[role], .wg[role] > *[role] {
+  display: block;
 }
 
 wg[role]::before {
   color: cadetblue;
   content: attr(role);
+}
+
+w[role]::before {
+  color: cadetblue;
+  content: attr(role) " ";
 }
 
 wg[role=g]::before {
@@ -115,14 +134,14 @@ w[role=v][mood=infinitive]::before {
   content: "v.inf ";
 }
 
-w[role]::before {
-  color: cadetblue;
-  content: attr(role) " ";
-}
-
 w[role=adv]::before {
   color: cadetblue;
   content: "+ ";
+}
+
+w[role=aux]::before, wg[role=aux]::before {
+  color: cadetblue;
+  content: "~" " ";
 }
 
 w[discontinuous]::after {
@@ -130,16 +149,6 @@ w[discontinuous]::after {
   vertical-align: super;
   color: cadetblue;
   font-size: small;
-}
-
-w[role=aux]::before {
-  color: cadetblue;
-  content: "~" " ";
-}
-
-wg[role=aux]::before {
-  color: cadetblue;
-  content: "~" " ";
 }
 
 /* ----- Apposition - this ain't quite right, but better than nothing ---------*/
