@@ -170,46 +170,18 @@ wg[rule=Np-Appos] > w:not(:first-child) {
 
 /* -----  Experimental stuff goes here -------- */
 
-wg[class=cl] + wg[class=cl] {
-  margin-top: 2rem;
+/* 
+  RYDER: the additional wg[class=group] predicate is 
+  needed for some instances like the last wg/group of Luke 1.19 
+*/
+wg[role=g], wg.group {
+  margin-bottom: 1rem;
 }
-
-wg[role=g] > wg,
-wg[role=g] > w {
-  margin-bottom: 2rem;
-}
-
-pc::before {
-    content: initial;
-}
-
-/* ------ Left spacing --------- */
-
-wg[class=cl] {
-  position: relative;
-}
-
-wg[class=cl][role]::before {
-  /* Move the role for constituent clauses outside of the clause border */
-  margin-top: -2rem;
-  margin-left: -1rem;
-  float: left;
-}
-
-wg[class=cl][role] {
-  /* Move the role for constituent clauses outside of the clause border */
+wg[role=g] > wg, wg.group > wg {
   margin-left: 1rem;
-  margin-top: 2rem;
 }
-
-wg[class=minor] {
-  margin-left: 1rem;
-  position: relative;
-}
-
-wg[class=minor][role]::before {
-  /* Move the role for constituent clauses outside of the clause border */
-  margin-left: -1rem;
-  float: left;
+wg[role=g] > w, wg.group > w {
+  display: block;
+  margin-top: 1rem;
 }
 
