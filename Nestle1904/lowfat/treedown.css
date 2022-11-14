@@ -86,16 +86,16 @@ wg:has(.cl) + wg.cl {
   margin-top: 1rem;
 }
 
-.minor {
-  /* margin-left: 1rem; */
-  display: flex;
+.minor > .minor[role],
+.wg > .minor {
+  display: block;
+  margin-left: 1rem;
 }
 
-.minor > .minor[role],
-.minor:has(.intj) > *[role] {
-  /* margin-left: 1rem; */
-  background: red;
-  display: block;
+.wg > .minor > .minor {
+  /* Ryder: sometimes a second level of minor clause 
+  exists, and it should not be further indented. */
+  margin-left: 0;
 }
 
 /* Roles */
