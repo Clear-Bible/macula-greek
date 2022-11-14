@@ -89,7 +89,6 @@ wg:has( .cl) + wg.cl {
 .minor > .minor, .minor > .minor[role]::before {
   display: inline;
   margin-left: 0;
-
 }
 
 * > .minor[role]::before {
@@ -100,40 +99,40 @@ wg:has( .cl) + wg.cl {
 
 /* Roles */
 
-*[role] {
+.cl > *[role] {
   position: relative;
   display: block;
 }
 
-.cl[role]::before, .wg[role]::before {
+.cl > .cl[role]::before, .cl > .wg[role]::before {
   /* Move the role for constituent clauses outside of the clause border */
   margin-left: -1rem;
   /* position: absolute; */
 }
 
-.cl[role], .wg[role], w[role] {
+.cl > .cl[role], .cl > .wg[role], .cl > w[role] {
   margin-left: 0.8rem;
 }
 
-.cl[role] > *[role], .wg[role] > *[role] {
+.cl[role] > .cl > *[role], .wg[role] > .cl > *[role] {
   display: block;
 }
 
-wg[role]::before {
+.cl > wg[role]::before {
   color: cadetblue;
   content: attr(role);
 }
 
-w[role]::before {
+.cl > w[role]::before {
   color: cadetblue;
   content: attr(role) " ";
 }
 
-wg[role=g]::before {
+.cl > wg[role=g]::before {
   content: "";
 }
 
-wg[role=adv]::before {
+.cl > wg[role=adv]::before {
   color: cadetblue;
   content: "+ ";
 }
@@ -185,16 +184,14 @@ wg[rule=Np-Appos] > w:not(:first-child)::before {
 }
 
 wg[rule=Np-Appos] > wg:not(:first-child),
-wg[rule=Np-Appos] > w:not(:first-child) {
-    display: block;
+wg[rule=Np-Appos] > w:not(:first-child) {    display: block;
 }
 
 /* -----  Experimental stuff goes here -------- */
 
 /* 
   RYDER: the additional wg[class=group] predicate is 
-  needed for some instances like the last wg/group of Luke 1.19 
-*/
+  needed for some instances like the last wg/group of Luke 1.19 */
 wg[role=g], wg.group {
   margin-left: 1rem;
 }
