@@ -137,24 +137,11 @@ wg:has( .cl) + wg.cl {
   content: "+ ";
 }
 
-/*
-  This no longer works because local:oneword() is no longer called.
-  Probably need to restore that.
-
-  For participial clauses, consider whether we need to do something
-  for multiple words.
-*/
-
-w[role=v][mood=participle]::before {
 .cl > w[role=adv]::before {
   color: cadetblue;
-  content: "v.part ";
+  content: "+ ";
 }
 
-w[role=v][mood=infinitive]::before {
-  color: cadetblue;
-  content: "v.inf ";
-}
 w[role=aux]::before, 
 wg[role=aux]::before,
 .cl > w[role=aux]::before,
@@ -165,22 +152,24 @@ wg[role=aux]::before,
      content: "~" " ";
    }
 
+/* ----- Participles and infinitives ----- */
 
-w[role=adv]::before {
+*[role=v]:has( > w[mood=participle] )::before {
   color: cadetblue;
-  content: "+ ";
+  content: "v.part ";
 }
 
-w[role=aux]::before, wg[role=aux]::before {
+*[role=v]:has( > w[mood=infinitive] )::before {
   color: cadetblue;
-  content: "~" " ";
+  content: "v.inf ";
 }
 
 w[discontinuous]::after {
   content: "*";
   vertical-align: super;
   color: cadetblue;
-  font-size: small;}
+  font-size: small;
+}
 
 /* ----- Apposition - this ain't quite right, but better than nothing ---------*/
 
