@@ -83,12 +83,19 @@ wg:has( .cl) + wg.cl {
 
 .minor {
   margin-left: 1rem;
-  position: relative;
+  display: flex;
 }
 
-.minor[role]::before {
+.minor > .minor, .minor > .minor[role]::before {
+  display: inline;
+  margin-left: 0;
+
+}
+
+* > .minor[role]::before {
   /* Move the role for constituent clauses outside of the clause border */
   margin-left: -1rem;
+  position: absolute;
 }
 
 /* Roles */
@@ -163,8 +170,7 @@ w[discontinuous]::after {
   content: "*";
   vertical-align: super;
   color: cadetblue;
-  font-size: small;
-}
+  font-size: small;}
 
 /* ----- Apposition - this ain't quite right, but better than nothing ---------*/
 
