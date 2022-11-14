@@ -118,11 +118,6 @@ wg:has(.cl) + wg.cl {
   margin-left: 0.8rem;
 }
 
-.cl[role] > .cl > *[role],
-.wg[role] > .cl > *[role] {
-  display: block;
-}
-
 .cl > wg[role]::before {
   color: cadetblue;
   content: attr(role);
