@@ -54,6 +54,9 @@ wg > .wg {
   margin-left: 1rem;
 }
 
+wg > wg.cl, wg:not(.np):not(.wg):has(> wg.cl) > w {
+  margin-left: 0.8rem;
+}
 .cl, .wg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
