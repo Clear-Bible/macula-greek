@@ -64,6 +64,10 @@ wg:has( .cl) + wg.cl {
      is not obvious based on the other rules. */
   margin-top: 1rem;
 }
+
+.cl + .group {
+  margin-top: 1rem;
+}
 .cl, .wg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
