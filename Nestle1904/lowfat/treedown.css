@@ -102,7 +102,8 @@ wg:has(.cl) + wg.cl {
 
 .cl > *[role] {
   position: relative;
-  display: block;}
+  display: block;
+}
 
 .cl > .cl[role]::before,
 .cl > .wg[role]::before {
@@ -195,8 +196,10 @@ wg[rule='Np-Appos'] > w:not(:first-child) {
 
 /* 
   RYDER: the additional wg[class=group] predicate is 
-  needed for some instances like the last wg/group of Luke 1.19 */
-wg[role=g], wg.group {
+  needed for some instances like the last wg/group of Luke 1.19 
+*/
+wg[role='g'],
+wg.group {
   margin-left: 1rem;
 }
 wg[role='g'] > wg,
@@ -209,7 +212,7 @@ wg.group > w {
   margin-top: 1rem;
 }
 
-wg[rule=sub-CL]:not( > *[role])::before {
+wg[rule='sub-CL']:not(> *[role])::before {
   /* Ryder: in sub-CL clauses, the conjunction drops to a new line below the role
       and the clause is further indented. This rule horizontally aligns the conj
       and the role of the sub-CL wg. E.g. διότι in Luke 2.7 */
