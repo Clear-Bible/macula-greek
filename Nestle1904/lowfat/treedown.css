@@ -146,6 +146,7 @@ wg:has( .cl) + wg.cl {
 */
 
 w[role=v][mood=participle]::before {
+.cl > w[role=adv]::before {
   color: cadetblue;
   content: "v.part ";
 }
@@ -154,6 +155,16 @@ w[role=v][mood=infinitive]::before {
   color: cadetblue;
   content: "v.inf ";
 }
+w[role=aux]::before, 
+wg[role=aux]::before,
+.cl > w[role=aux]::before,
+.cl > wg[role=aux]::before {
+     /* Ryder: Unlike most other roles, auxiliaries should be displayed even when they are not children of clauses.
+        thus, these are not prefixed with the `.cl >` path. */
+     color: cadetblue;
+     content: "~" " ";
+   }
+
 
 w[role=adv]::before {
   color: cadetblue;
