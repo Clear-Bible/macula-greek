@@ -200,3 +200,9 @@ wg[role=g] > w, wg.group > w {
   margin-top: 1rem;
 }
 
+wg[rule=sub-CL]:not( > *[role])::before {
+  /* Ryder: in sub-CL clauses, the conjunction drops to a new line below the role
+      and the clause is further indented. This rule horizontally aligns the conj
+      and the role of the sub-CL wg. E.g. διότι in Luke 2.7 */
+  position: absolute;
+}
