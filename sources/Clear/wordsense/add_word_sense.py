@@ -1,28 +1,26 @@
-# require lxml 4.9.1
-from lxml import etree
 import os
+import csv
 import pandas as pd
 from collections import OrderedDict
 
 DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
-WORD_SENSES = "SensesNT.csv"
+WORD_SENSES_FILE = "SensesNT.csv"
+WRITE_FILE = 'greek-wordsenses.tsv'
 
-LOWFAT_SOURCE = "../../../Nestle1904/lowfat"
-NODES_SOURCE = "../../../Nestle1904/nodes"
+header = ['macula_greek_word_id', 'sense_number']
 
-LOWFAT_DEST = "lowfat"
-NODES_DEST = "nodes"
-
-NAMESPACE = "{http://www.w3.org/XML/1998/namespace}id"
+# Source and destination sense data paths.
+source_path = os.path.join(DIR_PATH, WORD_SENSES_FILE)
+dest_path = os.path.join(DIR_PATH, WRITE_FILE)
 
 # Create a dictionary from the sense data mapping each strong
 # number to all instances for which we have a generated sense.
-def getSenseDataDict():
+def get_sense_data_dict(source_path:str=source_path) -> dict:
 
-    senseDict = {}
-
-    df = pd.read_csv(os.path.join(DIR_PATH, WORD_SENSES), dtype=str)
+    sense_dict = {}
+    # Read the sense csv into a dataframe with string values. 
+    df = pd.read_csv(source_path, dtype=str)
 
     for index, row in df.iterrows():
 
@@ -32,125 +30,56 @@ def getSenseDataDict():
         try:
             
             instances = row['Instances'].split()
-            if strong not in senseDict:
-                senseDict[strong] = {}
+            if strong not in sense_dict:
+                sense_dict[strong] = {}
 
             for inst in instances:
-                senseDict[strong][inst] = sense
+                sense_dict[strong][inst] = sense
 
         # There were no instances.
         except:
             continue
 
-    return senseDict
+    return sense_dict
 
 
-# Add leading 0s when len(strong) < 4.
-def addZeros(strong):
+# Sense ids look like: 430030160120010.
+# Reformat to have n prefix and no '0010' suffix.
+# E.g., 'n43003016012'
+def get_id_formatted(id:str) -> str:
 
-    strongPadded = "" + strong
-    l = 4 - len(strong)
-
-    while l > 0:
-        strongPadded = "0" + strongPadded 
-        l -= 1
-
-    return strongPadded
+    id_formatted = 'n' + id[:-4]
+    return id_formatted
 
 
-# Write the word sense data into the trees.
-def addWordSenseDataToNodes(source, destination):
-    
-    source = os.path.join(DIR_PATH, source)
-    destination = os.path.join(DIR_PATH, destination)
-    senseDict = getSenseDataDict()
-    files = sorted(os.listdir(source))
-    missingData = {}
+def write_sense_data_formatted(source_path:str=source_path, dest_path:str=dest_path):
 
-    # Only use the 27 manuscripts of the NT -- ignore other files.
-    for filename in files[:27]:
+    with open(source_path, 'r') as source:
 
-        readpath = os.path.join(source, filename)
-        writepath = os.path.join(destination, filename)
+        sense_data_dict = get_sense_data_dict()
+        # Get the total number of word ids in the sense data dictionary. 
+        word_ids_count = sum(
+            [len(sense_data_dict[strong]) for strong in sense_data_dict.keys()])
 
-        tree = etree.parse(readpath)
-        root = tree.getroot()
+        rows = []
+
+        # Iterate over the sense data dictionary, adding ids and senses to rows. 
+        for strong, ids in sense_data_dict.items():
+            for id, sense in ids.items():
+                id_formatted = get_id_formatted(id)
+                rows.append([id_formatted, sense])
+
+        # Ensure the correct amount of word ids. 
+        assert word_ids_count == len(rows)
         
-        for element in root.iter('Node'):
-            # Only use Nodes with an xml:id.
-            try:
-                # Don't include the id prefix 'n'.
-                id = element.attrib.get(NAMESPACE)[1:]
-            except:
-                continue
-            # '0010' is at the end of nodes in Sense file.
-            idPadded = id + '0010'
-            strong = element.attrib.get('StrongNumber')
-            strongPadded = addZeros(strong)
+        # Write the results. 
+        with open(dest_path, 'w') as tsvfile:
 
-            try:
-                senseNumber = senseDict[strongPadded][idPadded]
-                element.set('Sense', senseNumber)
+            writer = csv.writer(tsvfile, delimiter='\t', lineterminator='\n')
 
-            except:
-
-                if strongPadded not in missingData:
-                    missingData[strongPadded] = id
-
-                elif strongPadded in missingData:
-                    missingData[strongPadded] += " " + id
-
-        # Write updated xml tree to file. 
-        tree.write(open(writepath, 'wb'))
-
-    return missingData
-
-
-# Write the word sense data into the trees.
-def addWordSenseDataToLowfat(source, destination):
-    
-    source = os.path.join(DIR_PATH, source)
-    destination = os.path.join(DIR_PATH, destination)
-    senseDict = getSenseDataDict()
-    files = sorted(os.listdir(source))
-    missingData = {}
-
-    # Only use the 27 manuscripts of the NT -- ignore other files.
-    for filename in files[:27]:
-
-        readpath = os.path.join(source, filename)
-        writepath = os.path.join(destination, filename)
-
-        tree = etree.parse(readpath)
-        root = tree.getroot()
+            writer.writerow(header)
         
-        for element in root.iter('w'):
-            # Don't include the id prefix 'n'.
-            id = element.attrib.get(NAMESPACE)[1:]
-            # '0010' is at the end of nodes in Sense file.
-            idPadded = id + '0010'
-            strong = element.attrib.get('strong')
-            strongPadded = addZeros(strong)
+            for row in rows:
+                writer.writerow(row)
 
-            try:
-                senseNumber = senseDict[strongPadded][idPadded]
-                element.set('sense', senseNumber)
-
-            except:
-
-                if strongPadded not in missingData:
-                    missingData[strongPadded] = id
-
-                elif strongPadded in missingData:
-                    missingData[strongPadded] += " " + id
-
-        # Write updated xml tree to file. 
-        tree.write(open(writepath, 'wb'))
-
-    return missingData
-
-
-# missingDataFromNodes = addWordSenseDataToNodes(NODES_SOURCE, NODES_DEST)
-# missingDataFromLowfat = addWordSenseDataToLowfat(LOWFAT_SOURCE, LOWFAT_DEST)
-
-# print(f"\n\nNodes that are lacking word sense data: \n{missingDataFromNodes}\n")
+write_sense_data_formatted()
