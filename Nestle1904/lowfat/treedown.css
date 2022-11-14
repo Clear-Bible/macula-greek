@@ -190,10 +190,10 @@ wg[rule=Np-Appos] > w:not(:first-child) {
   needed for some instances like the last wg/group of Luke 1.19 
 */
 wg[role=g], wg.group {
-  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 wg[role=g] > wg, wg.group > wg {
-  margin-left: 1rem;
+  /* margin-left: 1rem; */
 }
 wg[role=g] > w, wg.group > w {
   display: block;
