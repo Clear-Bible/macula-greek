@@ -56,7 +56,8 @@ wg > .wg {
   margin-left: 1rem;
 }
 
-wg > wg.cl,
+wg > .cl,
+wg > wg:has(.cl) + wg,
 wg:not(.np):not(.wg):has(> wg.cl) > w {
   margin-left: 0.8rem;
 }
