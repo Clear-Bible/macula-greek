@@ -111,13 +111,17 @@ wg:has(.cl) + wg.cl {
 .cl > .wg[role]::before {
   /* Move the role for constituent clauses outside of the clause border */
   margin-left: -1rem;
-  /* position: absolute; */
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  display: block;
 }
 
 .cl > .cl[role],
 .cl > .wg[role],
 .cl > w[role] {
   margin-left: 0.8rem;
+  margin-top: 1.5rem;
 }
 
 .cl > wg[role]::before {
@@ -149,7 +153,7 @@ wg[role='aux']::before,
 .cl > w[role='aux']::before,
 .cl > wg[role='aux']::before {
   /* Ryder: Unlike most other roles, auxiliaries should be displayed even when they are not children of clauses.
-        thus, these are not prefixed with the `.cl >` path. */
+     thus, these are not prefixed with the `.cl >` path. */
   color: cadetblue;
   content: '~'' ';
 }
@@ -195,14 +199,7 @@ wg[rule='Np-Appos'] > w:not(:first-child) {
   RYDER: the additional wg[class=group] predicate is 
   needed for some instances like the last wg/group of Luke 1.19 
 */
-wg[role='g'],
-wg.group {
-  /* margin-left: 1rem; */
-}
-wg[role='g'] > wg,
-wg.group > wg {
-  /* margin-left: 1rem; */
-}
+
 wg[role='g'] > w,
 wg.group > w {
   display: block;
@@ -219,10 +216,3 @@ wg[rule='sub-CL']:not(> *[role])::before {
       and the role of the sub-CL wg. E.g. διότι in Luke 2.7 */
   position: absolute;
 }
-
-/* Ryder:
-
-if the child of a role wg has a role, don't show the parent role?
-
-cf. mark 7.21
-*/
