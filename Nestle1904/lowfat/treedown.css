@@ -57,7 +57,7 @@ wg > .wg {
 }
 
 wg > .cl,
-wg > wg:has(.cl) + wg,
+wg:not(.cl) > wg:has(.cl) + wg,
 wg:not(.np):not(.wg):has(> wg.cl) > w {
   margin-left: 0.8rem;
 }
@@ -77,8 +77,7 @@ wg:has(.cl) + wg.cl {
 .wg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
-  padding-left: 0.25em;
-  display: flex;
+  padding-left: 0.25em;  display: flex;
   flex-direction: column;
   position: relative;
 }
