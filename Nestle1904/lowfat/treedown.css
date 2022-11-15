@@ -1,7 +1,8 @@
 /* treedown.css */
 
 sentence > wg {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
@@ -100,8 +101,7 @@ wg:has(.cl) + wg.cl {
 
 /* Roles */
 
-.cl > *[role] {
-  position: relative;
+.cl > *[role] {  position: relative;
   display: block;
 }
 
