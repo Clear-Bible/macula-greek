@@ -1,35 +1,36 @@
 /* treedown.css */
 
 sentence > wg {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding-top: 1rem;
   padding-bottom: 1rem;
   padding-left: 1rem;
-} 
+}
 
-wg[class=header] {
-    display: block;
-    position: fixed;
-    width: 6rem;
-    top: 5px;
-    left: 5px;
-    background-color: white;
-    opacity: 1;
-    overflow: scroll;
+wg[class='header'] {
+  display: block;
+  position: fixed;
+  width: 6rem;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  opacity: 1;
+  overflow: scroll;
 }
 
 milestone {
-    color: blue;
-    display: block;
-    padding-right: 6px;
+  color: blue;
+  display: block;
+  padding-right: 6px;
 }
 
 p {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-div[class=book]  {
+div[class='book'] {
   margin-top: 1in;
   margin-left: 1in;
   margin-bottom: 1in;
@@ -38,171 +39,180 @@ div[class=book]  {
   opacity: 1;
 }
 
-book, passage,root {
+book,
+passage,
+root {
   line-height: 1.5;
   margin-left: 5rem;
   margin-right: 10rem;
   /* background: linen; */
 }
 
-
 /* WGs */
 
-wg[class=sentence] {
+wg > .wg {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
 }
 
-wg[class=cl] {
+wg > .cl,
+wg:not(.cl) > wg:has(.cl) + wg,
+wg:not(.np):not(.wg):has(> wg.cl) > w {
+  margin-left: 0.8rem;
+}
+
+wg:has(.cl) + wg.cl {
+  /* Ryder: sometimes a deeply nested wg.cl is followed by a wg.cl that is not nested. 
+     Without this additional margin, there is a double line since the clause adjacency 
+     is not obvious based on the other rules. */
+  margin-top: 1rem;
+}
+
+.cl:has(+ .group) {
+  margin-bottom: 1rem;
+}
+
+.cl,
+.wg {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
+  padding-left: 0.25em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.cl + .cl,
+.cl + .wg {
+  margin-top: 1rem;
+}
+
+.minor > .minor[role],
+.wg > .minor {
+  display: block;
+  margin-left: 1rem;
+}
+
+.wg > .minor > .minor {
+  /* Ryder: sometimes a second level of minor clause 
+  exists, and it should not be further indented. */
+  margin-left: 0;
+}
+
+/* Roles */
+
+.cl > *[role] {
+  position: relative;
   display: block;
 }
 
-wg[role] {
-    position: relative;
-    display: block;
+.cl > .cl[role]::before,
+.cl > .wg[role]::before {
+  /* Move the role for constituent clauses outside of the clause border */
+  margin-left: -1rem;
+  margin-top: -1.5rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  display: block;
 }
 
-
-/* Words */
-
-w[role] {
-    position: relative;
-    display: block;
+.cl > .cl[role],
+.cl > .wg[role],
+.cl > w[role] {
+  margin-left: 0.8rem;
+  margin-top: 1.5rem;
 }
 
-/* Generated Text */
-
-/*
-  Spacing problem:  generated text usually belongs on the previous level,
-  not on the new indent leve.  Not sure how to do that with CSS.
-*/
-
-wg[class=sentence] wg[class=cl]::before {
-  content: initial;
-}
-
-wg[role]::before {
+.cl > wg[role]::before {
   color: cadetblue;
   content: attr(role);
 }
 
-wg[role=g]::before {
-  content: "";
+.cl > w[role]::before {
+  color: cadetblue;
+  content: attr(role) ' ';
 }
 
-wg[role=adv]::before {
-  color: cadetblue;
-  content: "+ ";
+.cl > wg[role='g']::before {
+  content: '';
 }
 
-/*
-  This no longer works because local:oneword() is no longer called.
-  Probably need to restore that.
-
-  For participial clauses, consider whether we need to do something
-  for multiple words.
-*/
-
-w[role=v][mood=participle]::before {
+.cl > wg[role='adv']::before {
   color: cadetblue;
-  content: "v.part ";
+  content: '+ ';
 }
 
-w[role=v][mood=infinitive]::before {
+.cl > w[role='adv']::before {
   color: cadetblue;
-  content: "v.inf ";
+  content: '+ ';
 }
 
-w[role]::before {
+w[role='aux']::before,
+wg[role='aux']::before,
+.cl > w[role='aux']::before,
+.cl > wg[role='aux']::before {
+  /* Ryder: Unlike most other roles, auxiliaries should be displayed even when they are not children of clauses.
+     thus, these are not prefixed with the `.cl >` path. */
   color: cadetblue;
-  content: attr(role) " ";
+  content: '~'' ';
 }
 
-w[role=adv]::before {
+/* ----- Participles and infinitives ----- */
+
+*[role='v']:has(> w[mood='participle'])::before {
   color: cadetblue;
-  content: "+ ";
+  content: 'v.part ';
+}
+
+*[role='v']:has(> w[mood='infinitive'])::before {
+  color: cadetblue;
+  content: 'v.inf ';
 }
 
 w[discontinuous]::after {
-  content: "*";
+  content: '*';
   vertical-align: super;
   color: cadetblue;
   font-size: small;
 }
 
-w[role=aux]::before {
-  color: cadetblue;
-  content: "~" " ";
-}
-
-wg[role=aux]::before {
-  color: cadetblue;
-  content: "~" " ";
-}
-
 /* ----- Apposition - this ain't quite right, but better than nothing ---------*/
-
 
 /* Apposition */
 
-wg[rule=Np-Appos] > wg:not(:first-child)::before,
-wg[rule=Np-Appos] > w:not(:first-child)::before {
-    content: ": ";
-    color: cadetblue;
-    margin-left: 1em;
+wg[rule='Np-Appos'] > wg:not(:first-child)::before,
+wg[rule='Np-Appos'] > w:not(:first-child)::before {
+  content: ': ';
+  color: cadetblue;
+  margin-left: 1em;
 }
 
-wg[rule=Np-Appos] > wg:not(:first-child),
-wg[rule=Np-Appos] > w:not(:first-child) {
-    display: block;
+wg[rule='Np-Appos'] > wg:not(:first-child),
+wg[rule='Np-Appos'] > w:not(:first-child) {
+  display: block;
 }
 
 /* -----  Experimental stuff goes here -------- */
 
-wg[class=cl] + wg[class=cl] {
-  margin-top: 2rem;
+/* 
+  RYDER: the additional wg[class=group] predicate is 
+  needed for some instances like the last wg/group of Luke 1.19 
+*/
+
+wg[role='g'] > w,
+wg.group > w {
+  display: block;
+  margin-top: 1rem;
 }
 
-wg[role=g] > wg,
-wg[role=g] > w {
-  margin-bottom: 2rem;
+.group .group {
+  margin-top: 0;
 }
 
-pc::before {
-    content: initial;
+wg[rule='sub-CL']:not(> *[role])::before {
+  /* Ryder: in sub-CL clauses, the conjunction drops to a new line below the role
+      and the clause is further indented. This rule horizontally aligns the conj
+      and the role of the sub-CL wg. E.g. διότι in Luke 2.7 */
+  position: absolute;
 }
-
-/* ------ Left spacing --------- */
-
-wg[class=cl] {
-  position: relative;
-}
-
-wg[class=cl][role]::before {
-  /* Move the role for constituent clauses outside of the clause border */
-  margin-top: -2rem;
-  margin-left: -1rem;
-  float: left;
-}
-
-wg[role]{
-  margin-left: 1rem;
-}
-
-wg[class=cl][role] {
-  /* Move the role for constituent clauses outside of the clause border */
-  margin-left: 1rem;
-  margin-top: 2rem;
-}
-
-wg[class=minor] {
-  margin-left: 1rem;
-  position: relative;
-}
-
-wg[class=minor][role]::before {
-  /* Move the role for constituent clauses outside of the clause border */
-  margin-left: -1rem;
-  float: left;
-}
-

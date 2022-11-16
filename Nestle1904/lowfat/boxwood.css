@@ -1,29 +1,28 @@
-wg[class=cl] {
-  /* 
-    The nub of the spacing problem: 
-  
-    You really want spacing down to the last role before a word.
-    After that, you really don't want it.  Is there some way to
-    have it both ways with .css?
-  */
-  /*
-  position: relative;
-  display: block; 
-  */
+.cl {
   padding-top: 0.25em;
   padding-bottom: 0.25em;
-  padding-left: 1em;
   display: block;
-
   border-left: 1px inset grey;
   border-top: 1px inset grey;
-  border-bottom: 1px inset grey; 
+  border-bottom: 1px inset grey;
   border-right: none;
 }
 
-sentence>wg[class="cl"] {
-  border-left: none;
-  border-top: none;
-  border-bottom: none;   
+.cl[role]::before {
+  /* Ryder: the addition of a left border means the role needs to shift 0.1rem */
+  margin-left: -1.1rem;
 }
 
+.cl > .cl[role] {
+  /* Ryder: clauses with roles need some additional spacing due to borders */
+  margin-top: 2rem;
+}
+.cl > .cl[role]::before {
+  margin-top: -2rem;
+}
+
+sentence > .cl {
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+}
