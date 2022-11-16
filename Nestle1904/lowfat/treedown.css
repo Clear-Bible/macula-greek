@@ -69,7 +69,7 @@ wg:has(wg[class='cl']) + wg[class='cl'] {
   margin-top: 1rem;
 }
 
-wg[class='cl']:has(+ .group) {
+wg[class='cl']:has(+ wg[class='group']) {
   margin-bottom: 1rem;
 }
 
@@ -201,12 +201,12 @@ wg[rule='Np-Appos'] > w:not(:first-child) {
 */
 
 wg[role='g'] > w,
-wg.group > w {
+wg[class='group'] > w {
   display: block;
   margin-top: 1rem;
 }
 
-.group .group {
+wg[class='group'] wg[class='group'] {
   margin-top: 0;
 }
 
