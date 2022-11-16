@@ -50,7 +50,7 @@ root {
 
 /* WGs */
 
-wg > .wg {
+wg > wg[class='wg'] {
   display: flex;
   flex-direction: column;
   margin-left: 1rem;
@@ -74,7 +74,7 @@ wg:has(.cl) + wg.cl {
 }
 
 .cl,
-.wg {
+wg[class='wg'] {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   padding-left: 0.25em;
@@ -84,7 +84,7 @@ wg:has(.cl) + wg.cl {
 }
 
 .cl + .cl,
-.cl + .wg {
+wg[class='cl'] + wg[class='wg'] {
   margin-top: 1rem;
 }
 
@@ -108,7 +108,7 @@ wg[class='wg'] > wg[class='minor'] > wg[class='minor'] {
 }
 
 .cl > .cl[role]::before,
-.cl > .wg[role]::before {
+wg[class='cl'] > wg[class='wg'][role]::before {
   /* Move the role for constituent clauses outside of the clause border */
   margin-left: -1rem;
   margin-top: -1.5rem;
@@ -118,8 +118,8 @@ wg[class='wg'] > wg[class='minor'] > wg[class='minor'] {
 }
 
 .cl > .cl[role],
-.cl > .wg[role],
 .cl > w[role] {
+wg[class='cl'] > wg[class='wg'][role],
   margin-left: 0.8rem;
   margin-top: 1.5rem;
 }
