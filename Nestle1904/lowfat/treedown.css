@@ -58,7 +58,7 @@ wg > wg[class='wg'] {
 
 wg > wg[class='cl'],
 wg:not(wg[class='cl']) > wg:has(wg[class='cl']) + wg,
-wg:not(.np):not(wg[class='wg']):has(> wg[class='cl']) > w {
+wg:not(wg[class='np']):not(wg[class='wg']):has(> wg[class='cl']) > w {
   margin-left: 0.8rem;
 }
 
