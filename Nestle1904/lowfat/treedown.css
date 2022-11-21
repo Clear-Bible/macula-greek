@@ -111,10 +111,11 @@ wg[class='cl'] > wg[class='cl'][role]::before,
 wg[class='cl'] > wg[class='wg'][role]::before {
   /* Move the role for constituent clauses outside of the clause border */
   margin-left: -1rem;
-  margin-top: -1.5rem;
+  /* Ryder: commented these lines because they were adding a blank line before, e.g., Ἐπειδήπερ in Luke 1.4 */
+  /* margin-top: -1.5rem; */
+  /* display: block; */
   margin-bottom: 1rem;
   position: absolute;
-  display: block;
 }
 
 wg[class='cl'] > wg[class='cl'][role],
