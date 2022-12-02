@@ -107,6 +107,7 @@ declare function local:head($node)
 declare function local:attributes($node)
 {
     $node/@Cat ! attribute class {lower-case(.)},
+    $node[preceding-sibling::*]/parent::Node[@Rule = 'Np-Appos'] ! attribute role {"apposition"},
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
     $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),
