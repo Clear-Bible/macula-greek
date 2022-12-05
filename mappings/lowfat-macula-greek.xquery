@@ -1,20 +1,10 @@
 (:
     Convert GBI trees to Lowfat format.
 
-	NOTE: this should rarely be used now that the lowfat trees
-	are being independently, but I am keeping it in the repo
-	for documentation purposes and also for quality assurance,
-	as a way of testing the lowfat trees against GBI as we
-	move forward.
-
-	If it is used, remember to do the following steps:
-
-	- Search for duplicate IDs, removing the second GBI interpretation when there are duplicate subtrees.
-	- Search for the single instance where a word is not in any word group, but directly in a sentence.
-	- Do a diff to make sure things make sense.
+    NOTE: this should normally be used only by the MACULA team.  
+    Lowfat is already available as part of the distribution.
 
 :)
-
 
 declare variable $retain-singletons := false();
 
@@ -93,23 +83,6 @@ else
         default return "###"
 };
 
-declare function local:verbal-noun-type($node)
-(:  This realy doesn't work yet. Not even close. :)
-{
-    switch ($node/parent::Node/@Cat)
-        case 'adjp'
-            return
-                attribute type {'adjectival'}
-        case 'advp'
-            return
-                attribute type {'adverbial'}
-        case 'np'
-            return
-                attribute type {'nominal'}
-        default return
-            attribute type {'?'}
-};
-
 declare function local:head($node)
 {
     if ($node)
@@ -134,8 +107,10 @@ declare function local:head($node)
 declare function local:attributes($node)
 {
     $node/@Cat ! attribute class {lower-case(.)},
+    $node[preceding-sibling::*]/parent::Node[@Rule = 'Np-Appos'] ! attribute role {"apposition"},
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
+    $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),
     $node/@HasDet ! attribute articular {true()},
     $node/@UnicodeLemma ! attribute lemma {.},
     $node/@NormalizedForm ! attribute normalized {.},
@@ -147,7 +122,6 @@ declare function local:attributes($node)
     $node/@Tense ! attribute tense {lower-case(.)},
     $node/@Voice ! attribute voice {lower-case(.)},
     $node/@Mood ! attribute mood {lower-case(.)},
-    $node/@Mood[. = ('Participle', 'Infinitive')] ! attribute type {local:verbal-noun-type($node)},
     $node/@Degree ! attribute degree {lower-case(.)},
     local:head($node),
     $node[empty(*)] ! attribute discontinuous {"true"}[$node/following::Node[empty(*)][1]/@morphId lt $node/@morphId],
@@ -155,13 +129,14 @@ declare function local:attributes($node)
     $node/@Gloss ! attribute gloss {.},
     $node/@LexDomain ! attribute domain {.},
     $node/@LN ! attribute ln {.},
-    $node/@ClType !attribute cltype {.},
     $node/@FunctionalTag ! attribute morph {.},
-    $node/@Unicode !attribute unicode {.},
-    $node/@Frame !attribute frame {.},
+    $node/@Unicode ! attribute unicode {.},
+    $node/@Frame ! attribute frame {.},
     $node/@Ref ! attribute referent {.},
-    $node/@SubjRef !attribute subjref {.}
+    $node/@SubjRef  ! attribute subjref {.},
+    $node/@ClType ! attribute cltype {.}  (:  ### Remove later - for debugging purposes #### :)
 };
+
 
 (: TODO: the USFM id does not need to be computed from the Nodes trees, since USFM ids are now included on verses and words :)
 declare function local:USFMId($nodeId)
@@ -198,128 +173,321 @@ declare function local:nodeId2xmlId($nodeId)
    attribute xml:id { concat("n", $nodeId) }
 };
 
-declare function local:oneword($node)
-(: If the Node governs a single word, return that word. :)
+declare function local:is-peripheral($node)
 {
-    if (count($node/Node) > 1)
-    then
-        ()
-    else
-        if ($node/Node)
-        then
-            local:oneword($node/Node)
-        else
-            $node
+    $node/@ClType="Minor"
+    or
+    $node/*[@Cat="V"]/descendant::Node[@LN="91.13"]
+    (:    Prompters of Attention
+        ἄγε     look	91.13
+        ἴδε     look!	91.13
+        ἰδού    a look!        91.13
+        
+        
+        In theory, the above condition is too general, but applying the following path to the result
+        shows that it did not result in false positives:
+        
+        //comment()[ contains(string(.), "91.3") and count(following-sibling::*[1]/descendant::w) ne 1]
+        => empty
+        
+        //comment()[ contains(string(.), "91.3") and count(following-sibling::*[1]/descendant::w) eq 1]
+        => 157 items
+    :)
 };
 
-declare function local:sub-CL-adjunct($node)
+declare function local:is-adjunct-cl($node)
 {
-    
-    
+    $node/@Rule = "sub-CL"
+    or
+    (
+        $node/parent::Node[@Cat="CL" and @Rule=("ClCl","ClCl2")]
+        and
+        $node/Node[@Cat=("V","VC")]
+        /Node[@Cat="vp"]
+        /Node[@Cat="verb" and @Mood="Participle" 
+        and 
+        @Case=("Genitive", "Accusative","Dative")]
+    )
 };
 
-declare function local:sub-CL-adjunct-parent($node)
+
+(:
+    TODO:   
+        (1) PtclCL and AdvCL should be refactored as in # bug 
+        (2) Conj-CL should be turned into unheaded groups.
+
+:)
+
+declare function local:is-object-thatVP($node)
 {
-    
-    let $first := $node/Node[1]
-    let $second := $node/Node[2]
-    return
-        if ($first[@Rule = 'sub-CL']) then
-            <wg>
-                {
-                    local:attributes($second),
-                    $node/@nodeId ! local:nodeId2xmlId(.),
-                    <!-- one -->,
-                    $first ! local:node(.),
-                    $second/Node ! local:node(.)
-                }
-            </wg>
-        else
-            if ($second[@Rule = 'sub-CL']) then
-                <wg>
-                    {
-                        local:attributes($first),
-                        $node/@nodeId ! local:nodeId2xmlId(.),
-                        <!-- two -->,
-                        $first/Node ! local:node(.),
-                        $second ! local:node(.)
-                    }
-                </wg>
-            else
-                <error>{"Something went wrong.", "First:", $first, "Second:", $second}</error>
+    $node/@Rule=("that-VP")
 };
 
-declare function local:is-worth-preserving($clause)
+(: Most confident of EitherOr4CL, EitherOr7CL, aCLaCL, aCLaCLaCL:)
+declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL", 
+    "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
+    "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL", "notCLbutCL2CL" );
+    
+ (:
+
+These should be flattened (converted to a wg, not a cl) - but kept together when nested - unheaded:
+
+Candidates for keeping as groups or something special:
+
+- EitherOr4CL
+- EitherOr7CL
+- notCLbutCL2CL
+- aCLaCL
+- aCLaCLaCL
+
+Look for MEN ... treat consistently 
+
+Candidates for treating as simple sequences:
+
+- CLaCL
+- CLa2CL
+- 2CLaCL
+- 2CLaCLaCL
+
+Definitely do these as we do now, they look good:
+
+ "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
+    "Conj7CL", 
+    
+    "CLandClClandClandClandCl"
+    
+    But ... look at nesting and .css.
+ :)
+
+declare function local:is-group($node)
 {
-    local:node-type($clause/parent::*) = 'role'
-    or $clause/@Rule = 'sub-CL'
-    or not($clause/@Rule = ('ClCl', 'ClCl2'))
+    starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules
+};
+
+
+declare function local:raise-sibling($parent-node, $child-node-to-raise)
+{
+    <wg>
+     {
+        let $processed-node-to-raise := local:node($child-node-to-raise)
+        let $before := $parent-node/*[. << $child-node-to-raise]
+        let $after := $parent-node/*[. >> $child-node-to-raise]
+        return (
+            (:  A ClCl or ClCl2 always has @Cat="CL", so it will never have a role. If the raised child has a role, use it. :)
+            $processed-node-to-raise/@*,
+            comment{ $parent-node/@Rule, $child-node-to-raise/@Rule, count($parent-node/*[.<<$child-node-to-raise]) +1  },
+            $before ! local:node(.),
+            $processed-node-to-raise/node(),
+            $after ! local:node(.)
+        )
+     }
+    </wg>
+};
+
+declare function local:keep-siblings-as-siblings($node)
+{
+    <wg>
+      {
+        $node/@nodeId ! local:nodeId2xmlId(.),
+        $node/@Rule ! attribute rule { lower-case(.) },           
+        $node/Node ! local:node(.)
+     }           
+    </wg>
+};
+
+declare function local:strip-attributes-from-subtree($subroot as element(), $attnames as xs:string+)
+{
+    element { name($subroot) } {
+        $subroot/@*[not(name(.) = $attnames)],
+        for $n in $subroot/node()
+        return
+            typeswitch($n)
+                case element() return local:strip-attributes-from-subtree($n, $attnames)
+                default return $n
+    }
 };
 
 declare function local:clause($node)
-(:  This is probably too simple as written - need to do restructuring of clauses based on @rule attributes  :)
+(:  
+   See https://github.com/Clear-Bible/symphony-team/issues/91  
+:)
 {
-    if (local:is-worth-preserving($node))
-    then
-        <wg>
-            {
-                local:attributes($node),
-                $node/@nodeId ! local:nodeId2xmlId(.),
-                $node/Node ! local:node(.)
-            }
+    if ( $node=>local:is-peripheral() ) then
+        <wg role="aux" class="minor">
+         {
+            local:attributes($node)[not(name(.) = ("role","class"))],
+            for $child in $node/Node  ! local:node(.)
+            return 
+                if ($child[@role]) then $child/* 
+                else $child
+         }
         </wg>
+          
+    else if ( $node=>local:is-adjunct-cl() ) then
+        <wg role="adv">
+          {
+                attribute class { if ($node/@Rule = "sub-CL") then "wg" else "cl" },
+                local:attributes($node)[not(name(.) = ("role","class"))],
+                $node/Node ! local:node(.)         
+           }     
+        </wg>         
+        
+     else if ( $node =>local:is-object-thatVP() ) then 
+          <wg role="o" class="wg"> 
+            {
+                local:attributes($node)[not(name(.) = ("role", "class"))],
+                $node/Node ! local:node(.)         
+           }     
+          </wg> 
+
+     else if ($node/@Rule=("Conj-CL")) then
+         <wg class="wg">
+           {
+                local:attributes($node)[not(name(.) = ("class"))],
+                $node/Node ! local:node(.)         
+            }
+          </wg>
+
+     else if ($node/@Rule=("PtclCL","AdvpCL")) then
+        let $ptcl := $node/Node[1]  ! local:node(.)/descendant-or-self::w ! <w>{ attribute role { "adv"}, @*, text() }</w>
+        let $cl := $node/Node[2] ! local:node(.)
+        return 
+         <wg>
+           {
+                $cl/@*
+                ,
+                comment { "Rule: ", $node/@Rule }
+                ,
+                for $child in ($ptcl, $cl/*)
+                order by $child/descendant-or-self::w[1]/@xml:id
+                return $child
+            }
+          </wg>
+
+else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
+          (: ### TODO:  Handle groups of groups :)
+        <wg role="g" class="group">
+         {
+            $node/@nodeId ! local:nodeId2xmlId(.),
+            $node/@Rule ! attribute rule { lower-case(.) },
+            $node/Node ! local:node(.)
+         }
+        </wg>    
+        
+    else if (
+            some $child in $node/* satisfies (
+                $child => local:is-peripheral()
+                or
+                $child => local:is-adjunct-cl() 
+                or
+                $child =>local:is-object-thatVP())
+            and
+                $node/@Rule="ClCl"
+    ) 
+        then local:raise-sibling($node, $node/*[1])
+    else if ( $node/@Rule="ClCl" )
+        then
+         <wg class="wg">
+           {
+                local:attributes($node)[not(name(.) = ("class"))],
+                comment { "Flat ClCl" },
+                $node/Node ! local:node(.)         
+            }
+          </wg>        
+
+    else if ($node/@Rule="ClCl2") then
+        local:raise-sibling($node, $node/*[2])
+
     else
-        $node/Node ! local:node(.)
+        <wg>
+         {
+            local:attributes($node),
+            comment { "local:clause(), else" },
+            $node/Node ! local:node(.)
+         }
+        </wg>
 };
 
 
+(:  
+    The "singleton phrases" rules have these things in common:
+    
+    1. They always have a single child that represents a word
+    2. They never live in elements that represent clauses
+    3. Their descendants are singletons at each level
+    4. The @Cat attribute is one of the following, and does not represent a role:
+    
+        adj
+        adjp
+        adv
+        advp
+        conj
+        intj
+        np
+        nump
+        prep
+        pron
+        ptcl
+        vp
+:)
+
+declare variable $singleton-phrases := (
+      "Adj2Adjp","Adj2Advp","Adv2Adj","Adv2Advp", "Adv2Conj", "Adv2Prep", "Adv2Ptcl", 
+      "Conj2Adv", "Conj2Prep", "Conj2Pron", "Conj2Ptcl", "Det2NP", "N2NP", "Num2Nump", 
+      "Prep2Adv", "Pron2NP", "Ptcl2Adv", "Ptcl2Conj", "Ptcl2Intj", "Ptcl2Np", "V2VP", "intj2Np","pron2adj"
+ );
+ 
+ declare function local:singleton($node)
+ {
+    <singleton>{ 
+        $node/descendant::Node[empty(Node)] ! local:node(.)    
+    }</singleton>
+ };
+
 declare function local:phrase($node)
 {
-    if (local:oneword($node))
-    then
-        (local:word(local:oneword($node)))
+(:
+     #### BUG - I might have various levels of children at this point.  Still not out of the water. #####
+     #### BUG - roles with participles, infinitiives  (v.part, v.inf)
+
+
+    if ($node/@Rule=$singleton-phrases and count($node/descendant::Node[empty(Node)]) eq 1)
+    then local:singleton($node)
     else
+:)
         <wg>
             {
                 local:attributes($node),
-                $node/@nodeId ! local:nodeId2xmlId(.),
                 $node/Node ! local:node(.)
             }
         </wg>
 };
 
 declare function local:role($node)
-(:
-  A role node can have more than one child in some
-  corner cases in the GBI trees, e.g. Gal 4:18, where
-  an ADV node contains ADV conj ADV.  I imagine this
-  occurs only for conjunctions, but I am not sure.
-:)
 {
     let $role := attribute role {lower-case($node/@Cat)}
     return
-        if (local:oneword($node))
+        if (count($node/Node) > 1)
         then
-            (local:word(local:oneword($node), $role))
+            <wg>
+                {
+                    $role,
+                    $node/@nodeId ! local:nodeId2xmlId(.),
+                    comment { "Role created from ", $node/@Rule },
+                    $node/Node ! local:node(.)
+                }
+            </wg>
         else
-            if (count($node/Node) > 1)
-            then
-                <wg>
-                    {
+            element {if ($node/Node/Node) then "wg" else "w"}
+                {
+                    let $child := local:node($node/Node)
+                    return (
                         $role,
-                        $node/@nodeId ! local:nodeId2xmlId(.),
-                        $node/Node ! local:node(.)
-                    }
-                </wg>
-            else
-                <wg>
-                    {
-                        $role,
-                        $node/@nodeId ! local:nodeId2xmlId(.),
-                        local:attributes($node/Node),
-                        $node/Node/Node ! local:node(.)
-                    }
-                </wg>
+                        $child/@* except $child/@role,
+                        comment { "Role created from ", $node/@Rule },
+                        $child/node()
+                    )
+                }
 };
 
 declare function local:word($node)
@@ -330,39 +498,37 @@ declare function local:word($node)
 declare function local:word($node, $role)
 (: $role can contain a role attribute or a null sequence :)
 {
-let $wordContent := $node/text()
-let $wordContentWithoutBrackets := replace($node/text(), '([\(\)\[\]])', '')
-let $normalizedFormWordLength := string-length($node/@NormalizedForm)
-let $normalizedFormWithPunctuationLength := $normalizedFormWordLength + 1
-return
-    if ($node/*)
-    then
-        (element error {$role, $node})
-    else
-        if (string-length($wordContentWithoutBrackets) = $normalizedFormWithPunctuationLength)
+    let $wordContent := $node/text()
+    let $wordContentWithoutBrackets := replace($node/text(), '([\(\)\[\]])', '') 
+    let $normalizedFormWordLength := string-length($node/@NormalizedForm)
+    let $normalizedFormWithPunctuationLength := $normalizedFormWordLength + 1
+    return
+        if ($node/*)
         then
-            (: place punctuation in a separate node :)
-            (
-            <w>
-                {
-                    $role,
-                    $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
-                    attribute after {substring($wordContentWithoutBrackets, string-length($wordContentWithoutBrackets), 1)},
-                    local:attributes($node),
-                    substring($wordContentWithoutBrackets, 1, string-length($wordContentWithoutBrackets) - 1)
-                }
-            </w>
-            )
+            (element error {$role, $node})
         else
-            <w>
-                {
-                    $role,
-                    $node/@nodeId ! attribute ref {local:USFMId($node/@nodeId)},
-                    attribute after {' '},
-                    local:attributes($node),
-                    string($wordContentWithoutBrackets)
-                }
-            </w>
+            if (string-length($wordContentWithoutBrackets) = $normalizedFormWithPunctuationLength)
+            then
+                (: place punctuation in an 'after' attribute :)
+                <w>
+                    {
+                        $role,
+                        attribute ref {local:USFMId($node/@nodeId)},
+                        attribute after {substring($wordContentWithoutBrackets, string-length($wordContentWithoutBrackets), 1)},
+                        local:attributes($node),
+                        substring($wordContentWithoutBrackets, 1, string-length($wordContentWithoutBrackets) - 1)
+                    }
+                </w>
+            else
+                <w>
+                    {
+                        $role,
+                        attribute ref {local:USFMId($node/@nodeId)},
+                        attribute after {' '},
+                        local:attributes($node),
+                        string($wordContentWithoutBrackets)
+                    }
+                </w>
 };
 
 declare function local:node-type($node as element(Node))
@@ -459,8 +625,7 @@ declare function local:sentence($node)
             
             if (count($node/Node) > 1 or not($node/Node/@node = 'CL'))
             then
-                <wg
-                    role="cl">{$node/Node ! local:node(.)}</wg>
+                <wg>{$node/Node ! local:node(.)}</wg>
             else
                 local:node($node/Node)
             

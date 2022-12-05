@@ -1,28 +1,36 @@
 /* treedown.css */
 
-wg[class=header] {
-    display: block;
-    position: fixed;
-    width=6em;
-    top: 5px;
-    left: 5px;
-    background-color: white;
-    opacity: 1;
-    overflow: scroll;
+sentence > wg {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+}
+
+wg[class='header'] {
+  display: block;
+  position: fixed;
+  width: 6rem;
+  top: 5px;
+  left: 5px;
+  background-color: white;
+  opacity: 1;
+  overflow: scroll;
 }
 
 milestone {
-    color: blue;
-    display: block;
-    padding-right: 6px;
+  color: blue;
+  display: block;
+  padding-right: 6px;
 }
 
 p {
-    margin-top: 1em;
-    margin-bottom: 1em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-div[class=book]  {
+div[class='book'] {
   margin-top: 1in;
   margin-left: 1in;
   margin-bottom: 1in;
@@ -31,138 +39,183 @@ div[class=book]  {
   opacity: 1;
 }
 
-book, passage,root {
+book,
+passage,
+root {
   line-height: 1.5;
-  margin-left: 5em;
-  margin-right: 10em;
+  margin-left: 5rem;
+  margin-right: 10rem;
   /* background: linen; */
 }
 
-
 /* WGs */
 
-wg[class=sentence] {
+wg > wg[class='wg'] {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
 }
 
-wg[class=cl] {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+wg > wg[class='cl'],
+wg:not(wg[class='cl']) > wg:has(wg[class='cl']) + wg,
+wg:not(wg[class='np']):not(wg[class='wg']):has(> wg[class='cl']) > w {
+  margin-left: 0.8rem;
+}
+
+wg:has(wg[class='cl']) + wg[class='cl'] {
+  /* Ryder: sometimes a deeply nested wg[class=cl] is followed by a wg[class=cl] that is not nested. 
+     Without this additional margin, there is a double line since the clause adjacency 
+     is not obvious based on the other rules. */
+  margin-top: 1rem;
+}
+
+wg[class='cl']:has(+ wg[class='group']) {
+  margin-bottom: 1rem;
+}
+
+wg[class='cl'],
+wg[class='wg'] {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.25em;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+wg[class='cl'] + wg[class='cl'],
+wg[class='cl'] + wg[class='wg'] {
+  margin-top: 1rem;
+}
+
+wg[class='minor'] > wg[class='minor'][role],
+wg[class='wg'] > wg[class='minor'] {
+  display: block;
+  margin-left: 1rem;
+}
+
+wg[class='wg'] > wg[class='minor'] > wg[class='minor'] {
+  /* Ryder: sometimes a second level of minor clause 
+  exists, and it should not be further indented. */
+  margin-left: 0;
+}
+
+/* Roles */
+
+wg[class='cl'] > *[role] {
+  position: relative;
   display: block;
 }
 
-wg[rule=that-VP],
-wg[rule=sub-CL],
-wg[role] {
-    position: relative;
-    display: block;
+wg[class='cl'] > wg[class='cl'][role]::before,
+wg[class='cl'] > wg[class='wg'][role]::before {
+  /* Move the role for constituent clauses outside of the clause border */
+  margin-left: -1rem;
+  /* Ryder: commented these lines because they were adding a blank line before, e.g., Ἐπειδήπερ in Luke 1.4 */
+  /* margin-top: -1.5rem; */
+  /* display: block; */
+  margin-bottom: 1rem;
+  position: absolute;
 }
 
-/* Words */
-
-w[role] {
-    position: relative;
-    display: block;
+wg[class='cl'] > wg[class='cl'][role],
+wg[class='cl'] > wg[class='wg'][role],
+wg[class='cl'] > w[role] {
+  margin-left: 0.8rem;
+  margin-top: 1.5rem;
 }
 
-w[case=vocative] {
-    position: relative;
-    display: block;
-}
-
-/* Generated Text */
-
-/*
-  Spacing problem:  generated text usually belongs on the previous level,
-  not on the new indent leve.  Not sure how to do that with CSS.
-*/
-
-wg[class=sentence] wg[class=cl]::before {
-  content: initial;
-}
-
-wg[role]::before {
+wg[class='cl'] > wg[role]::before {
   color: cadetblue;
   content: attr(role);
 }
 
-wg[rule=that-VP]::before,
-wg[rule=sub-CL]::before,
-wg[role=adv]::before {
+wg[class='cl'] > w[role]::before {
   color: cadetblue;
-  content: "+ ";
+  content: attr(role) ' ';
 }
 
-
-w[role=v][mood=participle]::before {
-  color: cadetblue;
-  content: "v.part ";
+wg[class='cl'] > wg[role='g']::before {
+  content: '';
 }
 
-w[role=v][mood=infinitive]::before {
+wg[class='cl'] > wg[role='adv']::before {
   color: cadetblue;
-  content: "v.inf ";
+  content: '+ ';
 }
 
-w[role]::before {
+wg[class='cl'] > w[role='adv']::before {
   color: cadetblue;
-  content: attr(role) " ";
+  content: '+ ';
 }
 
-w[role=adv]::before {
+w[role='aux']::before,
+wg[role='aux']::before,
+wg[class='cl'] > w[role='aux']::before,
+wg[class='cl'] > wg[role='aux']::before {
+  /* Ryder: Unlike most other roles, auxiliaries should be displayed even when they are not children of clauses.
+     thus, these are not prefixed with the `wg[class=cl] >` path. */
   color: cadetblue;
-  content: "+ ";
+  content: '~'' ';
+}
+
+/* ----- Participles and infinitives ----- */
+
+*[role='v']:has(> w[mood='participle'])::before {
+  color: cadetblue;
+  content: 'v.part ';
+}
+
+*[role='v']:has(> w[mood='infinitive'])::before {
+  color: cadetblue;
+  content: 'v.inf ';
 }
 
 w[discontinuous]::after {
-  content: "*";
+  content: '*';
   vertical-align: super;
   color: cadetblue;
   font-size: small;
 }
 
-w[case=vocative]::before {
-  color: cadetblue;
-  content: "voc" " ";
-}
-
-
-/* -----  Experimental stuff goes here -------- */
+/* ----- Apposition - this ain't quite right, but better than nothing ---------*/
 
 /* Apposition */
 
-wg[rule=Np-Appos] > wg:not(:first-child)::before,
-wg[rule=Np-Appos] > w:not(:first-child)::before {
-    content: ": ";
-    color: cadetblue;
-    margin-left: 1em;
-}
-
-wg[rule=Np-Appos] > wg:not(:first-child),
-wg[rule=Np-Appos] > w:not(:first-child) {
-    display: block;
-}
-
-/* Probably want to put brackets around single words, but right now it cascades badly. */
-
-wg[rule=Np-Appos] > wg:first-child::before {
-    content: "[";
-    color: cadetblue;
-}
-
-wg[rule=Np-Appos]> wg:first-child::after {
-    content: "]";
-    color: cadetblue;
-}
-
-pc::before {
-    content: initial;
-}
-
-/* ------ Left spacing --------- */
-
-wg[class=cl] {
+wg[rule='Np-Appos'] > wg:not(:first-child)::before,
+wg[rule='Np-Appos'] > w:not(:first-child)::before {
+  content: ': ';
+  color: cadetblue;
   margin-left: 1em;
-  position: relative;
+}
+
+wg[rule='Np-Appos'] > wg:not(:first-child),
+wg[rule='Np-Appos'] > w:not(:first-child) {
+  display: block;
+}
+
+/* -----  Experimental stuff goes here -------- */
+
+/* 
+  RYDER: the additional wg[class=group] predicate is 
+  needed for some instances like the last wg/group of Luke 1.19 
+*/
+
+wg[role='g'] > w,
+wg[class='group'] > w {
+  display: block;
+  margin-top: 1rem;
+}
+
+wg[class='group'] wg[class='group'] {
+  margin-top: 0;
+}
+
+wg[rule='sub-CL']:not(> *[role])::before {
+  /* Ryder: in sub-CL clauses, the conjunction drops to a new line below the role
+      and the clause is further indented. This rule horizontally aligns the conj
+      and the role of the sub-CL wg. E.g. διότι in Luke 2.7 */
+  position: absolute;
 }
 
 wg[class=cl][role]::before {
