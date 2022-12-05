@@ -107,16 +107,7 @@ declare function local:head($node)
 declare function local:attributes($node)
 {
     $node/@Cat ! attribute class {lower-case(.)},
-    if ($node/parent::Node/@Rule = 'Np-Appos') then 
-        (: Ryder: in the context of a Np-Appos Node... :)
-        for $child at $position in $node/parent::Node/element()
-            (: Ryder: add @apposition if the current node is not in position 1.
-               This may seem a bit convoluted, but you cannot access the 
-               position() value directly otherwise (so far as I can tell). 
-            :)
-            return if ($child = $node and $position gt 1) then attribute apposition {'true'}
-            else ()
-        else(),
+    $node[preceding-sibling::*]/parent::Node[@Rule = 'Np-Appos'] ! attribute role {"apposition"},
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
     $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),
