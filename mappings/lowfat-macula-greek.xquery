@@ -140,7 +140,17 @@ declare function local:attributes($node)
     $node/@Frame ! attribute frame {.},
     $node/@Ref ! attribute referent {.},
     $node/@SubjRef  ! attribute subjref {.},
-    $node/@ClType ! attribute cltype {.}  (:  ### Remove later - for debugging purposes #### :)
+    $node/@ClType ! attribute cltype {.},  (:  ### Remove later - for debugging purposes #### :)
+    
+    if ($node/@Cat = 'CL') then 
+        (: Add @junction to clauses based on parent rule :)
+        $node/parent::Node/@Rule ! (if (. = ($junctionRule)) then attribute junction {
+         (: Determine correct value for @junction :)
+            if (. = $subordinationRule) then 'subordinate'
+            else if (. = $coordinationRule) then 'coordinate'
+            else 'error_unknown_junction'
+        } else ())
+    else ()
 };
 
 
