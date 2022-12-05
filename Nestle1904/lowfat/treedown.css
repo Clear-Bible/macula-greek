@@ -182,14 +182,18 @@ w[discontinuous]::after {
 
 /* Apposition */
 
-*[apposition='true']::before {
+*[role='apposition']::before {
   content: ': ';
   color: cadetblue;
   margin-left: 1rem;
 }
 
-*[apposition='true'] {
+*[role='apposition'] {
   display: block;
+}
+
+*[role='apposition'] > wg[class='cl'] {
+  margin-left: 1.5rem;
 }
 
 /* -----  Experimental stuff goes here -------- */
