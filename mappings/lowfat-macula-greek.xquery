@@ -104,9 +104,12 @@ declare function local:head($node)
 
 };
 
+declare variable $nominalized-clause-rule := ( 'CL2Adjp',  'CL2NP', 'DetCL', 'NP-CL' );
+
 declare function local:attributes($node)
 {
     $node/@Cat ! attribute class {lower-case(.)},
+    if ($node/@Cat = 'CL' and $node/parent::Node/@Rule = $nominalized-clause-rule) then attribute type {'nominalized'} else (),
     $node[preceding-sibling::*]/parent::Node[@Rule = 'Np-Appos'] ! attribute role {"apposition"},
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
