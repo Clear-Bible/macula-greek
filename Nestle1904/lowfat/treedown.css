@@ -182,16 +182,18 @@ w[discontinuous]::after {
 
 /* Apposition */
 
-wg[rule='Np-Appos'] > wg:not(:first-child)::before,
-wg[rule='Np-Appos'] > w:not(:first-child)::before {
+*[role='apposition']::before {
   content: ': ';
   color: cadetblue;
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
-wg[rule='Np-Appos'] > wg:not(:first-child),
-wg[rule='Np-Appos'] > w:not(:first-child) {
+*[role='apposition'] {
   display: block;
+}
+
+*[role='apposition'] > wg[class='cl'] {
+  margin-left: 1.5rem;
 }
 
 /* -----  Experimental stuff goes here -------- */
