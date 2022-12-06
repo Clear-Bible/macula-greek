@@ -224,7 +224,7 @@ wg > wg[clausetype='nominalized-clause'] {
 }
 
 /* Ryder: This rule rule adds additional margin when a nominalized clause is part of apposition, because the nominalizing article has a 'display: block' property, which means it will not display the subordination properly. Like the other CSS rules that rely on Node rules (i.e., 'Np-Appos'), this will have to be cleaned up when we add an apposition attribute to the lowfat. */
-wg[rule='Np-Appos']
+wg[role='apposition']
   > wg:not(:first-child)
   > wg[clausetype='nominalized-clause'] {
   margin-left: 2rem;
