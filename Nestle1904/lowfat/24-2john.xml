@@ -13,7 +13,8 @@
                 articular="true"
                 head="true"
                 rule="S-IO"
-                cltype="VerbElided"><!--local:clause(), else-->
+                cltype="VerbElided"
+                junction="coordinate"><!--local:clause(), else-->
                <wg role="s"
                    class="np"
                    xml:id="n630010010010020"
@@ -643,7 +644,10 @@
                gloss="and"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg class="cl" xml:id="n630010020090060" rule="P-VC-ADV"><!--local:clause(), else-->
+            <wg class="cl"
+                xml:id="n630010020090060"
+                rule="P-VC-ADV"
+                junction="coordinate"><!--local:clause(), else-->
                <wg role="p"
                    class="pp"
                    xml:id="n630010020090020"
@@ -1163,7 +1167,11 @@
       <p>
          <milestone unit="verse" id="2JN 1:4">2JN 1:4</milestone> Ἐχάρην λίαν ὅτι εὕρηκα ἐκ τῶν τέκνων σου περιπατοῦντας ἐν ἀληθείᾳ, καθὼς ἐντολὴν ἐλάβομεν παρὰ τοῦ Πατρός.</p>
       <wg>
-         <wg class="cl" xml:id="n630010040010020" head="true" rule="V-ADV"><!--ClCl V-ADV 1--><!--local:clause(), else-->
+         <wg class="cl"
+             xml:id="n630010040010020"
+             head="true"
+             rule="V-ADV"
+             junction="unknown"><!--ClCl V-ADV 1--><!--local:clause(), else-->
             <wg role="v"
                 class="vp"
                 xml:id="n630010040010011"
@@ -1207,7 +1215,11 @@
                   morph="ADV"
                   unicode="λίαν">λίαν</w>
             </wg>
-            <wg role="adv" class="wg" xml:id="n630010040030150" rule="sub-CL">
+            <wg role="adv"
+                class="wg"
+                xml:id="n630010040030150"
+                rule="sub-CL"
+                junction="unknown">
                <w ref="2JN 1:4!3"
                   after=" "
                   class="conj"
@@ -1220,7 +1232,10 @@
                   ln="89.33"
                   morph="CONJ"
                   unicode="ὅτι">ὅτι</w>
-               <wg class="cl" xml:id="n630010040040140" rule="V-O"><!--local:clause(), else-->
+               <wg class="cl"
+                   xml:id="n630010040040140"
+                   rule="V-O"
+                   junction="subordinate"><!--local:clause(), else-->
                   <wg role="v"
                       class="vp"
                       xml:id="n630010040040011"
@@ -1251,7 +1266,8 @@
                       class="cl"
                       xml:id="n630010040050070"
                       head="true"
-                      rule="ADV-V-ADV"><!--Role created from  CL2Ox--><!--ClCl ADV-V-ADV 1-->
+                      rule="ADV-V-ADV"
+                      junction="unknown"><!--Role created from  CL2Ox--><!--ClCl ADV-V-ADV 1-->
                      <wg role="adv"
                          class="pp"
                          xml:id="n630010040050040"
@@ -1385,7 +1401,11 @@
                               unicode="ἀληθείᾳ,">ἀληθείᾳ</w>
                         </wg>
                      </wg>
-                     <wg role="adv" class="wg" xml:id="n630010040120060" rule="sub-CL">
+                     <wg role="adv"
+                         class="wg"
+                         xml:id="n630010040120060"
+                         rule="sub-CL"
+                         junction="unknown">
                         <w ref="2JN 1:4!12"
                            after=" "
                            class="conj"
@@ -1398,7 +1418,10 @@
                            ln="64.14"
                            morph="ADV"
                            unicode="καθὼς">καθὼς</w>
-                        <wg class="cl" xml:id="n630010040130050" rule="O-V-ADV"><!--local:clause(), else-->
+                        <wg class="cl"
+                            xml:id="n630010040130050"
+                            rule="O-V-ADV"
+                            junction="subordinate"><!--local:clause(), else-->
                            <wg role="o" class="np" xml:id="n630010040130011" rule="N2NP"><!--Role created from  Np2O-->
                               <w ref="2JN 1:4!13"
                                  after=" "
@@ -1529,12 +1552,14 @@
             <wg class="cl"
                 xml:id="n630010050020140"
                 head="true"
-                rule="ADV-V-O-ADV"><!--ClCl2 ClCl 2-->
+                rule="ADV-V-O-ADV"
+                junction="unknown"><!--ClCl2 ClCl 2-->
                <wg role="aux"
                    class="minor"
                    xml:id="n630010050050012"
                    rule="Np2CL"
-                   cltype="Minor">
+                   cltype="Minor"
+                   junction="unknown">
                   <wg class="np" xml:id="n630010050050011" rule="N2NP">
                      <w ref="2JN 1:5!5"
                         after=","
@@ -1616,7 +1641,11 @@
                      unicode="σε,"
                      referent="n63001005005">σε</w>
                </wg>
-               <wg role="adv" class="cl" xml:id="n630010050090110" rule="V-IO-ADV"><!--Role created from  CL2ADV--><!--local:clause(), else-->
+               <wg role="adv"
+                   class="cl"
+                   xml:id="n630010050090110"
+                   rule="V-IO-ADV"
+                   junction="subordinate"><!--Role created from  CL2ADV--><!--local:clause(), else-->
                   <wg role="v"
                       class="vp"
                       xml:id="n630010050090011"
@@ -1677,7 +1706,11 @@
                            morph="PRT-N"
                            unicode="οὐχ">οὐχ</w>
                      </wg>
-                     <wg role="adv" class="wg" xml:id="n630010050070030" rule="sub-CL">
+                     <wg role="adv"
+                         class="wg"
+                         xml:id="n630010050070030"
+                         rule="sub-CL"
+                         junction="coordinate">
                         <w ref="2JN 1:5!7"
                            after=" "
                            class="conj"
@@ -1693,7 +1726,8 @@
                         <wg class="cl"
                             xml:id="n630010050080022"
                             rule="O2CL"
-                            cltype="VerbElided"><!--local:clause(), else-->
+                            cltype="VerbElided"
+                            junction="subordinate"><!--local:clause(), else-->
                            <wg role="o" class="np" xml:id="n630010050080020" rule="NpAdjp"><!--Role created from  Np2O-->
                               <wg class="np" xml:id="n630010050080011" head="true" rule="N2NP">
                                  <w ref="2JN 1:5!8"
@@ -1746,7 +1780,11 @@
                         ln="89.125"
                         morph="CONJ"
                         unicode="ἀλλὰ">ἀλλὰ</w>
-                     <wg class="cl" xml:id="n630010050130040" head="true" rule="O-V-ADV"><!--local:clause(), else-->
+                     <wg class="cl"
+                         xml:id="n630010050130040"
+                         head="true"
+                         rule="O-V-ADV"
+                         junction="coordinate"><!--local:clause(), else-->
                         <wg role="o" class="np" xml:id="n630010050130011" rule="Pron2NP"><!--Role created from  Np2O-->
                            <w ref="2JN 1:5!13"
                               after=" "
@@ -1825,7 +1863,11 @@
                      </wg>
                   </wg>
                </wg>
-               <wg role="adv" class="wg" xml:id="n630010050170030" rule="sub-CL">
+               <wg role="adv"
+                   class="wg"
+                   xml:id="n630010050170030"
+                   rule="sub-CL"
+                   junction="unknown">
                   <w ref="2JN 1:5!17"
                      after=" "
                      class="conj"
@@ -1838,7 +1880,10 @@
                      ln="90.22"
                      morph="CONJ"
                      unicode="ἵνα">ἵνα</w>
-                  <wg class="cl" xml:id="n630010050180020" rule="V-O"><!--local:clause(), else-->
+                  <wg class="cl"
+                      xml:id="n630010050180020"
+                      rule="V-O"
+                      junction="subordinate"><!--local:clause(), else-->
                      <wg role="v"
                          class="vp"
                          xml:id="n630010050180011"
@@ -1907,7 +1952,11 @@
                ln="89.87"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg class="cl" xml:id="n630010060020040" head="true" rule="P-VC-S"><!--ClCl P-VC-S 1--><!--local:clause(), else-->
+            <wg class="cl"
+                xml:id="n630010060020040"
+                head="true"
+                rule="P-VC-S"
+                junction="unknown"><!--ClCl P-VC-S 1--><!--local:clause(), else-->
                <wg role="p"
                    class="np"
                    xml:id="n630010060020011"
@@ -1987,7 +2036,11 @@
                         unicode="ἀγάπη,">ἀγάπη</w>
                   </wg>
                </wg>
-               <wg role="o" class="wg" xml:id="n630010060060060" rule="that-VP">
+               <wg role="o"
+                   class="wg"
+                   xml:id="n630010060060060"
+                   rule="that-VP"
+                   junction="unknown">
                   <wg class="conj" xml:id="n630010060060011" rule="Adv2Conj">
                      <w ref="2JN 1:6!6"
                         after=" "
@@ -2116,7 +2169,11 @@
       <p>
          <milestone unit="verse" id="2JN 1:6">2JN 1:6</milestone> αὕτη ἡ ἐντολή ἐστιν, καθὼς ἠκούσατε ἀπ’ ἀρχῆς, ἵνα ἐν αὐτῇ περιπατῆτε.</p>
       <wg>
-         <wg class="cl" xml:id="n630010060120040" head="true" rule="P-S-VC"><!--ClCl ClCl 1--><!--ClCl P-S-VC 1--><!--local:clause(), else-->
+         <wg class="cl"
+             xml:id="n630010060120040"
+             head="true"
+             rule="P-S-VC"
+             junction="unknown"><!--ClCl ClCl 1--><!--ClCl P-S-VC 1--><!--local:clause(), else-->
             <wg role="p"
                 class="np"
                 xml:id="n630010060120011"
@@ -2196,7 +2253,11 @@
                   morph="V-PAI-3S"
                   unicode="ἐστιν,">ἐστιν</w>
             </wg>
-            <wg role="adv" class="wg" xml:id="n630010060160040" rule="sub-CL">
+            <wg role="adv"
+                class="wg"
+                xml:id="n630010060160040"
+                rule="sub-CL"
+                junction="unknown">
                <w ref="2JN 1:6!16"
                   after=" "
                   class="conj"
@@ -2209,7 +2270,10 @@
                   ln="64.14"
                   morph="ADV"
                   unicode="καθὼς">καθὼς</w>
-               <wg class="cl" xml:id="n630010060170030" rule="V-ADV"><!--local:clause(), else-->
+               <wg class="cl"
+                   xml:id="n630010060170030"
+                   rule="V-ADV"
+                   junction="subordinate"><!--local:clause(), else-->
                   <wg role="v"
                       class="vp"
                       xml:id="n630010060170011"
@@ -2269,7 +2333,11 @@
                   </wg>
                </wg>
             </wg>
-            <wg role="o" class="wg" xml:id="n630010060200040" rule="that-VP">
+            <wg role="o"
+                class="wg"
+                xml:id="n630010060200040"
+                rule="that-VP"
+                junction="unknown">
                <wg class="conj" xml:id="n630010060200011" rule="Adv2Conj">
                   <w ref="2JN 1:6!20"
                      after=" "
@@ -2365,7 +2433,10 @@
                ln="89.33"
                morph="CONJ"
                unicode="ὅτι">ὅτι</w>
-            <wg class="cl" xml:id="n630010070040140" rule="V-ADV-S"><!--local:clause(), else-->
+            <wg class="cl"
+                xml:id="n630010070040140"
+                rule="V-ADV-S"
+                junction="subordinate"><!--local:clause(), else-->
                <wg role="v"
                    class="vp"
                    xml:id="n630010070040011"
@@ -2560,7 +2631,11 @@
                               frame="A0:n63001007003 A1:n63001007013"
                               subjref="n63001007003">ὁμολογοῦντες</w>
                         </wg>
-                        <wg role="o" class="cl" xml:id="n630010070110050" rule="S-V-ADV"><!--Role created from  CL2Ox--><!--local:clause(), else-->
+                        <wg role="o"
+                            class="cl"
+                            xml:id="n630010070110050"
+                            rule="S-V-ADV"
+                            junction="subordinate"><!--Role created from  CL2Ox--><!--local:clause(), else-->
                            <wg role="s" class="np" xml:id="n630010070110020" rule="Np-Appos"><!--Role created from  Np2S-->
                               <wg class="np" xml:id="n630010070110011" head="true" rule="N2NP">
                                  <w ref="2JN 1:7!11"
@@ -2819,7 +2894,11 @@
       <p>
          <milestone unit="verse" id="2JN 1:8">2JN 1:8</milestone> βλέπετε ἑαυτούς, ἵνα μὴ ἀπολέσητε ἃ ἠργασάμεθα, ἀλλὰ μισθὸν πλήρη ἀπολάβητε.</p>
       <wg>
-         <wg class="cl" xml:id="n630010080010020" head="true" rule="V-O"><!--ClCl V-O 1--><!--local:clause(), else-->
+         <wg class="cl"
+             xml:id="n630010080010020"
+             head="true"
+             rule="V-O"
+             junction="unknown"><!--ClCl V-O 1--><!--local:clause(), else-->
             <wg role="v"
                 class="vp"
                 xml:id="n630010080010011"
@@ -2863,7 +2942,11 @@
                   unicode="ἑαυτούς,"
                   referent="n63001005005 n63001001007">ἑαυτούς</w>
             </wg>
-            <wg role="adv" class="wg" xml:id="n630010080030090" rule="sub-CL">
+            <wg role="adv"
+                class="wg"
+                xml:id="n630010080030090"
+                rule="sub-CL"
+                junction="unknown">
                <w ref="2JN 1:8!3"
                   after=" "
                   class="conj"
@@ -2892,7 +2975,10 @@
                         morph="PRT-N"
                         unicode="μὴ">μὴ</w>
                   </wg>
-                  <wg class="cl" xml:id="n630010080050030" rule="V-O"><!--local:clause(), else-->
+                  <wg class="cl"
+                      xml:id="n630010080050030"
+                      rule="V-O"
+                      junction="coordinate"><!--local:clause(), else-->
                      <wg role="v"
                          class="vp"
                          xml:id="n630010080050011"
@@ -2923,7 +3009,8 @@
                         <wg class="cl"
                             type="nominalized"
                             xml:id="n630010080060020"
-                            rule="O-V"><!--local:clause(), else-->
+                            rule="O-V"
+                            junction="subordinate"><!--local:clause(), else-->
                            <wg role="o" class="np" xml:id="n630010080060011" rule="Pron2NP"><!--Role created from  Np2O-->
                               <w ref="2JN 1:8!6"
                                  after=" "
@@ -2981,7 +3068,11 @@
                      ln="89.125"
                      morph="CONJ"
                      unicode="ἀλλὰ">ἀλλὰ</w>
-                  <wg class="cl" xml:id="n630010080090030" head="true" rule="O-V"><!--local:clause(), else-->
+                  <wg class="cl"
+                      xml:id="n630010080090030"
+                      head="true"
+                      rule="O-V"
+                      junction="coordinate"><!--local:clause(), else-->
                      <wg role="o" class="np" xml:id="n630010080090020" rule="NpAdjp"><!--Role created from  Np2O-->
                         <wg class="np" xml:id="n630010080090011" head="true" rule="N2NP">
                            <w ref="2JN 1:8!9"
@@ -3100,7 +3191,11 @@
                      morph="T-NSM"
                      unicode="ὁ">ὁ</w>
                   <wg role="g" class="group" xml:id="n630010090030090" rule="clacl">
-                     <wg class="cl" xml:id="n630010090030013" head="true" rule="V2CL"><!--local:clause(), else-->
+                     <wg class="cl"
+                         xml:id="n630010090030013"
+                         head="true"
+                         rule="V2CL"
+                         junction="coordinate"><!--local:clause(), else-->
                         <wg role="v"
                             class="vp"
                             xml:id="n630010090030011"
@@ -3138,7 +3233,10 @@
                         gloss="and"
                         morph="CONJ"
                         unicode="καὶ">καὶ</w>
-                     <wg class="cl" xml:id="n630010090050070" rule="ADV-V-ADV"><!--local:clause(), else-->
+                     <wg class="cl"
+                         xml:id="n630010090050070"
+                         rule="ADV-V-ADV"
+                         junction="coordinate"><!--local:clause(), else-->
                         <wg role="adv"
                             class="advp"
                             xml:id="n630010090050011"
@@ -3346,13 +3444,18 @@
       <p>
          <milestone unit="verse" id="2JN 1:9">2JN 1:9</milestone> ὁ μένων ἐν τῇ διδαχῇ, οὗτος καὶ τὸν Πατέρα καὶ τὸν Υἱὸν ἔχει.</p>
       <wg>
-         <wg class="cl" xml:id="n630010090200080" head="true" rule="S-O-V"><!--ClCl2 S-O-V 2-->
+         <wg class="cl"
+             xml:id="n630010090200080"
+             head="true"
+             rule="S-O-V"
+             junction="unknown"><!--ClCl2 S-O-V 2-->
             <wg role="aux"
                 class="minor"
                 xml:id="n630010090150051"
                 articular="true"
                 rule="Np2CL"
-                cltype="Minor">
+                cltype="Minor"
+                junction="unknown">
                <wg class="np"
                    xml:id="n630010090150050"
                    articular="true"
@@ -3618,7 +3721,11 @@
          <milestone unit="verse" id="2JN 1:10">2JN 1:10</milestone> εἴ τις ἔρχεται πρὸς ὑμᾶς καὶ ταύτην τὴν διδαχὴν οὐ φέρει, μὴ λαμβάνετε αὐτὸν εἰς οἰκίαν, καὶ χαίρειν αὐτῷ μὴ λέγετε·</p>
       <wg>
          <wg role="g" class="group" xml:id="n630010100120100" rule="clacl"><!--ClCl2 CLaCL 2-->
-            <wg role="adv" class="wg" xml:id="n630010100010110" rule="sub-CL">
+            <wg role="adv"
+                class="wg"
+                xml:id="n630010100010110"
+                rule="sub-CL"
+                junction="unknown">
                <w ref="2JN 1:10!1"
                   after=" "
                   class="conj"
@@ -3632,7 +3739,11 @@
                   morph="COND"
                   unicode="εἴ">εἴ</w>
                <wg role="g" class="group" xml:id="n630010100020100" rule="clacl">
-                  <wg class="cl" xml:id="n630010100020040" head="true" rule="S-V-ADV"><!--local:clause(), else-->
+                  <wg class="cl"
+                      xml:id="n630010100020040"
+                      head="true"
+                      rule="S-V-ADV"
+                      junction="coordinate"><!--local:clause(), else-->
                      <wg role="s" class="np" xml:id="n630010100020011" rule="Pron2NP"><!--Role created from  Np2S-->
                         <w ref="2JN 1:10!2"
                            after=" "
@@ -3716,7 +3827,10 @@
                      gloss="and"
                      morph="CONJ"
                      unicode="καὶ">καὶ</w>
-                  <wg class="cl" xml:id="n630010100070050" rule="O-ADV-V"><!--local:clause(), else-->
+                  <wg class="cl"
+                      xml:id="n630010100070050"
+                      rule="O-ADV-V"
+                      junction="coordinate"><!--local:clause(), else-->
                      <wg role="o"
                          class="np"
                          xml:id="n630010100070030"
@@ -3826,7 +3940,8 @@
             <wg class="cl"
                 xml:id="n630010100120050"
                 head="true"
-                rule="ADV-V-O-ADV"><!--local:clause(), else-->
+                rule="ADV-V-O-ADV"
+                junction="coordinate"><!--local:clause(), else-->
                <wg role="adv"
                    class="advp"
                    xml:id="n630010100120011"
@@ -3927,8 +4042,15 @@
                gloss="and"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg class="cl" xml:id="n630010100180040" rule="O-IO-ADV-V"><!--local:clause(), else-->
-               <wg role="o" class="cl" xml:id="n630010100180013" rule="V2CL"><!--Role created from  CL2Ox--><!--local:clause(), else-->
+            <wg class="cl"
+                xml:id="n630010100180040"
+                rule="O-IO-ADV-V"
+                junction="coordinate"><!--local:clause(), else-->
+               <wg role="o"
+                   class="cl"
+                   xml:id="n630010100180013"
+                   rule="V2CL"
+                   junction="subordinate"><!--Role created from  CL2Ox--><!--local:clause(), else-->
                   <wg role="v" class="vp" xml:id="n630010100180011" rule="V2VP"><!--Role created from  Vp2V-->
                      <w ref="2JN 1:10!18"
                         after=" "
@@ -4029,7 +4151,10 @@
                ln="89.23"
                morph="CONJ"
                unicode="γὰρ">γὰρ</w>
-            <wg class="cl" xml:id="n630010110010100" rule="S-V-ADV"><!--local:clause(), else-->
+            <wg class="cl"
+                xml:id="n630010110010100"
+                rule="S-V-ADV"
+                junction="unknown"><!--local:clause(), else-->
                <wg role="s"
                    class="np"
                    xml:id="n630010110010040"
@@ -4098,7 +4223,11 @@
                            unicode="αὐτῷ"
                            referent="n63001010002">αὐτῷ</w>
                      </wg>
-                     <wg role="o" class="cl" xml:id="n630010110050013" rule="V2CL"><!--Role created from  CL2Ox--><!--local:clause(), else-->
+                     <wg role="o"
+                         class="cl"
+                         xml:id="n630010110050013"
+                         rule="V2CL"
+                         junction="subordinate"><!--Role created from  CL2Ox--><!--local:clause(), else-->
                         <wg role="v" class="vp" xml:id="n630010110050011" rule="V2VP"><!--Role created from  Vp2V-->
                            <w ref="2JN 1:11!5"
                               after=" "
@@ -4263,8 +4392,13 @@
             <wg class="cl"
                 xml:id="n630010120020100"
                 head="true"
-                rule="ADV-ADV-V-ADV"><!--local:clause(), else-->
-               <wg role="adv" class="cl" xml:id="n630010120020040" rule="V-O"><!--Role created from  CL2ADV--><!--local:clause(), else-->
+                rule="ADV-ADV-V-ADV"
+                junction="coordinate"><!--local:clause(), else-->
+               <wg role="adv"
+                   class="cl"
+                   xml:id="n630010120020040"
+                   rule="V-O"
+                   junction="subordinate"><!--Role created from  CL2ADV--><!--local:clause(), else-->
                   <wg role="v"
                       class="vp"
                       xml:id="n630010120020011"
@@ -4291,7 +4425,11 @@
                         frame="A0:n63001001002 A1:n63001012004"
                         subjref="n63001001002">ἔχων</w>
                   </wg>
-                  <wg role="o" class="cl" xml:id="n630010120010030" rule="O-IO-V"><!--Role created from  CL2Ox--><!--local:clause(), else-->
+                  <wg role="o"
+                      class="cl"
+                      xml:id="n630010120010030"
+                      rule="O-IO-V"
+                      junction="subordinate"><!--Role created from  CL2Ox--><!--local:clause(), else-->
                      <wg role="o" class="np" xml:id="n630010120010012" rule="Adj2NP"><!--Role created from  Np2O-->
                         <wg class="adjp" xml:id="n630010120010011" rule="Adj2Adjp">
                            <w ref="2JN 1:12!1"
@@ -4469,7 +4607,11 @@
                ln="89.125"
                morph="CONJ"
                unicode="ἀλλὰ">ἀλλὰ</w>
-            <wg class="cl" xml:id="n630010120120090" head="true" rule="V-O"><!--ClCl V-O 1--><!--local:clause(), else-->
+            <wg class="cl"
+                xml:id="n630010120120090"
+                head="true"
+                rule="V-O"
+                junction="unknown"><!--ClCl V-O 1--><!--local:clause(), else-->
                <wg role="v"
                    class="vp"
                    xml:id="n630010120120011"
@@ -4497,7 +4639,11 @@
                      subjref="n63001001002">ἐλπίζω</w>
                </wg>
                <wg role="o" class="group" xml:id="n630010120130080" rule="clacl"><!--Role created from  CL2Ox-->
-                  <wg class="cl" xml:id="n630010120130030" head="true" rule="VC-P"><!--local:clause(), else-->
+                  <wg class="cl"
+                      xml:id="n630010120130030"
+                      head="true"
+                      rule="VC-P"
+                      junction="coordinate"><!--local:clause(), else-->
                      <wg role="vc" class="vp" xml:id="n630010120130011" rule="V2VP"><!--Role created from  vp2VC-->
                         <w ref="2JN 1:12!13"
                            after=" "
@@ -4560,7 +4706,10 @@
                      gloss="and"
                      morph="CONJ"
                      unicode="καὶ">καὶ</w>
-                  <wg class="cl" xml:id="n630010120170040" rule="ADV-V"><!--local:clause(), else-->
+                  <wg class="cl"
+                      xml:id="n630010120170040"
+                      rule="ADV-V"
+                      junction="coordinate"><!--local:clause(), else-->
                      <wg role="adv" class="np" xml:id="n630010120170030" rule="NpPp"><!--Role created from  Np2ADV-->
                         <wg class="np" xml:id="n630010120170011" head="true" rule="N2NP">
                            <w ref="2JN 1:12!17"
@@ -4639,7 +4788,11 @@
                      </wg>
                   </wg>
                </wg>
-               <wg role="adv" class="wg" xml:id="n630010120210060" rule="sub-CL">
+               <wg role="adv"
+                   class="wg"
+                   xml:id="n630010120210060"
+                   rule="sub-CL"
+                   junction="unknown">
                   <w ref="2JN 1:12!21"
                      after=" "
                      class="conj"
@@ -4652,7 +4805,10 @@
                      ln="89.49"
                      morph="CONJ"
                      unicode="ἵνα">ἵνα</w>
-                  <wg class="cl" xml:id="n630010120220050" rule="S-V"><!--local:clause(), else-->
+                  <wg class="cl"
+                      xml:id="n630010120220050"
+                      rule="S-V"
+                      junction="subordinate"><!--local:clause(), else-->
                      <wg role="s"
                          class="np"
                          xml:id="n630010120220030"
