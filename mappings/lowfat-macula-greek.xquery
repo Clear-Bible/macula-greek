@@ -145,12 +145,15 @@ declare function local:attributes($node)
     $node/@ClType ! attribute cltype {.},  (:  ### Remove later - for debugging purposes #### :)
     
     if ($node/@Cat = 'CL') then 
+	(: Assign @junction to clauses :)
+	if ($node/@Cat = 'CL') then 
         (: Add @junction to clauses based on parent rule :)
         $node/parent::Node/@Rule ! (if (. = ($junctionRule)) then attribute junction {
          (: Determine correct value for @junction :)
             if (. = $subordinationRule) then 'subordinate'
             else if (. = $coordinationRule) then 'coordinate'
-            else 'error_unknown_junction'
+            else if (. = $junctionRequiringDisambiguation) then 'unknown'
+            else 'error_unknown_junction_rule'
         } else ())
     else ()
 };
