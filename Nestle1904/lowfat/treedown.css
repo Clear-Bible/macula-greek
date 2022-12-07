@@ -182,16 +182,18 @@ w[discontinuous]::after {
 
 /* Apposition */
 
-wg[rule='Np-Appos'] > wg:not(:first-child)::before,
-wg[rule='Np-Appos'] > w:not(:first-child)::before {
+*[role='apposition']::before {
   content: ': ';
   color: cadetblue;
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
-wg[rule='Np-Appos'] > wg:not(:first-child),
-wg[rule='Np-Appos'] > w:not(:first-child) {
+*[role='apposition'] {
   display: block;
+}
+
+*[role='apposition'] > wg[class='cl'] {
+  margin-left: 1.5rem;
 }
 
 /* -----  Experimental stuff goes here -------- */
@@ -222,4 +224,15 @@ wg[class=cl][role]::before {
   /* Move the role for constituent clauses outside of the clause border */
   margin-left: -2em;
   margin-right: 1em;
+}
+/* Ryder: This rule ensures nominalized clauses are properly indented below their nominalizing NP */
+wg > wg[clausetype='nominalized-clause'] {
+  margin-left: 1rem;
+}
+
+/* Ryder: This rule rule adds additional margin when a nominalized clause is part of apposition, because the nominalizing article has a 'display: block' property, which means it will not display the subordination properly. Like the other CSS rules that rely on Node rules (i.e., 'Np-Appos'), this will have to be cleaned up when we add an apposition attribute to the lowfat. */
+wg[role='apposition']
+  > wg:not(:first-child)
+  > wg[clausetype='nominalized-clause'] {
+  margin-left: 2rem;
 }

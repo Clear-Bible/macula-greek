@@ -109,10 +109,12 @@ declare variable $subordinationRule := ("sub-CL", "CL2P", "CL2S", "CL2VP", "CL2O
 declare variable $junctionRequiringDisambiguation := ("ClCl", "Conj-CL", "ClCl2", "CLandCL2", "2CLaCLaCL", "2CLaCL", "CLa2CL"); (: Ryder: this set is currently unused as it would require further disambiguation once we decide how we would like to proceed. :)
 
 declare variable $junctionRule := ($coordinationRule, $subordinationRule);
+declare variable $nominalized-clause-rule := ( 'CL2Adjp',  'CL2NP', 'DetCL', 'NP-CL' );
 
 declare function local:attributes($node)
 {
     $node/@Cat ! attribute class {lower-case(.)},
+    if ($node/@Cat = 'CL' and $node/parent::Node/@Rule = $nominalized-clause-rule) then attribute type {'nominalized'} else (),
     $node[preceding-sibling::*]/parent::Node[@Rule = 'Np-Appos'] ! attribute role {"apposition"},
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
