@@ -220,6 +220,11 @@ wg[rule='sub-CL']:not(> *[role])::before {
   position: absolute;
 }
 
+wg[class=cl][role]::before {
+  /* Move the role for constituent clauses outside of the clause border */
+  margin-left: -2em;
+  margin-right: 1em;
+}
 /* Ryder: This rule ensures nominalized clauses are properly indented below their nominalizing NP */
 wg > wg[clausetype='nominalized-clause'] {
   margin-left: 1rem;
