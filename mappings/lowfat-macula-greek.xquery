@@ -364,7 +364,7 @@ declare function local:clause($node)
             }
           </wg>
 
-else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
+    else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
           (: ### TODO:  Handle groups of groups :)
         <wg role="g" class="group">
          {
