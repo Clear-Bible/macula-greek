@@ -144,7 +144,6 @@ declare function local:attributes($node)
     $node/@SubjRef  ! attribute subjref {.},
     $node/@ClType ! attribute cltype {.},  (:  ### Remove later - for debugging purposes #### :)
     
-    if ($node/@Cat = 'CL') then 
 	(: Assign @junction to clauses :)
 	if ($node/@Cat = 'CL') then 
         (: Add @junction to clauses based on parent rule :)
