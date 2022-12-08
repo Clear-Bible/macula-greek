@@ -4,7 +4,7 @@ import csv
 import codecs
 import re
 
-wordsense_tsv_path = '../../../sources/Clear/wordsense/greek-wordsenses.tsv'
+wordsense_tsv_path = '../sources/Clear/wordsense/greek-wordsenses.tsv'
 
 # Data sources files
 __wordsense_tsv_rows__ = []
