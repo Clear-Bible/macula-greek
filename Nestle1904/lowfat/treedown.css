@@ -105,6 +105,7 @@ wg[class='wg'] > wg[class='minor'] > wg[class='minor'] {
 wg[class='cl'] > *[role] {
   position: relative;
   display: block;
+  margin-bottom: 0.2rem;
 }
 
 wg[class='cl'] > wg[class='cl'][role]::before,
@@ -119,8 +120,7 @@ wg[class='cl'] > wg[class='wg'][role]::before {
 }
 
 wg[class='cl'] > wg[class='cl'][role],
-wg[class='cl'] > wg[class='wg'][role],
-wg[class='cl'] > w[role] {
+wg[class='cl'] > wg[class='wg'][role] {
   margin-left: 0.8rem;
   margin-top: 1.5rem;
 }
@@ -220,7 +220,7 @@ wg[rule='sub-CL']:not(> *[role])::before {
   position: absolute;
 }
 
-wg[class=cl][role]::before {
+wg[class='cl'][role]::before {
   /* Move the role for constituent clauses outside of the clause border */
   margin-left: -2em;
   margin-right: 1em;
