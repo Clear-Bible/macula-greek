@@ -236,3 +236,13 @@ wg[role='apposition']
   > wg[clausetype='nominalized-clause'] {
   margin-left: 2rem;
 }
+
+wg[role='g'] > wg[junction='coordinate'],
+wg[role='g'] > wg[class='conj'],
+wg[role='g'] > w {
+  margin-left: 0.8rem !important;
+}
+
+wg[junction='coordinate'] {
+  margin-bottom: 0.8rem !important;
+}
