@@ -595,24 +595,30 @@ declare function local:node-type($node as element(Node))
                 "####"
 };
 
+(: Ryder: Atomic structure rules include all simple promotion rules *except* promotion to a clause-function node :)
+declare variable $atomic-structure-rule := ('Adj2Adjp', 'Adj2Advp', 'Adj2NP', 'Adv2Adj', 'Adv2Advp', 'Adv2Conj', 'Adv2Prep', 'Adv2Ptcl', 'Advp2P', 'CL2Adjp', 'CL2NP', 'Conj2Adv', 'Conj2Prep', 'Conj2Pron', 'Conj2Ptcl', 'Det2NP', 'N2NP', 'Np2pp', 'Num2Nump', 'Nump2NP', 'Pp2np', 'Prep2Adv', 'Pron2NP', 'Ptcl2Adv', 'Ptcl2Conj', 'Ptcl2Intj', 'Ptcl2Np', 'Vp2Np', 'adjp2advp', 'advp2np', 'advp2pp', 'intj2Np', 'np2advp', 'pron2adj');
+
 declare function local:node($node as element(Node))
 {
-    switch (local:node-type($node))
-        case "word"
-            return
-                local:word($node)
-        case "phrase"
-            return
-                local:phrase($node)
-        case "role"
-            return
-                local:role($node)
-        case "clause"
-            return
-                local:clause($node)
-        default
-        return
-            $node
+	if ($node/@Rule = $atomic-structure-rule) then 
+		$node/element() ! local:node(.)
+	else
+	    switch (local:node-type($node))
+	        case "word"
+	            return
+	                local:word($node)
+	        case "phrase"
+	            return
+	                local:phrase($node)
+	        case "role"
+	            return
+	                local:role($node)
+	        case "clause"
+	            return
+	                local:clause($node)
+	        default
+	        return
+	            $node
 };
 
 declare function local:straight-text($node)
