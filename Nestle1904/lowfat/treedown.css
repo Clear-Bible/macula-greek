@@ -246,3 +246,10 @@ wg[role='g'] > w {
 wg[junction='coordinate'] {
   margin-bottom: 0.8rem !important;
 }
+[type='nominalized'] {
+  margin-inline-start: 0.8rem;
+}
+[type='nominalized'] + wg,
+[type='nominalized'] + w {
+  margin-inline-start: 0.8rem;
+}
