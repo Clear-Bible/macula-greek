@@ -1,28 +1,11 @@
-wg[class='cl'] {
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
-  display: block;
-  border-left: 1px inset grey;
-  border-top: 1px inset grey;
-  border-bottom: 1px inset grey;
-  border-right: none;
+[class='cl'] {
+  border: 1px inset grey;
+  padding: 0.2rem;
+  border-inline-end: none;
 }
 
-wg[class='cl'][role]::before {
-  /* Ryder: the addition of a left border means the role needs to shift 0.1rem */
-  margin-left: -1.1rem;
-}
-
-wg[class='cl'] > wg[class='cl'][role] {
-  /* Ryder: clauses with roles need some additional spacing due to borders */
-  margin-top: 2rem;
-}
-wg[class='cl'] > wg[class='cl'][role]::before {
-  margin-top: -2rem;
-}
-
+sentence > wg > wg[class='cl'],
 sentence > wg[class='cl'] {
-  border-left: none;
-  border-top: none;
-  border-bottom: none;
+  border: none;
+  padding: none;
 }
