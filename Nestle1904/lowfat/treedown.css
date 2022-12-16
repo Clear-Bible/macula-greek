@@ -102,10 +102,13 @@ wg[class='wg'] > wg[class='minor'] > wg[class='minor'] {
 
 /* Roles */
 
+wg[class='cl'] > [role]::before {
+  margin-inline-end: 0.2rem;
+}
+
 wg[class='cl'] > *[role] {
   position: relative;
   display: block;
-  margin-bottom: 0.2rem;
 }
 
 wg[class='cl'] > wg[class='cl'][role]::before,
