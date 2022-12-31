@@ -469,6 +469,18 @@ declare variable $singleton-phrases := (
         $node/descendant::Node[empty(Node)] ! local:node(.)    
     }</singleton>
  };
+ 
+declare function local:contains-projecting-verb($node)
+{
+
+	let $exceptions := ('430090240130012')
+	return
+		$node//*[
+			starts-with(@LN, '33') 
+			or starts-with(@LN, '28') 
+			or starts-with(@LN, '30')
+		]
+};
 
 declare function local:phrase($node)
 {
