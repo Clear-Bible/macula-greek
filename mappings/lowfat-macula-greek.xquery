@@ -310,12 +310,17 @@ declare function local:raise-sibling($parent-node, $child-node-to-raise)
     </wg>
 };
 
-declare function local:keep-siblings-as-siblings($node)
+declare function local:keep-siblings-as-siblings($node, $passed-role)
 {
     <wg>
       {
-        $node/@nodeId ! local:nodeId2xmlId(.),
-        $node/@Rule ! attribute rule { lower-case(.) },           
+(:        $node/@nodeId ! local:nodeId2xmlId(.),:)
+        attribute type {'group'},
+        local:attributes($node, 'class'),
+        if ($passed-role) then
+			attribute role {$passed-role}
+		else
+			(),  
         $node/Node ! local:node(.)
      }           
     </wg>
