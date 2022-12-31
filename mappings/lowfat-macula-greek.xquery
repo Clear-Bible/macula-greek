@@ -437,6 +437,22 @@ declare function local:clause($node)
             $node/Node ! local:node(.)
          }
         </wg>
+declare function local:simple-clause($node, $passed-role, $ellipsis-already-processed as xs:boolean?)
+{
+		let $fallback-constituent-role := (if ($passed-role = '…') then $passed-role else '') || (if (contains($node/@Rule, '2CL')) then lower-case(substring-before($node/@Rule, '2CL')) else 'err_no_fallback_constituent_role?')
+		let $clause-roles := if (contains($node/@Rule, '-')) then tokenize(lower-case($node/@Rule), '-') else if ($fallback-constituent-role) then $fallback-constituent-role else 'err_no_constituent_role? passed-role: ' || $passed-role
+		return
+			<wg>{
+					local:attributes($node),
+					if ($passed-role) then
+						attribute role {$passed-role}
+					else
+						(),
+					for $clause-constituent at $index in $node/element()
+					let $constituent-role := $clause-roles[$index]
+					return
+						local:node($clause-constituent, $constituent-role)
+				}</wg>
 };
 
 
