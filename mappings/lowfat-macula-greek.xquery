@@ -16,7 +16,20 @@ declare function local:is-group($node)
     $node/@Rule = $group-rules
 };
 
-declare variable $retain-singletons := false();
+declare function local:is-simple-clause-rule($rule as attribute()) as xs:boolean
+{
+	if (not($rule = ('All-NP', 'CL-NP', 'Conj-CL', 'Demo-NP', 'NP-CL', 'NP-Demo', 'NP-Prep', 'NP-all', 'Np-Appos', 'PP-Adjp', 'sub-CL', 'that-VP'))
+		and (
+			contains($rule, '-')
+			or 
+			($rule = ('V2CL', 'P2CL'))
+		)
+	)
+	then
+		true()
+	else
+		false()
+};
 
 declare function local:USFMBook($nodeId)
 {
