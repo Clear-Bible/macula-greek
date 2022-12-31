@@ -514,6 +514,26 @@ declare function local:previous-sibling-has-role($node as element(Node), $role a
 	or contains($previous/@Rule, '-' || $role)
 };
 
+
+declare function local:process-wrapper-clause($node, $passed-role)
+{
+	(: Ryder TODO: Disambiguate these rules, including 
+		* PtclCL
+		* Conj-CL
+	   These need thorough disambiguation, since some cases (e.g., ἃν, εἰ, ἀμήν, οὐχὶ, πως, etc.) should be subordinated within their clause complex as adverbials.
+	   Other cases should be subordinated as auxiliaries (e.g., Ὦ)
+	   Still other cases are, via crasis/derivation, true clause wrappers/conjuncted word groups (e.g., Ἄραγε)
+	:)
+	<wg
+		type="wrapper-clause-scope">{
+			local:attributes($node, 'class'),
+			if ($passed-role) then
+				attribute role {$passed-role}
+			else
+				(),
+			$node/element() ! local:node(.)
+		}</wg>
+};
 declare function local:process-conjunctions($node, $passed-role)
 {
 <wg>{
