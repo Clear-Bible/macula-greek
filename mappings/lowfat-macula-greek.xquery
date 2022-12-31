@@ -513,6 +513,34 @@ declare function local:previous-sibling-has-role($node as element(Node), $role a
 	contains($previous/@Rule, $role || '-')
 	or contains($previous/@Rule, '-' || $role)
 };
+
+declare function local:process-conjunctions($node, $passed-role)
+{
+<wg>{
+		local:attributes($node, 'class'),
+		if ($passed-role) then
+			attribute role {$passed-role}
+		else
+			(),
+		for $constituent at $index in $node/element()
+		return
+			(: Ryder: if constituent is conj (different than Hebrew trees in this regard), embed immediately following sibling :)
+			if ($constituent/@Cat = ('conj')) then
+				<wg
+					type='conjuncted-wg'>{
+						
+						local:attributes($constituent),
+						$constituent ! local:node(.),
+						$constituent/following-sibling::element()[1] ! local:node(.)
+					}</wg>
+			else
+				(: Ryder: handle sibling following conj :)
+				if ($constituent/preceding-sibling::element()[1]/@Cat = ('conj')) then
+					()
+				else
+					$constituent ! local:node(.)
+	}</wg>
+};
 };
 
 declare function local:phrase($node)
