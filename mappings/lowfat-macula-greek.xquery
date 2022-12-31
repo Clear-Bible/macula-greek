@@ -480,6 +480,13 @@ declare function local:contains-projecting-verb($node)
 			or starts-with(@LN, '28') 
 			or starts-with(@LN, '30')
 		]
+
+declare function local:previous-sibling-has-role($node as element(Node), $role as xs:string)
+{
+	some $previous in $node/preceding-sibling::Node satisfies 
+	contains($previous/@Rule, $role || '-')
+	or contains($previous/@Rule, '-' || $role)
+};
 };
 
 declare function local:phrase($node)
