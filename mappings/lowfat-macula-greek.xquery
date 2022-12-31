@@ -776,7 +776,7 @@ declare function local:sentence($node)
 
 processing-instruction xml-stylesheet {'href="treedown.css"'},
 processing-instruction xml-stylesheet {'href="boxwood.css"'},
-<book>
+<book lang="el">
     {
         attribute id {local:USFMBook((//Node)[1]/@nodeId)},
         (:
