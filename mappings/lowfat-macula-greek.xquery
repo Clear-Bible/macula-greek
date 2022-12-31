@@ -11,6 +11,10 @@ declare variable $conjuncted-structure-rule := ('2CLaCL', '2CLaCLaCL', '2NpaNpaN
 declare variable $auxiliary-rules := ('intjNP');
 declare variable $single-constituent-clause-rule := ('IO2CL', 'Intj2CL','Np2CL', 'ADV2CL', 'O2CL', 'P2CL', 'S2CL', 'V2CL', 'VC2CL'); 
 
+declare function local:is-group($node)
+{
+    $node/@Rule = $group-rules
+};
 
 declare variable $retain-singletons := false();
 
