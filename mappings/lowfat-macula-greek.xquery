@@ -486,6 +486,27 @@ declare function local:contains-projecting-verb($node)
 			or starts-with(@LN, '30')
 		]
 
+declare function local:disambiguate-ellipsis($elip-clause as element(Node))
+{
+	local:disambiguate-ellipsis($elip-clause, ())
+};
+
+declare function local:disambiguate-ellipsis($elip-clause as element(Node), $passed-role as xs:string?)
+{
+	let $preceding-sibling-clause := $elip-clause/preceding-sibling::Node[@Rule][local:is-simple-clause-rule(@Rule)][1]
+	let $disambiguated-role := if (local:contains-projecting-verb($preceding-sibling-clause)) then
+			(: speech 'ellipsis' :)
+			'o.e'
+		else if ($preceding-sibling-clause) then
+			(: coordination ellipsis :)
+			'…' || $passed-role
+		else 
+			(: standalone ellipsis :)
+			$passed-role
+	return 
+		local:simple-clause($elip-clause, $disambiguated-role, true())	
+};
+
 declare function local:previous-sibling-has-role($node as element(Node), $role as xs:string)
 {
 	some $previous in $node/preceding-sibling::Node satisfies 
