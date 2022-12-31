@@ -8,6 +8,7 @@ declare variable $modifier-structure-rule := ('NP-Demo', 'All-NP', 'NP-all', '2A
 declare variable $wrapper-rule := ('BeVerb', 'PrepNp', 'VerbBe', 'ConjNp');
 declare variable $wrapper-clause-rule := ('AdjpCL', 'AdvpCL', 'PtclCL', 'DetCL', 'sub-CL', 'that-VP', 'Conj-CL');
 declare variable $apposition-rule := ('Np-Appos', 'NP-CL', 'CL-NP');
+declare variable $complex-clause-rule := ('ClCl', 'ClCl2', '2CLaCL', '2CLaCLaCL', 'CLa2CL', 'CLandCL2', 'Conj12CL', 'Conj13CL', 'Conj14CL', 'Conj3CL', 'Conj4CL', 'Conj5CL', 'Conj6CL', 'Conj7CL', 'aCLaCL', 'aCLaCLaCL');
 
 :)
 
