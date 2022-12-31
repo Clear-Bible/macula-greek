@@ -654,7 +654,7 @@ declare function local:phrase($node)
         </wg>
 };
 
-declare function local:role($node)
+(:declare function local:role($node)
 {
     let $role := attribute role {lower-case($node/@Cat)}
     return
@@ -679,7 +679,7 @@ declare function local:role($node)
                         $child/node()
                     )
                 }
-};
+};:)
 
 declare function local:word($node)
 {
