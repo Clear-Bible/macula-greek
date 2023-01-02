@@ -143,8 +143,26 @@ declare function local:is-nominalized-clause($node)
     		)
 };
 
+declare function local:attributes($node)
+{
+	local:attributes($node, ())
+};
+declare function local:attributes($node, $exclusions)
+{
+    if (not('class' = $exclusions)) then
+			if ($node/@Cat = $group-rules) then () 
+			else
+				$node/@Cat ! attribute class {lower-case(.)}
+		else
+			(),
+    if (
+    	local:is-nominalized-clause($node)
+    	) then attribute clauseType {'nominalized'} else (),
+    $node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule] ! attribute role {"apposition"},
+    if ($node/child::*/@Rule = $apposition-rule) then attribute appositioncontainer {'true'} else (),
+    $node/@Type ! attribute gbiType {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
-    $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),
+(:    $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),:)
     $node/@HasDet ! attribute articular {true()},
     $node/@UnicodeLemma ! attribute lemma {.},
     $node/@NormalizedForm ! attribute normalized {.},
@@ -157,7 +175,7 @@ declare function local:is-nominalized-clause($node)
     $node/@Voice ! attribute voice {lower-case(.)},
     $node/@Mood ! attribute mood {lower-case(.)},
     $node/@Degree ! attribute degree {lower-case(.)},
-    local:head($node),
+(:    local:head($node),:)
     $node[empty(*)] ! attribute discontinuous {"true"}[$node/following::Node[empty(*)][1]/@morphId lt $node/@morphId],
     $node/@Rule ! attribute rule {.},
     $node/@Gloss ! attribute gloss {.},
