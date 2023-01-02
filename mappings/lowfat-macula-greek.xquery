@@ -613,9 +613,12 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				
 				let $should-subordinate-first := (
 					$node/@Rule = ('ClCl2', 'CLandCL2')
+					or $first-constituent[@Rule = 'that-VP']
 				)
+				
 				let $should-subordinate-second := (
 					$node/@Rule = ('ClCl')
+					or $second-constituent[@Rule = 'that-VP']
 				)
 				
 				let $exceptions-to-force-coordination := (
@@ -643,6 +646,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								) then local:keep-siblings-as-siblings($node, 'o2_1???')
 								else 
 									local:keep-siblings-as-siblings($node, 'o_1???')
+						else if ($node/Node[@Rule = 'that-VP']) 
+							then 
+								local:keep-siblings-as-siblings($node, 'err_should_not_get_here') 
 						else 
 							local:keep-siblings-as-siblings($node, $passed-role (:|| '_3???':)) (: Ryder TODO: remove the concatenated _3??? when debugging complete :)
 					)
