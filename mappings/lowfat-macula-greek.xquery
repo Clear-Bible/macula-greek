@@ -732,6 +732,15 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							
 							else if ($constituent-to-subordinate[@ClType = 'Minor']) then
 								'aux'
+							else if ($constituent-to-subordinate[@Rule = 'that-VP']) then
+								if (
+									(: Ryder: check whether constituent of embedding clause already has 'o' role :)
+									local:previous-sibling-has-role($constituent-to-subordinate, 'O')
+								) then
+									'o2d'
+								else
+									'od' || data($node/@nodeId)
+								
 							else switch($constituent-to-subordinate/@Rule)
 								case 'sub-CL' return 'adv'
 								case 'PtclCL'
