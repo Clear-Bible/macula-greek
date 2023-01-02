@@ -540,6 +540,41 @@ declare function local:previous-sibling-has-role($node as element(Node), $role a
 	or contains($previous/@Rule, '-' || $role)
 };
 
+declare function local:disambiguate-clause-complex-structure($node, $passed-role)
+{
+
+(: RYDER TODO: 
+	* 'CL-NP', 'NP-CL', based on whether non-head is relative 
+	* Some ClCl should be apposition, e.g., MRK 1:2!9 ('my messenger : a voice crying...')
+:)
+	
+	let $rules-that-have-been-disambiguated-in-this-function := ('ClCl', 'ClCl2', 'CLandCL2')
+	return
+		
+		(: Ryder: Ensure an error is thrown for cases I have not yet handled. :)
+		if (count($node/child::Node) ne 2) then
+			(: Try to process conjunctions and recount :)
+			<error_not_two_child_nodes role="error_not_two_child_nodes">
+			{local:process-conjunctions($node, $passed-role)}
+			</error_not_two_child_nodes>
+		else if ($node/@ClType = 'VerbElided') then
+			<error_ellipsis_in_clause_complex_function role="err_ellipsis_in_clause_complex_function">
+				{local:process-conjunctions($node, $passed-role)}
+			</error_ellipsis_in_clause_complex_function>
+		else
+			if (not($node/@Rule = $rules-that-have-been-disambiguated-in-this-function)) then
+				(: Ryder: some other rules should probably be treated as complex clause structure requiring disambiguation (e.g., 'ClaCl'), and if they do, then they should trip this condition until their internal structure disambiguation is handled below :)
+				<error_unknown_complex_clause_structure
+					role="error_unknown_complex_clause_structure"
+					rule="{$node/@Rule}">{
+						$node/element() ! local:node(.)
+					}</error_unknown_complex_clause_structure>
+			
+			else
+						return
+							<wg>{
+								}</wg>
+};
 
 declare function local:process-wrapper-clause($node, $passed-role)
 {
