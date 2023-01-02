@@ -709,7 +709,7 @@ declare function local:word($node)
     local:word($node, ())
 };
 
-declare function local:word($node, $role)
+declare function local:word($node, $passed-role)
 (: $role can contain a role attribute or a null sequence :)
 {
     let $wordContent := $node/text()
@@ -719,14 +719,17 @@ declare function local:word($node, $role)
     return
         if ($node/*)
         then
-            (element error {$role, $node})
+            (element error {$passed-role, $node})
         else
             if (string-length($wordContentWithoutBrackets) = $normalizedFormWithPunctuationLength)
             then
                 (: place punctuation in an 'after' attribute :)
                 <w>
                     {
-                        $role,
+                        if ($passed-role) then
+										attribute role {$passed-role}
+									else
+										(),
                         attribute ref {local:USFMId($node/@nodeId)},
                         attribute after {substring($wordContentWithoutBrackets, string-length($wordContentWithoutBrackets), 1)},
                         local:attributes($node),
@@ -736,7 +739,10 @@ declare function local:word($node, $role)
             else
                 <w>
                     {
-                        $role,
+                        if ($passed-role) then
+										attribute role {$passed-role}
+									else
+										(),
                         attribute ref {local:USFMId($node/@nodeId)},
                         attribute after {' '},
                         local:attributes($node),
