@@ -750,12 +750,19 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							<wg>{
 								
 									$node/@Rule,
+									if (some $child in $node/Node satisfies local:is-simple-clause-rule($child/@Rule)) then
+										$node/@Cat ! attribute class {lower-case(.)}
+										else 
+										(: Ryder: if none of the children are simple clauses, then the current <wg> element cannot be a clause, and thus its @class should be ignored. :)
+											((:attribute note {'no child was simple clause'}:)),
+									
 									$node/@nodeId,
 									local:attributes($processed-head),
 									if ($passed-role) then
 										attribute role {$passed-role}
 									else
 										(),
+									
 									if ($constituent-to-raise << $constituent-to-subordinate) then (
 										$processed-head/element(),
 										$processed-subordinate
