@@ -706,6 +706,20 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else if ($constituent-to-subordinate/@Rule = 'sub-CL') then
 									'adv'
 								else 'err_group? subord child rule = ' || $constituent-to-subordinate/@Rule
+							else if ($constituent-to-raise/@Rule = $group-rules) then
+								(: Ryder TODO: disambiguate when the raised child is a group :)
+								if ($constituent-to-subordinate/@Rule = 'sub-CL') then
+									(: Ryder: sub-CLs subordinated to groups are often conditionals, e.g., MRK 3:26 :) 
+									''
+								else if ($subordinate-first-word = $relative_adverbs_WS) then
+									(: Ryder: if the first word of the subordinated unit is ὡς, then it could be an argument rather than an adjunct. :)
+									if ($constituent-to-subordinate/@Rule = $single-constituent-clause-rule) then
+										'err_WS-to-' || lower-case(substring-before($constituent-to-subordinate/@Rule, '2CL'))
+									else 
+										'err_WS'
+								else
+									'err_raised-child-is-group'
+								
 							else switch($constituent-to-subordinate/@Rule)
 								case 'sub-CL' return 'adv'
 								case 'PtclCL'
