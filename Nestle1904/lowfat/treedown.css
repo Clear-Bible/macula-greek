@@ -1,257 +1,192 @@
-/* treedown.css */
+/* hebrew-treedown.css */
 
-sentence > wg {
-  display: flex;
-  flex-direction: column;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  padding-left: 1rem;
+/* LAYOUT RULES */
+
+book {
+  padding: 2em;
+  /* direction: rtl; */
+  /* font-size: 1.5rem; */
 }
-
-wg[class='header'] {
-  display: block;
-  position: fixed;
-  width: 6rem;
-  top: 5px;
-  left: 5px;
-  background-color: white;
-  opacity: 1;
-  overflow: scroll;
-}
-
 milestone {
   color: blue;
   display: block;
-  padding-right: 6px;
+  margin-block: 1rem 0;
 }
-
-p {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+milestone + milestone {
+  display: inline;
 }
-
-div[class='book'] {
-  margin-top: 1in;
-  margin-left: 1in;
-  margin-bottom: 1in;
-  line-height: 1.2;
-  background-color: white;
-  opacity: 1;
-}
-
-book,
-passage,
-root {
-  line-height: 1.5;
-  margin-left: 5rem;
-  margin-right: 10rem;
-  /* background: linen; */
-}
-
-/* WGs */
-
-wg > wg[class='wg'][role] {
+sentence {
   display: flex;
   flex-direction: column;
-  margin-left: 1rem;
+  gap: 1rem;
+  /* Ryder: 1rem space between <p> and <wg> */
 }
 
-wg > wg[class='cl'],
-wg:not(wg[class='cl']) > wg:has(wg[class='cl']) + wg,
-wg:not(wg[class='np']):not(wg[class='wg']):has(> wg[class='cl']) > w {
-  margin-left: 0.8rem;
-}
+/*************************************** 
+* ELEMENTS THAT SHOULD BE ON NEW LINES *
+***************************************/
 
-wg:has(wg[class='cl']) + wg[class='cl'] {
-  /* Ryder: sometimes a deeply nested wg[class=cl] is followed by a wg[class=cl] that is not nested. 
-     Without this additional margin, there is a double line since the clause adjacency 
-     is not obvious based on the other rules. */
-  margin-top: 1rem;
-}
+/* standard new-lined elements in Treedown */
+[class='cl'],
+[role],
 
-wg[class='cl']:has(+ wg[class='group']) {
-  margin-bottom: 1rem;
-}
+/* potential new-lined elements */
+[role]:not([role='aux']) [type='conjuncted-wg'], /* Ryder: break vav-conjuncted elements onto new lines in Hebrew trees only */
+[appositioncontainer],
+/* Ryder: modifiers like prepositions may look awkward if they are hanging at the end of a line. If they are at the beginning of the line this is not a problem. */
+/* [class="modifier-scope"]:not(:first-child),  */
+/* [type='group'] > [class="modifier-scope"], */
 
-wg[class='cl'],
-wg[class='wg'] {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-  padding-left: 0.25em;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-
-wg[class='cl'] + wg[class='cl'],
-wg[class='cl'] + wg[class='wg'] {
-  margin-top: 1rem;
-}
-
-wg[class='minor'] > wg[class='minor'][role],
-wg[class='wg'] > wg[class='minor'] {
-  display: block;
-  margin-left: 1rem;
-}
-
-wg[class='wg'] > wg[class='minor'] > wg[class='minor'] {
-  /* Ryder: sometimes a second level of minor clause 
-  exists, and it should not be further indented. */
-  margin-left: 0;
-}
-
-/* Roles */
-
-wg[class='cl'] > [role]::before {
-  margin-inline-end: 0.2rem;
-}
-
-wg[class='cl'] > *[role] {
-  position: relative;
+/* Ryder: sometimes a clause is 'wrapped' by something like a relative pronoun. These could be on a new line to improve readability. */
+[type^='wrapper-clause'], /* <-- select only wrappers that wrap clauses */
+[type^='wrapper'] /* <-- select all wrappers, regardless of what is wrapped */ {
   display: block;
 }
 
-wg[class='cl'] > wg[class='cl'][role]::before,
-wg[class='cl'] > wg[class='wg'][role]::before {
-  /* Move the role for constituent clauses outside of the clause border */
-  margin-left: -1rem;
-  /* Ryder: commented these lines because they were adding a blank line before, e.g., Ἐπειδήπερ in Luke 1.4 */
-  /* margin-top: -1.5rem; */
-  /* display: block; */
-  margin-bottom: 1rem;
-  position: absolute;
+/*******************************************
+* ELEMENTS THAT SHOULD BE ON THE SAME LINE *
+*******************************************/
+
+/* [role]:not([role='aux']) [type='conjuncted-wg'] { */
+/* Ryder: don't break on conjunctions within auxiliaries */
+/* display: inline; */
+/* } */
+
+/***********************************
+* ELEMENTS THAT SHOULD BE INDENTED *
+***********************************/
+
+/* [type='modifier-scope']:not([role]):not(:first-child), */
+/* [type^='wrapper-clause'], */
+/* [type='group'] > [type='modifier-scope']:not([role]), */
+[class='cl'] [type='conjuncted-wg'],
+[type='group'][role],
+[role='apposition'],
+[appositioncontainer],
+[type^='wrapper']:not([role]),
+[class='cl'] [type='conjuncted-wg']:not(:first-child) > w:first-child, /* Ryder: the first word of a conjuncted wg should be indented with the rest of the group, so long as it is a descendent of a clause. */
+/* *[role] + [type^='wrapper'][role] > *[class='cl'], */
+[class='cl'] [class='cl'],
+[type^='wrapper'] > [class='cl'] {
+  margin-inline-start: 1rem;
 }
 
-wg[class='cl'] > wg[class='cl'][role],
-wg[class='cl'] > wg[class='wg'][role] {
-  margin-left: 0.8rem;
+*[role] + [type^='wrapper'][role] > *[class='cl'] {
+  /* background: lightblue; */
 }
 
-wg[class='cl'] > wg[role]::before {
-  color: cadetblue;
+[type^='wrapper'][role] {
+  /* background: lightyellow; */
+}
+
+/***************************************
+* ELEMENTS THAT SHOULD NOT BE INDENTED *
+***************************************/
+
+[role]:not([role='aux']) [type='conjuncted-wg'] {
+  margin-inline-start: 0;
+}
+
+/****************
+/* ROLE MARKERS *
+****************/
+
+[role]::before {
   content: attr(role);
-}
-
-wg[class='cl'] > w[role]::before {
   color: cadetblue;
-  content: attr(role) ' ';
+  margin-inline-end: 0.4rem; /* Ryder: 0.4rem space between role and element seems to generally align with a 1rem space without a role. */
+}
+[role='aux']::before {
+  content: '~';
+}
+[role='adv']::before {
+  content: '+';
+}
+[role='apposition']::before {
+  content: ':';
+  /* margin-inline-start: 1rem; */
 }
 
-wg[class='cl'] > wg[role='g']::before {
-  content: '';
+/**************
+* WORD LAYOUT *
+**************/
+
+/* Ryder: These next three rules are essential to override 
+default DOM behaviour that adds whitespace characters
+between inline elements. */
+wg[role] {
+  font-size: 0;
+}
+wg[role]::before,
+wg[role] > * {
+  font-size: 1rem;
 }
 
-wg[class='cl'] > wg[role='adv']::before {
-  color: cadetblue;
-  content: '+ ';
+/* Add a light grey dash between morphemes */
+w:not([after])::after {
+  content: '- '; /* The space is intentional because we are removing the default space from the DOM */
+  color: lightgrey;
+  margin-left: -0.2em;
+}
+w:not([after]):empty::after {
+  content: 'ה- '; /* The space is intentional because we are removing the default space from the DOM */
+  color: lightgrey;
+  margin-left: -0.2em;
 }
 
-wg[class='cl'] > w[role='adv']::before {
-  color: cadetblue;
-  content: '+ ';
+w[after='־']::after,
+w[after=' ']::after {
+  /* Hebrew maqef, or whitespace should retain normal spacing */
+  content: attr(after);
 }
 
-w[role='aux']::before,
-wg[role='aux']::before,
-wg[class='cl'] > w[role='aux']::before,
-wg[class='cl'] > wg[role='aux']::before {
-  /* Ryder: Unlike most other roles, auxiliaries should be displayed even when they are not children of clauses.
-     thus, these are not prefixed with the `wg[class=cl] >` path. */
-  color: cadetblue;
-  content: '~'' ';
+/****************
+* SPECIAL CASES *
+****************/
+
+/* Ryder: clauses with clause roles should have the role above the group and to the right. */
+
+[class='cl'][role] {
+  margin-block-start: 1.2rem;
 }
-
-/* ----- Participles and infinitives ----- */
-
-*[role='v']:has(> w[mood='participle'])::before {
-  color: cadetblue;
-  content: 'v.part ';
+[class='cl'][role] > :first-child:not([class='cl']) {
+  margin-block-start: -0.7rem;
 }
-
-*[role='v']:has(> w[mood='infinitive'])::before {
-  color: cadetblue;
-  content: 'v.inf ';
-}
-
-w[discontinuous]::after {
-  content: '*';
-  vertical-align: super;
-  color: cadetblue;
-  font-size: small;
-}
-
-/* ----- Apposition - this ain't quite right, but better than nothing ---------*/
-
-/* Apposition */
-
-*[role='apposition']::before {
-  content: ': ';
-  color: cadetblue;
-  margin-left: 1rem;
-}
-
-*[role='apposition'] {
+[class='cl'][role]::before {
+  margin-inline-start: -1.25rem;
+  margin-block-start: -1.4rem;
+  margin-bottom: 1rem;
   display: block;
 }
 
-*[role='apposition'] > wg[class='cl'] {
-  margin-left: 1.5rem;
-}
+/************
+* DEBUGGING *
+************/
 
-/* -----  Experimental stuff goes here -------- */
+/* Ryder: this is a temporary affordance for debugging - it highlights errors for unprocessed nodes. */
+[role^='err']::before {
+  background: brown;
+  color: white;
+  font-size: 0.6rem;
+  font-family: monospace;
+  padding: 0.05rem 0.3rem;
+  border-radius: 0.2rem;
+}
 
 /* 
-  RYDER: the additional wg[class=group] predicate is 
-  needed for some instances like the last wg/group of Luke 1.19 
+[type^='wrapper'] {
+  background: lightblue;
+}
+
+[type='modifier-scope']:not(:first-child) {
+  background: lightgreen;
+}
+
+[type^='wrapper-clause'] {
+  background: lightpink;
+}
+
+[type='conjuncted-wg'] {
+  background: lightyellow;
+} 
 */
-
-wg[role='g'] > w,
-wg[class='group'] > w {
-  display: block;
-  margin-top: 1rem;
-}
-
-wg[class='group'] wg[class='group'] {
-  margin-top: 0;
-}
-
-wg[rule='sub-CL']:not(> *[role])::before {
-  /* Ryder: in sub-CL clauses, the conjunction drops to a new line below the role
-      and the clause is further indented. This rule horizontally aligns the conj
-      and the role of the sub-CL wg. E.g. διότι in Luke 2.7 */
-  position: absolute;
-}
-
-wg[class='cl'][role]::before {
-  /* Move the role for constituent clauses outside of the clause border */
-  margin-left: -2em;
-  margin-right: 1em;
-}
-/* Ryder: This rule ensures nominalized clauses are properly indented below their nominalizing NP */
-wg > wg[clausetype='nominalized-clause'] {
-  margin-left: 1rem;
-}
-
-/* Ryder: This rule rule adds additional margin when a nominalized clause is part of apposition, because the nominalizing article has a 'display: block' property, which means it will not display the subordination properly. Like the other CSS rules that rely on Node rules (i.e., 'Np-Appos'), this will have to be cleaned up when we add an apposition attribute to the lowfat. */
-wg[role='apposition']
-  > wg:not(:first-child)
-  > wg[clausetype='nominalized-clause'] {
-  margin-left: 2rem;
-}
-
-wg[role='g'] > wg[junction='coordinate'],
-wg[role='g'] > wg[class='conj'],
-wg[role='g'] > w {
-  margin-left: 0.8rem !important;
-}
-
-wg[junction='coordinate'] {
-  margin-bottom: 0.8rem !important;
-}
-[type='nominalized'] {
-  margin-inline-start: 0.8rem;
-}
-[type='nominalized'] + wg,
-[type='nominalized'] + w {
-  margin-inline-start: 0.8rem;
-}
