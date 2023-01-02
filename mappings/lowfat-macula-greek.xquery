@@ -596,8 +596,16 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				let $should-subordinate-second := (
 					$node/@Rule = ('ClCl')
 				)
+				
+				let $exceptions-to-force-coordination := (
+					'410020090010200', '410020090040170', '410020090040070', (: Ryder: in this case, Jesus is asking multiple sibling questions :)
+					'410090240080050', (: Ryder: in this case, 'I believe. Help my unbelief.' is syntactically indistinguishable from 'I believe [o help my unbelief]' :)
+					'420010230020130' (: Ryder: in this case, the WS clause is part of a ClCl2 but it gets correctly disambiguated to an adverbial downstream, so these can be coordinated. :)
+				)
+				
 				return
 					if ($should-coordinate-constituents
+						or ($node/@nodeId) = $exceptions-to-force-coordination
 					) then (
 					)
 					else 
