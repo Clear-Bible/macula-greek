@@ -619,6 +619,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				let $should-subordinate-second := (
 					$node/@Rule = ('ClCl')
 					or $second-constituent[@Rule = 'that-VP']
+					or local:contains-projecting-verb($first-constituent)
 				)
 				
 				let $exceptions-to-force-coordination := (
