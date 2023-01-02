@@ -589,7 +589,28 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				
 				let $should-coordinate-constituents :=
 					(
+						(: Ryder: Coordinate when both child nodes are simple clauses and the first is not a projecting clause. :)
+						local:is-simple-clause-rule($first-constituent/@Rule) 
+						and local:is-simple-clause-rule($second-constituent/@Rule) 
+						and not(
+							(: Ryder: Often V2CL is a projecting verb, not a simple clause :)
+							$first-constituent/@Rule = 'V2CL'
+							and local:contains-projecting-verb($first-constituent)
+						) 
 					)
+					or 
+					(
+						(: Ryder: Coordinate when both child nodes are clause complexes. :)
+						$first-constituent/@Rule = ($complex-clause-rule, $coordinationRule)
+						and $second-constituent/@Rule = ($complex-clause-rule, $coordinationRule)
+					)
+					or
+					(
+						(: Ryder: Coordinate when one of the children is a "minor" clause, or the raised child contains a minor clause. :)
+						$first-constituent//@ClType="Minor"
+						or $second-constituent//@ClType="Minor"
+					)
+				
 				let $should-subordinate-first := (
 					$node/@Rule = ('ClCl2', 'CLandCL2')
 				)
