@@ -506,6 +506,11 @@ declare function local:contains-projecting-verb($node)
 			or starts-with(@LN, '28') 
 			or starts-with(@LN, '30')
 		]
+		and not(
+			(: Ryder: Exceptions that would otherwise be false positives since they are structurally almost indistinguishable from projecting constructions :)
+			$node[@nodeId = $exceptions]
+		)
+};
 
 declare function local:disambiguate-ellipsis($elip-clause as element(Node))
 {
