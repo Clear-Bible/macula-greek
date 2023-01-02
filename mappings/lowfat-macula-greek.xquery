@@ -727,6 +727,11 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'ob'
 								else
 									'apposition'
+							else if ($constituent-to-subordinate//@LN = '91.13') then
+								'aux'
+							
+							else if ($constituent-to-subordinate[@ClType = 'Minor']) then
+								'aux'
 							else switch($constituent-to-subordinate/@Rule)
 								case 'sub-CL' return 'adv'
 								case 'PtclCL'
