@@ -560,6 +560,7 @@ declare function local:process-wrapper-clause($node, $passed-role)
 			$node/element() ! local:node(.)
 		}</wg>
 };
+
 declare function local:process-conjunctions($node, $passed-role)
 {
 <wg>{
@@ -738,74 +739,31 @@ declare function local:word($node, $passed-role)
                 </w>
 };
 
-declare function local:node-type($node as element(Node))
-{
-    if ($node/@UnicodeLemma)
-    then
-        "word"
-    else
-        switch ($node/@Cat)
-            case "adj"
-            case "adv"
-            case "conj"
-            case "det"
-            case "noun"
-            case "num"
-            case "prep"
-            case "ptcl"
-            case "pron"
-            case "verb"
-            case "intj"
-            case "adjp"
-            case "advp"
-            case "np"
-            case "nump"
-            case "pp"
-            case "vp"
-                return
-                    "phrase"
-            case "S"
-            case "IO"
-            case "ADV"
-            case "O"
-            case "O2"
-            case "P"
-            case "V"
-            case "VC"
-                return
-                    "role"
-            case "CL"
-                return
-                    "clause"
-            default
-            return
-                "####"
-};
-
-(: Ryder: Atomic structure rules include all simple promotion rules *except* promotion to a clause-function node :)
-declare variable $atomic-structure-rule := ('Adj2Adjp', 'Adj2Advp', 'Adj2NP', 'Adv2Adj', 'Adv2Advp', 'Adv2Conj', 'Adv2Prep', 'Adv2Ptcl', 'Advp2P', 'CL2Adjp', 'CL2NP', 'Conj2Adv', 'Conj2Prep', 'Conj2Pron', 'Conj2Ptcl', 'Det2NP', 'N2NP', 'Np2pp', 'Num2Nump', 'Nump2NP', 'Pp2np', 'Prep2Adv', 'Pron2NP', 'Ptcl2Adv', 'Ptcl2Conj', 'Ptcl2Intj', 'Ptcl2Np', 'Vp2Np', 'adjp2advp', 'advp2np', 'advp2pp', 'intj2Np', 'np2advp', 'pron2adj');
-
-declare function local:node($node as element(Node))
+(:declare function local:node($node as element(Node))
 {
 	if ($node/@Rule = $atomic-structure-rule) then 
 		$node/element() ! local:node(.)
 	else
-	    switch (local:node-type($node))
-	        case "word"
-	            return
-	                local:word($node)
-	        case "phrase"
-	            return
-	                local:phrase($node)
-	        case "role"
-	            return
-	                local:role($node)
-	        case "clause"
-	            return
-	                local:clause($node)
-	        default
-	        return
-	            $node
+		if (local:is-group($node)) then 
+			local:keep-siblings-as-siblings($node)
+		else
+		    switch (local:node-type($node))
+		        case "word"
+		            return
+		                local:word($node)
+		        case "phrase"
+		            return
+		                local:phrase($node)
+		        case "role"
+		            return
+		                local:role($node)
+		        case "clause"
+		            return
+		                local:simple-clause($node)
+		        default
+		        return
+		            <error_unknown_node_type rule="{$node/@Rule}">{$node/element() ! local:node(.)}></error_unknown_node_type>
+};:)
 };
 
 declare function local:straight-text($node)
