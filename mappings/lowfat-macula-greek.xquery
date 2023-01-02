@@ -11,6 +11,20 @@ declare variable $conjuncted-structure-rule := ('2CLaCL', '2CLaCLaCL', '2NpaNpaN
 declare variable $auxiliary-rules := ('intjNP');
 declare variable $single-constituent-clause-rule := ('IO2CL', 'Intj2CL','Np2CL', 'ADV2CL', 'O2CL', 'P2CL', 'S2CL', 'V2CL', 'VC2CL'); 
 
+(: Ryder: Particle classifications from Chris Land's prior work :)
+declare variable $relative-nominals := ('ἡλίκος', 'οἷος', 'ὁποῖος', 'ὁπόσος', 'ὅς', 'ὅσγε', 'ὅσος', 'ὅσπερ', 'ὅστις');
+declare variable $relative_adverbs_WS := ('ὡς', 'ὥσπερ', 'ὡσεί', 'ὅπως', 'ὅπως', 'ὡσαύτως', 'ὡσπερεί');
+declare variable $relative_adverbs := ('ὅπου', 'ὁπότε', 'ὅτε', 'ὅταν', 'ὅθεν', 'ἡνίκα', 'ὁπόθεν', 'ὁπόταν', 'ὁσάκις', 'ὁτέ', 'ὅτου', 'οὗ');
+declare variable $affirmation_markers := ('ναί', 'νή', 'δή', 'δήπου', 'μέν', 'μέντοι', 'μενοῦν', 'μενοῦνγε', 'μήν (I)');
+declare variable $inferential-markers := ('ἄρα', 'ἆρα', 'τοίνυν', 'πλήν');
+declare variable $actualization-markers := ('ἄν', 'ἐάν');
+declare variable $focus-markers := ('γέ');
+declare variable $discourse_markers := ('γάρ', 'οὖν', 'τοιγαροῦν', 'οὐκοῦν');
+declare variable $operators := ('καί', 'δέ', 'ἀλλά', 'καίπερ', 'καίτοι', 'κἄν', 'καίτοιγε', 'ἤ', 'οὐδέ', 'οὔτε', 'μηδέ', 'τέ');
+declare variable $complementizers := ('ἵνα', 'ὅτι', 'εἰ', 'μή');
+declare variable $subordinators := ('ἵνα', 'ὅτι', 'εἰ', 'εἴπερ', 'ἐάν', 'ἐάνπερ', 'κἄν', 'εἴτε', 'ἐπεί', 'ἐπειδή', 'ἐπειδήπερ', 'ἐπάν', 'μή', 'ἄχρι', 'μέχρι', 'ἕως', 'καθώς', 'καθά', 'καθό', 'καθάπερ', 'καθότι', 'διό', 'διόπερ', 'διότι', 'ἡνίκα');
+declare variable $circumstances := ('ἔτι', 'νυνί', 'ὁμοίως', 'πρῶτος', 'ὅμως', 'οὕτω', 'ἐκτός', 'πῶς');
+
 declare function local:is-group($node)
 {
     $node/@Rule = $group-rules
@@ -673,7 +687,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							* obj <-- e.g., direct discourse
 						:)
 						
+						let $subordinate-first-word := $constituent-to-subordinate//Node[@UnicodeLemma][1]/@UnicodeLemma
+						
 						let $disambiguated-subordinate-role := (
+							
 							(: Ryder: Special cases and/or exceptions (i.e., places where the GBI analysis should be changed) :)
 							if ($node/@nodeId = (
 									'410010440040040' (: Here Jesus says '[v see] [o [you tell no one nothing]] :)
@@ -729,6 +746,16 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'apposition'
 							else if ($constituent-to-subordinate//@LN = '91.13') then
 								'aux'
+							
+							else if ($subordinate-first-word = $affirmation_markers) then 'adv'
+							else if ($subordinate-first-word = $inferential-markers) then 'adv'
+							else if ($subordinate-first-word = $actualization-markers) then 'adv'
+							else if ($subordinate-first-word = $focus-markers) then 'adv'
+							else if ($subordinate-first-word = $discourse_markers) then 'adv'
+							else if ($subordinate-first-word = $operators) then 'adv'
+							else if ($subordinate-first-word = $complementizers) then 'o'
+							else if ($subordinate-first-word = $subordinators) then 'adv'
+							else if ($subordinate-first-word = $circumstances) then 'adv'
 							
 							else if ($constituent-to-subordinate[@ClType = 'Minor']) then
 								'aux'
