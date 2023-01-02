@@ -722,6 +722,11 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								
 							else if (local:is-nominalized-clause($constituent-to-subordinate) or $constituent-to-subordinate/@Rule = 'P2CL') then
 								'apposition'
+							else if ($constituent-to-subordinate/@Rule = $group-rules) then
+								if (local:contains-projecting-verb($constituent-to-raise)) then
+									'ob'
+								else
+									'apposition'
 							else switch($constituent-to-subordinate/@Rule)
 								case 'sub-CL' return 'adv'
 								case 'PtclCL'
