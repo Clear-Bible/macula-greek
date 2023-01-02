@@ -674,6 +674,12 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						:)
 						
 						let $disambiguated-subordinate-role := (
+							(: Ryder: Special cases and/or exceptions (i.e., places where the GBI analysis should be changed) :)
+							if ($node/@nodeId = (
+									'410010440040040' (: Here Jesus says '[v see] [o [you tell no one nothing]] :)
+								)) then 
+									'o'
+							
 										'adv'
 						)
 						let $processed-head := local:node($constituent-to-raise, ())
