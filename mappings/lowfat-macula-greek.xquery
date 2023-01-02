@@ -764,6 +764,22 @@ declare function local:word($node, $passed-role)
 		        return
 		            <error_unknown_node_type rule="{$node/@Rule}">{$node/element() ! local:node(.)}></error_unknown_node_type>
 };:)
+
+declare function local:node-type($node as element())
+{
+if (not($node/@Rule)) then
+	'word'
+else if ($node/@Rule = $conjuncted-structure-rule) then
+	'conjunctions-to-be-processed'
+else if (local:is-simple-clause-rule($node/@Rule)) then
+	'simple-clause'
+else if ($node/@Rule = $complex-clause-rule) then
+	'clause-complex'
+else if ($node/@Rule = $atomic-structure-rule) then
+	'atomic'
+else
+	'complex' (: Ryder: note - if something had an erroneous rule it would end up being a 'complex' unit :)
+};
 };
 
 declare function local:straight-text($node)
