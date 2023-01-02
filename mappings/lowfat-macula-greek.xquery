@@ -780,6 +780,43 @@ else if ($node/@Rule = $atomic-structure-rule) then
 else
 	'complex' (: Ryder: note - if something had an erroneous rule it would end up being a 'complex' unit :)
 };
+
+(: Ryder: declare both 1-arg and 2-arg node-processing functions so the function can be called with or without the second argument. :)
+declare function local:node($node as element()) {
+	local:node($node, ())
+};
+declare function local:node($node as element(), $passed-role as xs:string?)
+{
+	(: Ryder: This function should only ever process exactly one element. If multiple are being passed, use the simple mapping operator (e.g., instead of local:node($node), use $node/element() ! local:node(.) :)
+	if (count($node) gt 1) then
+		<error_too_many_nodes
+			role="{'error_too_many_nodes' || $node/@Rule}"
+		>{$node}</error_too_many_nodes>
+	else
+		if ($node/@Rule = $conjuncted-structure-rule) then
+			local:process-conjunctions($node, $passed-role)
+		else
+			switch (local:node-type($node))
+				case "word"
+					return
+						local:word($node, $passed-role)
+				case "simple-clause"
+					return
+						local:simple-clause($node, $passed-role, ())
+				case "clause-complex"
+					return
+						local:disambiguate-clause-complex-structure($node, $passed-role)
+				case "atomic"
+					return
+						$node/element() ! local:node(., $passed-role)
+				case "complex"
+					return
+						local:process-complex-node($node, $passed-role)
+				default
+				return
+					<error_unknown_node_type
+						role="{'error_unknown_node_type' || $node/@Rule}"
+					>{$node/@*}</error_unknown_node_type>
 };
 
 declare function local:straight-text($node)
