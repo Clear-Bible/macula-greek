@@ -644,6 +644,73 @@ declare function local:process-single-constituent-clause($node, $passed-role)
 			return
 				<error_unhandled_single_constituent_clause role="error_unhandled_single_constituent_clause" rule="{$node/@Rule}">{$node/element() ! local:node(.)}</error_unhandled_single_constituent_clause>
 };
+
+declare function local:process-complex-node($node, $passed-role)
+{
+	(:  
+    Nodes that make it here 
+    - (1) have @Rule, 
+    - (2) are not atomic nodes, and
+    - (3) have had their coordination processed already, so as to attach every conjunction with its scope
+    
+    Some of these nodes are groups.
+    - Group
+    Some of them need to subordinate the head node (e.g., preposition phrases)
+    - TODO: Are there some rules where there is one wrapper but multiple wrapped nodes?
+    Others need to subordinate only the non-heads (the modifiers).
+    
+    check for $headed-structure-rule or $group-rule or $wrapper-clause-rule :)
+	
+	(: WRAPPERS - subordinates siblings :)
+	if ($node/@Rule = $wrapper-rule) then
+		(:local:process-wrapper($node, $passed-role):)
+		<wg
+			type="wrapper-scope">{
+				local:attributes($node),
+				if ($passed-role) then
+					attribute role {$passed-role}
+				else
+					(),
+				$node/element() ! local:node(.)
+			}</wg>
+	else
+		(: GROUP STRUCTURE - coordinate siblings :)
+		if ($node/@Rule = ($group-rules, $apposition-rule)) then
+			local:keep-siblings-as-siblings($node, $passed-role)
+		
+		else
+			
+			(: COMPLEX CLAUSE RULE - create child from non-head sibling
+            TODO: disambiguate role in new parent clause (some siblings
+            will be auxiliaries, many will be adverbial, any other options? )
+            
+            :)
+			if ($node/@Rule = ($modifier-structure-rule)) then
+				(: Ryder: keep modifier with modified. Note that aramaic determiners follow their nominal :)
+				<wg>{
+						attribute type {'modifier-scope'},
+						local:attributes($node),
+						if ($passed-role) then
+							attribute role {$passed-role}
+						else
+							(),
+						$node/element() ! local:node(.)
+					}</wg>
+			else
+				if ($node/@Rule = $wrapper-clause-rule) then
+					local:process-wrapper-clause($node, $passed-role)
+				else
+						if ($node/@Rule = $complex-clause-rule) then
+							local:disambiguate-clause-complex-structure($node, $passed-role)
+						else
+							(: Ryder: V2CL is a clause with only a 'verb' constituent :)
+							if ($node/@Rule = $single-constituent-clause-rule) then
+								local:process-single-constituent-clause($node, $passed-role)
+						
+						else
+							<error_unknown_complex_node
+								role="{'error_unknown_complex_node' || $node/@Rule}"
+								rule="{$node/@Rule}">{$node/element() ! local:node(.)}</error_unknown_complex_node>
 };
 
 declare function local:phrase($node)
