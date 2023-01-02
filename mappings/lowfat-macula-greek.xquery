@@ -680,6 +680,14 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								)) then 
 									'o'
 							
+							else if ($constituent-to-subordinate/@Rule = $complex-clause-rule) then
+								if ($constituent-to-raise/@ClType = 'Verbless') then
+									'
+								
+								if (local:contains-projecting-verb($constituent-to-raise)) then
+									'oa'
+								else 'err-apposition?'
+							
 										'adv'
 							else switch($constituent-to-subordinate/@Rule)
 								case 'sub-CL' return 'adv'
