@@ -681,7 +681,14 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'o'
 							
 										'adv'
+							else switch($constituent-to-subordinate/@Rule)
+								case 'sub-CL' return 'adv'
+								case 'PtclCL'
+									(: Ryder TODO: disambiguate PtclCL subordinates :)
+									return 'adv'
+								default return 'err-unhandled-subord-role: ' || $constituent-to-subordinate/@Rule
 						)
+						
 						let $processed-head := local:node($constituent-to-raise, ())
 						let $processed-subordinate := if (count($constituent-to-subordinate/child::element()) = 1) then 
 							(: Ryder: if the constituent to subordinate is an atomic element, skip over the unnecessary node :)
