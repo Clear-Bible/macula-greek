@@ -632,6 +632,16 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						if (some $previous in $node/preceding-sibling::Node satisfies local:contains-projecting-verb($previous)) 
 							then 
 								(: Ryder: grouped projected content. :)
+								
+								(: Ryder: in some edge cases, e.g., MRK 1:24 
+								οἶδά [o σε] [: τίς εἶ [: ὁ Ἅγιος τοῦ Θεοῦ]]
+								the projecting verb has a proform or other object (cf. JHN 9:25, 'One thing I know... That being blind...', where 'one' is the object, as is ἓν)
+								- Such cases could be treated as a second object (or perhaps apposition, though I will go with O2) :)
+								if (
+									(: embedding clause already has object :)
+									local:previous-sibling-has-role($node, 'O')
+								) then local:keep-siblings-as-siblings($node, 'o2_1???')
+								else 
 									local:keep-siblings-as-siblings($node, 'o_1???')
 						else 
 							local:keep-siblings-as-siblings($node, $passed-role (:|| '_3???':)) (: Ryder TODO: remove the concatenated _3??? when debugging complete :)
