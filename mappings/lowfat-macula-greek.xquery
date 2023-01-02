@@ -571,8 +571,83 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					}</error_unknown_complex_clause_structure>
 			
 			else
+				
+				let $first-constituent := $node/child::Node[1]
+				let $second-constituent := $node/child::Node[2]
+				
+				(:
+					Ryder: possible analyses for cases I have handled:
+					- subordinate first constituent <-- assume case for ClCl
+					- subordinate second constituent <-- assume case for ClCl2
+					- coordinate constituents (group them) <-- I know this is sometimes the case in the Greek trees (e.g., Matt 12:3), but I'm not sure about the Hebrew trees
+					- flatten some series of nested ClCl when they should be groups (e.g., potentially Isaiah 51.9, which has ClCl 4 or 5 deep)
+					
+					TODO:
+					* handle complex clause structures beyond ClCl, ClCl2, and CLandCL2
+					* handle projected speech
+				:)
+				
+				let $should-coordinate-constituents :=
+					(
+					)
+				let $should-subordinate-first := (
+					$node/@Rule = ('ClCl2', 'CLandCL2')
+				)
+				let $should-subordinate-second := (
+					$node/@Rule = ('ClCl')
+				)
+				return
+					if ($should-coordinate-constituents
+					) then (
+					)
+					else 
+					
+						let $constituent-to-raise := 
+							if ($should-subordinate-first) then
+								$second-constituent
+							else
+								$first-constituent
+								
+						let $constituent-to-subordinate := 
+							if ($should-subordinate-first) then
+								$first-constituent
+							else
+								$second-constituent
+						
+						(: Ryder TODO: disambiguate complex-cl constituent roles:
+							* aux <-- minor clauses, interjections, etc.?
+							* adv <-- absolutes, etc.
+							* obj <-- e.g., direct discourse
+						:)
+						
+						let $disambiguated-subordinate-role := (
+										'adv'
+						)
+						let $processed-head := local:node($constituent-to-raise, ())
+						let $processed-subordinate := if (count($constituent-to-subordinate/child::element()) = 1) then 
+							(: Ryder: if the constituent to subordinate is an atomic element, skip over the unnecessary node :)
+							(local:node($constituent-to-subordinate/element(), $disambiguated-subordinate-role)) 
+						else local:node($constituent-to-subordinate, $disambiguated-subordinate-role)
+						
 						return
 							<wg>{
+								
+									$node/@Rule,
+									$node/@nodeId,
+									local:attributes($processed-head),
+									if ($passed-role) then
+										attribute role {$passed-role}
+									else
+										(),
+									if ($constituent-to-raise << $constituent-to-subordinate) then (
+										$processed-head/element(),
+										$processed-subordinate
+									)
+									else (
+										$processed-subordinate,
+										$processed-head/element()
+									)
+									
 								}</wg>
 };
 
