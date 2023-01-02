@@ -287,48 +287,6 @@ declare function local:is-object-thatVP($node)
     $node/@Rule=("that-VP")
 };
 
-(: Most confident of EitherOr4CL, EitherOr7CL, aCLaCL, aCLaCLaCL:)
-declare variable $group-rules := ("CLaCL","CLa2CL", "2CLaCL", "2CLaCLaCL", 
-    "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
-    "Conj7CL", "CLandClClandClandClandCl", "EitherOr4CL", "EitherOr7CL","aCLaCL", "aCLaCLaCL", "notCLbutCL2CL" );
-    
- (:
-
-These should be flattened (converted to a wg, not a cl) - but kept together when nested - unheaded:
-
-Candidates for keeping as groups or something special:
-
-- EitherOr4CL
-- EitherOr7CL
-- notCLbutCL2CL
-- aCLaCL
-- aCLaCLaCL
-
-Look for MEN ... treat consistently 
-
-Candidates for treating as simple sequences:
-
-- CLaCL
-- CLa2CL
-- 2CLaCL
-- 2CLaCLaCL
-
-Definitely do these as we do now, they look good:
-
- "Conj12CL", "Conj13CL", "Conj14CL", "Conj3CL", "Conj4CL", "Conj5CL", "Conj6CL",
-    "Conj7CL", 
-    
-    "CLandClClandClandClandCl"
-    
-    But ... look at nesting and .css.
- :)
-
-declare function local:is-group($node)
-{
-    starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules
-};
-
-
 declare function local:raise-sibling($parent-node, $child-node-to-raise)
 {
     <wg>
@@ -337,7 +295,10 @@ declare function local:raise-sibling($parent-node, $child-node-to-raise)
         let $before := $parent-node/*[. << $child-node-to-raise]
         let $after := $parent-node/*[. >> $child-node-to-raise]
         return (
-            (:  A ClCl or ClCl2 always has @Cat="CL", so it will never have a role. If the raised child has a role, use it. :)
+            (:  A ClCl or ClCl2 always has @Cat="CL", so it will never have a role. If the raised child has a role, use it. 
+            
+            Ryder: Identifying the role in this way won't work as expected. The child will not have a role in the ClCl, since even though such Nodes have @Cat="CL", they are most definitely not clauses (so they will not have role constituents, as otherwise the @Rule would be something like "S-V-O") except in case that they involve direct discourse, in which case they SHOULD be clauses, but they still will not have the appropriate roles one would expect.
+            :)
             $processed-node-to-raise/@*,
             comment{ $parent-node/@Rule, $child-node-to-raise/@Rule, count($parent-node/*[.<<$child-node-to-raise]) +1  },
             $before ! local:node(.),
@@ -364,7 +325,7 @@ declare function local:keep-siblings-as-siblings($node, $passed-role)
     </wg>
 };
 
-declare function local:strip-attributes-from-subtree($subroot as element(), $attnames as xs:string+)
+(:declare function local:strip-attributes-from-subtree($subroot as element(), $attnames as xs:string+)
 {
     element { name($subroot) } {
         $subroot/@*[not(name(.) = $attnames)],
@@ -374,12 +335,12 @@ declare function local:strip-attributes-from-subtree($subroot as element(), $att
                 case element() return local:strip-attributes-from-subtree($n, $attnames)
                 default return $n
     }
-};
+};:)
 
-declare function local:clause($node)
-(:  
+(:declare function local:clause-complex($node, $passed-role)
+(\:  
    See https://github.com/Clear-Bible/symphony-team/issues/91  
-:)
+:\)
 {
     if ( $node=>local:is-peripheral() ) then
         <wg role="aux" class="minor">
@@ -395,7 +356,7 @@ declare function local:clause($node)
     else if ( $node=>local:is-adjunct-cl() ) then
         <wg role="adv">
           {
-                attribute class { if ($node/@Rule = "sub-CL") then "wg" else "cl" },
+(\:                attribute class { if ($node/@Rule = "sub-CL") then "wg" else "cl" },:\)
                 local:attributes($node)[not(name(.) = ("role","class"))],
                 $node/Node ! local:node(.)         
            }     
@@ -410,6 +371,7 @@ declare function local:clause($node)
           </wg> 
 
      else if ($node/@Rule=("Conj-CL")) then
+     	(\: Ryder TODO: determine which Conj-CL should retain their wrapper scope for proper display :\)
          <wg class="wg">
            {
                 local:attributes($node)[not(name(.) = ("class"))],
@@ -434,7 +396,7 @@ declare function local:clause($node)
           </wg>
 
     else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
-          (: ### TODO:  Handle groups of groups :)
+          (\: ### TODO:  Handle groups of groups :\)
         <wg role="g" class="group">
          {
             $node/@nodeId ! local:nodeId2xmlId(.),
@@ -468,13 +430,15 @@ declare function local:clause($node)
         local:raise-sibling($node, $node/*[2])
 
     else
-        <wg>
+        <error_unhandled_clause_complex>
          {
             local:attributes($node),
-            comment { "local:clause(), else" },
+(\:            attribute role {'err'},:\)
             $node/Node ! local:node(.)
          }
-        </wg>
+        </error_unhandled_clause_complex>
+};:)
+
 declare function local:simple-clause($node, $passed-role, $ellipsis-already-processed as xs:boolean?)
 {
 		let $fallback-constituent-role := (if ($passed-role = '…') then $passed-role else '') || (if (contains($node/@Rule, '2CL')) then lower-case(substring-before($node/@Rule, '2CL')) else 'err_no_fallback_constituent_role?')
