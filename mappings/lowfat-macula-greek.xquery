@@ -625,9 +625,16 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				)
 				
 				return
+				 
 					if ($should-coordinate-constituents
 						or ($node/@nodeId) = $exceptions-to-force-coordination
 					) then (
+						if (some $previous in $node/preceding-sibling::Node satisfies local:contains-projecting-verb($previous)) 
+							then 
+								(: Ryder: grouped projected content. :)
+									local:keep-siblings-as-siblings($node, 'o_1???')
+						else 
+							local:keep-siblings-as-siblings($node, $passed-role (:|| '_3???':)) (: Ryder TODO: remove the concatenated _3??? when debugging complete :)
 					)
 					else 
 					
