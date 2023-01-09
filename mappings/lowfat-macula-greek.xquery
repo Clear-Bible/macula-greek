@@ -513,16 +513,25 @@ declare variable $singleton-phrases := (
 declare function local:contains-projecting-verb($node)
 {
 
-	let $exceptions := ('430090240130012')
+	let $exceptions-to-exclude := ('430090240130012')
+	let $exceptions-to-include := ()
 	return
-		$node//*[
-			starts-with(@LN, '33') 
-			or starts-with(@LN, '28') 
-			or starts-with(@LN, '30')
-		]
-		and not(
-			(: Ryder: Exceptions that would otherwise be false positives since they are structurally almost indistinguishable from projecting constructions :)
-			$node[@nodeId = $exceptions]
+		
+		$node[@nodeId = $exceptions-to-include]
+		or
+		(
+			$node//*[
+				starts-with(@LN, '33') 
+				or starts-with(@LN, '28') 
+				or starts-with(@LN, '30')
+			]
+			and not(
+				(: Ryder: Exceptions that would otherwise be false positives since they are structurally almost indistinguishable from projecting constructions :)
+				$node[@nodeId = $exceptions-to-exclude]
+			)
+		)
+};
+
 		)
 };
 
