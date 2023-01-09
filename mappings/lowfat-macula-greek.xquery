@@ -532,6 +532,29 @@ declare function local:contains-projecting-verb($node)
 		)
 };
 
+declare function local:process-clause-complex-apposition($node, $passed-role)
+{
+	let $np-constituent := $node/Node[@Cat = 'np']
+	let $cl-constituent := $node/Node[@Cat = 'CL']
+	return
+	<wg>{
+	    attribute type {'group'},
+	    local:attributes($node, 'class'),
+	    if ($passed-role) then
+			attribute role {$passed-role}
+		else
+			(),  
+	    if ($np-constituent << $cl-constituent) then (
+			$np-constituent/element() ! local:node(.),
+			local:node($cl-constituent, 'apposition')
+		)
+		else (
+			local:node($cl-constituent),
+			local:node($np-constituent, 'apposition')
+		)
+	 }</wg>
+};
+
 		)
 };
 
