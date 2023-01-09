@@ -708,6 +708,12 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								and local:contains-projecting-verb($first-constituent)
 							) 
 						)
+						or 
+						(
+							(: Ryder: Coordinate when both child nodes are clause complexes. :)
+							$first-constituent/@Rule = ($complex-clause-rule, $coordinationRule)
+							and $second-constituent/@Rule = ($complex-clause-rule, $coordinationRule)
+						
 					)
 				)
 				let $should-subordinate-first := (
