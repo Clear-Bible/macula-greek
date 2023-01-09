@@ -825,10 +825,14 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							
 							else if ($constituent-to-subordinate/@Rule = $complex-clause-rule) then
 								if ($constituent-to-raise/@ClType = 'Verbless') then
-									'
-								
-								if (local:contains-projecting-verb($constituent-to-raise)) then
+									(: Ryder TODO: disambiguate these (e.g., MRK 12:31). Some of them seem to be projected, but they still are probably best analyzed as apposition. :)
+									'apposition_verbless'
+								else if (local:contains-projecting-verb($constituent-to-raise)) then
 									'oa'
+									
+								else if ($constituent-to-subordinate/@nodeId = $exceptions-to-force-projected-discourse) then
+									'oa_b'
+									
 								else 'err-apposition?'
 							
 							else if ($constituent-to-raise/@Rule = $complex-clause-rule) then
