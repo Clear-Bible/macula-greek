@@ -688,14 +688,22 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				else:)
 				
 				let $should-coordinate-constituents :=
+					not(
+						($first-constituent/@Rule, $second-constituent/@Rule) = ('that-VP', 'Intj2CL')
+						or
+						(
+							local:is-simple-clause-rule($first-constituent/@Rule)
+							and local:contains-projecting-verb($first-constituent)
+						)
 					)
-					or
+					and
 					(
 						(: Ryder: Coordinate when one of the children is a "minor" clause, or the raised child contains a minor clause. :)
 						$first-constituent//@ClType="Minor"
 						or $second-constituent//@ClType="Minor"
+						(
 					)
-				
+				)
 				let $should-subordinate-first := (
 					$node/@Rule = ('ClCl2', 'CLandCL2')
 					or $first-constituent[@Rule = 'that-VP']
