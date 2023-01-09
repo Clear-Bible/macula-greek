@@ -775,6 +775,19 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						else if ($node/Node[@Rule = 'that-VP']) 
 							then 
 								local:keep-siblings-as-siblings($node, 'err_should_not_get_here') 
+						
+						else if (
+							(
+								$first-constituent[@Rule = "V2CL"][//@LN = ('91.13', '91.14')]
+								and $second-constituent/@Rule = ($complex-clause-rule, $group-rules)
+							)
+							or (
+								$first-constituent/@Rule = ($complex-clause-rule, $group-rules)
+								and $second-constituent[@Rule = "V2CL"][//@LN = ('91.13', '91.14')]
+							)
+						) then
+							local:process-wrapper-clause($node, $passed-role (: || '_3???' :))
+						
 						else 
 							local:keep-siblings-as-siblings($node, $passed-role (:|| '_3???':)) (: Ryder TODO: remove the concatenated _3??? when debugging complete :)
 					)
