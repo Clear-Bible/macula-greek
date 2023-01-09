@@ -789,21 +789,23 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							local:process-wrapper-clause($node, $passed-role (: || '_3???' :))
 						
 						else 
-							local:keep-siblings-as-siblings($node, $passed-role (:|| '_3???':)) (: Ryder TODO: remove the concatenated _3??? when debugging complete :)
+							local:keep-siblings-as-siblings($node, $passed-role || '_default???') (: Ryder TODO: remove the concatenated _default??? when debugging complete :)
 					)
 					else 
 					
 						let $constituent-to-raise := 
 							if ($should-subordinate-first) then
 								$second-constituent
-							else
+							else if ($should-subordinate-second) then
 								$first-constituent
+							else ()
 								
 						let $constituent-to-subordinate := 
 							if ($should-subordinate-first) then
 								$first-constituent
-							else
+							else if ($should-subordinate-second) then
 								$second-constituent
+							else ()
 						
 						(: Ryder TODO: disambiguate complex-cl constituent roles:
 							* aux <-- minor clauses, interjections, etc.?
