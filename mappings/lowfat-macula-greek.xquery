@@ -629,7 +629,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 	* Some ClCl should be apposition, e.g., MRK 1:2!9 ('my messenger : a voice crying...')
 :)
 	
-	let $rules-that-have-been-disambiguated-in-this-function := ('ClCl', 'ClCl2', 'CLandCL2')
+	let $rules-that-have-been-disambiguated-in-this-function := ('ClCl', 'ClCl2', 'CLandCL2', 'NP-CL', 'CL-NP')
 	return
 		
 		(: Ryder: Ensure an error is thrown for cases I have not yet handled. :)
@@ -668,22 +668,26 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					* handle projected speech
 				:)
 				
-				let $should-coordinate-constituents :=
+				(: Ryder: If a extra-sentential auxiliary modifies a clause complex, flag these cases for special processing.
+					The auxiliary cannot be the sole clause constituent, so we cannot subordinate the complex.
+					Likewise, the complex cannot have a subordinate without first being processed, so we cannot simply subordinate the auxiliary.
+					Therefore, I am going to opt, for now, to treat these cases as a clause[-complex] wrapper.
+				:)
+				(:return 
+				if (
 					(
-						(: Ryder: Coordinate when both child nodes are simple clauses and the first is not a projecting clause. :)
-						local:is-simple-clause-rule($first-constituent/@Rule) 
-						and local:is-simple-clause-rule($second-constituent/@Rule) 
-						and not(
-							(: Ryder: Often V2CL is a projecting verb, not a simple clause :)
-							$first-constituent/@Rule = 'V2CL'
-							and local:contains-projecting-verb($first-constituent)
-						) 
+						$first-constituent[@Rule = "V2CL"][//@LN = ('91.13', '91.14')]
+						and $second-constituent/@Rule = ($complex-clause-rule, $group-rules)
 					)
-					or 
-					(
-						(: Ryder: Coordinate when both child nodes are clause complexes. :)
-						$first-constituent/@Rule = ($complex-clause-rule, $coordinationRule)
-						and $second-constituent/@Rule = ($complex-clause-rule, $coordinationRule)
+					
+				) 
+				then
+					<wg role="err_aux on complex">{
+						$node/element() ! local:node(.)
+					}</wg>
+				else:)
+				
+				let $should-coordinate-constituents :=
 					)
 					or
 					(
