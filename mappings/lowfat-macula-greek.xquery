@@ -555,7 +555,42 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 	 }</wg>
 };
 
+declare function local:clause-complex-class-attribute($node, $constituent-to-subordinate, $constituent-to-raise, $disambiguated-subordinate-role, $passed-role)
+{
+
+	let $some-child-is-simple-clause := some $child in $node/Node satisfies local:is-simple-clause-rule($child/@Rule)
+	let $some-child-is-clause-complex-apposition := $passed-role = 'err-apposition?'
+	let $all-children-are-single-constituent-clauses := every $child in $node/Node satisfies $child/@Rule = $single-constituent-clause-rule
+	
+	return
+	if (
+		$some-child-is-simple-clause
+	) then
+		(
+			$node/@Cat ! attribute class {lower-case(.)},
+			attribute debug {'class condition 1'}
 		)
+	else if ($all-children-are-single-constituent-clauses)
+		then
+			(
+				$node/@Cat ! attribute class {lower-case(.)},
+				attribute debug {'class condition 2'}
+			)
+	
+	else if ($some-child-is-clause-complex-apposition)
+		then
+			(
+				$node/@Cat ! attribute class {lower-case(.)},
+				attribute debug {'class condition 3'}
+			)
+	else if ($constituent-to-raise = $single-constituent-clause-rule)
+		then
+			(
+				$node/@Cat ! attribute class {lower-case(.)},
+				attribute debug {'class condition 4'}
+			)
+	else 
+		()
 };
 
 declare function local:disambiguate-ellipsis($elip-clause as element(Node))
