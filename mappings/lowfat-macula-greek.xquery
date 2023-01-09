@@ -865,7 +865,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									else 
 										'err_WS'
 								else
-									'err_raised-child-is-group'
+									'err_raised-child-is-group. raised child rule: ' || $constituent-to-raise/@Rule
 								
 							else if (local:is-nominalized-clause($constituent-to-subordinate) or $constituent-to-subordinate/@Rule = 'P2CL') then
 								'apposition'
@@ -874,7 +874,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'ob'
 								else
 									'apposition'
-							else if ($constituent-to-subordinate//@LN = '91.13') then
+							else if ($constituent-to-subordinate//@LN = ('91.13', '91.14')) then
 								'aux'
 							
 							else if ($subordinate-first-word = $affirmation_markers) then 'adv'
@@ -887,6 +887,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							else if ($subordinate-first-word = $subordinators) then 'adv'
 							else if ($subordinate-first-word = $circumstances) then 'adv'
 							
+							else if (local:contains-projecting-verb($constituent-to-raise)) then
+								'oc'
 							else if ($constituent-to-subordinate[@ClType = 'Minor']) then
 								'aux'
 							else if ($constituent-to-subordinate[@Rule = 'that-VP']) then
