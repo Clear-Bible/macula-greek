@@ -714,6 +714,14 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							$first-constituent/@Rule = ($complex-clause-rule, $coordinationRule)
 							and $second-constituent/@Rule = ($complex-clause-rule, $coordinationRule)
 						
+						or
+						(
+							(: Ryder: Coordinate when one of the children is a "minor" clause, or the raised child contains a minor clause. :)
+							$first-constituent//@ClType = "Minor"
+							or $second-constituent//@ClType = "Minor"
+							or $first-constituent[@Rule = "V2CL"][//@LN = ('91.13', '91.14')]
+						)
+						or $node/@Rule = ('NP-CL', 'CL-NP')
 					)
 				)
 				let $should-subordinate-first := (
