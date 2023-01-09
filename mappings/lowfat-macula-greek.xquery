@@ -943,19 +943,127 @@ declare function local:process-wrapper-clause($node, $passed-role)
 	(: Ryder TODO: Disambiguate these rules, including 
 		* PtclCL
 		* Conj-CL
-	   These need thorough disambiguation, since some cases (e.g., ἃν, εἰ, ἀμήν, οὐχὶ, πως, etc.) should be subordinated within their clause complex as adverbials.
+		* V2CL
+	   These need thorough disambiguation, since some cases (e.g., ἃν, εἰ, ἀμήν, οὐχὶ, πως, ἰδοῦ [which could get passed here from disambiguate-clause-complex], etc.) should be subordinated within their clause complex as adverbials.
 	   Other cases should be subordinated as auxiliaries (e.g., Ὦ)
 	   Still other cases are, via crasis/derivation, true clause wrappers/conjuncted word groups (e.g., Ἄραγε)
 	:)
-	<wg
-		type="wrapper-clause-scope">{
-			local:attributes($node, 'class'),
-			if ($passed-role) then
-				attribute role {$passed-role}
+	
+	
+	if (count($node/element()) > 2) then
+		<error_too_many_nodes_in_wrapper_structure
+			role="error_too_many_nodes_in_wrapper_structure">
+			{$node/element() ! local:node(.)}
+		</error_too_many_nodes_in_wrapper_structure>
+	
+	else 
+		let $first-constituent := $node/child::Node[1]
+		let $second-constituent := $node/child::Node[2]
+		
+		let $auxiliary-domains := ('91.13', '91.14')
+		let $undetermined-wrapper-lemmas := (
+			$discourse_markers,
+			$circumstances,
+			$subordinators,
+			$complementizers,
+			$operators,
+			$relative_adverbs,
+			$relative_adverbs_WS,
+			$inferential-markers
+		)
+		let $adverbial-lemmas := (
+			$actualization-markers,
+			$focus-markers,
+			$affirmation_markers,
+			$relative-nominals
+		)
+		
+		let $should-embed-first := (
+			$first-constituent[@Rule = "V2CL"][descendant::*[@LN = $auxiliary-domains]]
+			or
+			(
+				$node/@Rule = ('PtclCL', 'Conj-CL')
+				and $first-constituent/descendant::*[@lemma = $adverbial-lemmas]
+			)
+		)
+		
+		let $should-embed-second := (
+			$node/@Rule = ('PtclCL', 'Conj-CL')
+			and $first-constituent/descendant::*[@lemma = $undetermined-wrapper-lemmas]
+		)
+				
+		
+		let $constituent-to-raise := 
+			if ($should-embed-first) then
+				$second-constituent
+			else if ($should-embed-second) then
+				$first-constituent
+			else ()
+				
+		let $constituent-to-embed := 
+			if ($should-embed-first) then
+				$first-constituent
+			else if ($should-embed-second) then
+				$second-constituent
+			else ()
+			
+		return
+			if ($should-embed-first or $should-embed-second) then
+			
+				let $subordinate-first-word := $constituent-to-embed//Node[@UnicodeLemma][1]/@UnicodeLemma
+				let $disambiguated-embedded-role := (
+					if ($constituent-to-embed[@Rule = "V2CL"][descendant::*[@LN = $auxiliary-domains]]) then
+						'aux__wrap' || $should-embed-first
+					else if ($subordinate-first-word = $adverbial-lemmas) then
+						'adv__wrap'
+					else if ($subordinate-first-word = $undetermined-wrapper-lemmas) then
+						$passed-role || '_wrap_default_type'
+					else
+						'err_unhandled_wrapper_type'
+				)
+				
+				let $processed-head := local:node($constituent-to-raise, ())
+				let $processed-subordinate := if (count($constituent-to-embed/child::element()) = 1) then 
+					(: Ryder: if the constituent to subordinate is an atomic element, skip over the unnecessary node :)
+					(local:node($constituent-to-embed/element(), $disambiguated-embedded-role)) 
+					else local:node($constituent-to-embed, $disambiguated-embedded-role)
+						
+						return
+							<wg>{
+								
+									$node/@Rule,
+									$constituent-to-embed/@Cat ! attribute child_cat {$constituent-to-embed/@Cat},
+									$constituent-to-embed/@Rule ! attribute child_rule {$constituent-to-embed/@Rule},
+									$constituent-to-raise/@Cat ! attribute head_cat {$constituent-to-raise/@Cat},
+									$constituent-to-raise/@Rule ! attribute head_rule {$constituent-to-raise/@Rule},
+									local:clause-complex-class-attribute($node, $constituent-to-embed, $constituent-to-raise, $disambiguated-embedded-role, $passed-role),
+									$node/@nodeId,
+									local:attributes($processed-head),
+									if ($passed-role) then
+										attribute role {$passed-role}
+									else
+										(),
+									
+									if ($constituent-to-raise << $constituent-to-embed) then (
+										$processed-head/element(),
+										$processed-subordinate
+									)
+									else (
+										$processed-subordinate,
+										$processed-head/element()
+									)
+									
+								}</wg>
 			else
-				(),
-			$node/element() ! local:node(.)
-		}</wg>
+				<wg
+					type="wrapper-clause-scope">{
+						local:attributes($node, 'class'),
+						if ($passed-role) then
+							attribute role {$passed-role}
+						else
+							(),
+						$node/element() ! local:node(.)
+					}</wg>
 };
 
 declare function local:process-conjunctions($node, $passed-role)
