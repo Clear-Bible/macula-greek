@@ -751,7 +751,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					if ($should-coordinate-constituents
 						or ($node/@nodeId) = $exceptions-to-force-coordination
 					) then (
-						if (some $previous in $node/preceding-sibling::Node satisfies local:contains-projecting-verb($previous)) 
+						if ($node/@Rule = ('NP-CL', 'CL-NP'))
+							then
+								local:process-clause-complex-apposition($node, $passed-role || '_group1')
+						else if (some $previous in $node/preceding-sibling::Node satisfies local:contains-projecting-verb($previous)) 
 							then 
 								(: Ryder: grouped projected content. :)
 								
@@ -764,7 +767,11 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									local:previous-sibling-has-role($node, 'O')
 								) then local:keep-siblings-as-siblings($node, 'o2_1???')
 								else 
-									local:keep-siblings-as-siblings($node, 'o_1???')
+									if ($passed-role = 'apposition') 
+										then
+											local:keep-siblings-as-siblings($node, $passed-role || '_group2')
+									else
+										local:keep-siblings-as-siblings($node, 'o_1???')
 						else if ($node/Node[@Rule = 'that-VP']) 
 							then 
 								local:keep-siblings-as-siblings($node, 'err_should_not_get_here') 
