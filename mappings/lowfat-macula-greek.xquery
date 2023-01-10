@@ -1213,12 +1213,15 @@ declare function local:process-complex-node($node, $passed-role)
 			else if ($node/@Rule = ($modifier-structure-rule)) then
 				(: Ryder: keep modifier with modified. Note that aramaic determiners follow their nominal :)
 				<wg>{
-						attribute type {'modifier-scope'},
 						local:attributes($node),
 						if ($passed-role) then
 							attribute role {$passed-role}
 						else
 							(),
+						if ($node//@Rule = $nominalized-clause-rule) then
+							attribute type {'modifier-clause-scope'}
+						else 
+							attribute type {'modifier-scope'},
 						$node/element() ! local:node(.)
 					}</wg>
 			else
