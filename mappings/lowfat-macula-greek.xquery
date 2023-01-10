@@ -1198,13 +1198,19 @@ declare function local:process-complex-node($node, $passed-role)
 			local:keep-siblings-as-siblings($node, $passed-role)
 		
 		else
+			if ($node/@Rule = $auxiliary-rules) then
+				<wg>{
+					local:attributes($node),
+					attribute role {'aux'},
+					$node/element() ! local:node(.)
+				}</wg>
 			
 			(: COMPLEX CLAUSE RULE - create child from non-head sibling
             TODO: disambiguate role in new parent clause (some siblings
             will be auxiliaries, many will be adverbial, any other options? )
             
             :)
-			if ($node/@Rule = ($modifier-structure-rule)) then
+			else if ($node/@Rule = ($modifier-structure-rule)) then
 				(: Ryder: keep modifier with modified. Note that aramaic determiners follow their nominal :)
 				<wg>{
 						attribute type {'modifier-scope'},
