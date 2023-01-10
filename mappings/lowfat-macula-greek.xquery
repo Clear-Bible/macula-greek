@@ -764,7 +764,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					) then (
 						if ($node/@Rule = ('NP-CL', 'CL-NP'))
 							then
-								local:process-clause-complex-apposition($node, $passed-role || '_group1')
+								local:process-clause-complex-apposition($node, $passed-role (:|| '_group1':))
 						else if (some $previous in $node/preceding-sibling::Node satisfies local:contains-projecting-verb($previous)) 
 							then 
 								(: Ryder: grouped projected content. :)
@@ -776,13 +776,13 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								if (
 									(: embedding clause already has object :)
 									local:previous-sibling-has-role($node, 'O')
-								) then local:keep-siblings-as-siblings($node, 'o2_1???')
+								) then local:keep-siblings-as-siblings($node, 'o2' (:|| '_1???':))
 								else 
 									if ($passed-role = 'apposition') 
 										then
 											local:keep-siblings-as-siblings($node, $passed-role || '_group2')
 									else
-										local:keep-siblings-as-siblings($node, 'o_1???')
+										local:keep-siblings-as-siblings($node, 'o' (:|| '_1???':))
 						else if ($node/Node[@Rule = 'that-VP']) 
 							then 
 								local:keep-siblings-as-siblings($node, 'err_should_not_get_here') 
@@ -800,7 +800,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							local:process-wrapper-clause($node, $passed-role (: || '_3???' :))
 						
 						else 
-							local:keep-siblings-as-siblings($node, $passed-role || '_default???') (: Ryder TODO: remove the concatenated _default??? when debugging complete :)
+							local:keep-siblings-as-siblings($node, $passed-role (:|| '_default???':)) (: Ryder TODO: remove the concatenated _default??? when debugging complete :)
 					)
 					else 
 					
@@ -839,10 +839,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									(: Ryder TODO: disambiguate these (e.g., MRK 12:31). Some of them seem to be projected, but they still are probably best analyzed as apposition. :)
 									'apposition_verbless'
 								else if (local:contains-projecting-verb($constituent-to-raise)) then
-									'oa'
+									'o' (:|| '_a':)
 									
 								else if ($constituent-to-subordinate/@nodeId = $exceptions-to-force-projected-discourse) then
-									'oa_b'
+									'o' (:|| '_a_b':)
 									
 								else 'err-apposition?'
 							
@@ -882,7 +882,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								'apposition'
 							else if ($constituent-to-subordinate/@Rule = $group-rules) then
 								if (local:contains-projecting-verb($constituent-to-raise)) then
-									'ob'
+									'o'(:|| '_b':)
 								else
 									'apposition'
 							else if ($constituent-to-subordinate//@LN = ('91.13', '91.14')) then
@@ -899,7 +899,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							else if ($subordinate-first-word = $circumstances) then 'adv'
 							
 							else if (local:contains-projecting-verb($constituent-to-raise)) then
-								'oc'
+								'o'(:|| '_c':)
 							else if ($constituent-to-subordinate[@ClType = 'Minor']) then
 								'aux'
 							else if ($constituent-to-subordinate[@Rule = 'that-VP']) then
@@ -907,9 +907,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									(: Ryder: check whether constituent of embedding clause already has 'o' role :)
 									local:previous-sibling-has-role($constituent-to-subordinate, 'O')
 								) then
-									'o2d'
+									'o2'(:|| '_d':)
 								else
-									'od' || data($node/@nodeId)
+									'o'(:|| '_d' || data($node/@nodeId):)
 								
 							else switch($constituent-to-subordinate/@Rule)
 								case 'sub-CL' return 'adv'
@@ -934,10 +934,6 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									local:attributes($processed-head),
 									if ($passed-role) then
 										attribute role {$passed-role}
-									else
-										(),
-									if ($node/@nodeId = $discontinuous-discourse-nodes) then
-										attribute note {'discontinuous discourse container'}
 									else
 										(),
 									
