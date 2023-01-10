@@ -25,6 +25,8 @@ declare variable $complementizers := ('ἵνα', 'ὅτι', 'εἰ', 'μή');
 declare variable $subordinators := ('ἵνα', 'ὅτι', 'εἰ', 'εἴπερ', 'ἐάν', 'ἐάνπερ', 'κἄν', 'εἴτε', 'ἐπεί', 'ἐπειδή', 'ἐπειδήπερ', 'ἐπάν', 'μή', 'ἄχρι', 'μέχρι', 'ἕως', 'καθώς', 'καθά', 'καθό', 'καθάπερ', 'καθότι', 'διό', 'διόπερ', 'διότι', 'ἡνίκα');
 declare variable $circumstances := ('ἔτι', 'νυνί', 'ὁμοίως', 'πρῶτος', 'ὅμως', 'οὕτω', 'ἐκτός', 'πῶς');
 
+declare variable $discontinuous-discourse-nodes := ('n44007007011');
+
 declare function local:is-group($node)
 {
     $node/@Rule = $group-rules
@@ -201,6 +203,10 @@ declare function local:attributes($node, $exclusions)
     $node/@Ref ! attribute referent {.},
     $node/@SubjRef  ! attribute subjref {.},
     $node/@ClType ! attribute cltype {.},  (:  ### Remove later - for debugging purposes #### :)
+    if (($node/@xml:id, $node/@nodeId) = $discontinuous-discourse-nodes) then
+		attribute note {'discontinuous discourse'}
+	else
+		(),
     
 	(: Assign @junction to clauses :)
 	if ($node/@Cat = 'CL') then 
@@ -727,6 +733,11 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				let $should-subordinate-first := (
 					$node/@Rule = ('ClCl2', 'CLandCL2')
 					or $first-constituent[@Rule = ('that-VP', 'Intj2CL')]
+					or (
+						(: Ryder: if the projecting verb is non-initial in clause complex; e.g., Acts 7:7 :)
+						local:contains-projecting-verb($second-constituent)
+						and not(local:contains-projecting-verb($first-constituent))
+					)
 				)
 				
 				let $should-subordinate-second := (
@@ -923,6 +934,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									local:attributes($processed-head),
 									if ($passed-role) then
 										attribute role {$passed-role}
+									else
+										(),
+									if ($node/@nodeId = $discontinuous-discourse-nodes) then
+										attribute note {'discontinuous discourse container'}
 									else
 										(),
 									
