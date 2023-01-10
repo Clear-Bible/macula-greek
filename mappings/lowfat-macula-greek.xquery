@@ -723,8 +723,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						or
 						(
 							(: Ryder: Coordinate when one of the children is a "minor" clause, or the raised child contains a minor clause. :)
-							$first-constituent//@ClType = "Minor"
-							or $second-constituent//@ClType = "Minor"
+							$first-constituent/@ClType = "Minor"
+							or $second-constituent/@ClType = "Minor"
 							or $first-constituent[@Rule = "V2CL"][//@LN = ('91.13', '91.14')]
 						)
 						or $node/@Rule = ('NP-CL', 'CL-NP')
@@ -839,7 +839,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									(: Ryder TODO: disambiguate these (e.g., MRK 12:31). Some of them seem to be projected, but they still are probably best analyzed as apposition. :)
 									'apposition_verbless'
 								else if (local:contains-projecting-verb($constituent-to-raise)) then
-									'o' (:|| '_a':)
+									if (every $child in $constituent-to-subordinate/Node satisfies $child/@ClType = 'Minor') then
+										''
+									else
+										'o'(: || '_a':)
 									
 								else if ($constituent-to-subordinate/@nodeId = $exceptions-to-force-projected-discourse) then
 									'o' (:|| '_a_b':)
