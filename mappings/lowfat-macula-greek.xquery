@@ -859,6 +859,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else if ($constituent-to-subordinate/@nodeId = $exceptions-to-force-projected-discourse) then
 									'o' (:|| '_a_b':)
 									
+								else if (contains(($constituent-to-subordinate//Node[@Unicode])[1]/text(), '—')) then
+									(: Ryder: Interruptions often occur in this context. If the first word begins with an en/em dash, then it is an interjection, and should have no role :)
+									''
+								
 								else 'err-apposition?'
 							
 							else if ($constituent-to-raise/@Rule = $complex-clause-rule) then
