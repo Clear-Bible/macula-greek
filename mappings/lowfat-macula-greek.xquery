@@ -924,10 +924,15 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							else if ($subordinate-first-word = $focus-markers) then 'adv'
 							else if ($subordinate-first-word = $discourse_markers) then 'adv'
 							else if ($subordinate-first-word = $operators) then 'adv'
-							else if ($subordinate-first-word = $complementizers) then 'o'
+							else if (
+								$subordinate-first-word = $complementizers 
+								and not($constituent-to-subordinate/@Rule = 'sub-CL')
+							) then 'o'
 							else if ($subordinate-first-word = $subordinators) then 'adv'
 							else if ($subordinate-first-word = $circumstances) then 'adv'
 							
+							else if ($constituent-to-subordinate/@Rule = 'ADV2CL') then
+								'adv'
 							else if (local:contains-projecting-verb($constituent-to-raise)) then
 								'o'(:|| '_c':)
 							else if ($constituent-to-subordinate[@ClType = 'Minor']) then
