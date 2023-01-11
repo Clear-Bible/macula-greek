@@ -11,7 +11,7 @@ declare variable $conjuncted-structure-rule := ('2CLaCL', '2CLaCLaCL', '2NpaNpaN
 declare variable $auxiliary-rules := ('intjNP');
 declare variable $single-constituent-clause-rule := ('IO2CL', 'Intj2CL','Np2CL', 'ADV2CL', 'O2CL', 'P2CL', 'S2CL', 'V2CL', 'VC2CL'); 
 
-(: Ryder: Particle classifications from Chris Land's prior work :)
+(: Ryder: Credit for these particle classifications: Chris Land's prior work on OpenText 2.0 :)
 declare variable $relative-nominals := ('ἡλίκος', 'οἷος', 'ὁποῖος', 'ὁπόσος', 'ὅς', 'ὅσγε', 'ὅσος', 'ὅσπερ', 'ὅστις');
 declare variable $relative_adverbs_WS := ('ὡς', 'ὥσπερ', 'ὡσεί', 'ὅπως', 'ὅπως', 'ὡσαύτως', 'ὡσπερεί');
 declare variable $relative_adverbs := ('ὅπου', 'ὁπότε', 'ὅτε', 'ὅταν', 'ὅθεν', 'ἡνίκα', 'ὁπόθεν', 'ὁπόταν', 'ὁσάκις', 'ὁτέ', 'ὅτου', 'οὗ');
@@ -1073,7 +1073,7 @@ declare function local:process-wrapper-clause($node, $passed-role)
 						
 						return
 							<wg>{
-								
+							
 									$node/@Rule,
 									$constituent-to-embed/@Cat ! attribute child_cat {$constituent-to-embed/@Cat},
 									$constituent-to-embed/@Rule ! attribute child_rule {$constituent-to-embed/@Rule},
@@ -1123,8 +1123,6 @@ declare function local:process-conjunctions($node, $passed-role)
 			if ($constituent/@Cat = ('conj')) then
 				<wg
 					type='conjuncted-wg'>{
-						
-						local:attributes($constituent),
 						$constituent ! local:node(.),
 						$constituent/following-sibling::element()[1] ! local:node(.)
 					}</wg>
