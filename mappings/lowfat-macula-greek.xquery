@@ -730,13 +730,23 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						or $node/@Rule = ('NP-CL', 'CL-NP')
 					)
 				)
+				
+				let $exceptions-to-force-the-second-to-subordinate := (
+					(: Ryder: exceptions to force the second to subordinate :)
+					'480020040060140' (: Ryder: this appears to be a GBI error, ClCl2 should be ClCl :) 
+				)
+				
 				let $should-subordinate-first := (
-					$node/@Rule = ('ClCl2', 'CLandCL2')
-					or $first-constituent[@Rule = ('that-VP', 'Intj2CL')]
-					or (
-						(: Ryder: if the projecting verb is non-initial in clause complex; e.g., Acts 7:7 :)
-						local:contains-projecting-verb($second-constituent)
-						and not(local:contains-projecting-verb($first-constituent))
+					not($node/@nodeId = $exceptions-to-force-the-second-to-subordinate)
+					and
+					(
+						$node/@Rule = ('ClCl2', 'CLandCL2')
+						or $first-constituent[@Rule = ('that-VP', 'Intj2CL')]
+						or (
+							(: Ryder: if the projecting verb is non-initial in clause complex; e.g., Acts 7:7 :)
+							local:contains-projecting-verb($second-constituent)
+							and not(local:contains-projecting-verb($first-constituent))
+						)
 					)
 				)
 				
@@ -744,6 +754,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					$node/@Rule = ('ClCl')
 					or $second-constituent[@Rule = ('that-VP', 'Intj2CL')]
 					or local:contains-projecting-verb($first-constituent)
+					or $node/@nodeId = $exceptions-to-force-the-second-to-subordinate
 				)
 				
 				let $exceptions-to-force-coordination := (
@@ -817,12 +828,6 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							else if ($should-subordinate-second) then
 								$second-constituent
 							else ()
-						
-						(: Ryder TODO: disambiguate complex-cl constituent roles:
-							* aux <-- minor clauses, interjections, etc.?
-							* adv <-- absolutes, etc.
-							* obj <-- e.g., direct discourse
-						:)
 						
 						let $subordinate-first-word := $constituent-to-subordinate//Node[@UnicodeLemma][1]/@UnicodeLemma
 						
