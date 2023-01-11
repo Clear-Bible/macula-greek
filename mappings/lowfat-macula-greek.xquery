@@ -887,6 +887,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								if ($constituent-to-subordinate/@Rule = 'sub-CL') then
 									(: Ryder: sub-CLs subordinated to groups are often conditionals, e.g., MRK 3:26 :) 
 									''
+								else if ($constituent-to-subordinate/@Rule = $auxiliary-rules) then 
+									'aux'(: || '_aux1':)
 								else if ($subordinate-first-word = $relative_adverbs_WS) then
 									(: Ryder: if the first word of the subordinated unit is ὡς, then it could be an argument rather than an adjunct. :)
 									if ($constituent-to-subordinate/@Rule = $single-constituent-clause-rule) then
