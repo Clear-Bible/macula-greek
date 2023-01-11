@@ -867,12 +867,15 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'err_every_child_is_complex'
 								else if ($constituent-to-raise//@ClType = 'Minor') then
 									'err_raised-child-has-minor-clause?'
-								else if ($constituent-to-raise//@Rule = $group-rules) then
+								else if ($constituent-to-raise/@Rule = $group-rules) then
 									'err_raised-child-constituents-should-be-siblings'
 								else if (local:is-simple-clause-rule($constituent-to-subordinate/@Rule)) then
 									(: Ryder: there are several cases where a simple clause will be subordinated :)
 									if ($constituent-to-subordinate/Node[@Cat = 'V']//@Mood = 'Participle') then
 										(: Ryder: genitive absolutes :)
+										'adv'
+									else if (local:is-nominalized-clause($constituent-to-subordinate)) then
+										(: Ryder: topicalized relative clause :)
 										'adv'
 									else
 										'err__adv??-sub simple cl. Rule: ' || $constituent-to-subordinate/@Rule
