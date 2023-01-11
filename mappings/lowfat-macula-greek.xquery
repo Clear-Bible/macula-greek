@@ -723,8 +723,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						or
 						(
 							(: Ryder: Coordinate when one of the children is a "minor" clause, or the raised child contains a minor clause. :)
-							$first-constituent/@ClType = "Minor"
-							or $second-constituent/@ClType = "Minor"
+							$first-constituent//@ClType = "Minor"
+							or $second-constituent//@ClType = "Minor"
 							or $first-constituent[@Rule = "V2CL"][//@LN = ('91.13', '91.14')]
 						)
 						or $node/@Rule = ('NP-CL', 'CL-NP')
@@ -878,6 +878,12 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 										'err_WS-to-' || lower-case(substring-before($constituent-to-subordinate/@Rule, '2CL'))
 									else 
 										'err_WS'
+								else if (local:is-simple-clause-rule($constituent-to-subordinate/@Rule)) then
+									(: Ryder: when the raised child is a group, and the subordinated child is a simple clause, it is likely a topic, an absolute, or some other fronted element :)
+									if (every $verb-mood in $constituent-to-subordinate//@Mood satisfies $verb-mood = 'Participle') then
+										'adv'
+									else 
+										'err_unhandled-subordinated-simple-clause-modifying-group'
 								else
 									'err_raised-child-is-group. raised child rule: ' || $constituent-to-raise/@Rule
 								
