@@ -761,11 +761,15 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					'410020090010200', '410020090040170', '410020090040070', (: Ryder: in this case, Jesus is asking multiple sibling questions :)
 					'410090240080050', (: Ryder: in this case, 'I believe. Help my unbelief.' is syntactically indistinguishable from 'I believe [o help my unbelief]' :)
 					'420010230020130', (: Ryder: in this case, the WS clause is part of a ClCl2 but it gets correctly disambiguated to an adverbial downstream, so these can be coordinated. :)
-					'440050090060220' (: Ryder: another case of a question followed by another complex clause :)
+					'440050090060220', (: Ryder: another case of a question followed by another complex clause :)
+					'480010200010100', '480010200050070' (: Ryder: the entire verse is introductory/topicalized material for the next verse :)
 				)
 				
 				let $exceptions-to-force-projected-discourse := (
 					'440050090060220' (: Ryder: projected discourse that begins with a simple 'ὁ Πέτρος δὲ' :)
+				)
+				let $exceptions-to-exclude-projected-discourse := (
+					'480010200050070' (: Ryder: projecting verb is separate sentence/move :)
 				)
 				
 				return
@@ -776,7 +780,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						if ($node/@Rule = ('NP-CL', 'CL-NP'))
 							then
 								local:process-clause-complex-apposition($node, $passed-role (:|| '_group1':))
-						else if (some $previous in $node/preceding-sibling::Node satisfies local:contains-projecting-verb($previous)) 
+						else if (
+							some $previous in $node/preceding-sibling::Node satisfies local:contains-projecting-verb($previous)
+							and not($node/@nodeId = $exceptions-to-exclude-projected-discourse)
+						) 
 							then 
 								(: Ryder: grouped projected content. :)
 								
