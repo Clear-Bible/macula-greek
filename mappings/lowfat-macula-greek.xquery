@@ -923,10 +923,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						)
 						
 						let $processed-head := local:node($constituent-to-raise, ())
-						let $processed-subordinate := if (count($constituent-to-subordinate/child::element()) = 1) then 
-							(: Ryder: if the constituent to subordinate is an atomic element, skip over the unnecessary node :)
-							(local:node($constituent-to-subordinate/element(), $disambiguated-subordinate-role)) 
-						else local:node($constituent-to-subordinate, $disambiguated-subordinate-role)
+						let $processed-subordinate := local:node($constituent-to-subordinate, $disambiguated-subordinate-role)
 						
 						return
 							<wg>{
