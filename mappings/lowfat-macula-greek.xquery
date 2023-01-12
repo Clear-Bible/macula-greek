@@ -943,8 +943,17 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 										'adv'
 									else 
 										'err_unhandled-subordinated-simple-clause-modifying-group'
+								else if (
+									not(local:contains-projecting-verb($node/preceding-sibling::Node))
+									and $constituent-to-subordinate/@Rule = 'O2CL'
+								) then
+									'o' || '__grouped'
+								else if ($constituent-to-subordinate/@Rule = 'S2CL') then
+									'…' || '__grouped'
+								else if ($constituent-to-subordinate/@Rule = 'ADV2CL') then
+									'adv' || '__grouped'
 								else
-									'err_raised-child-is-group. raised child rule: ' || $constituent-to-raise/@Rule
+									'err_raised-child-is-group? raised child rule: ' || $constituent-to-raise/@Rule
 								
 							else if (local:is-nominalized-clause($constituent-to-subordinate) or $constituent-to-subordinate/@Rule = 'P2CL') then
 								'apposition'
