@@ -895,8 +895,25 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else if (contains(($constituent-to-subordinate//Node[@Unicode])[1]/text(), '—')) then
 									(: Ryder: Interruptions often occur in this context. If the first word begins with an en/em dash, then it is an interjection, and should have no role :)
 									''
-								
-								else 'err-apposition?'
+									
+								else if ($node/@Rule = 'sub-CL') then
+									'sub-cl? $relative_adverbs'
+									
+								else 'err-apposition? 2'
+							
+							else if (local:is-simple-clause-rule($constituent-to-subordinate/@Rule)) then
+								(: Ryder: there are several cases where a simple clause will be subordinated :)
+								if (some $verb in $constituent-to-subordinate/Node[@Cat = 'V'] satisfies $verb//@Mood = 'Participle') then
+									(: Ryder: genitive absolutes :)
+									'adv'
+								else if (local:is-nominalized-clause($constituent-to-subordinate)) then
+									(: Ryder: topicalized relative clause :)
+									'adv'
+								else if (local:contains-projecting-verb($constituent-to-raise)) then
+									(: Ryder: direct discourse :)
+									'o'
+								else
+									'err__adv??-sub simple cl. Rule: ' || $constituent-to-subordinate/@Rule
 							
 							else if ($constituent-to-raise/@Rule = $complex-clause-rule) then
 								(: Ryder: a clause complex as the head involves some fairly diverse structures :)
@@ -905,17 +922,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else if ($constituent-to-raise/@ClType = 'Minor') then
 									'err_raised-child-has-minor-clause?'
 								else if ($constituent-to-raise/@Rule = $group-rules) then
-									'err_raised-child-constituents-should-be-siblings'
-								else if (local:is-simple-clause-rule($constituent-to-subordinate/@Rule)) then
-									(: Ryder: there are several cases where a simple clause will be subordinated :)
-									if ($constituent-to-subordinate/Node[@Cat = 'V']//@Mood = 'Participle') then
-										(: Ryder: genitive absolutes :)
-										'adv'
-									else if (local:is-nominalized-clause($constituent-to-subordinate)) then
-										(: Ryder: topicalized relative clause :)
-										'adv'
-									else
-										'err__adv??-sub simple cl. Rule: ' || $constituent-to-subordinate/@Rule
+									(:'err_raised-child-constituents-should-be-siblings':)
+									'adv' (: Ryder: In these cases (e.g., a sub-CL modifying a group), 'adv' is just a general category. These could theoretically be broken down further into things like conditionals (EI), temporal markers (OTE/OTAN/etc.), and so on. :)
+								
 								else if ($constituent-to-subordinate/@Rule = 'sub-CL') then
 									'adv'
 								else if ($constituent-to-subordinate/@Rule = 'that-VP') then
@@ -924,6 +933,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									then local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
 								
 								else 'err_group? subord child rule = ' || $constituent-to-subordinate/@Rule
+							
 							else if ($constituent-to-raise/@Rule = $group-rules) then
 								(: Ryder TODO: disambiguate when the raised child is a group :)
 								if ($constituent-to-subordinate/@Rule = 'sub-CL') then
