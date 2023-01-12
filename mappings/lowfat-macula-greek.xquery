@@ -902,7 +902,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								(: Ryder: a clause complex as the head involves some fairly diverse structures :)
 							 	if ($constituent-to-subordinate/@Rule = $complex-clause-rule) then
 									'err_every_child_is_complex'
-								else if ($constituent-to-raise//@ClType = 'Minor') then
+								else if ($constituent-to-raise/@ClType = 'Minor') then
 									'err_raised-child-has-minor-clause?'
 								else if ($constituent-to-raise/@Rule = $group-rules) then
 									'err_raised-child-constituents-should-be-siblings'
