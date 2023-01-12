@@ -647,17 +647,19 @@ declare function local:previous-sibling-has-role($node as element(Node), $role a
 
 declare function local:disambiguate-clause-complex-structure($node, $passed-role)
 {
-
-(: RYDER TODO: 
-	* 'CL-NP', 'NP-CL', based on whether non-head is relative 
-	* Some ClCl should be apposition, e.g., MRK 1:2!9 ('my messenger : a voice crying...')
-:)
 	
 	let $rules-that-have-been-disambiguated-in-this-function := ('ClCl', 'ClCl2', 'CLandCL2', 'NP-CL', 'CL-NP')
+	let $exceptions-to-skip-complex := (
+		'440180060120090' (: Ryder: multiple sentences :)
+	)
+	
 	return
 		
+		if ($node/@nodeId = $exceptions-to-skip-complex) then
+			$node/element() ! local:node(., $passed-role)
+		
 		(: Ryder: Ensure an error is thrown for cases I have not yet handled. :)
-		if (count($node/child::Node) ne 2) then
+		else if (count($node/child::Node) ne 2) then
 			(: Try to process conjunctions and recount :)
 			<error_not_two_child_nodes role="error_not_two_child_nodes">
 			{local:process-conjunctions($node, $passed-role)}
