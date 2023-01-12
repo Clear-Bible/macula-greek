@@ -153,10 +153,10 @@ declare variable $nominalized-clause-rule := ('CL2Adjp', 'CL2NP', 'DetCL', 'NP-C
 declare function local:is-nominalized-clause($node)
 {
 	$node/@Cat = 'CL' 
-    	and (
-	    		$node/parent::Node/@Rule = $nominalized-clause-rule 
-	    		or $node[not(descendant::Node[@Cat = 'CL'])]/descendant::Node[@Type = 'Relative']
-    		)
+    and (
+    		$node/parent::Node/@Rule = $nominalized-clause-rule 
+    		or $node/descendant::Node[@Cat ne 'CL']/descendant::Node[@Type = 'Relative']
+    	)
 };
 
 declare function local:attributes($node)
