@@ -748,6 +748,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							or $first-constituent[@Rule = "V2CL"][//@LN = ('91.13', '91.14')]
 						)
 						or $node/@Rule = ('NP-CL', 'CL-NP')
+								
 					)
 				)
 				
@@ -782,7 +783,14 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					'410090240080050', (: Ryder: in this case, 'I believe. Help my unbelief.' is syntactically indistinguishable from 'I believe [o help my unbelief]' :)
 					'420010230020130', (: Ryder: in this case, the WS clause is part of a ClCl2 but it gets correctly disambiguated to an adverbial downstream, so these can be coordinated. :)
 					'440050090060220', (: Ryder: another case of a question followed by another complex clause :)
-					'480010200010100', '480010200050070' (: Ryder: the entire verse is introductory/topicalized material for the next verse :)
+					'480010200010100', '480010200050070', (: Ryder: the entire verse is introductory/topicalized material for the next verse :)
+					'480020100040100', (: Ryder: this was a special case for GAL 2:10, but it might apply more generally, where the entire sentence is a non-verbal predication. :)
+					'440130220020280', (: Ryder: multiple sentences. Coreferential tie in second sentence must have triggered a ClCl rule? Note, I'm not convinced by the analysis of the ClCl in this case. :)
+					'440130380010280', '440130380010050', '440130380070230', (: Ryder: here there is a complex node which combines a nummber of non-simple clauses :)
+					'440180060120160', (: Ryder: multiple sentences :)
+					'440180150010200', (: Ryder: multiple sentences :)
+					'440180190010150' (: Ryder: multiple sentences :)
+					
 				)
 				
 				let $exceptions-to-force-projected-discourse := (
@@ -793,7 +801,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				)
 				
 				return
-				 
+				
 					if ($should-coordinate-constituents
 						or ($node/@nodeId) = $exceptions-to-force-coordination
 					) then (
