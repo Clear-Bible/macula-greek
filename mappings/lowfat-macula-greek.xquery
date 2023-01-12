@@ -939,7 +939,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 										'err_WS'
 								else if (local:is-simple-clause-rule($constituent-to-subordinate/@Rule)) then
 									(: Ryder: when the raised child is a group, and the subordinated child is a simple clause, it is likely a topic, an absolute, or some other fronted element :)
-									if (every $verb-mood in $constituent-to-subordinate//@Mood satisfies $verb-mood = 'Participle') then
+									if (some $verb-mood in $constituent-to-subordinate/descendant::Node[@Rule][not(local:is-simple-clause-rule(@Rule))]//@Mood satisfies $verb-mood = 'Participle') then
 										'adv'
 									else 
 										'err_unhandled-subordinated-simple-clause-modifying-group'
