@@ -918,6 +918,11 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 										'err__adv??-sub simple cl. Rule: ' || $constituent-to-subordinate/@Rule
 								else if ($constituent-to-subordinate/@Rule = 'sub-CL') then
 									'adv'
+								else if ($constituent-to-subordinate/@Rule = 'that-VP') then
+									'o'
+								else if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate))
+									then local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
+								
 								else 'err_group? subord child rule = ' || $constituent-to-subordinate/@Rule
 							else if ($constituent-to-raise/@Rule = $group-rules) then
 								(: Ryder TODO: disambiguate when the raised child is a group :)
