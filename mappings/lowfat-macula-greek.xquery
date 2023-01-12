@@ -538,6 +538,24 @@ declare function local:contains-projecting-verb($node)
 		)
 };
 
+declare function local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
+{							
+	if ($subordinate-first-word = $affirmation_markers) then 'adv'
+	else if ($subordinate-first-word = $inferential-markers) then 'adv'
+	else if ($subordinate-first-word = $actualization-markers) then 'adv'
+	else if ($subordinate-first-word = $focus-markers) then 'adv'
+	else if ($subordinate-first-word = $discourse_markers) then 'adv'
+	else if ($subordinate-first-word = $operators) then 'adv'
+	else if (
+		$subordinate-first-word = $complementizers 
+		and not($constituent-to-subordinate/@Rule = 'sub-CL')
+	) then 'o'
+	else if ($subordinate-first-word = $subordinators) then 'adv'
+	else if ($subordinate-first-word = $circumstances) then 'adv'
+	
+	else ()
+};
+
 declare function local:process-clause-complex-apposition($node, $passed-role)
 {
 	let $np-constituent := $node/Node[@Cat = 'np']
