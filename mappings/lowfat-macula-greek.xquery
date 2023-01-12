@@ -965,18 +965,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							else if ($constituent-to-subordinate//@LN = ('91.13', '91.14')) then
 								'aux'
 							
-							else if ($subordinate-first-word = $affirmation_markers) then 'adv'
-							else if ($subordinate-first-word = $inferential-markers) then 'adv'
-							else if ($subordinate-first-word = $actualization-markers) then 'adv'
-							else if ($subordinate-first-word = $focus-markers) then 'adv'
-							else if ($subordinate-first-word = $discourse_markers) then 'adv'
-							else if ($subordinate-first-word = $operators) then 'adv'
-							else if (
-								$subordinate-first-word = $complementizers 
-								and not($constituent-to-subordinate/@Rule = 'sub-CL')
-							) then 'o'
-							else if ($subordinate-first-word = $subordinators) then 'adv'
-							else if ($subordinate-first-word = $circumstances) then 'adv'
+							else if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate))
+								then local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
 							
 							else if ($constituent-to-subordinate/@Rule = 'ADV2CL') then
 								'adv'
