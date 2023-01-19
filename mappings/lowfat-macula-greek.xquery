@@ -1315,7 +1315,7 @@ declare function local:process-wrapper-clause($node, $passed-role)
 		* PtclCL
 		* Conj-CL
 		* V2CL
-	   These need thorough disambiguation, since some cases (e.g., ἃν, εἰ, ἀμήν, οὐχὶ, πως, ἰδοῦ [which could get passed here from disambiguate-clause-complex], etc.) should be subordinated within their clause complex as adverbials.
+	   These need thorough disambiguation, since some cases (e.g., ἃν, εἰ, ἀμήν, οὐχὶ, πως, ἰδοῦ [which could get passed here from disambiguate-clause-complex], etc.) should be subordinated within their clause complex as adverbials.
 	   Other cases should be subordinated as auxiliaries (e.g., Ὦ)
 	   Still other cases are, via crasis/derivation, true clause wrappers/conjuncted word groups (e.g., Ἄραγε)
 	:)
@@ -1509,7 +1509,20 @@ declare function local:process-single-constituent-clause($node, $passed-role)
 		case 'Intj2CL'
 		case 'Np2CL'
 			return 
+				if (
+					$node/descendant::Node/@Case="Vocative"
+					or $node/@ClType = 'Minor'
+				) then
+					$node/element() ! local:node(., 'aux' || (if ($debugging-mode) then  '__intj2cl or np2cl' else ()))
+				else if (
+					local:contains-projecting-verb($node/preceding-sibling::Node)
+					or substring(($node//Node[@Unicode])[1]/text(), 1, 1)
+						= upper-case(substring(($node//Node[@Unicode])[1]/text(), 1, 1))
+				) then
+					$node/element() ! local:node(., 'o' || (if ($debugging-mode) then  '_in sg constituent clause function' else ()))
+				else
 					$node/element() ! local:node(., 'aux' || (if ($debugging-mode) then  '_aux-single-constituent-clause2' else ()))
+				
 		case 'O22CL'
 			return 
 				(: Ryder TODO: revisit and disambiguate these since they are tied to complex clause disambiguation. They may need to have the $passed-role in cases where a ClCl parent has a projecting verb and content (and this O22CL could be the content, for example. :)
