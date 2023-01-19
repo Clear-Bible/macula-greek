@@ -1493,11 +1493,16 @@ declare function local:process-single-constituent-clause($node, $passed-role)
 		case 'ADV2CL'
 			return <wg>{
 						attribute class {'cl'},
-						attribute role {'aux'}, (: Ryder: should this sometimes be the passed role?? :)
-						$node/element() ! local:node(., 'err_' || $internal-role || '_test')
+						attribute role {'aux'|| (if ($debugging-mode) then  '_aux-single-constituent-clause1' else ())}, (: Ryder: should this sometimes be the passed role?? :)
 						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
+						$node/element() ! local:node(., ((:'err_' || $internal-role || '_test':)))
 					}</wg>
-		
+		case 'VC2CL'
+			return <wg>{
+						attribute class {'cl'},
+						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
+						$node/element() ! local:node(., 'vc' || (if ($debugging-mode) then  'err_' || $internal-role || '_test' else ()))
+					}</wg>
 		case 'PP2CL'
 			return 
 				$node/element() ! local:node(., 'adv' || (if ($debugging-mode) then  '_pp2cl' else ()))	
