@@ -1109,6 +1109,20 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else if (local:is-nominalized-clause($constituent-to-subordinate)) then
 									'adv' || (if ($debugging-mode) then  '__nom. cl.' else ())
 								
+								(: Ryder: if the subordinate clause is single-constituent, then there are several possibilities :)
+								else if ($constituent-to-subordinate/@Rule = $single-constituent-clause-rule) then
+									if (local:is-peripheral($constituent-to-subordinate)) then
+										'aux' || (if ($debugging-mode) then  '__periph' else ())
+									else if (local:contains-projecting-verb($constituent-to-raise)) then
+										(: Ryder: direct discourse :)
+										'o' || (if ($debugging-mode) then  '__projected-single-constituent-clause' else ())
+									else if ($constituent-to-subordinate/@Rule = 'V2CL') then
+										'o' || (if ($debugging-mode) then  '_object V2CL?' else ())
+									else if ($constituent-to-subordinate/@Rule = 'P2CL') then
+										'err_P2CL--what role should this be?'
+									else
+										'err__unhandled-subordinated-single-constituent-clause' || $constituent-to-subordinate/@Rule
+								
 								else if (local:contains-projecting-verb($constituent-to-raise)) then
 									(: Ryder: direct discourse :)
 									'o'
