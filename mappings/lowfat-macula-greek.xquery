@@ -944,7 +944,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					'400130440070240', (: Ryder: complex case of apposition - GBI analysis could be redone to make the subsequent clauses siblings instead of part of the apposition. :)
 					'400240150010190', (: Ryder: narrator interjection :)
 					'410150340100170', (: Ryder: apposition on direct discourse derived entity :)
-					'590050010010120' (: Ryder: prefacing speech act :)
+					'590050010010120', (: Ryder: prefacing speech act :)
+					'430140010060080' (: Ryder: indistinguishable from projection :)
 				)
 				
 				let $exceptions-to-force-projected-discourse := (
