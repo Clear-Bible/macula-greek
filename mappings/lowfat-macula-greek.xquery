@@ -776,13 +776,31 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				let $exceptions-to-exclude-coordination := (
 					'400240260120060' (: Ryder: discontinuous projected speech :)
 				)
+				
 				let $should-coordinate-constituents :=
 					not(
-						($first-constituent/@Rule, $second-constituent/@Rule) = ('that-VP', 'Intj2CL')
-						or
-						(
+						$node/@nodeId = $exceptions-to-exclude-coordination
+						or ($first-constituent/@Rule, $second-constituent/@Rule) = ('that-VP', 'Intj2CL')
+						or (
+							(: Ryder: these are typically indirect discourse, which should be nested not grouped :)
+							$node/Node/@Rule = 'that-VP'
+							and count($node/Node[local:is-nominalized-clause(.)]) eq 0
+						)
+						or (
 							local:is-simple-clause-rule($first-constituent/@Rule)
 							and local:contains-projecting-verb($first-constituent)
+						)
+						or (
+							count($node/Node[local:is-nominalized-clause(.)]) eq 1
+							and not($node/@Rule = ('NP-CL', 'CL-NP'))
+						)
+						or (
+							count($node/Node[local:is-peripheral(.)]) eq 1
+							and $second-constituent/@Rule ne 'P2CL' 
+						)
+						or (
+							$first-constituent/@Rule = ('PtclCL')
+							and $second-constituent/@Rule = 'that-VP'
 						)
 					)
 					and
