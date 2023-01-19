@@ -1142,6 +1142,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									else:)
 										'err_head-is-complex-of-simple-clauses-and-sub-is-simple-clause'
 								
+								else if ($constituent-to-subordinate/descendant::Node[@Unicode][1]/@Unicode = 'ἐγένετο') then
+									'adv' || (if ($debugging-mode) then  'topic' || '__egeneto' else ())
+									
 								else
 									'err__adv??-sub simple cl. Rule: ' || $constituent-to-subordinate/@Rule
 							
