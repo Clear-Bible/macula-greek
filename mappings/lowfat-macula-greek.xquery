@@ -1105,9 +1105,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									else
 										'adv' || (if ($debugging-mode) then  '__gen. abs.' else ())
 								
+								(: Ryder: topicalized relative clause :)
 								else if (local:is-nominalized-clause($constituent-to-subordinate)) then
-									(: Ryder: topicalized relative clause :)
-									'adv'
+									'adv' || (if ($debugging-mode) then  '__nom. cl.' else ())
+								
 								else if (local:contains-projecting-verb($constituent-to-raise)) then
 									(: Ryder: direct discourse :)
 									'o'
