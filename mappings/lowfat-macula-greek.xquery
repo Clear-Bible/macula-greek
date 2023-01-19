@@ -993,7 +993,11 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else 
 									if ($passed-role = 'apposition') 
 										then
-											local:keep-siblings-as-siblings($node, $passed-role || '_group2')
+											local:keep-siblings-as-siblings($node, $passed-role || (if ($debugging-mode) then  '_group2' else ()))
+									
+									else if (count($node/Node[@ClType = 'Minor']) eq 2) then
+										local:keep-siblings-as-siblings($node, '' || (if ($debugging-mode) then  '_double-minor-cl-group' else ()))
+									
 									else
 										local:keep-siblings-as-siblings($node, 'o' (:|| '_1???':))
 						else if ($node/Node[@Rule = 'that-VP']) 
