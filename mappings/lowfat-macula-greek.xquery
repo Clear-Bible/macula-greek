@@ -1145,6 +1145,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else if ($constituent-to-subordinate/descendant::Node[@Unicode][1]/@Unicode = 'ἐγένετο') then
 									'adv' || (if ($debugging-mode) then  'topic' || '__egeneto' else ())
 									
+								else if (every $child in $constituent-to-subordinate/Node satisfies $child[@Cat = 'ADV']) then
+									'adv'
+								
 								else
 									'err__adv??-sub simple cl. Rule: ' || $constituent-to-subordinate/@Rule
 							
