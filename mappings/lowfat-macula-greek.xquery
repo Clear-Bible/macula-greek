@@ -1275,7 +1275,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						)
 						
 						let $processed-head := local:node($constituent-to-raise, ())
-						let $processed-subordinate := local:node($constituent-to-subordinate, $disambiguated-subordinate-role)
+						let $processed-subordinate := 
+							if ($constituent-to-subordinate/@Rule = 'V2CL' and $disambiguated-subordinate-role = 'aux') then 
+								local:node($constituent-to-subordinate/Node, $disambiguated-subordinate-role)
+							else local:node($constituent-to-subordinate, $disambiguated-subordinate-role)
 						
 						return
 							<wg>{
