@@ -957,8 +957,16 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				
 				return
 				
-					if ($should-coordinate-constituents
-						or ($node/@nodeId) = $exceptions-to-force-coordination
+					if (
+						not($should-coordinate-constituents)
+						and not($should-subordinate-first)
+						and not($should-subordinate-second)
+					) then
+						<error role="{'err_clause-complex-met-no-conditions' || $node/@Rule}">{ $node/element() ! local:node(.) }</error>
+
+					else if (
+						$should-coordinate-constituents
+						or $node/@nodeId = $exceptions-to-force-coordination
 					) then (
 						if ($node/@Rule = ('NP-CL', 'CL-NP'))
 							then
