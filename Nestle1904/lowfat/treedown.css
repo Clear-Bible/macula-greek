@@ -75,7 +75,7 @@ sentence {
   > [class='cl'],
 [type$='clause-scope'] > [class='cl'],
 [type='wrapper-scope'] > [class='cl']:not([role]),
-[role]:not([class='cl']) > [role='aux']:not([class='cl']),
+[role]:not([class='cl']) > [role]:not([class='cl']),
 
   /* Ryder: these next three selectors are for group members following a member with an embedded clause */
 [type='group'] > [type$='clause-scope'] > [class='cl'],
