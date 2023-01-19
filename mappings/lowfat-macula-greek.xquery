@@ -1080,8 +1080,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									(: Ryder: Interruptions often occur in this context. If the first word begins with an en/em dash, then it is an interjection, and should have no role :)
 									''
 									
-								else if ($node/@Rule = 'sub-CL') then
-									'sub-cl? $relative_adverbs'
+								else if ($constituent-to-subordinate/@nodeId = '410080190010130') then
+									(: Ryder: this is an erroneous GBI analysis where the sub-CL in this ClCl2 should be the object of the parent ClCl, not subordinate to the simple clause grandchild. :)
+									'o' (: Ryder: by making it an 'o' right now, the entire ClCl2 becomes the object of the verb 'to remember', which is a possible though unlikely analysis in my opinion. :)
 									
 								else if (every $child in $constituent-to-subordinate/Node satisfies $child[(@ClType = "VerbElided" or @Cat = "conj")]) then
 									'ellipsis'
