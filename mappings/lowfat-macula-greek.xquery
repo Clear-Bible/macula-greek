@@ -1130,6 +1130,18 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else if (contains($node/ancestor::Sentence/descendant::Node[@UnicodeLemma="δέ"][1]/@Gloss, ('sa'))) then
 									'o' || (if ($debugging-mode) then  '__projected-discourse-that-begins-with-ὁ δὲ' else ())
 								
+								(: Ryder: simple-cl subordinate with raised complex of simple-cls :)
+								else if (
+									$constituent-to-raise/@Rule = $complex-clause-rule
+									and (every $child in $constituent-to-raise/Node[@Rule] satisfies local:is-simple-clause-rule($child/@Rule))
+									and local:is-simple-clause-rule($constituent-to-subordinate/@Rule)
+								) then
+									(: Ryder: when the head is a complex of multiple simple clauses, there are several possible analyses :)
+									(:if () then
+										''
+									else:)
+										'err_head-is-complex-of-simple-clauses-and-sub-is-simple-clause'
+								
 								else
 									'err__adv??-sub simple cl. Rule: ' || $constituent-to-subordinate/@Rule
 							
