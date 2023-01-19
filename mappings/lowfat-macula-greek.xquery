@@ -1174,6 +1174,19 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate))
 									then local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
 								
+								else if ($constituent-to-subordinate/@Cat = 'np') then
+									'apposition' || (if ($debugging-mode) then  '_raised-complex-child' else ())
+								
+								else if ($constituent-to-subordinate/@Rule = 'PtclCL') then
+									'' || (if ($debugging-mode) then  '_PtclCL' else ())
+								
+								else if ($constituent-to-subordinate/@Rule = 'S2CL') then
+									'o' (: Ryder: there is only one of these in Acts 27:44, but it is a case of ellipsis :)
+								
+								else if ($constituent-to-subordinate/@Rule = 'ADV2CL') then
+									(: Ryder: prefacing topics in 1 John e.g., 1 John 3:24 :)
+									'apposition'
+								
 								else 'err_group? subord child rule = ' || $constituent-to-subordinate/@Rule
 							
 							else if ($constituent-to-raise/@Rule = $group-rules) then
