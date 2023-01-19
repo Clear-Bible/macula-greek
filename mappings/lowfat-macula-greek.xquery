@@ -1126,6 +1126,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								(: Ryder: direct discourse :)
 								else if (local:contains-projecting-verb($constituent-to-raise)) then
 									'o' || (if ($debugging-mode) then  '__raised-constituent-has-projecting-verb' else ())
+								(: Ryder: projected discourse that begins with 'ὁ δὲ' - the gloss of δέ is something like 'said', 'say', etc. :)
+								else if (contains($node/ancestor::Sentence/descendant::Node[@UnicodeLemma="δέ"][1]/@Gloss, ('sa'))) then
+									'o' || (if ($debugging-mode) then  '__projected-discourse-that-begins-with-ὁ δὲ' else ())
+								
 								else
 									'err__adv??-sub simple cl. Rule: ' || $constituent-to-subordinate/@Rule
 							
