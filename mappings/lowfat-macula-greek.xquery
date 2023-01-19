@@ -887,16 +887,29 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				)
 				
 				let $should-subordinate-first := (
-					not($node/@nodeId = $exceptions-to-force-the-second-to-subordinate)
+					not(
+						$node/@nodeId = $exceptions-to-force-the-second-to-subordinate
+						or (
+							$first-constituent/@Rule = 'PtclCL'
+							and $second-constituent/@Rule = 'that-VP'
+						)
+					)
 					and
 					(
 						$node/@Rule = ('ClCl2', 'CLandCL2')
-						or $first-constituent[@Rule = ('that-VP', 'Intj2CL')]
+						or $first-constituent[@Rule = ('sub-CL')]
+						or (
+							$first-constituent[@Rule = ('that-VP', 'Intj2CL')] 
+							and not(
+								local:contains-projecting-verb($second-constituent)
+							)
+						)
 						or (
 							(: Ryder: if the projecting verb is non-initial in clause complex; e.g., Acts 7:7 :)
 							local:contains-projecting-verb($second-constituent)
 							and not(local:contains-projecting-verb($first-constituent))
 						)
+						or local:is-nominalized-clause($first-constituent)
 					)
 				)
 				
