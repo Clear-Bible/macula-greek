@@ -805,7 +805,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					)
 					and
 					(
-						(
+					    $node/@Rule = ('NP-CL', 'CL-NP')
+						or (
 							(: Ryder: Coordinate when both child nodes are simple clauses and the first is not a projecting clause. :)
 							local:is-simple-clause-rule($first-constituent/@Rule) 
 							and local:is-simple-clause-rule($second-constituent/@Rule) 
@@ -815,22 +816,61 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								and local:contains-projecting-verb($first-constituent)
 							) 
 						)
-						or 
-						(
+						or (
 							(: Ryder: Coordinate when both child nodes are clause complexes. :)
-							$first-constituent/@Rule = ($complex-clause-rule, $coordinationRule)
-							and $second-constituent/@Rule = ($complex-clause-rule, $coordinationRule)
-						
-						or
-						(
-							(: Ryder: Coordinate when one of the children is a "minor" clause, or the raised child contains a minor clause. :)
-							$first-constituent//@ClType = "Minor"
-							or $second-constituent//@ClType = "Minor"
-							or $first-constituent[@Rule = "V2CL"][//@LN = ('91.13', '91.14')]
+							$first-constituent/@Rule = ($complex-clause-rule, $coordinationRule, 'Conj-CL')
+							and $second-constituent/@Rule = ($complex-clause-rule, $coordinationRule, 'Conj-CL')
 						)
-						or $node/@Rule = ('NP-CL', 'CL-NP')
+						or (
+								(: Ryder: Coordinate when one of the children is a "minor" clause. :)
+								$first-constituent/@ClType = "Minor"
+								or $second-constituent/@ClType = "Minor"
+								or $first-constituent[@Rule = "V2CL"][//@LN = ('91.13', '91.14')]
+								or (
+									(: Ryder: seem to be naming speech acts, e.g., Luke 7:34 'behold! A man...' :)
+									local:is-peripheral($first-constituent)
+									and $second-constituent[@Rule = 'P2CL']
+								)
 								
-					)
+						) 
+						or (
+							(: Ryder: when the head is a complex of multiple simple clauses, there are several possible analyses :)
+							(
+								$first-constituent/@Rule = $complex-clause-rule
+								and (every $child in $first-constituent/Node[@Rule] satisfies local:is-simple-clause-rule($child/@Rule))
+								and local:is-simple-clause-rule($second-constituent/@Rule)
+							)
+							or 
+							(
+								$second-constituent/@Rule = $complex-clause-rule
+								and (every $child in $second-constituent/Node[@Rule] satisfies local:is-simple-clause-rule($child/@Rule))
+								and local:is-simple-clause-rule($first-constituent/@Rule)
+							)
+						)
+						or (
+							(: Ryder: krasis in the first word of a constituent should trigger coordination by default :)
+							some $first-word in $node/Node/(descendant::Node[@Unicode])[1]/@Unicode satisfies (
+								not(substring($first-word, 1, 1) = $all-greek-unaccented-vowels) 
+								and substring($first-word, 2, 1) = $all-greek-rough-breathing-vowel-characters
+						)
+						or local:contains-projecting-verb($node/parent::Node)
+						or count($first-constituent/child::Node[@ClType = 'Minor']) eq 2
+						
+						(: Ryder: or head is group, and subord is simple cl :)
+						or (
+							$node/@Rule = 'ClCl2'
+							and local:is-simple-clause-rule($first-constituent/@Rule)
+							and $second-constituent/@Rule = $group-rules
+						)
+						or (
+							$node/@Rule = 'ClCl'
+							and local:is-simple-clause-rule($second-constituent/@Rule)
+							and $first-constituent/@Rule = $group-rules
+						)
+						or $node/preceding-sibling::Node/descendant::Node[@Unicode][1]/@Unicode = 'ἐγένετο'
+						(: Ryder: assuming GAR should be discourse marker (e.g., Rev 14:4) :)
+						or $second-constituent[@Rule = 'sub-CL']/Node[@UnicodeLemma][1]/@UnicodeLemma = 'γάρ'
+					) 
 				)
 				
 				let $exceptions-to-force-the-second-to-subordinate := (
