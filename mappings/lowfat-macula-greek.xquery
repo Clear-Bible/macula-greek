@@ -576,23 +576,47 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 	let $np-constituent := $node/Node[@Cat = 'np']
 	let $cl-constituent := $node/Node[@Cat = 'CL']
 	return
-	<wg>{
-	    attribute type {'apposition-group'},
-	    if ($passed-role) then
-			attribute role {$passed-role}
+	if (not($np-constituent)) then
+		
+		if (local:is-nominalized-clause($node/Node[2])) then
+			<wg>{
+			    attribute type {'apposition-group'},
 			    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
+			    if ($passed-role) then
+					attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_1' else ())}
+				else
+					(), 
+				local:node($node/Node[1]),
+				local:node($node/Node[2], 'apposition')
+			}
+			</wg>
 		else
-			(),  
-	    if ($np-constituent << $cl-constituent) then (
-			$np-constituent/element() ! local:node(.),
-			local:node($cl-constituent, 'apposition')
-		)
-		else (
-			local:node($cl-constituent),
-			local:node($np-constituent, 'apposition')
-		)
-	 }</wg>
+			<error>{
+				attribute role {'err_no np constituent'},
+				$node/element() ! local:node(.)
+			}</error>
+	else if (not($cl-constituent)) then
+		<error>{
+			attribute role {'err_no cl constituent'},
+			$node/element() ! local:node(.)
+		}</error>
+	else
+		<wg>{
+		    attribute type {'apposition-group'},
 		    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
+		    if ($passed-role) then
+				attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_1' else ())}
+			else
+				(),  
+		    if ($np-constituent << $cl-constituent) then (
+				$np-constituent/element() ! local:node(.(:, 'err___debug-sg-constit-1':)),
+				local:node($cl-constituent, 'apposition' || (if ($debugging-mode) then  '___clause-complex-apposition_2' else ()))
+			)
+			else (
+				local:node($cl-constituent(:, 'err__debug-sg-constit-2':)),
+				local:node($np-constituent, 'apposition' || (if ($debugging-mode) then  '___clause-complex-apposition_3' else ()))
+			)
+		 }</wg>
 };
 
 declare function local:clause-complex-class-attribute($node, $constituent-to-subordinate, $constituent-to-raise, $disambiguated-subordinate-role, $passed-role)
