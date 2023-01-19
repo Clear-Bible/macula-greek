@@ -685,10 +685,10 @@ declare function local:disambiguate-ellipsis($elip-clause as element(Node), $pas
 	let $preceding-sibling-clause := $elip-clause/preceding-sibling::Node[@Rule][local:is-simple-clause-rule(@Rule)][1]
 	let $disambiguated-role := if (local:contains-projecting-verb($preceding-sibling-clause)) then
 			(: speech 'ellipsis' :)
-			'o.e'
+			'' || (if ($debugging-mode) then  '.e' else ())
 		else if ($preceding-sibling-clause) then
 			(: coordination ellipsis :)
-			'…' || $passed-role
+			(:'ellipsis' || :)$passed-role
 		else 
 			(: standalone ellipsis :)
 			$passed-role
