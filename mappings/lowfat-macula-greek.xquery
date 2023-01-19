@@ -1284,6 +1284,11 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							<wg>{
 								
 									$node/@Rule,
+									$should-coordinate-constituents ! (if ($debugging-mode) then attribute should_coord {.} else ()),
+									$constituent-to-subordinate/@Cat ! (if ($debugging-mode) then attribute child_cat {$constituent-to-subordinate/@Cat} else ()),
+									$constituent-to-subordinate/@Rule ! (if ($debugging-mode) then attribute child_rule {$constituent-to-subordinate/@Rule} else ()),
+									$constituent-to-raise/@Cat ! (if ($debugging-mode) then attribute head_cat {$constituent-to-raise/@Cat} else ()),
+									$constituent-to-raise/@Rule ! (if ($debugging-mode) then attribute head_rule {$constituent-to-raise/@Rule} else ()),
 									local:clause-complex-class-attribute($node, $constituent-to-subordinate, $constituent-to-raise, $disambiguated-subordinate-role, $passed-role),
 									$node/@nodeId,
 									local:attributes($processed-head),
