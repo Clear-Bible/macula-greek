@@ -1000,6 +1000,12 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									
 									else
 										local:keep-siblings-as-siblings($node, 'o' || '_1???')
+						else if ($node/Node[@Rule = 'that-VP']) then 
+							if (local:is-nominalized-clause($node/Node)) then
+								(: Ryder: note, you can only get here if you are forcing coordination on a clause complex with a that-VP :)
+								(: Ryder: if you have a sentence with no predication, only a bare/non-derived speech act e.g., GAL 2:10 :)
+								local:keep-siblings-as-siblings($node, ()|| (if ($debugging-mode) then  '___adverbial that-VP in naming speech act' else ()))
+							
 							else if (
 								(: Ryder: if you run into a clause complex here it is likely a case of projected indirect discourse, and it shouldn't be coordinated but subordinated. :)
 								$second-constituent/@Rule = $complex-clause-rule
