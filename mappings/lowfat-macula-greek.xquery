@@ -756,8 +756,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					- flatten some series of nested ClCl when they should be groups (e.g., potentially Isaiah 51.9, which has ClCl 4 or 5 deep)
 					
 					TODO:
-					* handle complex clause structures beyond ClCl, ClCl2, and CLandCL2
-					* handle projected speech
+					* handle PtclCL, either/or, not/but, etc. in a separate function direction from the node-type() function.
 				:)
 				
 				(: Ryder: If a extra-sentential auxiliary modifies a clause complex, flag these cases for special processing.
@@ -880,8 +879,11 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				)
 				
 				let $exceptions-to-force-the-second-to-subordinate := (
-					(: Ryder: exceptions to force the second to subordinate :)
-					'480020040060140' (: Ryder: this appears to be a GBI error, ClCl2 should be ClCl :) 
+					'480020040060140', (: Ryder: this appears to be a GBI error, ClCl2 should be ClCl :)
+					'400080040060190', (: Ryder: multiple nested projecting verbs :)
+					'400090060030130', (: Ryder: projected, but not embedded discourse :)
+					'400190180040250', (: Ryder: projected grouped speech :)
+					'400240480030130' (: Ryder: GBI error? speech should be embedded, not projecting matrix :)
 				)
 				
 				let $should-subordinate-first := (
