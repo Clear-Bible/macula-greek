@@ -999,13 +999,15 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 										local:keep-siblings-as-siblings($node, '' || (if ($debugging-mode) then  '_double-minor-cl-group' else ()))
 									
 									else
-										local:keep-siblings-as-siblings($node, 'o' (:|| '_1???':))
-						else if ($node/Node[@Rule = 'that-VP']) 
-							then 
-								if (local:is-nominalized-clause($node/Node)) then
-									(: Ryder: note, you can only get here if you are forcing coordination on a clause complex with a that-VP :)
-									(: Ryder: if you have a sentence with no predication, only a bare/non-derived speech act e.g., GAL 2:10 :)
-									local:keep-siblings-as-siblings($node, ()(: || '___adverbial that-VP in naming speech act':))
+										local:keep-siblings-as-siblings($node, 'o' || '_1???')
+							else if (
+								(: Ryder: if you run into a clause complex here it is likely a case of projected indirect discourse, and it shouldn't be coordinated but subordinated. :)
+								$second-constituent/@Rule = $complex-clause-rule
+							) then local:keep-siblings-as-siblings($node, 'err_projected-indirect-discourse-in-group?' || ' Parent: ' || $node/@Rule || $node/@nodeId || ' second-child: ' || $second-constituent/@Rule )
+							
+							else if ($node/@nodeId = '440130380010280') then
+								'how did this get through? should coord: ' || $should-coordinate-constituents
+							
 							else 
 								local:keep-siblings-as-siblings($node, 'err_should_not_get_here') 
 						
