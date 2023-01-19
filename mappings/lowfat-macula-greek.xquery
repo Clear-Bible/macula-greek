@@ -715,7 +715,13 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 	
 	return
 		
-		if ($node/@nodeId = $exceptions-to-skip-complex) then
+		if (
+			$node/@nodeId = $exceptions-to-skip-complex
+			(:or (
+				$node/Node[1]/@Rule = 'PtclCL'
+				and $node/Node[2]/@Rule = 'that-VP'
+			):)
+		) then
 			$node/element() ! local:node(., $passed-role)
 		
 		(: Ryder: Ensure an error is thrown for cases I have not yet handled. :)
