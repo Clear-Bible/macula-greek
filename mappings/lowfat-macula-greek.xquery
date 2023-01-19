@@ -948,7 +948,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				)
 				
 				let $exceptions-to-force-projected-discourse := (
-					'440050090060220' (: Ryder: projected discourse that begins with a simple 'ὁ Πέτρος δὲ' :)
+					'440050090060220', (: Ryder: projected discourse that begins with a simple 'ὁ Πέτρος δὲ' :)
+					'400160030030070' (: Ryder: projected discourse in elliptical junction :)
 				)
 				let $exceptions-to-exclude-projected-discourse := (
 					'480010200050070' (: Ryder: projecting verb is separate sentence/move :)
