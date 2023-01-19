@@ -474,7 +474,7 @@ declare function local:simple-clause($node, $passed-role, $ellipsis-already-proc
 		local:disambiguate-ellipsis($node, $passed-role)
 	else
 		let $fallback-constituent-role := (if ($passed-role = 'ellipsis') then 
-			(:$passed-role:) '' (: Ryder: TODO I had 'ellipsis' or '...' here; handle ellipsis + role however the team decides to handle this :)
+			(:$passed-role:) '' || (if ($debugging-mode) then 'ellipsis' else ()) (: Ryder: TODO I had 'ellipsis' or '...' here; handle ellipsis + role however the team decides to handle this :)
 			else '') || (if (contains($node/@Rule, '2CL')) then lower-case(substring-before($node/@Rule, '2CL')) else 'err_no_fallback_constituent_role?')
 		let $clause-roles := if (contains($node/@Rule, '-')) then tokenize(lower-case($node/@Rule), '-') else if ($fallback-constituent-role) then $fallback-constituent-role else 'err_no_constituent_role? passed-role: ' || $passed-role
 		return
@@ -685,13 +685,13 @@ declare function local:disambiguate-ellipsis($elip-clause as element(Node), $pas
 	let $preceding-sibling-clause := $elip-clause/preceding-sibling::Node[@Rule][local:is-simple-clause-rule(@Rule)][1]
 	let $disambiguated-role := if (local:contains-projecting-verb($preceding-sibling-clause)) then
 			(: speech 'ellipsis' :)
-			'' || (if ($debugging-mode) then  '.e' else ())
+			'' || (if ($debugging-mode) then  '.ellipsis_speech' else ())
 		else if ($preceding-sibling-clause) then
 			(: coordination ellipsis :)
-			(:'ellipsis' || :)$passed-role
+			(if ($debugging-mode) then 'ellipsis_coord' else ()) || $passed-role
 		else 
 			(: standalone ellipsis :)
-			$passed-role
+			$passed-role || (if ($debugging-mode) then  '.ellipsis_standalone' else ())
 	return 
 		local:simple-clause($elip-clause, $disambiguated-role, true())	
 };
@@ -1083,7 +1083,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'o' (: Ryder: by making it an 'o' right now, the entire ClCl2 becomes the object of the verb 'to remember', which is a possible though unlikely analysis in my opinion. :)
 									
 								else if (every $child in $constituent-to-subordinate/Node satisfies $child[(@ClType = "VerbElided" or @Cat = "conj")]) then
-									'ellipsis'
+									'ellipsis' || (if ($debugging-mode) then  '_clausecomplex' else ())
 								else if ($subordinate-first-word = $relative-nominals) then
 									'apposition'
 								
