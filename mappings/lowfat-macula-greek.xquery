@@ -938,11 +938,13 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					'480010200010100', '480010200050070', (: Ryder: the entire verse is introductory/topicalized material for the next verse :)
 					'480020100040100', (: Ryder: this was a special case for GAL 2:10, but it might apply more generally, where the entire sentence is a non-verbal predication. :)
 					'440130220020280', (: Ryder: multiple sentences. Coreferential tie in second sentence must have triggered a ClCl rule? Note, I'm not convinced by the analysis of the ClCl in this case. :)
-					'440130380010280', '440130380010050', '440130380070230', (: Ryder: here there is a complex node which combines a nummber of non-simple clauses :)
-					'440180060120160', (: Ryder: multiple sentences :)
-					'440180150010200', (: Ryder: multiple sentences :)
-					'440180190010150' (: Ryder: multiple sentences :)
-					
+					'440130380010050', '440130380070230', (: Ryder: here there is a complex node which combines a nummber of non-simple clauses :)
+					(: Ryder: multiple sentences: :)
+					'580100070050120', '460150460070050', '420060330030160', '400270460120140', '400260060010240', '400250090060160', '400250060060060', '400160230070070', '400210020030190', '400220040090190', '400150220120100', '440180060120160', '440180150010200', '440180190010150', '410060380050050', '410070180040350', '400170050160120', '400140270080030', '400080030080020', '400080290050130', '400090020190060', '400130290040110',  
+					'400130440070240', (: Ryder: complex case of apposition - GBI analysis could be redone to make the subsequent clauses siblings instead of part of the apposition. :)
+					'400240150010190', (: Ryder: narrator interjection :)
+					'410150340100170', (: Ryder: apposition on direct discourse derived entity :)
+					'590050010010120' (: Ryder: prefacing speech act :)
 				)
 				
 				let $exceptions-to-force-projected-discourse := (
