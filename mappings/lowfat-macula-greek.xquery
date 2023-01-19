@@ -1094,9 +1094,17 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							
 							else if (local:is-simple-clause-rule($constituent-to-subordinate/@Rule)) then
 								(: Ryder: there are several cases where a simple clause will be subordinated :)
-								if (some $verb in $constituent-to-subordinate/Node[@Cat = 'V'] satisfies $verb//@Mood = 'Participle') then
-									(: Ryder: genitive absolutes :)
-									'adv'
+								
+								(: Ryder: genitive absolutes :)
+								if (some $verb in $constituent-to-subordinate/Node[@Cat = ('V', 'VC')] satisfies $verb//@Mood = 'Participle') then
+									if ($constituent-to-raise/@Rule = ($complex-clause-rule, $group-rules)) then
+										if ($constituent-to-raise << $constituent-to-subordinate) then
+											'tail'
+										else
+											'topic'
+									else
+										'adv' || (if ($debugging-mode) then  '__gen. abs.' else ())
+								
 								else if (local:is-nominalized-clause($constituent-to-subordinate)) then
 									(: Ryder: topicalized relative clause :)
 									'adv'
