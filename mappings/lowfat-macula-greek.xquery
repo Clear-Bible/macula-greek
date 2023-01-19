@@ -708,7 +708,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 	
 	let $rules-that-have-been-disambiguated-in-this-function := ('ClCl', 'ClCl2', 'CLandCL2', 'NP-CL', 'CL-NP')
 	let $exceptions-to-skip-complex := (
-		'440180060120090' (: Ryder: multiple sentences :)
+		'440180060120090', (: Ryder: multiple sentences :)
+		'410060380080020', (: Ryder: multiple sentences :)
+		'410090050180080' (: Ryder: ellipsis :)
 	)
 	
 	return
