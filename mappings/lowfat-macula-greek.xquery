@@ -473,7 +473,9 @@ declare function local:simple-clause($node, $passed-role, $ellipsis-already-proc
 	if (not($ellipsis-already-processed) and $node/@ClType = 'VerbElided') then
 		local:disambiguate-ellipsis($node, $passed-role)
 	else
-		let $fallback-constituent-role := (if ($passed-role = '…') then $passed-role else '') || (if (contains($node/@Rule, '2CL')) then lower-case(substring-before($node/@Rule, '2CL')) else 'err_no_fallback_constituent_role?')
+		let $fallback-constituent-role := (if ($passed-role = 'ellipsis') then 
+			(:$passed-role:) '' (: Ryder: TODO I had 'ellipsis' or '...' here; handle ellipsis + role however the team decides to handle this :)
+			else '') || (if (contains($node/@Rule, '2CL')) then lower-case(substring-before($node/@Rule, '2CL')) else 'err_no_fallback_constituent_role?')
 		let $clause-roles := if (contains($node/@Rule, '-')) then tokenize(lower-case($node/@Rule), '-') else if ($fallback-constituent-role) then $fallback-constituent-role else 'err_no_constituent_role? passed-role: ' || $passed-role
 		return
 			<wg>{
