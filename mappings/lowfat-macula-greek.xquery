@@ -170,12 +170,16 @@ declare function local:attributes($node)
 };
 declare function local:attributes($node, $exclusions)
 {
-    if (not('class' = $exclusions)) then
-			if ($node/@Cat = $group-rules) then () 
-			else
-				$node/@Cat ! attribute class {lower-case(.)}
+	local:attributes($node, (), ())
+};
+declare function local:attributes($node, $exclusions, $passed-role)
+{
+    if (contains($exclusions, 'class')) then
+			()
 		else
-			(),
+			if ($node/@Rule = ($group-rules, $complex-clause-rule)) then () 
+			else
+				$node/@Cat ! attribute class {lower-case(.)},
     if (
     	local:is-nominalized-clause($node)
     	) then attribute clauseType {'nominalized'} else (),
