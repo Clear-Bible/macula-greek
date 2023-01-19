@@ -1751,30 +1751,39 @@ declare function local:node($node as element(), $passed-role as xs:string?)
 			role="{'error_too_many_nodes' || $node/@Rule}"
 		>{$node}</error_too_many_nodes>
 	else
-		if ($node/@Rule = $conjuncted-structure-rule) then
-			local:process-conjunctions($node, $passed-role)
-		else
-			switch (local:node-type($node))
-				case "word"
+		
+		let $exceptions-to-skip-node := (
+			'400250090140080', (: CLaCL to skip :)
+			'400250110090020' (: ClCl with two auxiliaries :)
+		)
+		
+		return
+			if ($node/@nodeId = $exceptions-to-skip-node) then
+					$node/element() ! local:node(., $passed-role || (if ($debugging-mode) then  '__exception-atomic_' || ./@Unicode else ()))
+			else if ($node/@Rule = $conjuncted-structure-rule) then
+				local:process-conjunctions($node, $passed-role)
+			else 
+				switch (local:node-type($node))
+					case "word"
+						return
+							local:word($node, $passed-role)
+					case "simple-clause"
+						return
+							local:simple-clause($node, $passed-role, ())
+					case "clause-complex"
+						return
+							local:disambiguate-clause-complex-structure($node, $passed-role)
+					case "atomic"
+						return
+							$node/element() ! local:node(., $passed-role || (if ($debugging-mode) then  '__atomic_' || ./@Unicode else ()))
+					case "complex"
+						return
+							local:process-complex-node($node, $passed-role)
+					default
 					return
-						local:word($node, $passed-role)
-				case "simple-clause"
-					return
-						local:simple-clause($node, $passed-role, ())
-				case "clause-complex"
-					return
-						local:disambiguate-clause-complex-structure($node, $passed-role)
-				case "atomic"
-					return
-						$node/element() ! local:node(., $passed-role)
-				case "complex"
-					return
-						local:process-complex-node($node, $passed-role)
-				default
-				return
-					<error_unknown_node_type
-						role="{'error_unknown_node_type' || $node/@Rule}"
-					>{$node/@*}</error_unknown_node_type>
+						<error_unknown_node_type
+							role="{'error_unknown_node_type' || $node/@Rule}"
+						>{$node/@*}</error_unknown_node_type>
 };
 
 declare function local:straight-text($node)
