@@ -563,7 +563,7 @@ declare function local:disambiguate-role-by-subordinate-first-word($subordinate-
 	else if (
 		$subordinate-first-word = $complementizers 
 		and not($constituent-to-subordinate/@Rule = 'sub-CL')
-	) then 'o' || '_in first-word disambiguation'
+	) then 'o' || (if ($debugging-mode) then  '_in first-word disambiguation' else ())
 	else if ($subordinate-first-word = $subordinators) then 'adv' || (if ($debugging-mode) then  '___role-by-subordinate-first-word_7' else ())
 	else if ($subordinate-first-word = $circumstances) then 'adv' || (if ($debugging-mode) then  '___role-by-subordinate-first-word_8' else ())
 	else if ($subordinate-first-word = $relative_adverbs_WS) then 'adv' || (if ($debugging-mode) then  '___role-by-subordinate-first-word_9' else ())
@@ -989,7 +989,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								) then local:keep-siblings-as-siblings($node, 'o2' || (if ($debugging-mode) then  '_1???' else ()))
 								
 								else if (local:is-nominalized-clause($second-constituent)) then
-									local:process-clause-complex-apposition($node, 'o' || '_appos-1')
+									local:process-clause-complex-apposition($node, 'o' || (if ($debugging-mode) then '_appos-1' else ()))
 								
 								else 
 									if ($passed-role = 'apposition') 
@@ -1000,7 +1000,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 										local:keep-siblings-as-siblings($node, '' || (if ($debugging-mode) then  '_double-minor-cl-group' else ()))
 									
 									else
-										local:keep-siblings-as-siblings($node, 'o' || '_1???')
+										local:keep-siblings-as-siblings($node, 'o' || (if ($debugging-mode) then '_1???' else ()))
 						else if ($node/Node[@Rule = 'that-VP']) then 
 							if (local:is-nominalized-clause($node/Node)) then
 								(: Ryder: note, you can only get here if you are forcing coordination on a clause complex with a that-VP :)
@@ -1011,9 +1011,6 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								(: Ryder: if you run into a clause complex here it is likely a case of projected indirect discourse, and it shouldn't be coordinated but subordinated. :)
 								$second-constituent/@Rule = $complex-clause-rule
 							) then local:keep-siblings-as-siblings($node, 'err_projected-indirect-discourse-in-group?' || ' Parent: ' || $node/@Rule || $node/@nodeId || ' second-child: ' || $second-constituent/@Rule )
-							
-							else if ($node/@nodeId = '440130380010280') then
-								'how did this get through? should coord: ' || $should-coordinate-constituents
 							
 							else 
 								local:keep-siblings-as-siblings($node, 'err_unhandled grouped complex - should not get here' || ' Parent: ' || $node/@Rule || $node/@nodeId || ' second-child: ' || $second-constituent/@Rule ) 
@@ -1091,7 +1088,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'apposition'
 								
 								(: Ryder: note that this is an 'err_' fallback case :)
-								else 'apposition' (: || $node/@Rule || ' subord: ' || $constituent-to-subordinate/@Rule:)
+								else 'apposition' || (if ($debugging-mode) then $node/@Rule || ' subord: ' || $constituent-to-subordinate/@Rule else ())
 							
 							else if (local:is-simple-clause-rule($constituent-to-subordinate/@Rule)) then
 								(: Ryder: there are several cases where a simple clause will be subordinated :)
@@ -1255,7 +1252,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									(: Ryder: check whether constituent of embedding clause already has 'o' role :)
 									local:previous-sibling-has-role($constituent-to-subordinate, 'O')
 								) then
-									'o2' || '_d'
+									'o2' || (if ($debugging-mode) then '_d' else ())
 								else
 									'o' || (if ($debugging-mode) then '_d' || data($node/@nodeId)  else ())
 							
@@ -1385,9 +1382,9 @@ declare function local:process-wrapper-clause($node, $passed-role)
 				let $subordinate-first-word := $constituent-to-embed//Node[@UnicodeLemma][1]/@UnicodeLemma
 				let $disambiguated-embedded-role := (
 					if ($constituent-to-embed[@Rule = "V2CL"][descendant::*[@LN = $auxiliary-domains]]) then
-						'aux__wrap' || $should-embed-first
+						'aux' || (if ($debugging-mode) then '__wrap' || $should-embed-first else ())
 					else if ($subordinate-first-word = $adverbial-lemmas) then
-						'adv__wrap'
+						'adv' || (if ($debugging-mode) then '__wrap' else ())
 					else if ($subordinate-first-word = $undetermined-wrapper-lemmas) then
 						$passed-role || (if ($debugging-mode) then  '_wrap_default_type' else ())
 					else
@@ -1496,7 +1493,7 @@ declare function local:process-single-constituent-clause($node, $passed-role)
 						attribute class {'cl'},
 						attribute role {'aux'|| (if ($debugging-mode) then  '_aux-single-constituent-clause1' else ())}, (: Ryder: should this sometimes be the passed role?? :)
 						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
-						$node/element() ! local:node(., ((:'err_' || $internal-role || '_test':)))
+						$node/element() ! local:node(., ((if ($debugging-mode) then 'err_' || $internal-role || '_test' else ())))
 					}</wg>
 		case 'VC2CL'
 			return <wg>{
