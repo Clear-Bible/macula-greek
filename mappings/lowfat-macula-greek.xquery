@@ -160,7 +160,7 @@ declare function local:is-nominalized-clause($node)
 	$node/@Cat = 'CL' 
     and (
     		$node/parent::Node/@Rule = $nominalized-clause-rule 
-    		or $node/descendant::Node[@Cat ne 'CL']/descendant::Node[@Type = 'Relative']
+    		or $node/descendant::Node[@Cat ne 'CL'][1]/descendant::Node[@Type = 'Relative']
     	)
 };
 
