@@ -773,6 +773,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					}</wg>
 				else:)
 				
+				let $exceptions-to-exclude-coordination := (
+					'400240260120060' (: Ryder: discontinuous projected speech :)
+				)
 				let $should-coordinate-constituents :=
 					not(
 						($first-constituent/@Rule, $second-constituent/@Rule) = ('that-VP', 'Intj2CL')
