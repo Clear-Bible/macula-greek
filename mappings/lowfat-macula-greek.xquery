@@ -1015,7 +1015,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								'how did this get through? should coord: ' || $should-coordinate-constituents
 							
 							else 
-								local:keep-siblings-as-siblings($node, 'err_should_not_get_here') 
+								local:keep-siblings-as-siblings($node, 'err_unhandled grouped complex - should not get here' || ' Parent: ' || $node/@Rule || $node/@nodeId || ' second-child: ' || $second-constituent/@Rule ) 
 						
 						else if (
 							(
@@ -1061,10 +1061,15 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							else if ($constituent-to-subordinate/@Rule = $complex-clause-rule) then
 								if ($constituent-to-raise/@ClType = 'Verbless') then
 									(: Ryder TODO: disambiguate these (e.g., MRK 12:31). Some of them seem to be projected, but they still are probably best analyzed as apposition. :)
-									'apposition_verbless'
+									'apposition'
 								else if (local:contains-projecting-verb($constituent-to-raise)) then
 									if (every $child in $constituent-to-subordinate/Node satisfies $child/@ClType = 'Minor') then
 										''
+									else if (
+										local:is-nominalized-clause($constituent-to-subordinate)
+									) then
+										
+										'apposition' || (if ($debugging-mode) then  '_nominalized-cl' else ())
 									else
 										'o' || (if ($debugging-mode) then  '_a' else ())
 								
@@ -1078,7 +1083,13 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else if ($node/@Rule = 'sub-CL') then
 									'sub-cl? $relative_adverbs'
 									
-								else 'err-apposition? 2'
+								else if (every $child in $constituent-to-subordinate/Node satisfies $child[(@ClType = "VerbElided" or @Cat = "conj")]) then
+									'ellipsis'
+								else if ($subordinate-first-word = $relative-nominals) then
+									'apposition'
+								
+								(: Ryder: note that this is an 'err_' fallback case :)
+								else 'apposition' (: || $node/@Rule || ' subord: ' || $constituent-to-subordinate/@Rule:)
 							
 							else if (local:is-simple-clause-rule($constituent-to-subordinate/@Rule)) then
 								(: Ryder: there are several cases where a simple clause will be subordinated :)
