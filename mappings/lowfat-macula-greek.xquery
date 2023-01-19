@@ -1149,7 +1149,13 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'adv'
 								
 								else
-									'err__adv??-sub simple cl. Rule: ' || $constituent-to-subordinate/@Rule
+									'err__subordinated simple cl.,' || '
+									parent rule: ' || $node/@Rule || '
+									head rule: ' || $constituent-to-raise/@Rule || '
+									subord. rule: ' || $constituent-to-subordinate/@Rule || '
+									id: ' || 
+									'parent has projecting verb: ' || local:contains-projecting-verb($node/parent::Node)
+									|| $node/@nodeId
 							
 							else if ($constituent-to-raise/@Rule = $complex-clause-rule) then
 								(: Ryder: a clause complex as the head involves some fairly diverse structures :)
