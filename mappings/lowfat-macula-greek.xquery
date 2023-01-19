@@ -1534,7 +1534,7 @@ declare function local:process-single-constituent-clause($node, $passed-role)
 		
 		default
 			return
-				<error_unhandled_single_constituent_clause role="error_unhandled_single_constituent_clause" rule="{$node/@Rule}">{$node/element() ! local:node(.)}</error_unhandled_single_constituent_clause>
+			 	<error_unhandled_single_constituent_clause role="error_unhandled_single_constituent_clause" rule="{$node/@Rule}">{$node/element() ! local:node(.)}</error_unhandled_single_constituent_clause>
 };
 
 declare function local:process-complex-node($node, $passed-role)
@@ -1604,7 +1604,6 @@ declare function local:process-complex-node($node, $passed-role)
 						if ($node/@Rule = $complex-clause-rule) then
 							local:disambiguate-clause-complex-structure($node, $passed-role)
 						else
-							(: Ryder: V2CL is a clause with only a 'verb' constituent :)
 							if ($node/@Rule = $single-constituent-clause-rule) then
 								local:process-single-constituent-clause($node, $passed-role)
 						
@@ -1616,15 +1615,6 @@ declare function local:process-complex-node($node, $passed-role)
 
 declare function local:phrase($node)
 {
-(:
-     #### BUG - I might have various levels of children at this point.  Still not out of the water. #####
-     #### BUG - roles with participles, infinitiives  (v.part, v.inf)
-
-
-    if ($node/@Rule=$singleton-phrases and count($node/descendant::Node[empty(Node)]) eq 1)
-    then local:singleton($node)
-    else
-:)
         <wg>
             {
                 local:attributes($node),
