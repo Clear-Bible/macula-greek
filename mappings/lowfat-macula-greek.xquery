@@ -535,10 +535,13 @@ declare function local:contains-projecting-verb($node)
 		$node[@nodeId = $exceptions-to-include]
 		or
 		(
-			$node//*[
+			$node/descendant::Node[@Cat ne 'CL']/descendant::*[
 				starts-with(@LN, '33') 
+				or starts-with(@LN, '31')
+				or starts-with(@LN, '32')
 				or starts-with(@LN, '28') 
 				or starts-with(@LN, '30')
+				or @UnicodeLemma = "λέγω"
 			]
 			and not(
 				(: Ryder: Exceptions that would otherwise be false positives since they are structurally almost indistinguishable from projecting constructions :)
