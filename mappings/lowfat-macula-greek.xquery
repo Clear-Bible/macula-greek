@@ -970,7 +970,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					) then (
 						if ($node/@Rule = ('NP-CL', 'CL-NP'))
 							then
-								local:process-clause-complex-apposition($node, $passed-role (:|| '_group1':))
+								local:process-clause-complex-apposition($node, $passed-role || (if ($debugging-mode) then  '_group1' else ())) 
 						else if (
 							some $previous in $node/preceding-sibling::Node satisfies local:contains-projecting-verb($previous)
 							and not($node/@nodeId = $exceptions-to-exclude-projected-discourse)
@@ -985,7 +985,11 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								if (
 									(: embedding clause already has object :)
 									local:previous-sibling-has-role($node, 'O')
-								) then local:keep-siblings-as-siblings($node, 'o2' (:|| '_1???':))
+								) then local:keep-siblings-as-siblings($node, 'o2' || (if ($debugging-mode) then  '_1???' else ()))
+								
+								else if (local:is-nominalized-clause($second-constituent)) then
+									local:process-clause-complex-apposition($node, 'o' || '_appos-1')
+								
 								else 
 									if ($passed-role = 'apposition') 
 										then
