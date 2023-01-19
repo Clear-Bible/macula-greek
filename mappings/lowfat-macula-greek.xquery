@@ -1123,9 +1123,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									else
 										'err__unhandled-subordinated-single-constituent-clause' || $constituent-to-subordinate/@Rule
 								
+								(: Ryder: direct discourse :)
 								else if (local:contains-projecting-verb($constituent-to-raise)) then
-									(: Ryder: direct discourse :)
-									'o'
+									'o' || (if ($debugging-mode) then  '__raised-constituent-has-projecting-verb' else ())
 								else
 									'err__adv??-sub simple cl. Rule: ' || $constituent-to-subordinate/@Rule
 							
