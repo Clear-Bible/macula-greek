@@ -26,20 +26,23 @@ sentence {
 * ELEMENTS THAT SHOULD BE ON NEW LINES *
 ***************************************/
 
-/* standard new-lined elements in Treedown */
 [class='cl'],
 [role],
+[role]:not([role='aux']) [type='conjuncted-wg']:not(:first-child), /* Ryder: break conjuncted elements onto new lines, but not the first one (for cases where the first element is a conjuncted wg */
 
-/* potential new-lined elements */
-[role]:not([role='aux']) [type='conjuncted-wg'], /* Ryder: break vav-conjuncted elements onto new lines in Hebrew trees only */
-[appositioncontainer],
-/* Ryder: modifiers like prepositions may look awkward if they are hanging at the end of a line. If they are at the beginning of the line this is not a problem. */
-/* [class="modifier-scope"]:not(:first-child),  */
-/* [type='group'] > [class="modifier-scope"], */
+/* Ryder: these next three selectors are for group members following a member with an embedded clause */
+[type='group'] > [type$='clause-scope'] > [class='cl'],
+[type='group'] > [type$='clause-scope'] + *,
+[type='group'] > [type='group'] + *,
 
-/* Ryder: sometimes a clause is 'wrapped' by something like a relative pronoun. These could be on a new line to improve readability. */
-[type^='wrapper-clause'], /* <-- select only wrappers that wrap clauses */
-[type^='wrapper'] /* <-- select all wrappers, regardless of what is wrapped */ {
+/* Ryder: these next two selectors are for nested, nominalized clauses, which are sometimes in apposition, and sometimes with preceding and/or following content that is not a clause. */
+[type$='clause-scope']:not([role='apposition']):not([appositioncontainer])
+  > [class='cl']:not([clausetype='nominalized']),
+[type$='clause-scope']:not([role='apposition']):not([appositioncontainer]) > wg + *,
+[type='apposition-group'] > [type='group'],
+
+[type='group'][role]:not([role='apposition']):not([appositioncontainer]):not([role='aux']) > * /* Ryder: these are often clausal apposition, e.g., NP-CL */ {
+  /* <-- select only wrappers that wrap clauses */ /* Ryder: sometimes a clause is 'wrapped' by something like a relative pronoun. These could be on a new line to improve readability. */
   display: block;
 }
 
@@ -56,27 +59,36 @@ sentence {
 * ELEMENTS THAT SHOULD BE INDENTED *
 ***********************************/
 
-/* [type='modifier-scope']:not([role]):not(:first-child), */
-/* [type^='wrapper-clause'], */
-/* [type='group'] > [type='modifier-scope']:not([role]), */
-[class='cl'] [type='conjuncted-wg'],
-[type='group'][role],
+/* Ryder: a clause or conjuncted wg following a clause that is a descendent of a clause or role */
+*:is([class='cl'], [role]) *:is([class='cl'], [class='cl'] + [type='conjuncted-wg']),
+
+[type='group'][role]:not([role='apposition']):not([appositioncontainer]):not([role='aux']) > *, /* Ryder: these are often clausal apposition, e.g., NP-CL */
 [role='apposition'],
-[appositioncontainer],
-[type^='wrapper']:not([role]),
+[type='apposition-group'] > [type='group'],
+[type='apposition-group'] > [type='group'] + *,
+
 [class='cl'] [type='conjuncted-wg']:not(:first-child) > w:first-child, /* Ryder: the first word of a conjuncted wg should be indented with the rest of the group, so long as it is a descendent of a clause. */
-/* *[role] + [type^='wrapper'][role] > *[class='cl'], */
-[class='cl'] [class='cl'],
-[type^='wrapper'] > [class='cl'] {
+*[role] > [type='^modifier'] > [type^='wrapper'],
+[class='cl'] [class='cl'][role]:not([role='apposition']):not([appositioncontainer]), /* Ryder: clauses with roles should be indented to make room for the role, but apposition is elsewhere given additional indentation so do not select it here. */
+[role]:not([class='cl']):not([type='apposition-group'])
+  > [role='apposition']
+  > [class='cl'],
+[type$='clause-scope'] > [class='cl'],
+[type='wrapper-scope'] > [class='cl']:not([role]),
+[role]:not([class='cl']) > [role='aux']:not([class='cl']),
+
+  /* Ryder: these next three selectors are for group members following a member with an embedded clause */
+[type='group'] > [type$='clause-scope'] > [class='cl'],
+[type='group'] > [type$='clause-scope'] + *,
+[type$='group'] > [type='group'] + *,
+
+/* Ryder: these next two selectors are for nested, nominalized clauses, which are sometimes in apposition, and sometimes with preceding and/or following content that is not a clause. */
+[type$='clause-scope']:not([role='apposition']):not([appositioncontainer])
+  > [class='cl']:not([clausetype='nominalized']),
+[type$='clause-scope']:not([role='apposition']):not([appositioncontainer]) > wg + *,
+
+:not([type='group']) > [type^='wrapper-clause'] > [class='cl'] {
   margin-inline-start: 1rem;
-}
-
-*[role] + [type^='wrapper'][role] > *[class='cl'] {
-  /* background: lightblue; */
-}
-
-[type^='wrapper'][role] {
-  /* background: lightyellow; */
 }
 
 /***************************************
@@ -105,6 +117,18 @@ sentence {
 [role='apposition']::before {
   content: ':';
   /* margin-inline-start: 1rem; */
+}
+[role='ellipsis']::before {
+  content: '+';
+  /* content: '…'; */
+}
+[role='topic']::before {
+  content: '+';
+  /* content: '>'; */
+}
+[role='tail']::before {
+  content: '+';
+  /* content: '<'; */
 }
 
 /**************
@@ -145,7 +169,6 @@ w[after=' ']::after {
 ****************/
 
 /* Ryder: clauses with clause roles should have the role above the group and to the right. */
-
 [class='cl'][role] {
   margin-block-start: 1.2rem;
 }
@@ -157,6 +180,14 @@ w[after=' ']::after {
   margin-block-start: -1.4rem;
   margin-bottom: 1rem;
   display: block;
+}
+
+/* Ryder: clauses with the apposition role require an additional indentation (2 rems) to ensure the role itself is at the right level. */
+[role='apposition'][class='cl'],
+[role='apposition'][type^='wrapper-clause'],
+[type='apposition-group'] > [class='cl'][role='apposition'],
+[role]:not([class='cl']):not([type='apposition-group']) > [role='apposition'] {
+  margin-inline-start: 2rem;
 }
 
 /************
