@@ -1199,7 +1199,12 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else if ($subordinate-first-word = $relative_adverbs_WS) then
 									(: Ryder: if the first word of the subordinated unit is ὡς, then it could be an argument rather than an adjunct. :)
 									if ($constituent-to-subordinate/@Rule = $single-constituent-clause-rule) then
-										'err_WS-to-' || lower-case(substring-before($constituent-to-subordinate/@Rule, '2CL'))
+										if ($constituent-to-subordinate/@Rule = 'P2CL') then
+											''
+										else if ($constituent-to-subordinate/@Rule = 'ADV2CL') then
+											'adv' (: Ryder: note that analysis in Acts 13.19 of WS should be made an adv on the immediately preceding clause, not the entire complex/chain that precedes :)
+										else
+											'err_unhandled-WS-to-' || lower-case(substring-before($constituent-to-subordinate/@Rule, '2CL'))
 									else 
 										'err_WS'
 								else if (local:is-simple-clause-rule($constituent-to-subordinate/@Rule)) then
