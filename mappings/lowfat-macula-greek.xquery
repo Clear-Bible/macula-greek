@@ -1222,6 +1222,11 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'ellipsis' || (if ($debugging-mode) then  '__grouped' else ())
 								else if ($constituent-to-subordinate/@Rule = 'ADV2CL') then
 									'adv' || (if ($debugging-mode) then  '__grouped' else ())
+								else if ($constituent-to-subordinate/@Rule = $atomic-structure-rule) then
+									''
+								else if ($constituent-to-subordinate/@Rule = 'that-VP') then
+									'apposition' (: Ryder: e.g., Jas 5:11 :)
+								
 								else
 									'err_raised-child-is-group? raised child rule: ' || $constituent-to-raise/@Rule
 								
@@ -1233,14 +1238,14 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else
 									'apposition'
 							else if ($constituent-to-subordinate//@LN = ('91.13', '91.14')) then
-							
-							else if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate))
-								then local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
 								'aux' || (if ($debugging-mode) then  '_aux2' else ())
 							
 							else if ($constituent-to-subordinate/@Rule = 'ADV2CL') then
 								'adv'
 							else if (local:contains-projecting-verb($constituent-to-raise)) then
+								if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)) then
+									local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
+								else
 									'o' || (if ($debugging-mode) then '_c' else ())
 							else if ($constituent-to-subordinate[@ClType = 'Minor']) then
 								'aux' || (if ($debugging-mode) then  '_aux3' else ())
@@ -1252,11 +1257,20 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'o2' || '_d'
 								else
 									'o' || (if ($debugging-mode) then '_d' || data($node/@nodeId)  else ())
+							
+							else if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate))
+								then local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
+							
+							else if ($constituent-to-subordinate/@Rule = 'Conj-CL') then
+								local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
+
 							else switch($constituent-to-subordinate/@Rule)
 								case 'sub-CL' return 'adv'
 								case 'PtclCL'
 									(: Ryder TODO: disambiguate PtclCL subordinates :)
 									return 'adv'
+								case 'O2CL'
+									return 'o'
 								default return 'err-unhandled-subord-role: ' || $constituent-to-subordinate/@Rule
 						)
 						
