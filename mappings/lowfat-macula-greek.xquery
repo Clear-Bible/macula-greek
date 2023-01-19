@@ -344,7 +344,7 @@ declare function local:keep-siblings-as-siblings($node, $passed-role)
       {
 (:        $node/@nodeId ! local:nodeId2xmlId(.),:)
         attribute type {'group'},
-        local:attributes($node, 'class'),
+        local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
         if ($passed-role) then
 			attribute role {$passed-role}
 		else
@@ -572,9 +572,9 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 	return
 	<wg>{
 	    attribute type {'apposition-group'},
-	    local:attributes($node, 'class'),
 	    if ($passed-role) then
 			attribute role {$passed-role}
+			    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
 		else
 			(),  
 	    if ($np-constituent << $cl-constituent) then (
@@ -586,6 +586,7 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 			local:node($np-constituent, 'apposition')
 		)
 	 }</wg>
+		    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
 };
 
 declare function local:clause-complex-class-attribute($node, $constituent-to-subordinate, $constituent-to-raise, $disambiguated-subordinate-role, $passed-role)
@@ -1156,7 +1157,7 @@ declare function local:process-wrapper-clause($node, $passed-role)
 			else
 				<wg
 					type="wrapper-clause-scope">{
-						local:attributes($node, 'class'),
+						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
 						if ($passed-role) then
 							attribute role {$passed-role}
 						else
@@ -1168,7 +1169,7 @@ declare function local:process-wrapper-clause($node, $passed-role)
 declare function local:process-conjunctions($node, $passed-role)
 {
 <wg>{
-		local:attributes($node, 'class'),
+		local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
 		if ($passed-role) then
 			attribute role {$passed-role}
 		else
@@ -1222,8 +1223,8 @@ declare function local:process-single-constituent-clause($node, $passed-role)
 			return <wg>{
 						attribute class {'cl'},
 						attribute role {'aux'}, (: Ryder: should this sometimes be the passed role?? :)
-						local:attributes($node, 'class'),
 						$node/element() ! local:node(., 'err_' || $internal-role || '_test')
+						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
 					}</wg>
 		
 		case 'PP2CL'
