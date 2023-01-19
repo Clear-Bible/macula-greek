@@ -628,7 +628,9 @@ declare function local:clause-complex-class-attribute($node, $constituent-to-sub
 	
 	return
 	if (
-		$some-child-is-simple-clause
+		$some-child-is-simple-clause and not(
+			$constituent-to-subordinate/descendant::Node[@Unicode][1]/@Unicode = 'ἐγένετο'
+		)
 	) then
 		(
 			$node/@Cat ! attribute class {lower-case(.)},
@@ -653,6 +655,22 @@ declare function local:clause-complex-class-attribute($node, $constituent-to-sub
 				$node/@Cat ! attribute class {lower-case(.)},
 				attribute debug {'class condition 4'}
 			)
+	else if (
+		$node/Node[1]/@Rule = 'PtclCL'
+		and $node/Node[2]/@Rule = 'that-VP'
+	) then
+		(
+			$node/@Cat ! attribute class {lower-case(.)},
+			attribute debug {'class condition 5'}
+		)
+	else if (
+		$node/Node[1]/@Rule = 'PtclCL'
+		and $node/Node[2]/@Rule = $complex-clause-rule
+	) then
+		(
+			$node/@Cat ! attribute type {'group'},
+			attribute debug {'class condition 6 - type'}
+		)
 	else 
 		()
 };
