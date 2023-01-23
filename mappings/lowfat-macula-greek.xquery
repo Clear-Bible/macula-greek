@@ -1058,18 +1058,17 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						let $disambiguated-subordinate-role := (
 							
 							(: Ryder: Special cases and/or exceptions (i.e., places where the GBI analysis should be changed) :)
-							if ($node/@nodeId = (
-									'410010440040040' (: Here Jesus says '[v see] [o [you tell no one nothing]] :)
-								)) then 
-									'o'
-							
+							if ($node/@nodeId = '410010440040040' (: Here Jesus says '[v see] [o [you tell no one nothing]] :)) then 
+								'o'
+							else if ($constituent-to-subordinate/@nodeId = '420010010010230') then
+								'adv'
 							else if ($constituent-to-subordinate/@Rule = $complex-clause-rule) then
 								if ($constituent-to-raise/@ClType = 'Verbless') then
 									(: Ryder TODO: disambiguate these (e.g., MRK 12:31). Some of them seem to be projected, but they still are probably best analyzed as apposition. :)
-									'apposition'
+									'apposition' || (if ($debugging-mode) then  '_verbless apposition' else ())
 								else if (local:contains-projecting-verb($constituent-to-raise)) then
 									if (every $child in $constituent-to-subordinate/Node satisfies $child/@ClType = 'Minor') then
-										''
+										'' || (if ($debugging-mode) then  '_null-role' else ())
 									else if (
 										local:is-nominalized-clause($constituent-to-subordinate)
 									) then
@@ -1388,7 +1387,9 @@ declare function local:process-wrapper-clause($node, $passed-role)
 			
 				let $subordinate-first-word := $constituent-to-embed//Node[@UnicodeLemma][1]/@UnicodeLemma
 				let $disambiguated-embedded-role := (
-					if ($constituent-to-embed[@Rule = "V2CL"][descendant::*[@LN = $auxiliary-domains]]) then
+					if ($node/@Rule = 'sub-CL') then
+						'adv' || (if ($debugging-mode) then '__wrap-sub-cl' else ())
+					else if ($constituent-to-embed[@Rule = "V2CL"][descendant::*[@LN = $auxiliary-domains]]) then
 						'aux' || (if ($debugging-mode) then '__wrap' || $should-embed-first else ())
 					else if ($subordinate-first-word = $adverbial-lemmas) then
 						'adv' || (if ($debugging-mode) then '__wrap' else ())
