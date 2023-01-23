@@ -621,39 +621,46 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 
 declare function local:clause-complex-class-attribute($node, $constituent-to-subordinate, $constituent-to-raise, $disambiguated-subordinate-role, $passed-role)
 {
-
+	let $exceptions-to-keep-class := (
+		'420010010010420' (: Ryder: Luke's preface :)
+	)
 	let $some-child-is-simple-clause := some $child in $node/Node satisfies local:is-simple-clause-rule($child/@Rule)
 	let $some-child-is-clause-complex-apposition := $passed-role = 'err-apposition?'
 	let $all-children-are-single-constituent-clauses := every $child in $node/Node satisfies $child/@Rule = $single-constituent-clause-rule
 	
 	return
-	if (
+	if ($node/@nodeId = $exceptions-to-keep-class) then
+		(
+			$node/@Cat ! attribute class {lower-case(.)},
+			if($debugging-mode) then attribute debug {'class condition exception id'} else ()
+		)
+	else if (
 		$some-child-is-simple-clause and not(
 			$constituent-to-subordinate/descendant::Node[@Unicode][1]/@Unicode = 'ἐγένετο'
 		)
 	) then
 		(
 			$node/@Cat ! attribute class {lower-case(.)},
-			attribute debug {'class condition 1'}
+			if($debugging-mode) then attribute debug {'class condition 1'} else ()
 		)
 	else if ($all-children-are-single-constituent-clauses)
 		then
 			(
 				$node/@Cat ! attribute class {lower-case(.)},
-				attribute debug {'class condition 2'}
+				if($debugging-mode) then attribute debug {'class condition 2'} else ()
 			)
 	
 	else if ($some-child-is-clause-complex-apposition)
 		then
 			(
 				$node/@Cat ! attribute class {lower-case(.)},
-				attribute debug {'class condition 3'}
+				if($debugging-mode) then attribute debug {'class condition 3'} else ()
 			)
 	else if ($constituent-to-raise = $single-constituent-clause-rule)
 		then
 			(
 				$node/@Cat ! attribute class {lower-case(.)},
-				attribute debug {'class condition 4'}
+				if($debugging-mode) then attribute debug {'class condition 4'} else ()
 			)
 	else if (
 		$node/Node[1]/@Rule = 'PtclCL'
@@ -661,7 +668,7 @@ declare function local:clause-complex-class-attribute($node, $constituent-to-sub
 	) then
 		(
 			$node/@Cat ! attribute class {lower-case(.)},
-			attribute debug {'class condition 5'}
+			if($debugging-mode) then attribute debug {'class condition 5'} else ()
 		)
 	else if (
 		$node/Node[1]/@Rule = 'PtclCL'
@@ -669,7 +676,7 @@ declare function local:clause-complex-class-attribute($node, $constituent-to-sub
 	) then
 		(
 			$node/@Cat ! attribute type {'group'},
-			attribute debug {'class condition 6 - type'}
+			if($debugging-mode) then attribute debug {'class condition 6 - type'} else ()
 		)
 	else 
 		()
