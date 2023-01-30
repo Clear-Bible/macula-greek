@@ -583,7 +583,7 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 			    attribute type {'apposition-group'},
 			    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
 			    if ($passed-role) then
-					attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_1' else ())}
+					attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_4' else ())}
 				else
 					(), 
 				local:node($node/Node[1]),
@@ -609,7 +609,7 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 			else
 				(),  
 		    if ($np-constituent << $cl-constituent) then (
-				$np-constituent/element() ! local:node(.(:, 'err___debug-sg-constit-1':)),
+				local:node($np-constituent(:, 'err___debug-sg-constit-1':)),
 				local:node($cl-constituent, 'apposition' || (if ($debugging-mode) then  '___clause-complex-apposition_2' else ()))
 			)
 			else (
@@ -633,6 +633,10 @@ declare function local:clause-complex-class-attribute($node, $constituent-to-sub
 		(
 			$node/@Cat ! attribute class {lower-case(.)},
 			if($debugging-mode) then attribute debug {'class condition exception id'} else ()
+		)
+	else if ($constituent-to-raise/@Rule = $atomic-structure-rule) then
+		(
+			if($debugging-mode) then attribute debug {'class condition - atomic head'} else ()
 		)
 	else if (
 		$some-child-is-simple-clause and not(
@@ -882,6 +886,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						or $node/preceding-sibling::Node/descendant::Node[@Unicode][1]/@Unicode = 'ἐγένετο'
 						(: Ryder: assuming GAR should be discourse marker (e.g., Rev 14:4) :)
 						or $second-constituent[@Rule = 'sub-CL']/Node[@UnicodeLemma][1]/@UnicodeLemma = 'γάρ'
+						or count($node/child::Node[@Rule = $single-constituent-clause-rule]) eq 2
 					) 
 				)
 				
@@ -900,6 +905,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							$first-constituent/@Rule = 'PtclCL'
 							and $second-constituent/@Rule = 'that-VP'
 						)
+						or ($second-constituent[@ClType = 'Minor'])
 					)
 					and
 					(
@@ -1519,7 +1525,11 @@ declare function local:process-single-constituent-clause($node, $passed-role)
 					$node/descendant::Node/@Case="Vocative"
 					or $node/@ClType = 'Minor'
 				) then
-					$node/element() ! local:node(., 'aux' || (if ($debugging-mode) then  '__intj2cl or np2cl' else ()))
+					<wg>{
+						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
+						$node/element() ! local:node(., 'aux' || (if ($debugging-mode) then  '__intj2cl or np2cl' else ()))
+					}</wg>
+
 				else if (
 					local:contains-projecting-verb($node/preceding-sibling::Node)
 					or substring(($node//Node[@Unicode])[1]/text(), 1, 1)
