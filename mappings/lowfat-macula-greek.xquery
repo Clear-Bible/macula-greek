@@ -808,7 +808,6 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						)
 						or (
 							count($node/Node[local:is-nominalized-clause(.)]) eq 1
-							and not($node/@Rule = ('NP-CL', 'CL-NP'))
 						)
 						or (
 							count($node/Node[local:is-peripheral(.)]) eq 1
@@ -980,6 +979,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 
 					else if (
 						$should-coordinate-constituents
+						or $node/@Rule = ('NP-CL', 'CL-NP')
 						or $node/@nodeId = $exceptions-to-force-coordination
 					) then (
 						if ($node/@Rule = ('NP-CL', 'CL-NP'))
