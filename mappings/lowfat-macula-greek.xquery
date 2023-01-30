@@ -1284,9 +1284,13 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								default return 'err-unhandled-subord-role: ' || $constituent-to-subordinate/@Rule
 						)
 						
-						let $processed-head := local:node($constituent-to-raise, ())
+						let $processed-head :=
+							if ($constituent-to-raise/@Rule = $atomic-structure-rule) then
+								local:node($constituent-to-raise, ())
+							else
+								local:node($constituent-to-raise, ())/element()
 						let $processed-subordinate := 
-							if ($constituent-to-subordinate/@Rule = 'V2CL' and $disambiguated-subordinate-role = 'aux') then 
+							if ($constituent-to-subordinate/@Rule = 'V2CL' and $disambiguated-subordinate-role = 'aux' and not(count($node/child::Node[@Rule = $single-constituent-clause-rule]) eq 2)) then 
 								local:node($constituent-to-subordinate/Node, $disambiguated-subordinate-role)
 							else local:node($constituent-to-subordinate, $disambiguated-subordinate-role)
 						
@@ -1301,19 +1305,22 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									$constituent-to-raise/@Rule ! (if ($debugging-mode) then attribute head_rule {$constituent-to-raise/@Rule} else ()),
 									local:clause-complex-class-attribute($node, $constituent-to-subordinate, $constituent-to-raise, $disambiguated-subordinate-role, $passed-role),
 									$node/@nodeId,
-									local:attributes($processed-head),
+									if ($constituent-to-raise/@Rule = $atomic-structure-rule) then
+										local:attributes($processed-head)
+									else
+										(if ($debugging-mode) then  attribute debug_attributes {'node attributes skipped because node was not atomic'} else ()),
 									if ($passed-role) then
 										attribute role {$passed-role || (if ($debugging-mode) then  '__default' else ())}
 									else
 										(),
 									
 									if ($constituent-to-raise << $constituent-to-subordinate) then (
-										$processed-head/element(),
+										$processed-head,
 										$processed-subordinate
 									)
 									else (
 										$processed-subordinate,
-										$processed-head/element()
+										$processed-head
 									)
 									
 								}</wg>
