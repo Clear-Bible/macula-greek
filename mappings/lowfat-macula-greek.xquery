@@ -184,7 +184,7 @@ declare function local:attributes($node, $exclusions, $passed-role)
     	local:is-nominalized-clause($node)
     	) then attribute clauseType {'nominalized'} else (),
     $node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule] ! (if ($passed-role) then () else attribute hint {"apposition"}),
-    $node/@Type ! attribute gbiType {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
+    $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
 (:    $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),:)
     $node/@HasDet ! attribute articular {true()},
