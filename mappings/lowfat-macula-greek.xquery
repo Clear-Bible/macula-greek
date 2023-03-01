@@ -342,20 +342,20 @@ declare function local:keep-siblings-as-siblings($node, $passed-role)
     <wg>
       {
 (:        $node/@nodeId ! local:nodeId2xmlId(.),:)
-		if ($node/@Rule=$apposition-rule) then
-			attribute type {'apposition'}
-		else
-        	attribute type {'group'}
-		,
-        local:attributes($node),
-        if ($passed-role = 'apposition') then
-		    attribute hint {$passed-role}
-		else if ($passed-role) then
-			attribute role {$passed-role}
-		else 
-			()
-		,  
-        $node/Node ! local:node(.)
+			if ($node/@Rule=$apposition-rule) then
+				attribute type {'apposition'}
+			else
+				attribute type {'group'}
+			,
+			local:attributes($node)
+			,
+			if ($passed-role = 'apposition') then
+				attribute hint {$passed-role}
+			else if ($passed-role) then
+				attribute role {$passed-role}
+			else ()
+			,  
+			$node/Node ! local:node(.)
      }           
     </wg>
 };
