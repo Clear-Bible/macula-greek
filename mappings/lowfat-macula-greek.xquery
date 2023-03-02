@@ -183,9 +183,8 @@ declare function local:attributes($node, $exclusions, $passed-role)
     if (
     	local:is-nominalized-clause($node)
     	) then attribute clauseType {'nominalized'} else (),
-    $node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule] ! (if ($passed-role) then () else attribute role {"apposition"}),
-    if ($node(:/child::*:)/@Rule = $apposition-rule) then attribute appositioncontainer {'true'} else (),
-    $node/@Type ! attribute gbiType {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
+    $node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule] ! (if ($passed-role) then () else attribute hint {"apposition"}),
+    $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
 (:    $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),:)
     $node/@HasDet ! attribute articular {true()},
@@ -343,130 +342,24 @@ declare function local:keep-siblings-as-siblings($node, $passed-role)
     <wg>
       {
 (:        $node/@nodeId ! local:nodeId2xmlId(.),:)
-        attribute type {'group'},
-        local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
-        if ($passed-role) then
-			attribute role {$passed-role}
-		else
-			(),  
-        $node/Node ! local:node(.)
+			if ($node/@Rule=$apposition-rule) then
+				attribute type {'apposition'}
+			else
+				attribute type {'group'}
+			,
+			local:attributes($node)
+			,
+			if ($passed-role = 'apposition') then
+				attribute hint {$passed-role}
+			else if ($passed-role) then
+				attribute role {$passed-role}
+			else ()
+			,  
+			$node/Node ! local:node(.)
      }           
     </wg>
 };
 
-(:declare function local:strip-attributes-from-subtree($subroot as element(), $attnames as xs:string+)
-{
-    element { name($subroot) } {
-        $subroot/@*[not(name(.) = $attnames)],
-        for $n in $subroot/node()
-        return
-            typeswitch($n)
-                case element() return local:strip-attributes-from-subtree($n, $attnames)
-                default return $n
-    }
-};:)
-
-(:declare function local:clause-complex($node, $passed-role)
-(\:  
-   See https://github.com/Clear-Bible/symphony-team/issues/91  
-:\)
-{
-    if ( $node=>local:is-peripheral() ) then
-        <wg role="aux" class="minor">
-         {
-            local:attributes($node)[not(name(.) = ("role","class"))],
-            for $child in $node/Node  ! local:node(.)
-            return 
-                if ($child[@role]) then $child/* 
-                else $child
-         }
-        </wg>
-          
-    else if ( $node=>local:is-adjunct-cl() ) then
-        <wg role="adv">
-          {
-(\:                attribute class { if ($node/@Rule = "sub-CL") then "wg" else "cl" },:\)
-                local:attributes($node)[not(name(.) = ("role","class"))],
-                $node/Node ! local:node(.)         
-           }     
-        </wg>         
-        
-     else if ( $node =>local:is-object-thatVP() ) then 
-          <wg role="o" class="wg"> 
-            {
-                local:attributes($node)[not(name(.) = ("role", "class"))],
-                $node/Node ! local:node(.)         
-           }     
-          </wg> 
-
-     else if ($node/@Rule=("Conj-CL")) then
-     	(\: Ryder TODO: determine which Conj-CL should retain their wrapper scope for proper display :\)
-         <wg class="wg">
-           {
-                local:attributes($node)[not(name(.) = ("class"))],
-                $node/Node ! local:node(.)         
-            }
-          </wg>
-
-     else if ($node/@Rule=("PtclCL","AdvpCL")) then
-        let $ptcl := $node/Node[1]  ! local:node(.)/descendant-or-self::w ! <w>{ attribute role { "adv"}, @*, text() }</w>
-        let $cl := $node/Node[2] ! local:node(.)
-        return 
-         <wg>
-           {
-                $cl/@*
-                ,
-                comment { "Rule: ", $node/@Rule }
-                ,
-                for $child in ($ptcl, $cl/*)
-                order by $child/descendant-or-self::w[1]/@xml:id
-                return $child
-            }
-          </wg>
-
-    else if (starts-with($node/@Rule, "ClClCl") or $node/@Rule = $group-rules ) then
-          (\: ### TODO:  Handle groups of groups :\)
-        <wg role="g" class="group">
-         {
-            $node/@nodeId ! local:nodeId2xmlId(.),
-            $node/@Rule ! attribute rule { lower-case(.) },
-            $node/Node ! local:node(.)
-         }
-        </wg>    
-        
-    else if (
-            some $child in $node/* satisfies (
-                $child => local:is-peripheral()
-                or
-                $child => local:is-adjunct-cl() 
-                or
-                $child =>local:is-object-thatVP())
-            and
-                $node/@Rule="ClCl"
-    ) 
-        then local:raise-sibling($node, $node/*[1])
-    else if ( $node/@Rule="ClCl" )
-        then
-         <wg class="wg">
-           {
-                local:attributes($node)[not(name(.) = ("class"))],
-                comment { "Flat ClCl" },
-                $node/Node ! local:node(.)         
-            }
-          </wg>        
-
-    else if ($node/@Rule="ClCl2") then
-        local:raise-sibling($node, $node/*[2])
-
-    else
-        <error_unhandled_clause_complex>
-         {
-            local:attributes($node),
-(\:            attribute role {'err'},:\)
-            $node/Node ! local:node(.)
-         }
-        </error_unhandled_clause_complex>
-};:)
 
 declare function local:simple-clause($node, $passed-role, $ellipsis-already-processed as xs:boolean?)
 {
@@ -490,42 +383,6 @@ declare function local:simple-clause($node, $passed-role, $ellipsis-already-proc
 						local:node($clause-constituent, $constituent-role)
 				}</wg>
 };
-
-
-(:  
-    The "singleton phrases" rules have these things in common:
-    
-    1. They always have a single child that represents a word
-    2. They never live in elements that represent clauses
-    3. Their descendants are singletons at each level
-    4. The @Cat attribute is one of the following, and does not represent a role:
-    
-        adj
-        adjp
-        adv
-        advp
-        conj
-        intj
-        np
-        nump
-        prep
-        pron
-        ptcl
-        vp
-:)
-(:
-declare variable $singleton-phrases := (
-      "Adj2Adjp","Adj2Advp","Adv2Adj","Adv2Advp", "Adv2Conj", "Adv2Prep", "Adv2Ptcl", 
-      "Conj2Adv", "Conj2Prep", "Conj2Pron", "Conj2Ptcl", "Det2NP", "N2NP", "Num2Nump", 
-      "Prep2Adv", "Pron2NP", "Ptcl2Adv", "Ptcl2Conj", "Ptcl2Intj", "Ptcl2Np", "V2VP", "intj2Np","pron2adj"
- );
- 
- declare function local:singleton($node)
- {
-    <singleton>{ 
-        $node/descendant::Node[empty(Node)] ! local:node(.)    
-    }</singleton>
- };:)
  
 declare function local:contains-projecting-verb($node)
 {
@@ -580,7 +437,8 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 		
 		if (local:is-nominalized-clause($node/Node[2])) then
 			<wg>{
-			    attribute type {'apposition-group'},
+				attribute class {'np'},
+			    attribute type {'apposition'},
 			    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
 			    if ($passed-role) then
 					attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_4' else ())}
@@ -602,7 +460,8 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 		}</error>
 	else
 		<wg>{
-		    attribute type {'apposition-group'},
+			attribute class {'np'},
+			attribute type {'apposition'},
 		    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
 		    if ($passed-role) then
 				attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_1' else ())}
@@ -728,10 +587,6 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 		
 		if (
 			$node/@nodeId = $exceptions-to-skip-complex
-			(:or (
-				$node/Node[1]/@Rule = 'PtclCL'
-				and $node/Node[2]/@Rule = 'that-VP'
-			):)
 		) then
 			$node/element() ! local:node(., $passed-role)
 		
@@ -770,24 +625,6 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					* handle PtclCL, either/or, not/but, etc. in a separate function direction from the node-type() function.
 				:)
 				
-				(: Ryder: If a extra-sentential auxiliary modifies a clause complex, flag these cases for special processing.
-					The auxiliary cannot be the sole clause constituent, so we cannot subordinate the complex.
-					Likewise, the complex cannot have a subordinate without first being processed, so we cannot simply subordinate the auxiliary.
-					Therefore, I am going to opt, for now, to treat these cases as a clause[-complex] wrapper.
-				:)
-				(:return 
-				if (
-					(
-						$first-constituent[@Rule = "V2CL"][//@LN = ('91.13', '91.14')]
-						and $second-constituent/@Rule = ($complex-clause-rule, $group-rules)
-					)
-					
-				) 
-				then
-					<wg role="err_aux on complex">{
-						$node/element() ! local:node(.)
-					}</wg>
-				else:)
 				
 				let $exceptions-to-exclude-coordination := (
 					'400240260120060' (: Ryder: discontinuous projected speech :)
@@ -941,6 +778,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					or $node/@nodeId = $exceptions-to-force-the-second-to-subordinate
 					or local:is-nominalized-clause($second-constituent)
 				)
+
+				(: TODO: Remove these exceptions :)
 				
 				let $exceptions-to-force-coordination := (
 					'410020090010200', '410020090040170', '410020090040070', (: Ryder: in this case, Jesus is asking multiple sibling questions :)
@@ -1006,7 +845,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								
 								else 
 									if ($passed-role = 'apposition') 
-										then
+										then  (: TODO - turn 'apposition' into a hint, not a role :)
 											local:keep-siblings-as-siblings($node, $passed-role || (if ($debugging-mode) then  '_group2' else ()))
 									
 									else if (count($node/Node[@ClType = 'Minor']) eq 2) then
@@ -1719,32 +1558,6 @@ declare function local:word($node, $passed-role)
                     }
                 </w>
 };
-
-(:declare function local:node($node as element(Node))
-{
-	if ($node/@Rule = $atomic-structure-rule) then 
-		$node/element() ! local:node(.)
-	else
-		if (local:is-group($node)) then 
-			local:keep-siblings-as-siblings($node)
-		else
-		    switch (local:node-type($node))
-		        case "word"
-		            return
-		                local:word($node)
-		        case "phrase"
-		            return
-		                local:phrase($node)
-		        case "role"
-		            return
-		                local:role($node)
-		        case "clause"
-		            return
-		                local:simple-clause($node)
-		        default
-		        return
-		            <error_unknown_node_type rule="{$node/@Rule}">{$node/element() ! local:node(.)}></error_unknown_node_type>
-};:)
 
 declare function local:node-type($node as element())
 {
