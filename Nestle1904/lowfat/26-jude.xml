@@ -24,7 +24,7 @@
                   ln="93.173c"
                   morph="N-NSM"
                   unicode="Ἰούδας">Ἰούδας</w>
-               <wg hint="apposition" rule="NpaNp">
+               <wg role="apposition" rule="NpaNp">
                   <wg class="np" rule="ofNPNP">
                      <wg type="apposition" class="np" rule="Np-Appos">
                         <w ref="JUD 1:1!2"
@@ -145,7 +145,7 @@
                <wg class="np" rule="AdjpNp">
                   <wg clauseType="nominalized" rule="CLaCL" junction="subordinate">
                      <wg class="cl" rule="ADV-V" junction="coordinate">
-                        <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                        <wg class="pp" rule="PrepNp" role="adv">
                            <w ref="JUD 1:1!9"
                               after=" "
                               class="prep"
@@ -530,11 +530,7 @@
                      morph="P-2DP"
                      unicode="ὑμῖν"
                      referent="n65001003001">ὑμῖν</w>
-                  <wg class="pp"
-                      articular="true"
-                      rule="PrepNp"
-                      type="wrapper-scope"
-                      role="adv">
+                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
                      <w ref="JUD 1:3!7"
                         after=" "
                         class="prep"
@@ -908,7 +904,7 @@
                            morph="N-NPM"
                            unicode="ἄνθρωποι,">ἄνθρωποι</w>
                      </wg>
-                     <wg hint="apposition" articular="true" rule="DetCL">
+                     <wg role="apposition" articular="true" rule="DetCL">
                         <w ref="JUD 1:4!5"
                            after=" "
                            class="det"
@@ -959,11 +955,7 @@
                               unicode="προγεγραμμένοι"
                               frame="A1:n65001004004"
                               subjref="n65001004004">προγεγραμμένοι</w>
-                           <wg class="pp"
-                               articular="true"
-                               rule="PrepNp"
-                               type="wrapper-scope"
-                               role="adv">
+                           <wg class="pp" articular="true" rule="PrepNp" role="adv">
                               <w ref="JUD 1:4!8"
                                  after=" "
                                  class="prep"
@@ -1152,7 +1144,7 @@
                         unicode="μετατιθέντες"
                         frame="A0:n65001004004 A1:n65001004017"
                         subjref="n65001004004">μετατιθέντες</w>
-                     <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                     <wg class="pp" rule="PrepNp" role="adv">
                         <w ref="JUD 1:4!19"
                            after=" "
                            class="prep"
@@ -1287,7 +1279,7 @@
                                           unicode="ἡμῶν"
                                           referent="n65001001001 n65001001007 n65001003001 n65001003022">ἡμῶν</w>
                                     </wg>
-                                    <wg type="apposition" class="np" hint="apposition" rule="Np-Appos">
+                                    <wg type="apposition" class="np" role="apposition" rule="Np-Appos">
                                        <w ref="JUD 1:4!28"
                                           after=" "
                                           class="noun"
@@ -1444,7 +1436,7 @@
                      morph="A-APN"
                      unicode="πάντα,">πάντα</w>
                </wg>
-               <wg rule="ClCl" junction="subordinate" role="o">
+               <wg type="group" rule="ClCl" junction="subordinate" role="o">
                   <wg class="cl" rule="V-O">
                      <w role="v"
                         ref="JUD 1:5!1"
@@ -1526,7 +1518,7 @@
                                  ln="11.12"
                                  morph="N-ASM"
                                  unicode="λαὸν">λαὸν</w>
-                              <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                              <wg class="pp" rule="PrepNp" role="adv">
                                  <w ref="JUD 1:5!11"
                                     after=" "
                                     class="prep"
@@ -1726,7 +1718,7 @@
                                     ln="12.28"
                                     morph="N-APM"
                                     unicode="ἀγγέλους">ἀγγέλους</w>
-                                 <wg hint="apposition" articular="true" rule="DetCL">
+                                 <wg role="apposition" articular="true" rule="DetCL">
                                     <w ref="JUD 1:6!3"
                                        after=" "
                                        class="det"
@@ -1918,7 +1910,7 @@
                                     </wg>
                                  </wg>
                               </wg>
-                              <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                              <wg class="pp" rule="PrepNp" role="adv">
                                  <w ref="JUD 1:6!14"
                                     after=" "
                                     class="prep"
@@ -2012,7 +2004,7 @@
                                     morph="A-DPM"
                                     unicode="ἀϊδίοις">ἀϊδίοις</w>
                               </wg>
-                              <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                              <wg class="pp" rule="PrepNp" role="adv">
                                  <w ref="JUD 1:6!20"
                                     after=" "
                                     class="prep"
@@ -2150,7 +2142,7 @@
                                        morph="T-NPF"
                                        unicode="αἱ">αἱ</w>
                                     <wg class="np" rule="PpNp2Np">
-                                       <wg class="pp" rule="PrepNp" type="wrapper-scope">
+                                       <wg class="pp" rule="PrepNp">
                                           <w ref="JUD 1:7!7"
                                              after=" "
                                              class="prep"
@@ -2322,7 +2314,7 @@
                                        unicode="ἀπελθοῦσαι"
                                        frame="A0:n65001007002;n65001007004;n65001007009"
                                        subjref="n65001007002 n65001007004 n65001007009">ἀπελθοῦσαι</w>
-                                    <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                                    <wg class="pp" rule="PrepNp" role="adv">
                                        <w ref="JUD 1:7!17"
                                           after=" "
                                           class="prep"
@@ -2756,7 +2748,7 @@
                gloss="But"
                morph="CONJ"
                unicode="δὲ">δὲ</w>
-            <wg rule="ClCl2">
+            <wg type="group" rule="ClCl2">
                <wg rule="sub-CL">
                   <w ref="JUD 1:9!6"
                      after=" "
@@ -2844,11 +2836,7 @@
                         unicode="διελέγετο"
                         frame="A0:n65001009003"
                         subjref="n65001009003">διελέγετο</w>
-                     <wg class="pp"
-                         articular="true"
-                         rule="PrepNp"
-                         type="wrapper-scope"
-                         role="adv">
+                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
                         <w ref="JUD 1:9!11"
                            after=" "
                            class="prep"
@@ -2913,7 +2901,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg rule="notCLbutCL2CL">
+               <wg type="group" rule="notCLbutCL2CL">
                   <w ref="JUD 1:9!15"
                      after=" "
                      class="adv"
@@ -2964,7 +2952,7 @@
                               morph="N-PRI"
                               unicode="Μιχαὴλ">Μιχαὴλ</w>
                         </wg>
-                        <wg class="np" hint="apposition" articular="true" rule="DetNP">
+                        <wg class="np" role="apposition" articular="true" rule="DetNP">
                            <w ref="JUD 1:9!4"
                               after=" "
                               class="det"
@@ -3430,7 +3418,7 @@
                            frame="A0:n65001008005 A1:n65001010008"
                            subjref="n65001008005">ἐπίστανται</w>
                      </wg>
-                     <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                     <wg class="pp" rule="PrepNp" role="adv">
                         <w ref="JUD 1:10!16"
                            after=" "
                            class="prep"
@@ -3487,7 +3475,7 @@
       <p>
          <milestone unit="verse" id="JUD 1:11">JUD 1:11</milestone> οὐαὶ αὐτοῖς, ὅτι τῇ ὁδῷ τοῦ Κάϊν ἐπορεύθησαν, καὶ τῇ πλάνῃ τοῦ Βαλαὰμ μισθοῦ ἐξεχύθησαν, καὶ τῇ ἀντιλογίᾳ τοῦ Κόρε ἀπώλοντο.</p>
       <wg>
-         <wg rule="ClCl">
+         <wg type="group" rule="ClCl">
             <wg class="cl" rule="S-IO" cltype="VerbElided">
                <w role="s"
                   ref="JUD 1:11!1"
@@ -3903,7 +3891,7 @@
                   morph="T-NPM"
                   unicode="οἱ">οἱ</w>
                <wg class="np" rule="PpNp2Np">
-                  <wg class="pp" articular="true" rule="PrepNp" type="wrapper-scope">
+                  <wg class="pp" articular="true" rule="PrepNp">
                      <w ref="JUD 1:12!4"
                         after=" "
                         class="prep"
@@ -3982,7 +3970,7 @@
                      unicode="σπιλάδες">σπιλάδες</w>
                </wg>
             </wg>
-            <wg rule="ClCl" junction="subordinate" role="adv">
+            <wg type="group" rule="ClCl" junction="subordinate" role="adv">
                <wg class="cl" rule="V-ADV">
                   <w role="v"
                      ref="JUD 1:12!9"
@@ -4064,7 +4052,7 @@
                 rule="P2CL"
                 cltype="Verbless"
                 role="adv">
-               <wg rule="NpNpNpNp" role="p">
+               <wg type="group" rule="NpNpNpNp" role="p">
                   <wg class="np" rule="NpAdjp">
                      <wg class="np" rule="NpAdjp">
                         <w ref="JUD 1:12!13"
@@ -4103,7 +4091,7 @@
                          clauseType="nominalized"
                          rule="ADV-V"
                          junction="subordinate">
-                        <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                        <wg class="pp" rule="PrepNp" role="adv">
                            <w ref="JUD 1:12!15"
                               after=" "
                               class="prep"
@@ -4524,7 +4512,7 @@
                               </wg>
                            </wg>
                         </wg>
-                        <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                        <wg class="pp" rule="PrepNp" role="adv">
                            <w ref="JUD 1:13!15"
                               after=" "
                               class="prep"
@@ -4661,7 +4649,7 @@
                         ln="60.54"
                         morph="A-NSM"
                         unicode="ἕβδομος">ἕβδομος</w>
-                     <wg class="pp" rule="PrepNp" type="wrapper-scope">
+                     <wg class="pp" rule="PrepNp">
                         <w ref="JUD 1:14!6"
                            after=" "
                            class="prep"
@@ -4782,7 +4770,7 @@
                         ln="12.9{N:001}"
                         morph="N-NSM"
                         unicode="Κύριος">Κύριος</w>
-                     <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                     <wg class="pp" rule="PrepNp" role="adv">
                         <w ref="JUD 1:14!13"
                            after=" "
                            class="prep"
@@ -4879,7 +4867,7 @@
                               ln="56.30"
                               morph="N-ASF"
                               unicode="κρίσιν">κρίσιν</w>
-                           <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                           <wg class="pp" rule="PrepNp" role="adv">
                               <w ref="JUD 1:15!3"
                                  after=" "
                                  class="prep"
@@ -4981,7 +4969,7 @@
                                  </wg>
                               </wg>
                               <wg articular="true" rule="Conj2Pp" role="adv">
-                                 <wg class="pp" articular="true" rule="PrepNp" type="wrapper-scope">
+                                 <wg class="pp" articular="true" rule="PrepNp">
                                     <w ref="JUD 1:15!10"
                                        after=" "
                                        class="prep"
@@ -5132,7 +5120,7 @@
                                        gloss="and"
                                        morph="CONJ"
                                        unicode="καὶ">καὶ</w>
-                                    <wg class="pp" articular="true" rule="PrepNp" type="wrapper-scope">
+                                    <wg class="pp" articular="true" rule="PrepNp">
                                        <w ref="JUD 1:15!19"
                                           after=" "
                                           class="prep"
@@ -5230,7 +5218,7 @@
                                                       morph="V-AAI-3P"
                                                       unicode="ἐλάλησαν"
                                                       frame="A1:n65001015023 A0:n65001015027">ἐλάλησαν</w>
-                                                   <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                                                   <wg class="pp" rule="PrepNp" role="adv">
                                                       <w ref="JUD 1:15!25"
                                                          after=" "
                                                          class="prep"
@@ -5381,11 +5369,7 @@
                       clauseType="nominalized"
                       rule="ADV-V"
                       junction="subordinate">
-                     <wg class="pp"
-                         articular="true"
-                         rule="PrepNp"
-                         type="wrapper-scope"
-                         role="adv">
+                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
                         <w ref="JUD 1:16!5"
                            after=" "
                            class="prep"
@@ -5607,7 +5591,7 @@
                         ln="33.365"
                         morph="N-APN"
                         unicode="πρόσωπα">πρόσωπα</w>
-                     <wg class="pp" rule="NP-Prep" type="wrapper-scope" role="adv">
+                     <wg class="pp" rule="NP-Prep" role="adv">
                         <w ref="JUD 1:16!18"
                            after=" "
                            class="noun"
@@ -5750,7 +5734,7 @@
                         morph="N-GPN"
                         unicode="ῥημάτων">ῥημάτων</w>
                   </wg>
-                  <wg hint="apposition" articular="true" rule="DetCL">
+                  <wg role="apposition" articular="true" rule="DetCL">
                      <w ref="JUD 1:17!7"
                         after=" "
                         class="det"
@@ -5788,11 +5772,7 @@
                            unicode="προειρημένων"
                            frame="A1:n65001017006"
                            subjref="n65001017006">προειρημένων</w>
-                        <wg class="pp"
-                            articular="true"
-                            rule="PrepNp"
-                            type="wrapper-scope"
-                            role="adv">
+                        <wg class="pp" articular="true" rule="PrepNp" role="adv">
                            <w ref="JUD 1:17!9"
                               after=" "
                               class="prep"
@@ -5888,7 +5868,7 @@
                                              referent="n65001001001 n65001001007 n65001017003 n65001003022 n65001014005">ἡμῶν</w>
                                        </wg>
                                     </wg>
-                                    <wg type="apposition" class="np" hint="apposition" rule="Np-Appos">
+                                    <wg type="apposition" class="np" role="apposition" rule="Np-Appos">
                                        <w ref="JUD 1:17!15"
                                           after=" "
                                           class="noun"
@@ -5985,11 +5965,7 @@
                   unicode="ὑμῖν"
                   referent="n65001017003">ὑμῖν</w>
                <wg class="cl" articular="true" rule="P-VC-S" role="o">
-                  <wg class="pp"
-                      articular="true"
-                      rule="PrepNp"
-                      type="wrapper-scope"
-                      role="p">
+                  <wg class="pp" articular="true" rule="PrepNp" role="p">
                      <w ref="JUD 1:18!4"
                         after=" "
                         class="prep"
@@ -6109,11 +6085,7 @@
                            unicode="πορευόμενοι"
                            frame="A0:n65001018009"
                            subjref="n65001018009">πορευόμενοι</w>
-                        <wg class="pp"
-                            articular="true"
-                            rule="PrepNp"
-                            type="wrapper-scope"
-                            role="adv">
+                        <wg class="pp" articular="true" rule="PrepNp" role="adv">
                            <w ref="JUD 1:18!10"
                               after=" "
                               class="prep"
@@ -6254,7 +6226,7 @@
                gloss="are"
                morph="V-PAI-3P"
                unicode="εἰσιν">εἰσιν</w>
-            <wg articular="true" rule="NpNpNp" role="p">
+            <wg type="group" articular="true" rule="NpNpNp" role="p">
                <wg articular="true" rule="DetCL">
                   <w ref="JUD 1:19!3"
                      after=" "
@@ -6523,7 +6495,7 @@
                      </wg>
                   </wg>
                   <wg class="cl" rule="ADV-V" role="adv">
-                     <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                     <wg class="pp" rule="PrepNp" role="adv">
                         <w ref="JUD 1:20!10"
                            after=" "
                            class="prep"
@@ -6607,7 +6579,7 @@
                   morph="F-2APM"
                   unicode="ἑαυτοὺς"
                   referent="n65001020003">ἑαυτοὺς</w>
-               <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+               <wg class="pp" rule="PrepNp" role="adv">
                   <w ref="JUD 1:21!2"
                      after=" "
                      class="prep"
@@ -6780,7 +6752,7 @@
                                     referent="n65001001001 n65001001007 n65001020003 n65001003022 n65001014005">ἡμῶν</w>
                               </wg>
                            </wg>
-                           <wg type="apposition" class="np" hint="apposition" rule="Np-Appos">
+                           <wg type="apposition" class="np" role="apposition" rule="Np-Appos">
                               <w ref="JUD 1:21!12"
                                  after=" "
                                  class="noun"
@@ -6817,7 +6789,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                  <wg class="pp" rule="PrepNp" role="adv">
                      <w ref="JUD 1:21!14"
                         after=" "
                         class="prep"
@@ -6985,7 +6957,7 @@
                         frame="A0:n65001020003 A1:n65001022002"
                         subjref="n65001020003">σῴζετε</w>
                      <wg class="cl" rule="ADV-V" junction="subordinate" role="adv">
-                        <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                        <wg class="pp" rule="PrepNp" role="adv">
                            <w ref="JUD 1:23!2"
                               after=" "
                               class="prep"
@@ -7090,7 +7062,7 @@
                         unicode="ἐλεᾶτε"
                         frame="A0:n65001020003 A1:n65001023005"
                         subjref="n65001020003">ἐλεᾶτε</w>
-                     <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                     <wg class="pp" rule="PrepNp" role="adv">
                         <w ref="JUD 1:23!8"
                            after=" "
                            class="prep"
@@ -7172,11 +7144,7 @@
                                      clauseType="nominalized"
                                      rule="ADV-V"
                                      junction="subordinate">
-                                    <wg class="pp"
-                                        articular="true"
-                                        rule="PrepNp"
-                                        type="wrapper-scope"
-                                        role="adv">
+                                    <wg class="pp" articular="true" rule="PrepNp" role="adv">
                                        <w ref="JUD 1:23!13"
                                           after=" "
                                           class="prep"
@@ -7415,11 +7383,7 @@
                                     unicode="στῆσαι"
                                     frame="A0:n65001025002"
                                     subjref="n65001025002">στῆσαι</w>
-                                 <wg class="pp"
-                                     articular="true"
-                                     rule="PrepNp"
-                                     type="wrapper-scope"
-                                     role="adv">
+                                 <wg class="pp" articular="true" rule="PrepNp" role="adv">
                                     <w ref="JUD 1:24!9"
                                        after=" "
                                        class="prep"
@@ -7499,7 +7463,7 @@
                                     ln="88.34"
                                     morph="A-APM"
                                     unicode="ἀμώμους">ἀμώμους</w>
-                                 <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                                 <wg class="pp" rule="PrepNp" role="adv">
                                     <w ref="JUD 1:24!14"
                                        after=" "
                                        class="prep"
@@ -7532,7 +7496,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg type="apposition" class="np" hint="apposition" rule="Np-Appos">
+                  <wg type="apposition" class="np" role="apposition" rule="Np-Appos">
                      <wg class="np" rule="AdjpNp">
                         <w ref="JUD 1:25!1"
                            after=" "
@@ -7564,7 +7528,7 @@
                            morph="N-DSM"
                            unicode="Θεῷ">Θεῷ</w>
                      </wg>
-                     <wg class="np" hint="apposition" rule="NPofNP">
+                     <wg class="np" role="apposition" rule="NPofNP">
                         <w ref="JUD 1:25!3"
                            after=" "
                            class="noun"
@@ -7600,7 +7564,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+               <wg class="pp" rule="PrepNp" role="adv">
                   <w ref="JUD 1:25!5"
                      after=" "
                      class="prep"
@@ -7646,7 +7610,7 @@
                            morph="N-GSM"
                            unicode="Χριστοῦ">Χριστοῦ</w>
                      </wg>
-                     <wg class="np" hint="apposition" articular="true" rule="DetNP">
+                     <wg class="np" role="apposition" articular="true" rule="DetNP">
                         <w ref="JUD 1:25!8"
                            after=" "
                            class="det"
@@ -7778,7 +7742,7 @@
                   </wg>
                </wg>
                <wg articular="true" rule="Conj3ADV" role="adv">
-                  <wg class="pp" articular="true" rule="PrepNp" type="wrapper-scope">
+                  <wg class="pp" articular="true" rule="PrepNp">
                      <w ref="JUD 1:25!16"
                         after=" "
                         class="prep"
@@ -7877,7 +7841,7 @@
                         gloss="and"
                         morph="CONJ"
                         unicode="καὶ">καὶ</w>
-                     <wg class="pp" articular="true" rule="PrepNp" type="wrapper-scope">
+                     <wg class="pp" articular="true" rule="PrepNp">
                         <w ref="JUD 1:25!23"
                            after=" "
                            class="prep"

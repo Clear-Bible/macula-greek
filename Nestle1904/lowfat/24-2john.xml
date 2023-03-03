@@ -183,7 +183,7 @@
                         morph="V-PAI-1S"
                         unicode="ἀγαπῶ"
                         frame="A1:n63001001009 A0:n63001001010;n63001001015;n63001001016;n63001001022">ἀγαπῶ</w>
-                     <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                     <wg class="pp" rule="PrepNp" role="adv">
                         <w ref="2JN 1:1!12"
                            after=" "
                            class="prep"
@@ -242,7 +242,7 @@
                               gloss="and"
                               morph="CONJ"
                               unicode="καὶ">καὶ</w>
-                           <wg articular="true" rule="notNPbutNP">
+                           <wg type="group" articular="true" rule="notNPbutNP">
                               <w ref="2JN 1:1!15"
                                  after=" "
                                  class="adv"
@@ -402,11 +402,7 @@
                            </wg>
                         </wg>
                      </wg>
-                     <wg class="pp"
-                         articular="true"
-                         rule="PrepNp"
-                         type="wrapper-scope"
-                         role="adv">
+                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
                         <w ref="2JN 1:2!1"
                            after=" "
                            class="prep"
@@ -453,7 +449,7 @@
                                  morph="N-ASF"
                                  unicode="ἀλήθειαν">ἀλήθειαν</w>
                            </wg>
-                           <wg hint="apposition" articular="true" rule="DetCL">
+                           <wg role="apposition" articular="true" rule="DetCL">
                               <w ref="2JN 1:2!4"
                                  after=" "
                                  class="det"
@@ -491,7 +487,7 @@
                                     unicode="μένουσαν"
                                     frame="A0:n63001002003"
                                     subjref="n63001002003">μένουσαν</w>
-                                 <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                                 <wg class="pp" rule="PrepNp" role="adv">
                                     <w ref="2JN 1:2!6"
                                        after=" "
                                        class="prep"
@@ -540,7 +536,7 @@
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
                <wg class="cl" rule="P-VC-ADV" junction="coordinate">
-                  <wg class="pp" rule="PrepNp" type="wrapper-scope" role="p">
+                  <wg class="pp" rule="PrepNp" role="p">
                      <w ref="2JN 1:2!9"
                         after=" "
                         class="prep"
@@ -587,11 +583,7 @@
                      morph="V-FDI-3S"
                      unicode="ἔσται"
                      subjref="n63001002003">ἔσται</w>
-                  <wg class="pp"
-                      articular="true"
-                      rule="PrepNp"
-                      type="wrapper-scope"
-                      role="adv">
+                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
                      <w ref="2JN 1:2!12"
                         after=" "
                         class="prep"
@@ -664,7 +656,7 @@
                ln="13.1"
                morph="V-FDI-3S"
                unicode="ἔσται">ἔσται</w>
-            <wg class="pp" rule="PrepNp" type="wrapper-scope" role="p">
+            <wg class="pp" rule="PrepNp" role="p">
                <w ref="2JN 1:3!2"
                   after=" "
                   class="prep"
@@ -695,7 +687,7 @@
                   referent="n63001001002 n63001001004 n63001001007 n63001001022">ἡμῶν</w>
             </wg>
             <wg class="np" rule="NpPp" role="s">
-               <wg rule="NpNpNp">
+               <wg type="group" rule="NpNpNp">
                   <w ref="2JN 1:3!4"
                      after=" "
                      class="noun"
@@ -746,7 +738,7 @@
                      unicode="εἰρήνη">εἰρήνη</w>
                </wg>
                <wg rule="Conj2Pp">
-                  <wg class="pp" rule="PrepNp" type="wrapper-scope">
+                  <wg class="pp" rule="PrepNp">
                      <w ref="2JN 1:3!7"
                         after=" "
                         class="prep"
@@ -805,7 +797,7 @@
                         gloss="and"
                         morph="CONJ"
                         unicode="καὶ">καὶ</w>
-                     <wg class="pp" rule="PrepNp" type="wrapper-scope">
+                     <wg class="pp" rule="PrepNp">
                         <w ref="2JN 1:3!11"
                            after=" "
                            class="prep"
@@ -851,7 +843,7 @@
                                  morph="N-GSM"
                                  unicode="Χριστοῦ">Χριστοῦ</w>
                            </wg>
-                           <wg class="np" hint="apposition" articular="true" rule="DetNP">
+                           <wg class="np" role="apposition" articular="true" rule="DetNP">
                               <w ref="2JN 1:3!14"
                                  after=" "
                                  class="det"
@@ -924,7 +916,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+            <wg class="pp" rule="PrepNp" role="adv">
                <w ref="2JN 1:3!18"
                   after=" "
                   class="prep"
@@ -991,7 +983,7 @@
       <p>
          <milestone unit="verse" id="2JN 1:4">2JN 1:4</milestone> Ἐχάρην λίαν ὅτι εὕρηκα ἐκ τῶν τέκνων σου περιπατοῦντας ἐν ἀληθείᾳ, καθὼς ἐντολὴν ἐλάβομεν παρὰ τοῦ Πατρός.</p>
       <wg>
-         <wg rule="ClCl">
+         <wg type="group" rule="ClCl">
             <wg class="cl" rule="V-ADV">
                <w role="v"
                   ref="2JN 1:4!1"
@@ -1061,13 +1053,9 @@
                      unicode="εὕρηκα"
                      frame="A0:n63001001002 A1:n63001004009"
                      subjref="n63001001002">εὕρηκα</w>
-                  <wg rule="ClCl" junction="subordinate" role="o">
+                  <wg type="group" rule="ClCl" junction="subordinate" role="o">
                      <wg class="cl" rule="ADV-V-ADV">
-                        <wg class="pp"
-                            articular="true"
-                            rule="PrepNp"
-                            type="wrapper-scope"
-                            role="adv">
+                        <wg class="pp" articular="true" rule="PrepNp" role="adv">
                            <w ref="2JN 1:4!5"
                               after=" "
                               class="prep"
@@ -1148,7 +1136,7 @@
                            morph="V-PAP-APM"
                            unicode="περιπατοῦντας"
                            frame="A0:n00000000000">περιπατοῦντας</w>
-                        <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                        <wg class="pp" rule="PrepNp" role="adv">
                            <w ref="2JN 1:4!10"
                               after=" "
                               class="prep"
@@ -1230,11 +1218,7 @@
                               unicode="ἐλάβομεν"
                               frame="A0:n63001001002;n63001001004;n63001001007;n63001001022 A1:n63001004013"
                               subjref="n63001001002 n63001001004 n63001001007 n63001001022">ἐλάβομεν</w>
-                           <wg class="pp"
-                               articular="true"
-                               rule="PrepNp"
-                               type="wrapper-scope"
-                               role="adv">
+                           <wg class="pp" articular="true" rule="PrepNp" role="adv">
                               <w ref="2JN 1:4!15"
                                  after=" "
                                  class="prep"
@@ -1413,7 +1397,10 @@
                      morph="P-2DS"
                      unicode="σοι"
                      referent="n63001005005">σοι</w>
-                  <wg rule="notCLbutCL2CL" junction="subordinate" role="adv">
+                  <wg type="group"
+                      rule="notCLbutCL2CL"
+                      junction="subordinate"
+                      role="adv">
                      <w ref="2JN 1:5!6"
                         after=" "
                         class="adv"
@@ -1527,7 +1514,7 @@
                            unicode="εἴχαμεν"
                            frame="A0:n63001001002;n63001005005;n63001001007;n63001001022 A1:n63001005013"
                            subjref="n63001001002 n63001005005 n63001001007 n63001001022">εἴχαμεν</w>
-                        <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                        <wg class="pp" rule="PrepNp" role="adv">
                            <w ref="2JN 1:5!15"
                               after=" "
                               class="prep"
@@ -1736,11 +1723,7 @@
                      unicode="περιπατῶμεν"
                      frame="A0:n63001001002;n63001005005;n63001001007;n63001001022"
                      subjref="n63001001002 n63001005005 n63001001007 n63001001022">περιπατῶμεν</w>
-                  <wg class="pp"
-                      articular="true"
-                      rule="PrepNp"
-                      type="wrapper-scope"
-                      role="adv">
+                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
                      <w ref="2JN 1:6!8"
                         after=" "
                         class="prep"
@@ -1913,7 +1896,7 @@
                      unicode="ἠκούσατε"
                      frame="A0:n63001005005;n63001001007"
                      subjref="n63001005005 n63001001007">ἠκούσατε</w>
-                  <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                  <wg class="pp" rule="PrepNp" role="adv">
                      <w ref="2JN 1:6!18"
                         after=" "
                         class="prep"
@@ -1957,7 +1940,7 @@
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
                <wg class="cl" rule="ADV-V">
-                  <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                  <wg class="pp" rule="PrepNp" role="adv">
                      <w ref="2JN 1:6!21"
                         after=" "
                         class="prep"
@@ -2048,11 +2031,7 @@
                   morph="V-2AAI-3P"
                   unicode="ἐξῆλθον"
                   frame="A0:n63001007003">ἐξῆλθον</w>
-               <wg class="pp"
-                   articular="true"
-                   rule="PrepNp"
-                   type="wrapper-scope"
-                   role="adv">
+               <wg class="pp" articular="true" rule="PrepNp" role="adv">
                   <w ref="2JN 1:7!5"
                      after=" "
                      class="prep"
@@ -2133,7 +2112,7 @@
                         morph="A-NPM"
                         unicode="πλάνοι">πλάνοι</w>
                   </wg>
-                  <wg hint="apposition" articular="true" rule="DetCL">
+                  <wg role="apposition" articular="true" rule="DetCL">
                      <w ref="2JN 1:7!8"
                         after=" "
                         class="det"
@@ -2237,7 +2216,7 @@
                               morph="V-PNP-ASM"
                               unicode="ἐρχόμενον"
                               frame="A0:n63001007011">ἐρχόμενον</w>
-                           <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                           <wg class="pp" rule="PrepNp" role="adv">
                               <w ref="2JN 1:7!14"
                                  after=" "
                                  class="prep"
@@ -2450,7 +2429,7 @@
                   ln="89.49"
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
-               <wg rule="notCLbutCL2CL" junction="subordinate">
+               <wg type="group" rule="notCLbutCL2CL" junction="subordinate">
                   <w ref="2JN 1:8!4"
                      after=" "
                      class="adv"
@@ -2699,11 +2678,7 @@
                               morph="V-PAP-NSM"
                               unicode="μένων"
                               frame="A0:n00000000000">μένων</w>
-                           <wg class="pp"
-                               articular="true"
-                               rule="PrepNp"
-                               type="wrapper-scope"
-                               role="adv">
+                           <wg class="pp" articular="true" rule="PrepNp" role="adv">
                               <w ref="2JN 1:9!7"
                                  after=" "
                                  class="prep"
@@ -2881,11 +2856,7 @@
                         morph="V-PAP-NSM"
                         unicode="μένων"
                         frame="A0:n00000000000">μένων</w>
-                     <wg class="pp"
-                         articular="true"
-                         rule="PrepNp"
-                         type="wrapper-scope"
-                         role="adv">
+                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
                         <w ref="2JN 1:9!17"
                            after=" "
                            class="prep"
@@ -3067,7 +3038,7 @@
       <p>
          <milestone unit="verse" id="2JN 1:10">2JN 1:10</milestone> εἴ τις ἔρχεται πρὸς ὑμᾶς καὶ ταύτην τὴν διδαχὴν οὐ φέρει, μὴ λαμβάνετε αὐτὸν εἰς οἰκίαν, καὶ χαίρειν αὐτῷ μὴ λέγετε·</p>
       <wg>
-         <wg rule="ClCl2">
+         <wg type="group" rule="ClCl2">
             <wg rule="sub-CL">
                <w ref="2JN 1:10!1"
                   after=" "
@@ -3117,7 +3088,7 @@
                         morph="V-PNI-3S"
                         unicode="ἔρχεται"
                         frame="A0:n63001010002">ἔρχεται</w>
-                     <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                     <wg class="pp" rule="PrepNp" role="adv">
                         <w ref="2JN 1:10!4"
                            after=" "
                            class="prep"
@@ -3291,7 +3262,7 @@
                      morph="P-ASM"
                      unicode="αὐτὸν"
                      referent="n63001010002">αὐτὸν</w>
-                  <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+                  <wg class="pp" rule="PrepNp" role="adv">
                      <w ref="2JN 1:10!15"
                         after=" "
                         class="prep"
@@ -3714,7 +3685,7 @@
                   unicode="ἐβουλήθην"
                   frame="A1:n63001001002"
                   subjref="n63001001002">ἐβουλήθην</w>
-               <wg class="pp" rule="PrepNp" type="wrapper-scope" role="adv">
+               <wg class="pp" rule="PrepNp" role="adv">
                   <w ref="2JN 1:12!7"
                      after=" "
                      class="prep"
@@ -3827,7 +3798,7 @@
                            morph="V-2ADN"
                            unicode="γενέσθαι"
                            subjref="n63001001002">γενέσθαι</w>
-                        <wg class="pp" rule="PrepNp" type="wrapper-scope" role="p">
+                        <wg class="pp" rule="PrepNp" role="p">
                            <w ref="2JN 1:12!14"
                               after=" "
                               class="prep"
@@ -3883,7 +3854,7 @@
                                  ln="83.39"
                                  morph="N-ASN"
                                  unicode="στόμα">στόμα</w>
-                              <wg class="pp" rule="PrepNp" type="wrapper-scope">
+                              <wg class="pp" rule="PrepNp">
                                  <w ref="2JN 1:12!18"
                                     after=" "
                                     class="prep"
@@ -3998,7 +3969,7 @@
                                  referent="n63001001002 n63001005005 n63001001007 n63001001022">ἡμῶν</w>
                            </wg>
                         </wg>
-                        <wg class="vp" rule="VerbBe" type="wrapper-scope" role="v">
+                        <wg class="vp" rule="VerbBe" role="v">
                            <w ref="2JN 1:12!25"
                               after=" "
                               class="verb"
