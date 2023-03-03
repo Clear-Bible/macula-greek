@@ -645,6 +645,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						)
 						or (
 							count($node/Node[local:is-nominalized-clause(.)]) eq 1
+(:							and not($node/@Rule = ('NP-CL', 'CL-NP')):)
 						)
 						or (
 							count($node/Node[local:is-peripheral(.)]) eq 1
@@ -1260,11 +1261,11 @@ declare function local:process-wrapper-clause($node, $passed-role)
 						return
 							<wg>{
 							
-									$node/@Rule,
-									$constituent-to-embed/@Cat ! attribute child_cat {$constituent-to-embed/@Cat},
+									(:$node/@Rule,:)
+									(:$constituent-to-embed/@Cat ! attribute child_cat {$constituent-to-embed/@Cat},
 									$constituent-to-embed/@Rule ! attribute child_rule {$constituent-to-embed/@Rule},
 									$constituent-to-raise/@Cat ! attribute head_cat {$constituent-to-raise/@Cat},
-									$constituent-to-raise/@Rule ! attribute head_rule {$constituent-to-raise/@Rule},
+									$constituent-to-raise/@Rule ! attribute head_rule {$constituent-to-raise/@Rule},:)
 									local:clause-complex-class-attribute($node, $constituent-to-embed, $constituent-to-raise, $disambiguated-embedded-role, $passed-role),
 									$node/@nodeId,
 									local:attributes($processed-head),
@@ -1284,13 +1285,13 @@ declare function local:process-wrapper-clause($node, $passed-role)
 									
 								}</wg>
 			else
-				<wg
-					type="wrapper-clause-scope">{
+				<wg>{
 						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
 						if ($passed-role) then
 							attribute role {$passed-role || (if ($debugging-mode) then  '__clause-wrapper-2' else ())}
 						else
 							(),
+						(:attribute type {"wrapper-clause-scope"},:)
 						$node/element() ! local:node(.)
 					}</wg>
 };
@@ -1418,9 +1419,9 @@ declare function local:process-complex-node($node, $passed-role)
 	(: WRAPPERS - subordinates siblings :)
 	if ($node/@Rule = $wrapper-rule) then
 		(:local:process-wrapper($node, $passed-role):)
-		<wg
-			type="wrapper-scope">{
+		<wg>{
 				local:attributes($node),
+				(:attribute type {"wrapper-scope"},:)
 				if ($passed-role) then
 					attribute role {$passed-role}
 				else
@@ -1453,10 +1454,12 @@ declare function local:process-complex-node($node, $passed-role)
 							attribute role {$passed-role}
 						else
 							(),
+						(:
 						if ($node//@Rule = $nominalized-clause-rule) then
 							attribute type {'modifier-clause-scope'}
 						else 
 							attribute type {'modifier-scope'},
+						:)
 						$node/element() ! local:node(.)
 					}</wg>
 			else
