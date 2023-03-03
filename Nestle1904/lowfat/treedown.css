@@ -22,13 +22,12 @@ sentence {
   /* Ryder: 1rem space between <p> and <wg> */
 }
 
-
 /* 
  * experiemental stuff for debugging
  */
 
 [type='group'] {
-   display: block;
+  display: block;
 }
 
 /* indent what follows after an element with type = apposition */
@@ -52,6 +51,7 @@ sentence {
 [type$='clause-scope']:not([role='apposition']):not([appositioncontainer]) > wg + *,
 [type='apposition-group'] > [type='group'],
 
+
 [type='group'][role]:not([role='apposition']):not([appositioncontainer]):not([role='aux']) > * /* Ryder: these are often clausal apposition, e.g., NP-CL */ {
   /* <-- select only wrappers that wrap clauses */ /* Ryder: sometimes a clause is 'wrapped' by something like a relative pronoun. These could be on a new line to improve readability. */
   display: block;
@@ -73,6 +73,11 @@ sentence {
 /* Ryder: a clause or conjuncted wg following a clause that is a descendent of a clause or role */
 *:is([class='cl'], [role]) *:is([class='cl'], [class='cl'] + [type='conjuncted-wg']),
 
+
+[type='group'],
+
+
+
 [type='group'][role]:not([role='apposition']):not([appositioncontainer]):not([role='aux']) > *, /* Ryder: these are often clausal apposition, e.g., NP-CL */
 [role='apposition'],
 [type='apposition-group'] > [type='group'],
@@ -91,7 +96,7 @@ sentence {
   /* Ryder: these next three selectors are for group members following a member with an embedded clause */
 [type='group'] > [type$='clause-scope'] > [class='cl'],
 [type='group'] > [type$='clause-scope'] + *,
-[type$='group'] > [type='group'] + *,
+/* [type$='group'] > [type='group'] + *, */
 
 /* Ryder: these next two selectors are for nested, nominalized clauses, which are sometimes in apposition, and sometimes with preceding and/or following content that is not a clause. */
 [type$='clause-scope']:not([role='apposition']):not([appositioncontainer])
@@ -114,9 +119,14 @@ sentence {
 /* ROLE MARKERS *
 ****************/
 
+[role] {
+  margin-inline-start: 1rem;
+}
+
 [role]::before {
   content: attr(role);
   color: cadetblue;
+  margin-inline-start: -1rem;
   margin-inline-end: 0.4rem; /* Ryder: 0.4rem space between role and element seems to generally align with a 1rem space without a role. */
 }
 [role='aux']::before {
@@ -232,3 +242,8 @@ w[after=' ']::after {
   background: lightyellow;
 } 
 */
+
+[discontinuous='true']::after {
+  content: '*' !important;
+  color: cadetblue;
+}
