@@ -25,8 +25,7 @@ sentence {
 
 [class='cl'],
 [role],
-[type='group'],
-[type='conjuncted-wg'] {
+[type='group'] {
   display: block;
 }
 
@@ -39,15 +38,17 @@ sentence {
 ***********************************/
 
 [class='cl'],
-[role],
-[type='group'],
-[type='conjuncted-wg'] {
+[role] {
   margin-inline-start: 1rem;
 }
 
 /***************************************
 * ELEMENTS THAT SHOULD NOT BE INDENTED *
 ***************************************/
+
+[type='conjuncted-wg']:first-of-type {
+  margin-inline-start: 0;
+}
 
 /****************
 /* ROLE MARKERS *
