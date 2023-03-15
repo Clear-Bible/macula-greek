@@ -1313,8 +1313,9 @@ declare function local:process-conjunctions($node, $passed-role)
 		return
 			(: Ryder: if constituent is conj (different than Hebrew trees in this regard), embed immediately following sibling :)
 			if ($constituent/@Cat = ('conj')) then
-				<wg
-					type='conjuncted-wg'>{
+				<wg>{
+				        (:attribute type {'conjuncted-wg'},:)
+				        attribute type {'group'},
 						$constituent ! local:node(.),
 						$constituent/following-sibling::element()[1] ! local:node(.)
 					}</wg>
