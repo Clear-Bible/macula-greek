@@ -188,7 +188,7 @@ declare function local:attributes($node, $exclusions, $passed-role)
     if (
     	local:is-nominalized-clause($node)
     	) then attribute clauseType {'nominalized'} else (),
-    $node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule] ! (if ($passed-role) then () else attribute role {"apposition"}),
+    $node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule] ! (if ($passed-role) then () else attribute junction {"apposition"}),
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
 (:    $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),:)
@@ -355,7 +355,7 @@ declare function local:keep-siblings-as-siblings($node, $passed-role)
 			local:attributes($node)
 			,
 			if ($passed-role = 'apposition') then
-				attribute role {$passed-role}
+				attribute junction {$passed-role}
 			else if ($passed-role) then
 				attribute role {$passed-role}
 			else ()
@@ -378,7 +378,9 @@ declare function local:simple-clause($node, $passed-role, $ellipsis-already-proc
 		return
 			<wg>{
 					local:attributes($node),
-					if ($passed-role) then
+					if ($passed-role = 'apposition') then
+				        attribute junction {$passed-role}
+					else if ($passed-role) then
 						attribute role {$passed-role}
 					else
 						(),
@@ -443,7 +445,7 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 		if (local:is-nominalized-clause($node/Node[2])) then
 			<wg>{
 				attribute class {'np'},
-			    attribute type {'apposition'},
+			    attribute junction {'apposition'},
 			    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
 			    if ($passed-role) then
 					attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_4' else ())}
@@ -466,7 +468,7 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 	else
 		<wg>{
 			attribute class {'np'},
-			attribute type {'apposition'},
+			attribute junction {'apposition'},
 		    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
 		    if ($passed-role) then
 				attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_1' else ())}
@@ -1305,7 +1307,9 @@ declare function local:process-conjunctions($node, $passed-role)
 {
 <wg>{
 		local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
-		if ($passed-role) then
+		if ($passed-role = 'apposition') then
+				attribute junction {$passed-role}
+		else if ($passed-role) then
 			attribute role {$passed-role}
 		else
 			(),
@@ -1428,7 +1432,9 @@ declare function local:process-complex-node($node, $passed-role)
 		<wg>{
 				local:attributes($node),
 				(:attribute type {"wrapper-scope"},:)
-				if ($passed-role) then
+				if ($passed-role = 'apposition') then
+				    attribute junction {$passed-role}
+				else if ($passed-role) then
 					attribute role {$passed-role}
 				else
 					(),
@@ -1456,7 +1462,9 @@ declare function local:process-complex-node($node, $passed-role)
 				(: Ryder: keep modifier with modified. Note that aramaic determiners follow their nominal :)
 				<wg>{
 						local:attributes($node),
-						if ($passed-role) then
+						if ($passed-role = 'apposition') then
+				            attribute junction {$passed-role}
+				        else if ($passed-role) then
 							attribute role {$passed-role}
 						else
 							(),
@@ -1543,10 +1551,12 @@ declare function local:word($node, $passed-role)
                 (: place punctuation in an 'after' attribute :)
                 <w>
                     {
-                        if ($passed-role) then
-										attribute role {$passed-role}
-									else
-										(),
+                        if ($passed-role = 'apposition') then
+        				    attribute junction {$passed-role}
+        				else if ($passed-role) then
+							attribute role {$passed-role}
+						else
+							(),
                         attribute ref {local:USFMId($node/@nodeId)},
                         attribute after {substring($wordContentWithoutBrackets, string-length($wordContentWithoutBrackets), 1)},
                         local:attributes($node),
@@ -1556,10 +1566,12 @@ declare function local:word($node, $passed-role)
             else
                 <w>
                     {
-                        if ($passed-role) then
-										attribute role {$passed-role}
-									else
-										(),
+                        if ($passed-role = 'apposition') then
+            				attribute junction {$passed-role}
+            			else if ($passed-role) then
+							attribute role {$passed-role}
+						else
+							(),
                         attribute ref {local:USFMId($node/@nodeId)},
                         attribute after {' '},
                         local:attributes($node),
