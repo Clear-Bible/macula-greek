@@ -224,7 +224,7 @@ declare function local:attributes($node, $exclusions, $passed-role)
 	(: Assign @junction to clauses :)
 	if ($node/@Cat = 'CL') then 
         (: Add @junction to clauses based on parent rule :)
-        $node/parent::Node/@Rule ! (if (. = ($junctionRule)) then attribute junction {
+        $node/parent::Node/@Rule ! (if (. = ($junctionRule) and not($node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule])) then attribute junction {
          (: Determine correct value for @junction :)
             if (. = $subordinationRule) then 'subordinate'
             else if (. = $coordinationRule) then 'coordinate'
@@ -447,7 +447,9 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 				attribute class {'np'},
 			    attribute junction {'apposition'},
 			    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
-			    if ($passed-role) then
+			    if ($passed-role = 'apposition') then
+			        ()
+				else if ($passed-role) then
 					attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_4' else ())}
 				else
 					(), 
@@ -469,8 +471,10 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 		<wg>{
 			attribute class {'np'},
 			attribute junction {'apposition'},
-		    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
-		    if ($passed-role) then
+		    local:attributes($node, 'class', $passed-role) ! (if (name(.) = ('class', 'junction')) then () else .),
+		    if ($passed-role = 'apposition') then
+		        attribute junction {$passed-role}
+			else if ($passed-role) then
 				attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_1' else ())}
 			else
 				(),  
@@ -1156,7 +1160,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 										local:attributes($processed-head)
 									else
 										(if ($debugging-mode) then  attribute debug_attributes {'node attributes skipped because node was not atomic'} else ()),
-									if ($passed-role) then
+									if ($passed-role = 'apposition') then
+                 				        attribute junction {$passed-role}
+                 					else if ($passed-role) then
 										attribute role {$passed-role || (if ($debugging-mode) then  '__default' else ())}
 									else
 										(),
@@ -1276,7 +1282,9 @@ declare function local:process-wrapper-clause($node, $passed-role)
 									local:clause-complex-class-attribute($node, $constituent-to-embed, $constituent-to-raise, $disambiguated-embedded-role, $passed-role),
 									$node/@nodeId,
 									local:attributes($processed-head),
-									if ($passed-role) then
+									if ($passed-role = 'apposition') then
+                   				        attribute junction {$passed-role}
+                   					else if ($passed-role) then
 										attribute role {$passed-role || (if ($debugging-mode) then  '__clause-wrapper-1' else ())}
 									else
 										(),
@@ -1294,7 +1302,9 @@ declare function local:process-wrapper-clause($node, $passed-role)
 			else
 				<wg>{
 						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
-						if ($passed-role) then
+						if ($passed-role = 'apposition') then
+         			        attribute junction {$passed-role}
+         				else if ($passed-role) then
 							attribute role {$passed-role || (if ($debugging-mode) then  '__clause-wrapper-2' else ())}
 						else
 							(),
