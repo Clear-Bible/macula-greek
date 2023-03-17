@@ -25,7 +25,8 @@ sentence {
 
 [class='cl'],
 [role],
-[type='group'] {
+[type='group'],
+[junction='apposition'] {
   display: block;
 }
 
@@ -38,7 +39,8 @@ sentence {
 ***********************************/
 
 [class='cl'],
-[role] {
+[role],
+[junction='apposition'] {
   margin-inline-start: 1rem;
 }
 
@@ -54,11 +56,13 @@ sentence {
 /* ROLE MARKERS *
 ****************/
 
-[role] {
+[role],
+[junction='apposition'] {
   margin-inline-start: 1rem;
 }
 
-[role]::before {
+[role]::before,
+[junction='apposition']::before {
   content: attr(role);
   color: cadetblue;
   margin-inline-start: -1rem;
@@ -70,7 +74,7 @@ sentence {
 [role='adv']::before {
   content: '+';
 }
-[role='apposition']::before {
+[junction='apposition']::before {
   content: ':';
 }
 [role='ellipsis']::before {
