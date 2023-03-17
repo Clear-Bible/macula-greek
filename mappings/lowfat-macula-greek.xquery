@@ -592,7 +592,7 @@ declare function local:previous-sibling-has-role($node as element(Node), $role a
 declare function local:disambiguate-clause-complex-structure($node, $passed-role)
 {
 	
-	let $rules-that-have-been-disambiguated-in-this-function := ('ClCl', 'ClCl2', 'CLandCL2', 'NP-CL', 'CL-NP')
+	let $rules-that-this-function-disambiguates := ('ClCl', 'ClCl2', 'CLandCL2', 'NP-CL', 'CL-NP')
 	let $exceptions-to-skip-complex := (
 		'440180060120090', (: Ryder: multiple sentences :)
 		'410060380080020', (: Ryder: multiple sentences :)
@@ -617,7 +617,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				{local:process-conjunctions($node, $passed-role)}
 			</error_ellipsis_in_clause_complex_function>
 		else
-			if (not($node/@Rule = $rules-that-have-been-disambiguated-in-this-function)) then
+			if (not($node/@Rule = $rules-that-this-function-disambiguates)) then
 				(: Ryder: some other rules should probably be treated as complex clause structure requiring disambiguation (e.g., 'ClaCl'), and if they do, then they should trip this condition until their internal structure disambiguation is handled below :)
 				<error_unknown_complex_clause_structure
 					role="error_unknown_complex_clause_structure"
