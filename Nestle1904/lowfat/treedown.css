@@ -89,6 +89,12 @@ sentence {
   content: '+';
   /* content: '<'; */
 }
+[role='v'][mood='participle']::before {
+  content: 'v.part';
+}
+[role='v'][mood='infinitive']::before {
+  content: 'v.inf';
+}
 
 /**************
 * WORD LAYOUT *
