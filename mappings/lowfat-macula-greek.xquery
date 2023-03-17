@@ -407,6 +407,7 @@ declare function local:contains-projecting-verb($node)
 				or starts-with(@LN, '32')
 				or starts-with(@LN, '28') 
 				or starts-with(@LN, '30')
+				or starts-with(@LN, '25')
 				or @UnicodeLemma = "λέγω"
 			]
 			and not(
@@ -416,14 +417,18 @@ declare function local:contains-projecting-verb($node)
 		)
 };
 
-declare function local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
+declare function local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate, $constituent-to-raise)
 {							
 	if ($subordinate-first-word = $affirmation_markers) then 'adv' || (if ($debugging-mode) then  '___role-by-subordinate-first-word_1' else ())
 	else if ($subordinate-first-word = $inferential-markers) then 'adv' || (if ($debugging-mode) then  '___role-by-subordinate-first-word_2' else ())
 	else if ($subordinate-first-word = $actualization-markers) then 'adv' || (if ($debugging-mode) then  '___role-by-subordinate-first-word_3' else ())
 	else if ($subordinate-first-word = $focus-markers) then 'adv' || (if ($debugging-mode) then  '___role-by-subordinate-first-word_4' else ())
 	else if ($subordinate-first-word = $discourse_markers) then 'adv' || (if ($debugging-mode) then  '___role-by-subordinate-first-word_5' else ())
-	else if ($subordinate-first-word = $operators) then 'adv' || (if ($debugging-mode) then  '___role-by-subordinate-first-word_6' else ())
+	else if ($subordinate-first-word = $operators) then 
+       	if (local:contains-projecting-verb($constituent-to-raise)) then
+       	    'o'
+       	else
+       	    'adv' || (if ($debugging-mode) then  '___role-by-subordinate-first-word_6' else ())
 	else if (
 		$subordinate-first-word = $complementizers 
 		and not($constituent-to-subordinate/@Rule = 'sub-CL')
@@ -644,7 +649,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				let $should-coordinate-constituents :=
 					not(
 						$node/@nodeId = $exceptions-to-exclude-coordination
-						or ($first-constituent/@Rule, $second-constituent/@Rule) = ('that-VP', 'Intj2CL')
+						or ($first-constituent/@Rule, $second-constituent/@Rule) = ('sub-CL', 'that-VP', 'Intj2CL')
 						or (
 							(: Ryder: these are typically indirect discourse, which should be nested not grouped :)
 							$node/Node/@Rule = 'that-VP'
@@ -753,6 +758,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							$first-constituent/@Rule = 'PtclCL'
 							and $second-constituent/@Rule = 'that-VP'
 						)
+						or $second-constituent[@Rule = 'sub-CL']
 						or ($second-constituent[@ClType = 'Minor'])
 					)
 					and
@@ -776,6 +782,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 				
 				let $should-subordinate-second := (
 					$node/@Rule = ('ClCl')
+					or $second-constituent[@Rule = 'sub-CL'] (: Ryder: I'm not sure this makes any difference as the parent is probably a ClCl anyways :)
 					or (
 						$first-constituent/@Rule = 'PtclCL'
 						and $second-constituent/@Rule = 'that-VP'
@@ -1029,11 +1036,17 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'adv' (: Ryder: In these cases (e.g., a sub-CL modifying a group), 'adv' is just a general category. These could theoretically be broken down further into things like conditionals (EI), temporal markers (OTE/OTAN/etc.), and so on. :)
 								
 								else if ($constituent-to-subordinate/@Rule = 'sub-CL') then
-									'adv'
-								else if ($constituent-to-subordinate/@Rule = 'that-VP') then
-									'o' || (if ($debugging-mode) then  '_that-vp' else ())
-								else if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate))
-									then local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
+									'adv'  || (if ($debugging-mode) then '_sub-cl in clause complex' else ())
+								else if (
+								        $constituent-to-subordinate/@Rule = 'that-VP'
+								        or (
+								            local:contains-projecting-verb($constituent-to-raise)
+								            and $constituent-to-subordinate/@Rule = 'sub-CL'
+								        )
+								    ) then
+									'o' || (if ($debugging-mode) then  '_that-vp or sub-cl that should be that-vp' else ())
+								else if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate, $constituent-to-raise))
+									then local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate, $constituent-to-raise)
 								
 								else if ($constituent-to-subordinate/@Cat = 'np') then
 									'apposition' || (if ($debugging-mode) then  '_raised-complex-child' else ())
@@ -1103,9 +1116,12 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							
 							else if ($constituent-to-subordinate/@Rule = 'ADV2CL') then
 								'adv'
-							else if (local:contains-projecting-verb($constituent-to-raise)) then
-								if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)) then
-									local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
+							else if (
+							     local:contains-projecting-verb($constituent-to-raise)
+							     and not($constituent-to-subordinate/@Rule = 'sub-CL')
+							) then
+								if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate, $constituent-to-raise)) then
+									local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate, $constituent-to-raise)
 								else
 									'o' || (if ($debugging-mode) then '_c' else ())
 							else if ($constituent-to-subordinate[@ClType = 'Minor']) then
@@ -1119,14 +1135,14 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								else
 									'o' || (if ($debugging-mode) then '_d' || data($node/@nodeId)  else ())
 							
-							else if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate))
-								then local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
+							else if (local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate, $constituent-to-raise))
+								then local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate, $constituent-to-raise)
 							
 							else if ($constituent-to-subordinate/@Rule = 'Conj-CL') then
-								local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate)
+								local:disambiguate-role-by-subordinate-first-word($subordinate-first-word, $constituent-to-subordinate, $constituent-to-raise)
 
 							else switch($constituent-to-subordinate/@Rule)
-								case 'sub-CL' return 'adv'
+								case 'sub-CL' return 'adv'  || (if ($debugging-mode) then '_fallback-sub-cl' else ())
 								case 'PtclCL'
 									(: Ryder TODO: disambiguate PtclCL subordinates :)
 									return 'adv'
