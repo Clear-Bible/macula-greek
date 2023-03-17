@@ -25,7 +25,7 @@
                   ln="93.294a"
                   morph="N-NSM"
                   unicode="Παῦλος">Παῦλος</w>
-               <wg class="np" role="apposition" rule="NpPp">
+               <wg class="np" junction="apposition" rule="NpPp">
                   <wg class="np" rule="NPofNP">
                      <w ref="1TI 1:1!2"
                         after=" "
@@ -124,7 +124,7 @@
                                  ln="12.1"
                                  morph="N-GSM"
                                  unicode="Θεοῦ">Θεοῦ</w>
-                              <wg class="np" role="apposition" rule="NPofNP">
+                              <wg class="np" junction="apposition" rule="NPofNP">
                                  <w ref="1TI 1:1!8"
                                     after=" "
                                     class="noun"
@@ -205,7 +205,7 @@
                                        morph="N-GSM"
                                        unicode="Ἰησοῦ">Ἰησοῦ</w>
                                  </wg>
-                                 <wg class="np" role="apposition" articular="true" rule="DetNP">
+                                 <wg class="np" junction="apposition" articular="true" rule="DetNP">
                                     <w ref="1TI 1:1!13"
                                        after=" "
                                        class="det"
@@ -280,7 +280,7 @@
                   ln="93.361"
                   morph="N-DSM"
                   unicode="Τιμοθέῳ">Τιμοθέῳ</w>
-               <wg class="np" role="apposition" rule="NpPp">
+               <wg class="np" junction="apposition" rule="NpPp">
                   <wg class="np" rule="AdjpNp">
                      <w ref="1TI 1:2!2"
                         after=" "
@@ -494,7 +494,7 @@
                               morph="N-GSM"
                               unicode="Ἰησοῦ">Ἰησοῦ</w>
                         </wg>
-                        <wg class="np" role="apposition" articular="true" rule="DetNP">
+                        <wg class="np" junction="apposition" articular="true" rule="DetNP">
                            <w ref="1TI 1:2!15"
                               after=" "
                               class="det"
@@ -818,7 +818,7 @@
                               unicode="προσέχειν"
                               frame="A0:n54001003012"
                               subjref="n54001003012">προσέχειν</w>
-                           <wg class="np" type="apposition" rule="NP-CL" role="adv">
+                           <wg class="np" junction="apposition" rule="NP-CL" role="adv">
                               <wg rule="NpaNp">
                                  <w ref="1TI 1:4!3"
                                     after=" "
@@ -882,7 +882,7 @@
                                     </wg>
                                  </wg>
                               </wg>
-                              <wg clauseType="nominalized" rule="CLaCL" role="apposition">
+                              <wg clauseType="nominalized" rule="CLaCL" junction="apposition">
                                  <wg class="cl"
                                      clauseType="nominalized"
                                      rule="S-O-V-ADV"
@@ -1003,7 +1003,7 @@
                                                 morph="N-GSM"
                                                 unicode="Θεοῦ">Θεοῦ</w>
                                           </wg>
-                                          <wg class="np" role="apposition" rule="NpPp">
+                                          <wg class="np" junction="apposition" rule="NpPp">
                                              <w ref="1TI 1:4!14"
                                                 after=" "
                                                 class="det"
@@ -1192,7 +1192,7 @@
                         gloss="out of"
                         morph="PREP"
                         unicode="ἐκ">ἐκ</w>
-                     <wg class="np" type="apposition" rule="NP-CL">
+                     <wg class="np" junction="apposition" rule="NP-CL">
                         <wg rule="Conj3Np">
                            <wg class="np" rule="AdjpNp">
                               <w ref="1TI 1:5!9"
@@ -1321,7 +1321,7 @@
                         <wg class="cl"
                             clauseType="nominalized"
                             rule="ADV-S-V-ADV-ADV"
-                            role="apposition">
+                            junction="apposition">
                            <wg class="cl"
                                clauseType="nominalized"
                                rule="ADV-V"
@@ -2379,7 +2379,7 @@
                                                             gloss="according to"
                                                             morph="PREP"
                                                             unicode="κατὰ">κατὰ</w>
-                                                         <wg class="np" type="apposition" articular="true" rule="NP-CL">
+                                                         <wg class="np" junction="apposition" articular="true" rule="NP-CL">
                                                             <wg class="np" articular="true" rule="DetNP">
                                                                <w ref="1TI 1:11!2"
                                                                   after=" "
@@ -2503,7 +2503,7 @@
                                                             <wg class="cl"
                                                                 clauseType="nominalized"
                                                                 rule="O-V-S"
-                                                                role="apposition">
+                                                                junction="apposition">
                                                                <w role="o"
                                                                   ref="1TI 1:11!9"
                                                                   after=" "
@@ -2679,7 +2679,10 @@
                         referent="n54001001001">με</w>
                   </wg>
                </wg>
-               <wg type="apposition" class="np" role="apposition" rule="Np-Appos">
+               <wg type="apposition"
+                   class="np"
+                   junction="apposition"
+                   rule="Np-Appos">
                   <wg type="apposition" class="np" rule="Np-Appos">
                      <w ref="1TI 1:12!6"
                         after=" "
@@ -2714,7 +2717,7 @@
                         morph="N-DSM"
                         unicode="Ἰησοῦ">Ἰησοῦ</w>
                   </wg>
-                  <wg class="np" role="apposition" articular="true" rule="DetNP">
+                  <wg class="np" junction="apposition" articular="true" rule="DetNP">
                      <w ref="1TI 1:12!8"
                         after=" "
                         class="det"
@@ -3318,7 +3321,7 @@
                                     unicode="ἀγάπης">ἀγάπης</w>
                               </wg>
                            </wg>
-                           <wg class="np" role="apposition" rule="NpPp">
+                           <wg class="np" junction="apposition" rule="NpPp">
                               <w ref="1TI 1:14!12"
                                  after=" "
                                  class="det"
@@ -4209,7 +4212,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="np" role="apposition" rule="AdjpNp">
+                  <wg class="np" junction="apposition" rule="AdjpNp">
                      <wg type="group" rule="3Adjp">
                         <w ref="1TI 1:17!6"
                            after=" "
@@ -4804,7 +4807,7 @@
                               gloss="and"
                               morph="CONJ"
                               unicode="καὶ">καὶ</w>
-                           <wg class="np" type="apposition" rule="NP-CL">
+                           <wg class="np" junction="apposition" rule="NP-CL">
                               <wg class="np" rule="AdjpNp">
                                  <w ref="1TI 1:19!4"
                                     after=" "
@@ -4841,7 +4844,7 @@
                               <wg Rule="ClCl"
                                   class="cl"
                                   nodeId="540010190060200"
-                                  role="apposition">
+                                  junction="apposition">
                                  <wg class="cl"
                                      clauseType="nominalized"
                                      rule="ADV-S-ADV-V"
@@ -5002,7 +5005,7 @@
                                     gloss="are"
                                     morph="V-PAI-3S"
                                     unicode="ἐστιν">ἐστιν</w>
-                                 <wg class="np" type="apposition" rule="NP-CL" role="s">
+                                 <wg class="np" junction="apposition" rule="NP-CL" role="s">
                                     <wg rule="NpaNp">
                                        <w ref="1TI 1:20!3"
                                           after=" "
@@ -5052,7 +5055,7 @@
                                     <wg Rule="ClCl"
                                         class="cl"
                                         nodeId="540010200060080"
-                                        role="apposition">
+                                        junction="apposition">
                                        <wg class="cl" clauseType="nominalized" rule="O-V-IO" role="adv">
                                           <w role="o"
                                              ref="1TI 1:20!6"
@@ -5783,7 +5786,7 @@
                   ln="90.20"
                   morph="PREP"
                   unicode="ἐνώπιον">ἐνώπιον</w>
-               <wg class="np" type="apposition" articular="true" rule="NP-CL">
+               <wg class="np" junction="apposition" articular="true" rule="NP-CL">
                   <wg class="np" articular="true" rule="DetNP">
                      <w ref="1TI 2:3!6"
                         after=" "
@@ -5856,7 +5859,7 @@
                   <wg class="cl"
                       clauseType="nominalized"
                       rule="S-V-O"
-                      role="apposition">
+                      junction="apposition">
                      <w role="s"
                         ref="1TI 2:4!1"
                         after=" "
@@ -6174,7 +6177,10 @@
                               </wg>
                            </wg>
                         </wg>
-                        <wg type="apposition" class="np" role="apposition" rule="Np-Appos">
+                        <wg type="apposition"
+                            class="np"
+                            junction="apposition"
+                            rule="Np-Appos">
                            <wg type="apposition" class="np" rule="Np-Appos">
                               <w ref="1TI 2:5!10"
                                  after=" "
@@ -6192,7 +6198,10 @@
                                  ln="9.1"
                                  morph="N-NSM"
                                  unicode="ἄνθρωπος">ἄνθρωπος</w>
-                              <wg type="apposition" class="np" role="apposition" rule="Np-Appos">
+                              <wg type="apposition"
+                                  class="np"
+                                  junction="apposition"
+                                  rule="Np-Appos">
                                  <w ref="1TI 2:5!11"
                                     after=" "
                                     class="noun"
@@ -6227,7 +6236,7 @@
                                     unicode="Ἰησοῦς,">Ἰησοῦς</w>
                               </wg>
                            </wg>
-                           <wg role="apposition" articular="true" rule="DetCL">
+                           <wg junction="apposition" articular="true" rule="DetCL">
                               <w ref="1TI 2:6!1"
                                  after=" "
                                  class="det"
@@ -6411,7 +6420,7 @@
             <wg Rule="ClCl2"
                 class="cl"
                 nodeId="540020070010170"
-                role="apposition">
+                junction="apposition">
                <wg class="cl"
                    clauseType="nominalized"
                    rule="ADV-VC-S-P"
@@ -6525,7 +6534,7 @@
                               unicode="ἀπόστολος,">ἀπόστολος</w>
                         </wg>
                      </wg>
-                     <wg class="np" role="apposition" rule="NpPp">
+                     <wg class="np" junction="apposition" rule="NpPp">
                         <wg class="np" rule="NPofNP">
                            <w ref="1TI 2:7!12"
                               after=" "
@@ -7280,7 +7289,7 @@
                                  gloss="through"
                                  morph="PREP"
                                  unicode="δι’">δι’</w>
-                              <wg class="np" type="apposition" rule="CL-NP">
+                              <wg class="np" junction="apposition" rule="CL-NP">
                                  <wg class="cl" clauseType="nominalized" rule="S-V-ADV">
                                     <w role="s"
                                        ref="1TI 2:10!2"
@@ -7379,7 +7388,7 @@
                                        </wg>
                                     </wg>
                                  </wg>
-                                 <wg class="np" rule="NpAdjp" role="apposition">
+                                 <wg class="np" rule="NpAdjp" junction="apposition">
                                     <w ref="1TI 2:10!8"
                                        after=" "
                                        class="noun"
@@ -8561,7 +8570,7 @@
                         ln="33.415"
                         morph="A-ASM"
                         unicode="ἀνεπίλημπτον">ἀνεπίλημπτον</w>
-                     <wg type="group" role="apposition" rule="NpNpNpNpNpNpNpNp">
+                     <wg type="group" junction="apposition" rule="NpNpNpNpNpNpNpNp">
                         <wg class="np" rule="ofNPNP">
                            <wg class="np" rule="AdjpNp">
                               <w ref="1TI 3:2!7"
@@ -10724,7 +10733,7 @@
                               ln="31.102"
                               morph="N-DSF"
                               unicode="πίστει">πίστει</w>
-                           <wg class="np" role="apposition" rule="NpPp">
+                           <wg class="np" junction="apposition" rule="NpPp">
                               <w ref="1TI 3:13!14"
                                  after=" "
                                  class="det"
@@ -11085,7 +11094,7 @@
                                  gloss="in"
                                  morph="PREP"
                                  unicode="ἐν">ἐν</w>
-                              <wg class="np" type="apposition" rule="NP-CL">
+                              <wg class="np" junction="apposition" rule="NP-CL">
                                  <wg class="np" rule="NPofNP">
                                     <w ref="1TI 3:15!9"
                                        after=" "
@@ -11123,7 +11132,7 @@
                                  <wg class="cl"
                                      clauseType="nominalized"
                                      rule="S-VC-P"
-                                     role="apposition">
+                                     junction="apposition">
                                     <w role="s"
                                        ref="1TI 3:15!12"
                                        after=" "
@@ -11219,7 +11228,7 @@
                                              </wg>
                                           </wg>
                                        </wg>
-                                       <wg class="np" role="apposition" rule="NPofNP">
+                                       <wg class="np" junction="apposition" rule="NPofNP">
                                           <wg rule="NpaNp">
                                              <w ref="1TI 3:15!17"
                                                 after=" "
@@ -12253,7 +12262,7 @@
                                        morph="V-PMN"
                                        unicode="ἀπέχεσθαι"
                                        frame="A0:n00000000000 A1:n54004003004">ἀπέχεσθαι</w>
-                                    <wg class="np" type="apposition" rule="NP-CL" role="o">
+                                    <wg class="np" junction="apposition" rule="NP-CL" role="o">
                                        <w ref="1TI 4:3!4"
                                           after=","
                                           class="noun"
@@ -12273,7 +12282,7 @@
                                        <wg Rule="ClCl2"
                                            class="cl"
                                            nodeId="540040030050320"
-                                           role="apposition">
+                                           junction="apposition">
                                           <wg class="cl" clauseType="nominalized" rule="O-S-V-ADV" role="adv">
                                              <w role="o"
                                                 ref="1TI 4:3!5"
@@ -13078,7 +13087,7 @@
                               gloss="and"
                               morph="CONJ"
                               unicode="καὶ">καὶ</w>
-                           <wg class="np" type="apposition" articular="true" rule="NP-CL">
+                           <wg class="np" junction="apposition" articular="true" rule="NP-CL">
                               <wg class="np" articular="true" rule="DetNP">
                                  <w ref="1TI 4:6!16"
                                     after=" "
@@ -13132,7 +13141,7 @@
                               <wg class="cl"
                                   clauseType="nominalized"
                                   rule="ADV-V"
-                                  role="apposition">
+                                  junction="apposition">
                                  <w role="adv"
                                     ref="1TI 4:6!19"
                                     after=" "
@@ -14027,7 +14036,7 @@
                         gloss="on"
                         morph="PREP"
                         unicode="ἐπὶ">ἐπὶ</w>
-                     <wg class="np" type="apposition" rule="NP-CL">
+                     <wg class="np" junction="apposition" rule="NP-CL">
                         <wg class="np" rule="NpAdjp">
                            <w ref="1TI 4:10!10"
                               after=" "
@@ -14075,7 +14084,7 @@
                         <wg class="cl"
                             clauseType="nominalized"
                             rule="S-VC-P"
-                            role="apposition">
+                            junction="apposition">
                            <w role="s"
                               ref="1TI 4:10!12"
                               after=" "
@@ -14798,7 +14807,7 @@
                frame="A0:n54001018006 A1:n54004014006"
                subjref="n54001018006">ἀμέλει</w>
             <wg class="np"
-                type="apposition"
+                junction="apposition"
                 articular="true"
                 rule="NP-CL"
                 role="o">
@@ -14866,7 +14875,7 @@
                <wg class="cl"
                    clauseType="nominalized"
                    rule="S-V-IO-ADV-ADV"
-                   role="apposition">
+                   junction="apposition">
                   <w role="s"
                      ref="1TI 4:14!7"
                      after=" "
@@ -15930,7 +15939,7 @@
                   ln="10.61"
                   morph="N-APF"
                   unicode="Χήρας">Χήρας</w>
-               <wg class="np" role="apposition" articular="true" rule="DetNP">
+               <wg class="np" junction="apposition" articular="true" rule="DetNP">
                   <w ref="1TI 5:3!3"
                      after=" "
                      class="det"
@@ -22129,7 +22138,7 @@
                                     morph="N-DPM"
                                     unicode="λόγοις,">λόγοις</w>
                               </wg>
-                              <wg class="np" role="apposition" rule="NPofNP">
+                              <wg class="np" junction="apposition" rule="NPofNP">
                                  <w ref="1TI 6:3!9"
                                     after=" "
                                     class="det"
@@ -22197,7 +22206,10 @@
                                              referent="n54001001001 n54001018006 n54004006004">ἡμῶν</w>
                                        </wg>
                                     </wg>
-                                    <wg type="apposition" class="np" role="apposition" rule="Np-Appos">
+                                    <wg type="apposition"
+                                        class="np"
+                                        junction="apposition"
+                                        rule="Np-Appos">
                                        <w ref="1TI 6:3!13"
                                           after=" "
                                           class="noun"
@@ -22421,7 +22433,7 @@
                               gloss="about"
                               morph="PREP"
                               unicode="περὶ">περὶ</w>
-                           <wg class="np" type="apposition" rule="NP-CL">
+                           <wg class="np" junction="apposition" rule="NP-CL">
                               <wg rule="NpaNp">
                                  <w ref="1TI 6:4!7"
                                     after=" "
@@ -22471,7 +22483,7 @@
                               <wg class="cl"
                                   clauseType="nominalized"
                                   rule="ADV-V-S"
-                                  role="apposition">
+                                  junction="apposition">
                                  <wg class="pp" rule="PrepNp" role="adv">
                                     <w ref="1TI 6:4!10"
                                        after=" "
@@ -23410,7 +23422,7 @@
                      gloss="into"
                      morph="PREP"
                      unicode="εἰς">εἰς</w>
-                  <wg class="np" type="apposition" rule="NP-CL">
+                  <wg class="np" junction="apposition" rule="NP-CL">
                      <wg rule="Conj3Np">
                         <w ref="1TI 6:9!7"
                            after=" "
@@ -23549,7 +23561,7 @@
                      <wg class="cl"
                          clauseType="nominalized"
                          rule="S-V-O-ADV"
-                         role="apposition">
+                         junction="apposition">
                         <w role="s"
                            ref="1TI 6:9!16"
                            after=" "
@@ -23784,7 +23796,7 @@
                   morph="V-PAI-3S"
                   unicode="ἐστιν">ἐστιν</w>
                <wg class="np"
-                   type="apposition"
+                   junction="apposition"
                    articular="true"
                    rule="NP-CL"
                    role="s">
@@ -23821,7 +23833,7 @@
                         morph="N-NSF"
                         unicode="φιλαργυρία,">φιλαργυρία</w>
                   </wg>
-                  <wg clauseType="nominalized" rule="CLaCL" role="apposition">
+                  <wg clauseType="nominalized" rule="CLaCL" junction="apposition">
                      <wg class="cl"
                          clauseType="nominalized"
                          rule="ADV-S-V-ADV"
@@ -24424,7 +24436,7 @@
                      frame="A0:n54006011004 A1:n54006012010"
                      subjref="n54006011004">ἐπιλαβοῦ</w>
                   <wg class="np"
-                      type="apposition"
+                      junction="apposition"
                       articular="true"
                       rule="NP-CL"
                       role="o">
@@ -24481,7 +24493,7 @@
                      <wg class="cl"
                          clauseType="nominalized"
                          rule="ADV-V"
-                         role="apposition">
+                         junction="apposition">
                         <wg class="pp" rule="PrepNp" role="adv">
                            <w ref="1TI 6:12!11"
                               after=" "
@@ -24745,7 +24757,7 @@
                            morph="N-GSM"
                            unicode="Θεοῦ">Θεοῦ</w>
                      </wg>
-                     <wg role="apposition" articular="true" rule="DetCL">
+                     <wg junction="apposition" articular="true" rule="DetCL">
                         <w ref="1TI 6:13!5"
                            after=" "
                            class="det"
@@ -24864,7 +24876,7 @@
                               morph="N-GSM"
                               unicode="Ἰησοῦ">Ἰησοῦ</w>
                         </wg>
-                        <wg role="apposition" articular="true" rule="DetCL">
+                        <wg junction="apposition" articular="true" rule="DetCL">
                            <w ref="1TI 6:13!12"
                               after=" "
                               class="det"
@@ -25115,7 +25127,7 @@
                      ln="67.119"
                      morph="ADV"
                      unicode="μέχρι">μέχρι</w>
-                  <wg class="np" type="apposition" articular="true" rule="NP-CL">
+                  <wg class="np" junction="apposition" articular="true" rule="NP-CL">
                      <wg class="np" articular="true" rule="DetNP">
                         <w ref="1TI 6:14!8"
                            after=" "
@@ -25201,7 +25213,10 @@
                                        referent="n54001001001 n54006011004 n54004006004">ἡμῶν</w>
                                  </wg>
                               </wg>
-                              <wg type="apposition" class="np" role="apposition" rule="Np-Appos">
+                              <wg type="apposition"
+                                  class="np"
+                                  junction="apposition"
+                                  rule="Np-Appos">
                                  <w ref="1TI 6:14!13"
                                     after=" "
                                     class="noun"
@@ -25241,7 +25256,7 @@
                      <wg class="cl"
                          clauseType="nominalized"
                          rule="O-ADV-V-S"
-                         role="apposition">
+                         junction="apposition">
                         <w role="o"
                            ref="1TI 6:15!1"
                            after=" "
@@ -25312,11 +25327,11 @@
                            unicode="δείξει"
                            frame="A1:n54006015001 A0:n54006015009">δείξει</w>
                         <wg class="np"
-                            type="apposition"
+                            junction="apposition"
                             articular="true"
                             rule="NP-CL"
                             role="s">
-                           <wg class="np" type="apposition" articular="true" rule="NP-CL">
+                           <wg class="np" junction="apposition" articular="true" rule="NP-CL">
                               <wg type="apposition" class="np" articular="true" rule="Np-Appos">
                                  <wg type="apposition" class="np" articular="true" rule="Np-Appos">
                                     <wg class="np" articular="true" rule="DetNP">
@@ -25396,7 +25411,7 @@
                                              unicode="Δυνάστης,">Δυνάστης</w>
                                        </wg>
                                     </wg>
-                                    <wg class="np" role="apposition" articular="true" rule="DetNP">
+                                    <wg class="np" junction="apposition" articular="true" rule="DetNP">
                                        <w ref="1TI 6:15!10"
                                           after=" "
                                           class="det"
@@ -25542,7 +25557,7 @@
                                        </wg>
                                     </wg>
                                  </wg>
-                                 <wg class="np" role="apposition" articular="true" rule="DetNP">
+                                 <wg class="np" junction="apposition" articular="true" rule="DetNP">
                                     <w ref="1TI 6:16!1"
                                        after=" "
                                        class="det"
@@ -25675,7 +25690,7 @@
                                     </wg>
                                  </wg>
                               </wg>
-                              <wg clauseType="nominalized" rule="CLaCL" role="apposition">
+                              <wg clauseType="nominalized" rule="CLaCL" junction="apposition">
                                  <wg class="cl"
                                      clauseType="nominalized"
                                      rule="O-V-S"
@@ -25810,7 +25825,7 @@
                            <wg Rule="ClCl"
                                class="cl"
                                nodeId="540060160150060"
-                               role="apposition">
+                               junction="apposition">
                               <w role="io"
                                  ref="1TI 6:16!15"
                                  after=" "
@@ -26195,7 +26210,7 @@
                               ln="12.1"
                               morph="N-DSM"
                               unicode="Θεῷ">Θεῷ</w>
-                           <wg role="apposition" articular="true" rule="DetCL">
+                           <wg junction="apposition" articular="true" rule="DetCL">
                               <w ref="1TI 6:17!18"
                                  after=" "
                                  class="det"
@@ -26864,7 +26879,7 @@
                                  ln="92.24"
                                  morph="T-GSF"
                                  unicode="τῆς">τῆς</w>
-                              <wg class="np" type="apposition" rule="NP-CL">
+                              <wg class="np" junction="apposition" rule="NP-CL">
                                  <wg class="np" rule="AdjpNp">
                                     <w ref="1TI 6:20!13"
                                        after=" "
@@ -26901,7 +26916,7 @@
                                  <wg class="cl"
                                      clauseType="nominalized"
                                      rule="ADV-S-ADV-V"
-                                     role="apposition">
+                                     junction="apposition">
                                     <wg class="cl"
                                         clauseType="nominalized"
                                         rule="O-V"
