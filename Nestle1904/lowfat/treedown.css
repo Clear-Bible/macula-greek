@@ -120,13 +120,14 @@ w {
 ****************/
 
 /* Ryder: clauses with clause roles should have the role above the group and to the right. */
-[class='cl'][role] {
+*:is([class='cl'][junction='apposition'], [class='cl'][role]) {
   margin-block-start: 1.2rem;
 }
-[class='cl'][role] > :first-child:not([class='cl']) {
+*:is([class='cl'][junction='apposition'], [class='cl'][role])
+  > :first-child:not([class='cl']) {
   margin-block-start: -0.7rem;
 }
-[class='cl'][role]::before {
+*:is([class='cl'][junction='apposition'], [class='cl'][role])::before {
   margin-inline-start: -1.25rem;
   margin-block-start: -1.4rem;
   margin-bottom: 1rem;
@@ -134,10 +135,11 @@ w {
 }
 
 /* Ryder: clauses with the apposition role require an additional indentation (2 rems) to ensure the role itself is at the right level. */
-[role='apposition'][class='cl'],
-[role='apposition'][type^='wrapper-clause'],
-[type='apposition-group'] > [class='cl'][role='apposition'],
-[role]:not([class='cl']):not([type='apposition-group']) > [role='apposition'] {
+[junction='apposition'][class='cl'],
+[junction='apposition'][type^='wrapper-clause'],
+[type='apposition-group'] > [class='cl'][junction='apposition'],
+[role]:not([class='cl']):not([type='apposition-group'])
+  > [junction='apposition'] {
   margin-inline-start: 2rem;
 }
 
