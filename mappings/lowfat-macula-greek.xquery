@@ -450,7 +450,7 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 		if (local:is-nominalized-clause($node/Node[2])) then
 			<wg>{
 				attribute class {'np'},
-			    attribute junction {'apposition'},
+			    attribute type {'apposition'},
 			    local:attributes($node, 'class', $passed-role) ! (if (name(.) = 'class') then () else .),
 			    if ($passed-role = 'apposition') then
 			        ()
@@ -475,10 +475,10 @@ declare function local:process-clause-complex-apposition($node, $passed-role)
 	else
 		<wg>{
 			attribute class {'np'},
-			attribute junction {'apposition'},
+			    attribute type {'apposition'},
 		    local:attributes($node, 'class', $passed-role) ! (if (name(.) = ('class', 'junction')) then () else .),
 		    if ($passed-role = 'apposition') then
-		        attribute junction {$passed-role}
+		        attribute junction {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_0' else ())}
 			else if ($passed-role) then
 				attribute role {$passed-role || (if ($debugging-mode) then  '___clause-complex-apposition_1' else ())}
 			else
@@ -864,7 +864,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								
 								else 
 									if ($passed-role = 'apposition') 
-										then  (: TODO - turn 'apposition' into a hint, not a role :)
+										then 
 											local:keep-siblings-as-siblings($node, $passed-role || (if ($debugging-mode) then  '_group2' else ()))
 									
 									else if (count($node/Node[@ClType = 'Minor']) eq 2) then
