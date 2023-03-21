@@ -499,7 +499,7 @@ declare function local:clause-complex-class-attribute($node, $constituent-to-sub
 	let $exceptions-to-keep-class := (
 		'420010010010420' (: Ryder: Luke's preface :)
 	)
-	let $some-child-is-simple-clause := some $child in $node/Node satisfies local:is-simple-clause-rule($child/@Rule)
+	let $some-child-is-simple-clause := some $child in $node/Node satisfies (local:is-simple-clause-rule($child/@Rule) or $child[@Cat = 'CL'])
 	let $some-child-is-clause-complex-apposition := $passed-role = 'err-apposition?'
 	let $all-children-are-single-constituent-clauses := every $child in $node/Node satisfies $child/@Rule = $single-constituent-clause-rule
 	
