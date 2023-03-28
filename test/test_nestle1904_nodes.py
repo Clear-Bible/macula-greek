@@ -79,9 +79,9 @@ def test_referent_id_validity(node_file):
             refs = ref_content.split(" ")
             for frame_refs in refs:
                 # regex to remove `A[012]:` from frame_refs
-                # if `AA` is present we keep it for now;
-                # if we learn it is not valid, we will remove the `+` from the regex.
-                frame_ref_string = re.sub(r"A+[0-9]:", "", frame_refs)
+                # Actually, `AA:`, `A0:`, `A1:`, `A2:`, and `AA2:` are valid.
+                # (but `AA:` only in Hebrew at present)
+                frame_ref_string = re.sub(r"A+[0-2]{0,1}:", "", frame_refs)
                 # split on `;'
                 frame_ref_list = frame_ref_string.split(";")
                 for frame_ref in frame_ref_list:
