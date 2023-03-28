@@ -45,7 +45,7 @@ __macula_greek_tsv_rows__ = []
 tsv_path = "../Nestle1904/TSV/macula-greek.tsv"
 __tsv_files__ = [tsv_path]
 
-with open(tsv_path) as file:
+with open(tsv_path, encoding='utf-8') as file:
     reader = csv.DictReader(file, delimiter="\t")
     for row in reader:
         __macula_greek_tsv_rows__.append(row)
