@@ -46,7 +46,7 @@ Prerequisites:
 * Python 3.x
 * Poetry (dependency management for python)
 
-In the project root, install dependencies:
+In the `test/` directory, install dependencies:
 
 ```shell
 poetry install
