@@ -9,7 +9,7 @@ These datasets include:
 3. Word Senses (`../sources/Clear/wordsense`)
 4. Semantic Frames (`../sources/Clear/annotations`)
 5. Participant Referents (`../sources/Clear/annotations`)
-6. Synonymns (`../sources/Clear/synonyms`)
+6. Synonyms (`../sources/Clear/synonyms`)
 7. Mappings (`../sources/Clear/mappings`)
 
 In addition to datasets from Clear, MACULA contains data from the following datasets:
