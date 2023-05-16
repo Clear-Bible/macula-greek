@@ -8,12 +8,19 @@ declare function local:row($w)
   for $name in local:headers()
   return
     if ($name = "text") then local:val($w/text()) ! string(.)
-    else local:val($w/@*[name(.) = $name])
+    else 
+    	if ($name = "sentence") then
+		    let $first-token := ($w/ancestor::sentence//w)[1]/data(@xml:id)
+		    let $last-token := ($w/ancestor::sentence//w)[last()]/data(@xml:id)
+		    return $first-token || '_' || $last-token
+    
+    	else local:val($w/@*[name(.) = $name])
 };
 
 declare function local:headers()
 {
     "xml:id",
+    "sentence",
     "ref",
     "role",
     "class",
