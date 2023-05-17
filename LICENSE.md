@@ -11,6 +11,7 @@ These datasets include:
 5. Participant Referents (`../sources/Clear/annotations`)
 6. Synonyms (`../sources/Clear/synonyms`)
 7. Mappings (`../sources/Clear/mappings`)
+8. Adjunct Types (`../sources/Clear/adjunct-types`)
 
 In addition to datasets from Clear, MACULA contains data from the following datasets:
 
