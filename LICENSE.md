@@ -17,6 +17,7 @@ In addition to datasets from Clear, MACULA contains data from the following data
 
 1. [Nestle1904](https://github.com/biblicalhumanities/Nestle1904) Greek New Testament, edited by Eberhard Nestle, published in 1904 by the British and Foreign Bible Society. Transcription by Diego Santos, morphology by Ulrik Sandborg-Petersen, markup by Jonathan Robie.
 2. Word sense data from the United Bible Societies [MARBLE](https://semanticdictionary.org/) project. (`@ln`, `@domain`)
+3. The [Berean Interlinear Bible] (https://interlinearbible.com/) (`@gloss`). The Berean Bible and Majority Bible texts are officially placed into the public domain as of April 30, 2023.
 
 
 # License
