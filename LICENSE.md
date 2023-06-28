@@ -1,11 +1,23 @@
 # MACULA Greek Linguistic Datasets
 
-[MACULA Greek Linguistic Datasets](http://github.com/Clear-Bible/macula-hebrew/) © 2022 by [Clear Bible, Inc](http://www.clear.bible) is licensed under [CC BY 4.0 ](http://creativecommons.org/licenses/by/4.0/).
+[MACULA Greek Linguistic Datasets](http://github.com/Clear-Bible/macula-greek/) © 2022 by [Clear Bible, Inc](http://www.clear.bible) is licensed under [CC BY 4.0 ](http://creativecommons.org/licenses/by/4.0/).
+
+These datasets include:
+
+1. Greek Syntax Trees in both Node and Lowfat format
+2. Morphology (`@lemma`, `@pos`, `@morph`, `@person`, `@number`, `@gender`, `@case`, `@voice`, `@tense`, `@mood`)
+3. Word Senses (`../sources/Clear/wordsense`)
+4. Semantic Frames (`../sources/Clear/annotations`)
+5. Participant Referents (`../sources/Clear/annotations`)
+6. Synonyms (`../sources/Clear/synonyms`)
+7. Mappings (`../sources/Clear/mappings`)
+8. Adjunct Types (`../sources/Clear/adjunct-types`)
 
 In addition to datasets from Clear, MACULA contains data from the following datasets:
 
 1. [Nestle1904](https://github.com/biblicalhumanities/Nestle1904) Greek New Testament, edited by Eberhard Nestle, published in 1904 by the British and Foreign Bible Society. Transcription by Diego Santos, morphology by Ulrik Sandborg-Petersen, markup by Jonathan Robie.
-2. Word sense data from the United Bible Societies [MARBLE](https://semanticdictionary.org/) project.
+2. Word sense data from the United Bible Societies [MARBLE](https://semanticdictionary.org/) project. (`@ln`, `@domain`)
+3. The [Berean Interlinear Bible](https://interlinearbible.com/) (`@gloss`). The Berean Bible and Majority Bible texts are officially placed into the public domain as of April 30, 2023.
 
 
 # License
