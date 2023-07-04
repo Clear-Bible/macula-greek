@@ -1,11 +1,9 @@
-/* hebrew-treedown.css */
-
-/* LAYOUT RULES */
+/**************** 
+* LAYOUT RULES  *
+*****************/
 
 book {
   padding: 2em;
-  /* direction: rtl; */
-  /* font-size: 1.5rem; */
 }
 milestone {
   color: blue;
@@ -18,8 +16,7 @@ milestone + milestone {
 sentence {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  /* Ryder: 1rem space between <p> and <wg> */
+  gap: 1rem; /* Ryder: 1rem space between <p> and <wg> */
 }
 
 /*************************************** 
@@ -28,21 +25,9 @@ sentence {
 
 [class='cl'],
 [role],
-[role]:not([role='aux']) [type='conjuncted-wg']:not(:first-child), /* Ryder: break conjuncted elements onto new lines, but not the first one (for cases where the first element is a conjuncted wg */
-
-/* Ryder: these next three selectors are for group members following a member with an embedded clause */
-[type='group'] > [type$='clause-scope'] > [class='cl'],
-[type='group'] > [type$='clause-scope'] + *,
-[type='group'] > [type='group'] + *,
-
-/* Ryder: these next two selectors are for nested, nominalized clauses, which are sometimes in apposition, and sometimes with preceding and/or following content that is not a clause. */
-[type$='clause-scope']:not([role='apposition']):not([appositioncontainer])
-  > [class='cl']:not([clausetype='nominalized']),
-[type$='clause-scope']:not([role='apposition']):not([appositioncontainer]) > wg + *,
-[type='apposition-group'] > [type='group'],
-
-[type='group'][role]:not([role='apposition']):not([appositioncontainer]):not([role='aux']) > * /* Ryder: these are often clausal apposition, e.g., NP-CL */ {
-  /* <-- select only wrappers that wrap clauses */ /* Ryder: sometimes a clause is 'wrapped' by something like a relative pronoun. These could be on a new line to improve readability. */
+[type='group'],
+[class='pp'],
+[junction='apposition'] {
   display: block;
 }
 
@@ -50,44 +35,14 @@ sentence {
 * ELEMENTS THAT SHOULD BE ON THE SAME LINE *
 *******************************************/
 
-/* [role]:not([role='aux']) [type='conjuncted-wg'] { */
-/* Ryder: don't break on conjunctions within auxiliaries */
-/* display: inline; */
-/* } */
-
 /***********************************
 * ELEMENTS THAT SHOULD BE INDENTED *
 ***********************************/
 
-/* Ryder: a clause or conjuncted wg following a clause that is a descendent of a clause or role */
-*:is([class='cl'], [role]) *:is([class='cl'], [class='cl'] + [type='conjuncted-wg']),
-
-[type='group'][role]:not([role='apposition']):not([appositioncontainer]):not([role='aux']) > *, /* Ryder: these are often clausal apposition, e.g., NP-CL */
-[role='apposition'],
-[type='apposition-group'] > [type='group'],
-[type='apposition-group'] > [type='group'] + *,
-
-[class='cl'] [type='conjuncted-wg']:not(:first-child) > w:first-child, /* Ryder: the first word of a conjuncted wg should be indented with the rest of the group, so long as it is a descendent of a clause. */
-*[role] > [type='^modifier'] > [type^='wrapper'],
-[class='cl'] [class='cl'][role]:not([role='apposition']):not([appositioncontainer]), /* Ryder: clauses with roles should be indented to make room for the role, but apposition is elsewhere given additional indentation so do not select it here. */
-[role]:not([class='cl']):not([type='apposition-group'])
-  > [role='apposition']
-  > [class='cl'],
-[type$='clause-scope'] > [class='cl'],
-[type='wrapper-scope'] > [class='cl']:not([role]),
-[role]:not([class='cl']) > [role]:not([class='cl']),
-
-  /* Ryder: these next three selectors are for group members following a member with an embedded clause */
-[type='group'] > [type$='clause-scope'] > [class='cl'],
-[type='group'] > [type$='clause-scope'] + *,
-[type$='group'] > [type='group'] + *,
-
-/* Ryder: these next two selectors are for nested, nominalized clauses, which are sometimes in apposition, and sometimes with preceding and/or following content that is not a clause. */
-[type$='clause-scope']:not([role='apposition']):not([appositioncontainer])
-  > [class='cl']:not([clausetype='nominalized']),
-[type$='clause-scope']:not([role='apposition']):not([appositioncontainer]) > wg + *,
-
-:not([type='group']) > [type^='wrapper-clause'] > [class='cl'] {
+[class='cl'],
+[role],
+[class='pp'],
+[junction='apposition'] {
   margin-inline-start: 1rem;
 }
 
@@ -95,7 +50,7 @@ sentence {
 * ELEMENTS THAT SHOULD NOT BE INDENTED *
 ***************************************/
 
-[role]:not([role='aux']) [type='conjuncted-wg'] {
+[type='conjuncted-wg']:first-of-type {
   margin-inline-start: 0;
 }
 
@@ -103,9 +58,16 @@ sentence {
 /* ROLE MARKERS *
 ****************/
 
-[role]::before {
+[role],
+[junction='apposition'] {
+  margin-inline-start: 1rem;
+}
+
+[role]::before,
+[junction='apposition']::before {
   content: attr(role);
   color: cadetblue;
+  margin-inline-start: -1rem;
   margin-inline-end: 0.4rem; /* Ryder: 0.4rem space between role and element seems to generally align with a 1rem space without a role. */
 }
 [role='aux']::before {
@@ -114,9 +76,8 @@ sentence {
 [role='adv']::before {
   content: '+';
 }
-[role='apposition']::before {
+[junction='apposition']::before {
   content: ':';
-  /* margin-inline-start: 1rem; */
 }
 [role='ellipsis']::before {
   content: '+';
@@ -129,6 +90,12 @@ sentence {
 [role='tail']::before {
   content: '+';
   /* content: '<'; */
+}
+[role='v'][mood='participle']::before {
+  content: 'v.part';
+}
+[role='v'][mood='infinitive']::before {
+  content: 'v.inf';
 }
 
 /**************
@@ -146,22 +113,8 @@ wg[role] > * {
   font-size: 1rem;
 }
 
-/* Add a light grey dash between morphemes */
-w:not([after])::after {
-  content: '- '; /* The space is intentional because we are removing the default space from the DOM */
-  color: lightgrey;
-  margin-left: -0.2em;
-}
-w:not([after]):empty::after {
-  content: 'ה- '; /* The space is intentional because we are removing the default space from the DOM */
-  color: lightgrey;
-  margin-left: -0.2em;
-}
-
-w[after='־']::after,
-w[after=' ']::after {
-  /* Hebrew maqef, or whitespace should retain normal spacing */
-  content: attr(after);
+w {
+  margin-right: 0.2rem;
 }
 
 /****************
@@ -169,13 +122,14 @@ w[after=' ']::after {
 ****************/
 
 /* Ryder: clauses with clause roles should have the role above the group and to the right. */
-[class='cl'][role] {
+*:is([class='cl'][junction='apposition'], [class='cl'][role]) {
   margin-block-start: 1.2rem;
 }
-[class='cl'][role] > :first-child:not([class='cl']) {
+*:is([class='cl'][junction='apposition'], [class='cl'][role])
+  > :first-child:not([class='cl']) {
   margin-block-start: -0.7rem;
 }
-[class='cl'][role]::before {
+*:is([class='cl'][junction='apposition'], [class='cl'][role])::before {
   margin-inline-start: -1.25rem;
   margin-block-start: -1.4rem;
   margin-bottom: 1rem;
@@ -183,11 +137,17 @@ w[after=' ']::after {
 }
 
 /* Ryder: clauses with the apposition role require an additional indentation (2 rems) to ensure the role itself is at the right level. */
-[role='apposition'][class='cl'],
-[role='apposition'][type^='wrapper-clause'],
-[type='apposition-group'] > [class='cl'][role='apposition'],
-[role]:not([class='cl']):not([type='apposition-group']) > [role='apposition'] {
+[junction='apposition'][class='cl'],
+[junction='apposition'][type^='wrapper-clause'],
+[type='apposition-group'] > [class='cl'][junction='apposition'],
+[role]:not([class='cl']):not([type='apposition-group'])
+  > [junction='apposition'] {
   margin-inline-start: 2rem;
+}
+
+[discontinuous='true']::after {
+  content: '*' !important;
+  color: cadetblue;
 }
 
 /************
@@ -204,20 +164,13 @@ w[after=' ']::after {
   border-radius: 0.2rem;
 }
 
-/* 
-[type^='wrapper'] {
+/* Ryder: this is a temporary affordance for brainstorming. */
+[rule='AdjpCL'],
+[rule='AdvpCL'],
+[rule='PtclCL'],
+[rule='DetCL'],
+[rule='sub-CL'],
+[rule='that-VP'],
+[rule='Conj-CL'] {
   background: lightblue;
 }
-
-[type='modifier-scope']:not(:first-child) {
-  background: lightgreen;
-}
-
-[type^='wrapper-clause'] {
-  background: lightpink;
-}
-
-[type='conjuncted-wg'] {
-  background: lightyellow;
-} 
-*/
