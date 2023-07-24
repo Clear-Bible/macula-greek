@@ -133,6 +133,19 @@ else
         default return "###"
 };
 
+declare function local:is-head($node as element(Node)) as xs:boolean
+{
+	let $index-of-head-node-defined-in-parent := if (
+		$node/parent::Node[@Head] 
+		and not(
+			count($node/parent::Node/child::Node) eq 1)
+		) 
+		then xs:int($node/parent::Node/@Head) + 1 (: @Head is 0-indexed :)
+		else 0 (: Zero rather than empty set so always comparing integers. position() is 1-indexed so 0 is impossible :)
+	let $current-node-index := $node/position()
+	return if ($index-of-head-node-defined-in-parent eq $current-node-index) then true() else false()
+};
+
 (:declare function local:head($node)
 {
     if ($node)
@@ -205,7 +218,6 @@ declare function local:attributes($node, $exclusions, $passed-role)
     $node/@Voice ! attribute voice {lower-case(.)},
     $node/@Mood ! attribute mood {lower-case(.)},
     $node/@Degree ! attribute degree {lower-case(.)},
-(:    local:head($node),:)
     $node[empty(*)] ! attribute discontinuous {"true"}[$node/following::Node[empty(*)][1]/@morphId lt $node/@morphId],
     $node/@Rule ! attribute rule {.},
     $node/@Gloss ! attribute gloss {.},
@@ -232,7 +244,8 @@ declare function local:attributes($node, $exclusions, $passed-role)
             (:else if (. = $junctionRequiringDisambiguation) then 'unknown':)
             else 'error_unknown_junction_rule'
         } else ())
-    else ()
+    else (),
+    $node[parent::Node[@Head]] ! (if (local:is-head(.)) then attribute head {true()} else ())
 };
 
 
