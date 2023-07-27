@@ -5,17 +5,21 @@
 Sources are equivalent with sources for the Nestle 1904 edition (N1904) except in the following cases:
 
 * SBL Greek New Testament (SBLGNT) from Logos: https://github.com/LogosBible/SBLGNT 
-* Glosses (`English` and `Chinese` attributes) from Cherith Analytics
+* Glosses (`GlossCherith` and `Chinese` attributes) from Cherith Analytics: Cherith Glosses for the Greek New Testament: Cherith Analytics Biblical Linguistic Data, available at https://github.com/cherithanalytics/Biblical-Linguistic-Data/
+* Glosses (`GlossBerean` attribute) from the [Berean Interlinear Bible](https://interlinearbible.com/), which is in the public domain ([licensing terms](https://berean.bible/terms.htm)). The glosses implemented in Macula Greek (N1904) are sourced from the Biblical Humanities edition of N1904 ([information here](https://github.com/biblicalhumanities/Nestle1904/tree/master/glosses)). The Berean Bible and Majority Bible texts are officially placed into the public domain as of April 30, 2023.
 * Word Mapping between N1904 and SBLGNT: https://github.com/Clear-Bible/macula-greek/tree/sblgnt-trees/sources/Clear/mappings 
 
 
 ## Process
 
-Clear Bible produced an edition of syntax trees for the SBLGNT years ago. This MACULA Greek edition
-was created by migrating word-level node information from the N1904 MACULA Greek edition into the
-SBLGNT where words could be mapped between edition. In these cases, where the SBLGNT analysis did
-not already contain information (e.g. `FormalTag` attribute), that information was imported. Where
-the SBLGNT already contained information, it was persisted.
+Clear Bible produced an edition of syntax trees for the SBLGNT when the SBLGNT was originally released
+under the SBLGNT license. The SBLGNT license was recently updated to CC-BY-4.0 which makes it a better
+platform for building and integrating data and analyses. 
+
+This MACULA Greek edition was created by migrating word-level node information from the N1904 MACULA 
+Greek edition into the SBLGNT where words could be mapped between edition. In these cases, where the 
+SBLGNT analysis did not already contain information (e.g. `FormalTag` attribute), that information was 
+imported. Where the SBLGNT already contained information, it was persisted.
 
 Where necessary data (to mirror the N1904) was required, it was created from the SBLGNT as available.
 For example, the SBLGNT encoded punctuation in a `Punc` attribute, but the N1904 encodes punctuation
@@ -37,9 +41,16 @@ SBLGNT syntax trees was used to reproduce data represented by these attributes f
 
 ## Future Work
 
-Information in the `Gloss` attribute (reflecting interlinear glosses from the Berean
-Interlinear Bible (BIB), [more info](https://github.com/biblicalhumanities/Nestle1904/tree/master/glosses)) 
-has only been migrated from the N1904 where nodes have `status="mapped"`. Clear Bible hope to
-provide `Gloss` attribute data in the style of the BIB glosses for the remaining 600+ items where `Gloss`
-is absent (in the `status="unmapped"` and `status="refs-mapped"` nodes).
+The following items are separate tasks that need to be done to fully complete migration to SBLGNT:
 
+For Node elements with `status=”(unmapped|refs-mapped)”`:
+
+* Supply context-aware glosses in `GlossBerean` attribute framed/styled like the N1904 `Gloss` attributes 
+(which are from the Berean Interlinear Bible) where the `GlossBerean` attribute is missing in Macula Greek SBLGNT.
+* Supply Louw-Nida references where LN attribute is missing
+* Supply Domain references (based on LN references) where Domain attribute is missing
+
+For all elements:
+
+* Resolve `Ref`, `SubjRef`, and `Frame` attribute content that has referent ids of the style `n1904+n41010002003`,
+which indicate the referent ID was not able to map to SBLGNT from N1904 and has inserted the equivalent from N1904.
