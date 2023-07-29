@@ -5,7 +5,7 @@
 Sources are equivalent with sources for the Nestle 1904 edition (N1904) except in the following cases:
 
 * SBL Greek New Testament (SBLGNT) from Logos: https://github.com/LogosBible/SBLGNT 
-* Glosses (`GlossCherith` and `Chinese` attributes) from Cherith Analytics: Cherith Glosses for the Greek New Testament: Cherith Analytics Biblical Linguistic Data, available at https://github.com/cherithanalytics/Biblical-Linguistic-Data/
+* **Cherith Glosses for the Greek New Testament**, by Andi Wu, Copyright (C) 2023 by Cherith Analytics, is licensed under a Creative Commons Attribution 4.0 International License ("CC BY 4.0"). This information is represented in the `GlossCherithEnglish` and `GlossCherithChinese` attributes.
 * Glosses (`GlossBerean` attribute) from the [Berean Interlinear Bible](https://interlinearbible.com/), which is in the public domain ([licensing terms](https://berean.bible/terms.htm)). The glosses implemented in Macula Greek (N1904) are sourced from the Biblical Humanities edition of N1904 ([information here](https://github.com/biblicalhumanities/Nestle1904/tree/master/glosses)). The Berean Bible and Majority Bible texts are officially placed into the public domain as of April 30, 2023.
 * Word Mapping between N1904 and SBLGNT: https://github.com/Clear-Bible/macula-greek/tree/sblgnt-trees/sources/Clear/mappings 
 
@@ -49,8 +49,3 @@ For Node elements with `status=”(unmapped|refs-mapped)”`:
 (which are from the Berean Interlinear Bible) where the `GlossBerean` attribute is missing in Macula Greek SBLGNT.
 * Supply Louw-Nida references where LN attribute is missing
 * Supply Domain references (based on LN references) where Domain attribute is missing
-
-For all elements:
-
-* Resolve `Ref`, `SubjRef`, and `Frame` attribute content that has referent ids of the style `n1904+n41010002003`,
-which indicate the referent ID was not able to map to SBLGNT from N1904 and has inserted the equivalent from N1904.
