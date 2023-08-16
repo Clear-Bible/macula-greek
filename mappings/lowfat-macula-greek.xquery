@@ -202,7 +202,36 @@ declare function local:attributes($node, $exclusions, $passed-role)
     if (
     	local:is-nominalized-clause($node)
     	) then attribute clauseType {'nominalized'} else (),
-    $node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule] ! (if ($passed-role) then () else attribute junction {"apposition"}),
+    (:$node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule] ! (if ($passed-role) then () else attribute junction {"apposition"}),
+    
+    let $parent := $node/parent::*[@Rule = $atomic-structure-rule]
+	let $grandparent := $parent/parent::*[@Rule = $atomic-structure-rule]
+	let $great_grandparent := $grandparent/parent::*[@Rule = $atomic-structure-rule]
+	let $great_great_grandparent := $great_grandparent/parent::*[@Rule = $atomic-structure-rule]
+	
+	return (
+	    if ($parent/parent::*[@Rule = $apposition-rule]) then attribute junction {'apposition'} else (),
+	    if ($grandparent/parent::*[@Rule = $apposition-rule]) then attribute junction {'apposition'} else (),
+	    if ($great_grandparent/parent::*[@Rule = $apposition-rule]) then attribute junction {'apposition'} else (),
+	    if ($great_great_grandparent/parent::*[@Rule = $apposition-rule]) then attribute junction {'apposition'} else ()
+	),:)
+
+(:    $node[parent::*[@Rule = $atomic-structure-rule]]/../parent::*[@Rule = $apposition-rule] ! attribute debug {'ryder'},:)
+    (: ( 
+    
+    (: NOTE: this was an attempt to fix all apposition regardless of nesting, but perhaps only two levels of atomic-rule nesting ever occur :)
+     	if ($passed-role = 'apposition') then attribute junction {'apposition'} else
+     	
+	     	if ($node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule]) then attribute junction {"apposition"} else
+		     
+		        for $n in $node/ancestor::*[not(@Rule = $apposition-rule)]  
+		        where every $ancestor in $n[not(ancestor::*[@Rule = $apposition-rule])]
+		            satisfies ($ancestor/@Rule = $atomic-structure-rule) 
+		        return 
+		            attribute junction {'apposition'}
+    ),:)
+    
+    
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
 (:    $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),:)
@@ -244,8 +273,9 @@ declare function local:attributes($node, $exclusions, $passed-role)
             (:else if (. = $junctionRequiringDisambiguation) then 'unknown':)
             else 'error_unknown_junction_rule'
         } else ())
-    else (),
-    $node[parent::Node[@Head]] ! (if (local:is-head(.)) then attribute head {true()} else ())
+    else ()
+    (: ,
+    $node[parent::Node[@Head]] ! (if (local:is-head(.)) then attribute head {true()} else ())  FIXME: we need to re-implement head in a second pass over the final tree at the bottom of this script. :)
 };
 
 
