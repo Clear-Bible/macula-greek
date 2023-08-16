@@ -9,7 +9,7 @@
       <wg>
          <wg class="cl" rule="S-IO" cltype="VerbElided">
             <wg rule="NpaNp" role="s">
-               <wg type="apposition" class="np" rule="Np-Appos" head="true">
+               <wg type="apposition" class="np" rule="Np-Appos">
                   <w ref="PHM 1:1!1"
                      after=" "
                      class="noun"
@@ -21,12 +21,11 @@
                      number="singular"
                      gender="masculine"
                      case="nominative"
-                     gloss="Paul"
                      domain="093001"
                      ln="93.294a"
                      morph="N-NSM"
                      unicode="Παῦλος">Παῦλος</w>
-                  <wg class="np" junction="apposition" rule="NPofNP" head="true">
+                  <wg class="np" rule="NPofNP" junction="apposition">
                      <w ref="PHM 1:1!2"
                         after=" "
                         class="noun"
@@ -38,12 +37,11 @@
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="a prisoner"
                         domain="037008"
                         ln="37.117"
                         morph="N-NSM"
                         unicode="δέσμιος">δέσμιος</w>
-                     <wg type="apposition" class="np" rule="Np-Appos" head="true">
+                     <wg type="apposition" class="np" rule="Np-Appos">
                         <w ref="PHM 1:1!3"
                            after=" "
                            class="noun"
@@ -55,7 +53,6 @@
                            number="singular"
                            gender="masculine"
                            case="genitive"
-                           gloss="of Christ"
                            domain="093001"
                            ln="93.387"
                            morph="N-GSM"
@@ -71,11 +68,11 @@
                            number="singular"
                            gender="masculine"
                            case="genitive"
-                           gloss="Jesus"
                            domain="093001"
                            ln="93.169a"
                            morph="N-GSM"
-                           unicode="Ἰησοῦ">Ἰησοῦ</w>
+                           unicode="Ἰησοῦ"
+                           junction="apposition">Ἰησοῦ</w>
                      </wg>
                   </wg>
                </wg>
@@ -87,11 +84,9 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="and"
                      morph="CONJ"
-                     unicode="καὶ"
-                     head="true">καὶ</w>
-                  <wg type="apposition" class="np" rule="Np-Appos" head="true">
+                     unicode="καὶ">καὶ</w>
+                  <wg type="apposition" class="np" rule="Np-Appos">
                      <w ref="PHM 1:1!6"
                         after=" "
                         class="noun"
@@ -103,16 +98,11 @@
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="Timothy"
                         domain="093001"
                         ln="93.361"
                         morph="N-NSM"
                         unicode="Τιμόθεος">Τιμόθεος</w>
-                     <wg class="np"
-                         junction="apposition"
-                         articular="true"
-                         rule="DetNP"
-                         head="true">
+                     <wg class="np" articular="true" rule="DetNP" junction="apposition">
                         <w ref="PHM 1:1!7"
                            after=" "
                            class="det"
@@ -123,7 +113,6 @@
                            number="singular"
                            gender="masculine"
                            case="nominative"
-                           gloss="[our]"
                            domain="092004"
                            ln="92.24"
                            morph="T-NSM"
@@ -139,7 +128,6 @@
                            number="singular"
                            gender="masculine"
                            case="nominative"
-                           gloss="brother"
                            domain="011002"
                            ln="11.23"
                            morph="N-NSM"
@@ -149,7 +137,7 @@
                </wg>
             </wg>
             <wg rule="Conj4Np" role="io">
-               <wg type="apposition" class="np" rule="Np-Appos" head="true">
+               <wg type="apposition" class="np" rule="Np-Appos">
                   <w ref="PHM 1:1!9"
                      after=" "
                      class="noun"
@@ -161,16 +149,11 @@
                      number="singular"
                      gender="masculine"
                      case="dative"
-                     gloss="To Philemon"
                      domain="093001"
                      ln="93.377"
                      morph="N-DSM"
                      unicode="Φιλήμονι">Φιλήμονι</w>
-                  <wg class="np"
-                      junction="apposition"
-                      articular="true"
-                      rule="DetNP"
-                      head="true">
+                  <wg class="np" articular="true" rule="DetNP" junction="apposition">
                      <w ref="PHM 1:1!10"
                         after=" "
                         class="det"
@@ -181,7 +164,6 @@
                         number="singular"
                         gender="masculine"
                         case="dative"
-                        gloss="the"
                         domain="092004"
                         ln="92.24"
                         morph="T-DSM"
@@ -198,7 +180,6 @@
                               number="singular"
                               gender="masculine"
                               case="dative"
-                              gloss="beloved"
                               domain="025003"
                               ln="25.45"
                               morph="A-DSM"
@@ -211,10 +192,8 @@
                                  lemma="καί"
                                  normalized="καί"
                                  strong="2532"
-                                 gloss="and"
                                  morph="CONJ"
-                                 unicode="καὶ"
-                                 head="true">καὶ</w>
+                                 unicode="καὶ">καὶ</w>
                               <w ref="PHM 1:1!13"
                                  after=" "
                                  class="adj"
@@ -225,7 +204,6 @@
                                  number="singular"
                                  gender="masculine"
                                  case="dative"
-                                 gloss="fellow worker"
                                  domain="042004"
                                  ln="42.44"
                                  morph="A-DSM"
@@ -242,7 +220,6 @@
                            strong="2257"
                            number="plural"
                            case="genitive"
-                           gloss="of us"
                            domain="092002"
                            ln="92.4"
                            morph="P-1GP"
@@ -259,11 +236,9 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="and"
                      morph="CONJ"
-                     unicode="καὶ"
-                     head="true">καὶ</w>
-                  <wg type="apposition" class="np" rule="Np-Appos" head="true">
+                     unicode="καὶ">καὶ</w>
+                  <wg type="apposition" class="np" rule="Np-Appos">
                      <w ref="PHM 1:2!2"
                         after=" "
                         class="noun"
@@ -275,16 +250,11 @@
                         number="singular"
                         gender="feminine"
                         case="dative"
-                        gloss="to Apphia"
                         domain="093001"
                         ln="93.34"
                         morph="N-DSF"
                         unicode="Ἀπφίᾳ">Ἀπφίᾳ</w>
-                     <wg class="np"
-                         junction="apposition"
-                         articular="true"
-                         rule="DetNP"
-                         head="true">
+                     <wg class="np" articular="true" rule="DetNP" junction="apposition">
                         <w ref="PHM 1:2!3"
                            after=" "
                            class="det"
@@ -295,7 +265,6 @@
                            number="singular"
                            gender="feminine"
                            case="dative"
-                           gloss="our"
                            domain="092004"
                            ln="92.24"
                            morph="T-DSF"
@@ -311,7 +280,6 @@
                            number="singular"
                            gender="feminine"
                            case="dative"
-                           gloss="sister"
                            domain="011002"
                            ln="11.24"
                            morph="N-DSF"
@@ -327,11 +295,9 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="and"
                      morph="CONJ"
-                     unicode="καὶ"
-                     head="true">καὶ</w>
-                  <wg type="apposition" class="np" rule="Np-Appos" head="true">
+                     unicode="καὶ">καὶ</w>
+                  <wg type="apposition" class="np" rule="Np-Appos">
                      <w ref="PHM 1:2!6"
                         after=" "
                         class="noun"
@@ -343,16 +309,11 @@
                         number="singular"
                         gender="masculine"
                         case="dative"
-                        gloss="to Archippus"
                         domain="093001"
                         ln="93.46"
                         morph="N-DSM"
                         unicode="Ἀρχίππῳ">Ἀρχίππῳ</w>
-                     <wg class="np"
-                         junction="apposition"
-                         articular="true"
-                         rule="DetNP"
-                         head="true">
+                     <wg class="np" articular="true" rule="DetNP" junction="apposition">
                         <w ref="PHM 1:2!7"
                            after=" "
                            class="det"
@@ -363,7 +324,6 @@
                            number="singular"
                            gender="masculine"
                            case="dative"
-                           gloss="the"
                            domain="092004"
                            ln="92.24"
                            morph="T-DSM"
@@ -380,7 +340,6 @@
                               number="singular"
                               gender="masculine"
                               case="dative"
-                              gloss="fellow soldier"
                               domain="034001"
                               ln="34.19"
                               morph="N-DSM"
@@ -395,7 +354,6 @@
                               strong="2257"
                               number="plural"
                               case="genitive"
-                              gloss="of us"
                               domain="092002"
                               ln="92.4"
                               morph="P-1GP"
@@ -413,11 +371,9 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="and"
                      morph="CONJ"
-                     unicode="καὶ"
-                     head="true">καὶ</w>
-                  <wg class="np" articular="true" rule="DetNP" head="true">
+                     unicode="καὶ">καὶ</w>
+                  <wg class="np" articular="true" rule="DetNP">
                      <w ref="PHM 1:2!11"
                         after=" "
                         class="det"
@@ -428,7 +384,6 @@
                         number="singular"
                         gender="feminine"
                         case="dative"
-                        gloss="to the"
                         domain="092004"
                         ln="92.24"
                         morph="T-DSF"
@@ -442,7 +397,6 @@
                               lemma="κατά"
                               normalized="κατά"
                               strong="2596"
-                              gloss="at"
                               domain="089004"
                               ln="89.4"
                               morph="PREP"
@@ -459,7 +413,6 @@
                                  number="singular"
                                  gender="masculine"
                                  case="accusative"
-                                 gloss="[the] house"
                                  domain="007002"
                                  ln="7.2"
                                  morph="N-ASM"
@@ -474,7 +427,6 @@
                                  strong="4675"
                                  number="singular"
                                  case="genitive"
-                                 gloss="of you"
                                  morph="P-2GS"
                                  unicode="σου"
                                  referent="n57001001009">σου</w>
@@ -491,7 +443,6 @@
                            number="singular"
                            gender="feminine"
                            case="dative"
-                           gloss="church"
                            domain="011002"
                            ln="11.32"
                            morph="N-DSF"
@@ -520,7 +471,6 @@
                number="plural"
                case="dative"
                discontinuous="true"
-               gloss="to you"
                morph="P-2DP"
                unicode="ὑμῖν"
                referent="n57001001009 n57001002002 n57001002006 n57001002015">ὑμῖν</w>
@@ -536,7 +486,6 @@
                   number="singular"
                   gender="feminine"
                   case="nominative"
-                  gloss="Grace"
                   domain="088009"
                   ln="88.66"
                   morph="N-NSF"
@@ -549,10 +498,8 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="and"
                      morph="CONJ"
-                     unicode="καὶ"
-                     head="true">καὶ</w>
+                     unicode="καὶ">καὶ</w>
                   <w ref="PHM 1:3!4"
                      after=" "
                      class="noun"
@@ -564,7 +511,6 @@
                      number="singular"
                      gender="feminine"
                      case="nominative"
-                     gloss="peace"
                      domain="022007"
                      ln="22.42"
                      morph="N-NSF"
@@ -579,11 +525,10 @@
                   lemma="ἀπό"
                   normalized="ἀπό"
                   strong="575"
-                  gloss="from"
                   morph="PREP"
                   unicode="ἀπὸ">ἀπὸ</w>
                <wg rule="NpaNp">
-                  <wg type="apposition" class="np" rule="Np-Appos" head="true">
+                  <wg type="apposition" class="np" rule="Np-Appos">
                      <w ref="PHM 1:3!6"
                         after=" "
                         class="noun"
@@ -595,12 +540,11 @@
                         number="singular"
                         gender="masculine"
                         case="genitive"
-                        gloss="God"
                         domain="012001"
                         ln="12.1"
                         morph="N-GSM"
                         unicode="θεοῦ">θεοῦ</w>
-                     <wg class="np" junction="apposition" rule="NPofNP" head="true">
+                     <wg class="np" rule="NPofNP" junction="apposition">
                         <w ref="PHM 1:3!7"
                            after=" "
                            class="noun"
@@ -612,7 +556,6 @@
                            number="singular"
                            gender="masculine"
                            case="genitive"
-                           gloss="Father"
                            domain="012001"
                            ln="12.12"
                            morph="N-GSM"
@@ -627,7 +570,6 @@
                            strong="2257"
                            number="plural"
                            case="genitive"
-                           gloss="of us"
                            domain="092002"
                            ln="92.4"
                            morph="P-1GP"
@@ -643,11 +585,9 @@
                         lemma="καί"
                         normalized="καί"
                         strong="2532"
-                        gloss="and"
                         morph="CONJ"
-                        unicode="καὶ"
-                        head="true">καὶ</w>
-                     <wg type="apposition" class="np" rule="Np-Appos" head="true">
+                        unicode="καὶ">καὶ</w>
+                     <wg type="apposition" class="np" rule="Np-Appos">
                         <w ref="PHM 1:3!10"
                            after=" "
                            class="noun"
@@ -659,16 +599,14 @@
                            number="singular"
                            gender="masculine"
                            case="genitive"
-                           gloss="[the] Lord"
                            domain="012001"
                            ln="12.9{N:001}"
                            morph="N-GSM"
                            unicode="κυρίου">κυρίου</w>
                         <wg type="apposition"
                             class="np"
-                            junction="apposition"
                             rule="Np-Appos"
-                            head="true">
+                            junction="apposition">
                            <w ref="PHM 1:3!11"
                               after=" "
                               class="noun"
@@ -680,7 +618,6 @@
                               number="singular"
                               gender="masculine"
                               case="genitive"
-                              gloss="Jesus"
                               domain="093001"
                               ln="93.169a"
                               morph="N-GSM"
@@ -696,11 +633,11 @@
                               number="singular"
                               gender="masculine"
                               case="genitive"
-                              gloss="Christ"
                               domain="093001"
                               ln="93.387"
                               morph="N-GSM"
-                              unicode="Χριστοῦ.">Χριστοῦ</w>
+                              unicode="Χριστοῦ."
+                              junction="apposition">Χριστοῦ</w>
                         </wg>
                      </wg>
                   </wg>
@@ -729,7 +666,6 @@
                tense="present"
                voice="active"
                mood="indicative"
-               gloss="I thank"
                domain="025009 033036"
                ln="25.100 33.349"
                morph="V-PAI-1S"
@@ -747,7 +683,6 @@
                   number="singular"
                   gender="masculine"
                   case="dative"
-                  gloss="the"
                   domain="092004"
                   ln="92.24"
                   morph="T-DSM"
@@ -764,7 +699,6 @@
                      number="singular"
                      gender="masculine"
                      case="dative"
-                     gloss="God"
                      domain="012001"
                      ln="12.1"
                      morph="N-DSM"
@@ -779,7 +713,6 @@
                      strong="3450"
                      number="singular"
                      case="genitive"
-                     gloss="of me"
                      domain="092001"
                      ln="92.1"
                      morph="P-1GS"
@@ -795,12 +728,11 @@
                lemma="πάντοτε"
                normalized="πάντοτε"
                strong="3842"
-               gloss="always"
                domain="067005"
                ln="67.88"
                morph="ADV"
                unicode="πάντοτε">πάντοτε</w>
-            <wg class="cl" rule="O-V-ADV" junction="subordinate" role="adv">
+            <wg class="cl" rule="O-V-ADV" role="adv">
                <wg class="np" rule="NPofNP" role="o">
                   <w ref="PHM 1:4!6"
                      after=" "
@@ -813,7 +745,6 @@
                      number="singular"
                      gender="feminine"
                      case="accusative"
-                     gloss="mention"
                      domain="029004"
                      ln="29.18"
                      morph="N-ASF"
@@ -828,7 +759,6 @@
                      strong="4675"
                      number="singular"
                      case="genitive"
-                     gloss="of you"
                      morph="P-2GS"
                      unicode="σου"
                      referent="n57001001009">σου</w>
@@ -847,7 +777,6 @@
                   tense="present"
                   voice="middle"
                   mood="participle"
-                  gloss="making"
                   domain="090011"
                   ln="90.45"
                   morph="V-PMP-NSM"
@@ -862,7 +791,6 @@
                      lemma="ἐπί"
                      normalized="ἐπί"
                      strong="1909"
-                     gloss="upon"
                      domain="067007"
                      ln="67.136"
                      morph="PREP"
@@ -878,7 +806,6 @@
                         number="plural"
                         gender="feminine"
                         case="genitive"
-                        gloss="the"
                         domain="092004"
                         ln="92.24"
                         morph="T-GPF"
@@ -895,7 +822,6 @@
                            number="plural"
                            gender="feminine"
                            case="genitive"
-                           gloss="prayers"
                            domain="033013"
                            ln="33.178"
                            morph="N-GPF"
@@ -910,7 +836,6 @@
                            strong="3450"
                            number="singular"
                            case="genitive"
-                           gloss="of me"
                            domain="092001"
                            ln="92.1"
                            morph="P-1GS"
@@ -920,7 +845,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" rule="V-O" junction="subordinate" role="adv">
+            <wg class="cl" rule="V-O" role="adv">
                <w role="v"
                   ref="PHM 1:5!1"
                   after=" "
@@ -935,7 +860,6 @@
                   tense="present"
                   voice="active"
                   mood="participle"
-                  gloss="hearing"
                   domain="033015"
                   ln="33.212"
                   morph="V-PAP-NSM"
@@ -947,7 +871,7 @@
                    articular="true"
                    rule="NP-CL"
                    role="o">
-                  <wg class="np" articular="true" rule="ofNPNP" head="true">
+                  <wg class="np" articular="true" rule="ofNPNP">
                      <w ref="PHM 1:5!2"
                         after=" "
                         class="pron"
@@ -958,12 +882,11 @@
                         strong="4675"
                         number="singular"
                         case="genitive"
-                        gloss="of your"
                         morph="P-2GS"
                         unicode="σου"
                         referent="n57001001009">σου</w>
                      <wg articular="true" rule="NpaNp">
-                        <wg class="np" articular="true" rule="DetNP" head="true">
+                        <wg class="np" articular="true" rule="DetNP">
                            <w ref="PHM 1:5!3"
                               after=" "
                               class="det"
@@ -974,7 +897,6 @@
                               number="singular"
                               gender="feminine"
                               case="accusative"
-                              gloss="-"
                               domain="092004"
                               ln="92.24"
                               morph="T-ASF"
@@ -990,7 +912,6 @@
                               number="singular"
                               gender="feminine"
                               case="accusative"
-                              gloss="love"
                               domain="025003"
                               ln="25.43"
                               morph="N-ASF"
@@ -1004,11 +925,9 @@
                               lemma="καί"
                               normalized="καί"
                               strong="2532"
-                              gloss="and"
                               morph="CONJ"
-                              unicode="καὶ"
-                              head="true">καὶ</w>
-                           <wg class="np" articular="true" rule="DetNP" head="true">
+                              unicode="καὶ">καὶ</w>
+                           <wg class="np" articular="true" rule="DetNP">
                               <w ref="PHM 1:5!6"
                                  after=" "
                                  class="det"
@@ -1019,7 +938,6 @@
                                  number="singular"
                                  gender="feminine"
                                  case="accusative"
-                                 gloss="the"
                                  domain="092004"
                                  ln="92.24"
                                  morph="T-ASF"
@@ -1035,7 +953,6 @@
                                  number="singular"
                                  gender="feminine"
                                  case="accusative"
-                                 gloss="faith"
                                  domain="031009"
                                  ln="31.85"
                                  morph="N-ASF"
@@ -1047,7 +964,6 @@
                   <wg class="cl"
                       clauseType="nominalized"
                       rule="O-V-ADV"
-                      head="true"
                       junction="apposition">
                      <w role="o"
                         ref="PHM 1:5!8"
@@ -1061,7 +977,6 @@
                         number="singular"
                         gender="feminine"
                         case="accusative"
-                        gloss="that"
                         morph="R-ASF"
                         unicode="ἣν"
                         referent="n57001005004 n57001005007">ἣν</w>
@@ -1078,13 +993,12 @@
                         tense="present"
                         voice="active"
                         mood="indicative"
-                        gloss="you have"
                         morph="V-PAI-2S"
                         unicode="ἔχεις"
                         frame="A0:n57001001009 A1:n57001005008"
                         subjref="n57001001009">ἔχεις</w>
                      <wg articular="true" rule="Conj2Pp" role="adv">
-                        <wg class="pp" articular="true" rule="PrepNp" head="true">
+                        <wg class="pp" articular="true" rule="PrepNp">
                            <w ref="PHM 1:5!10"
                               after=" "
                               class="prep"
@@ -1092,13 +1006,12 @@
                               lemma="πρός"
                               normalized="πρός"
                               strong="4314"
-                              gloss="toward"
                               domain="090013"
                               ln="90.58"
                               morph="PREP"
                               unicode="πρὸς">πρὸς</w>
                            <wg type="apposition" class="np" articular="true" rule="Np-Appos">
-                              <wg class="np" articular="true" rule="DetNP" head="true">
+                              <wg class="np" articular="true" rule="DetNP">
                                  <w ref="PHM 1:5!11"
                                     after=" "
                                     class="det"
@@ -1109,7 +1022,6 @@
                                     number="singular"
                                     gender="masculine"
                                     case="accusative"
-                                    gloss="the"
                                     domain="092004"
                                     ln="92.24"
                                     morph="T-ASM"
@@ -1125,7 +1037,6 @@
                                     number="singular"
                                     gender="masculine"
                                     case="accusative"
-                                    gloss="Lord"
                                     domain="012001"
                                     ln="12.9{N:001}"
                                     morph="N-ASM"
@@ -1142,11 +1053,11 @@
                                  number="singular"
                                  gender="masculine"
                                  case="accusative"
-                                 gloss="Jesus"
                                  domain="093001"
                                  ln="93.169a"
                                  morph="N-ASM"
-                                 unicode="Ἰησοῦν">Ἰησοῦν</w>
+                                 unicode="Ἰησοῦν"
+                                 junction="apposition">Ἰησοῦν</w>
                            </wg>
                         </wg>
                         <wg type="group">
@@ -1157,11 +1068,9 @@
                               lemma="καί"
                               normalized="καί"
                               strong="2532"
-                              gloss="and"
                               morph="CONJ"
-                              unicode="καὶ"
-                              head="true">καὶ</w>
-                           <wg class="pp" articular="true" rule="PrepNp" head="true">
+                              unicode="καὶ">καὶ</w>
+                           <wg class="pp" articular="true" rule="PrepNp">
                               <w ref="PHM 1:5!15"
                                  after=" "
                                  class="prep"
@@ -1169,7 +1078,6 @@
                                  lemma="εἰς"
                                  normalized="εἰς"
                                  strong="1519"
-                                 gloss="toward"
                                  domain="090013"
                                  ln="90.59"
                                  morph="PREP"
@@ -1185,7 +1093,6 @@
                                     number="plural"
                                     gender="masculine"
                                     case="accusative"
-                                    gloss="all"
                                     domain="059003"
                                     ln="59.23"
                                     morph="A-APM"
@@ -1201,7 +1108,6 @@
                                        number="plural"
                                        gender="masculine"
                                        case="accusative"
-                                       gloss="the"
                                        domain="092004"
                                        ln="92.24"
                                        morph="T-APM"
@@ -1216,7 +1122,6 @@
                                        number="plural"
                                        gender="masculine"
                                        case="accusative"
-                                       gloss="saints"
                                        domain="011002"
                                        ln="11.27"
                                        morph="A-APM"
@@ -1229,7 +1134,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg rule="sub-CL" head="true" role="adv">
+            <wg rule="sub-CL" role="adv">
                <w ref="PHM 1:6!1"
                   after=" "
                   class="conj"
@@ -1237,12 +1142,11 @@
                   lemma="ὅπως"
                   normalized="ὅπως"
                   strong="3704"
-                  gloss="so that"
                   domain="089009"
                   ln="89.59"
                   morph="ADV"
                   unicode="ὅπως">ὅπως</w>
-               <wg class="cl" rule="S-P-VC-ADV" junction="subordinate">
+               <wg class="cl" rule="S-P-VC-ADV">
                   <wg class="np" articular="true" rule="DetNP" role="s">
                      <w ref="PHM 1:6!2"
                         after=" "
@@ -1254,7 +1158,6 @@
                         number="singular"
                         gender="feminine"
                         case="nominative"
-                        gloss="the"
                         domain="092004"
                         ln="92.24"
                         morph="T-NSF"
@@ -1271,12 +1174,11 @@
                            number="singular"
                            gender="feminine"
                            case="nominative"
-                           gloss="fellowship"
                            domain="034001"
                            ln="34.5"
                            morph="N-NSF"
                            unicode="κοινωνία">κοινωνία</w>
-                        <wg class="np" articular="true" rule="DetNP" head="true">
+                        <wg class="np" articular="true" rule="DetNP">
                            <w ref="PHM 1:6!4"
                               after=" "
                               class="det"
@@ -1287,7 +1189,6 @@
                               number="singular"
                               gender="feminine"
                               case="genitive"
-                              gloss="of the"
                               domain="092004"
                               ln="92.24"
                               morph="T-GSF"
@@ -1304,7 +1205,6 @@
                                  number="singular"
                                  gender="feminine"
                                  case="genitive"
-                                 gloss="faith"
                                  domain="031009 031010"
                                  ln="31.102 31.104 31.85"
                                  morph="N-GSF"
@@ -1319,7 +1219,6 @@
                                  strong="4675"
                                  number="singular"
                                  case="genitive"
-                                 gloss="of you"
                                  morph="P-2GS"
                                  unicode="σου"
                                  referent="n57001001009">σου</w>
@@ -1338,7 +1237,6 @@
                      number="singular"
                      gender="feminine"
                      case="nominative"
-                     gloss="effective"
                      domain="013004"
                      ln="13.124"
                      morph="A-NSF"
@@ -1356,7 +1254,6 @@
                      tense="aorist"
                      voice="middle"
                      mood="subjunctive"
-                     gloss="might become"
                      domain="013002"
                      ln="13.48"
                      morph="V-2ADS-3S"
@@ -1369,7 +1266,6 @@
                         lemma="ἐν"
                         normalized="ἐν"
                         strong="1722"
-                        gloss="in"
                         domain="089004 089008 090006"
                         ln="89.48 89.5 90.23"
                         morph="PREP"
@@ -1386,12 +1282,11 @@
                            number="singular"
                            gender="feminine"
                            case="dative"
-                           gloss="[the] acknowledgment"
                            domain="028001"
                            ln="28.2"
                            morph="N-DSF"
                            unicode="ἐπιγνώσει">ἐπιγνώσει</w>
-                        <wg class="np" rule="All-NP" head="true">
+                        <wg class="np" rule="All-NP">
                            <w ref="PHM 1:6!11"
                               after=" "
                               class="adj"
@@ -1402,7 +1297,6 @@
                               number="singular"
                               gender="neuter"
                               case="genitive"
-                              gloss="of every"
                               domain="059003"
                               ln="59.23"
                               morph="A-GSN"
@@ -1419,12 +1313,11 @@
                                  number="singular"
                                  gender="neuter"
                                  case="genitive"
-                                 gloss="good [thing]"
                                  domain="088001"
                                  ln="88.1"
                                  morph="A-GSN"
                                  unicode="ἀγαθοῦ">ἀγαθοῦ</w>
-                              <wg class="np" junction="apposition" rule="NpPp" head="true">
+                              <wg class="np" rule="NpPp" junction="apposition">
                                  <w ref="PHM 1:6!13"
                                     after=" "
                                     class="det"
@@ -1435,13 +1328,12 @@
                                     number="singular"
                                     gender="neuter"
                                     case="genitive"
-                                    gloss="that [is]"
                                     domain="092004"
                                     ln="92.24"
                                     morph="T-GSN"
                                     unicode="τοῦ">τοῦ</w>
-                                 <wg type="group" rule="2Pp" head="true">
-                                    <wg class="pp" rule="PrepNp" head="true">
+                                 <wg type="group" rule="2Pp">
+                                    <wg class="pp" rule="PrepNp">
                                        <w ref="PHM 1:6!14"
                                           after=" "
                                           class="prep"
@@ -1449,7 +1341,6 @@
                                           lemma="ἐν"
                                           normalized="ἐν"
                                           strong="1722"
-                                          gloss="in"
                                           domain="083003"
                                           ln="83.13 83.9"
                                           morph="PREP"
@@ -1464,14 +1355,13 @@
                                           strong="2254"
                                           number="plural"
                                           case="dative"
-                                          gloss="us"
                                           domain="092002"
                                           ln="92.4"
                                           morph="P-1DP"
                                           unicode="ἡμῖν"
                                           referent="n57001001001 n57001001006 n57001001009 n57001002002 n57001002006 n57001002015">ἡμῖν</w>
                                     </wg>
-                                    <wg class="pp" rule="PrepNp" head="true">
+                                    <wg class="pp" rule="PrepNp">
                                        <w ref="PHM 1:6!16"
                                           after=" "
                                           class="prep"
@@ -1479,7 +1369,6 @@
                                           lemma="εἰς"
                                           normalized="εἰς"
                                           strong="1519"
-                                          gloss="in"
                                           domain="089009 090006"
                                           ln="89.57 90.23"
                                           morph="PREP"
@@ -1495,7 +1384,6 @@
                                           number="singular"
                                           gender="masculine"
                                           case="accusative"
-                                          gloss="Christ"
                                           domain="093001"
                                           ln="93.387"
                                           morph="N-ASM"
@@ -1525,14 +1413,13 @@
                normalized="γάρ"
                strong="1063"
                discontinuous="true"
-               gloss="for"
                domain="089007"
                ln="89.23"
                morph="CONJ"
                unicode="γὰρ">γὰρ</w>
             <wg Rule="ClCl" class="cl" nodeId="570010070010180">
                <wg rule="NpaNp" role="o">
-                  <wg class="np" rule="NpAdjp" head="true">
+                  <wg class="np" rule="NpAdjp">
                      <w ref="PHM 1:7!1"
                         after=" "
                         class="noun"
@@ -1544,7 +1431,6 @@
                         number="singular"
                         gender="feminine"
                         case="accusative"
-                        gloss="Joy"
                         domain="025011"
                         ln="25.123"
                         morph="N-ASF"
@@ -1559,7 +1445,6 @@
                         number="singular"
                         gender="feminine"
                         case="accusative"
-                        gloss="great"
                         morph="A-ASF"
                         unicode="πολλὴν">πολλὴν</w>
                   </wg>
@@ -1571,10 +1456,8 @@
                         lemma="καί"
                         normalized="καί"
                         strong="2532"
-                        gloss="and"
                         morph="CONJ"
-                        unicode="καὶ"
-                        head="true">καὶ</w>
+                        unicode="καὶ">καὶ</w>
                      <w ref="PHM 1:7!6"
                         after=" "
                         class="noun"
@@ -1587,7 +1470,6 @@
                         gender="feminine"
                         case="accusative"
                         discontinuous="true"
-                        gloss="encouragement"
                         domain="025013"
                         ln="25.150"
                         morph="N-ASF"
@@ -1607,7 +1489,6 @@
                   tense="aorist"
                   voice="active"
                   mood="indicative"
-                  gloss="I have"
                   domain="090013"
                   ln="90.65"
                   morph="V-2AAI-1S"
@@ -1622,7 +1503,6 @@
                      lemma="ἐπί"
                      normalized="ἐπί"
                      strong="1909"
-                     gloss="by occasion of"
                      domain="089006 089007 090002"
                      ln="89.13 89.27 90.9"
                      morph="PREP"
@@ -1638,7 +1518,6 @@
                         number="singular"
                         gender="feminine"
                         case="dative"
-                        gloss="the"
                         domain="092004"
                         ln="92.24"
                         morph="T-DSF"
@@ -1655,7 +1534,6 @@
                            number="singular"
                            gender="feminine"
                            case="dative"
-                           gloss="love"
                            domain="025003"
                            ln="25.43"
                            morph="N-DSF"
@@ -1670,14 +1548,13 @@
                            strong="4675"
                            number="singular"
                            case="genitive"
-                           gloss="of you"
                            morph="P-2GS"
                            unicode="σου,"
                            referent="n57001001009">σου</w>
                      </wg>
                   </wg>
                </wg>
-               <wg rule="sub-CL" head="true" role="adv">
+               <wg rule="sub-CL" role="adv">
                   <w ref="PHM 1:7!11"
                      after=" "
                      class="conj"
@@ -1685,12 +1562,11 @@
                      lemma="ὅτι"
                      normalized="ὅτι"
                      strong="3754"
-                     gloss="because"
                      domain="089007 090006"
                      ln="89.33 90.21"
                      morph="CONJ"
                      unicode="ὅτι">ὅτι</w>
-                  <wg class="cl" rule="S-V-ADV" junction="subordinate">
+                  <wg class="cl" rule="S-V-ADV">
                      <wg class="np" articular="true" rule="DetNP" role="s">
                         <w ref="PHM 1:7!12"
                            after=" "
@@ -1702,7 +1578,6 @@
                            number="plural"
                            gender="neuter"
                            case="nominative"
-                           gloss="the"
                            domain="092004"
                            ln="92.24"
                            morph="T-NPN"
@@ -1719,12 +1594,11 @@
                               number="plural"
                               gender="neuter"
                               case="nominative"
-                              gloss="hearts"
                               domain="026"
                               ln="26.11"
                               morph="N-NPN"
                               unicode="σπλάγχνα">σπλάγχνα</w>
-                           <wg class="np" articular="true" rule="DetAdj" head="true">
+                           <wg class="np" articular="true" rule="DetAdj">
                               <w ref="PHM 1:7!14"
                                  after=" "
                                  class="det"
@@ -1735,7 +1609,6 @@
                                  number="plural"
                                  gender="masculine"
                                  case="genitive"
-                                 gloss="of the"
                                  domain="092004"
                                  ln="92.24"
                                  morph="T-GPM"
@@ -1750,7 +1623,6 @@
                                  number="plural"
                                  gender="masculine"
                                  case="genitive"
-                                 gloss="saints"
                                  domain="011002"
                                  ln="11.27"
                                  morph="A-GPM"
@@ -1771,7 +1643,6 @@
                         tense="perfect"
                         voice="passive"
                         mood="indicative"
-                        gloss="have been refreshed"
                         domain="023006"
                         ln="23.80"
                         morph="V-RPI-3S"
@@ -1785,7 +1656,6 @@
                            lemma="διά"
                            normalized="διά"
                            strong="1223"
-                           gloss="by"
                            domain="090001"
                            ln="90.4"
                            morph="PREP"
@@ -1800,14 +1670,13 @@
                            strong="4675"
                            number="singular"
                            case="genitive"
-                           gloss="you"
                            morph="P-2GS"
                            unicode="σοῦ,"
                            referent="n57001001009">σοῦ</w>
                      </wg>
                   </wg>
                </wg>
-               <wg rule="Np2CL" cltype="Minor" head="true">
+               <wg rule="Np2CL" cltype="Minor">
                   <w role="aux"
                      ref="PHM 1:7!19"
                      after="."
@@ -1820,7 +1689,6 @@
                      number="singular"
                      gender="masculine"
                      case="vocative"
-                     gloss="brother"
                      domain="011002"
                      ln="11.23"
                      morph="N-VSM"
@@ -1843,13 +1711,12 @@
                lemma="διό"
                normalized="διό"
                strong="1352"
-               gloss="Therefore"
                domain="089008"
                ln="89.47"
                morph="CONJ"
                unicode="Διό,">Διό</w>
             <wg class="cl" rule="ADV-ADV-ADV-V-ADV">
-               <wg class="cl" rule="O-V-ADV" junction="subordinate" role="adv">
+               <wg class="cl" rule="O-V-ADV" role="adv">
                   <wg class="np" rule="AdjpNp" role="o">
                      <w ref="PHM 1:8!2"
                         after=" "
@@ -1861,7 +1728,6 @@
                         number="singular"
                         gender="feminine"
                         case="accusative"
-                        gloss="much"
                         morph="A-ASF"
                         unicode="πολλὴν">πολλὴν</w>
                      <wg class="np" rule="PpNp2Np">
@@ -1873,7 +1739,6 @@
                               lemma="ἐν"
                               normalized="ἐν"
                               strong="1722"
-                              gloss="in"
                               domain="089020"
                               ln="89.119"
                               morph="PREP"
@@ -1889,7 +1754,6 @@
                               number="singular"
                               gender="masculine"
                               case="dative"
-                              gloss="Christ"
                               domain="093001"
                               ln="93.387"
                               morph="N-DSM"
@@ -1906,7 +1770,6 @@
                            number="singular"
                            gender="feminine"
                            case="accusative"
-                           gloss="boldness"
                            domain="025014"
                            ln="25.158"
                            morph="N-ASF"
@@ -1927,14 +1790,13 @@
                      tense="present"
                      voice="active"
                      mood="participle"
-                     gloss="having"
                      domain="090013"
                      ln="90.65"
                      morph="V-PAP-NSM"
                      unicode="ἔχων"
                      frame="A0:n57001001001 A1:n57001008005"
                      subjref="n57001001001">ἔχων</w>
-                  <wg class="cl" rule="V-IO-O" junction="subordinate" role="adv">
+                  <wg class="cl" rule="V-IO-O" role="adv">
                      <w role="v"
                         ref="PHM 1:8!7"
                         after=" "
@@ -1946,7 +1808,6 @@
                         tense="present"
                         voice="active"
                         mood="infinitive"
-                        gloss="to order"
                         domain="033032"
                         ln="33.325"
                         morph="V-PAN"
@@ -1964,7 +1825,6 @@
                         strong="4671"
                         number="singular"
                         case="dative"
-                        gloss="you"
                         morph="P-2DS"
                         unicode="σοι"
                         referent="n57001007019">σοι</w>
@@ -1979,7 +1839,6 @@
                            number="singular"
                            gender="neuter"
                            case="accusative"
-                           gloss="what [is]"
                            domain="092004"
                            ln="92.24"
                            morph="T-ASN"
@@ -1999,7 +1858,6 @@
                               tense="present"
                               voice="active"
                               mood="participle"
-                              gloss="befitting"
                               domain="066"
                               ln="66.1"
                               morph="V-PAP-ASN"
@@ -2017,7 +1875,6 @@
                      lemma="διά"
                      normalized="διά"
                      strong="1223"
-                     gloss="for the sake of"
                      domain="089007"
                      ln="89.26"
                      morph="PREP"
@@ -2033,7 +1890,6 @@
                         number="singular"
                         gender="feminine"
                         case="accusative"
-                        gloss="-"
                         domain="092004"
                         ln="92.24"
                         morph="T-ASF"
@@ -2049,7 +1905,6 @@
                         number="singular"
                         gender="feminine"
                         case="accusative"
-                        gloss="love"
                         domain="025003"
                         ln="25.43"
                         morph="N-ASF"
@@ -2064,7 +1919,6 @@
                   lemma="μᾶλλον"
                   normalized="μᾶλλον"
                   strong="3123"
-                  gloss="rather"
                   domain="089023"
                   ln="89.126"
                   morph="ADV"
@@ -2082,15 +1936,14 @@
                   tense="present"
                   voice="active"
                   mood="indicative"
-                  gloss="I exhort [you]"
                   domain="033012"
                   ln="33.168"
                   morph="V-PAI-1S"
                   unicode="παρακαλῶ,"
                   frame="A0:n57001001001"
                   subjref="n57001001001">παρακαλῶ</w>
-               <wg rule="CLaCL" junction="subordinate" role="adv">
-                  <wg class="cl" rule="P-VC-ADV" junction="coordinate" head="true">
+               <wg rule="CLaCL" role="adv">
+                  <wg class="cl" rule="P-VC-ADV">
                      <w role="p"
                         ref="PHM 1:9!6"
                         after=" "
@@ -2103,7 +1956,6 @@
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="such a one"
                         domain="064"
                         ln="64.2"
                         morph="D-NSM"
@@ -2123,7 +1975,6 @@
                         tense="present"
                         voice="active"
                         mood="participle"
-                        gloss="being"
                         morph="V-PAP-NSM"
                         unicode="ὢν"
                         subjref="n57001001001">ὢν</w>
@@ -2135,7 +1986,6 @@
                            lemma="ὡς"
                            normalized="ὡς"
                            strong="5613"
-                           gloss="as"
                            domain="064"
                            ln="64.12"
                            morph="ADV"
@@ -2152,7 +2002,6 @@
                               number="singular"
                               gender="masculine"
                               case="nominative"
-                              gloss="Paul"
                               domain="093001"
                               ln="93.294a"
                               morph="N-NSM"
@@ -2168,11 +2017,11 @@
                               number="singular"
                               gender="masculine"
                               case="nominative"
-                              gloss="aged"
                               domain="009002"
                               ln="9.31"
                               morph="N-NSM"
-                              unicode="πρεσβύτης">πρεσβύτης</w>
+                              unicode="πρεσβύτης"
+                              junction="apposition">πρεσβύτης</w>
                         </wg>
                      </wg>
                   </wg>
@@ -2185,15 +2034,9 @@
                         normalized="δέ"
                         strong="1161"
                         discontinuous="true"
-                        gloss="then"
                         morph="CONJ"
-                        unicode="δὲ"
-                        head="true">δὲ</w>
-                     <wg class="cl"
-                         rule="ADV-P"
-                         cltype="Verbless"
-                         junction="coordinate"
-                         head="true">
+                        unicode="δὲ">δὲ</w>
+                     <wg class="cl" rule="ADV-P" cltype="Verbless">
                         <w role="adv"
                            ref="PHM 1:9!11"
                            after=" "
@@ -2202,7 +2045,6 @@
                            lemma="νυνί"
                            normalized="νυνί"
                            strong="3570"
-                           gloss="now"
                            domain="067002"
                            ln="67.38"
                            morph="ADV"
@@ -2215,7 +2057,6 @@
                               lemma="καί"
                               normalized="καί"
                               strong="2532"
-                              gloss="also"
                               morph="CONJ"
                               unicode="καὶ">καὶ</w>
                            <wg class="np" rule="NPofNP">
@@ -2230,12 +2071,11 @@
                                  number="singular"
                                  gender="masculine"
                                  case="nominative"
-                                 gloss="a prisoner"
                                  domain="037008"
                                  ln="37.117"
                                  morph="N-NSM"
                                  unicode="δέσμιος">δέσμιος</w>
-                              <wg type="apposition" class="np" rule="Np-Appos" head="true">
+                              <wg type="apposition" class="np" rule="Np-Appos">
                                  <w ref="PHM 1:9!15"
                                     after=" "
                                     class="noun"
@@ -2247,7 +2087,6 @@
                                     number="singular"
                                     gender="masculine"
                                     case="genitive"
-                                    gloss="of Christ"
                                     domain="093001"
                                     ln="93.387"
                                     morph="N-GSM"
@@ -2263,11 +2102,11 @@
                                     number="singular"
                                     gender="masculine"
                                     case="genitive"
-                                    gloss="Jesus"
                                     domain="093001"
                                     ln="93.169a"
                                     morph="N-GSM"
-                                    unicode="Ἰησοῦ">Ἰησοῦ</w>
+                                    unicode="Ἰησοῦ"
+                                    junction="apposition">Ἰησοῦ</w>
                               </wg>
                            </wg>
                         </wg>
@@ -2299,7 +2138,6 @@
                tense="present"
                voice="active"
                mood="indicative"
-               gloss="I exhort"
                domain="033012"
                ln="33.168"
                morph="V-PAI-1S"
@@ -2317,7 +2155,6 @@
                strong="4571"
                number="singular"
                case="accusative"
-               gloss="you"
                morph="P-2AS"
                unicode="σε"
                referent="n57001007019">σε</w>
@@ -2329,13 +2166,12 @@
                   lemma="περί"
                   normalized="περί"
                   strong="4012"
-                  gloss="for"
                   domain="089004 090009"
                   ln="89.6 90.39"
                   morph="PREP"
                   unicode="περὶ">περὶ</w>
                <wg class="np" type="apposition" articular="true" rule="NP-CL">
-                  <wg class="np" articular="true" rule="DetNP" head="true">
+                  <wg class="np" articular="true" rule="DetNP">
                      <w ref="PHM 1:10!4"
                         after=" "
                         class="det"
@@ -2346,7 +2182,6 @@
                         number="singular"
                         gender="neuter"
                         case="genitive"
-                        gloss="-"
                         domain="092004"
                         ln="92.24"
                         morph="T-GSN"
@@ -2362,7 +2197,6 @@
                            number="singular"
                            gender="neuter"
                            case="genitive"
-                           gloss="my"
                            domain="092001"
                            ln="92.2"
                            morph="S-1SGSN"
@@ -2379,7 +2213,6 @@
                            number="singular"
                            gender="neuter"
                            case="genitive"
-                           gloss="child"
                            domain="036004"
                            ln="36.40"
                            morph="N-GSN"
@@ -2389,7 +2222,6 @@
                   <wg class="cl"
                       clauseType="nominalized"
                       rule="V-ADV-O"
-                      head="true"
                       junction="apposition">
                      <w role="v"
                         ref="PHM 1:10!8"
@@ -2404,7 +2236,6 @@
                         tense="aorist"
                         voice="active"
                         mood="indicative"
-                        gloss="I have begotten"
                         domain="023003"
                         ln="23.58"
                         morph="V-AAI-1S"
@@ -2419,7 +2250,6 @@
                            lemma="ἐν"
                            normalized="ἐν"
                            strong="1722"
-                           gloss="in"
                            domain="013001 083003"
                            ln="13.8 83.13"
                            morph="PREP"
@@ -2435,7 +2265,6 @@
                               number="plural"
                               gender="masculine"
                               case="dative"
-                              gloss="-"
                               domain="092004"
                               ln="92.24"
                               morph="T-DPM"
@@ -2452,7 +2281,6 @@
                               gender="masculine"
                               case="dative"
                               discontinuous="true"
-                              gloss="chains"
                               domain="037008"
                               ln="37.115"
                               morph="N-DPM"
@@ -2471,13 +2299,12 @@
                            number="singular"
                            gender="masculine"
                            case="accusative"
-                           gloss="whom"
                            morph="R-ASM"
                            unicode="ὃν"
                            referent="n57001010012">ὃν</w>
                         <wg class="np" type="apposition" rule="NP-CL">
-                           <wg class="np" type="apposition" rule="NP-CL" head="true">
-                              <wg type="apposition" class="np" rule="Np-Appos" head="true">
+                           <wg class="np" type="apposition" rule="NP-CL">
+                              <wg type="apposition" class="np" rule="Np-Appos">
                                  <w ref="PHM 1:10!12"
                                     after=","
                                     class="noun"
@@ -2489,16 +2316,11 @@
                                     number="singular"
                                     gender="masculine"
                                     case="accusative"
-                                    gloss="Onesimus"
                                     domain="093001"
                                     ln="93.288"
                                     morph="N-ASM"
                                     unicode="Ὀνήσιμον,">Ὀνήσιμον</w>
-                                 <wg class="np"
-                                     junction="apposition"
-                                     articular="true"
-                                     rule="DetAdj"
-                                     head="true">
+                                 <wg class="np" articular="true" rule="DetAdj" junction="apposition">
                                     <w ref="PHM 1:11!1"
                                        after=" "
                                        class="det"
@@ -2509,13 +2331,12 @@
                                        number="singular"
                                        gender="masculine"
                                        case="accusative"
-                                       gloss="-"
                                        domain="092004"
                                        ln="92.24"
                                        morph="T-ASM"
                                        unicode="τόν">τόν</w>
                                     <wg rule="AdjpaAdjp">
-                                       <wg class="adjp" rule="AdvpAdjp" head="true">
+                                       <wg class="adjp" rule="AdvpAdjp">
                                           <w ref="PHM 1:11!2"
                                              after=" "
                                              class="ptcl"
@@ -2523,7 +2344,6 @@
                                              lemma="ποτέ"
                                              normalized="ποτέ"
                                              strong="4218"
-                                             gloss="once"
                                              domain="067001"
                                              ln="67.9"
                                              morph="PRT"
@@ -2539,7 +2359,6 @@
                                                 strong="4671"
                                                 number="singular"
                                                 case="dative"
-                                                gloss="to you"
                                                 morph="P-2DS"
                                                 unicode="σοι"
                                                 referent="n57001007019">σοι</w>
@@ -2553,7 +2372,6 @@
                                                 number="singular"
                                                 gender="masculine"
                                                 case="accusative"
-                                                gloss="useless"
                                                 domain="065004"
                                                 ln="65.33"
                                                 morph="A-ASM"
@@ -2569,11 +2387,9 @@
                                              normalized="δέ"
                                              strong="1161"
                                              discontinuous="true"
-                                             gloss="however"
                                              morph="CONJ"
-                                             unicode="δὲ"
-                                             head="true">δὲ</w>
-                                          <wg class="adjp" rule="AdvpAdjp" head="true">
+                                             unicode="δὲ">δὲ</w>
+                                          <wg class="adjp" rule="AdvpAdjp">
                                              <w ref="PHM 1:11!5"
                                                 after=" "
                                                 class="adv"
@@ -2581,7 +2397,6 @@
                                                 lemma="νυνί"
                                                 normalized="νυνί"
                                                 strong="3570"
-                                                gloss="now"
                                                 domain="067002"
                                                 ln="67.38"
                                                 morph="ADV"
@@ -2598,7 +2413,6 @@
                                                       strong="4671"
                                                       number="singular"
                                                       case="dative"
-                                                      gloss="to you"
                                                       morph="P-2DS"
                                                       unicode="σοὶ"
                                                       referent="n57001007019">σοὶ</w>
@@ -2610,10 +2424,8 @@
                                                          lemma="καί"
                                                          normalized="καί"
                                                          strong="2532"
-                                                         gloss="and"
                                                          morph="CONJ"
-                                                         unicode="καὶ"
-                                                         head="true">καὶ</w>
+                                                         unicode="καὶ">καὶ</w>
                                                       <w ref="PHM 1:11!9"
                                                          after=" "
                                                          class="pron"
@@ -2624,7 +2436,6 @@
                                                          strong="1698"
                                                          number="singular"
                                                          case="dative"
-                                                         gloss="to me"
                                                          domain="092001"
                                                          ln="92.1"
                                                          morph="P-1DS"
@@ -2642,7 +2453,6 @@
                                                    number="singular"
                                                    gender="masculine"
                                                    case="accusative"
-                                                   gloss="useful"
                                                    domain="065004"
                                                    ln="65.31"
                                                    morph="A-ASM"
@@ -2656,7 +2466,6 @@
                               <wg class="cl"
                                   clauseType="nominalized"
                                   rule="V-IO-O"
-                                  head="true"
                                   junction="apposition">
                                  <w role="v"
                                     ref="PHM 1:12!2"
@@ -2671,7 +2480,6 @@
                                     tense="aorist"
                                     voice="active"
                                     mood="indicative"
-                                    gloss="I have sent back"
                                     domain="015004"
                                     ln="15.70"
                                     morph="V-AAI-1S"
@@ -2690,7 +2498,6 @@
                                     number="singular"
                                     case="dative"
                                     discontinuous="true"
-                                    gloss="to you"
                                     morph="P-2DS"
                                     unicode="σοι"
                                     referent="n57001007019">σοι</w>
@@ -2706,7 +2513,6 @@
                                        number="singular"
                                        gender="masculine"
                                        case="accusative"
-                                       gloss="whom"
                                        morph="R-ASM"
                                        unicode="ὃν"
                                        referent="n57001010012">ὃν</w>
@@ -2722,7 +2528,6 @@
                                           number="singular"
                                           gender="masculine"
                                           case="accusative"
-                                          gloss="in person"
                                           domain="092004"
                                           ln="92.11"
                                           morph="P-ASM"
@@ -2732,7 +2537,6 @@
                                            clauseType="nominalized"
                                            articular="true"
                                            rule="S-VC-P"
-                                           head="true"
                                            junction="apposition">
                                           <w role="s"
                                              ref="PHM 1:12!5"
@@ -2746,7 +2550,6 @@
                                              number="singular"
                                              gender="neuter"
                                              case="nominative"
-                                             gloss="he who"
                                              morph="D-NSN"
                                              unicode="τοῦτ’"
                                              referent="n57001010012">τοῦτ’</w>
@@ -2763,7 +2566,6 @@
                                              tense="present"
                                              voice="active"
                                              mood="indicative"
-                                             gloss="is"
                                              morph="V-PAI-3S"
                                              unicode="ἔστιν">ἔστιν</w>
                                           <wg class="np" articular="true" rule="DetNP" role="p">
@@ -2777,7 +2579,6 @@
                                                 number="plural"
                                                 gender="neuter"
                                                 case="accusative"
-                                                gloss="-"
                                                 domain="092004"
                                                 ln="92.24"
                                                 morph="T-NPN"
@@ -2793,7 +2594,6 @@
                                                    number="plural"
                                                    gender="neuter"
                                                    case="accusative"
-                                                   gloss="my"
                                                    domain="092001"
                                                    ln="92.2"
                                                    morph="S-1SNPN"
@@ -2810,7 +2610,6 @@
                                                    number="plural"
                                                    gender="neuter"
                                                    case="accusative"
-                                                   gloss="very heart"
                                                    domain="025003"
                                                    ln="25.50"
                                                    morph="N-NPN"
@@ -2837,7 +2636,6 @@
                                  strong="1473"
                                  number="singular"
                                  case="nominative"
-                                 gloss="I"
                                  domain="092001"
                                  ln="92.1"
                                  morph="P-1NS"
@@ -2857,17 +2655,12 @@
                                  voice="middle"
                                  mood="indicative"
                                  discontinuous="true"
-                                 gloss="was wishing"
                                  domain="025001"
                                  ln="25.3"
                                  morph="V-INI-1S"
                                  unicode="ἐβουλόμην"
                                  frame="A0:n57001013002 A1:n57001013006">ἐβουλόμην</w>
-                              <wg class="cl"
-                                  clauseType="nominalized"
-                                  rule="O-ADV-V"
-                                  junction="subordinate"
-                                  role="o">
+                              <wg class="cl" clauseType="nominalized" rule="O-ADV-V" role="o">
                                  <w role="o"
                                     ref="PHM 1:13!1"
                                     after=" "
@@ -2880,7 +2673,6 @@
                                     number="singular"
                                     gender="masculine"
                                     case="accusative"
-                                    gloss="whom"
                                     morph="R-ASM"
                                     unicode="ὃν"
                                     referent="n57001010012">ὃν</w>
@@ -2892,7 +2684,6 @@
                                        lemma="πρός"
                                        normalized="πρός"
                                        strong="4314"
-                                       gloss="with"
                                        domain="089020"
                                        ln="89.112"
                                        morph="PREP"
@@ -2908,7 +2699,6 @@
                                        number="singular"
                                        gender="masculine"
                                        case="accusative"
-                                       gloss="myself"
                                        domain="092001"
                                        ln="92.3"
                                        morph="F-1ASM"
@@ -2926,7 +2716,6 @@
                                     tense="present"
                                     voice="active"
                                     mood="infinitive"
-                                    gloss="to keep"
                                     domain="013004"
                                     ln="13.150"
                                     morph="V-PAN"
@@ -2934,7 +2723,7 @@
                                     frame="A0:n57001009009 A1:n57001013001"
                                     subjref="n57001009009">κατέχειν</w>
                               </wg>
-                              <wg rule="sub-CL" head="true" role="adv">
+                              <wg rule="sub-CL" role="adv">
                                  <w ref="PHM 1:13!7"
                                     after=" "
                                     class="conj"
@@ -2942,12 +2731,11 @@
                                     lemma="ἵνα"
                                     normalized="ἵνα"
                                     strong="2443"
-                                    gloss="so that"
                                     domain="089009"
                                     ln="89.59"
                                     morph="CONJ"
                                     unicode="ἵνα">ἵνα</w>
-                                 <wg class="cl" rule="ADV-O-V-ADV" junction="subordinate">
+                                 <wg class="cl" rule="ADV-O-V-ADV">
                                     <wg class="pp" rule="PrepNp" role="adv">
                                        <w ref="PHM 1:13!8"
                                           after=" "
@@ -2956,7 +2744,6 @@
                                           lemma="ὑπέρ"
                                           normalized="ὑπέρ"
                                           strong="5228"
-                                          gloss="on behalf of"
                                           domain="090009"
                                           ln="90.36"
                                           morph="PREP"
@@ -2971,7 +2758,6 @@
                                           strong="4675"
                                           number="singular"
                                           case="genitive"
-                                          gloss="you"
                                           morph="P-2GS"
                                           unicode="σοῦ"
                                           referent="n57001007019">σοῦ</w>
@@ -2987,7 +2773,6 @@
                                        strong="3427"
                                        number="singular"
                                        case="dative"
-                                       gloss="me"
                                        domain="092001"
                                        ln="92.1"
                                        morph="P-1DS"
@@ -3006,7 +2791,6 @@
                                        tense="present"
                                        voice="active"
                                        mood="subjunctive"
-                                       gloss="he might serve"
                                        domain="035002"
                                        ln="35.19"
                                        morph="V-PAS-3S"
@@ -3021,7 +2805,6 @@
                                           lemma="ἐν"
                                           normalized="ἐν"
                                           strong="1722"
-                                          gloss="in"
                                           morph="PREP"
                                           unicode="ἐν">ἐν</w>
                                        <wg class="np" articular="true" rule="DetNP">
@@ -3035,7 +2818,6 @@
                                              number="plural"
                                              gender="masculine"
                                              case="dative"
-                                             gloss="the"
                                              domain="092004"
                                              ln="92.24"
                                              morph="T-DPM"
@@ -3052,12 +2834,11 @@
                                                 number="plural"
                                                 gender="masculine"
                                                 case="dative"
-                                                gloss="chains"
                                                 domain="037008"
                                                 ln="37.115"
                                                 morph="N-DPM"
                                                 unicode="δεσμοῖς">δεσμοῖς</w>
-                                             <wg class="np" articular="true" rule="DetNP" head="true">
+                                             <wg class="np" articular="true" rule="DetNP">
                                                 <w ref="PHM 1:13!15"
                                                    after=" "
                                                    class="det"
@@ -3068,7 +2849,6 @@
                                                    number="singular"
                                                    gender="neuter"
                                                    case="genitive"
-                                                   gloss="of the"
                                                    domain="092004"
                                                    ln="92.24"
                                                    morph="T-GSN"
@@ -3084,7 +2864,6 @@
                                                    number="singular"
                                                    gender="neuter"
                                                    case="genitive"
-                                                   gloss="gospel"
                                                    domain="033015"
                                                    ln="33.217"
                                                    morph="N-GSN"
@@ -3117,7 +2896,6 @@
                normalized="δέ"
                strong="1161"
                discontinuous="true"
-               gloss="however"
                domain="089023"
                ln="89.124"
                morph="CONJ"
@@ -3131,7 +2909,6 @@
                      lemma="χωρίς"
                      normalized="χωρίς"
                      strong="5565"
-                     gloss="Apart from"
                      domain="089021"
                      ln="89.120"
                      morph="ADV"
@@ -3147,7 +2924,6 @@
                         number="singular"
                         gender="feminine"
                         case="genitive"
-                        gloss="-"
                         domain="092004"
                         ln="92.24"
                         morph="T-GSF"
@@ -3163,7 +2939,6 @@
                            number="singular"
                            gender="feminine"
                            case="genitive"
-                           gloss="your"
                            domain="092003"
                            ln="92.8"
                            morph="S-2SGSF"
@@ -3180,7 +2955,6 @@
                            number="singular"
                            gender="feminine"
                            case="genitive"
-                           gloss="consent"
                            domain="031001 031003"
                            ln="31.14 31.3"
                            morph="N-GSF"
@@ -3188,7 +2962,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg class="cl" rule="O-V" junction="subordinate" role="o">
+               <wg class="cl" rule="O-V" role="o">
                   <w role="o"
                      ref="PHM 1:14!6"
                      after=" "
@@ -3200,7 +2974,6 @@
                      number="singular"
                      gender="neuter"
                      case="accusative"
-                     gloss="nothing"
                      domain="092004"
                      ln="92.23"
                      morph="A-ASN-N"
@@ -3217,7 +2990,6 @@
                      voice="active"
                      mood="infinitive"
                      discontinuous="true"
-                     gloss="to do"
                      domain="090011"
                      ln="90.45"
                      morph="V-AAN"
@@ -3238,14 +3010,13 @@
                   tense="aorist"
                   voice="active"
                   mood="indicative"
-                  gloss="I wished"
                   domain="025001"
                   ln="25.1"
                   morph="V-AAI-1S"
                   unicode="ἠθέλησα"
                   frame="A0:n57001009009 A1:n57001014008"
                   subjref="n57001009009">ἠθέλησα</w>
-               <wg rule="sub-CL" head="true" role="o">
+               <wg rule="sub-CL" role="o">
                   <w ref="PHM 1:14!9"
                      after=" "
                      class="conj"
@@ -3253,12 +3024,11 @@
                      lemma="ἵνα"
                      normalized="ἵνα"
                      strong="2443"
-                     gloss="so that"
                      domain="089009"
                      ln="89.59"
                      morph="CONJ"
                      unicode="ἵνα">ἵνα</w>
-                  <wg type="group" rule="notCLbutCL2CL" junction="subordinate">
+                  <wg type="group" rule="notCLbutCL2CL">
                      <w ref="PHM 1:14!10"
                         after=" "
                         class="adv"
@@ -3266,10 +3036,9 @@
                         lemma="μή"
                         normalized="μή"
                         strong="3361"
-                        gloss="not"
                         morph="PRT-N"
                         unicode="μὴ">μὴ</w>
-                     <wg class="cl" rule="P-S-VC" junction="coordinate">
+                     <wg class="cl" rule="P-S-VC">
                         <wg class="pp" rule="AdvPp" role="p">
                            <w ref="PHM 1:14!11"
                               after=" "
@@ -3278,7 +3047,6 @@
                               lemma="ὡς"
                               normalized="ὡς"
                               strong="5613"
-                              gloss="as"
                               domain="089007"
                               ln="89.37"
                               morph="ADV"
@@ -3291,7 +3059,6 @@
                                  lemma="κατά"
                                  normalized="κατά"
                                  strong="2596"
-                                 gloss="according to"
                                  domain="089004 089005"
                                  ln="89.4 89.8"
                                  morph="PREP"
@@ -3307,7 +3074,6 @@
                                  number="singular"
                                  gender="feminine"
                                  case="accusative"
-                                 gloss="necessity"
                                  domain="071004"
                                  ln="71.30"
                                  morph="N-ASF"
@@ -3325,7 +3091,6 @@
                               number="singular"
                               gender="neuter"
                               case="nominative"
-                              gloss="the"
                               domain="092004"
                               ln="92.24"
                               morph="T-NSN"
@@ -3341,7 +3106,6 @@
                                  number="singular"
                                  gender="neuter"
                                  case="nominative"
-                                 gloss="good"
                                  domain="065003"
                                  ln="65.20"
                                  morph="A-NSN"
@@ -3356,7 +3120,6 @@
                                  strong="4675"
                                  number="singular"
                                  case="genitive"
-                                 gloss="of you"
                                  morph="P-2GS"
                                  unicode="σου"
                                  referent="n57001007019">σου</w>
@@ -3375,7 +3138,6 @@
                            tense="present"
                            voice="active"
                            mood="subjunctive"
-                           gloss="may be"
                            morph="V-PAS-3S"
                            unicode="ᾖ">ᾖ</w>
                      </wg>
@@ -3386,12 +3148,11 @@
                         lemma="ἀλλά"
                         normalized="ἀλλά"
                         strong="235"
-                        gloss="but"
                         domain="089023"
                         ln="89.125"
                         morph="CONJ"
                         unicode="ἀλλὰ">ἀλλὰ</w>
-                     <wg class="cl" rule="P2CL" cltype="Verbless" junction="coordinate">
+                     <wg class="cl" rule="P2CL" cltype="Verbless">
                         <wg class="pp" rule="PrepNp" role="p">
                            <w ref="PHM 1:14!19"
                               after=" "
@@ -3400,7 +3161,6 @@
                               lemma="κατά"
                               normalized="κατά"
                               strong="2596"
-                              gloss="according to"
                               morph="PREP"
                               unicode="κατὰ">κατὰ</w>
                            <w ref="PHM 1:14!20"
@@ -3414,7 +3174,6 @@
                               number="singular"
                               gender="neuter"
                               case="accusative"
-                              gloss="willingness"
                               domain="025005"
                               ln="25.65"
                               morph="A-ASN"
@@ -3441,7 +3200,6 @@
                normalized="γάρ"
                strong="1063"
                discontinuous="true"
-               gloss="for"
                domain="089007"
                ln="89.23"
                morph="CONJ"
@@ -3455,7 +3213,6 @@
                   lemma="τάχα"
                   normalized="τάχα"
                   strong="5029"
-                  gloss="Perhaps"
                   domain="071002"
                   ln="71.12"
                   morph="ADV"
@@ -3468,7 +3225,6 @@
                      lemma="διά"
                      normalized="διά"
                      strong="1223"
-                     gloss="because of"
                      domain="090010"
                      ln="90.44"
                      morph="PREP"
@@ -3484,7 +3240,6 @@
                      number="singular"
                      gender="neuter"
                      case="accusative"
-                     gloss="this"
                      morph="D-ASN"
                      unicode="τοῦτο">τοῦτο</w>
                </wg>
@@ -3501,7 +3256,6 @@
                   tense="aorist"
                   voice="passive"
                   mood="indicative"
-                  gloss="he was separated [from you]"
                   domain="085002"
                   ln="85.41"
                   morph="V-API-3S"
@@ -3516,7 +3270,6 @@
                      lemma="πρός"
                      normalized="πρός"
                      strong="4314"
-                     gloss="for"
                      domain="067005"
                      ln="67.109"
                      morph="PREP"
@@ -3532,13 +3285,12 @@
                      number="singular"
                      gender="feminine"
                      case="accusative"
-                     gloss="a time"
                      domain="067008"
                      ln="67.148"
                      morph="N-ASF"
                      unicode="ὥραν">ὥραν</w>
                </wg>
-               <wg rule="sub-CL" head="true" role="adv">
+               <wg rule="sub-CL" role="adv">
                   <w ref="PHM 1:15!8"
                      after=" "
                      class="conj"
@@ -3546,7 +3298,6 @@
                      lemma="ἵνα"
                      normalized="ἵνα"
                      strong="2443"
-                     gloss="so that"
                      domain="089009"
                      ln="89.59"
                      morph="CONJ"
@@ -3563,7 +3314,6 @@
                         number="singular"
                         gender="masculine"
                         case="accusative"
-                        gloss="eternally"
                         domain="067005"
                         ln="67.96"
                         morph="A-ASM"
@@ -3580,7 +3330,6 @@
                         number="singular"
                         gender="masculine"
                         case="accusative"
-                        gloss="him"
                         domain="092004"
                         ln="92.11"
                         morph="P-ASM"
@@ -3599,7 +3348,6 @@
                         tense="aorist"
                         voice="active"
                         mood="subjunctive"
-                        gloss="you might possess"
                         domain="057009"
                         ln="57.137"
                         morph="V-PAS-2S"
@@ -3614,7 +3362,6 @@
                            lemma="οὐκέτι"
                            normalized="οὐκέτι"
                            strong="3765"
-                           gloss="no longer"
                            domain="067006"
                            ln="67.130"
                            morph="ADV-N"
@@ -3627,7 +3374,6 @@
                               lemma="ὡς"
                               normalized="ὡς"
                               strong="5613"
-                              gloss="as"
                               domain="064"
                               ln="64.12"
                               morph="ADV"
@@ -3643,7 +3389,6 @@
                               number="singular"
                               gender="masculine"
                               case="accusative"
-                              gloss="a slave"
                               domain="087005"
                               ln="87.76"
                               morph="N-ASM"
@@ -3656,7 +3401,6 @@
                            lemma="ἀλλά"
                            normalized="ἀλλά"
                            strong="235"
-                           gloss="but"
                            domain="089023"
                            ln="89.125"
                            morph="CONJ"
@@ -3669,7 +3413,6 @@
                               lemma="ὑπέρ"
                               normalized="ὑπέρ"
                               strong="5228"
-                              gloss="above"
                               domain="087003"
                               ln="87.30"
                               morph="PREP"
@@ -3685,7 +3428,6 @@
                               number="singular"
                               gender="masculine"
                               case="accusative"
-                              gloss="a slave"
                               domain="087005"
                               ln="87.76"
                               morph="N-ASM"
@@ -3704,7 +3446,6 @@
                            number="singular"
                            gender="masculine"
                            case="accusative"
-                           gloss="a brother"
                            domain="011002"
                            ln="11.23"
                            morph="N-ASM"
@@ -3719,18 +3460,13 @@
                            number="singular"
                            gender="masculine"
                            case="accusative"
-                           gloss="beloved"
                            domain="025003"
                            ln="25.45"
                            morph="A-ASM"
                            unicode="ἀγαπητόν,">ἀγαπητόν</w>
                      </wg>
-                     <wg rule="CLaCL" head="true" role="o">
-                        <wg class="cl"
-                            rule="ADV-IO"
-                            cltype="VerbElided"
-                            junction="coordinate"
-                            head="true">
+                     <wg rule="CLaCL" role="o">
+                        <wg class="cl" rule="ADV-IO" cltype="VerbElided">
                            <w role="adv"
                               ref="PHM 1:16!9"
                               after=" "
@@ -3739,7 +3475,6 @@
                               lemma="μάλιστα"
                               normalized="μάλιστα"
                               strong="3122"
-                              gloss="especially"
                               domain="078001"
                               ln="78.7"
                               morph="ADV-S"
@@ -3755,7 +3490,6 @@
                               strong="1698"
                               number="singular"
                               case="dative"
-                              gloss="to me"
                               domain="092001"
                               ln="92.1"
                               morph="P-1DS"
@@ -3771,17 +3505,11 @@
                               normalized="δέ"
                               strong="1161"
                               discontinuous="true"
-                              gloss="however"
                               domain="089017 089023"
                               ln="89.124 89.94"
                               morph="CONJ"
-                              unicode="δὲ"
-                              head="true">δὲ</w>
-                           <wg class="cl"
-                               rule="ADV-IO-ADV"
-                               cltype="VerbElided"
-                               junction="coordinate"
-                               head="true">
+                              unicode="δὲ">δὲ</w>
+                           <wg class="cl" rule="ADV-IO-ADV" cltype="VerbElided">
                               <wg class="advp" rule="2Advp_h2" role="adv">
                                  <w ref="PHM 1:16!11"
                                     after=" "
@@ -3794,7 +3522,6 @@
                                     number="singular"
                                     gender="neuter"
                                     case="dative"
-                                    gloss="how much"
                                     domain="059002"
                                     ln="59.17"
                                     morph="Q-DSN"
@@ -3806,7 +3533,6 @@
                                     lemma="μᾶλλον"
                                     normalized="μᾶλλον"
                                     strong="3123"
-                                    gloss="more"
                                     domain="078002"
                                     ln="78.28"
                                     morph="ADV"
@@ -3823,7 +3549,6 @@
                                  strong="4671"
                                  number="singular"
                                  case="dative"
-                                 gloss="to you"
                                  morph="P-2DS"
                                  unicode="σοὶ"
                                  referent="n57001007019">σοὶ</w>
@@ -3836,7 +3561,6 @@
                                        lemma="καί"
                                        normalized="καί"
                                        strong="2532"
-                                       gloss="both"
                                        morph="CONJ"
                                        unicode="καὶ">καὶ</w>
                                     <wg class="pp" rule="PrepNp">
@@ -3847,7 +3571,6 @@
                                           lemma="ἐν"
                                           normalized="ἐν"
                                           strong="1722"
-                                          gloss="in"
                                           domain="013001 089020"
                                           ln="13.8 89.119"
                                           morph="PREP"
@@ -3863,7 +3586,6 @@
                                           number="singular"
                                           gender="feminine"
                                           case="dative"
-                                          gloss="[the] flesh"
                                           domain="026"
                                           ln="26.7"
                                           morph="N-DSF"
@@ -3878,7 +3600,6 @@
                                        lemma="καί"
                                        normalized="καί"
                                        strong="2532"
-                                       gloss="and"
                                        morph="CONJ"
                                        unicode="καὶ">καὶ</w>
                                     <wg class="pp" rule="PrepNp">
@@ -3889,7 +3610,6 @@
                                           lemma="ἐν"
                                           normalized="ἐν"
                                           strong="1722"
-                                          gloss="in"
                                           morph="PREP"
                                           unicode="ἐν">ἐν</w>
                                        <w ref="PHM 1:16!20"
@@ -3903,7 +3623,6 @@
                                           number="singular"
                                           gender="masculine"
                                           case="dative"
-                                          gloss="[the] Lord"
                                           domain="012001"
                                           ln="12.9{N:001}"
                                           morph="N-DSM"
@@ -3933,7 +3652,6 @@
                normalized="οὖν"
                strong="3767"
                discontinuous="true"
-               gloss="therefore"
                domain="089008"
                ln="89.50"
                morph="CONJ"
@@ -3947,10 +3665,9 @@
                      lemma="εἰ"
                      normalized="εἰ"
                      strong="1487"
-                     gloss="If"
                      morph="COND"
                      unicode="Εἰ">Εἰ</w>
-                  <wg class="cl" rule="O-V-O2" junction="subordinate">
+                  <wg class="cl" rule="O-V-O2">
                      <w role="o"
                         ref="PHM 1:17!3"
                         after=" "
@@ -3962,7 +3679,6 @@
                         strong="3165"
                         number="singular"
                         case="accusative"
-                        gloss="me"
                         domain="092001"
                         ln="92.1"
                         morph="P-1AS"
@@ -3981,7 +3697,6 @@
                         tense="present"
                         voice="active"
                         mood="indicative"
-                        gloss="you consider"
                         domain="031001"
                         ln="31.1"
                         morph="V-PAI-2S"
@@ -4000,7 +3715,6 @@
                         number="singular"
                         gender="masculine"
                         case="accusative"
-                        gloss="a partner"
                         domain="034001"
                         ln="34.6"
                         morph="N-ASM"
@@ -4020,7 +3734,6 @@
                   tense="aorist"
                   voice="middle"
                   mood="imperative"
-                  gloss="receive"
                   domain="034007"
                   ln="34.53"
                   morph="V-2AMM-2S"
@@ -4039,13 +3752,12 @@
                   number="singular"
                   gender="masculine"
                   case="accusative"
-                  gloss="him"
                   domain="092004"
                   ln="92.11"
                   morph="P-ASM"
                   unicode="αὐτὸν"
                   referent="n57001010012">αὐτὸν</w>
-               <wg rule="sub-CL" head="true" role="adv">
+               <wg rule="sub-CL" role="adv">
                   <w ref="PHM 1:17!8"
                      after=" "
                      class="conj"
@@ -4053,15 +3765,11 @@
                      lemma="ὡς"
                      normalized="ὡς"
                      strong="5613"
-                     gloss="as"
                      domain="064"
                      ln="64.12"
                      morph="ADV"
                      unicode="ὡς">ὡς</w>
-                  <wg class="cl"
-                      rule="O2CL"
-                      cltype="VerbElided"
-                      junction="subordinate">
+                  <wg class="cl" rule="O2CL" cltype="VerbElided">
                      <w role="o"
                         ref="PHM 1:17!9"
                         after="."
@@ -4073,7 +3781,6 @@
                         strong="1691"
                         number="singular"
                         case="accusative"
-                        gloss="me"
                         domain="092001"
                         ln="92.1"
                         morph="P-1AS"
@@ -4098,7 +3805,6 @@
                normalized="δέ"
                strong="1161"
                discontinuous="true"
-               gloss="however"
                domain="089017 089023"
                ln="89.124 89.94"
                morph="CONJ"
@@ -4112,11 +3818,10 @@
                      lemma="εἰ"
                      normalized="εἰ"
                      strong="1487"
-                     gloss="If"
                      morph="COND"
                      unicode="εἰ">εἰ</w>
-                  <wg rule="CLaCL" junction="subordinate">
-                     <wg class="cl" rule="ADV-O-V" junction="coordinate" head="true">
+                  <wg rule="CLaCL">
+                     <wg class="cl" rule="ADV-O-V">
                         <w role="adv"
                            ref="PHM 1:18!3"
                            after=" "
@@ -4129,7 +3834,6 @@
                            number="singular"
                            gender="neuter"
                            case="accusative"
-                           gloss="in any way"
                            domain="092004"
                            ln="92.12"
                            morph="X-ASN"
@@ -4146,7 +3850,6 @@
                            number="singular"
                            case="accusative"
                            discontinuous="true"
-                           gloss="you"
                            morph="P-2AS"
                            unicode="σε"
                            referent="n57001007019">σε</w>
@@ -4163,7 +3866,6 @@
                            tense="aorist"
                            voice="active"
                            mood="indicative"
-                           gloss="he has wronged"
                            domain="088002"
                            ln="88.22"
                            morph="V-AAI-3S"
@@ -4179,11 +3881,9 @@
                            lemma="ἤ"
                            normalized="ἤ"
                            strong="2228"
-                           gloss="or"
                            morph="PRT"
-                           unicode="ἢ"
-                           head="true">ἢ</w>
-                        <wg class="cl" rule="V2CL" junction="coordinate" head="true">
+                           unicode="ἢ">ἢ</w>
+                        <wg class="cl" rule="V2CL">
                            <w role="v"
                               ref="PHM 1:18!7"
                               after=","
@@ -4197,7 +3897,6 @@
                               tense="present"
                               voice="active"
                               mood="indicative"
-                              gloss="he owes [you]"
                               domain="057018"
                               ln="57.219"
                               morph="V-PAI-3S"
@@ -4220,7 +3919,6 @@
                   number="singular"
                   gender="neuter"
                   case="accusative"
-                  gloss="this"
                   morph="D-ASN"
                   unicode="τοῦτο"
                   referent="n57001018004">τοῦτο</w>
@@ -4235,7 +3933,6 @@
                   strong="1698"
                   number="singular"
                   case="dative"
-                  gloss="to me"
                   domain="092001"
                   ln="92.1"
                   morph="P-1DS"
@@ -4254,7 +3951,6 @@
                   tense="present"
                   voice="active"
                   mood="imperative"
-                  gloss="charge"
                   domain="057020"
                   ln="57.226"
                   morph="V-PAM-2S"
@@ -4281,7 +3977,6 @@
                   strong="1473"
                   number="singular"
                   case="nominative"
-                  gloss="I"
                   domain="092001"
                   ln="92.1"
                   morph="P-1NS"
@@ -4298,11 +3993,11 @@
                   number="singular"
                   gender="masculine"
                   case="nominative"
-                  gloss="Paul"
                   domain="093001"
                   ln="93.294a"
                   morph="N-NSM"
-                  unicode="Παῦλος">Παῦλος</w>
+                  unicode="Παῦλος"
+                  junction="apposition">Παῦλος</w>
             </wg>
             <w role="v"
                ref="PHM 1:19!3"
@@ -4317,7 +4012,6 @@
                tense="aorist"
                voice="active"
                mood="indicative"
-               gloss="did write"
                domain="033005"
                ln="33.61"
                morph="V-AAI-1S"
@@ -4334,7 +4028,6 @@
                   number="singular"
                   gender="feminine"
                   case="dative"
-                  gloss="with"
                   domain="092004"
                   ln="92.24"
                   morph="T-DSF"
@@ -4350,7 +4043,6 @@
                      number="singular"
                      gender="feminine"
                      case="dative"
-                     gloss="my own"
                      domain="092001"
                      ln="92.2"
                      morph="S-1SDSF"
@@ -4367,7 +4059,6 @@
                      number="singular"
                      gender="feminine"
                      case="dative"
-                     gloss="hand"
                      domain="008002"
                      ln="8.30"
                      morph="N-DSF"
@@ -4386,7 +4077,6 @@
                   strong="1473"
                   number="singular"
                   case="nominative"
-                  gloss="I"
                   domain="092001"
                   ln="92.1"
                   morph="P-1NS"
@@ -4405,13 +4095,12 @@
                   tense="future"
                   voice="active"
                   mood="indicative"
-                  gloss="will repay [it]"
                   domain="057012"
                   ln="57.156"
                   morph="V-FAI-1S"
                   unicode="ἀποτίσω·"
                   frame="A0:n57001019007">ἀποτίσω</w>
-               <wg rule="sub-CL" head="true" role="adv">
+               <wg rule="sub-CL" role="adv">
                   <w ref="PHM 1:19!9"
                      after=" "
                      class="conj"
@@ -4419,7 +4108,6 @@
                      lemma="ἵνα"
                      normalized="ἵνα"
                      strong="2443"
-                     gloss="that"
                      morph="CONJ"
                      unicode="ἵνα">ἵνα</w>
                   <wg Rule="ClCl" class="cl" nodeId="570010190100080">
@@ -4431,7 +4119,6 @@
                         lemma="μή"
                         normalized="μή"
                         strong="3361"
-                        gloss="not"
                         morph="PRT-N"
                         unicode="μὴ">μὴ</w>
                      <w role="v"
@@ -4447,7 +4134,6 @@
                         tense="present"
                         voice="active"
                         mood="subjunctive"
-                        gloss="I may say"
                         domain="033006"
                         ln="33.69"
                         morph="V-PAS-1S"
@@ -4465,11 +4151,10 @@
                         strong="4671"
                         number="singular"
                         case="dative"
-                        gloss="to you"
                         morph="P-2DS"
                         unicode="σοι"
                         referent="n57001007019">σοι</w>
-                     <wg rule="that-VP" head="true" role="o">
+                     <wg rule="that-VP" role="o">
                         <w ref="PHM 1:19!13"
                            after=" "
                            class="conj"
@@ -4477,7 +4162,6 @@
                            lemma="ὅτι"
                            normalized="ὅτι"
                            strong="3754"
-                           gloss="that"
                            morph="CONJ"
                            unicode="ὅτι">ὅτι</w>
                         <wg class="cl" rule="O-IO-V">
@@ -4489,7 +4173,6 @@
                                  lemma="καί"
                                  normalized="καί"
                                  strong="2532"
-                                 gloss="even"
                                  morph="CONJ"
                                  unicode="καὶ">καὶ</w>
                               <w ref="PHM 1:19!15"
@@ -4503,7 +4186,6 @@
                                  number="singular"
                                  gender="masculine"
                                  case="accusative"
-                                 gloss="yourself"
                                  domain="092003"
                                  ln="92.10"
                                  morph="F-2ASM"
@@ -4521,7 +4203,6 @@
                               strong="3427"
                               number="singular"
                               case="dative"
-                              gloss="to me"
                               domain="092001"
                               ln="92.1"
                               morph="P-1DS"
@@ -4540,7 +4221,6 @@
                               tense="present"
                               voice="active"
                               mood="indicative"
-                              gloss="you owe also"
                               domain="057018"
                               ln="57.220"
                               morph="V-PAI-2S"
@@ -4569,7 +4249,6 @@
                   lemma="ναί"
                   normalized="ναί"
                   strong="3483"
-                  gloss="Yes"
                   domain="069001"
                   ln="69.1"
                   morph="PRT"
@@ -4588,7 +4267,6 @@
                   number="singular"
                   gender="masculine"
                   case="vocative"
-                  gloss="brother"
                   domain="011002"
                   ln="11.23"
                   morph="N-VSM"
@@ -4605,7 +4283,6 @@
                strong="1473"
                number="singular"
                case="nominative"
-               gloss="I"
                domain="092001"
                ln="92.1"
                morph="P-1NS"
@@ -4622,7 +4299,6 @@
                strong="4675"
                number="singular"
                case="genitive"
-               gloss="from you"
                morph="P-2GS"
                unicode="σου"
                referent="n57001020002">σου</w>
@@ -4639,7 +4315,6 @@
                tense="aorist"
                voice="middle"
                mood="optative"
-               gloss="may have profit"
                domain="035001"
                ln="35.4"
                morph="V-2ADO-1S"
@@ -4653,7 +4328,6 @@
                   lemma="ἐν"
                   normalized="ἐν"
                   strong="1722"
-                  gloss="in"
                   domain="089020"
                   ln="89.119"
                   morph="PREP"
@@ -4669,7 +4343,6 @@
                   number="singular"
                   gender="masculine"
                   case="dative"
-                  gloss="[the] Lord"
                   domain="012001"
                   ln="12.9{N:001}"
                   morph="N-DSM"
@@ -4696,7 +4369,6 @@
                tense="aorist"
                voice="active"
                mood="imperative"
-               gloss="Refresh"
                domain="023006"
                ln="23.84"
                morph="V-AAM-2S"
@@ -4714,7 +4386,6 @@
                   strong="3450"
                   number="singular"
                   case="genitive"
-                  gloss="my"
                   domain="092001"
                   ln="92.1"
                   morph="P-1GS"
@@ -4731,7 +4402,6 @@
                      number="plural"
                      gender="neuter"
                      case="accusative"
-                     gloss="-"
                      domain="092004"
                      ln="92.24"
                      morph="T-APN"
@@ -4747,7 +4417,6 @@
                      number="plural"
                      gender="neuter"
                      case="accusative"
-                     gloss="heart"
                      domain="026"
                      ln="26.11"
                      morph="N-APN"
@@ -4762,7 +4431,6 @@
                   lemma="ἐν"
                   normalized="ἐν"
                   strong="1722"
-                  gloss="in"
                   domain="013001 089020"
                   ln="13.8 89.119"
                   morph="PREP"
@@ -4778,7 +4446,6 @@
                   number="singular"
                   gender="masculine"
                   case="dative"
-                  gloss="Christ"
                   domain="093001"
                   ln="93.387"
                   morph="N-DSM"
@@ -4792,7 +4459,7 @@
          <milestone unit="verse" id="PHM 1:21">PHM 1:21</milestone> πεποιθὼς τῇ ὑπακοῇ σου ἔγραψά σοι, εἰδὼς ὅτι καὶ ὑπὲρ ἃ λέγω ποιήσεις.</p>
       <wg>
          <wg class="cl" rule="ADV-V-IO-ADV">
-            <wg class="cl" rule="V-ADV" junction="subordinate" role="adv">
+            <wg class="cl" rule="V-ADV" role="adv">
                <w role="v"
                   ref="PHM 1:21!1"
                   after=" "
@@ -4807,7 +4474,6 @@
                   tense="perfect"
                   voice="active"
                   mood="participle"
-                  gloss="Being persuaded of"
                   domain="031009 033028"
                   ln="31.82 33.301"
                   morph="V-2RAP-NSM"
@@ -4825,7 +4491,6 @@
                      number="singular"
                      gender="feminine"
                      case="dative"
-                     gloss="the"
                      domain="092004"
                      ln="92.24"
                      morph="T-DSF"
@@ -4842,7 +4507,6 @@
                         number="singular"
                         gender="feminine"
                         case="dative"
-                        gloss="obedience"
                         domain="036003"
                         ln="36.15"
                         morph="N-DSF"
@@ -4857,7 +4521,6 @@
                         strong="4675"
                         number="singular"
                         case="genitive"
-                        gloss="of you"
                         morph="P-2GS"
                         unicode="σου"
                         referent="n57001020002">σου</w>
@@ -4877,7 +4540,6 @@
                tense="aorist"
                voice="active"
                mood="indicative"
-               gloss="I write"
                domain="033005"
                ln="33.61"
                morph="V-AAI-1S"
@@ -4895,7 +4557,6 @@
                strong="4671"
                number="singular"
                case="dative"
-               gloss="to you"
                morph="P-2DS"
                unicode="σοι,"
                referent="n57001020002">σοι</w>
@@ -4914,14 +4575,13 @@
                   tense="perfect"
                   voice="active"
                   mood="participle"
-                  gloss="knowing"
                   domain="028001"
                   ln="28.1"
                   morph="V-RAP-NSM"
                   unicode="εἰδὼς"
                   frame="A0:n57001019002"
                   subjref="n57001019002">εἰδὼς</w>
-               <wg rule="that-VP" head="true" role="o">
+               <wg rule="that-VP" role="o">
                   <w ref="PHM 1:21!8"
                      after=" "
                      class="conj"
@@ -4929,7 +4589,6 @@
                      lemma="ὅτι"
                      normalized="ὅτι"
                      strong="3754"
-                     gloss="that"
                      morph="CONJ"
                      unicode="ὅτι">ὅτι</w>
                   <wg class="cl" clauseType="nominalized" rule="ADV-V">
@@ -4941,7 +4600,6 @@
                            lemma="καί"
                            normalized="καί"
                            strong="2532"
-                           gloss="even"
                            domain="089017 091002"
                            ln="89.93 91.12"
                            morph="CONJ"
@@ -4954,15 +4612,11 @@
                               lemma="ὑπέρ"
                               normalized="ὑπέρ"
                               strong="5228"
-                              gloss="above"
                               domain="078002"
                               ln="78.29"
                               morph="PREP"
                               unicode="ὑπὲρ">ὑπὲρ</w>
-                           <wg class="cl"
-                               clauseType="nominalized"
-                               rule="O-V"
-                               junction="subordinate">
+                           <wg class="cl" clauseType="nominalized" rule="O-V">
                               <w role="o"
                                  ref="PHM 1:21!11"
                                  after=" "
@@ -4975,7 +4629,6 @@
                                  number="plural"
                                  gender="neuter"
                                  case="accusative"
-                                 gloss="what"
                                  morph="R-APN"
                                  unicode="ἃ">ἃ</w>
                               <w role="v"
@@ -4991,7 +4644,6 @@
                                  tense="present"
                                  voice="active"
                                  mood="indicative"
-                                 gloss="I say"
                                  domain="033006"
                                  ln="33.69"
                                  morph="V-PAI-1S"
@@ -5014,7 +4666,6 @@
                         tense="future"
                         voice="active"
                         mood="indicative"
-                        gloss="you will do"
                         domain="090011"
                         ln="90.45"
                         morph="V-FAI-2S"
@@ -5040,7 +4691,6 @@
                normalized="δέ"
                strong="1161"
                discontinuous="true"
-               gloss="now"
                domain="089017"
                ln="89.94"
                morph="CONJ"
@@ -5054,7 +4704,6 @@
                      lemma="ἅμα"
                      normalized="ἅμα"
                      strong="260"
-                     gloss="At the same time"
                      domain="067002"
                      ln="67.34"
                      morph="ADV"
@@ -5066,7 +4715,6 @@
                      lemma="καί"
                      normalized="καί"
                      strong="2532"
-                     gloss="also"
                      domain="089017"
                      ln="89.93"
                      morph="CONJ"
@@ -5085,7 +4733,6 @@
                   tense="present"
                   voice="active"
                   mood="imperative"
-                  gloss="prepare"
                   domain="077"
                   ln="77.3"
                   morph="V-PAM-2S"
@@ -5103,7 +4750,6 @@
                   strong="3427"
                   number="singular"
                   case="dative"
-                  gloss="for me"
                   domain="092001"
                   ln="92.1"
                   morph="P-1DS"
@@ -5121,12 +4767,11 @@
                   number="singular"
                   gender="feminine"
                   case="accusative"
-                  gloss="a lodging"
                   domain="007003 034008"
                   ln="34.57 7.31"
                   morph="N-ASF"
                   unicode="ξενίαν,">ξενίαν</w>
-               <wg rule="sub-CL" head="true" role="adv">
+               <wg rule="sub-CL" role="adv">
                   <w ref="PHM 1:22!8"
                      after=" "
                      class="conj"
@@ -5135,7 +4780,6 @@
                      normalized="γάρ"
                      strong="1063"
                      discontinuous="true"
-                     gloss="for"
                      domain="089007"
                      ln="89.23"
                      morph="CONJ"
@@ -5154,14 +4798,13 @@
                         tense="present"
                         voice="active"
                         mood="indicative"
-                        gloss="I hope"
                         domain="025004"
                         ln="25.59"
                         morph="V-PAI-1S"
                         unicode="ἐλπίζω"
                         frame="A0:n57001019002"
                         subjref="n57001019002">ἐλπίζω</w>
-                     <wg rule="that-VP" head="true" role="o">
+                     <wg rule="that-VP" role="o">
                         <w ref="PHM 1:22!9"
                            after=" "
                            class="conj"
@@ -5169,7 +4812,6 @@
                            lemma="ὅτι"
                            normalized="ὅτι"
                            strong="3754"
-                           gloss="that"
                            morph="CONJ"
                            unicode="ὅτι">ὅτι</w>
                         <wg class="cl" rule="ADV-V-IO">
@@ -5181,7 +4823,6 @@
                                  lemma="διά"
                                  normalized="διά"
                                  strong="1223"
-                                 gloss="through"
                                  domain="089012"
                                  ln="89.76"
                                  morph="PREP"
@@ -5197,7 +4838,6 @@
                                     number="plural"
                                     gender="feminine"
                                     case="genitive"
-                                    gloss="the"
                                     domain="092004"
                                     ln="92.24"
                                     morph="T-GPF"
@@ -5214,7 +4854,6 @@
                                        number="plural"
                                        gender="feminine"
                                        case="genitive"
-                                       gloss="prayers"
                                        domain="033013"
                                        ln="33.178"
                                        morph="N-GPF"
@@ -5229,7 +4868,6 @@
                                        strong="5216"
                                        number="plural"
                                        case="genitive"
-                                       gloss="of you"
                                        morph="P-2GP"
                                        unicode="ὑμῶν"
                                        referent="n57001020002 n57001002002 n57001002006 n57001002015">ὑμῶν</w>
@@ -5249,7 +4887,6 @@
                               tense="future"
                               voice="passive"
                               mood="indicative"
-                              gloss="I will be granted"
                               domain="057008"
                               ln="57.102"
                               morph="V-FPI-1S"
@@ -5267,7 +4904,6 @@
                               strong="5213"
                               number="plural"
                               case="dative"
-                              gloss="to you"
                               morph="P-2DP"
                               unicode="ὑμῖν."
                               referent="n57001020002 n57001002002 n57001002006 n57001002015">ὑμῖν</w>
@@ -5298,7 +4934,6 @@
                tense="present"
                voice="middle"
                mood="indicative"
-               gloss="Greets"
                domain="033003"
                ln="33.20"
                morph="V-PNI-3S"
@@ -5315,12 +4950,11 @@
                strong="4571"
                number="singular"
                case="accusative"
-               gloss="you"
                morph="P-2AS"
                unicode="σε"
                referent="n57001020002">σε</w>
             <wg type="group" rule="2Np" role="s">
-               <wg type="apposition" class="np" rule="Np-Appos" head="true">
+               <wg type="apposition" class="np" rule="Np-Appos">
                   <w ref="PHM 1:23!3"
                      after=" "
                      class="noun"
@@ -5332,16 +4966,11 @@
                      number="singular"
                      gender="masculine"
                      case="nominative"
-                     gloss="Epaphras"
                      domain="093001"
                      ln="93.120"
                      morph="N-NSM"
                      unicode="Ἐπαφρᾶς">Ἐπαφρᾶς</w>
-                  <wg class="np"
-                      junction="apposition"
-                      articular="true"
-                      rule="DetNP"
-                      head="true">
+                  <wg class="np" articular="true" rule="DetNP" junction="apposition">
                      <w ref="PHM 1:23!4"
                         after=" "
                         class="det"
@@ -5352,13 +4981,12 @@
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="-"
                         domain="092004"
                         ln="92.24"
                         morph="T-NSM"
                         unicode="ὁ">ὁ</w>
                      <wg class="np" rule="NpPp">
-                        <wg class="np" rule="NPofNP" head="true">
+                        <wg class="np" rule="NPofNP">
                            <w ref="PHM 1:23!5"
                               after=" "
                               class="noun"
@@ -5370,7 +4998,6 @@
                               number="singular"
                               gender="masculine"
                               case="nominative"
-                              gloss="fellow prisoner"
                               domain="037008"
                               ln="37.118"
                               morph="A-NSM"
@@ -5385,14 +5012,13 @@
                               strong="3450"
                               number="singular"
                               case="genitive"
-                              gloss="my"
                               domain="092001"
                               ln="92.1"
                               morph="P-1GS"
                               unicode="μου"
                               referent="n57001019002">μου</w>
                         </wg>
-                        <wg class="pp" rule="PrepNp" head="true">
+                        <wg class="pp" rule="PrepNp">
                            <w ref="PHM 1:23!7"
                               after=" "
                               class="prep"
@@ -5400,7 +5026,6 @@
                               lemma="ἐν"
                               normalized="ἐν"
                               strong="1722"
-                              gloss="in"
                               domain="089020"
                               ln="89.119"
                               morph="PREP"
@@ -5417,7 +5042,6 @@
                                  number="singular"
                                  gender="masculine"
                                  case="dative"
-                                 gloss="Christ"
                                  domain="093001"
                                  ln="93.387"
                                  morph="N-DSM"
@@ -5433,18 +5057,18 @@
                                  number="singular"
                                  gender="masculine"
                                  case="dative"
-                                 gloss="Jesus"
                                  domain="093001"
                                  ln="93.169a"
                                  morph="N-DSM"
-                                 unicode="Ἰησοῦ,">Ἰησοῦ</w>
+                                 unicode="Ἰησοῦ,"
+                                 junction="apposition">Ἰησοῦ</w>
                            </wg>
                         </wg>
                      </wg>
                   </wg>
                </wg>
-               <wg type="apposition" class="np" rule="Np-Appos" head="true">
-                  <wg type="group" rule="NpNpNpNp" head="true">
+               <wg type="apposition" class="np" rule="Np-Appos">
+                  <wg type="group" rule="NpNpNpNp">
                      <w ref="PHM 1:24!1"
                         after=","
                         class="noun"
@@ -5456,7 +5080,6 @@
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="[as do] Mark"
                         domain="093001"
                         ln="93.255"
                         morph="N-NSM"
@@ -5472,7 +5095,6 @@
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="Aristarchus"
                         domain="093001"
                         ln="93.38"
                         morph="N-NSM"
@@ -5488,7 +5110,6 @@
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="Demas"
                         domain="093001"
                         ln="93.92"
                         morph="N-NSM"
@@ -5504,17 +5125,12 @@
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="[and] Luke"
                         domain="093001"
                         ln="93.234"
                         morph="N-NSM"
                         unicode="Λουκᾶς,">Λουκᾶς</w>
                   </wg>
-                  <wg class="np"
-                      junction="apposition"
-                      articular="true"
-                      rule="DetNP"
-                      head="true">
+                  <wg class="np" articular="true" rule="DetNP" junction="apposition">
                      <w ref="PHM 1:24!5"
                         after=" "
                         class="det"
@@ -5525,7 +5141,6 @@
                         number="plural"
                         gender="masculine"
                         case="nominative"
-                        gloss="the"
                         domain="092004"
                         ln="92.24"
                         morph="T-NPM"
@@ -5541,7 +5156,6 @@
                            number="plural"
                            gender="masculine"
                            case="nominative"
-                           gloss="fellow workers"
                            domain="042004"
                            ln="42.44"
                            morph="A-NPM"
@@ -5556,7 +5170,6 @@
                            strong="3450"
                            number="singular"
                            case="genitive"
-                           gloss="of me"
                            domain="092001"
                            ln="92.1"
                            morph="P-1GS"
@@ -5585,7 +5198,6 @@
                   number="singular"
                   gender="feminine"
                   case="nominative"
-                  gloss="The"
                   domain="092004"
                   ln="92.24"
                   morph="T-NSF"
@@ -5602,17 +5214,12 @@
                      number="singular"
                      gender="feminine"
                      case="nominative"
-                     gloss="grace"
                      domain="088009"
                      ln="88.66"
                      morph="N-NSF"
                      unicode="χάρις">χάρις</w>
-                  <wg type="apposition"
-                      class="np"
-                      articular="true"
-                      rule="Np-Appos"
-                      head="true">
-                     <wg class="np" articular="true" rule="DetNP" head="true">
+                  <wg type="apposition" class="np" articular="true" rule="Np-Appos">
+                     <wg class="np" articular="true" rule="DetNP">
                         <w ref="PHM 1:25!3"
                            after=" "
                            class="det"
@@ -5623,7 +5230,6 @@
                            number="singular"
                            gender="masculine"
                            case="genitive"
-                           gloss="of the"
                            domain="092004"
                            ln="92.24"
                            morph="T-GSM"
@@ -5639,7 +5245,6 @@
                            number="singular"
                            gender="masculine"
                            case="genitive"
-                           gloss="Lord"
                            domain="012001"
                            ln="12.9{N:001}"
                            morph="N-GSM"
@@ -5647,9 +5252,8 @@
                      </wg>
                      <wg type="apposition"
                          class="np"
-                         junction="apposition"
                          rule="Np-Appos"
-                         head="true">
+                         junction="apposition">
                         <w ref="PHM 1:25!5"
                            after=" "
                            class="noun"
@@ -5661,7 +5265,6 @@
                            number="singular"
                            gender="masculine"
                            case="genitive"
-                           gloss="Jesus"
                            domain="093001"
                            ln="93.169a"
                            morph="N-GSM"
@@ -5677,11 +5280,11 @@
                            number="singular"
                            gender="masculine"
                            case="genitive"
-                           gloss="Christ"
                            domain="093001"
                            ln="93.387"
                            morph="N-GSM"
-                           unicode="Χριστοῦ">Χριστοῦ</w>
+                           unicode="Χριστοῦ"
+                           junction="apposition">Χριστοῦ</w>
                      </wg>
                   </wg>
                </wg>
@@ -5694,7 +5297,6 @@
                   lemma="μετά"
                   normalized="μετά"
                   strong="3326"
-                  gloss="[be] with"
                   domain="089020"
                   ln="89.108"
                   morph="PREP"
@@ -5710,7 +5312,6 @@
                      number="singular"
                      gender="neuter"
                      case="genitive"
-                     gloss="the"
                      domain="092004"
                      ln="92.24"
                      morph="T-GSN"
@@ -5727,7 +5328,6 @@
                         number="singular"
                         gender="neuter"
                         case="genitive"
-                        gloss="spirit"
                         domain="026"
                         ln="26.9"
                         morph="N-GSN"
@@ -5742,7 +5342,6 @@
                         strong="5216"
                         number="plural"
                         case="genitive"
-                        gloss="of you"
                         morph="P-2GP"
                         unicode="ὑμῶν."
                         referent="n57001020002 n57001002002 n57001002006 n57001002015">ὑμῶν</w>
