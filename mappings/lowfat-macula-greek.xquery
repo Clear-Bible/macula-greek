@@ -1751,9 +1751,25 @@ declare function local:sentence($node)
     </sentence>
 };
 
+declare function local:add-apposition-to-processed-tree($node) {
+    typeswitch ($node)
+    case element() return 
+        element {node-name($node)}
+        {
+            $node/@* ! (if (name(.) ne 'junction') then . else ()),
+            if ($node[preceding-sibling::*] and $node/parent::*[@type='apposition']) 
+	            then attribute junction {'apposition'}
+	            else (),
+	        
+            $node/* ! local:add-apposition-to-processed-tree(.)
+        }
+    default return $node
+};
+
 processing-instruction xml-stylesheet {'href="treedown.css"'},
 processing-instruction xml-stylesheet {'href="boxwood.css"'},
-<book lang="el">
+
+let $processed-tree := <book lang="el">
     {
         attribute id {local:USFMBook((//Node)[1]/@nodeId)},
         (:
@@ -1765,3 +1781,5 @@ processing-instruction xml-stylesheet {'href="boxwood.css"'},
             local:sentence($sentence)
     }
 </book>
+
+return local:add-apposition-to-processed-tree($processed-tree)
