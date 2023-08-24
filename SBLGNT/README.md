@@ -5,8 +5,8 @@
 Sources are equivalent with sources for the Nestle 1904 edition (N1904) except in the following cases:
 
 * SBL Greek New Testament (SBLGNT) from Logos: https://github.com/LogosBible/SBLGNT; specifically the data including the pericope adulturae [from their commit on July 10, 2023](https://github.com/LogosBible/SBLGNT/commit/736fdc76158950c3d04b949b7e013ca14305145a).
-* **Cherith Glosses for the Greek New Testament**, by Andi Wu, Copyright (C) 2023 by Cherith Analytics, is licensed under a Creative Commons Attribution 4.0 International License ("CC BY 4.0"). This information is represented in the `GlossCherithEnglish` and `GlossCherithChinese` attributes.
-* Glosses (`GlossBerean` attribute) from the [Berean Interlinear Bible](https://interlinearbible.com/), which is in the public domain ([licensing terms](https://berean.bible/terms.htm)). The glosses implemented in Macula Greek (N1904) are sourced from the Biblical Humanities edition of N1904 ([information here](https://github.com/biblicalhumanities/Nestle1904/tree/master/glosses)). The Berean Bible and Majority Bible texts are officially placed into the public domain as of April 30, 2023.
+* **Cherith Glosses for the Greek New Testament**, by Andi Wu, Copyright (C) 2023 by Cherith Analytics, is licensed under a Creative Commons Attribution 4.0 International License ("CC BY 4.0"). This information is represented in the `English` and `Chinese` attributes.
+* Glosses (`Gloss` attribute) from the [Berean Interlinear Bible](https://interlinearbible.com/), which is in the public domain ([licensing terms](https://berean.bible/terms.htm)). The glosses implemented in Macula Greek (N1904) are sourced from the Biblical Humanities edition of N1904 ([information here](https://github.com/biblicalhumanities/Nestle1904/tree/master/glosses)). The Berean Bible and Majority Bible texts are officially placed into the public domain as of April 30, 2023.
 * Word Mapping between N1904 and SBLGNT: https://github.com/Clear-Bible/macula-greek/tree/sblgnt-trees/sources/Clear/mappings 
 
 
