@@ -45,7 +45,7 @@ The following items are separate tasks that need to be done to fully complete mi
 
 For Node elements with `status=”(unmapped|refs-mapped)”`:
 
-* Supply context-aware glosses in `GlossBerean` attribute framed/styled like the N1904 `Gloss` attributes 
-(which are from the Berean Interlinear Bible) where the `GlossBerean` attribute is missing in Macula Greek SBLGNT.
+* Supply context-aware glosses in `Gloss` attribute framed/styled like the N1904 `Gloss` attributes 
+(which are from the Berean Interlinear Bible) where the `Gloss` attribute is missing in Macula Greek SBLGNT.
 * Supply Louw-Nida references where LN attribute is missing
 * Supply Domain references (based on LN references) where Domain attribute is missing
