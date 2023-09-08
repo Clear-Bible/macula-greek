@@ -1,6 +1,6 @@
 # TSV
 
-The query contained in `greek-lowfat-to-tsv.xq` is used to generate `macula-greek-Nestle1904.tsv`.
+The query contained in `mappings/greek-lowfat-to-tsv.xq` is used to generate `macula-greek-Nestle1904.tsv`.
 
 It can be ran against BaseX via the following command:
 
@@ -17,7 +17,7 @@ The [csv-diff](https://pypi.org/project/csv-diff/) Python library may be useful 
 # rename the existing file
 mv Nestle1904/tsv/macula-greek-Nestle1904.tsv Nestle1904/tsv/macula-greek-Nestle1904-original.tsv
 
-# run tsv/greek-lowfat-to-tsv.xq as instructed above
+# run the mappings/greek-lowfat-to-tsv.xq script as instructed above
 
 # install csv-diff
 pip3 install csv-diff
