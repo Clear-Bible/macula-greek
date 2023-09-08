@@ -249,6 +249,13 @@ declare function local:attributes($node, $exclusions, $passed-role)
     $node/@Degree ! attribute degree {lower-case(.)},
     $node[empty(*)] ! attribute discontinuous {"true"}[$node/following::Node[empty(*)][1]/@morphId lt $node/@morphId],
     $node/@Rule ! attribute rule {.},
+    $node/@English ! attribute english {.},
+    (: TODO:
+        Do we want to use the same attribute names as we use in macula-hebrew,
+        e.g. mandarin?
+        https://github.com/Clear-Bible/macula-hebrew/blob/4b6f62d9925b35055542caa0e335a16d045dd180/mappings/lowfat-macula-hebrew.xquery#L246
+    :)
+    $node/@Chinese ! attribute chinese {.},
     $node/@Gloss ! attribute gloss {.},
     $node/@LexDomain ! attribute domain {.},
     $node/@LN ! attribute ln {.},
