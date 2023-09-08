@@ -8,7 +8,7 @@ It can be ran against BaseX via the following command:
 # assumes macula-greek repository root context
 basex -i Nestle1904/lowfat/nestle1904lowfat.xml \
     -o Nestle1904/TSV/macula-greek.tsv \
-    Nestle1904/TSV/greek-lowfat-to-tsv.xq
+    mappings/greek-lowfat-to-tsv.xq
 ```
 
 The [csv-diff](https://pypi.org/project/csv-diff/) Python library may be useful for diffing TSVs:
