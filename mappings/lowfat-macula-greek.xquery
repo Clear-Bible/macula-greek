@@ -1760,6 +1760,10 @@ declare function local:sentence($node)
 
 declare function local:add-apposition-to-processed-tree($node) {
     typeswitch ($node)
+    (: FIXME: Review this change; without it, we lose text :)
+    (: FIXME: Should apposition appear on `w` elements? :)
+    case element(w) return $node
+    case element(p) return $node
     case element() return 
         element {node-name($node)}
         {
