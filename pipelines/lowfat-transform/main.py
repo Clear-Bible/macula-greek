@@ -70,47 +70,10 @@ def do_transform(source):
     reformat(dest)
 
 
-def legacy():
-    """
-    time ./transform-to-lowfat.sh
-    ./transform-to-lowfat.sh  214.55s user 17.24s system 188% cpu 2:02.72 total
-    python main.py  231.36s user 19.60s system 188% cpu 2:12.84 total
-    """
-    cmd = shlex.split("bash transform-to-lowfat.sh")
-    subprocess.run(cmd, cwd=REPO_ROOT)
-
-
-def serial():
-    for node_path in nodes_xml_paths():
-        do_transform(node_path)
-
-
-def parallel_processes():
-    """
-    7 workers on 8 core machine
-    python main.py  423.39s user 43.17s system 669% cpu 1:09.66 total
-    4 workers on 8 core machine
-    python main.py  414.45s user 41.34s system 599% cpu 1:16.04 total
-    """
+def main():
     with concurrent.futures.ProcessPoolExecutor(max_workers=MAX_WORKERS) as executor:
         for node_path in nodes_xml_paths():
             executor.submit(do_transform, node_path)
-
-
-def parallel_threads():
-    """
-    python main.py  376.83s user 39.56s system 706% cpu 58.965 total
-    """
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        for node_path in nodes_xml_paths():
-            executor.submit(do_transform, node_path)
-
-
-def main():
-    parallel_processes()
-    # legacy()
-    # parallel_threads()
-    # serial()
 
 
 if __name__ == "__main__":
