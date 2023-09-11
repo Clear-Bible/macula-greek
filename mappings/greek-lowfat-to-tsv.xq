@@ -11,6 +11,7 @@ declare function local:row($w)
     else local:val($w/@*[name(.) = $name])
 };
 
+(: NOTE: english and chinese column is added, but not populated for Nestle1904 :)
 declare function local:headers()
 {
     "xml:id",
