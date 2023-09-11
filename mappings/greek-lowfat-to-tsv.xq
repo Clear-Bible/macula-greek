@@ -18,6 +18,8 @@ declare function local:headers()
     "role",
     "class",
     "type",
+    "english",
+    "chinese",
     "gloss",
     "text",
     "after",
