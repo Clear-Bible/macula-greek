@@ -13,3 +13,10 @@ poetry install
 poetry shell
 python main.py
 ```
+
+## Benchmarking
+
+| Processor | Elapsed (measured via time) |
+| --------- | --------------------------- |
+| BaseX     | 1:04.6                      |
+| Saxon     | 9.482                       |
