@@ -12,11 +12,15 @@
     />
 
   <xsl:template match="verse-number">
-    <milestone unit="verse">
-      <xsl:attribute name="ref">
-        <xsl:value-of select="py:usfm_ref(.)" />
-      </xsl:attribute>
-    </milestone>
+    <!-- FIXME: continuation="true" hack -->
+    <xsl:variable name="valid-verse" select="py:usfm_ref(.)" />
+    <xsl:if test="$valid-verse">
+      <milestone unit="verse">
+        <xsl:attribute name="ref">
+          <xsl:value-of select="$valid-verse" />
+        </xsl:attribute>
+      </milestone>
+    </xsl:if>
   </xsl:template>
 
   <xsl:template match="w">

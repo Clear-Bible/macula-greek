@@ -153,6 +153,9 @@ class XSLTransformer:
             pdb.set_trace()
 
         ref = f'{self.book["abbr"]} {rest}'
+        if self.last_verse is not None and self.last_verse.attrib["ref"] == ref:
+            return None
+
         node.set("ref", ref)
         self.words_by_verse[ref] = self.words
         self.words = []

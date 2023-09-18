@@ -39,6 +39,4 @@ def test_number_of_words():
         total_count += len(count)
     # NOTE: This assumes that we have the same number of w elements
     # as we have in the TSVs
-    # FIXME: Fix failing test; currently TEI has 137681
-    # and lowfat has 137741
     assert total_count == 137741
