@@ -43,6 +43,9 @@ __tei_files__ = list(map(lambda x: tei_path + x, desired_filenames))
 sblgnt_lowfat_path = "../SBLGNT/lowfat/"
 __sblgnt_lowfat_files__ = list(map(lambda x: sblgnt_lowfat_path + x, desired_filenames))
 
+sblgnt_tei_path = "../SBLGNT/tei/"
+__sblgnt_tei_files__ = list(map(lambda x: sblgnt_tei_path + x, desired_filenames))
+
 __macula_greek_tsv_rows__ = []
 
 tsv_path = "../Nestle1904/tsv/macula-greek-Nestle1904.tsv"
