@@ -64,6 +64,7 @@
         <xsl:value-of select="./title/text()" />
       </title>
 
+      <!-- FIXME: This has problems in Romans, Timothy, and Revelation -->
       <xsl:apply-templates
         select="p[generate-id() = generate-id(key('p-by-chapter', substring-before(substring-after(verse-number/@id, ' '), ':'))[1])]"
         mode="chapter"
