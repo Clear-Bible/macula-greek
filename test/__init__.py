@@ -42,7 +42,7 @@ __tei_files__ = list(map(lambda x: tei_path + x, desired_filenames))
 
 __macula_greek_tsv_rows__ = []
 
-tsv_path = "../Nestle1904/TSV/macula-greek.tsv"
+tsv_path = "../Nestle1904/tsv/macula-greek-Nestle1904.tsv"
 __tsv_files__ = [tsv_path]
 
 with open(tsv_path, encoding='utf-8') as file:
