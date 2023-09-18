@@ -193,8 +193,12 @@ def do_transform(source):
         f.write(transformer.render())
 
 
-def main():
-    TEI_PATH.mkdir(parents=True, exist_ok=True)
+def serial_transform():
+    for source_path in get_source_paths():
+        do_transform(source_path)
+
+
+def parallel_transform():
     exceptions = []
     with concurrent.futures.ProcessPoolExecutor(max_workers=MAX_WORKERS) as executor:
         deferred_tasks = {}
@@ -210,6 +214,11 @@ def main():
 
     if exceptions:
         raise exceptions[0]
+
+
+def main():
+    TEI_PATH.mkdir(parents=True, exist_ok=True)
+    parallel_transform
 
 
 if __name__ == "__main__":
