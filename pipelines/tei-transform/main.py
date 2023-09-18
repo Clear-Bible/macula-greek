@@ -146,11 +146,12 @@ class XSLTransformer:
         node = value[0]
         id_val = node.attrib.pop("id")
         try:
-            _, rest = id_val.split(maxsplit=1)
+            _, rest = id_val.rsplit(maxsplit=1)
         except Exception:
             import pdb
 
             pdb.set_trace()
+
         ref = f'{self.book["abbr"]} {rest}'
         node.set("ref", ref)
         self.words_by_verse[ref] = self.words
