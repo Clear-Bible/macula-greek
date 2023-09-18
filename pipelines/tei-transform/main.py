@@ -13,7 +13,7 @@ try:
 except NameError:
     REPO_ROOT = Path(os.getcwd()).parent.parent
 
-PIPELINE_ROOT = Path(__file__).parent
+PIPELINE_ROOT = REPO_ROOT / "pipelines" / "tei-transform"
 FIXTURES_ROOT = PIPELINE_ROOT / "fixtures"
 MAX_WORKERS = int(os.environ.get("MAX_WORKERS", multiprocessing.cpu_count() - 1))
 
