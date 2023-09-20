@@ -14,6 +14,7 @@ try:
 except:
     REPO_ROOT = Path(os.getcwd()).parent.parent
 
+# TODO: remove hard-coding to Nestle1904
 NODES_PATH = REPO_ROOT / "Nestle1904/nodes"
 LOWFAT_PATH = REPO_ROOT / "Nestle1904/lowfat"
 MAX_WORKERS = int(os.environ.get("MAX_WORKERS", multiprocessing.cpu_count() - 1))
@@ -82,6 +83,7 @@ def do_transform(source):
 
 
 def main():
+    LOWFAT_PATH.mkdir(parents=True, exist_ok=True)
     with concurrent.futures.ProcessPoolExecutor(max_workers=MAX_WORKERS) as executor:
         for node_path in nodes_xml_paths():
             executor.submit(do_transform, node_path)
