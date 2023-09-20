@@ -11,7 +11,7 @@ from saxonche import PySaxonProcessor
 BASEX_BINARY = os.environ.get("BASEX_BINARY", "basex")
 try:
     REPO_ROOT = Path(__file__).parent.parent.parent
-except:
+except NameError:
     REPO_ROOT = Path(os.getcwd()).parent.parent
 
 # TODO: remove hard-coding to Nestle1904
