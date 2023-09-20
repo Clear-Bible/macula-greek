@@ -1,9 +1,9 @@
+import concurrent.futures
+import multiprocessing
 import os
 import shlex
 import subprocess
 from pathlib import Path
-import concurrent.futures
-import multiprocessing
 
 from saxonche import PySaxonProcessor
 
@@ -82,11 +82,31 @@ def do_transform(source):
     reformat(dest)
 
 
-def main():
-    LOWFAT_PATH.mkdir(parents=True, exist_ok=True)
+def serial_transform():
+    for node_path in nodes_xml_paths():
+        do_transform(node_path)
+
+
+def parallel_transform():
+    exceptions = []
     with concurrent.futures.ProcessPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        deferred_tasks = {}
         for node_path in nodes_xml_paths():
-            executor.submit(do_transform, node_path)
+            deferred = executor.submit(do_transform, node_path)
+            deferred_tasks[deferred] = node_path
+
+        for f in concurrent.futures.as_completed(deferred_tasks):
+            try:
+                f.result()
+            except Exception as exc:
+                exceptions.append(exc)
+
+    if exceptions:
+        raise exceptions[0]
+
+
+def main():
+    parallel_transform()
 
 
 if __name__ == "__main__":
