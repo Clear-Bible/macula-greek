@@ -222,7 +222,7 @@ def parallel_transform():
 
 def main():
     TEI_PATH.mkdir(parents=True, exist_ok=True)
-    parallel_transform
+    parallel_transform()
 
 
 if __name__ == "__main__":
