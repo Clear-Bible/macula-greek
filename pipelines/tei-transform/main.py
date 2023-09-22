@@ -130,6 +130,7 @@ class XSLTransformer:
                     (func_ns, "word_transform"): self.word_transform,
                     (func_ns, "chapter_transform"): self.chapter_transform,
                     (func_ns, "get_book_usfm_ref"): self.get_book_usfm_ref,
+                    (func_ns, "get_chapter_usfm_ref"): self.get_chapter_usfm_ref,
                 },
             )
             try:
@@ -164,6 +165,9 @@ class XSLTransformer:
 
     def get_book_usfm_ref(self, ctx, value):
         return self.book_usfm_ref
+
+    def get_chapter_usfm_ref(self, ctx, chapter, book_part):
+        return f"{chapter} {book_part.rsplit()[-1]}"
 
     def chapter_transform(self, ctx, value):
         elem = value[0]

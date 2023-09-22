@@ -91,7 +91,10 @@
       select="py:get_book_usfm_ref(.)"
       />
     <xsl:if test="$currentChapter">
-      <chapter ref="{$currentBook} {$currentChapter}">
+      <chapter>
+        <xsl:attribute name="ref">
+          <xsl:value-of select="py:get_chapter_usfm_ref($currentBook, $currentChapter)"/>
+        </xsl:attribute>
         <title>
           <xsl:value-of select="$currentChapter" />
         </title>
