@@ -11,6 +11,10 @@
     xml:space="default"
     />
 
+  <xsl:template match="chapter">
+      <xsl:copy-of select="."/>
+  </xsl:template>
+
   <xsl:template match="verse-number">
     <!-- FIXME: continuation="true" hack -->
     <xsl:variable name="valid-verse" select="py:usfm_ref(.)" />
@@ -47,12 +51,6 @@
     </xsl:copy>
   </xsl:template>
 
-  <xsl:key
-    name="p-by-chapter"
-    match="p"
-    use="substring-before(substring-after(verse-number/@id, ' '), ':')"
-    />
-
   <xsl:template match="/book">
     <div type="book">
       <xsl:attribute name="ref">
@@ -67,42 +65,16 @@
         </xsl:attribute>
         <xsl:value-of select="./title/text()" />
       </title>
-
-      <!-- FIXME: This has problems in Romans, Timothy, and Revelation -->
-      <xsl:apply-templates
-        select="p[generate-id() = generate-id(key('p-by-chapter', substring-before(substring-after(verse-number/@id, ' '), ':'))[1])]"
-        mode="chapter"
-        />
-
+      <xsl:for-each select="py:regroup_elements_to_chapters(.)">
+        <xsl:copy>
+            <xsl:apply-templates select="@*|node()"/>
+        </xsl:copy>
+      </xsl:for-each>
     </div>
 
   </xsl:template>
 
-  <xsl:template
-    match="p"
-    mode="chapter"
-    >
-    <xsl:variable
-      name="currentChapter"
-      select="substring-before(substring-after(verse-number/@id, ' '), ':')"
-      />
-    <xsl:variable
-      name="currentBook"
-      select="py:get_book_usfm_ref(.)"
-      />
-    <xsl:if test="$currentChapter">
-      <chapter>
-        <xsl:attribute name="ref">
-          <xsl:value-of select="py:get_chapter_usfm_ref($currentBook, $currentChapter)"/>
-        </xsl:attribute>
-        <title>
-          <xsl:value-of select="$currentChapter" />
-        </title>
-        <xsl:apply-templates select="key('p-by-chapter', $currentChapter)" />
-      </chapter>
-    </xsl:if>
-  </xsl:template>
+  <xsl:template match="p[not(node())]"/>
 
-  <xsl:template match="chapter[@ref]"/>
   <xsl:strip-space elements="*"/>
 </xsl:stylesheet>

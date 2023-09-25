@@ -3,6 +3,8 @@ import json
 import multiprocessing
 import os
 import re
+from itertools import groupby
+from operator import itemgetter
 from pathlib import Path
 
 from lxml import etree
@@ -127,6 +129,7 @@ class XSLTransformer:
                 etree.XML(f.read()),
                 extensions={
                     (func_ns, "usfm_ref"): self.usfm_ref,
+                    (func_ns, "regroup_elements_to_chapters"): self.regroup_elements_to_chapters,
                     (func_ns, "word_transform"): self.word_transform,
                     (func_ns, "chapter_transform"): self.chapter_transform,
                     (func_ns, "get_book_usfm_ref"): self.get_book_usfm_ref,
@@ -174,6 +177,39 @@ class XSLTransformer:
         self.chapter = elem
         return elem
 
+    @staticmethod
+    def chapter_title_text(elem, chapter_ref):
+        try:
+            prefix = elem.attrib["id"].split(" ")[1].split(":")[0]
+        except:
+            prefix = ""
+        if prefix == chapter_ref:
+            text = chapter_ref
+        else:
+            text = f"{prefix} {chapter_ref}".strip()
+        return text
+
+    def regroup_elements_to_chapters(self, ctx, value):
+        chapters = []
+        for chapter_ref, paragraphs_iter in get_chapters(value[0]):
+            # FIXME: This is transient so we can set title text
+            # for diff purposes
+            paragraphs = list(paragraphs_iter)
+
+            chapter = etree.Element("chapter")
+            chapter.set("ref", f"{self.book_usfm_ref} {chapter_ref}")
+            title = etree.Element("title")
+            title.text = self.chapter_title_text(paragraphs[0][1][0], chapter_ref)
+            chapter.append(title)
+
+            for _, elements in paragraphs:
+                p = etree.Element("p")
+                for element in elements:
+                    p.append(element)
+                chapter.append(p)
+            chapters.append(chapter)
+        return chapters
+
     def word_transform(self, ctx, value):
         elem = value[0]
         position = len(self.words) + 1
@@ -189,6 +225,43 @@ def get_source_paths():
     for path in XML_PATH.glob("*.xml"):
         if path.name in LOGOS_PATH_TO_USFM_LOOKUP:
             yield path
+
+
+def get_chapters(parsed):
+    last_chapter = None
+    regrouped_paragraphs = []
+    words_before = []
+    for p in parsed.xpath("//p"):
+        for child in p.getchildren():
+            if child.tag == "verse-number":
+                verse = child
+            else:
+                if not last_chapter:
+                    words_before.append(child)
+                    continue
+
+            current_verse = verse.attrib["id"]
+            current_chapter = current_verse.rsplit(" ", maxsplit=1)[1].split(":")[0]
+            if not last_chapter:
+                paragraph = [current_chapter, []]
+            if last_chapter and current_chapter != last_chapter:
+                regrouped_paragraphs.append(paragraph)
+                paragraph = [current_chapter, []]
+            if words_before:
+                paragraph[1].extend(words_before)
+            paragraph[1].append(verse)
+            last_chapter = current_chapter
+            following_siblings = verse.xpath("following-sibling::*")
+            elements_between = []
+            for sibling in following_siblings:
+                if sibling.tag == "verse-number":
+                    break
+                elements_between.append(sibling)
+            paragraph[1].extend(elements_between)
+        regrouped_paragraphs.append(paragraph)
+        last_chapter = None
+        words_before = []
+    return groupby(regrouped_paragraphs, key=itemgetter(0))
 
 
 def do_transform(source):
