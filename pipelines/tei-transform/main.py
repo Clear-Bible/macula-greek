@@ -177,29 +177,13 @@ class XSLTransformer:
         self.chapter = elem
         return elem
 
-    @staticmethod
-    def chapter_title_text(elem, chapter_ref):
-        try:
-            prefix = elem.attrib["id"].split(" ")[1].split(":")[0]
-        except:
-            prefix = ""
-        if prefix == chapter_ref:
-            text = chapter_ref
-        else:
-            text = f"{prefix} {chapter_ref}".strip()
-        return text
-
     def regroup_elements_to_chapters(self, ctx, value):
         chapters = []
-        for chapter_ref, paragraphs_iter in get_chapters(value[0]):
-            # FIXME: This is transient so we can set title text
-            # for diff purposes
-            paragraphs = list(paragraphs_iter)
-
+        for chapter_ref, paragraphs in get_chapters(value[0]):
             chapter = etree.Element("chapter")
             chapter.set("ref", f"{self.book_usfm_ref} {chapter_ref}")
             title = etree.Element("title")
-            title.text = self.chapter_title_text(paragraphs[0][1][0], chapter_ref)
+            title.text = chapter_ref
             chapter.append(title)
 
             for _, elements in paragraphs:
