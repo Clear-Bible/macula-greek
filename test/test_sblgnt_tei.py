@@ -24,6 +24,19 @@ def test_file_is_valid_xml(tei_file):
 
 
 @pytest.mark.parametrize("tei_file", __sblgnt_tei_files__)
+def test_chapter_verse_structure(tei_file):
+    parsed = etree.parse(tei_file)
+    chapters = parsed.xpath("//chapter")
+    for chapter in chapters:
+        chapter_ref = chapter.attrib["ref"]
+        first_w_elem = chapter.find("p//w")
+        parts = first_w_elem.attrib["ref"].split(":", maxsplit=1)
+        assert chapter_ref == parts[0]
+        verse = parts[1].split("!")[0]
+        assert verse == "1"
+
+
+@pytest.mark.parametrize("tei_file", __sblgnt_tei_files__)
 def test_ref_attr_correct_format(tei_file):
     pattern = "^[A-Z0-9]{3} [0-9]+:[0-9]+![0-9]+$"  # USFM Ref
     nodes = run_xpath_for_file("//w", tei_file)
