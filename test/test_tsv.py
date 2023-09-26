@@ -32,10 +32,10 @@ def test_tsv_row_count():
 
 
 def test_tsv_row_has_valid_referent_ids():
-    valid_ids = []
+    valid_ids = set()
     for tsv_row in __macula_greek_tsv_rows__:
         id = tsv_row["xml:id"]
-        valid_ids.append(id)
+        valid_ids.add(id)
 
     # Verify that each referent id is valid.
     for tsv_row in __macula_greek_tsv_rows__:

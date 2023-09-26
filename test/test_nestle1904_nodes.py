@@ -50,10 +50,10 @@ def test_number_of_words():
 
 @pytest.mark.parametrize("node_file", __nodes_files__)
 def test_referent_id_validity(node_file):
-    valid_ids = []
+    valid_ids = set()
     nodes_with_id = run_xpath_for_file("//Node[count(child::*) = 0]", node_file)
     for id_node in nodes_with_id:
-        valid_ids.append(id_node.attrib["{http://www.w3.org/XML/1998/namespace}id"])
+        valid_ids.add(id_node.attrib["{http://www.w3.org/XML/1998/namespace}id"])
 
     # xpath to find node with Ref or SubjRef attribute
     nodes_with_ref = run_xpath_for_file("//Node[@Ref or @SubjRef or @Frame]", node_file)
