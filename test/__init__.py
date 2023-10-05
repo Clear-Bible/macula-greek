@@ -40,9 +40,15 @@ __nodes_files__ = list(map(lambda x: nodes_path + x, desired_filenames))
 tei_path = "../Nestle1904/tei/"
 __tei_files__ = list(map(lambda x: tei_path + x, desired_filenames))
 
+sblgnt_lowfat_path = "../SBLGNT/lowfat/"
+__sblgnt_lowfat_files__ = list(map(lambda x: sblgnt_lowfat_path + x, desired_filenames))
+
+sblgnt_tei_path = "../SBLGNT/tei/"
+__sblgnt_tei_files__ = list(map(lambda x: sblgnt_tei_path + x, desired_filenames))
+
 __macula_greek_tsv_rows__ = []
 
-tsv_path = "../Nestle1904/TSV/macula-greek.tsv"
+tsv_path = "../Nestle1904/tsv/macula-greek-Nestle1904.tsv"
 __tsv_files__ = [tsv_path]
 
 with open(tsv_path, encoding='utf-8') as file:

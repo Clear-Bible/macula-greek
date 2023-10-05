@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "tei-transform"
+version = "0.0.1"
+description = "Pipeline to transform XML from LogosBible/SBLGNT into TEI resembling the Nestle1904 TEI"
+authors = ["Biblica's Clear Bible Data Team"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+lxml = "^4.9.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.9.1"
+ipdb = "^0.13.13"
+ipython = "^8.15.0"
+isort = "^5.12.0"
+
+[tool.black]
+line-length = 100
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
