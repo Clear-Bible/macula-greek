@@ -9,14 +9,14 @@ declare option output:indent-attributes 'yes';
 
 (:~~~ rule types ~~~:)
 
-declare variable $atomic-structure-rule := ('Adj2Adjp', 'Adj2Advp', 'Adj2NP', 'Adjp2O', 'Adjp2P', 'Adv2Adj', 'Adv2Advp', 'Adv2Conj', 'Adv2Prep', 'Adv2Ptcl', 'Advp2ADV', 'Advp2P', 'CL2ADV', 'CL2Adjp', 'CL2NP', 'CL2O2x', 'CL2Ox', 'CL2P', 'CL2S', 'CL2VP', 'Conj2Adv', 'Conj2Prep', 'Conj2Pron', 'Conj2Ptcl', 'Det2NP', 'N2NP', 'Np2ADV', 'Np2IO', 'Np2O', 'Np2O2', 'Np2P', 'Np2S', 'Np2pp', 'Num2Nump', 'Nump2NP', 'Pp2np', 'Prep2Adv', 'Pron2NP', 'Ptcl2Adv', 'Ptcl2Conj', 'Ptcl2Intj', 'Ptcl2Np', 'V2VP', 'Vp2Np', 'Vp2P', 'Vp2V', 'adjp2ADV', 'adjp2O2', 'adjp2S', 'adjp2advp', 'advp2np', 'advp2pp', 'intj2Np', 'np2advp', 'pp2ADV', 'pp2P', 'pron2adj', 'ptcl2P', 'ptcl2S', 'vp2VC');
-declare variable $modifier-structure-rule := ('NP-Demo', 'All-NP', 'NP-all', '2Advp_h1', '2Advp_h2', 'AdjpAdjp', 'AdjpAdjp2', 'AdjpAdvp', 'AdjpAdvp2Advp', 'AdjpDative', 'AdjpNp', 'AdjpPp', 'AdjpofNp', 'AdvAdv', 'AdvPp', 'AdvpAdjp', 'AdvpNp', 'AdvpNump', 'ConjConj', 'DativeAdjp', 'Demo-NP', 'DetAdj', 'DetAdv', 'DetNP', 'DetNump', 'NPDetAdj', 'NPofNP', 'NpAdjp', 'NpAdvp', 'NpNump', 'NpPp', 'NpPron', 'NumpAdjp', 'NumpNP', 'NumpNump', 'PP-Adjp', 'PpAdvp', 'PpNp2Np', 'PronNP', 'VpVp', 'ofNPNP');
+declare variable $atomic-structure-rule := ('Adj2Adjp', 'Adj2Advp', 'Adj2NP', 'Adjp2O', 'Adjp2P', 'Adv2Adj', 'Adv2Advp', 'Adv2Conj', 'Adv2Prep', 'Adv2Ptcl', 'Advp2ADV', 'Advp2P', 'CL2ADV', 'CL2Adjp', 'CL2NP', 'CL2O2x', 'CL2Ox', 'CL2P', 'CL2S', 'CL2VP', 'Conj2Adv', 'Conj2Prep', 'Conj2Pron', 'Conj2Ptcl', 'Det2NP', 'N2NP', 'Np2ADV', 'Np2IO', 'Np2O', 'Np2O2', 'Np2P', 'Np2S', 'Np2pp', 'Num2Nump', 'Nump2NP', 'Pp2np', 'Prep2Adv', 'Pron2NP', 'Ptcl2Adv', 'Ptcl2Conj', 'Ptcl2Intj', 'Ptcl2Np', 'V2VP', 'Vp2Np', 'Vp2P', 'Vp2V', 'adjp2ADV', 'adjp2O2', 'adjp2S', 'adjp2advp', 'advp2np', 'advp2pp', 'intj2Np', 'np2advp', 'pp2ADV', 'pp2P', 'pron2adj', 'ptcl2P', 'ptcl2S', 'vp2VC', 'advp2V', 'PpQuan2Np');
+declare variable $modifier-structure-rule := ('NP-Demo', 'All-NP', 'NP-all', '2Advp_h1', '2Advp_h2', 'AdjpAdjp', 'AdjpAdjp2', 'AdjpAdvp', 'AdjpAdvp2Advp', 'AdjpDative', 'AdjpNp', 'AdjpPp', 'AdjpofNp', 'AdvAdv', 'AdvPp', 'AdvpAdjp', 'AdvpNp', 'AdvpNump', 'ConjConj', 'DativeAdjp', 'Demo-NP', 'DetAdj', 'DetAdv', 'DetNP', 'DetNump', 'NPDetAdj', 'NPofNP', 'NpAdjp', 'NpAdvp', 'NpNump', 'NpPp', 'NpPron', 'NumpAdjp', 'NumpNP', 'NumpNump', 'PP-Adjp', 'PpAdvp', 'PpNp2Np', 'PronNP', 'VpVp', 'ofNPNP', 'QuanPp', 'QuanNP');
 declare variable $wrapper-rule := ('BeVerb', 'PrepNp', 'VerbBe', 'ConjNp', 'NP-Prep');
 declare variable $wrapper-clause-rule := ('AdjpCL', 'AdvpCL', 'PtclCL', 'DetCL', 'sub-CL', 'that-VP', 'Conj-CL');
 declare variable $apposition-rule := ('Np-Appos'); (: Ryder: 'NP-CL' and 'CL-NP' are apposition, but they are handled in the disambiguate-clause-complex function :) 
 declare variable $complex-clause-rule := ('ClCl', 'ClCl2', '2CLaCL', '2CLaCLaCL', 'CLa2CL', 'CLandCL2', 'Conj12CL', 'Conj13CL', 'Conj14CL', 'Conj3CL', 'Conj4CL', 'Conj5CL', 'Conj6CL', 'Conj7CL', 'aCLaCL', 'aCLaCLaCL', 'NP-CL', 'CL-NP');
 declare variable $group-rules := ('12Np', '2CLaCL', '2CLaCLaCL', '2Np', '2NpaNpaNp', '2Pp', '2PpaPp', '3Adjp', '3NpaNp', '4NpaNp', '7Np', 'aAdvpaAdvp',  'aCLaCLaCL', 'AdjpaAdjp', 'AdjpAdjpAdjpAdjp', 'AdjpAdjpAdjpAdjpAdjp', 'AdjpAdjpAdjpAdjpAdjpAdjp', 'AdjpAdjpAdjpAdjpAdjpAdjpAdjp', 'AdvpaAdvp', 'AdvpAdvpAdvp', 'aNpaNp', 'aNpaNpaNp', 'aPpaPp', 'aPpaPpaPp', 'CLa2CL', 'CLaCL', 'CLandCL2', 'CLandClClandClandClandCl', 'ClClCl', 'ClClClCl', 'ClClClClCl', 'ClClClClClCl', 'ClClClClClClCl', 'ClClClClClClClCl', 'ClClClClClClClClCl', 'ClClClClClClClClClCl', 'ClClClClClClClClClClClCl', 'Conj12CL', 'Conj12Np', 'Conj13CL', 'Conj14CL', 'Conj2Nump', 'Conj2Nump2', 'Conj2Nump3', 'Conj2P', 'Conj2Pp', 'Conj2VP', 'Conj3Adjp', 'Conj3Advp', 'Conj3CL', 'Conj3Np', 'Conj3P', 'Conj3Pp', 'Conj3VP', 'Conj4CL', 'Conj4Np', 'Conj4P', 'Conj4Pp', 'Conj5AdjP', 'Conj5CL', 'Conj5Np', 'Conj5P', 'Conj5Pp', 'Conj6CL', 'Conj6Np', 'Conj6P', 'Conj7CL', 'Conj7Np', 'Conj7Pp', 'Conj8Np', 'Conj9Np', 'ConjNp', 'EitherAdvpOrPp', 'EitherOr10Np', 'EitherOr3Vp', 'EitherOr4Advp', 'EitherOr4CL', 'EitherOr4Np', 'EitherOr4Vp', 'EitherOr5Vp', 'EitherOr7CL', 'EitherOr8Np', 'EitherOrAdjp', 'EitherOrVp', 'notCLbutCL', 'notCLbutCL2CL', 'notADVbutADV', 'notADVPbutADVP', 'notADJPbutADJP', 'notNPbutNP', 'notPPbutPP', 'notVPbutVP', 'NpaNp', 'NpNpNp', 'NpNpNpNp', 'NpNpNpNpNp', 'NpNpNpNpNpNp', 'NpNpNpNpNpNpNpNp', 'NpNpNpNpNpNpNpNpNp', 'NpNpNpNpNpNpNpNpNpNp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpNp', 'NumpNump', 'NumpNumpNump', 'NumpNumpNump2', 'NumpNumpNump3', 'PpPpPp', 'PpPpPpPp', 'PpPpPpPpPp', 'PpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPp', 'VpVp');
-declare variable $conjuncted-structure-rule := ('2CLaCL', '2CLaCLaCL', '2NpaNpaNp', '2PpaPp', '3NpaNp', '4NpaNp', 'ADVaADV', 'AdjpaAdjp', 'AdvpaAdvp', 'CLa2CL', 'CLaCL', 'CLandCL2', 'CLandClClandClandClandCl', 'Conj12CL', 'Conj12Np', 'Conj13CL', 'Conj14CL', 'Conj2Nump', 'Conj2P', 'Conj2Pp', 'Conj2VP', 'Conj3ADV', 'Conj3Adjp', 'Conj3Advp', 'Conj3CL', 'Conj3Np', 'Conj3Pp', 'Conj3VP', 'Conj4CL', 'Conj4Np', 'Conj4Pp', 'Conj5AdjP', 'Conj5CL', 'Conj5Np', 'Conj5Pp', 'Conj6CL', 'Conj6Np', 'Conj6P', 'Conj7CL', 'Conj7Np', 'Conj7Pp', 'Conj8Np', 'Conj9Np', 'ConjNp', 'EitherOr10Np', 'EitherOr3Vp', 'EitherOr4Advp', 'EitherOr4CL', 'EitherOr4Np', 'EitherOr4Vp', 'EitherOr5Vp', 'EitherOr7CL', 'EitherOr8Np', 'EitherOrAdjp', 'EitherOrVp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp', 'NpaNp', 'aAdvpaAdvp', 'aCLaCL', 'aCLaCLaCL', 'aNpaNp', 'aNpaNpaNp', 'aPpaPp', 'aPpaPpaPp');
+declare variable $conjuncted-structure-rule := ('2CLaCL', '2CLaCLaCL', '2NpaNpaNp', '2PpaPp', '3NpaNp', '4NpaNp', 'ADVaADV', 'AdjpaAdjp', 'AdvpaAdvp', 'CLa2CL', 'CLaCL', 'CLandCL2', 'CLandClClandClandClandCl', 'Conj12CL', 'Conj12Np', 'Conj13CL', 'Conj14CL', 'Conj2Nump', 'Conj2P', 'Conj2Pp', 'Conj2VP', 'Conj3ADV', 'Conj3Adjp', 'Conj3Advp', 'Conj3CL', 'Conj3Np', 'Conj3Pp', 'Conj3VP', 'Conj4CL', 'Conj4Np', 'Conj4Pp', 'Conj5AdjP', 'Conj5CL', 'Conj5Np', 'Conj5Pp', 'Conj6CL', 'Conj6Np', 'Conj6P', 'Conj7CL', 'Conj7Np', 'Conj7Pp', 'Conj8Np', 'Conj9Np', 'ConjNp', 'EitherOr10Np', 'EitherOr3Vp', 'EitherOr4Advp', 'EitherOr4CL', 'EitherOr4Pp', 'EitherOr4Np', 'EitherOr4Vp', 'EitherOr5Vp', 'EitherOr7CL', 'EitherOr8Np', 'EitherOrAdjp', 'EitherOrVp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp', 'NpaNp', 'aAdvpaAdvp', 'aCLaCL', 'aCLaCLaCL', 'aNpaNp', 'aNpaNpaNp', 'aPpaPp', 'aPpaPpaPp');
 declare variable $auxiliary-rules := ('intjNP');
 declare variable $single-constituent-clause-rule := ('IO2CL', 'Intj2CL','Np2CL', 'ADV2CL', 'O2CL', 'P2CL', 'S2CL', 'V2CL', 'VC2CL'); 
 
@@ -33,6 +33,7 @@ declare variable $operators := ('καί', 'δέ', 'ἀλλά', 'καίπερ', '
 declare variable $complementizers := ('ἵνα', 'ὅτι', 'εἰ', 'μή');
 declare variable $subordinators := ('ἵνα', 'ὅτι', 'εἰ', 'εἴπερ', 'ἐάν', 'ἐάνπερ', 'κἄν', 'εἴτε', 'ἐπεί', 'ἐπειδή', 'ἐπειδήπερ', 'ἐπάν', 'μή', 'ἄχρι', 'μέχρι', 'ἕως', 'καθώς', 'καθά', 'καθό', 'καθάπερ', 'καθότι', 'διό', 'διόπερ', 'διότι', 'ἡνίκα');
 declare variable $circumstances := ('ἔτι', 'νυνί', 'ὁμοίως', 'πρῶτος', 'ὅμως', 'οὕτω', 'ἐκτός', 'πῶς');
+
 declare variable $all-greek-rough-breathing-vowel-characters := ('ἀ', 'ἁ', 'ἂ', 'ἃ', 'ἄ', 'ἅ', 'ἆ', 'ἇ', 'Ἀ', 'Ἁ', 'Ἂ', 'Ἃ', 'Ἄ', 'Ἅ', 'Ἆ', 'Ἇ', 'ἐ', 'ἑ', 'ἒ', 'ἓ', 'ἔ', 'ἕ', 'Ἐ', 'Ἑ', 'Ἒ', 'Ἓ', 'Ἔ', 'Ἕ', 'ἠ', 'ἡ', 'ἢ', 'ἣ', 'ἤ', 'ἥ', 'ἦ', 'ἧ', 'Ἠ', 'Ἡ', 'Ἢ', 'Ἣ', 'Ἤ', 'Ἥ', 'Ἦ', 'Ἧ', 'ἰ', 'ἱ', 'ἲ', 'ἳ', 'ἴ', 'ἵ', 'ἶ', 'ἷ', 'Ἰ', 'Ἱ', 'Ἲ', 'Ἳ', 'Ἴ', 'Ἵ', 'Ἶ', 'Ἷ', 'ὀ', 'ὁ', 'ὂ', 'ὃ', 'ὄ', 'ὅ', 'Ὀ', 'Ὁ', 'Ὂ', 'Ὃ', 'Ὄ', 'Ὅ', 'ὐ', 'ὑ', 'ὒ', 'ὓ', 'ὔ', 'ὕ', 'ὖ', 'ὗ', 'Ὑ', 'Ὓ', 'Ὕ', 'Ὗ', 'ὠ', 'ὡ', 'ὢ', 'ὣ', 'ὤ', 'ὥ', 'ὦ', 'ὧ', 'Ὠ', 'Ὡ', 'Ὢ', 'Ὣ', 'Ὤ', 'Ὥ', 'Ὦ', 'Ὧ', 'ᾀ', 'ᾁ', 'ᾂ', 'ᾃ', 'ᾄ', 'ᾅ', 'ᾆ', 'ᾇ', 'ᾈ', 'ᾉ', 'ᾊ', 'ᾋ', 'ᾌ', 'ᾍ', 'ᾎ', 'ᾏ', 'ᾐ', 'ᾑ', 'ᾒ', 'ᾓ', 'ᾔ', 'ᾕ', 'ᾖ', 'ᾗ', 'ᾘ', 'ᾙ', 'ᾚ', 'ᾛ', 'ᾜ', 'ᾝ', 'ᾞ', 'ᾟ', 'ᾠ', 'ᾡ', 'ᾢ', 'ᾣ', 'ᾤ', 'ᾥ', 'ᾦ', 'ᾧ', 'ᾨ', 'ᾩ', 'ᾪ', 'ᾫ', 'ᾬ', 'ᾭ', 'ᾮ', 'ᾯ', 'ᾲ', 'ᾳ', 'ᾴ', 'ᾶ', 'ᾷ', 'ᾼ', 'ῂ', 'ῃ', 'ῄ', 'ῆ', 'ῇ', 'ῌ', 'ῲ', 'ῳ', 'ῴ', 'ῶ', 'ῷ', 'ῼ');
 declare variable $all-greek-unaccented-vowels := ('α', 'ε', 'η', 'ι', 'ο', 'υ', 'ω', 'Α', 'Ε', 'Η', 'Ι', 'Ο', 'Υ', 'Ω');
 declare variable $discontinuous-discourse-nodes := ('n44007007011');
@@ -132,6 +133,19 @@ else
         default return "###"
 };
 
+declare function local:is-head($node as element(Node)) as xs:boolean
+{
+	let $index-of-head-node-defined-in-parent := if (
+		$node/parent::Node[@Head] 
+		and not(
+			count($node/parent::Node/child::Node) eq 1)
+		) 
+		then xs:int($node/parent::Node/@Head) + 1 (: @Head is 0-indexed :)
+		else 0 (: Zero rather than empty set so always comparing integers. position() is 1-indexed so 0 is impossible :)
+	let $current-node-index := $node/position()
+	return if ($index-of-head-node-defined-in-parent eq $current-node-index) then true() else false()
+};
+
 (:declare function local:head($node)
 {
     if ($node)
@@ -153,7 +167,7 @@ else
 
 };:)
 
-declare variable $coordinationRule := ("ClClClClClClClClClClClCl", "Conj13CL", "Conj14CL", "Conj12CL", "CLandClClandClandClandCl", "CLaCL", "notCLbutCL2CL", "ClClCl", "Conj3CL", "aCLaCL", "EitherOr7CL", "Conj4CL", "ClClClClCl", "Conj5CL", "EitherOr4CL", "ClClClClClCl", "Conj6CL", "ClClClCl", "aCLaCLaCL", "ClClClClClClClCl", "notCLbutCL", "Conj7CL", "ClClClClClClCl", "ClClClClClClClClCl", "ClClClClClClClClClCl");
+declare variable $coordinationRule := ("ClClClClClClClClClClClCl", "Conj13CL", "Conj14CL", "Conj12CL", "CLandClClandClandClandCl", "CLaCL", "notCLbutCL2CL", "ClClCl", "Conj3CL", "aCLaCL", "EitherOr7CL", "EitherOr4Pp", "Conj4CL", "ClClClClCl", "Conj5CL", "EitherOr4CL", "ClClClClClCl", "Conj6CL", "ClClClCl", "aCLaCLaCL", "ClClClClClClClCl", "notCLbutCL", "Conj7CL", "ClClClClClClCl", "ClClClClClClClClCl", "ClClClClClClClClClCl");
 declare variable $subordinationRule := ("sub-CL", "CL2P", "CL2S", "CL2VP", "CL2Ox", "CL2NP", "CL2Adjp", "CL2ADV", "CL2O2x");
 declare variable $junctionRequiringDisambiguation := ("ClCl", "Conj-CL", "ClCl2", "CLandCL2", "2CLaCLaCL", "2CLaCL", "CLa2CL"); (: Ryder: this set is currently unused as it would require further disambiguation once we decide how we would like to proceed. :)
 
@@ -188,7 +202,36 @@ declare function local:attributes($node, $exclusions, $passed-role)
     if (
     	local:is-nominalized-clause($node)
     	) then attribute clauseType {'nominalized'} else (),
-    $node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule] ! (if ($passed-role) then () else attribute junction {"apposition"}),
+    (:$node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule] ! (if ($passed-role) then () else attribute junction {"apposition"}),
+    
+    let $parent := $node/parent::*[@Rule = $atomic-structure-rule]
+	let $grandparent := $parent/parent::*[@Rule = $atomic-structure-rule]
+	let $great_grandparent := $grandparent/parent::*[@Rule = $atomic-structure-rule]
+	let $great_great_grandparent := $great_grandparent/parent::*[@Rule = $atomic-structure-rule]
+	
+	return (
+	    if ($parent/parent::*[@Rule = $apposition-rule]) then attribute junction {'apposition'} else (),
+	    if ($grandparent/parent::*[@Rule = $apposition-rule]) then attribute junction {'apposition'} else (),
+	    if ($great_grandparent/parent::*[@Rule = $apposition-rule]) then attribute junction {'apposition'} else (),
+	    if ($great_great_grandparent/parent::*[@Rule = $apposition-rule]) then attribute junction {'apposition'} else ()
+	),:)
+
+(:    $node[parent::*[@Rule = $atomic-structure-rule]]/../parent::*[@Rule = $apposition-rule] ! attribute debug {'ryder'},:)
+    (: ( 
+    
+    (: NOTE: this was an attempt to fix all apposition regardless of nesting, but perhaps only two levels of atomic-rule nesting ever occur :)
+     	if ($passed-role = 'apposition') then attribute junction {'apposition'} else
+     	
+	     	if ($node[preceding-sibling::*]/parent::*[@Rule = $apposition-rule]) then attribute junction {"apposition"} else
+		     
+		        for $n in $node/ancestor::*[not(@Rule = $apposition-rule)]  
+		        where every $ancestor in $n[not(ancestor::*[@Rule = $apposition-rule])]
+		            satisfies ($ancestor/@Rule = $atomic-structure-rule) 
+		        return 
+		            attribute junction {'apposition'}
+    ),:)
+    
+    
     $node/@Type ! attribute type {lower-case(.)}[string-length(.) >= 1 and not(. = ("Logical", "Negative"))],
     $node/@xml:id,
 (:    $node[empty(@xml:id)]/@nodeId ! local:nodeId2xmlId(.),:)
@@ -204,9 +247,10 @@ declare function local:attributes($node, $exclusions, $passed-role)
     $node/@Voice ! attribute voice {lower-case(.)},
     $node/@Mood ! attribute mood {lower-case(.)},
     $node/@Degree ! attribute degree {lower-case(.)},
-(:    local:head($node),:)
     $node[empty(*)] ! attribute discontinuous {"true"}[$node/following::Node[empty(*)][1]/@morphId lt $node/@morphId],
     $node/@Rule ! attribute rule {.},
+    $node/@English ! attribute english {.},
+    $node/@Mandarin ! attribute mandarin {.},
     $node/@Gloss ! attribute gloss {.},
     $node/@LexDomain ! attribute domain {.},
     $node/@LN ! attribute ln {.},
@@ -232,6 +276,8 @@ declare function local:attributes($node, $exclusions, $passed-role)
             else 'error_unknown_junction_rule'
         } else ())
     else ()
+    (: ,
+    $node[parent::Node[@Head]] ! (if (local:is-head(.)) then attribute head {true()} else ())  FIXME: we need to re-implement head in a second pass over the final tree at the bottom of this script. :)
 };
 
 
@@ -1707,9 +1753,25 @@ declare function local:sentence($node)
     </sentence>
 };
 
+declare function local:add-apposition-to-processed-tree($node) {
+    typeswitch ($node)
+    case element() return 
+        element {node-name($node)}
+        {
+            $node/@* ! (if (name(.) ne 'junction') then . else ()),
+            if ($node[preceding-sibling::*] and $node/parent::*[@type='apposition']) 
+	            then attribute junction {'apposition'}
+	            else (),
+	        
+            $node/node() ! local:add-apposition-to-processed-tree(.)
+        }
+    default return $node
+};
+
 processing-instruction xml-stylesheet {'href="treedown.css"'},
 processing-instruction xml-stylesheet {'href="boxwood.css"'},
-<book lang="el">
+
+let $processed-tree := <book lang="el">
     {
         attribute id {local:USFMBook((//Node)[1]/@nodeId)},
         (:
@@ -1721,3 +1783,5 @@ processing-instruction xml-stylesheet {'href="boxwood.css"'},
             local:sentence($sentence)
     }
 </book>
+
+return local:add-apposition-to-processed-tree($processed-tree)

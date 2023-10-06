@@ -1,0 +1,182 @@
+/**************** 
+* LAYOUT RULES  *
+*****************/
+
+book {
+  padding: 2em;
+}
+milestone {
+  color: blue;
+  display: block;
+  margin-block: 1rem 0;
+}
+milestone + milestone {
+  display: inline;
+}
+sentence {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Ryder: 1rem space between <p> and <wg> */
+}
+
+/*************************************** 
+* ELEMENTS THAT SHOULD BE ON NEW LINES *
+***************************************/
+
+[class='cl'],
+[role],
+[type='group'],
+[class='pp'],
+[junction='apposition'] {
+  display: block;
+}
+
+/*******************************************
+* ELEMENTS THAT SHOULD BE ON THE SAME LINE *
+*******************************************/
+
+/***********************************
+* ELEMENTS THAT SHOULD BE INDENTED *
+***********************************/
+
+[class='cl'],
+[role],
+[class='pp'],
+[junction='apposition'] {
+  margin-inline-start: 1rem;
+}
+
+/***************************************
+* ELEMENTS THAT SHOULD NOT BE INDENTED *
+***************************************/
+
+[type='conjuncted-wg']:first-of-type {
+  margin-inline-start: 0;
+}
+
+/****************
+/* ROLE MARKERS *
+****************/
+
+[role],
+[junction='apposition'] {
+  margin-inline-start: 1rem;
+}
+
+[role]::before,
+[junction='apposition']::before {
+  content: attr(role);
+  color: cadetblue;
+  margin-inline-start: -1rem;
+  margin-inline-end: 0.4rem; /* Ryder: 0.4rem space between role and element seems to generally align with a 1rem space without a role. */
+}
+[role='aux']::before {
+  content: '~';
+}
+[role='adv']::before {
+  content: '+';
+}
+[junction='apposition']::before {
+  content: ':';
+}
+[role='ellipsis']::before {
+  content: '+';
+  /* content: '…'; */
+}
+[role='topic']::before {
+  content: '+';
+  /* content: '>'; */
+}
+[role='tail']::before {
+  content: '+';
+  /* content: '<'; */
+}
+[role='v'][mood='participle']::before {
+  content: 'v.part';
+}
+[role='v'][mood='infinitive']::before {
+  content: 'v.inf';
+}
+
+/**************
+* WORD LAYOUT *
+**************/
+
+/* Ryder: These next three rules are essential to override 
+default DOM behaviour that adds whitespace characters
+between inline elements. */
+wg[role] {
+  font-size: 0;
+}
+wg[role]::before,
+wg[role] > * {
+  font-size: 1rem;
+}
+
+w {
+  margin-right: 0.2rem;
+}
+
+/****************
+* SPECIAL CASES *
+****************/
+
+/* Ryder: clauses with clause roles should have the role above the group and to the right. */
+*:is([class='cl'][junction='apposition'], [class='cl'][role]) {
+  margin-block-start: 1.2rem;
+}
+*:is([class='cl'][junction='apposition'], [class='cl'][role])
+  > :first-child:not([class='cl']) {
+  margin-block-start: -0.7rem;
+}
+*:is([class='cl'][junction='apposition'], [class='cl'][role])::before {
+  margin-inline-start: -1.25rem;
+  margin-block-start: -1.4rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Ryder: clauses with the apposition role require an additional indentation (2 rems) to ensure the role itself is at the right level. */
+[junction='apposition'][class='cl'],
+[junction='apposition'][type^='wrapper-clause'],
+[type='apposition-group'] > [class='cl'][junction='apposition'],
+[role]:not([class='cl']):not([type='apposition-group'])
+  > [junction='apposition'] {
+  margin-inline-start: 2rem;
+}
+
+[discontinuous='true']::after {
+  content: '*' !important;
+  color: cadetblue;
+}
+
+/************
+* DEBUGGING *
+************/
+
+/* Ryder: this is a temporary affordance for debugging - it highlights errors for unprocessed nodes. */
+[role^='err']::before {
+  background: brown;
+  color: white;
+  font-size: 0.6rem;
+  font-family: monospace;
+  padding: 0.05rem 0.3rem;
+  border-radius: 0.2rem;
+}
+
+/* Ryder: this is a temporary affordance for brainstorming. */
+[rule='AdjpCL'],
+[rule='AdvpCL'],
+[rule='PtclCL'],
+[rule='DetCL'],
+[rule='sub-CL'],
+[rule='that-VP'],
+[rule='Conj-CL'] {
+/*  background: lightblue;*/
+}
+
+/* Ryder: temporary affordance to view head nodes */
+/*[head='true']::before {
+  content: 'HEAD';
+  background: lightgoldenrodyellow;
+}*/
