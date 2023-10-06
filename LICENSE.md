@@ -14,12 +14,13 @@ These datasets include:
 8. Adjunct Types (`../sources/Clear/adjunct-types`)
 9. Word Mapping between N1904 and SBLGNT: https://github.com/Clear-Bible/macula-greek/tree/sblgnt-trees/sources/Clear/mappings
 
-In addition to datasets from Clear, MACULA contains data from the following datasets:
+In addition to datasets from Clear, MACULA contains data from the following datasets.  Where a repository is given, please refer to the repository for the relevant license:
 
 1. [Nestle1904](https://github.com/biblicalhumanities/Nestle1904) Greek New Testament, edited by Eberhard Nestle, published in 1904 by the British and Foreign Bible Society. Transcription by Diego Santos, morphology by Ulrik Sandborg-Petersen, markup by Jonathan Robie.
-2. Word sense data from the United Bible Societies [MARBLE](https://semanticdictionary.org/) project. (`@ln`, `@domain`) Used with permission.
-3. The [Berean Interlinear Bible](https://interlinearbible.com/) (`@gloss`). The Berean Bible and Majority Bible texts are officially placed into the public domain as of April 30, 2023.
-4. **Cherith Glosses for the Greek New Testament**, by Andi Wu, Copyright (C) 2023 by Cherith Analytics,  licensed under a Creative Commons Attribution 4.0 International License ("CC BY 4.0"). This information is represented in the `English` and `Chinese` attributes.
+2. [SBLGNT](https://github.com/LogosBible/SBLGNT) from Logos Bible Software; specifically, the data including the pericope adulturae [from their commit on July 10, 2023](https://github.com/LogosBible/SBLGNT/commit/736fdc76158950c3d04b949b7e013ca14305145a).
+3. Word sense data from the United Bible Societies [MARBLE](https://semanticdictionary.org/) project. (`@ln`, `@domain`) Used with permission.
+4. The [Berean Interlinear Bible](https://interlinearbible.com/) (`@gloss`). The Berean Bible and Majority Bible texts are officially placed into the public domain as of April 30, 2023.
+5. **Cherith Glosses for the Greek New Testament**, by Andi Wu, Copyright (C) 2023 by Cherith Analytics,  licensed under a Creative Commons Attribution 4.0 International License ("CC BY 4.0"). This information is represented in the `English` and `Chinese` attributes.
 
 # License
 
