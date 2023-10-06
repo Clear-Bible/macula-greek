@@ -27,7 +27,7 @@
                   ln="93.294a"
                   morph="N-NSM"
                   unicode="Παῦλος">Παῦλος</w>
-               <wg junction="apposition" rule="NpaNp">
+               <wg rule="NpaNp" junction="apposition">
                   <wg class="np" rule="NPofNP">
                      <w ref="TIT 1:1!2"
                         after=" "
@@ -125,7 +125,8 @@
                               domain="093001"
                               ln="93.387"
                               morph="N-GSM"
-                              unicode="Χριστοῦ">Χριστοῦ</w>
+                              unicode="Χριστοῦ"
+                              junction="apposition">Χριστοῦ</w>
                         </wg>
                      </wg>
                   </wg>
@@ -241,7 +242,7 @@
                               ln="72.2"
                               morph="N-GSF"
                               unicode="ἀληθείας">ἀληθείας</w>
-                           <wg class="np" junction="apposition" rule="NpPp">
+                           <wg class="np" rule="NpPp" junction="apposition">
                               <w ref="TIT 1:1!15"
                                  after=" "
                                  class="det"
@@ -358,10 +359,7 @@
                            unicode="αἰωνίου,">αἰωνίου</w>
                      </wg>
                      <wg clauseType="nominalized" rule="CLaCL" junction="apposition">
-                        <wg class="cl"
-                            clauseType="nominalized"
-                            rule="O-V-S-ADV"
-                            junction="coordinate">
+                        <wg class="cl" clauseType="nominalized" rule="O-V-S-ADV">
                            <w role="o"
                               ref="TIT 1:2!5"
                               after=" "
@@ -507,7 +505,7 @@
                               gloss="now"
                               morph="CONJ"
                               unicode="δὲ">δὲ</w>
-                           <wg class="cl" rule="V-ADV-O-ADV" junction="coordinate">
+                           <wg class="cl" rule="V-ADV-O-ADV">
                               <w role="v"
                                  ref="TIT 1:3!1"
                                  after=" "
@@ -796,7 +794,8 @@
                                                       domain="012001"
                                                       ln="12.1"
                                                       morph="N-GSM"
-                                                      unicode="Θεοῦ,">Θεοῦ</w>
+                                                      unicode="Θεοῦ,"
+                                                      junction="apposition">Θεοῦ</w>
                                                 </wg>
                                              </wg>
                                           </wg>
@@ -827,7 +826,7 @@
                   ln="93.364a"
                   morph="N-DSM"
                   unicode="Τίτῳ">Τίτῳ</w>
-               <wg class="np" junction="apposition" rule="NpPp">
+               <wg class="np" rule="NpPp" junction="apposition">
                   <wg class="np" rule="AdjpNp">
                      <w ref="TIT 1:4!2"
                         after=" "
@@ -1008,7 +1007,8 @@
                         domain="012001"
                         ln="12.12"
                         morph="N-GSM"
-                        unicode="Πατρὸς">Πατρὸς</w>
+                        unicode="Πατρὸς"
+                        junction="apposition">Πατρὸς</w>
                   </wg>
                   <wg type="group">
                      <w ref="TIT 1:4!13"
@@ -1054,9 +1054,10 @@
                               domain="093001"
                               ln="93.169a"
                               morph="N-GSM"
-                              unicode="Ἰησοῦ">Ἰησοῦ</w>
+                              unicode="Ἰησοῦ"
+                              junction="apposition">Ἰησοῦ</w>
                         </wg>
-                        <wg class="np" junction="apposition" articular="true" rule="DetNP">
+                        <wg class="np" articular="true" rule="DetNP" junction="apposition">
                            <w ref="TIT 1:4!16"
                               after=" "
                               class="det"
@@ -1225,8 +1226,8 @@
                   ln="89.59"
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
-               <wg rule="CLaCL" junction="subordinate">
-                  <wg class="cl" rule="O-V" junction="coordinate">
+               <wg rule="CLaCL">
+                  <wg class="cl" rule="O-V">
                      <wg articular="true" rule="DetCL" role="o">
                         <w ref="TIT 1:5!8"
                            after=" "
@@ -1379,7 +1380,7 @@
                               ln="64.12"
                               morph="ADV"
                               unicode="ὡς">ὡς</w>
-                           <wg class="cl" rule="S-IO-V" junction="subordinate">
+                           <wg class="cl" rule="S-IO-V">
                               <w role="s"
                                  ref="TIT 1:5!17"
                                  after=" "
@@ -1446,7 +1447,7 @@
                               ln="89.65"
                               morph="COND"
                               unicode="εἴ">εἴ</w>
-                           <wg class="cl" rule="S-VC-P" junction="subordinate">
+                           <wg class="cl" rule="S-VC-P">
                               <w role="s"
                                  ref="TIT 1:6!2"
                                  after=" "
@@ -1547,10 +1548,7 @@
                                        morph="N-NSM"
                                        unicode="ἀνήρ,">ἀνήρ</w>
                                  </wg>
-                                 <wg class="cl"
-                                     clauseType="nominalized"
-                                     rule="V-O"
-                                     junction="subordinate">
+                                 <wg class="cl" clauseType="nominalized" rule="V-O">
                                     <w role="v"
                                        ref="TIT 1:6!9"
                                        after=" "
@@ -1607,7 +1605,7 @@
                                              morph="A-APN"
                                              unicode="πιστά,">πιστά</w>
                                        </wg>
-                                       <wg clauseType="nominalized" rule="AdvpCL" junction="subordinate">
+                                       <wg clauseType="nominalized" rule="AdvpCL">
                                           <w ref="TIT 1:6!11"
                                              after=" "
                                              class="adv"
@@ -1749,7 +1747,6 @@
                <wg class="cl"
                    clauseType="nominalized"
                    rule="S-VC-ADV-P-ADV"
-                   junction="subordinate"
                    role="s">
                   <wg class="np" articular="true" rule="DetNP" role="s">
                      <w ref="TIT 1:7!3"
@@ -1949,8 +1946,7 @@
                            <wg class="cl"
                                clauseType="nominalized"
                                rule="ADV-P"
-                               cltype="Verbless"
-                               junction="subordinate">
+                               cltype="Verbless">
                               <w role="adv"
                                  ref="TIT 1:7!16"
                                  after=" "
@@ -2250,7 +2246,7 @@
                            ln="89.49 89.59"
                            morph="CONJ"
                            unicode="ἵνα">ἵνα</w>
-                        <wg class="cl" rule="VC-P" junction="subordinate">
+                        <wg class="cl" rule="VC-P">
                            <w role="vc"
                               ref="TIT 1:9!10"
                               after=" "
@@ -2297,7 +2293,7 @@
                                        gloss="both"
                                        morph="CONJ"
                                        unicode="καὶ">καὶ</w>
-                                    <wg class="cl" rule="V-ADV" junction="coordinate">
+                                    <wg class="cl" rule="V-ADV">
                                        <w role="v"
                                           ref="TIT 1:9!12"
                                           after=" "
@@ -2363,7 +2359,7 @@
                                                    morph="N-DSF"
                                                    unicode="διδασκαλίᾳ">διδασκαλίᾳ</w>
                                              </wg>
-                                             <wg junction="apposition" articular="true" rule="DetCL">
+                                             <wg articular="true" rule="DetCL" junction="apposition">
                                                 <w ref="TIT 1:9!16"
                                                    after=" "
                                                    class="det"
@@ -2418,7 +2414,7 @@
                                        gloss="and"
                                        morph="CONJ"
                                        unicode="καὶ">καὶ</w>
-                                    <wg class="cl" rule="O-V" junction="coordinate">
+                                    <wg class="cl" rule="O-V">
                                        <wg articular="true" rule="DetCL" role="o">
                                           <w ref="TIT 1:9!19"
                                              after=" "
@@ -2686,11 +2682,7 @@
                          clauseType="nominalized"
                          rule="S-V"
                          junction="apposition">
-                        <wg class="cl"
-                            clauseType="nominalized"
-                            rule="O-V"
-                            junction="subordinate"
-                            role="s">
+                        <wg class="cl" clauseType="nominalized" rule="O-V" role="s">
                            <w role="o"
                               ref="TIT 1:11!1"
                               after=" "
@@ -2821,7 +2813,7 @@
                         morph="V-PAI-3P"
                         unicode="ἀνατρέπουσιν"
                         frame="A0:n56001011004 A1:n56001011006">ἀνατρέπουσιν</w>
-                     <wg class="cl" rule="V-O-ADV" junction="subordinate" role="adv">
+                     <wg class="cl" rule="V-O-ADV" role="adv">
                         <w role="v"
                            ref="TIT 1:11!8"
                            after=" "
@@ -2843,11 +2835,7 @@
                            unicode="διδάσκοντες"
                            frame="A0:n56001010004 A1:n56001011011"
                            subjref="n56001010004">διδάσκοντες</w>
-                        <wg class="cl"
-                            clauseType="nominalized"
-                            rule="S-ADV-V"
-                            junction="subordinate"
-                            role="o">
+                        <wg class="cl" clauseType="nominalized" rule="S-ADV-V" role="o">
                            <w role="s"
                               ref="TIT 1:11!9"
                               after=" "
@@ -3020,7 +3008,7 @@
                         referent="n56001012008">αὐτῶν</w>
                   </wg>
                </wg>
-               <wg class="np" junction="apposition" rule="AdjpNp">
+               <wg class="np" rule="AdjpNp" junction="apposition">
                   <w ref="TIT 1:12!5"
                      after=" "
                      class="adj"
@@ -3400,7 +3388,7 @@
                   ln="89.59"
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
-               <wg class="cl" rule="V-ADV-ADV" junction="subordinate">
+               <wg class="cl" rule="V-ADV-ADV">
                   <w role="v"
                      ref="TIT 1:13!13"
                      after=" "
@@ -3468,7 +3456,7 @@
                            unicode="πίστει,">πίστει</w>
                      </wg>
                   </wg>
-                  <wg class="cl" rule="ADV-V-ADV" junction="subordinate" role="adv">
+                  <wg class="cl" rule="ADV-V-ADV" role="adv">
                      <w role="adv"
                         ref="TIT 1:14!1"
                         after=" "
@@ -3580,10 +3568,7 @@
                                     ln="9.1"
                                     morph="N-GPM"
                                     unicode="ἀνθρώπων">ἀνθρώπων</w>
-                                 <wg class="cl"
-                                     clauseType="nominalized"
-                                     rule="V-O"
-                                     junction="subordinate">
+                                 <wg class="cl" clauseType="nominalized" rule="V-O">
                                     <w role="v"
                                        ref="TIT 1:14!8"
                                        after=" "
@@ -3738,10 +3723,7 @@
                morph="CONJ"
                unicode="δὲ">δὲ</w>
             <wg rule="CLaCL">
-               <wg class="cl"
-                   rule="ADV-S-P"
-                   cltype="Verbless"
-                   junction="coordinate">
+               <wg class="cl" rule="ADV-S-P" cltype="Verbless">
                   <wg class="np" articular="true" rule="DetAdj" role="adv">
                      <w ref="TIT 1:15!5"
                         after=" "
@@ -3759,10 +3741,7 @@
                         morph="T-DPM"
                         unicode="τοῖς">τοῖς</w>
                      <wg rule="AdjpaAdjp">
-                        <wg class="cl"
-                            clauseType="nominalized"
-                            rule="V2CL"
-                            junction="subordinate">
+                        <wg class="cl" clauseType="nominalized" rule="V2CL">
                            <w role="v"
                               ref="TIT 1:15!7"
                               after=" "
@@ -3859,7 +3838,7 @@
                      ln="89.125"
                      morph="CONJ"
                      unicode="ἀλλὰ">ἀλλὰ</w>
-                  <wg class="cl" rule="V-S" junction="coordinate">
+                  <wg class="cl" rule="V-S">
                      <w role="v"
                         ref="TIT 1:15!13"
                         after=" "
@@ -4001,8 +3980,8 @@
          <milestone unit="verse" id="TIT 1:16">TIT 1:16</milestone> Θεὸν ὁμολογοῦσιν εἰδέναι, τοῖς δὲ ἔργοις ἀρνοῦνται, βδελυκτοὶ ὄντες καὶ ἀπειθεῖς καὶ πρὸς πᾶν ἔργον ἀγαθὸν ἀδόκιμοι.</p>
       <wg>
          <wg rule="CLaCL">
-            <wg class="cl" rule="O-V" junction="coordinate">
-               <wg class="cl" rule="O-V" junction="subordinate" role="o">
+            <wg class="cl" rule="O-V">
+               <wg class="cl" rule="O-V" role="o">
                   <w role="o"
                      ref="TIT 1:16!1"
                      after=" "
@@ -4073,7 +4052,7 @@
                   gloss="however"
                   morph="CONJ"
                   unicode="δὲ">δὲ</w>
-               <wg class="cl" rule="ADV-V-ADV" junction="coordinate">
+               <wg class="cl" rule="ADV-V-ADV">
                   <wg class="np" articular="true" rule="DetNP" role="adv">
                      <w ref="TIT 1:16!4"
                         after=" "
@@ -4127,7 +4106,7 @@
                      unicode="ἀρνοῦνται,"
                      frame="A0:n56001015007"
                      subjref="n56001015007">ἀρνοῦνται</w>
-                  <wg class="cl" rule="VC-P" junction="subordinate" role="adv">
+                  <wg class="cl" rule="VC-P" role="adv">
                      <w role="vc"
                         ref="TIT 1:16!9"
                         after=" "
@@ -4343,11 +4322,7 @@
                   morph="V-PAM-2S"
                   unicode="λάλει"
                   frame="A0:n56002001001 A1:n56002001005">λάλει</w>
-               <wg class="cl"
-                   clauseType="nominalized"
-                   rule="S-V-ADV"
-                   junction="subordinate"
-                   role="o">
+               <wg class="cl" clauseType="nominalized" rule="S-V-ADV" role="o">
                   <w role="s"
                      ref="TIT 2:1!4"
                      after=" "
@@ -4399,10 +4374,7 @@
                         morph="T-DSF"
                         unicode="τῇ">τῇ</w>
                      <wg class="np" rule="AdjpNp">
-                        <wg class="cl"
-                            clauseType="nominalized"
-                            rule="V2CL"
-                            junction="subordinate">
+                        <wg class="cl" clauseType="nominalized" rule="V2CL">
                            <w role="v"
                               ref="TIT 2:1!7"
                               after=" "
@@ -4531,10 +4503,7 @@
                   ln="88.94"
                   morph="A-APM"
                   unicode="σώφρονας,">σώφρονας</w>
-               <wg class="cl"
-                   clauseType="nominalized"
-                   rule="V-ADV"
-                   junction="subordinate">
+               <wg class="cl" clauseType="nominalized" rule="V-ADV">
                   <w role="v"
                      ref="TIT 2:2!6"
                      after=" "
@@ -4772,10 +4741,7 @@
                      morph="A-APF"
                      unicode="διαβόλους">διαβόλους</w>
                </wg>
-               <wg class="cl"
-                   clauseType="nominalized"
-                   rule="ADV-IO-V"
-                   junction="subordinate">
+               <wg class="cl" clauseType="nominalized" rule="ADV-IO-V">
                   <w role="adv"
                      ref="TIT 2:3!8"
                      after=" "
@@ -4869,7 +4835,7 @@
                   ln="89.59"
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
-               <wg class="cl" rule="V-O" junction="subordinate">
+               <wg class="cl" rule="V-O">
                   <w role="v"
                      ref="TIT 2:4!2"
                      after=" "
@@ -4890,7 +4856,7 @@
                      unicode="σωφρονίζωσιν"
                      frame="A0:n56002003001 A1:n56002004005;n56002004007;n56002005001;n56002005002;n56002005003;n56002005004;n56002005005"
                      subjref="n56002003001">σωφρονίζωσιν</w>
-                  <wg class="cl" rule="S-VC-P" junction="subordinate" role="o">
+                  <wg class="cl" rule="S-VC-P" role="o">
                      <wg class="np" articular="true" rule="DetAdj" role="s">
                         <w ref="TIT 2:4!3"
                            after=" "
@@ -5029,10 +4995,7 @@
                            ln="88.1"
                            morph="A-APF"
                            unicode="ἀγαθάς,">ἀγαθάς</w>
-                        <wg class="cl"
-                            clauseType="nominalized"
-                            rule="V-IO"
-                            junction="subordinate">
+                        <wg class="cl" clauseType="nominalized" rule="V-IO">
                            <w role="v"
                               ref="TIT 2:5!5"
                               after=" "
@@ -5123,7 +5086,7 @@
                   ln="89.59"
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
-               <wg class="cl" rule="ADV-S-V" junction="subordinate">
+               <wg class="cl" rule="ADV-S-V">
                   <w role="adv"
                      ref="TIT 2:5!10"
                      after=" "
@@ -5298,7 +5261,7 @@
                unicode="παρακάλει"
                frame="A0:n56001004001 A2:n56002006002 A1:n56002006005"
                subjref="n56001004001">παρακάλει</w>
-            <wg class="cl" rule="V2CL" junction="subordinate" role="o2">
+            <wg class="cl" rule="V2CL" role="o2">
                <w role="v"
                   ref="TIT 2:6!5"
                   after=" "
@@ -5594,7 +5557,7 @@
                   ln="89.59"
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
-               <wg class="cl" rule="S-V-ADV" junction="subordinate">
+               <wg class="cl" rule="S-V-ADV">
                   <wg class="np" rule="NpPp" role="s">
                      <w ref="TIT 2:8!5"
                         after=" "
@@ -5660,7 +5623,7 @@
                      morph="V-2APS-3S"
                      unicode="ἐντραπῇ"
                      frame="A0:n56002008005">ἐντραπῇ</w>
-                  <wg class="cl" rule="V-O" junction="subordinate" role="adv">
+                  <wg class="cl" rule="V-O" role="adv">
                      <w role="v"
                         ref="TIT 2:8!10"
                         after=" "
@@ -5680,7 +5643,7 @@
                         unicode="ἔχων"
                         frame="A0:n56002008005 A1:n56002008011"
                         subjref="n56002008005">ἔχων</w>
-                     <wg class="cl" rule="V-ADV-O" junction="subordinate" role="o">
+                     <wg class="cl" rule="V-ADV-O" role="o">
                         <w role="v"
                            ref="TIT 2:8!11"
                            after=" "
@@ -5906,7 +5869,7 @@
                   morph="V-PAN"
                   unicode="εἶναι,"
                   subjref="n56002009001">εἶναι</w>
-               <wg rule="CLaCL" junction="subordinate" role="adv">
+               <wg rule="CLaCL" role="adv">
                   <wg Rule="ClCl" class="cl" nodeId="560020090090040">
                      <w role="adv"
                         ref="TIT 2:9!9"
@@ -5988,7 +5951,7 @@
                         ln="89.125"
                         morph="CONJ"
                         unicode="ἀλλὰ">ἀλλὰ</w>
-                     <wg class="cl" rule="O-V" junction="coordinate">
+                     <wg class="cl" rule="O-V">
                         <wg class="np" rule="All-NP" role="o">
                            <w ref="TIT 2:10!4"
                               after=" "
@@ -6078,7 +6041,7 @@
                   ln="89.59"
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
-               <wg class="cl" rule="O-V-ADV" junction="subordinate">
+               <wg class="cl" rule="O-V-ADV">
                   <wg type="apposition"
                       class="np"
                       articular="true"
@@ -6117,7 +6080,7 @@
                            morph="N-ASF"
                            unicode="διδασκαλίαν">διδασκαλίαν</w>
                      </wg>
-                     <wg class="np" junction="apposition" rule="NPofNP">
+                     <wg class="np" rule="NPofNP" junction="apposition">
                         <w ref="TIT 2:10!11"
                            after=" "
                            class="det"
@@ -6199,7 +6162,8 @@
                                  domain="012001"
                                  ln="12.1"
                                  morph="N-GSM"
-                                 unicode="Θεοῦ">Θεοῦ</w>
+                                 unicode="Θεοῦ"
+                                 junction="apposition">Θεοῦ</w>
                            </wg>
                         </wg>
                      </wg>
@@ -6470,7 +6434,7 @@
                         morph="CONJ"
                         unicode="ἵνα">ἵνα</w>
                      <wg class="cl" rule="ADV-ADV-V-ADV-ADV">
-                        <wg class="cl" rule="V-O" junction="subordinate" role="adv">
+                        <wg class="cl" rule="V-O" role="adv">
                            <w role="v"
                               ref="TIT 2:12!4"
                               after=" "
@@ -6733,7 +6697,7 @@
                               </wg>
                            </wg>
                         </wg>
-                        <wg class="cl" rule="V-O" junction="subordinate" role="adv">
+                        <wg class="cl" rule="V-O" role="adv">
                            <w role="v"
                               ref="TIT 2:13!1"
                               after=" "
@@ -6965,13 +6929,14 @@
                                                             ln="92.4"
                                                             morph="P-1GP"
                                                             unicode="ἡμῶν"
-                                                            referent="n56001001001 n56001004001 n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">ἡμῶν</w>
+                                                            referent="n56001001001 n56001004001 n56002002001 n56002003001 n56002004004 n56002006002 n56002009001"
+                                                            junction="apposition">ἡμῶν</w>
                                                       </wg>
                                                    </wg>
                                                    <wg type="apposition"
                                                        class="np"
-                                                       junction="apposition"
-                                                       rule="Np-Appos">
+                                                       rule="Np-Appos"
+                                                       junction="apposition">
                                                       <w ref="TIT 2:13!15"
                                                          after=" "
                                                          class="noun"
@@ -7003,7 +6968,8 @@
                                                          domain="093001"
                                                          ln="93.169a"
                                                          morph="N-GSM"
-                                                         unicode="Ἰησοῦ,">Ἰησοῦ</w>
+                                                         unicode="Ἰησοῦ,"
+                                                         junction="apposition">Ἰησοῦ</w>
                                                    </wg>
                                                 </wg>
                                                 <wg Rule="ClCl2"
@@ -7106,8 +7072,8 @@
                                                          ln="89.59"
                                                          morph="CONJ"
                                                          unicode="ἵνα">ἵνα</w>
-                                                      <wg rule="CLaCL" junction="subordinate">
-                                                         <wg class="cl" rule="V-O-ADV" junction="coordinate">
+                                                      <wg rule="CLaCL">
+                                                         <wg class="cl" rule="V-O-ADV">
                                                             <w role="v"
                                                                ref="TIT 2:14!7"
                                                                after=" "
@@ -7204,7 +7170,7 @@
                                                                gloss="and"
                                                                morph="CONJ"
                                                                unicode="καὶ">καὶ</w>
-                                                            <wg class="cl" rule="V-IO-O" junction="coordinate">
+                                                            <wg class="cl" rule="V-IO-O">
                                                                <w role="v"
                                                                   ref="TIT 2:14!13"
                                                                   after=" "
@@ -7277,7 +7243,7 @@
                                                                         morph="A-ASM"
                                                                         unicode="περιούσιον,">περιούσιον</w>
                                                                   </wg>
-                                                                  <wg class="np" junction="apposition" rule="NPofNP">
+                                                                  <wg class="np" rule="NPofNP" junction="apposition">
                                                                      <w ref="TIT 2:14!17"
                                                                         after=" "
                                                                         class="noun"
@@ -7354,7 +7320,7 @@
          <milestone unit="verse" id="TIT 2:15">TIT 2:15</milestone> Ταῦτα λάλει καὶ παρακάλει καὶ ἔλεγχε μετὰ πάσης ἐπιταγῆς·</p>
       <wg>
          <wg rule="CLaCL">
-            <wg class="cl" rule="O-V" junction="coordinate">
+            <wg class="cl" rule="O-V">
                <w role="o"
                   ref="TIT 2:15!1"
                   after=" "
@@ -7402,7 +7368,7 @@
                   gloss="and"
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
-               <wg class="cl" rule="V-ADV" junction="coordinate">
+               <wg class="cl" rule="V-ADV">
                   <wg rule="Conj2VP" role="v">
                      <w ref="TIT 2:15!4"
                         after=" "
@@ -7609,11 +7575,8 @@
                morph="P-APM"
                unicode="αὐτοὺς"
                referent="n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">αὐτοὺς</w>
-            <wg type="group"
-                rule="ClClClClClCl"
-                junction="subordinate"
-                role="o2">
-               <wg class="cl" rule="IO-V" junction="coordinate">
+            <wg type="group" rule="ClClClClClCl" role="o2">
+               <wg class="cl" rule="IO-V">
                   <wg type="group" rule="2Np" role="io">
                      <w ref="TIT 3:1!3"
                         after=" "
@@ -7667,7 +7630,7 @@
                      frame="A1:n56002002001;n56002003001;n56002004004;n56002006002;n56002009001 A2:n56003001003;n56003001004"
                      subjref="n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">ὑποτάσσεσθαι</w>
                </wg>
-               <wg class="cl" rule="V2CL" junction="coordinate">
+               <wg class="cl" rule="V2CL">
                   <w role="v"
                      ref="TIT 3:1!6"
                      after=","
@@ -7687,7 +7650,7 @@
                      frame="A0:n56002002001;n56002003001;n56002004004;n56002006002;n56002009001"
                      subjref="n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">πειθαρχεῖν</w>
                </wg>
-               <wg class="cl" rule="ADV-P-VC" junction="coordinate">
+               <wg class="cl" rule="ADV-P-VC">
                   <wg class="pp" rule="PrepNp" role="adv">
                      <w ref="TIT 3:1!7"
                         after=" "
@@ -7784,7 +7747,7 @@
                      unicode="εἶναι,"
                      subjref="n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">εἶναι</w>
                </wg>
-               <wg class="cl" rule="O-V" junction="coordinate">
+               <wg class="cl" rule="O-V">
                   <w role="o"
                      ref="TIT 3:2!1"
                      after=" "
@@ -7820,7 +7783,7 @@
                      frame="A0:n56002002001;n56002003001;n56002004004;n56002006002;n56002009001 A1:n56003002001"
                      subjref="n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">βλασφημεῖν</w>
                </wg>
-               <wg class="cl" rule="P-VC" junction="coordinate">
+               <wg class="cl" rule="P-VC">
                   <w role="p"
                      ref="TIT 3:2!3"
                      after=" "
@@ -7853,7 +7816,7 @@
                      unicode="εἶναι,"
                      subjref="n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">εἶναι</w>
                </wg>
-               <wg class="cl" rule="P2CL" cltype="Verbless" junction="coordinate">
+               <wg class="cl" rule="P2CL" cltype="Verbless">
                   <w role="p"
                      ref="TIT 3:2!5"
                      after=","
@@ -7872,7 +7835,7 @@
                      unicode="ἐπιεικεῖς,">ἐπιεικεῖς</w>
                </wg>
             </wg>
-            <wg class="cl" rule="O-V-ADV" junction="subordinate" role="adv">
+            <wg class="cl" rule="O-V-ADV" role="adv">
                <wg class="np" rule="All-NP" role="o">
                   <w ref="TIT 3:2!6"
                      after=" "
@@ -8087,10 +8050,7 @@
                      ln="36.24"
                      morph="A-NPM"
                      unicode="ἀπειθεῖς,">ἀπειθεῖς</w>
-                  <wg class="cl"
-                      clauseType="nominalized"
-                      rule="V2CL"
-                      junction="subordinate">
+                  <wg class="cl" clauseType="nominalized" rule="V2CL">
                      <w role="v"
                         ref="TIT 3:3!8"
                         after=","
@@ -8113,10 +8073,7 @@
                         frame="A1:n56001001001;n56001004001;n56002002001;n56002003001;n56002004004;n56002006002;n56002009001"
                         subjref="n56001001001 n56001004001 n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">πλανώμενοι</w>
                   </wg>
-                  <wg class="cl"
-                      clauseType="nominalized"
-                      rule="V-O"
-                      junction="subordinate">
+                  <wg class="cl" clauseType="nominalized" rule="V-O">
                      <w role="v"
                         ref="TIT 3:3!9"
                         after=" "
@@ -8202,10 +8159,7 @@
                            unicode="ποικίλαις,">ποικίλαις</w>
                      </wg>
                   </wg>
-                  <wg class="cl"
-                      clauseType="nominalized"
-                      rule="ADV-V"
-                      junction="subordinate">
+                  <wg class="cl" clauseType="nominalized" rule="ADV-V">
                      <wg class="pp" rule="PrepNp" role="adv">
                         <w ref="TIT 3:3!14"
                            after=" "
@@ -8303,10 +8257,7 @@
                      ln="88.204"
                      morph="A-NPM"
                      unicode="στυγητοί,">στυγητοί</w>
-                  <wg class="cl"
-                      clauseType="nominalized"
-                      rule="V-O"
-                      junction="subordinate">
+                  <wg class="cl" clauseType="nominalized" rule="V-O">
                      <w role="v"
                         ref="TIT 3:3!20"
                         after=" "
@@ -8385,7 +8336,7 @@
                      gloss="When"
                      morph="ADV"
                      unicode="ὅτε">ὅτε</w>
-                  <wg class="cl" rule="S-V" junction="subordinate">
+                  <wg class="cl" rule="S-V">
                      <wg class="np" articular="true" rule="NPofNP" role="s">
                         <wg articular="true" rule="NpaNp">
                            <wg class="np" articular="true" rule="DetNP">
@@ -8534,7 +8485,8 @@
                                  domain="012001"
                                  ln="12.1"
                                  morph="N-GSM"
-                                 unicode="Θεοῦ,">Θεοῦ</w>
+                                 unicode="Θεοῦ,"
+                                 junction="apposition">Θεοῦ</w>
                            </wg>
                         </wg>
                      </wg>
@@ -8601,7 +8553,7 @@
                               ln="42.11"
                               morph="N-GPN"
                               unicode="ἔργων">ἔργων</w>
-                           <wg class="np" junction="apposition" rule="NpPp">
+                           <wg class="np" rule="NpPp" junction="apposition">
                               <w ref="TIT 3:5!4"
                                  after=" "
                                  class="det"
@@ -9063,9 +9015,10 @@
                                              domain="093001"
                                              ln="93.387"
                                              morph="N-GSM"
-                                             unicode="Χριστοῦ">Χριστοῦ</w>
+                                             unicode="Χριστοῦ"
+                                             junction="apposition">Χριστοῦ</w>
                                        </wg>
-                                       <wg class="np" junction="apposition" articular="true" rule="DetNP">
+                                       <wg class="np" articular="true" rule="DetNP" junction="apposition">
                                           <w ref="TIT 3:6!9"
                                              after=" "
                                              class="det"
@@ -9137,8 +9090,8 @@
                      ln="89.59"
                      morph="CONJ"
                      unicode="ἵνα">ἵνα</w>
-                  <wg class="cl" rule="ADV-P-VC-ADV" junction="subordinate">
-                     <wg class="cl" rule="V-ADV" junction="subordinate" role="adv">
+                  <wg class="cl" rule="ADV-P-VC-ADV">
+                     <wg class="cl" rule="V-ADV" role="adv">
                         <w role="v"
                            ref="TIT 3:7!2"
                            after=" "
@@ -9509,7 +9462,7 @@
                            morph="V-PAS-3P"
                            unicode="φροντίζωσιν"
                            frame="A1:n56003008014 A0:n56003008016">φροντίζωσιν</w>
-                        <wg class="cl" rule="O-V" junction="subordinate" role="o">
+                        <wg class="cl" rule="O-V" role="o">
                            <wg class="np" rule="AdjpNp" role="o">
                               <w ref="TIT 3:8!12"
                                  after=" "
@@ -9928,7 +9881,7 @@
                      ln="89.23"
                      morph="CONJ"
                      unicode="γὰρ">γὰρ</w>
-                  <wg class="cl" rule="VC-P" junction="subordinate">
+                  <wg class="cl" rule="VC-P">
                      <w role="vc"
                         ref="TIT 3:9!12"
                         after=" "
@@ -10248,7 +10201,7 @@
                               frame="A0:n56003011005">ἁμαρτάνει</w>
                         </wg>
                      </wg>
-                     <wg class="cl" rule="VC-P" junction="subordinate" role="adv">
+                     <wg class="cl" rule="VC-P" role="adv">
                         <w role="vc"
                            ref="TIT 3:11!8"
                            after=" "
@@ -10306,7 +10259,7 @@
                   gloss="When"
                   morph="CONJ"
                   unicode="Ὅταν">Ὅταν</w>
-               <wg class="cl" rule="V-ADV-O" junction="subordinate">
+               <wg class="cl" rule="V-ADV-O">
                   <w role="v"
                      ref="TIT 3:12!2"
                      after=" "
@@ -10424,7 +10377,7 @@
                unicode="σπούδασον"
                frame="A0:n56001004001 A1:n56003012009"
                subjref="n56001004001">σπούδασον</w>
-            <wg class="cl" rule="V-ADV-ADV" junction="subordinate" role="o">
+            <wg class="cl" rule="V-ADV-ADV" role="o">
                <w role="v"
                   ref="TIT 3:12!9"
                   after=" "
@@ -10518,8 +10471,8 @@
                   ln="89.23"
                   morph="CONJ"
                   unicode="γὰρ">γὰρ</w>
-               <wg class="cl" rule="O-V" junction="subordinate">
-                  <wg class="cl" rule="ADV-V" junction="subordinate" role="o">
+               <wg class="cl" rule="O-V">
+                  <wg class="cl" rule="ADV-V" role="o">
                      <w role="adv"
                         ref="TIT 3:12!14"
                         after=" "
@@ -10602,7 +10555,7 @@
                      ln="93.139"
                      morph="N-ASM"
                      unicode="Ζηνᾶν">Ζηνᾶν</w>
-                  <wg class="np" junction="apposition" articular="true" rule="DetAdj">
+                  <wg class="np" articular="true" rule="DetAdj" junction="apposition">
                      <w ref="TIT 3:13!2"
                         after=" "
                         class="det"
@@ -10710,7 +10663,7 @@
                   ln="89.59 90.22"
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
-               <wg class="cl" rule="S-ADV-V" junction="subordinate">
+               <wg class="cl" rule="S-ADV-V">
                   <w role="s"
                      ref="TIT 3:13!9"
                      after=" "
@@ -10854,7 +10807,7 @@
                         referent="n56001001001 n56001004001">ἡμέτεροι</w>
                   </wg>
                </wg>
-               <wg class="cl" rule="O-V-ADV" junction="subordinate" role="o">
+               <wg class="cl" rule="O-V-ADV" role="o">
                   <wg class="np" rule="AdjpNp" role="o">
                      <w ref="TIT 3:14!6"
                         after=" "
@@ -10984,7 +10937,7 @@
                      ln="89.59"
                      morph="CONJ"
                      unicode="ἵνα">ἵνα</w>
-                  <wg class="cl" rule="ADV-VC-P" junction="subordinate">
+                  <wg class="cl" rule="ADV-VC-P">
                      <w role="adv"
                         ref="TIT 3:14!14"
                         after=" "
