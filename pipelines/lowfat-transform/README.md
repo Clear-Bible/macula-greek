@@ -10,5 +10,6 @@ This pipeline will use Saxon to transform the nodes trees into lowfat, and then 
 cd pipelines/lowfat-transform
 poetry install
 poetry shell
-python main.py
+python main.py Nestle1904
+python main.py SBLGNT
 ```

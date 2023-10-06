@@ -2,6 +2,7 @@ import concurrent.futures
 import multiprocessing
 import os
 from pathlib import Path
+import sys
 
 from saxonche import PySaxonProcessor
 
@@ -11,14 +12,11 @@ try:
 except NameError:
     REPO_ROOT = Path(os.getcwd()).parent.parent
 
-# TODO: remove hard-coding to Nestle1904
-NODES_PATH = REPO_ROOT / "Nestle1904/nodes"
-LOWFAT_PATH = REPO_ROOT / "Nestle1904/lowfat"
 MAX_WORKERS = int(os.environ.get("MAX_WORKERS", multiprocessing.cpu_count() - 1))
 
 
-def nodes_xml_paths():
-    return sorted(NODES_PATH.glob("*.xml"))
+def nodes_xml_paths(nodes_dir):
+    return sorted(nodes_dir.glob("*.xml"))
 
 
 def transform(source, dest):
@@ -56,10 +54,10 @@ def reformat(source):
     source.write_text(temp)
 
 
-def do_transform(source):
-    print(f"transforming {source.name}")
-    dest = LOWFAT_PATH / source.name
-    transform(source, dest)
+def do_transform(input_path, output_dir):
+    print(f"transforming {input_path.name}")
+    dest = output_dir / input_path.name
+    transform(input_path, dest)
     print(f"reformatting {dest.name}")
     reformat(dest)
 
@@ -69,12 +67,12 @@ def serial_transform():
         do_transform(node_path)
 
 
-def parallel_transform():
+def parallel_transform(nodes_dir, output_dir):
     exceptions = []
     with concurrent.futures.ProcessPoolExecutor(max_workers=MAX_WORKERS) as executor:
         deferred_tasks = {}
-        for node_path in nodes_xml_paths():
-            deferred = executor.submit(do_transform, node_path)
+        for node_path in nodes_xml_paths(nodes_dir):
+            deferred = executor.submit(do_transform, node_path, output_dir)
             deferred_tasks[deferred] = node_path
 
         for f in concurrent.futures.as_completed(deferred_tasks):
@@ -88,7 +86,12 @@ def parallel_transform():
 
 
 def main():
-    parallel_transform()
+    edition = sys.argv[1]
+    nodes_dir = REPO_ROOT / f"{edition}/nodes"
+    assert nodes_dir.exists()
+
+    lowfat_dir = REPO_ROOT / f"{edition}/lowfat"
+    parallel_transform(nodes_dir, lowfat_dir)
 
 
 if __name__ == "__main__":
