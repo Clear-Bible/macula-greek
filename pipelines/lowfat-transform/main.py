@@ -1,14 +1,11 @@
 import concurrent.futures
 import multiprocessing
 import os
-import shlex
-import subprocess
 from pathlib import Path
 
 from saxonche import PySaxonProcessor
 
-# NOTE: Override BaseX binary path
-BASEX_BINARY = os.environ.get("BASEX_BINARY", "basex")
+
 try:
     REPO_ROOT = Path(__file__).parent.parent.parent
 except NameError:
@@ -18,7 +15,6 @@ except NameError:
 NODES_PATH = REPO_ROOT / "Nestle1904/nodes"
 LOWFAT_PATH = REPO_ROOT / "Nestle1904/lowfat"
 MAX_WORKERS = int(os.environ.get("MAX_WORKERS", multiprocessing.cpu_count() - 1))
-USE_SAXON = bool(int(os.environ.get("USE_SAXON", "0")))
 
 
 def nodes_xml_paths():
@@ -26,28 +22,14 @@ def nodes_xml_paths():
 
 
 def transform(source, dest):
-    if USE_SAXON:
-        proc = PySaxonProcessor(license=False)
-        proc.new_xquery_processor()
-        xqueryp = proc.new_xquery_processor()
-        xqueryp.run_query_to_file(
-            input_file_name=str(source),
-            query_file=str(REPO_ROOT / "mappings/lowfat-macula-greek.xquery"),
-            output_file_name=str(dest),
-        )
-
-    else:
-        # TODO: Support BaseX within GitHub actions using Docker-in-Docker
-        parts = [
-            BASEX_BINARY,
-            "-W",
-            "-i",
-            source,
-            REPO_ROOT / "mappings/lowfat-macula-greek.xquery",
-        ]
-        cmd = shlex.split(" ".join([str(s) for s in parts]))
-        with dest.open("w") as f:
-            subprocess.run(cmd, stdout=f)
+    proc = PySaxonProcessor(license=False)
+    proc.new_xquery_processor()
+    xqueryp = proc.new_xquery_processor()
+    xqueryp.run_query_to_file(
+        input_file_name=str(source),
+        query_file=str(REPO_ROOT / "mappings/lowfat-macula-greek.xquery"),
+        output_file_name=str(dest),
+    )
 
 
 def reformat(source):

@@ -1,9 +1,8 @@
 # lowfat-transform pipeline
 
-This pipeline will use BaseX to transform the nodes trees into lowfat, and then apply formatting to the resulting files via Saxon.
+This pipeline will use Saxon to transform the nodes trees into lowfat, and then apply consistent indentation / formatting.
 
 ## Requirements
-- BaseX 10.x installation
 - Python 3.10 or later
 
 ## Usage:
@@ -13,10 +12,3 @@ poetry install
 poetry shell
 python main.py
 ```
-
-## Benchmarking
-
-| Processor | Elapsed (measured via time) |
-| --------- | --------------------------- |
-| BaseX     | 1:04.6                      |
-| Saxon     | 9.482                       |
