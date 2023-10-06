@@ -1,3 +1,5 @@
+declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization"; 
+
 (:~~~ manual parameters ~~~:)
 
 declare variable $debugging-mode := false();
@@ -5,7 +7,6 @@ declare variable $debugging-mode := false();
 (:~~~ serialization ~~~:)
 
 declare option output:indent 'yes';
-declare option output:indent-attributes 'yes';
 
 (:~~~ rule types ~~~:)
 
