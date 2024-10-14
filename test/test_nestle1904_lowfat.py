@@ -3,7 +3,7 @@ import os
 import codecs
 import re
 from lxml import etree
-from test import __lowfat_files__, run_xpath_for_file
+from test import ERROR_EXPRESSION, __lowfat_files__, run_xpath_for_file
 
 
 @pytest.mark.parametrize("lowfat_file", __lowfat_files__)
@@ -72,6 +72,16 @@ def test_number_of_words():
         count = run_xpath_for_file("//w", lowfat_file)
         total_count += len(count)
     assert total_count == 137779
+
+
+# Expected failure.
+# See: https://github.com/Clear-Bible/macula-greek/issues/92#issuecomment-2407973591
+@pytest.mark.xfail
+@pytest.mark.parametrize("lowfat_file", __lowfat_files__)
+def test_no_errors(lowfat_file):
+    count = len(run_xpath_for_file(ERROR_EXPRESSION, lowfat_file))
+    assert count == 0
+
 
 @pytest.mark.parametrize("lowfat_file", __lowfat_files__)
 def test_referent_id_validity(lowfat_file):
