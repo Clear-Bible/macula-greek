@@ -51,6 +51,8 @@ __macula_greek_tsv_rows__ = []
 tsv_path = "../Nestle1904/tsv/macula-greek-Nestle1904.tsv"
 __tsv_files__ = [tsv_path]
 
+ERROR_EXPRESSION = "//*[starts-with(local-name(), 'error') or starts-with(local-name(), 'error_')]"
+
 with open(tsv_path, encoding='utf-8') as file:
     reader = csv.DictReader(file, delimiter="\t")
     for row in reader:
