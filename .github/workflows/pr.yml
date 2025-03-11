@@ -45,7 +45,7 @@ jobs:
         # `-o pipefail` forces an early fail.
         run: set -o pipefail; poetry run pytest | tee output.log
       - name: Archive test run output
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-run-output
           path: ./test/output.log
