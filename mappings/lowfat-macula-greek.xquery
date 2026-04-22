@@ -421,7 +421,8 @@ declare function local:simple-clause($node, $passed-role, $ellipsis-already-proc
 		let $fallback-constituent-role := (if (contains($passed-role, 'ellipsis')) then 
 			(:$passed-role:) '' || (if ($debugging-mode) then 'ellipsis' else ()) (: Ryder: TODO I had 'ellipsis' or '...' here; handle ellipsis + role however the team decides to handle this :)
 			else '') || (if (contains($node/@Rule, '2CL')) then lower-case(substring-before($node/@Rule, '2CL')) else 'err_no_fallback_constituent_role?')
-		let $clause-roles := if (contains($node/@Rule, '-')) then tokenize(lower-case($node/@Rule), '-') else if ($fallback-constituent-role) then $fallback-constituent-role else 'err_no_constituent_role? passed-role: ' || $passed-role
+		let $clause-roles := (if (contains($node/@Rule, '-')) then tokenize(lower-case($node/@Rule), '-') else if ($fallback-constituent-role) then $fallback-constituent-role else 'err_no_constituent_role? passed-role: ' || $passed-role)
+			! (if (. = 'o2') then 'oc' else .)
 		return
 			<wg>{
 					local:attributes($node),
@@ -918,7 +919,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								if (
 									(: embedding clause already has object :)
 									local:previous-sibling-has-role($node, 'O')
-								) then local:keep-siblings-as-siblings($node, 'o2' || (if ($debugging-mode) then  '_1???' else ()))
+								) then local:keep-siblings-as-siblings($node, 'oc' || (if ($debugging-mode) then  '_1???' else ()))
 								
 								else if (local:is-nominalized-clause($second-constituent)) then
 									local:process-clause-complex-apposition($node, 'o' || (if ($debugging-mode) then '_appos-1' else ()))
@@ -1192,7 +1193,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									(: Ryder: check whether constituent of embedding clause already has 'o' role :)
 									local:previous-sibling-has-role($constituent-to-subordinate, 'O')
 								) then
-									'o2' || (if ($debugging-mode) then '_d' else ())
+									'oc' || (if ($debugging-mode) then '_d' else ())
 								else
 									'o' || (if ($debugging-mode) then '_d' || data($node/@nodeId)  else ())
 							
