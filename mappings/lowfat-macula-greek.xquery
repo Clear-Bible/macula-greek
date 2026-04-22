@@ -10,7 +10,7 @@ declare option output:indent 'yes';
 
 (:~~~ rule types ~~~:)
 
-declare variable $atomic-structure-rule := ('Adj2Adjp', 'Adj2Advp', 'Adj2NP', 'Adjp2O', 'Adjp2P', 'Adv2Adj', 'Adv2Advp', 'Adv2Conj', 'Adv2Prep', 'Adv2Ptcl', 'Advp2ADV', 'Advp2P', 'CL2ADV', 'CL2Adjp', 'CL2NP', 'CL2O2x', 'CL2Ox', 'CL2P', 'CL2S', 'CL2VP', 'Conj2Adv', 'Conj2Prep', 'Conj2Pron', 'Conj2Ptcl', 'Det2NP', 'N2NP', 'Np2ADV', 'Np2IO', 'Np2O', 'Np2O2', 'Np2P', 'Np2S', 'Np2pp', 'Num2Nump', 'Nump2NP', 'Pp2np', 'Prep2Adv', 'Pron2NP', 'Ptcl2Adv', 'Ptcl2Conj', 'Ptcl2Intj', 'Ptcl2Np', 'V2VP', 'Vp2Np', 'Vp2P', 'Vp2V', 'adjp2ADV', 'adjp2O2', 'adjp2S', 'adjp2advp', 'advp2np', 'advp2pp', 'intj2Np', 'np2advp', 'pp2ADV', 'pp2P', 'pron2adj', 'ptcl2P', 'ptcl2S', 'vp2VC', 'advp2V', 'PpQuan2Np');
+declare variable $atomic-structure-rule := ('Adj2Adjp', 'Adj2Advp', 'Adj2NP', 'Adjp2O', 'Adjp2P', 'Adv2Adj', 'Adv2Advp', 'Adv2Conj', 'Adv2Prep', 'Adv2Ptcl', 'Advp2ADV', 'Advp2P', 'CL2ADV', 'CL2Adjp', 'CL2NP', 'CL2O2x', 'CL2Ox', 'CL2P', 'CL2S', 'CL2VP', 'Conj2Adv', 'Conj2Prep', 'Conj2Pron', 'Conj2Ptcl', 'Det2NP', 'N2NP', 'Np2ADV', 'Np2IO', 'Np2O', 'Np2O2', 'Np2P', 'Np2S', 'Np2pp', 'Num2Nump', 'Nump2NP', 'Pp2np', 'Prep2Adv', 'Pron2NP', 'Ptcl2Adv', 'Ptcl2Conj', 'Ptcl2Intj', 'Ptcl2Np', 'V2VP', 'Vp2Np', 'Vp2P', 'Vp2V', 'adjp2ADV', 'adjp2O2', 'adjp2S', 'adjp2advp', 'advp2np', 'advp2pp', 'intj2Np', 'np2advp', 'pp2ADV', 'pp2P', 'pron2adj', 'ptcl2P', 'ptcl2S', 'vp2VC', 'advp2V', 'PpQuan2Np', 'Intj2VP');
 declare variable $modifier-structure-rule := ('NP-Demo', 'All-NP', 'NP-all', '2Advp_h1', '2Advp_h2', 'AdjpAdjp', 'AdjpAdjp2', 'AdjpAdvp', 'AdjpAdvp2Advp', 'AdjpDative', 'AdjpNp', 'AdjpPp', 'AdjpofNp', 'AdvAdv', 'AdvPp', 'AdvpAdjp', 'AdvpNp', 'AdvpNump', 'ConjConj', 'DativeAdjp', 'Demo-NP', 'DetAdj', 'DetAdv', 'DetNP', 'DetNump', 'NPDetAdj', 'NPofNP', 'NpAdjp', 'NpAdvp', 'NpNump', 'NpPp', 'NpPron', 'NumpAdjp', 'NumpNP', 'NumpNump', 'PP-Adjp', 'PpAdvp', 'PpNp2Np', 'PronNP', 'VpVp', 'ofNPNP', 'QuanPp', 'QuanNP');
 declare variable $wrapper-rule := ('BeVerb', 'PrepNp', 'VerbBe', 'ConjNp', 'NP-Prep');
 declare variable $wrapper-clause-rule := ('AdjpCL', 'AdvpCL', 'PtclCL', 'DetCL', 'sub-CL', 'that-VP', 'Conj-CL');
@@ -260,7 +260,7 @@ declare function local:attributes($node, $exclusions, $passed-role)
     $node/@Frame ! attribute frame {.},
     $node/@Ref ! attribute referent {.},
     $node/@SubjRef  ! attribute subjref {.},
-    $node/@ClType ! attribute cltype {.},  (:  ### Remove later - for debugging purposes #### :)
+
     if (($node/@xml:id, $node/@nodeId) = $discontinuous-discourse-nodes) then
 		attribute note {'discontinuous discourse'}
 	else
@@ -444,19 +444,31 @@ declare function local:contains-projecting-verb($node)
 	let $exceptions-to-exclude := ('430090240130012')
 	let $exceptions-to-include := ()
 	return
-		
+
 		$node[@nodeId = $exceptions-to-include]
 		or
 		(
-			$node/descendant::Node[@Cat ne 'CL']/descendant::*[
-				starts-with(@LN, '33') 
-				or starts-with(@LN, '31')
-				or starts-with(@LN, '32')
-				or starts-with(@LN, '28') 
-				or starts-with(@LN, '30')
-				or starts-with(@LN, '25')
-				or @UnicodeLemma = "λέγω"
-			]
+			(: Find words with projecting LN codes that are NOT inside any embedded CL sub-clause within $node.
+			   The predicate `ancestor::Node[@Cat='CL'] intersect $node/descendant::Node[@Cat='CL']` returns
+			   CL nodes that are both ancestors of the word AND descendants of $node (i.e. embedded sub-clauses).
+			   `not(...)` ensures we only find projecting verbs at the surface level of $node, not inside
+			   relative clauses or other embedded clauses. This fixes false positives from e.g. λεγομένην
+			   ("called/named") inside an NP, or projecting verbs inside relative clauses. :)
+			exists(
+				$node/descendant::Node[
+					@Cat = 'verb'
+					and (starts-with(@LN, '33')
+					or starts-with(@LN, '31')
+					or starts-with(@LN, '32')
+					or starts-with(@LN, '28')
+					or starts-with(@LN, '30')
+					or starts-with(@LN, '25')
+					or @UnicodeLemma = "λέγω")
+					and not(
+						ancestor::Node[@Cat='CL'] intersect $node/descendant::Node[@Cat='CL']
+					)
+				]
+			)
 			and not(
 				(: Ryder: Exceptions that would otherwise be false positives since they are structurally almost indistinguishable from projecting constructions :)
 				$node[@nodeId = $exceptions-to-exclude]
@@ -862,7 +874,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 					'400240150010190', (: Ryder: narrator interjection :)
 					'410150340100170', (: Ryder: apposition on direct discourse derived entity :)
 					'590050010010120', (: Ryder: prefacing speech act :)
-					'430140010060080' (: Ryder: indistinguishable from projection :)
+					'430140010060080', (: Ryder: indistinguishable from projection :)
+					'440260120010340' (: Acts 26:12 ClCl2 where second constituent is a Minor vocative clause; force coordination :)
 				)
 				
 				let $exceptions-to-force-projected-discourse := (
@@ -879,6 +892,7 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 						not($should-coordinate-constituents)
 						and not($should-subordinate-first)
 						and not($should-subordinate-second)
+						and not($node/@nodeId = $exceptions-to-force-coordination)
 					) then
 						<error role="{'err_clause-complex-met-no-conditions' || $node/@Rule}">{ $node/element() ! local:node(.) }</error>
 
@@ -1611,15 +1625,14 @@ declare function local:word($node, $passed-role)
 (: $role can contain a role attribute or a null sequence :)
 {
     let $wordContent := $node/text()
-    let $wordContentWithoutBrackets := replace($node/text(), '([\(\)\[\]])', '') 
-    let $normalizedFormWordLength := string-length($node/@NormalizedForm)
-    let $normalizedFormWithPunctuationLength := $normalizedFormWordLength + 1
+    let $wordContentWithoutBrackets := replace($node/text(), '([\(\)\[\]])', '')
+    let $lastChar := substring($wordContentWithoutBrackets, string-length($wordContentWithoutBrackets), 1)
     return
         if ($node/*)
         then
             (element error {$passed-role, $node})
         else
-            if (string-length($wordContentWithoutBrackets) = $normalizedFormWithPunctuationLength)
+            if (matches($lastChar, '[\p{P}\p{S}]'))
             then
                 (: place punctuation in an 'after' attribute :)
                 <w>
@@ -1631,7 +1644,7 @@ declare function local:word($node, $passed-role)
 						else
 							(),
                         attribute ref {local:USFMId($node/@nodeId)},
-                        attribute after {substring($wordContentWithoutBrackets, string-length($wordContentWithoutBrackets), 1)},
+                        attribute after {$lastChar},
                         local:attributes($node),
                         substring($wordContentWithoutBrackets, 1, string-length($wordContentWithoutBrackets) - 1)
                     }
@@ -1744,7 +1757,7 @@ declare function local:sentence($node)
                 {local:straight-text($node)}
             </p>,
             
-            if (count($node/Node) > 1 or not($node/Node/@node = 'CL'))
+            if (count($node/Node) > 1 or not($node/Node/@Cat = 'CL'))
             then
                 <wg>{$node/Node ! local:node(.)}</wg>
             else
