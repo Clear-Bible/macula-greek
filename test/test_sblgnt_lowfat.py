@@ -59,14 +59,45 @@ def test_required_attrs_exist_on_w_elements(lowfat_file):
             assert attr in node.attrib
 
 
-# Unable to determine required attrs for `wg` at this time.
-# @pytest.mark.parametrize("lowfat_file", __lowfat_files__)
-# def test_required_attrs_exist_on_wg_elements(lowfat_file):
-#     required_attrs = [ "class" ]
-#     nodes = run_xpath_for_file("//wg", lowfat_file)
-#     for node in nodes:
-#         for attr in required_attrs:
-#             assert attr in node.attrib
+# Wrapper-clause rules are exempt from the @class requirement pending semantic redesign (issue #104).
+# Conjuncted/group rules are exempt pending the broader @class fix (issue #103).
+# All other <wg> elements must have @class or @type.
+WRAPPER_CLAUSE_RULES = {
+    # issue #104 — semantics of wrapper rules not yet defined
+    "AdjpCL", "AdvpCL", "PtclCL", "DetCL", "sub-CL", "that-VP", "Conj-CL",
+    # issue #103 — conjuncted/group structures missing @class in XQuery else-branch
+    "2CLaCL", "2CLaCLaCL", "2NpaNpaNp", "2PpaPp",
+    "3NpaNp", "4NpaNp",
+    "ADVaADV", "AdjpaAdjp", "AdvpaAdvp", "aAdvpaAdvp",
+    "CLa2CL", "CLaCL", "CLandCL2", "CLandClClandClandClandCl",
+    "ClCl", "ClCl2",
+    "Conj12CL", "Conj12Np", "Conj13CL", "Conj14CL",
+    "Conj2Nump", "Conj2P", "Conj2Pp", "Conj2VP",
+    "Conj3ADV", "Conj3Adjp", "Conj3Advp", "Conj3CL", "Conj3Np", "Conj3Pp", "Conj3VP",
+    "Conj4CL", "Conj4Np", "Conj4Pp",
+    "Conj5AdjP", "Conj5CL", "Conj5Np", "Conj5Pp",
+    "Conj6CL", "Conj6Np", "Conj6P",
+    "Conj7CL", "Conj7Np", "Conj7Pp",
+    "Conj8Np", "Conj9Np", "ConjNp",
+    "EitherOr10Np", "EitherOr3Vp", "EitherOr4Advp", "EitherOr4CL", "EitherOr4Np",
+    "EitherOr4Pp", "EitherOr4Vp", "EitherOr5Vp", "EitherOr7CL", "EitherOr8Np",
+    "EitherOrAdjp", "EitherOrVp",
+    "Intj2CL", "Np2CL",
+    "NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp", "NpaNp",
+    "aCLaCL", "aCLaCLaCL", "aNpaNp", "aNpaNpaNp", "aPpaPp", "aPpaPpaPp",
+    "",  # <wg> with no rule at all
+}
+
+
+@pytest.mark.parametrize("lowfat_file", __sblgnt_lowfat_files__)
+def test_required_attrs_exist_on_wg_elements(lowfat_file):
+    nodes = run_xpath_for_file("//wg", lowfat_file)
+    for node in nodes:
+        rule = node.attrib.get("rule") or node.attrib.get("Rule", "")
+        if rule in WRAPPER_CLAUSE_RULES:
+            continue
+        assert "class" in node.attrib or "type" in node.attrib, \
+            f"<wg> missing @class/@type: rule={rule!r} nodeId={node.attrib.get('nodeId')!r}"
 
 
 def test_number_of_words():
