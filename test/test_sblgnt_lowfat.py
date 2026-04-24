@@ -77,13 +77,39 @@ def test_number_of_words():
     assert total_count == 137741
 
 
-# Expected failure.
-# See: https://github.com/Clear-Bible/macula-greek/issues/92#issuecomment-2407973591
-@pytest.mark.xfail
 @pytest.mark.parametrize("lowfat_file", __sblgnt_lowfat_files__)
 def test_no_errors(lowfat_file):
     count = len(run_xpath_for_file(ERROR_EXPRESSION, lowfat_file))
     assert count == 0
+
+
+# Regression: @cltype debug attribute was accidentally emitted (internal #7)
+@pytest.mark.parametrize("lowfat_file", __sblgnt_lowfat_files__)
+def test_no_cltype_attr(lowfat_file):
+    offenders = run_xpath_for_file("//*[@cltype]", lowfat_file)
+    assert not offenders
+
+
+# Regression: length heuristic was stripping final letters into @after (public #76)
+@pytest.mark.parametrize("lowfat_file", __sblgnt_lowfat_files__)
+def test_after_no_alphabetic(lowfat_file):
+    XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
+    for w in run_xpath_for_file("//w[@after]", lowfat_file):
+        after = w.attrib["after"]
+        alpha = [c for c in after if c.isalpha()]
+        assert not alpha, \
+            f"Alphabetic chars {alpha!r} in @after={after!r} at {w.attrib.get(XML_ID)}"
+
+
+# Regression: em-dash prefix words (e.g. —νυνί) were having their final letter stripped
+@pytest.mark.parametrize("lowfat_file", __sblgnt_lowfat_files__)
+def test_em_dash_words_not_truncated(lowfat_file):
+    XML_ID = "{http://www.w3.org/XML/1998/namespace}id"
+    for w in run_xpath_for_file("//w[starts-with(@unicode, '\u2014')]", lowfat_file):
+        after = w.attrib.get("after", "")
+        alpha = [c for c in after if c.isalpha()]
+        assert not alpha, \
+            f"Alphabetic chars stripped into @after for {w.attrib.get('unicode')!r}: after={after!r} at {w.attrib.get(XML_ID)}"
 
 
 # TODO: Discuss with team and restore this test
