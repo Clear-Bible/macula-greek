@@ -8,31 +8,185 @@ declare variable $debugging-mode := false();
 
 declare option output:indent 'yes';
 
-(:~~~ rule types ~~~:)
+(:~~~ Rule taxonomy ~~~
 
+  Input nodes carry a @Rule attribute that encodes the internal structure of
+  each phrase or clause. This transformation groups rules into named categories
+  so the processing functions below can dispatch by category rather than
+  enumerating every individual rule.
+
+  Rule name conventions in the input trees:
+    - "X2Y"   — a single constituent of type X filling role Y (e.g. N2NP, V2VP)
+    - "X-Y"   — X modifies or introduces Y (e.g. sub-CL, NP-Prep, Det-NP)
+    - "XaY"   — X and Y conjoined with "and"/καί (e.g. CLaCL, NpaNp)
+    - "ConjNX" — a conjunction followed by N constituents of type X
+    - "ClCl"  — two clauses in a complex; ClCl = first clause is head, ClCl2 = second is head
+:)
+
+(: Atomic rules: a single word or minimal phrase fills a syntactic slot.
+   The rule name encodes "constituent-type 2 slot", e.g. N2NP (noun filling
+   an NP slot), V2VP (verb filling a VP slot), Np2S (noun phrase as subject).
+   In the lowfat output, atomic nodes are transparent — their single child is
+   promoted and the wrapper node is dissolved. :)
 declare variable $atomic-structure-rule := ('Adj2Adjp', 'Adj2Advp', 'Adj2NP', 'Adjp2O', 'Adjp2P', 'Adv2Adj', 'Adv2Advp', 'Adv2Conj', 'Adv2Prep', 'Adv2Ptcl', 'Advp2ADV', 'Advp2P', 'CL2ADV', 'CL2Adjp', 'CL2NP', 'CL2O2x', 'CL2Ox', 'CL2P', 'CL2S', 'CL2VP', 'Conj2Adv', 'Conj2Prep', 'Conj2Pron', 'Conj2Ptcl', 'Det2NP', 'N2NP', 'Np2ADV', 'Np2IO', 'Np2O', 'Np2O2', 'Np2P', 'Np2S', 'Np2pp', 'Num2Nump', 'Nump2NP', 'Pp2np', 'Prep2Adv', 'Pron2NP', 'Ptcl2Adv', 'Ptcl2Conj', 'Ptcl2Intj', 'Ptcl2Np', 'V2VP', 'Vp2Np', 'Vp2P', 'Vp2V', 'adjp2ADV', 'adjp2O2', 'adjp2S', 'adjp2advp', 'advp2np', 'advp2pp', 'intj2Np', 'np2advp', 'pp2ADV', 'pp2P', 'pron2adj', 'ptcl2P', 'ptcl2S', 'vp2VC', 'advp2V', 'PpQuan2Np', 'Intj2VP');
-declare variable $modifier-structure-rule := ('NP-Demo', 'All-NP', 'NP-all', '2Advp_h1', '2Advp_h2', 'AdjpAdjp', 'AdjpAdjp2', 'AdjpAdvp', 'AdjpAdvp2Advp', 'AdjpDative', 'AdjpNp', 'AdjpPp', 'AdjpofNp', 'AdvAdv', 'AdvPp', 'AdvpAdjp', 'AdvpNp', 'AdvpNump', 'ConjConj', 'DativeAdjp', 'Demo-NP', 'DetAdj', 'DetAdv', 'DetNP', 'DetNump', 'NPDetAdj', 'NPofNP', 'NpAdjp', 'NpAdvp', 'NpNump', 'NpPp', 'NpPron', 'NumpAdjp', 'NumpNP', 'NumpNump', 'PP-Adjp', 'PpAdvp', 'PpNp2Np', 'PronNP', 'VpVp', 'ofNPNP', 'QuanPp', 'QuanNP');
-declare variable $wrapper-rule := ('BeVerb', 'PrepNp', 'VerbBe', 'ConjNp', 'NP-Prep');
-declare variable $wrapper-clause-rule := ('AdjpCL', 'AdvpCL', 'PtclCL', 'DetCL', 'sub-CL', 'that-VP', 'Conj-CL');
-declare variable $apposition-rule := ('Np-Appos'); (: 'NP-CL' and 'CL-NP' are apposition, but they are handled in the disambiguate-clause-complex function :) 
-declare variable $complex-clause-rule := ('ClCl', 'ClCl2', '2CLaCL', '2CLaCLaCL', 'CLa2CL', 'CLandCL2', 'Conj12CL', 'Conj13CL', 'Conj14CL', 'Conj3CL', 'Conj4CL', 'Conj5CL', 'Conj6CL', 'Conj7CL', 'aCLaCL', 'aCLaCLaCL', 'NP-CL', 'CL-NP');
-declare variable $group-rules := ('12Np', '2CLaCL', '2CLaCLaCL', '2Np', '2NpaNpaNp', '2Pp', '2PpaPp', '3Adjp', '3NpaNp', '4NpaNp', '7Np', 'aAdvpaAdvp',  'aCLaCLaCL', 'AdjpaAdjp', 'AdjpAdjpAdjpAdjp', 'AdjpAdjpAdjpAdjpAdjp', 'AdjpAdjpAdjpAdjpAdjpAdjp', 'AdjpAdjpAdjpAdjpAdjpAdjpAdjp', 'AdvpaAdvp', 'AdvpAdvpAdvp', 'aNpaNp', 'aNpaNpaNp', 'aPpaPp', 'aPpaPpaPp', 'CLa2CL', 'CLaCL', 'CLandCL2', 'CLandClClandClandClandCl', 'ClClCl', 'ClClClCl', 'ClClClClCl', 'ClClClClClCl', 'ClClClClClClCl', 'ClClClClClClClCl', 'ClClClClClClClClCl', 'ClClClClClClClClClCl', 'ClClClClClClClClClClClCl', 'Conj12CL', 'Conj12Np', 'Conj13CL', 'Conj14CL', 'Conj2Nump', 'Conj2Nump2', 'Conj2Nump3', 'Conj2P', 'Conj2Pp', 'Conj2VP', 'Conj3Adjp', 'Conj3Advp', 'Conj3CL', 'Conj3Np', 'Conj3P', 'Conj3Pp', 'Conj3VP', 'Conj4CL', 'Conj4Np', 'Conj4P', 'Conj4Pp', 'Conj5AdjP', 'Conj5CL', 'Conj5Np', 'Conj5P', 'Conj5Pp', 'Conj6CL', 'Conj6Np', 'Conj6P', 'Conj7CL', 'Conj7Np', 'Conj7Pp', 'Conj8Np', 'Conj9Np', 'ConjNp', 'EitherAdvpOrPp', 'EitherOr10Np', 'EitherOr3Vp', 'EitherOr4Advp', 'EitherOr4CL', 'EitherOr4Np', 'EitherOr4Vp', 'EitherOr5Vp', 'EitherOr7CL', 'EitherOr8Np', 'EitherOrAdjp', 'EitherOrVp', 'notCLbutCL', 'notCLbutCL2CL', 'notADVbutADV', 'notADVPbutADVP', 'notADJPbutADJP', 'notNPbutNP', 'notPPbutPP', 'notVPbutVP', 'NpaNp', 'NpNpNp', 'NpNpNpNp', 'NpNpNpNpNp', 'NpNpNpNpNpNp', 'NpNpNpNpNpNpNpNp', 'NpNpNpNpNpNpNpNpNp', 'NpNpNpNpNpNpNpNpNpNp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpNp', 'NumpNump', 'NumpNumpNump', 'NumpNumpNump2', 'NumpNumpNump3', 'PpPpPp', 'PpPpPpPp', 'PpPpPpPpPp', 'PpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPp', 'VpVp');
-declare variable $conjuncted-structure-rule := ('2CLaCL', '2CLaCLaCL', '2NpaNpaNp', '2PpaPp', '3NpaNp', '4NpaNp', 'ADVaADV', 'AdjpaAdjp', 'AdvpaAdvp', 'CLa2CL', 'CLaCL', 'CLandCL2', 'CLandClClandClandClandCl', 'Conj12CL', 'Conj12Np', 'Conj13CL', 'Conj14CL', 'Conj2Nump', 'Conj2P', 'Conj2Pp', 'Conj2VP', 'Conj3ADV', 'Conj3Adjp', 'Conj3Advp', 'Conj3CL', 'Conj3Np', 'Conj3Pp', 'Conj3VP', 'Conj4CL', 'Conj4Np', 'Conj4Pp', 'Conj5AdjP', 'Conj5CL', 'Conj5Np', 'Conj5Pp', 'Conj6CL', 'Conj6Np', 'Conj6P', 'Conj7CL', 'Conj7Np', 'Conj7Pp', 'Conj8Np', 'Conj9Np', 'ConjNp', 'EitherOr10Np', 'EitherOr3Vp', 'EitherOr4Advp', 'EitherOr4CL', 'EitherOr4Pp', 'EitherOr4Np', 'EitherOr4Vp', 'EitherOr5Vp', 'EitherOr7CL', 'EitherOr8Np', 'EitherOrAdjp', 'EitherOrVp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp', 'NpaNp', 'aAdvpaAdvp', 'aCLaCL', 'aCLaCLaCL', 'aNpaNp', 'aNpaNpaNp', 'aPpaPp', 'aPpaPpaPp');
-declare variable $auxiliary-rules := ('intjNP');
-declare variable $single-constituent-clause-rule := ('IO2CL', 'Intj2CL','Np2CL', 'ADV2CL', 'O2CL', 'P2CL', 'S2CL', 'V2CL', 'VC2CL'); 
 
-(: Credit for these particle classifications: Chris Land's prior work on OpenText 2.0 :)
+(: Modifier rules: a head phrase with one or more modifying elements attached.
+   The head retains the phrase type; the modifier is embedded within it.
+   Examples: NpAdjp (NP with adjectival modifier), NpPp (NP with PP modifier),
+   DetNP (NP with determiner), NPofNP (NP in genitive construction). :)
+declare variable $modifier-structure-rule := ('NP-Demo', 'All-NP', 'NP-all', '2Advp_h1', '2Advp_h2', 'AdjpAdjp', 'AdjpAdjp2', 'AdjpAdvp', 'AdjpAdvp2Advp', 'AdjpDative', 'AdjpNp', 'AdjpPp', 'AdjpofNp', 'AdvAdv', 'AdvPp', 'AdvpAdjp', 'AdvpNp', 'AdvpNump', 'ConjConj', 'DativeAdjp', 'Demo-NP', 'DetAdj', 'DetAdv', 'DetNP', 'DetNump', 'NPDetAdj', 'NPofNP', 'NpAdjp', 'NpAdvp', 'NpNump', 'NpPp', 'NpPron', 'NumpAdjp', 'NumpNP', 'NumpNump', 'PP-Adjp', 'PpAdvp', 'PpNp2Np', 'PronNP', 'VpVp', 'ofNPNP', 'QuanPp', 'QuanNP');
+
+(: Wrapper rules (phrase-level): a function word prefixes a phrase without
+   changing its core syntactic category. Examples: PrepNp (preposition + NP
+   forming a PP), BeVerb/VerbBe (copula + complement), ConjNp (conjunction
+   attaching to an NP). The function word is embedded as a child; the resulting
+   phrase takes its type from the non-function constituent. :)
+declare variable $wrapper-rule := ('BeVerb', 'PrepNp', 'VerbBe', 'ConjNp', 'NP-Prep');
+
+(: Wrapper rules (clause-level): a function word scopes over or introduces an
+   entire clause. Examples: sub-CL (subordinating conjunction + clause),
+   that-VP (complementizer ὅτι/ἵνα + clause), Conj-CL (coordinating
+   conjunction + clause), DetCL (determiner nominalizing a clause), PtclCL
+   (particle scoping a clause), AdvpCL / AdjpCL (adverb/adjective phrase + CL).
+   The semantics of each subtype differ significantly — see issue #104 for
+   a proposed redesign that gives each a precise class and role. :)
+declare variable $wrapper-clause-rule := ('AdjpCL', 'AdvpCL', 'PtclCL', 'DetCL', 'sub-CL', 'that-VP', 'Conj-CL');
+
+(: Apposition rules: two constituents referring to the same entity, where
+   the second specifies or restates the first (e.g. "Paul, an apostle").
+   NP-CL and CL-NP are also apposition structures but are handled inside
+   local:disambiguate-clause-complex-structure because they require the same
+   subordination/coordination disambiguation as other clause complexes. :)
+declare variable $apposition-rule := ('Np-Appos');
+
+(: Complex clause rules: two clauses joined at the same level, where the
+   relationship between them (subordination vs. coordination, and which is
+   the head) must be determined from context. ClCl = first clause heads the
+   second; ClCl2 = second clause heads the first. CLaCL, aCLaCL etc. are
+   "clause and clause" conjunctions. NP-CL and CL-NP are appositional (an
+   NP and a clause referring to the same thing). All are processed by
+   local:disambiguate-clause-complex-structure. :)
+declare variable $complex-clause-rule := ('ClCl', 'ClCl2', '2CLaCL', '2CLaCLaCL', 'CLa2CL', 'CLandCL2', 'Conj12CL', 'Conj13CL', 'Conj14CL', 'Conj3CL', 'Conj4CL', 'Conj5CL', 'Conj6CL', 'Conj7CL', 'aCLaCL', 'aCLaCLaCL', 'NP-CL', 'CL-NP');
+
+(: Group rules: two or more like-typed constituents coordinated without a
+   single syntactic head — they form a flat group. Rule names encode the
+   constituent type and arity: NpaNp = two NPs joined by "and" (α = καί),
+   CLaCL = two clauses joined by "and", Conj3CL = conjunction + 3 clauses,
+   notCLbutCL = negative polarity coordination. The list grows with arity
+   because Greek coordination can stack arbitrarily (hence ClClClCl…ClCl).
+   These produce type="group" or class from the constituent type in the output.
+   See issue #103 for the open @class gap in this category. :)
+declare variable $group-rules := ('12Np', '2CLaCL', '2CLaCLaCL', '2Np', '2NpaNpaNp', '2Pp', '2PpaPp', '3Adjp', '3NpaNp', '4NpaNp', '7Np', 'aAdvpaAdvp',  'aCLaCLaCL', 'AdjpaAdjp', 'AdjpAdjpAdjpAdjp', 'AdjpAdjpAdjpAdjpAdjp', 'AdjpAdjpAdjpAdjpAdjpAdjp', 'AdjpAdjpAdjpAdjpAdjpAdjpAdjp', 'AdvpaAdvp', 'AdvpAdvpAdvp', 'aNpaNp', 'aNpaNpaNp', 'aPpaPp', 'aPpaPpaPp', 'CLa2CL', 'CLaCL', 'CLandCL2', 'CLandClClandClandClandCl', 'ClClCl', 'ClClClCl', 'ClClClClCl', 'ClClClClClCl', 'ClClClClClClCl', 'ClClClClClClClCl', 'ClClClClClClClClCl', 'ClClClClClClClClClCl', 'ClClClClClClClClClClClCl', 'Conj12CL', 'Conj12Np', 'Conj13CL', 'Conj14CL', 'Conj2Nump', 'Conj2Nump2', 'Conj2Nump3', 'Conj2P', 'Conj2Pp', 'Conj2VP', 'Conj3Adjp', 'Conj3Advp', 'Conj3CL', 'Conj3Np', 'Conj3P', 'Conj3Pp', 'Conj3VP', 'Conj4CL', 'Conj4Np', 'Conj4P', 'Conj4Pp', 'Conj5AdjP', 'Conj5CL', 'Conj5Np', 'Conj5P', 'Conj5Pp', 'Conj6CL', 'Conj6Np', 'Conj6P', 'Conj7CL', 'Conj7Np', 'Conj7Pp', 'Conj8Np', 'Conj9Np', 'ConjNp', 'EitherAdvpOrPp', 'EitherOr10Np', 'EitherOr3Vp', 'EitherOr4Advp', 'EitherOr4CL', 'EitherOr4Np', 'EitherOr4Vp', 'EitherOr5Vp', 'EitherOr7CL', 'EitherOr8Np', 'EitherOrAdjp', 'EitherOrVp', 'notCLbutCL', 'notCLbutCL2CL', 'notADVbutADV', 'notADVPbutADVP', 'notADJPbutADJP', 'notNPbutNP', 'notPPbutPP', 'notVPbutVP', 'NpaNp', 'NpNpNp', 'NpNpNpNp', 'NpNpNpNpNp', 'NpNpNpNpNpNp', 'NpNpNpNpNpNpNpNp', 'NpNpNpNpNpNpNpNpNp', 'NpNpNpNpNpNpNpNpNpNp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpNp', 'NumpNump', 'NumpNumpNump', 'NumpNumpNump2', 'NumpNumpNump3', 'PpPpPp', 'PpPpPpPp', 'PpPpPpPpPp', 'PpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPpPp', 'VpVp');
+
+(: Conjuncted structure rules: the subset of group rules where an explicit
+   conjunction (καί, δέ, ἀλλά, etc.) is present in the tree and needs to be
+   attached to the following sibling by local:process-conjunctions. Overlaps
+   with $group-rules but excludes bare juxtaposition patterns (NpNpNp…) and
+   the ClClCl… stacks that arise from recursive clause complex flattening. :)
+declare variable $conjuncted-structure-rule := ('2CLaCL', '2CLaCLaCL', '2NpaNpaNp', '2PpaPp', '3NpaNp', '4NpaNp', 'ADVaADV', 'AdjpaAdjp', 'AdvpaAdvp', 'CLa2CL', 'CLaCL', 'CLandCL2', 'CLandClClandClandClandCl', 'Conj12CL', 'Conj12Np', 'Conj13CL', 'Conj14CL', 'Conj2Nump', 'Conj2P', 'Conj2Pp', 'Conj2VP', 'Conj3ADV', 'Conj3Adjp', 'Conj3Advp', 'Conj3CL', 'Conj3Np', 'Conj3Pp', 'Conj3VP', 'Conj4CL', 'Conj4Np', 'Conj4Pp', 'Conj5AdjP', 'Conj5CL', 'Conj5Np', 'Conj5Pp', 'Conj6CL', 'Conj6Np', 'Conj6P', 'Conj7CL', 'Conj7Np', 'Conj7Pp', 'Conj8Np', 'Conj9Np', 'ConjNp', 'EitherOr10Np', 'EitherOr3Vp', 'EitherOr4Advp', 'EitherOr4CL', 'EitherOr4Pp', 'EitherOr4Np', 'EitherOr4Vp', 'EitherOr5Vp', 'EitherOr7CL', 'EitherOr8Np', 'EitherOrAdjp', 'EitherOrVp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp', 'NpaNp', 'aAdvpaAdvp', 'aCLaCL', 'aCLaCLaCL', 'aNpaNp', 'aNpaNpaNp', 'aPpaPp', 'aPpaPpaPp');
+
+(: Auxiliary rules: interjection-nominal combinations where an interjection
+   serves as an auxiliary or discourse-level modifier to a nominal phrase. :)
+declare variable $auxiliary-rules := ('intjNP');
+
+(: Single-constituent clause rules: a clause reduced to one functional slot.
+   The rule name encodes the slot: S2CL (subject only), V2CL (verb phrase
+   only), O2CL (object only), Np2CL (NP functioning as a whole clause),
+   Intj2CL (interjection as clause), IO2CL (indirect object as clause),
+   ADV2CL (adverbial as clause), P2CL (predicate as clause), VC2CL (verbal
+   complement as clause). These typically arise in elliptical constructions,
+   direct discourse fragments, or highly compressed Greek clauses. :)
+declare variable $single-constituent-clause-rule := ('IO2CL', 'Intj2CL','Np2CL', 'ADV2CL', 'O2CL', 'P2CL', 'S2CL', 'V2CL', 'VC2CL');
+
+(:~~~ Junction rules ~~~
+
+  Junction rules classify how two clauses relate when they appear at the
+  same level. This matters for assigning @junction attributes in the output
+  ("coordinate" vs "subordinate") and for deciding how to restructure the
+  tree in local:disambiguate-clause-complex-structure.
+:)
+
+(: Coordination rules: the two clauses are equal participants joined by
+   conjunction or contrast. Neither embeds the other syntactically. :)
+declare variable $coordinationRule := ("ClClClClClClClClClClClCl", "Conj13CL", "Conj14CL", "Conj12CL", "CLandClClandClandClandCl", "CLaCL", "notCLbutCL2CL", "ClClCl", "Conj3CL", "aCLaCL", "EitherOr7CL", "EitherOr4Pp", "Conj4CL", "ClClClClCl", "Conj5CL", "EitherOr4CL", "ClClClClClCl", "Conj6CL", "ClClClCl", "aCLaCLaCL", "ClClClClClClClCl", "notCLbutCL", "Conj7CL", "ClClClClClClCl", "ClClClClClClClClCl", "ClClClClClClClClClCl");
+
+(: Subordination rules: one clause is embedded inside the other as an
+   argument or adjunct. CL2S = clause as subject, CL2P = predicate,
+   CL2VP = verbal complement, CL2Ox/CL2O2x = object, CL2NP = nominalized,
+   CL2Adjp = adjectival, CL2ADV = adverbial. :)
+declare variable $subordinationRule := ("sub-CL", "CL2P", "CL2S", "CL2VP", "CL2Ox", "CL2NP", "CL2Adjp", "CL2ADV", "CL2O2x");
+
+(: Ambiguous junction rules: ClCl and related patterns where the relationship
+   (coordination vs. subordination, and which clause heads the other) cannot
+   be determined from the rule name alone and requires contextual
+   disambiguation. Currently handled in local:disambiguate-clause-complex-structure
+   rather than via this list. :)
+declare variable $junctionRequiringDisambiguation := ("ClCl", "Conj-CL", "ClCl2", "CLandCL2", "2CLaCLaCL", "2CLaCL", "CLa2CL");
+
+declare variable $junctionRule := ($coordinationRule, $subordinationRule(:, $junctionRequiringDisambiguation:));
+
+(:~~~ Function word lexicons ~~~
+
+  These lists classify Greek function words by their grammatical role.
+  They are used in local:disambiguate-role-by-subordinate-first-word and
+  local:contains-projecting-verb to determine the role of a subordinated
+  clause from the word that introduces it.
+
+  Classifications based on Chris Land's prior work on OpenText 2.0.
+:)
+
+(: Relative nominals: relative pronouns introducing relative clauses or
+   indirect questions. E.g. ὅς ("who/which"), ὅστις ("whoever"). :)
 declare variable $relative-nominals := ('ἡλίκος', 'οἷος', 'ὁποῖος', 'ὁπόσος', 'ὅς', 'ὅσγε', 'ὅσος', 'ὅσπερ', 'ὅστις');
+
+(: Relative adverbs of manner/comparison (WS = "wie/so", manner): introduce
+   comparative or manner clauses. E.g. ὡς ("as/how"), ὥσπερ ("just as"). :)
 declare variable $relative_adverbs_WS := ('ὡς', 'ὥσπερ', 'ὡσεί', 'ὅπως', 'ὅπως', 'ὡσαύτως', 'ὡσπερεί');
+
+(: Relative adverbs of time and place: introduce temporal or locative clauses.
+   E.g. ὅτε ("when"), ὅπου ("where"), ἕως ("until"), ὅταν ("whenever"). :)
 declare variable $relative_adverbs := ('ὅπου', 'ὁπότε', 'ὅτε', 'ὅταν', 'ὅθεν', 'ἡνίκα', 'ὁπόθεν', 'ὁπόταν', 'ὁσάκις', 'ὁτέ', 'ὅτου', 'οὗ');
+
+(: Affirmation markers: confirm, strengthen, or concede a proposition.
+   E.g. ναί ("yes"), μέν ("indeed/on the one hand"), μέντοι ("however"). :)
 declare variable $affirmation_markers := ('ναί', 'νή', 'δή', 'δήπου', 'μέν', 'μέντοι', 'μενοῦν', 'μενοῦνγε', 'μήν (I)');
+
+(: Inferential markers: signal that the clause draws a conclusion from what
+   precedes. E.g. ἄρα ("therefore/so"), τοίνυν ("accordingly"), πλήν ("but"). :)
 declare variable $inferential-markers := ('ἄρα', 'ἆρα', 'τοίνυν', 'πλήν');
+
+(: Actualization markers: signal that the proposition is conditioned or
+   potential rather than asserted as fact. E.g. ἄν (modal), ἐάν ("if"). :)
 declare variable $actualization-markers := ('ἄν', 'ἐάν');
+
+(: Focus markers: narrow the scope of assertion to a particular constituent.
+   E.g. γέ ("at least/indeed", focusing the preceding word). :)
 declare variable $focus-markers := ('γέ');
+
+(: Discourse markers: connect clauses at the discourse level, signaling
+   logical or rhetorical relationships. E.g. γάρ ("for/because"),
+   οὖν ("therefore/then"). :)
 declare variable $discourse_markers := ('γάρ', 'οὖν', 'τοιγαροῦν', 'οὐκοῦν');
+
+(: Coordination operators: conjoin constituents or clauses of equal rank.
+   Includes additive (καί "and"), adversative (δέ "but/and", ἀλλά "but"),
+   disjunctive (ἤ "or"), and negative-coordinative (οὔτε "neither", οὐδέ). :)
 declare variable $operators := ('καί', 'δέ', 'ἀλλά', 'καίπερ', 'καίτοι', 'κἄν', 'καίτοιγε', 'ἤ', 'οὐδέ', 'οὔτε', 'μηδέ', 'τέ');
+
+(: Complementizers: introduce complement clauses (content clauses that fill
+   an argument slot of the governing verb). E.g. ὅτι ("that"),
+   ἵνα ("that/in order that"), εἰ ("whether/if"), μή ("lest/that not"). :)
 declare variable $complementizers := ('ἵνα', 'ὅτι', 'εἰ', 'μή');
+
+(: Subordinators: the full set of words that introduce subordinate clauses of
+   any kind (temporal, conditional, causal, final, etc.). Superset of
+   $complementizers; also includes temporal conjunctions (ἐπεί, ἕως, ὅταν…)
+   and causal connectors (διότι, καθώς…). :)
 declare variable $subordinators := ('ἵνα', 'ὅτι', 'εἰ', 'εἴπερ', 'ἐάν', 'ἐάνπερ', 'κἄν', 'εἴτε', 'ἐπεί', 'ἐπειδή', 'ἐπειδήπερ', 'ἐπάν', 'μή', 'ἄχρι', 'μέχρι', 'ἕως', 'καθώς', 'καθά', 'καθό', 'καθάπερ', 'καθότι', 'διό', 'διόπερ', 'διότι', 'ἡνίκα');
+
+(: Circumstantial adverbs: modify a clause by adding a circumstance (time,
+   manner, degree, etc.) without introducing a new subordinate clause.
+   E.g. ἔτι ("still/yet"), ὁμοίως ("likewise"), πρῶτος ("first"). :)
 declare variable $circumstances := ('ἔτι', 'νυνί', 'ὁμοίως', 'πρῶτος', 'ὅμως', 'οὕτω', 'ἐκτός', 'πῶς');
 
 declare variable $all-greek-rough-breathing-vowel-characters := ('ἀ', 'ἁ', 'ἂ', 'ἃ', 'ἄ', 'ἅ', 'ἆ', 'ἇ', 'Ἀ', 'Ἁ', 'Ἂ', 'Ἃ', 'Ἄ', 'Ἅ', 'Ἆ', 'Ἇ', 'ἐ', 'ἑ', 'ἒ', 'ἓ', 'ἔ', 'ἕ', 'Ἐ', 'Ἑ', 'Ἒ', 'Ἓ', 'Ἔ', 'Ἕ', 'ἠ', 'ἡ', 'ἢ', 'ἣ', 'ἤ', 'ἥ', 'ἦ', 'ἧ', 'Ἠ', 'Ἡ', 'Ἢ', 'Ἣ', 'Ἤ', 'Ἥ', 'Ἦ', 'Ἧ', 'ἰ', 'ἱ', 'ἲ', 'ἳ', 'ἴ', 'ἵ', 'ἶ', 'ἷ', 'Ἰ', 'Ἱ', 'Ἲ', 'Ἳ', 'Ἴ', 'Ἵ', 'Ἶ', 'Ἷ', 'ὀ', 'ὁ', 'ὂ', 'ὃ', 'ὄ', 'ὅ', 'Ὀ', 'Ὁ', 'Ὂ', 'Ὃ', 'Ὄ', 'Ὅ', 'ὐ', 'ὑ', 'ὒ', 'ὓ', 'ὔ', 'ὕ', 'ὖ', 'ὗ', 'Ὑ', 'Ὓ', 'Ὕ', 'Ὗ', 'ὠ', 'ὡ', 'ὢ', 'ὣ', 'ὤ', 'ὥ', 'ὦ', 'ὧ', 'Ὠ', 'Ὡ', 'Ὢ', 'Ὣ', 'Ὤ', 'Ὥ', 'Ὦ', 'Ὧ', 'ᾀ', 'ᾁ', 'ᾂ', 'ᾃ', 'ᾄ', 'ᾅ', 'ᾆ', 'ᾇ', 'ᾈ', 'ᾉ', 'ᾊ', 'ᾋ', 'ᾌ', 'ᾍ', 'ᾎ', 'ᾏ', 'ᾐ', 'ᾑ', 'ᾒ', 'ᾓ', 'ᾔ', 'ᾕ', 'ᾖ', 'ᾗ', 'ᾘ', 'ᾙ', 'ᾚ', 'ᾛ', 'ᾜ', 'ᾝ', 'ᾞ', 'ᾟ', 'ᾠ', 'ᾡ', 'ᾢ', 'ᾣ', 'ᾤ', 'ᾥ', 'ᾦ', 'ᾧ', 'ᾨ', 'ᾩ', 'ᾪ', 'ᾫ', 'ᾬ', 'ᾭ', 'ᾮ', 'ᾯ', 'ᾲ', 'ᾳ', 'ᾴ', 'ᾶ', 'ᾷ', 'ᾼ', 'ῂ', 'ῃ', 'ῄ', 'ῆ', 'ῇ', 'ῌ', 'ῲ', 'ῳ', 'ῴ', 'ῶ', 'ῷ', 'ῼ');
@@ -168,11 +322,11 @@ declare function local:is-head($node as element(Node)) as xs:boolean
 
 };:)
 
-declare variable $coordinationRule := ("ClClClClClClClClClClClCl", "Conj13CL", "Conj14CL", "Conj12CL", "CLandClClandClandClandCl", "CLaCL", "notCLbutCL2CL", "ClClCl", "Conj3CL", "aCLaCL", "EitherOr7CL", "EitherOr4Pp", "Conj4CL", "ClClClClCl", "Conj5CL", "EitherOr4CL", "ClClClClClCl", "Conj6CL", "ClClClCl", "aCLaCLaCL", "ClClClClClClClCl", "notCLbutCL", "Conj7CL", "ClClClClClClCl", "ClClClClClClClClCl", "ClClClClClClClClClCl");
-declare variable $subordinationRule := ("sub-CL", "CL2P", "CL2S", "CL2VP", "CL2Ox", "CL2NP", "CL2Adjp", "CL2ADV", "CL2O2x");
-declare variable $junctionRequiringDisambiguation := ("ClCl", "Conj-CL", "ClCl2", "CLandCL2", "2CLaCLaCL", "2CLaCL", "CLa2CL"); (: this set is currently unused as it would require further disambiguation once we decide how we would like to proceed. :)
-
-declare variable $junctionRule := ($coordinationRule, $subordinationRule(:, $junctionRequiringDisambiguation:));
+(: Nominalized clause rules: a clause functioning as a noun phrase — either
+   as the argument of a higher predicate or as the referent of a determiner.
+   CL2NP = clause embedded as NP, CL2Adjp = clause as adjectival (relative),
+   DetCL = articular clause (ὁ + clause), NP-CL = NP and clause in apposition
+   where the clause specifies the NP (treated as nominalized in output). :)
 declare variable $nominalized-clause-rule := ('CL2Adjp', 'CL2NP', 'DetCL', 'NP-CL');
 
 declare function local:is-nominalized-clause($node)
