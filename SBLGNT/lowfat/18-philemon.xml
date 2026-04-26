@@ -6,7 +6,7 @@
       <p>
          <milestone unit="verse" id="PHM 1:1">PHM 1:1</milestone> 
          <milestone unit="verse" id="PHM 1:2">PHM 1:2</milestone> Παῦλος δέσμιος Χριστοῦ Ἰησοῦ καὶ Τιμόθεος ὁ ἀδελφὸς Φιλήμονι τῷ ἀγαπητῷ καὶ συνεργῷ ἡμῶν καὶ Ἀπφίᾳ τῇ ἀδελφῇ καὶ Ἀρχίππῳ τῷ συστρατιώτῃ ἡμῶν καὶ τῇ κατ’ οἶκόν σου ἐκκλησίᾳ·</p>
-      <wg class="cl" rule="S-IO">
+      <wg class="cl" rule="S-IO" predication="elided">
          <wg rule="NpaNp" role="s">
             <wg type="apposition" class="np" rule="Np-Appos">
                <w ref="PHM 1:1!1"
@@ -542,7 +542,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="PHM 1:3">PHM 1:3</milestone> χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς ἡμῶν καὶ κυρίου Ἰησοῦ Χριστοῦ.</p>
-      <wg class="cl" rule="IO-S-ADV">
+      <wg class="cl" rule="IO-S-ADV" predication="elided">
          <w role="io"
             ref="PHM 1:3!2"
             after=" "
@@ -1991,27 +1991,26 @@
                   </wg>
                </wg>
             </wg>
-            <wg rule="Np2CL">
-               <w role="aux"
-                  ref="PHM 1:7!19"
-                  after="."
-                  class="noun"
-                  type="common"
-                  xml:id="n57001007019"
-                  lemma="ἀδελφός"
-                  normalized="ἀδελφέ"
-                  strong="80"
-                  number="singular"
-                  gender="masculine"
-                  case="vocative"
-                  english="brother"
-                  mandarin="弟兄"
-                  gloss="brother"
-                  domain="011002"
-                  ln="11.23"
-                  morph="N-VSM"
-                  unicode="ἀδελφέ.">ἀδελφέ</w>
-            </wg>
+            <w role="aux"
+               rule="np2cl"
+               ref="PHM 1:7!19"
+               after="."
+               class="noun"
+               type="common"
+               xml:id="n57001007019"
+               lemma="ἀδελφός"
+               normalized="ἀδελφέ"
+               strong="80"
+               number="singular"
+               gender="masculine"
+               case="vocative"
+               english="brother"
+               mandarin="弟兄"
+               gloss="brother"
+               domain="011002"
+               ln="11.23"
+               morph="N-VSM"
+               unicode="ἀδελφέ.">ἀδελφέ</w>
          </wg>
       </wg>
    </sentence>
@@ -2188,30 +2187,29 @@
                         ln="92.24"
                         morph="T-ASN"
                         unicode="τὸ">τὸ</w>
-                     <wg class="cl" clauseType="nominalized" rule="V2CL">
-                        <w role="v"
-                           ref="PHM 1:8!10"
-                           after=","
-                           class="verb"
-                           xml:id="n57001008010"
-                           lemma="ἀνήκω"
-                           normalized="ἀνῆκον"
-                           strong="433"
-                           number="singular"
-                           gender="neuter"
-                           case="accusative"
-                           tense="present"
-                           voice="active"
-                           mood="participle"
-                           english="proper"
-                           mandarin="合宜"
-                           gloss="befitting"
-                           domain="066"
-                           ln="66.1"
-                           morph="V-PAP-ASN"
-                           unicode="ἀνῆκον,"
-                           frame="A0:n00000000000">ἀνῆκον</w>
-                     </wg>
+                     <w role="v"
+                        rule="v2cl"
+                        ref="PHM 1:8!10"
+                        after=","
+                        class="verb"
+                        xml:id="n57001008010"
+                        lemma="ἀνήκω"
+                        normalized="ἀνῆκον"
+                        strong="433"
+                        number="singular"
+                        gender="neuter"
+                        case="accusative"
+                        tense="present"
+                        voice="active"
+                        mood="participle"
+                        english="proper"
+                        mandarin="合宜"
+                        gloss="befitting"
+                        domain="066"
+                        ln="66.1"
+                        morph="V-PAP-ASN"
+                        unicode="ἀνῆκον,"
+                        frame="A0:n00000000000">ἀνῆκον</w>
                   </wg>
                </wg>
             </wg>
@@ -2419,7 +2417,7 @@
                      gloss="then"
                      morph="CONJ"
                      unicode="δὲ">δὲ</w>
-                  <wg class="cl" rule="ADV-P">
+                  <wg class="cl" rule="ADV-P" predication="verbless">
                      <w role="adv"
                         ref="PHM 1:9!11"
                         after=" "
@@ -3745,39 +3743,37 @@
                      ln="89.125"
                      morph="CONJ"
                      unicode="ἀλλὰ">ἀλλὰ</w>
-                  <wg class="cl" rule="P2CL">
-                     <wg class="pp" rule="PrepNp" role="p">
-                        <w ref="PHM 1:14!19"
-                           after=" "
-                           class="prep"
-                           xml:id="n57001014019"
-                           lemma="κατά"
-                           normalized="κατὰ"
-                           strong="2596"
-                           english="of"
-                           mandarin="出于"
-                           gloss="according to"
-                           morph="PREP"
-                           unicode="κατὰ">κατὰ</w>
-                        <w ref="PHM 1:14!20"
-                           after="·"
-                           class="adj"
-                           type="substantive"
-                           xml:id="n57001014020"
-                           lemma="ἑκούσιος"
-                           normalized="ἑκούσιον"
-                           strong="1595"
-                           number="singular"
-                           gender="neuter"
-                           case="accusative"
-                           english="free will"
-                           mandarin="甘心"
-                           gloss="willingness"
-                           domain="025005"
-                           ln="25.65"
-                           morph="A-ASN"
-                           unicode="ἑκούσιον·">ἑκούσιον</w>
-                     </wg>
+                  <wg class="pp" rule="PrepNp" role="p">
+                     <w ref="PHM 1:14!19"
+                        after=" "
+                        class="prep"
+                        xml:id="n57001014019"
+                        lemma="κατά"
+                        normalized="κατὰ"
+                        strong="2596"
+                        english="of"
+                        mandarin="出于"
+                        gloss="according to"
+                        morph="PREP"
+                        unicode="κατὰ">κατὰ</w>
+                     <w ref="PHM 1:14!20"
+                        after="·"
+                        class="adj"
+                        type="substantive"
+                        xml:id="n57001014020"
+                        lemma="ἑκούσιος"
+                        normalized="ἑκούσιον"
+                        strong="1595"
+                        number="singular"
+                        gender="neuter"
+                        case="accusative"
+                        english="free will"
+                        mandarin="甘心"
+                        gloss="willingness"
+                        domain="025005"
+                        ln="25.65"
+                        morph="A-ASN"
+                        unicode="ἑκούσιον·">ἑκούσιον</w>
                   </wg>
                </wg>
             </wg>
@@ -4120,7 +4116,7 @@
                         unicode="ἀγαπητόν,">ἀγαπητόν</w>
                   </wg>
                   <wg rule="CLaCL">
-                     <wg class="cl" rule="ADV-IO">
+                     <wg class="cl" rule="ADV-IO" predication="elided">
                         <w role="adv"
                            ref="PHM 1:16!9"
                            after=" "
@@ -4172,7 +4168,7 @@
                            ln="89.124 89.94"
                            morph="CONJ"
                            unicode="δὲ">δὲ</w>
-                        <wg class="cl" rule="ADV-IO-ADV">
+                        <wg class="cl" rule="ADV-IO-ADV" predication="elided">
                            <wg class="advp" rule="2Advp_h2" role="adv">
                               <w ref="PHM 1:16!11"
                                  after=" "
@@ -4481,27 +4477,26 @@
                   ln="64.12"
                   morph="ADV"
                   unicode="ὡς">ὡς</w>
-               <wg class="cl" rule="O2CL">
-                  <w role="o"
-                     ref="PHM 1:17!9"
-                     after="."
-                     class="pron"
-                     type="personal"
-                     xml:id="n57001017009"
-                     lemma="ἐγώ"
-                     normalized="ἐμέ"
-                     strong="1691"
-                     number="singular"
-                     case="accusative"
-                     english="me"
-                     mandarin="我"
-                     gloss="me"
-                     domain="092001"
-                     ln="92.1"
-                     morph="P-1AS"
-                     unicode="ἐμέ."
-                     referent="n57001009009">ἐμέ</w>
-               </wg>
+               <w role="o"
+                  rule="o2cl"
+                  ref="PHM 1:17!9"
+                  after="."
+                  class="pron"
+                  type="personal"
+                  xml:id="n57001017009"
+                  lemma="ἐγώ"
+                  normalized="ἐμέ"
+                  strong="1691"
+                  number="singular"
+                  case="accusative"
+                  english="me"
+                  mandarin="我"
+                  gloss="me"
+                  domain="092001"
+                  ln="92.1"
+                  morph="P-1AS"
+                  unicode="ἐμέ."
+                  referent="n57001009009">ἐμέ</w>
             </wg>
          </wg>
       </wg>
@@ -4614,30 +4609,29 @@
                         gloss="or"
                         morph="PRT"
                         unicode="ἢ">ἢ</w>
-                     <wg class="cl" rule="V2CL">
-                        <w role="v"
-                           ref="PHM 1:18!7"
-                           after=","
-                           class="verb"
-                           xml:id="n57001018007"
-                           lemma="ὀφείλω"
-                           normalized="ὀφείλει"
-                           strong="3784"
-                           number="singular"
-                           person="third"
-                           tense="present"
-                           voice="active"
-                           mood="indicative"
-                           english="owes"
-                           mandarin="欠"
-                           gloss="he owes [you]"
-                           domain="057018"
-                           ln="57.219"
-                           morph="V-PAI-3S"
-                           unicode="ὀφείλει,"
-                           frame="A0:n57001010012 A1:n57001018003 A2:n57001018005"
-                           subjref="n57001010012">ὀφείλει</w>
-                     </wg>
+                     <w role="v"
+                        rule="v2cl"
+                        ref="PHM 1:18!7"
+                        after=","
+                        class="verb"
+                        xml:id="n57001018007"
+                        lemma="ὀφείλω"
+                        normalized="ὀφείλει"
+                        strong="3784"
+                        number="singular"
+                        person="third"
+                        tense="present"
+                        voice="active"
+                        mood="indicative"
+                        english="owes"
+                        mandarin="欠"
+                        gloss="he owes [you]"
+                        domain="057018"
+                        ln="57.219"
+                        morph="V-PAI-3S"
+                        unicode="ὀφείλει,"
+                        frame="A0:n57001010012 A1:n57001018003 A2:n57001018005"
+                        subjref="n57001010012">ὀφείλει</w>
                   </wg>
                </wg>
             </wg>
@@ -5030,44 +5024,42 @@
       <p>
          <milestone unit="verse" id="PHM 1:20">PHM 1:20</milestone> ναί, ἀδελφέ, ἐγώ σου ὀναίμην ἐν κυρίῳ·</p>
       <wg Rule="ClCl2" class="cl" nodeId="570010200010070">
-         <wg rule="Intj2CL">
-            <w role="aux"
-               ref="PHM 1:20!1"
-               after=","
-               class="ptcl"
-               xml:id="n57001020001"
-               lemma="ναί"
-               normalized="ναί"
-               strong="3483"
-               english="yes"
-               mandarin="是的"
-               gloss="Yes"
-               domain="069001"
-               ln="69.1"
-               morph="PRT"
-               unicode="ναί,">ναί</w>
-         </wg>
-         <wg rule="Np2CL">
-            <w role="aux"
-               ref="PHM 1:20!2"
-               after=","
-               class="noun"
-               type="common"
-               xml:id="n57001020002"
-               lemma="ἀδελφός"
-               normalized="ἀδελφέ"
-               strong="80"
-               number="singular"
-               gender="masculine"
-               case="vocative"
-               english="brother"
-               mandarin="弟兄"
-               gloss="brother"
-               domain="011002"
-               ln="11.23"
-               morph="N-VSM"
-               unicode="ἀδελφέ,">ἀδελφέ</w>
-         </wg>
+         <w role="aux"
+            rule="intj2cl"
+            ref="PHM 1:20!1"
+            after=","
+            class="ptcl"
+            xml:id="n57001020001"
+            lemma="ναί"
+            normalized="ναί"
+            strong="3483"
+            english="yes"
+            mandarin="是的"
+            gloss="Yes"
+            domain="069001"
+            ln="69.1"
+            morph="PRT"
+            unicode="ναί,">ναί</w>
+         <w role="aux"
+            rule="np2cl"
+            ref="PHM 1:20!2"
+            after=","
+            class="noun"
+            type="common"
+            xml:id="n57001020002"
+            lemma="ἀδελφός"
+            normalized="ἀδελφέ"
+            strong="80"
+            number="singular"
+            gender="masculine"
+            case="vocative"
+            english="brother"
+            mandarin="弟兄"
+            gloss="brother"
+            domain="011002"
+            ln="11.23"
+            morph="N-VSM"
+            unicode="ἀδελφέ,">ἀδελφέ</w>
          <w role="s"
             ref="PHM 1:20!3"
             after=" "
@@ -5405,6 +5397,7 @@
             referent="n57001020002">σοι</w>
          <wg Rule="ClCl" class="cl" nodeId="570010210070070" role="adv">
             <w role="v"
+               rule="v2cl"
                ref="PHM 1:21!7"
                after=" "
                class="verb"
@@ -5669,6 +5662,7 @@
                   unicode="γὰρ">γὰρ</w>
                <wg Rule="ClCl" class="cl" nodeId="570010220070080">
                   <w role="v"
+                     rule="v2cl"
                      ref="PHM 1:22!7"
                      after=" "
                      class="verb"
@@ -6137,7 +6131,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="PHM 1:25">PHM 1:25</milestone> Ἡ χάρις τοῦ κυρίου Ἰησοῦ Χριστοῦ μετὰ τοῦ πνεύματος ὑμῶν.</p>
-      <wg class="cl" articular="true" rule="S-P">
+      <wg class="cl" articular="true" rule="S-P" predication="verbless">
          <wg class="np" articular="true" rule="DetNP" role="s">
             <w ref="PHM 1:25!1"
                after=" "

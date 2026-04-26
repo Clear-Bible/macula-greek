@@ -8,7 +8,7 @@
          <milestone unit="verse" id="TIT 1:2">TIT 1:2</milestone> 
          <milestone unit="verse" id="TIT 1:3">TIT 1:3</milestone> 
          <milestone unit="verse" id="TIT 1:4">TIT 1:4</milestone> Παῦλος δοῦλος θεοῦ, ἀπόστολος δὲ Ἰησοῦ Χριστοῦ κατὰ πίστιν ἐκλεκτῶν θεοῦ καὶ ἐπίγνωσιν ἀληθείας τῆς κατ’ εὐσέβειαν ἐπ’ ἐλπίδι ζωῆς αἰωνίου, ἣν ἐπηγγείλατο ὁ ἀψευδὴς θεὸς πρὸ χρόνων αἰωνίων ἐφανέρωσεν δὲ καιροῖς ἰδίοις, τὸν λόγον αὐτοῦ ἐν κηρύγματι ὃ ἐπιστεύθην ἐγὼ κατ’ ἐπιταγὴν τοῦ σωτῆρος ἡμῶν θεοῦ, Τίτῳ γνησίῳ τέκνῳ κατὰ κοινὴν πίστιν·</p>
-      <wg class="cl" rule="S-ADV-ADV-IO">
+      <wg class="cl" rule="S-ADV-ADV-IO" predication="elided">
          <wg type="apposition" class="np" rule="Np-Appos" role="s">
             <w ref="TIT 1:1!1"
                after=" "
@@ -1020,7 +1020,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="TIT 1:4">TIT 1:4</milestone> χάρις καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς καὶ Χριστοῦ Ἰησοῦ τοῦ σωτῆρος ἡμῶν.</p>
-      <wg class="cl" rule="S-ADV">
+      <wg class="cl" rule="S-ADV" predication="elided">
          <wg rule="NpaNp" role="s">
             <w ref="TIT 1:4!7"
                after=" "
@@ -1386,30 +1386,29 @@
                         ln="92.24"
                         morph="T-APN"
                         unicode="τὰ">τὰ</w>
-                     <wg class="cl" clauseType="nominalized" rule="V2CL">
-                        <w role="v"
-                           ref="TIT 1:5!9"
-                           after=" "
-                           class="verb"
-                           xml:id="n56001005009"
-                           lemma="λείπω"
-                           normalized="λείποντα"
-                           strong="3007"
-                           number="plural"
-                           gender="neuter"
-                           case="accusative"
-                           tense="present"
-                           voice="active"
-                           mood="participle"
-                           english="what remained"
-                           mandarin="没有办完"
-                           gloss="lacking"
-                           domain="057005"
-                           ln="57.43"
-                           morph="V-PAP-APN"
-                           unicode="λείποντα"
-                           frame="A0:n00000000000">λείποντα</w>
-                     </wg>
+                     <w role="v"
+                        rule="v2cl"
+                        ref="TIT 1:5!9"
+                        after=" "
+                        class="verb"
+                        xml:id="n56001005009"
+                        lemma="λείπω"
+                        normalized="λείποντα"
+                        strong="3007"
+                        number="plural"
+                        gender="neuter"
+                        case="accusative"
+                        tense="present"
+                        voice="active"
+                        mood="participle"
+                        english="what remained"
+                        mandarin="没有办完"
+                        gloss="lacking"
+                        domain="057005"
+                        ln="57.43"
+                        morph="V-PAP-APN"
+                        unicode="λείποντα"
+                        frame="A0:n00000000000">λείποντα</w>
                   </wg>
                   <w role="v"
                      ref="TIT 1:5!10"
@@ -2172,7 +2171,10 @@
                               morph="A-ASM"
                               unicode="πάροινον,">πάροινον</w>
                         </wg>
-                        <wg class="cl" clauseType="nominalized" rule="ADV-P">
+                        <wg class="cl"
+                            clauseType="nominalized"
+                            rule="ADV-P"
+                            predication="verbless">
                            <w role="adv"
                               ref="TIT 1:7!16"
                               after=" "
@@ -2657,31 +2659,30 @@
                                                 ln="92.24"
                                                 morph="T-DSF"
                                                 unicode="τῇ">τῇ</w>
-                                             <wg class="cl" clauseType="nominalized" rule="V2CL">
-                                                <w role="v"
-                                                   ref="TIT 1:9!17"
-                                                   after=" "
-                                                   class="verb"
-                                                   xml:id="n56001009017"
-                                                   lemma="ὑγιαίνω"
-                                                   normalized="ὑγιαινούσῃ"
-                                                   strong="5198"
-                                                   number="singular"
-                                                   gender="feminine"
-                                                   case="dative"
-                                                   tense="present"
-                                                   voice="active"
-                                                   mood="participle"
-                                                   english="sound"
-                                                   mandarin="健全"
-                                                   gloss="sound"
-                                                   domain="023008"
-                                                   ln="23.129"
-                                                   morph="V-PAP-DSF"
-                                                   unicode="ὑγιαινούσῃ"
-                                                   frame="A0:n56001009015"
-                                                   subjref="n56001009015">ὑγιαινούσῃ</w>
-                                             </wg>
+                                             <w role="v"
+                                                rule="v2cl"
+                                                ref="TIT 1:9!17"
+                                                after=" "
+                                                class="verb"
+                                                xml:id="n56001009017"
+                                                lemma="ὑγιαίνω"
+                                                normalized="ὑγιαινούσῃ"
+                                                strong="5198"
+                                                number="singular"
+                                                gender="feminine"
+                                                case="dative"
+                                                tense="present"
+                                                voice="active"
+                                                mood="participle"
+                                                english="sound"
+                                                mandarin="健全"
+                                                gloss="sound"
+                                                domain="023008"
+                                                ln="23.129"
+                                                morph="V-PAP-DSF"
+                                                unicode="ὑγιαινούσῃ"
+                                                frame="A0:n56001009015"
+                                                subjref="n56001009015">ὑγιαινούσῃ</w>
                                           </wg>
                                        </wg>
                                     </wg>
@@ -2719,30 +2720,29 @@
                                           ln="92.24"
                                           morph="T-APM"
                                           unicode="τοὺς">τοὺς</w>
-                                       <wg class="cl" clauseType="nominalized" rule="V2CL">
-                                          <w role="v"
-                                             ref="TIT 1:9!20"
-                                             after=" "
-                                             class="verb"
-                                             xml:id="n56001009020"
-                                             lemma="ἀντιλέγω"
-                                             normalized="ἀντιλέγοντας"
-                                             strong="483"
-                                             number="plural"
-                                             gender="masculine"
-                                             case="accusative"
-                                             tense="present"
-                                             voice="active"
-                                             mood="participle"
-                                             english="contradict"
-                                             mandarin="反对"
-                                             gloss="contradicting [it]"
-                                             domain="033052"
-                                             ln="33.455"
-                                             morph="V-PAP-APM"
-                                             unicode="ἀντιλέγοντας"
-                                             frame="A0:n00000000000">ἀντιλέγοντας</w>
-                                       </wg>
+                                       <w role="v"
+                                          rule="v2cl"
+                                          ref="TIT 1:9!20"
+                                          after=" "
+                                          class="verb"
+                                          xml:id="n56001009020"
+                                          lemma="ἀντιλέγω"
+                                          normalized="ἀντιλέγοντας"
+                                          strong="483"
+                                          number="plural"
+                                          gender="masculine"
+                                          case="accusative"
+                                          tense="present"
+                                          voice="active"
+                                          mood="participle"
+                                          english="contradict"
+                                          mandarin="反对"
+                                          gloss="contradicting [it]"
+                                          domain="033052"
+                                          ln="33.455"
+                                          morph="V-PAP-APM"
+                                          unicode="ἀντιλέγοντας"
+                                          frame="A0:n00000000000">ἀντιλέγοντας</w>
                                     </wg>
                                     <w role="v"
                                        ref="TIT 1:9!21"
@@ -3433,7 +3433,7 @@
                </wg>
             </wg>
          </wg>
-         <wg class="cl" rule="S-ADV-P" role="o">
+         <wg class="cl" rule="S-ADV-P" predication="verbless" role="o">
             <w role="s"
                ref="TIT 1:12!8"
                after=" "
@@ -4071,7 +4071,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="TIT 1:15">TIT 1:15</milestone> πάντα καθαρὰ τοῖς καθαροῖς·</p>
-      <wg class="cl" rule="S-P-ADV">
+      <wg class="cl" rule="S-P-ADV" predication="verbless">
          <w role="s"
             ref="TIT 1:15!1"
             after=" "
@@ -4164,7 +4164,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg rule="CLaCL">
-            <wg class="cl" rule="ADV-S-P">
+            <wg class="cl" rule="ADV-S-P" predication="verbless">
                <wg class="np" articular="true" rule="DetAdj" role="adv">
                   <w ref="TIT 1:15!5"
                      after=" "
@@ -4184,30 +4184,29 @@
                      morph="T-DPM"
                      unicode="τοῖς">τοῖς</w>
                   <wg rule="AdjpaAdjp">
-                     <wg class="cl" clauseType="nominalized" rule="V2CL">
-                        <w role="v"
-                           ref="TIT 1:15!7"
-                           after=" "
-                           class="verb"
-                           xml:id="n56001015007"
-                           lemma="μιαίνω"
-                           normalized="μεμιαμμένοις"
-                           strong="3392"
-                           number="plural"
-                           gender="masculine"
-                           case="dative"
-                           tense="perfect"
-                           voice="passive"
-                           mood="participle"
-                           english="defiled"
-                           mandarin="污秽"
-                           gloss="being defiled"
-                           domain="088034"
-                           ln="88.260"
-                           morph="V-RPP-DPM"
-                           unicode="μεμιαμμένοις"
-                           frame="A1:n00000000000">μεμιαμμένοις</w>
-                     </wg>
+                     <w role="v"
+                        rule="v2cl"
+                        ref="TIT 1:15!7"
+                        after=" "
+                        class="verb"
+                        xml:id="n56001015007"
+                        lemma="μιαίνω"
+                        normalized="μεμιαμμένοις"
+                        strong="3392"
+                        number="plural"
+                        gender="masculine"
+                        case="dative"
+                        tense="perfect"
+                        voice="passive"
+                        mood="participle"
+                        english="defiled"
+                        mandarin="污秽"
+                        gloss="being defiled"
+                        domain="088034"
+                        ln="88.260"
+                        morph="V-RPP-DPM"
+                        unicode="μεμιαμμένοις"
+                        frame="A1:n00000000000">μεμιαμμένοις</w>
                      <wg type="group">
                         <w ref="TIT 1:15!8"
                            after=" "
@@ -4889,31 +4888,30 @@
                      morph="T-DSF"
                      unicode="τῇ">τῇ</w>
                   <wg class="np" rule="AdjpNp">
-                     <wg class="cl" clauseType="nominalized" rule="V2CL">
-                        <w role="v"
-                           ref="TIT 2:1!7"
-                           after=" "
-                           class="verb"
-                           xml:id="n56002001007"
-                           lemma="ὑγιαίνω"
-                           normalized="ὑγιαινούσῃ"
-                           strong="5198"
-                           number="singular"
-                           gender="feminine"
-                           case="dative"
-                           tense="present"
-                           voice="active"
-                           mood="participle"
-                           english="sound"
-                           mandarin="健全"
-                           gloss="sound"
-                           domain="023008"
-                           ln="23.129"
-                           morph="V-PAP-DSF"
-                           unicode="ὑγιαινούσῃ"
-                           frame="A0:n56002001008"
-                           subjref="n56002001008">ὑγιαινούσῃ</w>
-                     </wg>
+                     <w role="v"
+                        rule="v2cl"
+                        ref="TIT 2:1!7"
+                        after=" "
+                        class="verb"
+                        xml:id="n56002001007"
+                        lemma="ὑγιαίνω"
+                        normalized="ὑγιαινούσῃ"
+                        strong="5198"
+                        number="singular"
+                        gender="feminine"
+                        case="dative"
+                        tense="present"
+                        voice="active"
+                        mood="participle"
+                        english="sound"
+                        mandarin="健全"
+                        gloss="sound"
+                        domain="023008"
+                        ln="23.129"
+                        morph="V-PAP-DSF"
+                        unicode="ὑγιαινούσῃ"
+                        frame="A0:n56002001008"
+                        subjref="n56002001008">ὑγιαινούσῃ</w>
                      <w ref="TIT 2:1!8"
                         after="."
                         class="noun"
@@ -5880,28 +5878,27 @@
             unicode="παρακάλει"
             frame="A0:n56001004001 A2:n56002006002 A1:n56002006005"
             subjref="n56001004001">παρακάλει</w>
-         <wg class="cl" rule="V2CL" role="o2">
-            <w role="v"
-               ref="TIT 2:6!5"
-               after="·"
-               class="verb"
-               xml:id="n56002006005"
-               lemma="σωφρονέω"
-               normalized="σωφρονεῖν"
-               strong="4993"
-               tense="present"
-               voice="active"
-               mood="infinitive"
-               english="self-controlled"
-               mandarin="克己"
-               gloss="to be self-controlled"
-               domain="032004"
-               ln="32.34"
-               morph="V-PAN"
-               unicode="σωφρονεῖν·"
-               frame="A0:n56002006002"
-               subjref="n56002006002">σωφρονεῖν</w>
-         </wg>
+         <w role="v"
+            rule="v2cl"
+            ref="TIT 2:6!5"
+            after="·"
+            class="verb"
+            xml:id="n56002006005"
+            lemma="σωφρονέω"
+            normalized="σωφρονεῖν"
+            strong="4993"
+            tense="present"
+            voice="active"
+            mood="infinitive"
+            english="self-controlled"
+            mandarin="克己"
+            gloss="to be self-controlled"
+            domain="032004"
+            ln="32.34"
+            morph="V-PAN"
+            unicode="σωφρονεῖν·"
+            frame="A0:n56002006002"
+            subjref="n56002006002">σωφρονεῖν</w>
       </wg>
    </sentence>
    <sentence>
@@ -6045,7 +6042,7 @@
                </wg>
             </wg>
          </wg>
-         <wg class="cl" rule="ADV-O">
+         <wg class="cl" rule="ADV-O" predication="elided">
             <wg class="pp" articular="true" rule="PrepNp" role="adv">
                <w ref="TIT 2:7!8"
                   after=" "
@@ -8516,28 +8513,27 @@
                   frame="A1:n56002002001;n56002003001;n56002004004;n56002006002;n56002009001 A2:n56003001003;n56003001004"
                   subjref="n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">ὑποτάσσεσθαι</w>
             </wg>
-            <wg class="cl" rule="V2CL">
-               <w role="v"
-                  ref="TIT 3:1!6"
-                  after=","
-                  class="verb"
-                  xml:id="n56003001006"
-                  lemma="πειθαρχέω"
-                  normalized="πειθαρχεῖν"
-                  strong="3980"
-                  tense="present"
-                  voice="active"
-                  mood="infinitive"
-                  english="obedient"
-                  mandarin="服从"
-                  gloss="to be obedient"
-                  domain="036003"
-                  ln="36.12"
-                  morph="V-PAN"
-                  unicode="πειθαρχεῖν,"
-                  frame="A0:n56002002001;n56002003001;n56002004004;n56002006002;n56002009001"
-                  subjref="n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">πειθαρχεῖν</w>
-            </wg>
+            <w role="v"
+               rule="v2cl"
+               ref="TIT 3:1!6"
+               after=","
+               class="verb"
+               xml:id="n56003001006"
+               lemma="πειθαρχέω"
+               normalized="πειθαρχεῖν"
+               strong="3980"
+               tense="present"
+               voice="active"
+               mood="infinitive"
+               english="obedient"
+               mandarin="服从"
+               gloss="to be obedient"
+               domain="036003"
+               ln="36.12"
+               morph="V-PAN"
+               unicode="πειθαρχεῖν,"
+               frame="A0:n56002002001;n56002003001;n56002004004;n56002006002;n56002009001"
+               subjref="n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">πειθαρχεῖν</w>
             <wg class="cl" rule="ADV-P-VC">
                <wg class="pp" rule="PrepNp" role="adv">
                   <w ref="TIT 3:1!7"
@@ -8728,26 +8724,25 @@
                   unicode="εἶναι,"
                   subjref="n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">εἶναι</w>
             </wg>
-            <wg class="cl" rule="P2CL">
-               <w role="p"
-                  ref="TIT 3:2!5"
-                  after=","
-                  class="adj"
-                  xml:id="n56003002005"
-                  lemma="ἐπιεικής"
-                  normalized="ἐπιεικεῖς"
-                  strong="1933"
-                  number="plural"
-                  gender="masculine"
-                  case="accusative"
-                  english="gentle"
-                  mandarin="温和"
-                  gloss="gentle"
-                  domain="088008"
-                  ln="88.63"
-                  morph="A-APM"
-                  unicode="ἐπιεικεῖς,">ἐπιεικεῖς</w>
-            </wg>
+            <w role="p"
+               rule="p2cl"
+               ref="TIT 3:2!5"
+               after=","
+               class="adj"
+               xml:id="n56003002005"
+               lemma="ἐπιεικής"
+               normalized="ἐπιεικεῖς"
+               strong="1933"
+               number="plural"
+               gender="masculine"
+               case="accusative"
+               english="gentle"
+               mandarin="温和"
+               gloss="gentle"
+               domain="088008"
+               ln="88.63"
+               morph="A-APM"
+               unicode="ἐπιεικεῖς,">ἐπιεικεῖς</w>
          </wg>
          <wg class="cl" rule="O-V-ADV" role="adv">
             <wg class="np" rule="All-NP" role="o">
@@ -8990,31 +8985,30 @@
                   ln="36.24"
                   morph="A-NPM"
                   unicode="ἀπειθεῖς,">ἀπειθεῖς</w>
-               <wg class="cl" clauseType="nominalized" rule="V2CL">
-                  <w role="v"
-                     ref="TIT 3:3!8"
-                     after=","
-                     class="verb"
-                     xml:id="n56003003008"
-                     lemma="πλανάω"
-                     normalized="πλανώμενοι"
-                     strong="4105"
-                     number="plural"
-                     gender="masculine"
-                     case="nominative"
-                     tense="present"
-                     voice="passive"
-                     mood="participle"
-                     english="deceived"
-                     mandarin="受~迷惑"
-                     gloss="being deceived"
-                     domain="031008"
-                     ln="31.67"
-                     morph="V-PPP-NPM"
-                     unicode="πλανώμενοι,"
-                     frame="A1:n56001001001;n56001004001;n56002002001;n56002003001;n56002004004;n56002006002;n56002009001"
-                     subjref="n56001001001 n56001004001 n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">πλανώμενοι</w>
-               </wg>
+               <w role="v"
+                  rule="v2cl"
+                  ref="TIT 3:3!8"
+                  after=","
+                  class="verb"
+                  xml:id="n56003003008"
+                  lemma="πλανάω"
+                  normalized="πλανώμενοι"
+                  strong="4105"
+                  number="plural"
+                  gender="masculine"
+                  case="nominative"
+                  tense="present"
+                  voice="passive"
+                  mood="participle"
+                  english="deceived"
+                  mandarin="受~迷惑"
+                  gloss="being deceived"
+                  domain="031008"
+                  ln="31.67"
+                  morph="V-PPP-NPM"
+                  unicode="πλανώμενοι,"
+                  frame="A1:n56001001001;n56001004001;n56002002001;n56002003001;n56002004004;n56002006002;n56002009001"
+                  subjref="n56001001001 n56001004001 n56002002001 n56002003001 n56002004004 n56002006002 n56002009001">πλανώμενοι</w>
                <wg class="cl" clauseType="nominalized" rule="V-O">
                   <w role="v"
                      ref="TIT 3:3!9"
@@ -10355,7 +10349,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="TIT 3:8">TIT 3:8</milestone> Πιστὸς ὁ λόγος,</p>
-      <wg class="cl" rule="P-S">
+      <wg class="cl" rule="P-S" predication="verbless">
          <w role="p"
             ref="TIT 3:8!1"
             after=" "
@@ -11257,6 +11251,7 @@
             subjref="n56001004001">παραιτοῦ</w>
          <wg Rule="ClCl" class="cl" nodeId="560030110010090" role="adv">
             <w role="v"
+               rule="v2cl"
                ref="TIT 3:11!1"
                after=" "
                class="verb"
@@ -12507,7 +12502,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="TIT 3:15">TIT 3:15</milestone> ἡ χάρις μετὰ πάντων ὑμῶν.</p>
-      <wg class="cl" rule="S-P">
+      <wg class="cl" rule="S-P" predication="verbless">
          <wg class="np" articular="true" rule="DetNP" role="s">
             <w ref="TIT 3:15!13"
                after=" "
