@@ -1571,7 +1571,9 @@
 <Node Cat="S" Head="0" nodeId="480010200020111" Length="11">
   <Node Id="1.1" Cat="CL" Start="0" End="10" Rule="Conj-CL" Head="1" HasDet="True" nodeId="480010200020110" Length="11">
     <Node Id="1.2" Cat="conj" Start="0" End="0" StrongNumber="1161" English="now" UnicodeLemma="δέ" Unicode="δὲ" Mandarin="现在" Language="G" morphId="48001020002" nodeId="480010200020010" xml:id="n48001020002" ref="GAL 1:20!2" NormalizedForm="δὲ" FunctionalTag="CONJ" Type="" FormalTag="CONJ" Gloss="now" status="mapped">δὲ</Node>
-    <Node Id="1.3" Cat="CL" Start="1" End="10" Rule="ClCl2" Head="1" HasDet="True" nodeId="480010200010100" Length="10">
+    <!-- LowfatException: GAL 1:20 outer ClCl2 "ἃ δὲ γράφω ὑμῖν, ἰδοὺ ἐνώπιον τοῦ θεοῦ ὅτι οὐ ψεύδομαι"
+              The verse is an oath/assurance; γράφω projects the content but the ἰδοὺ clause
+              is a coordinate oath-formula, not nested projected discourse. Force coordination. --><Node Id="1.3" Cat="CL" Start="1" End="10" Rule="ClCl2" Head="1" HasDet="True" nodeId="480010200010100" Length="10" LowfatException="force-coordination">
       <Node Id="1.4" Cat="CL" Start="1" End="3" Rule="O-V-IO" Head="1" nodeId="480010200010030" Length="3">
         <Node Id="1.5" Cat="O" Start="1" End="1" Rule="Np2O" Head="0" nodeId="480010200010012" Length="1">
           <Node Id="1.6" Cat="np" Start="1" End="1" Rule="Pron2NP" Head="0" nodeId="480010200010011" Length="1">
@@ -1589,7 +1591,10 @@
           </Node>
         </Node>
       </Node>
-      <Node Id="1.14" Cat="CL" Start="4" End="10" Rule="ClCl2" Head="1" HasDet="True" nodeId="480010200050070" Length="7">
+      <!-- LowfatException: GAL 1:20 inner ClCl2 "ἰδοὺ ἐνώπιον τοῦ θεοῦ ὅτι οὐ ψεύδομαι"
+              Oath formula: ἰδοὺ + prepositional oath + ὅτι-clause. The projecting verb γράφω
+              is in the sibling at the parent level, not here. Force coordination; exclude
+              from projected-discourse detection to prevent wrong nesting under γράφω. --><Node Id="1.14" Cat="CL" Start="4" End="10" Rule="ClCl2" Head="1" HasDet="True" nodeId="480010200050070" Length="7" LowfatException="force-coordination exclude-projected-discourse">
         <Node Id="1.15" Cat="CL" Start="4" End="4" Rule="Intj2CL" Head="0" ClType="Minor" nodeId="480010200050012" Length="1">
           <Node Id="1.16" Cat="intj" Start="4" End="4" Rule="Ptcl2Intj" Head="0" nodeId="480010200050011" Length="1">
             <Node Id="1.17" Cat="ptcl" Start="4" End="4" StrongNumber="2400" English="behold" UnicodeLemma="ἰδού" Unicode="ἰδοὺ" Mandarin="看" Language="G" morphId="48001020005" nodeId="480010200050010" xml:id="n48001020005" ref="GAL 1:20!5" NormalizedForm="ἰδοὺ" Person="Second" Mood="Imperative" Tense="Aorist" Number="Singular" FunctionalTag="V-2AMM-2S" Type="" FormalTag="V-2AMM-2S" Voice="Middle" Gloss="behold" SubjRef="n48001011004" Frame="A0:n48001011004" LexDomain="091002" LN="91.10" status="mapped">ἰδοὺ</Node>
@@ -5318,7 +5323,7 @@
             </Node>
           </Node>
         </Node>
-        <Node Id="2.11" Cat="CL" Start="2" End="4" Rule="Np2CL" Head="0" HasDet="True" ClType="Minor" nodeId="480030160130031" Length="3">
+        <Node Id="2.11" Cat="CL" Start="2" End="4" Rule="Np2CL" Head="0" HasDet="True" nodeId="480030160130031" Length="3">
           <Node Id="2.12" Cat="np" Start="2" End="4" Rule="ConjNp" Head="1" HasDet="True" nodeId="480030160130030" Length="3">
             <Node Id="2.13" Cat="conj" Start="2" End="2" StrongNumber="2532" English="and" UnicodeLemma="καί" Unicode="Καὶ" Mandarin="和" Language="G" morphId="48003016013" nodeId="480030160130010" xml:id="n48003016013" ref="GAL 3:16!13" NormalizedForm="Καὶ" FunctionalTag="CONJ" Type="" FormalTag="CONJ" Gloss="and" LexDomain="089017" LN="89.92" status="mapped">Καὶ</Node>
             <Node Id="2.14" Cat="np" Start="3" End="4" Rule="DetNP" Head="1" HasDet="True" nodeId="480030160140020" Length="2">
@@ -5364,7 +5369,7 @@
             </Node>
           </Node>
         </Node>
-        <Node Id="2.39" Cat="CL" Start="12" End="15" Rule="Np2CL" Head="0" HasDet="True" ClType="Minor" nodeId="480030160230041" Length="4">
+        <Node Id="2.39" Cat="CL" Start="12" End="15" Rule="Np2CL" Head="0" HasDet="True" nodeId="480030160230041" Length="4">
           <Node Id="2.40" Cat="np" Start="12" End="15" Rule="ConjNp" Head="1" HasDet="True" nodeId="480030160230040" Length="4">
             <Node Id="2.41" Cat="conj" Start="12" End="12" StrongNumber="2532" English="and" UnicodeLemma="καί" Unicode="Καὶ" Mandarin="和" Language="G" morphId="48003016023" nodeId="480030160230010" xml:id="n48003016023" ref="GAL 3:16!23" NormalizedForm="Καὶ" FunctionalTag="CONJ" Type="" FormalTag="CONJ" Gloss="and" LexDomain="089017" LN="89.92" status="mapped">Καὶ</Node>
             <Node Id="2.42" Cat="np" Start="13" End="15" Rule="DetNP" Head="1" HasDet="True" nodeId="480030160240030" Length="3">
