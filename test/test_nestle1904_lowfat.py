@@ -152,6 +152,111 @@ def test_minor_clause_role_aux():
                 f"Expected role=aux on parent of {normalized!r}, got role={parent.get('role')!r}"
 
 
+# Regression tests for projecting-verb / reported-discourse role assignment (internal #10, #14)
+# These pin correct behavior for cases that were affected by local:contains-projecting-verb
+# and local:is-peripheral during development.
+
+def test_reported_speech_gets_role_o():
+    """Clauses that are reported speech/thought complement of a projecting verb must get role=o."""
+    import os
+    from lxml import etree as ET
+    cases = [
+        # (book_file, ref_prefix, first_word_normalized, description)
+        ("01-matthew.xml", "MAT 26:22", "Μήτι",
+         "MAT 26:22 — 'Μήτι ἐγώ εἰμι, Κύριε;' is reported speech of λέγειν"),
+        ("03-luke.xml",    "LUK 5:21",  "τίς",
+         "LUK 5:21 — 'τίς δύναται ἁμαρτίας ἀφεῖναι' is reported thought"),
+        ("03-luke.xml",    "LUK 19:16", "δέκα",
+         "LUK 19:16 — 'ἡ μνᾶ σου δέκα μνᾶς' is reported speech (δέκα is in the role=o clause)"),
+    ]
+    lowfat_dir = os.path.join(os.path.dirname(__file__), "..", "Nestle1904", "lowfat")
+    for book_file, ref_prefix, first_word, desc in cases:
+        tree = ET.parse(os.path.join(lowfat_dir, book_file))
+        # Find the first word of the clause, then walk up to find its role-bearing wg
+        words = tree.xpath(f'//w[@normalized="{first_word}" and starts-with(@ref, "{ref_prefix}")]')
+        assert words, f"No word found for {desc}"
+        w = words[0]
+        el = w.getparent()
+        role_wg = None
+        while el is not None and el.tag != "sentence":
+            if el.tag == "wg" and el.get("role"):
+                role_wg = el
+                break
+            el = el.getparent()
+        assert role_wg is not None, f"No role-bearing wg ancestor found for {desc}"
+        assert role_wg.get("role") == "o", \
+            f"{desc}: expected role=o, got role={role_wg.get('role')!r}"
+
+
+def test_speech_act_verb_not_projected():
+    """Clauses whose main verb IS the speech-act verb must NOT get role=o on their wg.
+    The verb itself projects; it is not the projected content."""
+    import os
+    from lxml import etree as ET
+    cases = [
+        # (book_file, ref_prefix, verb_normalized, description)
+        ("07-1corinthians.xml", "1CO 16:15", "Παρακαλῶ",
+         "1CO 16:15 — 'Παρακαλῶ ὑμᾶς' is the main clause, not projected content"),
+        ("09-galatians.xml",    "GAL 4:21",  "Λέγετε",
+         "GAL 4:21 — 'Λέγετε μοι' is the main clause, not projected content"),
+        ("19-hebrews.xml",      "HEB 13:22", "Παρακαλῶ",
+         "HEB 13:22 — 'Παρακαλῶ ὑμᾶς' is the main clause, not projected content"),
+    ]
+    lowfat_dir = os.path.join(os.path.dirname(__file__), "..", "Nestle1904", "lowfat")
+    for book_file, ref_prefix, verb_norm, desc in cases:
+        tree = ET.parse(os.path.join(lowfat_dir, book_file))
+        words = tree.xpath(f'//w[@normalized="{verb_norm}" and starts-with(@ref, "{ref_prefix}")]')
+        assert words, f"No word found for {desc}"
+        w = words[0]
+        el = w.getparent()
+        while el is not None and el.tag != "sentence":
+            if el.tag == "wg" and el.get("role"):
+                assert el.get("role") != "o", \
+                    f"{desc}: main-clause verb must not have role=o, but got role=o on wg rule={el.get('rule')!r}"
+            el = el.getparent()
+
+
+def test_temporal_clause_not_projected():
+    """MAT 7:28 — ὅτε temporal clause after ἐτέλεσεν must get role=adv, not role=o.
+    ἐτελέω does not project discourse; its ὅτε clause is adverbial."""
+    import os
+    from lxml import etree as ET
+    lowfat_path = os.path.join(os.path.dirname(__file__), "..", "Nestle1904", "lowfat", "01-matthew.xml")
+    tree = ET.parse(lowfat_path)
+    # ὅτε at MAT 7:28 — find it by ref prefix
+    words = tree.xpath('//w[@normalized="ὅτε" and starts-with(@ref, "MAT 7:28")]')
+    assert words, "No ὅτε word found at MAT 7:28"
+    w = words[0]
+    el = w.getparent()
+    while el is not None and el.tag != "sentence":
+        if el.tag == "wg" and el.get("role"):
+            assert el.get("role") != "o", \
+                f"MAT 7:28 ὅτε temporal clause must not have role=o, got role={el.get('role')!r}"
+            break
+        el = el.getparent()
+
+
+def test_mat_1_22_ot_quotation_not_aux():
+    """MAT 1:22 — the ἵνα sub-CL wrapping an OT quotation must NOT get role=aux.
+    The clause contains ἰδοὺ but deeply nested; only a top-level attention-getter
+    in the same constituent should trigger peripheral treatment. (internal #14)"""
+    import os
+    from lxml import etree as ET
+    lowfat_path = os.path.join(os.path.dirname(__file__), "..", "Nestle1904", "lowfat", "01-matthew.xml")
+    tree = ET.parse(lowfat_path)
+    # ἵνα at MAT 1:22 introduces the fulfillment purpose clause
+    words = tree.xpath('//w[@normalized="ἵνα" and starts-with(@ref, "MAT 1:22")]')
+    assert words, "No ἵνα word found at MAT 1:22"
+    w = words[0]
+    el = w.getparent()
+    while el is not None and el.tag != "sentence":
+        if el.tag == "wg" and el.get("role"):
+            assert el.get("role") != "aux", \
+                f"MAT 1:22 ἵνα sub-CL (OT quotation) must not have role=aux — ἰδοὺ is nested too deep"
+            break
+        el = el.getparent()
+
+
 # Regression: length heuristic was stripping final letters into @after (public #76)
 @pytest.mark.parametrize("lowfat_file", __lowfat_files__)
 def test_after_no_alphabetic(lowfat_file):
