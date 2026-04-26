@@ -136,20 +136,85 @@ def test_predication_on_cl_only(lowfat_file):
 
 
 # Minor clauses (ClType=Minor in nodes) must surface as role=aux in lowfat (internal #10)
-# Spot-check: canonical single-word minor clause words must have role=aux on parent wg
+# Spot-check: canonical single-word minor clause words must carry role=aux directly on <w>
 def test_minor_clause_role_aux():
     import os
     from lxml import etree as ET
     lowfat_path = os.path.join(os.path.dirname(__file__), "..", "Nestle1904", "lowfat", "01-matthew.xml")
     tree = ET.parse(lowfat_path)
-    # Σατανᾶ (MAT 4:10), Ῥακά (MAT 5:22), Κύριε (MAT 7:21) — all Np2CL[ClType=Minor]
+    # Σατανᾶ (MAT 4:10), Ῥακά (MAT 5:22) — all Np2CL[ClType=Minor]
     for normalized in ["Σατανᾶ", "Ῥακά"]:
         words = tree.xpath(f'//w[@normalized="{normalized}"]')
         assert words, f"No <w normalized='{normalized}'> found"
         for w in words:
-            parent = w.getparent()
-            assert parent is not None and parent.get("role") == "aux", \
-                f"Expected role=aux on parent of {normalized!r}, got role={parent.get('role')!r}"
+            assert w.get("role") == "aux", \
+                f"Expected role=aux directly on <w normalized='{normalized}'>, got role={w.get('role')!r}"
+
+
+# Single-word constituents must carry @role directly on <w>, not wrapped in <wg> (issue #105)
+@pytest.mark.parametrize("lowfat_file", __lowfat_files__)
+def test_no_single_word_wg(lowfat_file):
+    """No <wg> element should contain exactly one <w>.
+    Single-word constituents carry @role directly on <w>."""
+    offenders = [
+        wg for wg in run_xpath_for_file("//wg", lowfat_file)
+        if len(list(wg.iter("w"))) == 1
+    ]
+    assert not offenders, (
+        f"{len(offenders)} single-word <wg> element(s) in {lowfat_file}: "
+        f"first at rule={offenders[0].attrib.get('rule')!r} "
+        f"ref={list(offenders[0].iter('w'))[0].attrib.get('ref', '?')!r}"
+    )
+
+
+# A <wg> with a single child carries no structural information — the child should
+# absorb the role directly (issue #105 generalisation).
+@pytest.mark.parametrize("lowfat_file", __lowfat_files__)
+def test_no_single_child_wg(lowfat_file):
+    """No <wg> element should have exactly one direct child element (wg or w).
+    Single-constituent *2CL wrappers must be dissolved so the inner element carries
+    the role directly."""
+    offenders = [
+        wg for wg in run_xpath_for_file("//wg", lowfat_file)
+        if len(list(wg)) == 1
+    ]
+    assert not offenders, (
+        f"{len(offenders)} single-child <wg> element(s) in {lowfat_file}: "
+        f"first at rule={offenders[0].attrib.get('rule', offenders[0].attrib.get('Rule'))!r} "
+        f"role={offenders[0].attrib.get('role')!r}"
+    )
+
+
+# Valid @role values on <w> elements (issue #105)
+VALID_WORD_ROLES = {"p", "s", "v", "o", "o2", "adv", "vc", "io", "aux", "oc"}
+
+@pytest.mark.parametrize("lowfat_file", __lowfat_files__)
+def test_w_role_values(lowfat_file):
+    """@role on <w> elements must be a valid clausal role."""
+    for w in run_xpath_for_file("//w[@role]", lowfat_file):
+        assert w.attrib["role"] in VALID_WORD_ROLES, \
+            f"Invalid @role={w.attrib['role']!r} on <w> at {w.attrib.get('ref', '?')}"
+
+
+# Discourse-level labels (topic, tail) and structural markers (ellipsis) must not
+# appear in @role — they are either derivable from tree structure or belong in
+# dedicated discourse annotation (e.g. Levinsohn). (issue #106)
+@pytest.mark.parametrize("lowfat_file", __lowfat_files__)
+def test_no_discourse_labels_in_role(lowfat_file):
+    """@role must not contain discourse-positional labels (topic, tail) or
+    structural-gap markers (ellipsis). These are not syntactic dependency roles."""
+    forbidden = {"topic", "tail", "ellipsis"}
+    offenders = [
+        el for el in run_xpath_for_file("//*[@role]", lowfat_file)
+        if el.attrib["role"] in forbidden
+    ]
+    assert not offenders, (
+        f"{len(offenders)} element(s) with forbidden @role in {lowfat_file}: "
+        + "; ".join(
+            f"<{el.tag} role={el.attrib['role']!r} rule={el.attrib.get('rule', el.attrib.get('Rule', '?'))!r}>"
+            for el in offenders[:3]
+        )
+    )
 
 
 # Regression tests for projecting-verb / reported-discourse role assignment (internal #10, #14)

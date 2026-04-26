@@ -83,7 +83,7 @@ declare variable $group-rules := ('12Np', '2CLaCL', '2CLaCLaCL', '2Np', '2NpaNpa
    attached to the following sibling by local:process-conjunctions. Overlaps
    with $group-rules but excludes bare juxtaposition patterns (NpNpNp…) and
    the ClClCl… stacks that arise from recursive clause complex flattening. :)
-declare variable $conjuncted-structure-rule := ('2CLaCL', '2CLaCLaCL', '2NpaNpaNp', '2PpaPp', '3NpaNp', '4NpaNp', 'ADVaADV', 'AdjpaAdjp', 'AdvpaAdvp', 'CLa2CL', 'CLaCL', 'CLandCL2', 'CLandClClandClandClandCl', 'Conj12CL', 'Conj12Np', 'Conj13CL', 'Conj14CL', 'Conj2Nump', 'Conj2P', 'Conj2Pp', 'Conj2VP', 'Conj3ADV', 'Conj3Adjp', 'Conj3Advp', 'Conj3CL', 'Conj3Np', 'Conj3Pp', 'Conj3VP', 'Conj4CL', 'Conj4Np', 'Conj4Pp', 'Conj5AdjP', 'Conj5CL', 'Conj5Np', 'Conj5Pp', 'Conj6CL', 'Conj6Np', 'Conj6P', 'Conj7CL', 'Conj7Np', 'Conj7Pp', 'Conj8Np', 'Conj9Np', 'ConjNp', 'EitherOr10Np', 'EitherOr3Vp', 'EitherOr4Advp', 'EitherOr4CL', 'EitherOr4Pp', 'EitherOr4Np', 'EitherOr4Vp', 'EitherOr5Vp', 'EitherOr7CL', 'EitherOr8Np', 'EitherOrAdjp', 'EitherOrVp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp', 'NpaNp', 'aAdvpaAdvp', 'aCLaCL', 'aCLaCLaCL', 'aNpaNp', 'aNpaNpaNp', 'aPpaPp', 'aPpaPpaPp');
+declare variable $conjuncted-structure-rule := ('2CLaCL', '2CLaCLaCL', '2NpaNpaNp', '2PpaPp', '3NpaNp', '4NpaNp', 'ADVaADV', 'AdjpaAdjp', 'AdvpaAdvp', 'CLa2CL', 'CLaCL', 'CLandCL2', 'CLandClClandClandClandCl', 'Conj12CL', 'Conj12Np', 'Conj13CL', 'Conj14CL', 'Conj2Nump', 'Conj2P', 'Conj2Pp', 'Conj2VP', 'Conj3ADV', 'Conj3Adjp', 'Conj3Advp', 'Conj3CL', 'Conj3Np', 'Conj3Pp', 'Conj3VP', 'Conj4CL', 'Conj4Np', 'Conj4Pp', 'Conj5AdjP', 'Conj5CL', 'Conj5Np', 'Conj5Pp', 'Conj6CL', 'Conj6Np', 'Conj6P', 'Conj7CL', 'Conj7Np', 'Conj7Pp', 'Conj8Np', 'Conj9Np', 'EitherOr10Np', 'EitherOr3Vp', 'EitherOr4Advp', 'EitherOr4CL', 'EitherOr4Pp', 'EitherOr4Np', 'EitherOr4Vp', 'EitherOr5Vp', 'EitherOr7CL', 'EitherOr8Np', 'EitherOrAdjp', 'EitherOrVp', 'NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp', 'NpaNp', 'aAdvpaAdvp', 'aCLaCL', 'aCLaCLaCL', 'aNpaNp', 'aNpaNpaNp', 'aPpaPp', 'aPpaPpaPp');
 
 (: Auxiliary rules: interjection-nominal combinations where an interjection
    serves as an auxiliary or discourse-level modifier to a nominal phrase. :)
@@ -578,24 +578,39 @@ declare function local:simple-clause($node, $passed-role, $ellipsis-already-proc
 	if (not($ellipsis-already-processed) and $node/@ClType = 'VerbElided') then
 		local:disambiguate-ellipsis($node, $passed-role)
 	else
-		let $fallback-constituent-role := (if (contains($passed-role, 'ellipsis')) then 
+		let $fallback-constituent-role := (if (contains($passed-role, 'ellipsis')) then
 			(:$passed-role:) '' || (if ($debugging-mode) then 'ellipsis' else ()) (: TODO I had 'ellipsis' or '...' here; handle ellipsis + role however the team decides to handle this :)
 			else '') || (if (contains($node/@Rule, '2CL')) then lower-case(substring-before($node/@Rule, '2CL')) else 'err_no_fallback_constituent_role?')
 		let $clause-roles := if (contains($node/@Rule, '-')) then tokenize(lower-case($node/@Rule), '-') else if ($fallback-constituent-role) then $fallback-constituent-role else 'err_no_constituent_role? passed-role: ' || $passed-role
+		let $is-single-word := count($node/descendant::Node[not(@Rule)]) = 1
+		let $is-single-constituent := count($node/element()) = 1
 		return
-			<wg>{
-					local:attributes($node),
-					if ($passed-role = 'apposition') then
-				        attribute junction {$passed-role}
-					else if ($passed-role) then
-						attribute role {$passed-role}
-					else
-						(),
-					for $clause-constituent at $index in $node/element()
-					let $constituent-role := $clause-roles[$index]
-					return
-						local:node($clause-constituent, $constituent-role)
-				}</wg>
+			if ($is-single-word) then
+				(: Single-word *2CL: dissolve wrapper, @rule on <w> records the dissolved rule. :)
+				let $w := $node/element() ! local:node(., $clause-roles[1])
+				return
+					if ($w instance of element(w)) then local:word-with-rule($w, $node/@Rule)
+					else $w
+			else if ($is-single-constituent) then
+				(: Multi-word single-constituent *2CL: dissolve wrapper, inner constituent gets
+				   the effective role. $passed-role (outer context) takes priority over the
+				   fallback constituent role (e.g. 'v' for V2CL, 'p' for P2CL). :)
+				let $effective-role := if ($passed-role) then $passed-role else $clause-roles[1]
+				return $node/element() ! local:node(., $effective-role)
+			else
+				<wg>{
+						local:attributes($node),
+						if ($passed-role = 'apposition') then
+					        attribute junction {$passed-role}
+						else if ($passed-role) then
+							attribute role {$passed-role}
+						else
+							(),
+						for $clause-constituent at $index in $node/element()
+						let $constituent-role := $clause-roles[$index]
+						return
+							local:node($clause-constituent, $constituent-role)
+					}</wg>
 };
  
 declare function local:contains-projecting-verb($node)
@@ -1185,7 +1200,9 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'o' (: by making it an 'o' right now, the entire ClCl2 becomes the object of the verb 'to remember', which is a possible though unlikely analysis in my opinion. :)
 									
 								else if (every $child in $constituent-to-subordinate/Node satisfies $child[(@ClType = "VerbElided" or @Cat = "conj")]) then
-									'ellipsis' || (if ($debugging-mode) then  '_clausecomplex' else ())
+									(: VerbElided coordination — structural gap, role not determinable from syntax alone;
+									   assign no role rather than a misleading label :)
+									''
 								else if ($subordinate-first-word = $relative-nominals) then
 									'apposition'
 								
@@ -1195,15 +1212,10 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							else if (local:is-simple-clause-rule($constituent-to-subordinate/@Rule)) then
 								(: there are several cases where a simple clause will be subordinated :)
 								
-								(: genitive absolutes :)
+								(: genitive absolutes — adverbial regardless of pre/post position;
+								   discourse position (topic/tail) is out of scope for the syntax layer :)
 								if (some $verb in $constituent-to-subordinate/Node[@Cat = ('V', 'VC')] satisfies $verb//@Mood = 'Participle') then
-									if ($constituent-to-raise/@Rule = ($complex-clause-rule, $group-rules)) then
-										if ($constituent-to-raise << $constituent-to-subordinate) then
-											'tail'
-										else
-											'topic'
-									else
-										'adv' || (if ($debugging-mode) then  '__gen. abs.' else ())
+									'adv' || (if ($debugging-mode) then  '__gen. abs.' else ())
 								
 								(: topicalized relative clause :)
 								else if (local:is-nominalized-clause($constituent-to-subordinate)) then
@@ -1325,7 +1337,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 								) then
 									'o' || (if ($debugging-mode) then  '__grouped' else ())
 								else if ($constituent-to-subordinate/@Rule = 'S2CL') then
-									'ellipsis' || (if ($debugging-mode) then  '__grouped' else ())
+									(: S2CL in a group — subject clause; assign no role rather than a misleading label :)
+									''
 								else if ($constituent-to-subordinate/@Rule = 'ADV2CL') then
 									'adv' || (if ($debugging-mode) then  '__grouped' else ())
 								else if ($constituent-to-subordinate/@Rule = $atomic-structure-rule) then
@@ -1388,7 +1401,16 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 							if ($constituent-to-raise/@Rule = $atomic-structure-rule) then
 								local:node($constituent-to-raise, ())
 							else
-								local:node($constituent-to-raise, ())/element()
+								let $head-result := local:node($constituent-to-raise, ())
+								return
+									if ($head-result instance of element(w)) then
+										(: Single-word raised head (dissolved *2CL): keep the <w> directly.
+										   Before issue #105 fix, this was always a <wg> and /element()
+										   inlined its children. Now that single-word *2CL dissolves to
+										   <w>, we must not apply /element() or the word is discarded. :)
+										$head-result
+									else
+										$head-result/element()
 						let $processed-subordinate := 
 							if ($constituent-to-subordinate/@Rule = 'V2CL' and $disambiguated-subordinate-role = 'aux' and not(count($node/child::Node[@Rule = $single-constituent-clause-rule]) eq 2)) then 
 								local:node($constituent-to-subordinate/Node, $disambiguated-subordinate-role)
@@ -1610,8 +1632,9 @@ declare function local:process-single-constituent-clause($node, $passed-role)
 		* V2CL - Done
 	:)
 	let $internal-role := lower-case(substring-before($node/@Rule, '2CL'))
+	let $is-single-word := count($node/descendant::Node[not(@Rule)]) = 1
 	return
-	
+
 	if ($node/@ClType = 'VerbElided') then
 		local:disambiguate-ellipsis($node, $passed-role)
 	else switch ($node/@Rule)
@@ -1619,33 +1642,44 @@ declare function local:process-single-constituent-clause($node, $passed-role)
 		case 'S2CL'
 		case 'O2CL'
 		case 'ADV2CL'
-			return <wg>{
-						attribute class {'cl'},
-						attribute role {'aux'|| (if ($debugging-mode) then  '_aux-single-constituent-clause1' else ())}, (: should this sometimes be the passed role?? :)
-						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
-						$node/element() ! local:node(., ((if ($debugging-mode) then 'err_' || $internal-role || '_test' else ())))
-					}</wg>
+			return
+				(: Dissolve wrapper for both single-word and multi-word cases (issue #105).
+				   Inner constituent carries role='aux'. For single words, @rule records the
+				   dissolved *2CL rule to aid debugging. :)
+				let $dissolved := $node/element() ! local:node(., 'aux')
+				return
+					if ($is-single-word and $dissolved instance of element(w)) then
+						local:word-with-rule($dissolved, $node/@Rule)
+					else
+						$dissolved
 		case 'VC2CL'
-			return <wg>{
-						attribute class {'cl'},
-						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
-						$node/element() ! local:node(., 'vc' || (if ($debugging-mode) then  'err_' || $internal-role || '_test' else ()))
-					}</wg>
+			return
+				(: Dissolve wrapper for both single-word and multi-word cases (issue #105). :)
+				let $dissolved := $node/element() ! local:node(., 'vc')
+				return
+					if ($is-single-word and $dissolved instance of element(w)) then
+						local:word-with-rule($dissolved, $node/@Rule)
+					else
+						$dissolved
 		case 'PP2CL'
-			return 
-				$node/element() ! local:node(., 'adv' || (if ($debugging-mode) then  '_pp2cl' else ()))	
+			return
+				$node/element() ! local:node(., 'adv' || (if ($debugging-mode) then  '_pp2cl' else ()))
 		case 'Intj2CL'
 		case 'Np2CL'
-			return 
+			return
 				if (
 					$node/descendant::Node/@Case="Vocative"
 					or $node/@ClType = 'Minor'
 				) then
-					<wg>{
-						attribute role {'aux'},
-						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
-						$node/element() ! local:node(., 'aux' || (if ($debugging-mode) then  '__intj2cl or np2cl' else ()))
-					}</wg>
+					(: Dissolve wrapper for both single-word and multi-word cases (issue #105).
+					   Inner constituent carries role='aux'. For single words, @rule records the
+					   dissolved *2CL rule to aid debugging. :)
+					let $dissolved := $node/element() ! local:node(., 'aux')
+					return
+						if ($is-single-word and $dissolved instance of element(w)) then
+							local:word-with-rule($dissolved, $node/@Rule)
+						else
+							$dissolved
 
 				else if (
 					local:contains-projecting-verb($node/preceding-sibling::Node)
@@ -1837,6 +1871,21 @@ declare function local:word($node, $passed-role)
                         string($wordContentWithoutBrackets)
                     }
                 </w>
+};
+
+(: Attach a @rule attribute to a dissolved <w> element, recording which *2CL wrapper was
+   eliminated. Preserves all existing attributes and content; @rule is inserted after @role
+   so the most semantically useful attributes appear first in the output.
+   Issue #105: only called for single-word *2CL nodes that bypass the <wg> wrapper. :)
+declare function local:word-with-rule($w as element(w), $source-rule as xs:string) as element(w)
+{
+    element w {
+        $w/@role,
+        $w/@junction,
+        attribute rule {lower-case($source-rule)},
+        $w/@*[not(name() = ('role', 'junction'))],
+        $w/node()
+    }
 };
 
 declare function local:node-type($node as element())
