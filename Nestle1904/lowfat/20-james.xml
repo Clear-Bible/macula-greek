@@ -5,7 +5,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:1">JAS 1:1</milestone> Ἰάκωβος Θεοῦ καὶ Κυρίου Ἰησοῦ Χριστοῦ δοῦλος ταῖς δώδεκα φυλαῖς ταῖς ἐν τῇ Διασπορᾷ χαίρειν.</p>
-      <wg class="cl" rule="S-IO-O">
+      <wg class="cl" rule="S-IO-O" predication="elided">
          <wg type="apposition" class="np" rule="Np-Appos" role="s">
             <w ref="JAS 1:1!1"
                after=" "
@@ -266,7 +266,7 @@
          <milestone unit="verse" id="JAS 1:2">JAS 1:2</milestone> 
          <milestone unit="verse" id="JAS 1:3">JAS 1:3</milestone> Πᾶσαν χαρὰν ἡγήσασθε, ἀδελφοί μου, ὅταν πειρασμοῖς περιπέσητε ποικίλοις, γινώσκοντες ὅτι τὸ δοκίμιον ὑμῶν τῆς πίστεως κατεργάζεται ὑπομονήν.</p>
       <wg Rule="ClCl2" class="cl" nodeId="590010020040180">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="NPofNP" role="aux">
                <w ref="JAS 1:2!4"
                   after=" "
@@ -1442,186 +1442,186 @@
             ln="89.23"
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
-         <wg Rule="ClCl" class="cl" nodeId="590010070010190">
-            <w role="adv"
-               ref="JAS 1:7!1"
-               after=" "
-               class="adv"
-               xml:id="n59001007001"
-               lemma="μή"
-               normalized="μή"
-               strong="3361"
-               gloss="Not"
-               morph="PRT-N"
-               unicode="μὴ">μὴ</w>
-            <w role="v"
-               ref="JAS 1:7!3"
-               after=" "
-               class="verb"
-               xml:id="n59001007003"
-               lemma="οἴομαι"
-               normalized="οἰέσθω"
-               strong="3633"
-               number="singular"
-               person="third"
-               tense="present"
-               voice="middlepassive"
-               mood="imperative"
-               gloss="let suppose"
-               domain="031005"
-               ln="31.29"
-               morph="V-PNM-3S"
-               unicode="οἰέσθω"
-               frame="A0:n59001007005">οἰέσθω</w>
-            <wg class="np" articular="true" rule="NP-Demo" role="s">
-               <wg class="np" articular="true" rule="DetNP">
-                  <w ref="JAS 1:7!4"
-                     after=" "
-                     class="det"
-                     xml:id="n59001007004"
-                     lemma="ὁ"
-                     normalized="ὁ"
-                     strong="3588"
-                     number="singular"
-                     gender="masculine"
-                     case="nominative"
-                     gloss="the"
-                     domain="092004"
-                     ln="92.24"
-                     morph="T-NSM"
-                     unicode="ὁ">ὁ</w>
-                  <w ref="JAS 1:7!5"
-                     after=" "
-                     class="noun"
-                     type="common"
-                     xml:id="n59001007005"
-                     lemma="ἄνθρωπος"
-                     normalized="ἄνθρωπος"
-                     strong="444"
-                     number="singular"
-                     gender="masculine"
-                     case="nominative"
-                     gloss="man"
-                     domain="009001"
-                     ln="9.1"
-                     morph="N-NSM"
-                     unicode="ἄνθρωπος">ἄνθρωπος</w>
-               </wg>
-               <w ref="JAS 1:7!6"
+         <wg type="group" rule="ClCl">
+            <wg Rule="ClCl" class="cl" nodeId="590010070010110">
+               <w role="adv"
+                  ref="JAS 1:7!1"
                   after=" "
-                  class="pron"
-                  type="demonstrative"
-                  xml:id="n59001007006"
-                  lemma="ἐκεῖνος"
-                  normalized="ἐκεῖνος"
-                  strong="1565"
+                  class="adv"
+                  xml:id="n59001007001"
+                  lemma="μή"
+                  normalized="μή"
+                  strong="3361"
+                  gloss="Not"
+                  morph="PRT-N"
+                  unicode="μὴ">μὴ</w>
+               <w role="v"
+                  ref="JAS 1:7!3"
+                  after=" "
+                  class="verb"
+                  xml:id="n59001007003"
+                  lemma="οἴομαι"
+                  normalized="οἰέσθω"
+                  strong="3633"
                   number="singular"
-                  gender="masculine"
-                  case="nominative"
-                  gloss="that"
-                  domain="092007"
-                  ln="92.30"
-                  morph="D-NSM"
-                  unicode="ἐκεῖνος"
-                  referent="n59001006009">ἐκεῖνος</w>
-            </wg>
-            <wg rule="that-VP" role="o">
-               <w ref="JAS 1:7!7"
-                  after=" "
-                  class="conj"
-                  xml:id="n59001007007"
-                  lemma="ὅτι"
-                  normalized="ὅτι"
-                  strong="3754"
-                  gloss="that"
-                  morph="CONJ"
-                  unicode="ὅτι">ὅτι</w>
-               <wg class="cl" rule="V-O-ADV">
-                  <w role="v"
-                     ref="JAS 1:7!8"
-                     after=" "
-                     class="verb"
-                     xml:id="n59001007008"
-                     lemma="λαμβάνω"
-                     normalized="λήμψεται"
-                     strong="2983"
-                     number="singular"
-                     person="third"
-                     tense="future"
-                     voice="middle"
-                     mood="indicative"
-                     gloss="he will receive"
-                     domain="057009"
-                     ln="57.125"
-                     morph="V-FDI-3S"
-                     unicode="λήμψεταί"
-                     frame="A0:n59001007005 A1:n59001007009"
-                     subjref="n59001007005">λήμψεταί</w>
-                  <w role="o"
-                     ref="JAS 1:7!9"
+                  person="third"
+                  tense="present"
+                  voice="middlepassive"
+                  mood="imperative"
+                  gloss="let suppose"
+                  domain="031005"
+                  ln="31.29"
+                  morph="V-PNM-3S"
+                  unicode="οἰέσθω"
+                  frame="A0:n59001007005">οἰέσθω</w>
+               <wg class="np" articular="true" rule="NP-Demo" role="s">
+                  <wg class="np" articular="true" rule="DetNP">
+                     <w ref="JAS 1:7!4"
+                        after=" "
+                        class="det"
+                        xml:id="n59001007004"
+                        lemma="ὁ"
+                        normalized="ὁ"
+                        strong="3588"
+                        number="singular"
+                        gender="masculine"
+                        case="nominative"
+                        gloss="the"
+                        domain="092004"
+                        ln="92.24"
+                        morph="T-NSM"
+                        unicode="ὁ">ὁ</w>
+                     <w ref="JAS 1:7!5"
+                        after=" "
+                        class="noun"
+                        type="common"
+                        xml:id="n59001007005"
+                        lemma="ἄνθρωπος"
+                        normalized="ἄνθρωπος"
+                        strong="444"
+                        number="singular"
+                        gender="masculine"
+                        case="nominative"
+                        gloss="man"
+                        domain="009001"
+                        ln="9.1"
+                        morph="N-NSM"
+                        unicode="ἄνθρωπος">ἄνθρωπος</w>
+                  </wg>
+                  <w ref="JAS 1:7!6"
                      after=" "
                      class="pron"
-                     type="indefinite"
-                     xml:id="n59001007009"
-                     lemma="τὶς"
-                     normalized="τι"
-                     strong="5100"
+                     type="demonstrative"
+                     xml:id="n59001007006"
+                     lemma="ἐκεῖνος"
+                     normalized="ἐκεῖνος"
+                     strong="1565"
                      number="singular"
-                     gender="neuter"
-                     case="accusative"
-                     gloss="anything"
-                     morph="X-ASN"
-                     unicode="τι">τι</w>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
-                     <w ref="JAS 1:7!10"
+                     gender="masculine"
+                     case="nominative"
+                     gloss="that"
+                     domain="092007"
+                     ln="92.30"
+                     morph="D-NSM"
+                     unicode="ἐκεῖνος"
+                     referent="n59001006009">ἐκεῖνος</w>
+               </wg>
+               <wg rule="that-VP" role="o">
+                  <w ref="JAS 1:7!7"
+                     after=" "
+                     class="conj"
+                     xml:id="n59001007007"
+                     lemma="ὅτι"
+                     normalized="ὅτι"
+                     strong="3754"
+                     gloss="that"
+                     morph="CONJ"
+                     unicode="ὅτι">ὅτι</w>
+                  <wg class="cl" rule="V-O-ADV">
+                     <w role="v"
+                        ref="JAS 1:7!8"
                         after=" "
-                        class="prep"
-                        xml:id="n59001007010"
-                        lemma="παρά"
-                        normalized="παρά"
-                        strong="3844"
-                        gloss="from"
-                        morph="PREP"
-                        unicode="παρὰ">παρὰ</w>
-                     <wg class="np" articular="true" rule="DetNP">
-                        <w ref="JAS 1:7!11"
+                        class="verb"
+                        xml:id="n59001007008"
+                        lemma="λαμβάνω"
+                        normalized="λήμψεται"
+                        strong="2983"
+                        number="singular"
+                        person="third"
+                        tense="future"
+                        voice="middle"
+                        mood="indicative"
+                        gloss="he will receive"
+                        domain="057009"
+                        ln="57.125"
+                        morph="V-FDI-3S"
+                        unicode="λήμψεταί"
+                        frame="A0:n59001007005 A1:n59001007009"
+                        subjref="n59001007005">λήμψεταί</w>
+                     <w role="o"
+                        ref="JAS 1:7!9"
+                        after=" "
+                        class="pron"
+                        type="indefinite"
+                        xml:id="n59001007009"
+                        lemma="τὶς"
+                        normalized="τι"
+                        strong="5100"
+                        number="singular"
+                        gender="neuter"
+                        case="accusative"
+                        gloss="anything"
+                        morph="X-ASN"
+                        unicode="τι">τι</w>
+                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                        <w ref="JAS 1:7!10"
                            after=" "
-                           class="det"
-                           xml:id="n59001007011"
-                           lemma="ὁ"
-                           normalized="τοῦ"
-                           strong="3588"
-                           number="singular"
-                           gender="masculine"
-                           case="genitive"
-                           gloss="the"
-                           domain="092004"
-                           ln="92.24"
-                           morph="T-GSM"
-                           unicode="τοῦ">τοῦ</w>
-                        <w ref="JAS 1:7!12"
-                           after=","
-                           class="noun"
-                           type="common"
-                           xml:id="n59001007012"
-                           lemma="κύριος"
-                           normalized="Κυρίου"
-                           strong="2962"
-                           number="singular"
-                           gender="masculine"
-                           case="genitive"
-                           gloss="Lord"
-                           domain="012001"
-                           ln="12.9"
-                           morph="N-GSM"
-                           unicode="Κυρίου,">Κυρίου</w>
+                           class="prep"
+                           xml:id="n59001007010"
+                           lemma="παρά"
+                           normalized="παρά"
+                           strong="3844"
+                           gloss="from"
+                           morph="PREP"
+                           unicode="παρὰ">παρὰ</w>
+                        <wg class="np" articular="true" rule="DetNP">
+                           <w ref="JAS 1:7!11"
+                              after=" "
+                              class="det"
+                              xml:id="n59001007011"
+                              lemma="ὁ"
+                              normalized="τοῦ"
+                              strong="3588"
+                              number="singular"
+                              gender="masculine"
+                              case="genitive"
+                              gloss="the"
+                              domain="092004"
+                              ln="92.24"
+                              morph="T-GSM"
+                              unicode="τοῦ">τοῦ</w>
+                           <w ref="JAS 1:7!12"
+                              after=","
+                              class="noun"
+                              type="common"
+                              xml:id="n59001007012"
+                              lemma="κύριος"
+                              normalized="Κυρίου"
+                              strong="2962"
+                              number="singular"
+                              gender="masculine"
+                              case="genitive"
+                              gloss="Lord"
+                              domain="012001"
+                              ln="12.9"
+                              morph="N-GSM"
+                              unicode="Κυρίου,">Κυρίου</w>
+                        </wg>
                      </wg>
                   </wg>
                </wg>
             </wg>
-            <wg class="cl"
-                rule="S-P-ADV"
-                role="err__subordinated simple cl.,&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;parent rule: ClCl&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;head rule: ClCl&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;subord. rule: S-P-ADV&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;id: parent has projecting verb: false590010070010190">
+            <wg class="cl" rule="S-P-ADV" predication="verbless">
                <wg class="np" rule="NpAdjp" role="s">
                   <w ref="JAS 1:8!1"
                      after=" "
@@ -2065,7 +2065,7 @@
                               ln="64.12"
                               morph="ADV"
                               unicode="ὡς">ὡς</w>
-                           <wg class="cl" rule="S2CL">
+                           <wg class="cl" rule="S2CL" predication="elided">
                               <wg class="np" rule="NPofNP" role="s">
                                  <w ref="JAS 1:10!10"
                                     after=" "
@@ -3748,7 +3748,7 @@
             unicode="πλανᾶσθε,"
             frame="A1:n59001016003"
             subjref="n59001016003">πλανᾶσθε</w>
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="NpAdjp" role="aux">
                <wg class="np" rule="NPofNP">
                   <w ref="JAS 1:16!3"
@@ -4456,7 +4456,7 @@
             unicode="Ἴστε,"
             frame="A0:n59001019002"
             subjref="n59001019002">Ἴστε</w>
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="NpAdjp" role="aux">
                <wg class="np" rule="NPofNP">
                   <w ref="JAS 1:19!2"
@@ -4645,7 +4645,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" rule="P-ADV">
+            <wg class="cl" rule="P-ADV" predication="verbless">
                <w role="p"
                   ref="JAS 1:19!13"
                   after=" "
@@ -4714,7 +4714,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" rule="P-ADV">
+            <wg class="cl" rule="P-ADV" predication="verbless">
                <w role="p"
                   ref="JAS 1:19!17"
                   after=" "
@@ -5303,7 +5303,7 @@
                   gloss="and"
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
-               <wg class="cl" rule="ADV-P-ADV-ADV">
+               <wg class="cl" rule="ADV-P-ADV-ADV" predication="verbless">
                   <w role="adv"
                      ref="JAS 1:22!6"
                      after=" "
@@ -5495,7 +5495,7 @@
                               gloss="and"
                               morph="CONJ"
                               unicode="καὶ">καὶ</w>
-                           <wg class="cl" rule="ADV-P">
+                           <wg class="cl" rule="ADV-P" predication="verbless">
                               <w role="adv"
                                  ref="JAS 1:23!8"
                                  after=" "
@@ -5914,7 +5914,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590010250010240">
-            <wg articular="true" rule="Np2CL">
+            <wg role="aux" articular="true" rule="Np2CL">
                <wg articular="true" rule="DetCL" role="aux">
                   <w ref="JAS 1:25!1"
                      after=" "
@@ -7030,7 +7030,7 @@
       <p>
          <milestone unit="verse" id="JAS 2:1">JAS 2:1</milestone> Ἀδελφοί μου, μὴ ἐν προσωπολημψίαις ἔχετε τὴν πίστιν τοῦ Κυρίου ἡμῶν Ἰησοῦ Χριστοῦ τῆς δόξης.</p>
       <wg Rule="ClCl2" class="cl" nodeId="590020010010150">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="NPofNP" role="aux">
                <w ref="JAS 2:1!1"
                   after=" "
@@ -8231,7 +8231,7 @@
             unicode="Ἀκούσατε,"
             frame="A0:n59002005002"
             subjref="n59002005002">Ἀκούσατε</w>
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="NpAdjp" role="aux">
                <wg class="np" rule="NPofNP">
                   <w ref="JAS 2:5!2"
@@ -9290,7 +9290,7 @@
                                     ln="64.12"
                                     morph="ADV"
                                     unicode="ὡς">ὡς</w>
-                                 <wg class="cl" rule="O2CL">
+                                 <wg class="cl" rule="O2CL" predication="elided">
                                     <w role="o"
                                        ref="JAS 2:8!14"
                                        after=","
@@ -9521,7 +9521,7 @@
                      ln="64.12"
                      morph="ADV"
                      unicode="ὡς">ὡς</w>
-                  <wg class="cl" rule="S2CL">
+                  <wg class="cl" rule="S2CL" predication="elided">
                      <w role="s"
                         ref="JAS 2:9!11"
                         after="."
@@ -10291,7 +10291,7 @@
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
          <wg type="group" rule="ClCl">
-            <wg class="cl" rule="S-P-ADV">
+            <wg class="cl" rule="S-P-ADV" predication="verbless">
                <wg class="np" articular="true" rule="DetNP" role="s">
                   <w ref="JAS 2:13!1"
                      after=" "
@@ -10471,7 +10471,7 @@
       <p>
          <milestone unit="verse" id="JAS 2:14">JAS 2:14</milestone> Τί τὸ ὄφελος, ἀδελφοί μου, ἐὰν πίστιν λέγῃ τις ἔχειν ἔργα δὲ μὴ ἔχῃ;</p>
       <wg Rule="ClCl2" class="cl" nodeId="590020140040140">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="NPofNP" role="aux">
                <w ref="JAS 2:14!4"
                   after=" "
@@ -11097,56 +11097,58 @@
                                  referent="n59002014004">ὑμῶν</w>
                            </wg>
                         </wg>
-                        <wg Rule="ClCl" class="cl" nodeId="590020160070060" role="o">
-                           <w role="v"
-                              ref="JAS 2:16!7"
-                              after=" "
-                              class="verb"
-                              xml:id="n59002016007"
-                              lemma="ὑπάγω"
-                              normalized="Ὑπάγετε"
-                              strong="5217"
-                              number="plural"
-                              person="second"
-                              tense="present"
-                              voice="active"
-                              mood="imperative"
-                              gloss="Go"
-                              domain="015004"
-                              ln="15.35 15.52"
-                              morph="V-PAM-2P"
-                              unicode="Ὑπάγετε"
-                              frame="A0:n59002015002;n59002015004"
-                              subjref="n59002015002 n59002015004">Ὑπάγετε</w>
-                           <wg class="pp" rule="PrepNp" role="adv">
-                              <w ref="JAS 2:16!8"
+                        <wg type="group" rule="ClCl" role="o2">
+                           <wg class="cl" rule="V-ADV">
+                              <w role="v"
+                                 ref="JAS 2:16!7"
                                  after=" "
-                                 class="prep"
-                                 xml:id="n59002016008"
-                                 lemma="ἐν"
-                                 normalized="ἐν"
-                                 strong="1722"
-                                 gloss="in"
-                                 domain="013001"
-                                 ln="13.8"
-                                 morph="PREP"
-                                 unicode="ἐν">ἐν</w>
-                              <w ref="JAS 2:16!9"
-                                 after=","
-                                 class="noun"
-                                 type="common"
-                                 xml:id="n59002016009"
-                                 lemma="εἰρήνη"
-                                 normalized="εἰρήνῃ"
-                                 strong="1515"
-                                 number="singular"
-                                 gender="feminine"
-                                 case="dative"
-                                 gloss="peace"
-                                 domain="022007 025021"
-                                 ln="22.42 25.248"
-                                 morph="N-DSF"
-                                 unicode="εἰρήνῃ,">εἰρήνῃ</w>
+                                 class="verb"
+                                 xml:id="n59002016007"
+                                 lemma="ὑπάγω"
+                                 normalized="Ὑπάγετε"
+                                 strong="5217"
+                                 number="plural"
+                                 person="second"
+                                 tense="present"
+                                 voice="active"
+                                 mood="imperative"
+                                 gloss="Go"
+                                 domain="015004"
+                                 ln="15.35 15.52"
+                                 morph="V-PAM-2P"
+                                 unicode="Ὑπάγετε"
+                                 frame="A0:n59002015002;n59002015004"
+                                 subjref="n59002015002 n59002015004">Ὑπάγετε</w>
+                              <wg class="pp" rule="PrepNp" role="adv">
+                                 <w ref="JAS 2:16!8"
+                                    after=" "
+                                    class="prep"
+                                    xml:id="n59002016008"
+                                    lemma="ἐν"
+                                    normalized="ἐν"
+                                    strong="1722"
+                                    gloss="in"
+                                    domain="013001"
+                                    ln="13.8"
+                                    morph="PREP"
+                                    unicode="ἐν">ἐν</w>
+                                 <w ref="JAS 2:16!9"
+                                    after=","
+                                    class="noun"
+                                    type="common"
+                                    xml:id="n59002016009"
+                                    lemma="εἰρήνη"
+                                    normalized="εἰρήνῃ"
+                                    strong="1515"
+                                    number="singular"
+                                    gender="feminine"
+                                    case="dative"
+                                    gloss="peace"
+                                    domain="022007 025021"
+                                    ln="22.42 25.248"
+                                    morph="N-DSF"
+                                    unicode="εἰρήνῃ,">εἰρήνῃ</w>
+                              </wg>
                            </wg>
                            <wg rule="CLaCL">
                               <wg class="cl" rule="V2CL">
@@ -12308,7 +12310,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590020200040130">
-            <wg rule="Np2CL">
+            <wg role="aux" rule="Np2CL">
                <wg class="np" rule="intjNP" role="aux">
                   <w ref="JAS 2:20!4"
                      after=" "
@@ -12531,7 +12533,7 @@
       <p>
          <milestone unit="verse" id="JAS 2:21">JAS 2:21</milestone> Ἀβραὰμ ὁ πατὴρ ἡμῶν οὐκ ἐξ ἔργων ἐδικαιώθη, ἀνενέγκας Ἰσαὰκ τὸν υἱὸν αὐτοῦ ἐπὶ τὸ θυσιαστήριον;</p>
       <wg Rule="ClCl2" class="cl" nodeId="590020210010160">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg type="apposition" class="np" rule="Np-Appos" role="aux">
                <w ref="JAS 2:21!1"
                   after=" "
@@ -13531,7 +13533,7 @@
                      gloss="and"
                      morph="CONJ"
                      unicode="καὶ">καὶ</w>
-                  <wg class="cl" rule="ADV-ADV-ADV">
+                  <wg class="cl" rule="ADV-ADV-ADV" predication="elided">
                      <w role="adv"
                         ref="JAS 2:24!8"
                         after=" "
@@ -14134,7 +14136,7 @@
       <p>
          <milestone unit="verse" id="JAS 3:1">JAS 3:1</milestone> Μὴ πολλοὶ διδάσκαλοι γίνεσθε, ἀδελφοί μου, εἰδότες ὅτι μεῖζον κρίμα λημψόμεθα.</p>
       <wg Rule="ClCl2" class="cl" nodeId="590030010050110">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="NPofNP" role="aux">
                <w ref="JAS 3:1!5"
                   after=" "
@@ -15664,7 +15666,7 @@
             unicode="καὶ">καὶ</w>
          <wg type="group" rule="ClCl">
             <wg type="group" rule="ClCl">
-               <wg class="cl" rule="S-P">
+               <wg class="cl" rule="S-P" predication="verbless">
                   <wg class="np" articular="true" rule="DetNP" role="s">
                      <w ref="JAS 3:6!2"
                         after=" "
@@ -15716,7 +15718,7 @@
                      morph="N-NSN"
                      unicode="πῦρ,">πῦρ</w>
                </wg>
-               <wg class="cl" articular="true" rule="P2CL">
+               <wg class="cl" articular="true" rule="P2CL" predication="verbless">
                   <wg class="np" articular="true" rule="DetNP" role="p">
                      <w ref="JAS 3:6!5"
                         after=" "
@@ -15907,7 +15909,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg class="cl" articular="true" rule="P2CL">
+               <wg class="cl" articular="true" rule="P2CL" predication="verbless">
                   <wg articular="true" rule="DetCL" role="p">
                      <w ref="JAS 3:6!16"
                         after=" "
@@ -16596,7 +16598,7 @@
                            unicode="ἀνθρώπων·">ἀνθρώπων</w>
                      </wg>
                   </wg>
-                  <wg class="cl" rule="P2CL">
+                  <wg class="cl" rule="P2CL" predication="verbless">
                      <wg type="group" rule="3Adjp" role="p">
                         <w ref="JAS 3:8!8"
                            after=" "
@@ -17138,7 +17140,7 @@
       <p>
          <milestone unit="verse" id="JAS 3:10">JAS 3:10</milestone> οὐ χρή, ἀδελφοί μου, ταῦτα οὕτως γίνεσθαι.</p>
       <wg Rule="ClCl2" class="cl" nodeId="590030100110070">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="NPofNP" role="aux">
                <w ref="JAS 3:10!11"
                   after=" "
@@ -17473,7 +17475,7 @@
       <p>
          <milestone unit="verse" id="JAS 3:12">JAS 3:12</milestone> μὴ δύναται, ἀδελφοί μου, συκῆ ἐλαίας ποιῆσαι ἢ ἄμπελος σῦκα;</p>
       <wg Rule="ClCl2" class="cl" nodeId="590030120030100">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="NPofNP" role="aux">
                <w ref="JAS 3:12!3"
                   after=" "
@@ -17609,7 +17611,7 @@
                   gloss="Or"
                   morph="PRT"
                   unicode="ἢ">ἢ</w>
-               <wg class="cl" rule="S-O">
+               <wg class="cl" rule="S-O" predication="elided">
                   <w role="s"
                      ref="JAS 3:12!9"
                      after=" "
@@ -17739,7 +17741,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:13">JAS 3:13</milestone> Τίς σοφὸς καὶ ἐπιστήμων ἐν ὑμῖν;</p>
-      <wg class="cl" rule="S-P-ADV">
+      <wg class="cl" rule="S-P-ADV" predication="verbless">
          <w role="s"
             ref="JAS 3:13!1"
             after=" "
@@ -18037,7 +18039,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590030140010170">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" role="o">
                <w ref="JAS 3:14!1"
                   after=" "
                   class="conj"
@@ -18444,7 +18446,7 @@
             ln="89.125"
             morph="CONJ"
             unicode="ἀλλὰ">ἀλλὰ</w>
-         <wg class="cl" rule="P2CL">
+         <wg class="cl" rule="P2CL" predication="verbless">
             <wg type="group" rule="3Adjp" role="p">
                <w ref="JAS 3:15!9"
                   after=","
@@ -18513,7 +18515,7 @@
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
          <wg type="group" rule="ClCl2">
-            <wg class="cl" rule="P-S">
+            <wg class="cl" rule="P-S" predication="verbless">
                <w role="p"
                   ref="JAS 3:16!1"
                   after=" "
@@ -18574,7 +18576,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="cl" rule="P-S">
+            <wg class="cl" rule="P-S" predication="verbless">
                <w role="p"
                   ref="JAS 3:16!6"
                   after=" "
@@ -18799,7 +18801,7 @@
                   morph="V-PAI-3S"
                   unicode="ἐστιν,">ἐστιν</w>
             </wg>
-            <wg class="cl" rule="ADV-P">
+            <wg class="cl" rule="ADV-P" predication="verbless">
                <w role="adv"
                   ref="JAS 3:17!9"
                   after=" "
@@ -19138,7 +19140,7 @@
       <p>
          <milestone unit="verse" id="JAS 4:1">JAS 4:1</milestone> Πόθεν πόλεμοι καὶ πόθεν μάχαι ἐν ὑμῖν;</p>
       <wg rule="CLaCL">
-         <wg class="cl" rule="P-S">
+         <wg class="cl" rule="P-S" predication="verbless">
             <w role="p"
                ref="JAS 4:1!1"
                after=" "
@@ -19181,7 +19183,7 @@
                gloss="and"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg class="cl" rule="P-S-ADV">
+            <wg class="cl" rule="P-S-ADV" predication="verbless">
                <w role="p"
                   ref="JAS 4:1!4"
                   after=" "
@@ -19258,7 +19260,7 @@
             gloss="[Is it] not"
             morph="PRT-N"
             unicode="οὐκ">οὐκ</w>
-         <wg class="cl" articular="true" rule="P2CL">
+         <wg class="cl" articular="true" rule="P2CL" predication="verbless">
             <wg class="pp" articular="true" rule="AdvPp" role="p">
                <w ref="JAS 4:1!9"
                   after=","
@@ -20042,7 +20044,7 @@
       <p>
          <milestone unit="verse" id="JAS 4:4">JAS 4:4</milestone> μοιχαλίδες, οὐκ οἴδατε ὅτι ἡ φιλία τοῦ κόσμου ἔχθρα τοῦ Θεοῦ ἐστιν;</p>
       <wg Rule="ClCl2" class="cl" nodeId="590040040010120">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <w role="aux"
                ref="JAS 4:4!1"
                after=","
@@ -21333,7 +21335,7 @@
                ln="8.30"
                morph="N-APF"
                unicode="χεῖρας,">χεῖρας</w>
-            <wg rule="Np2CL">
+            <wg role="aux" rule="Np2CL">
                <w role="aux"
                   ref="JAS 4:8!9"
                   after=","
@@ -21401,7 +21403,7 @@
                   ln="26.3"
                   morph="N-APF"
                   unicode="καρδίας,">καρδίας</w>
-               <wg rule="Np2CL">
+               <wg role="aux" rule="Np2CL">
                   <w role="aux"
                      ref="JAS 4:8!13"
                      after="."
@@ -21628,7 +21630,7 @@
                gloss="and"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg class="cl" articular="true" rule="S-ADV">
+            <wg class="cl" articular="true" rule="S-ADV" predication="elided">
                <wg class="np" articular="true" rule="DetNP" role="s">
                   <w ref="JAS 4:9!8"
                      after=" "
@@ -21854,7 +21856,7 @@
             morph="C-GPM"
             unicode="ἀλλήλων,"
             referent="n59004011004">ἀλλήλων</w>
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <w role="aux"
                ref="JAS 4:11!4"
                after="."
@@ -22516,7 +22518,7 @@
                gloss="are"
                morph="V-PAI-2S"
                unicode="εἶ,">εἶ</w>
-            <wg articular="true" rule="Np2CL">
+            <wg role="aux" articular="true" rule="Np2CL">
                <wg articular="true" rule="DetCL" role="aux">
                   <w ref="JAS 4:12!15"
                      after=" "
@@ -22594,660 +22596,665 @@
          <milestone unit="verse" id="JAS 4:13">JAS 4:13</milestone> 
          <milestone unit="verse" id="JAS 4:14">JAS 4:14</milestone> 
          <milestone unit="verse" id="JAS 4:15">JAS 4:15</milestone> Ἄγε νῦν οἱ λέγοντες Σήμερον ἢ αὔριον πορευσόμεθα εἰς τήνδε τὴν πόλιν καὶ ποιήσομεν ἐκεῖ ἐνιαυτὸν καὶ ἐμπορευσόμεθα καὶ κερδήσομεν· οἵτινες οὐκ ἐπίστασθε τῆς αὔριον ποία ἡ ζωὴ ὑμῶν· ἀτμὶς γάρ ἐστε ἡ πρὸς ὀλίγον φαινομένη, ἔπειτα καὶ ἀφανιζομένη· ἀντὶ τοῦ λέγειν ὑμᾶς Ἐὰν ὁ Κύριος θελήσῃ, καὶ ζήσομεν καὶ ποιήσομεν τοῦτο ἢ ἐκεῖνο.</p>
-      <wg Rule="ClCl" class="cl" nodeId="590040130010540">
-         <w role="v"
-            ref="JAS 4:13!1"
-            after=" "
-            class="verb"
-            xml:id="n59004013001"
-            lemma="ἄγω"
-            normalized="Ἄγε"
-            strong="71"
-            number="singular"
-            person="second"
-            tense="present"
-            voice="active"
-            mood="imperative"
-            gloss="Come"
-            domain="091003"
-            ln="91.13"
-            morph="V-PAM-2S"
-            unicode="Ἄγε"
-            frame="A0:n59004013004"
-            subjref="n59004013004">Ἄγε</w>
-         <w role="adv"
-            ref="JAS 4:13!2"
-            after=" "
-            class="adv"
-            xml:id="n59004013002"
-            lemma="νῦν"
-            normalized="νῦν"
-            strong="3568"
-            gloss="now"
-            domain="067002"
-            ln="67.38"
-            morph="ADV"
-            unicode="νῦν">νῦν</w>
-         <wg clauseType="nominalized" articular="true" rule="Np2CL">
-            <wg class="np"
-                type="apposition"
+      <wg type="group" rule="ClCl">
+         <wg Rule="ClCl" class="cl" nodeId="590040130010390">
+            <w role="v"
+               ref="JAS 4:13!1"
+               after=" "
+               class="verb"
+               xml:id="n59004013001"
+               lemma="ἄγω"
+               normalized="Ἄγε"
+               strong="71"
+               number="singular"
+               person="second"
+               tense="present"
+               voice="active"
+               mood="imperative"
+               gloss="Come"
+               domain="091003"
+               ln="91.13"
+               morph="V-PAM-2S"
+               unicode="Ἄγε"
+               frame="A0:n59004013004"
+               subjref="n59004013004">Ἄγε</w>
+            <w role="adv"
+               ref="JAS 4:13!2"
+               after=" "
+               class="adv"
+               xml:id="n59004013002"
+               lemma="νῦν"
+               normalized="νῦν"
+               strong="3568"
+               gloss="now"
+               domain="067002"
+               ln="67.38"
+               morph="ADV"
+               unicode="νῦν">νῦν</w>
+            <wg role="aux"
+                clauseType="nominalized"
                 articular="true"
-                rule="NP-CL"
-                role="aux">
-               <wg articular="true" rule="DetCL">
-                  <w ref="JAS 4:13!3"
-                     after=" "
-                     class="det"
-                     xml:id="n59004013003"
-                     lemma="ὁ"
-                     normalized="οἱ"
-                     strong="3588"
-                     number="plural"
-                     gender="masculine"
-                     case="nominative"
-                     gloss="those"
-                     domain="092004"
-                     ln="92.24"
-                     morph="T-NPM"
-                     unicode="οἱ">οἱ</w>
-                  <wg Rule="ClCl" class="cl" nodeId="590040130040170">
-                     <w role="v"
-                        ref="JAS 4:13!4"
+                rule="Np2CL">
+               <wg class="np"
+                   type="apposition"
+                   articular="true"
+                   rule="NP-CL"
+                   role="aux">
+                  <wg articular="true" rule="DetCL">
+                     <w ref="JAS 4:13!3"
                         after=" "
-                        class="verb"
-                        xml:id="n59004013004"
-                        lemma="λέγω"
-                        normalized="λέγοντες"
-                        strong="3004"
+                        class="det"
+                        xml:id="n59004013003"
+                        lemma="ὁ"
+                        normalized="οἱ"
+                        strong="3588"
                         number="plural"
                         gender="masculine"
                         case="nominative"
-                        tense="present"
-                        voice="active"
-                        mood="participle"
-                        gloss="saying"
-                        domain="033006"
-                        ln="33.69"
-                        morph="V-PAP-NPM"
-                        unicode="λέγοντες"
-                        frame="A0:n00000000000">λέγοντες</w>
-                     <wg rule="CLaCL" role="o">
-                        <wg class="cl" rule="ADV-V-ADV">
-                           <wg rule="AdvpaAdvp" role="adv">
-                              <w ref="JAS 4:13!5"
-                                 after=" "
-                                 class="adv"
-                                 xml:id="n59004013005"
-                                 lemma="σήμερον"
-                                 normalized="Σήμερον"
-                                 strong="4594"
-                                 gloss="Today"
-                                 domain="067010"
-                                 ln="67.205"
-                                 morph="ADV"
-                                 unicode="Σήμερον">Σήμερον</w>
-                              <wg type="group">
-                                 <w ref="JAS 4:13!6"
-                                    after=" "
-                                    class="conj"
-                                    xml:id="n59004013006"
-                                    lemma="ἤ"
-                                    normalized="ἤ"
-                                    strong="2228"
-                                    gloss="or"
-                                    morph="PRT"
-                                    unicode="ἢ">ἢ</w>
-                                 <w ref="JAS 4:13!7"
+                        gloss="those"
+                        domain="092004"
+                        ln="92.24"
+                        morph="T-NPM"
+                        unicode="οἱ">οἱ</w>
+                     <wg Rule="ClCl" class="cl" nodeId="590040130040170">
+                        <w role="v"
+                           ref="JAS 4:13!4"
+                           after=" "
+                           class="verb"
+                           xml:id="n59004013004"
+                           lemma="λέγω"
+                           normalized="λέγοντες"
+                           strong="3004"
+                           number="plural"
+                           gender="masculine"
+                           case="nominative"
+                           tense="present"
+                           voice="active"
+                           mood="participle"
+                           gloss="saying"
+                           domain="033006"
+                           ln="33.69"
+                           morph="V-PAP-NPM"
+                           unicode="λέγοντες"
+                           frame="A0:n00000000000">λέγοντες</w>
+                        <wg rule="CLaCL" role="o">
+                           <wg class="cl" rule="ADV-V-ADV">
+                              <wg rule="AdvpaAdvp" role="adv">
+                                 <w ref="JAS 4:13!5"
                                     after=" "
                                     class="adv"
-                                    xml:id="n59004013007"
-                                    lemma="αὔριον"
-                                    normalized="αὔριον"
-                                    strong="839"
-                                    gloss="tomorrow"
+                                    xml:id="n59004013005"
+                                    lemma="σήμερον"
+                                    normalized="Σήμερον"
+                                    strong="4594"
+                                    gloss="Today"
                                     domain="067010"
-                                    ln="67.207"
+                                    ln="67.205"
                                     morph="ADV"
-                                    unicode="αὔριον">αὔριον</w>
+                                    unicode="Σήμερον">Σήμερον</w>
+                                 <wg type="group">
+                                    <w ref="JAS 4:13!6"
+                                       after=" "
+                                       class="conj"
+                                       xml:id="n59004013006"
+                                       lemma="ἤ"
+                                       normalized="ἤ"
+                                       strong="2228"
+                                       gloss="or"
+                                       morph="PRT"
+                                       unicode="ἢ">ἢ</w>
+                                    <w ref="JAS 4:13!7"
+                                       after=" "
+                                       class="adv"
+                                       xml:id="n59004013007"
+                                       lemma="αὔριον"
+                                       normalized="αὔριον"
+                                       strong="839"
+                                       gloss="tomorrow"
+                                       domain="067010"
+                                       ln="67.207"
+                                       morph="ADV"
+                                       unicode="αὔριον">αὔριον</w>
+                                 </wg>
                               </wg>
-                           </wg>
-                           <w role="v"
-                              ref="JAS 4:13!8"
-                              after=" "
-                              class="verb"
-                              xml:id="n59004013008"
-                              lemma="πορεύομαι"
-                              normalized="πορευσόμεθα"
-                              strong="4198"
-                              number="plural"
-                              person="first"
-                              tense="future"
-                              voice="middle"
-                              mood="indicative"
-                              gloss="we will go"
-                              domain="015002"
-                              ln="15.18"
-                              morph="V-FDI-1P"
-                              unicode="πορευσόμεθα"
-                              frame="A0:n59004013004"
-                              subjref="n59004013004">πορευσόμεθα</w>
-                           <wg class="pp" articular="true" rule="PrepNp" role="adv">
-                              <w ref="JAS 4:13!9"
+                              <w role="v"
+                                 ref="JAS 4:13!8"
                                  after=" "
-                                 class="prep"
-                                 xml:id="n59004013009"
-                                 lemma="εἰς"
-                                 normalized="εἰς"
-                                 strong="1519"
-                                 gloss="into"
-                                 domain="084002"
-                                 ln="84.22"
-                                 morph="PREP"
-                                 unicode="εἰς">εἰς</w>
-                              <wg class="np" articular="true" rule="AdjpNp">
-                                 <w ref="JAS 4:13!10"
+                                 class="verb"
+                                 xml:id="n59004013008"
+                                 lemma="πορεύομαι"
+                                 normalized="πορευσόμεθα"
+                                 strong="4198"
+                                 number="plural"
+                                 person="first"
+                                 tense="future"
+                                 voice="middle"
+                                 mood="indicative"
+                                 gloss="we will go"
+                                 domain="015002"
+                                 ln="15.18"
+                                 morph="V-FDI-1P"
+                                 unicode="πορευσόμεθα"
+                                 frame="A0:n59004013004"
+                                 subjref="n59004013004">πορευσόμεθα</w>
+                              <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                                 <w ref="JAS 4:13!9"
                                     after=" "
-                                    class="pron"
-                                    type="demonstrative"
-                                    xml:id="n59004013010"
-                                    lemma="ὅδε"
-                                    normalized="τήνδε"
-                                    strong="3592"
-                                    number="singular"
-                                    gender="feminine"
-                                    case="accusative"
-                                    gloss="such"
-                                    domain="092007"
-                                    ln="92.33"
-                                    morph="D-ASF"
-                                    unicode="τήνδε">τήνδε</w>
-                                 <wg class="np" articular="true" rule="DetNP">
-                                    <w ref="JAS 4:13!11"
+                                    class="prep"
+                                    xml:id="n59004013009"
+                                    lemma="εἰς"
+                                    normalized="εἰς"
+                                    strong="1519"
+                                    gloss="into"
+                                    domain="084002"
+                                    ln="84.22"
+                                    morph="PREP"
+                                    unicode="εἰς">εἰς</w>
+                                 <wg class="np" articular="true" rule="AdjpNp">
+                                    <w ref="JAS 4:13!10"
                                        after=" "
-                                       class="det"
-                                       xml:id="n59004013011"
-                                       lemma="ὁ"
-                                       normalized="τήν"
-                                       strong="3588"
+                                       class="pron"
+                                       type="demonstrative"
+                                       xml:id="n59004013010"
+                                       lemma="ὅδε"
+                                       normalized="τήνδε"
+                                       strong="3592"
                                        number="singular"
                                        gender="feminine"
                                        case="accusative"
-                                       gloss="-"
-                                       domain="092004"
-                                       ln="92.24"
-                                       morph="T-ASF"
-                                       unicode="τὴν">τὴν</w>
-                                    <w ref="JAS 4:13!12"
-                                       after=" "
-                                       class="noun"
-                                       type="common"
-                                       xml:id="n59004013012"
-                                       lemma="πόλις"
-                                       normalized="πόλιν"
-                                       strong="4172"
-                                       number="singular"
-                                       gender="feminine"
-                                       case="accusative"
-                                       gloss="city"
-                                       domain="001014"
-                                       ln="1.88 1.89"
-                                       morph="N-ASF"
-                                       unicode="πόλιν">πόλιν</w>
+                                       gloss="such"
+                                       domain="092007"
+                                       ln="92.33"
+                                       morph="D-ASF"
+                                       unicode="τήνδε">τήνδε</w>
+                                    <wg class="np" articular="true" rule="DetNP">
+                                       <w ref="JAS 4:13!11"
+                                          after=" "
+                                          class="det"
+                                          xml:id="n59004013011"
+                                          lemma="ὁ"
+                                          normalized="τήν"
+                                          strong="3588"
+                                          number="singular"
+                                          gender="feminine"
+                                          case="accusative"
+                                          gloss="-"
+                                          domain="092004"
+                                          ln="92.24"
+                                          morph="T-ASF"
+                                          unicode="τὴν">τὴν</w>
+                                       <w ref="JAS 4:13!12"
+                                          after=" "
+                                          class="noun"
+                                          type="common"
+                                          xml:id="n59004013012"
+                                          lemma="πόλις"
+                                          normalized="πόλιν"
+                                          strong="4172"
+                                          number="singular"
+                                          gender="feminine"
+                                          case="accusative"
+                                          gloss="city"
+                                          domain="001014"
+                                          ln="1.88 1.89"
+                                          morph="N-ASF"
+                                          unicode="πόλιν">πόλιν</w>
+                                    </wg>
                                  </wg>
                               </wg>
                            </wg>
-                        </wg>
-                        <wg type="group">
-                           <w ref="JAS 4:13!13"
-                              after=" "
-                              class="conj"
-                              xml:id="n59004013013"
-                              lemma="καί"
-                              normalized="καί"
-                              strong="2532"
-                              gloss="and"
-                              morph="CONJ"
-                              unicode="καὶ">καὶ</w>
-                           <wg rule="Conj3CL">
-                              <wg class="cl" rule="V-ADV-ADV">
-                                 <w role="v"
-                                    ref="JAS 4:13!14"
-                                    after=" "
-                                    class="verb"
-                                    xml:id="n59004013014"
-                                    lemma="ποιέω"
-                                    normalized="ποιήσομεν"
-                                    strong="4160"
-                                    number="plural"
-                                    person="first"
-                                    tense="future"
-                                    voice="active"
-                                    mood="indicative"
-                                    gloss="will spend"
-                                    domain="042004 090011"
-                                    ln="42.41 90.45"
-                                    morph="V-FAI-1P"
-                                    unicode="ποιήσομεν"
-                                    frame="A0:n59004013004"
-                                    subjref="n59004013004">ποιήσομεν</w>
-                                 <w role="adv"
-                                    ref="JAS 4:13!15"
-                                    after=" "
-                                    class="adv"
-                                    xml:id="n59004013015"
-                                    lemma="ἐκεῖ"
-                                    normalized="ἐκεῖ"
-                                    strong="1563"
-                                    gloss="there"
-                                    domain="083001"
-                                    ln="83.2"
-                                    morph="ADV"
-                                    unicode="ἐκεῖ"
-                                    referent="n59004013012">ἐκεῖ</w>
-                                 <w role="adv"
-                                    ref="JAS 4:13!16"
-                                    after=" "
-                                    class="noun"
-                                    type="common"
-                                    xml:id="n59004013016"
-                                    lemma="ἐνιαυτός"
-                                    normalized="ἐνιαυτόν"
-                                    strong="1763"
-                                    number="singular"
-                                    gender="masculine"
-                                    case="accusative"
-                                    gloss="a year"
-                                    domain="067009"
-                                    ln="67.168"
-                                    morph="N-ASM"
-                                    unicode="ἐνιαυτὸν">ἐνιαυτὸν</w>
-                              </wg>
-                              <wg type="group">
-                                 <w ref="JAS 4:13!17"
-                                    after=" "
-                                    class="conj"
-                                    xml:id="n59004013017"
-                                    lemma="καί"
-                                    normalized="καί"
-                                    strong="2532"
-                                    gloss="and"
-                                    morph="CONJ"
-                                    unicode="καὶ">καὶ</w>
-                                 <wg class="cl" rule="V2CL">
+                           <wg type="group">
+                              <w ref="JAS 4:13!13"
+                                 after=" "
+                                 class="conj"
+                                 xml:id="n59004013013"
+                                 lemma="καί"
+                                 normalized="καί"
+                                 strong="2532"
+                                 gloss="and"
+                                 morph="CONJ"
+                                 unicode="καὶ">καὶ</w>
+                              <wg rule="Conj3CL">
+                                 <wg class="cl" rule="V-ADV-ADV">
                                     <w role="v"
-                                       ref="JAS 4:13!18"
+                                       ref="JAS 4:13!14"
                                        after=" "
                                        class="verb"
-                                       xml:id="n59004013018"
-                                       lemma="ἐμπορεύομαι"
-                                       normalized="ἐμπορευσόμεθα"
-                                       strong="1710"
-                                       number="plural"
-                                       person="first"
-                                       tense="future"
-                                       voice="middle"
-                                       mood="indicative"
-                                       gloss="will trade"
-                                       domain="057016"
-                                       ln="57.196"
-                                       morph="V-FDI-1P"
-                                       unicode="ἐμπορευσόμεθα"
-                                       frame="A0:n59004013004"
-                                       subjref="n59004013004">ἐμπορευσόμεθα</w>
-                                 </wg>
-                              </wg>
-                              <wg type="group">
-                                 <w ref="JAS 4:13!19"
-                                    after=" "
-                                    class="conj"
-                                    xml:id="n59004013019"
-                                    lemma="καί"
-                                    normalized="καί"
-                                    strong="2532"
-                                    gloss="and"
-                                    morph="CONJ"
-                                    unicode="καὶ">καὶ</w>
-                                 <wg class="cl" rule="V2CL">
-                                    <w role="v"
-                                       ref="JAS 4:13!20"
-                                       after="·"
-                                       class="verb"
-                                       xml:id="n59004013020"
-                                       lemma="κερδαίνω"
-                                       normalized="κερδήσομεν"
-                                       strong="2770"
+                                       xml:id="n59004013014"
+                                       lemma="ποιέω"
+                                       normalized="ποιήσομεν"
+                                       strong="4160"
                                        number="plural"
                                        person="first"
                                        tense="future"
                                        voice="active"
                                        mood="indicative"
-                                       gloss="will make a profit"
-                                       domain="057016"
-                                       ln="57.189"
+                                       gloss="will spend"
+                                       domain="042004 090011"
+                                       ln="42.41 90.45"
                                        morph="V-FAI-1P"
-                                       unicode="κερδήσομεν·"
+                                       unicode="ποιήσομεν"
                                        frame="A0:n59004013004"
-                                       subjref="n59004013004">κερδήσομεν</w>
+                                       subjref="n59004013004">ποιήσομεν</w>
+                                    <w role="adv"
+                                       ref="JAS 4:13!15"
+                                       after=" "
+                                       class="adv"
+                                       xml:id="n59004013015"
+                                       lemma="ἐκεῖ"
+                                       normalized="ἐκεῖ"
+                                       strong="1563"
+                                       gloss="there"
+                                       domain="083001"
+                                       ln="83.2"
+                                       morph="ADV"
+                                       unicode="ἐκεῖ"
+                                       referent="n59004013012">ἐκεῖ</w>
+                                    <w role="adv"
+                                       ref="JAS 4:13!16"
+                                       after=" "
+                                       class="noun"
+                                       type="common"
+                                       xml:id="n59004013016"
+                                       lemma="ἐνιαυτός"
+                                       normalized="ἐνιαυτόν"
+                                       strong="1763"
+                                       number="singular"
+                                       gender="masculine"
+                                       case="accusative"
+                                       gloss="a year"
+                                       domain="067009"
+                                       ln="67.168"
+                                       morph="N-ASM"
+                                       unicode="ἐνιαυτὸν">ἐνιαυτὸν</w>
+                                 </wg>
+                                 <wg type="group">
+                                    <w ref="JAS 4:13!17"
+                                       after=" "
+                                       class="conj"
+                                       xml:id="n59004013017"
+                                       lemma="καί"
+                                       normalized="καί"
+                                       strong="2532"
+                                       gloss="and"
+                                       morph="CONJ"
+                                       unicode="καὶ">καὶ</w>
+                                    <wg class="cl" rule="V2CL">
+                                       <w role="v"
+                                          ref="JAS 4:13!18"
+                                          after=" "
+                                          class="verb"
+                                          xml:id="n59004013018"
+                                          lemma="ἐμπορεύομαι"
+                                          normalized="ἐμπορευσόμεθα"
+                                          strong="1710"
+                                          number="plural"
+                                          person="first"
+                                          tense="future"
+                                          voice="middle"
+                                          mood="indicative"
+                                          gloss="will trade"
+                                          domain="057016"
+                                          ln="57.196"
+                                          morph="V-FDI-1P"
+                                          unicode="ἐμπορευσόμεθα"
+                                          frame="A0:n59004013004"
+                                          subjref="n59004013004">ἐμπορευσόμεθα</w>
+                                    </wg>
+                                 </wg>
+                                 <wg type="group">
+                                    <w ref="JAS 4:13!19"
+                                       after=" "
+                                       class="conj"
+                                       xml:id="n59004013019"
+                                       lemma="καί"
+                                       normalized="καί"
+                                       strong="2532"
+                                       gloss="and"
+                                       morph="CONJ"
+                                       unicode="καὶ">καὶ</w>
+                                    <wg class="cl" rule="V2CL">
+                                       <w role="v"
+                                          ref="JAS 4:13!20"
+                                          after="·"
+                                          class="verb"
+                                          xml:id="n59004013020"
+                                          lemma="κερδαίνω"
+                                          normalized="κερδήσομεν"
+                                          strong="2770"
+                                          number="plural"
+                                          person="first"
+                                          tense="future"
+                                          voice="active"
+                                          mood="indicative"
+                                          gloss="will make a profit"
+                                          domain="057016"
+                                          ln="57.189"
+                                          morph="V-FAI-1P"
+                                          unicode="κερδήσομεν·"
+                                          frame="A0:n59004013004"
+                                          subjref="n59004013004">κερδήσομεν</w>
+                                    </wg>
                                  </wg>
                               </wg>
                            </wg>
                         </wg>
                      </wg>
                   </wg>
-               </wg>
-               <wg Rule="ClCl2"
-                   class="cl"
-                   nodeId="590040140010190"
-                   junction="apposition">
-                  <wg class="cl" clauseType="nominalized" rule="S-ADV-V-O" role="adv">
-                     <w role="s"
-                        ref="JAS 4:14!1"
-                        after=" "
-                        class="pron"
-                        type="relative"
-                        xml:id="n59004014001"
-                        lemma="ὅστις"
-                        normalized="οἵτινες"
-                        strong="3748"
-                        number="plural"
-                        gender="masculine"
-                        case="nominative"
-                        gloss="who"
-                        domain="092004"
-                        ln="92.18"
-                        morph="R-NPM"
-                        unicode="οἵτινες"
-                        referent="n59004013004">οἵτινες</w>
-                     <w role="adv"
-                        ref="JAS 4:14!2"
-                        after=" "
-                        class="adv"
-                        xml:id="n59004014002"
-                        lemma="οὐ"
-                        normalized="οὐκ"
-                        strong="3756"
-                        gloss="not"
-                        morph="PRT-N"
-                        unicode="οὐκ">οὐκ</w>
-                     <w role="v"
-                        ref="JAS 4:14!3"
-                        after=" "
-                        class="verb"
-                        xml:id="n59004014003"
-                        lemma="ἐπίσταμαι"
-                        normalized="ἐπίστασθε"
-                        strong="1987"
-                        number="plural"
-                        person="second"
-                        tense="present"
-                        voice="middlepassive"
-                        mood="indicative"
-                        gloss="know"
-                        domain="028001 032001"
-                        ln="28.3 32.3"
-                        morph="V-PNI-2P"
-                        unicode="ἐπίστασθε"
-                        frame="A0:n59004014001 A1:n59004014005">ἐπίστασθε</w>
-                     <wg class="np" articular="true" rule="DetNP" role="o">
-                        <w ref="JAS 4:14!4"
+                  <wg Rule="ClCl2"
+                      class="cl"
+                      nodeId="590040140010190"
+                      junction="apposition">
+                     <wg class="cl" clauseType="nominalized" rule="S-ADV-V-O" role="adv">
+                        <w role="s"
+                           ref="JAS 4:14!1"
                            after=" "
-                           class="det"
-                           xml:id="n59004014004"
-                           lemma="ὁ"
-                           normalized="τῆς"
-                           strong="3588"
-                           number="singular"
-                           gender="feminine"
-                           case="genitive"
-                           gloss="on the"
+                           class="pron"
+                           type="relative"
+                           xml:id="n59004014001"
+                           lemma="ὅστις"
+                           normalized="οἵτινες"
+                           strong="3748"
+                           number="plural"
+                           gender="masculine"
+                           case="nominative"
+                           gloss="who"
                            domain="092004"
-                           ln="92.24"
-                           morph="T-GSF"
-                           unicode="τῆς">τῆς</w>
-                        <w ref="JAS 4:14!5"
+                           ln="92.18"
+                           morph="R-NPM"
+                           unicode="οἵτινες"
+                           referent="n59004013004">οἵτινες</w>
+                        <w role="adv"
+                           ref="JAS 4:14!2"
                            after=" "
                            class="adv"
-                           xml:id="n59004014005"
-                           lemma="αὔριον"
-                           normalized="αὔριον"
-                           strong="839"
-                           gloss="next day [is]"
-                           domain="067010"
-                           ln="67.207"
-                           morph="ADV"
-                           unicode="αὔριον">αὔριον</w>
-                     </wg>
-                  </wg>
-                  <w role="p"
-                     ref="JAS 4:14!6"
-                     after=" "
-                     class="pron"
-                     type="interrogative"
-                     xml:id="n59004014006"
-                     lemma="ποῖος"
-                     normalized="ποία"
-                     strong="4169"
-                     number="singular"
-                     gender="feminine"
-                     case="nominative"
-                     gloss="What [is]"
-                     domain="058004"
-                     ln="58.30"
-                     morph="I-NSF"
-                     unicode="ποία">ποία</w>
-                  <wg class="np" articular="true" rule="DetNP" role="s">
-                     <w ref="JAS 4:14!7"
-                        after=" "
-                        class="det"
-                        xml:id="n59004014007"
-                        lemma="ὁ"
-                        normalized="ἡ"
-                        strong="3588"
-                        number="singular"
-                        gender="feminine"
-                        case="nominative"
-                        gloss="the"
-                        domain="092004"
-                        ln="92.24"
-                        morph="T-NSF"
-                        unicode="ἡ">ἡ</w>
-                     <wg class="np" rule="NPofNP">
-                        <w ref="JAS 4:14!8"
-                           after=" "
-                           class="noun"
-                           type="common"
-                           xml:id="n59004014008"
-                           lemma="ζωή"
-                           normalized="ζωή"
-                           strong="2222"
-                           number="singular"
-                           gender="feminine"
-                           case="nominative"
-                           gloss="life"
-                           domain="023007"
-                           ln="23.88"
-                           morph="N-NSF"
-                           unicode="ζωὴ">ζωὴ</w>
-                        <w ref="JAS 4:14!9"
-                           after="·"
-                           class="pron"
-                           type="personal"
-                           xml:id="n59004014009"
-                           lemma="σύ"
-                           normalized="ὑμῶν"
-                           strong="4771"
-                           number="plural"
-                           case="genitive"
-                           gloss="of you"
-                           morph="P-2GP"
-                           unicode="ὑμῶν·"
-                           referent="n59004013004">ὑμῶν</w>
-                     </wg>
-                  </wg>
-                  <wg rule="sub-CL" role="adv">
-                     <w ref="JAS 4:14!11"
-                        after=" "
-                        class="conj"
-                        xml:id="n59004014011"
-                        lemma="γάρ"
-                        normalized="γάρ"
-                        strong="1063"
-                        gloss="just"
-                        domain="089007"
-                        ln="89.23"
-                        morph="CONJ"
-                        unicode="γάρ">γάρ</w>
-                     <wg class="cl" rule="VC-P">
-                        <w role="vc"
-                           ref="JAS 4:14!12"
+                           xml:id="n59004014002"
+                           lemma="οὐ"
+                           normalized="οὐκ"
+                           strong="3756"
+                           gloss="not"
+                           morph="PRT-N"
+                           unicode="οὐκ">οὐκ</w>
+                        <w role="v"
+                           ref="JAS 4:14!3"
                            after=" "
                            class="verb"
-                           xml:id="n59004014012"
-                           lemma="εἰμί"
-                           normalized="ἐστε"
-                           strong="1510"
+                           xml:id="n59004014003"
+                           lemma="ἐπίσταμαι"
+                           normalized="ἐπίστασθε"
+                           strong="1987"
                            number="plural"
                            person="second"
                            tense="present"
-                           voice="active"
+                           voice="middlepassive"
                            mood="indicative"
-                           discontinuous="true"
-                           gloss="it is"
-                           morph="V-PAI-2P"
-                           unicode="ἐστε"
-                           subjref="n59004013004">ἐστε</w>
-                        <wg type="apposition" class="np" rule="Np-Appos" role="p">
-                           <w ref="JAS 4:14!10"
+                           gloss="know"
+                           domain="028001 032001"
+                           ln="28.3 32.3"
+                           morph="V-PNI-2P"
+                           unicode="ἐπίστασθε"
+                           frame="A0:n59004014001 A1:n59004014005">ἐπίστασθε</w>
+                        <wg class="np" articular="true" rule="DetNP" role="o">
+                           <w ref="JAS 4:14!4"
+                              after=" "
+                              class="det"
+                              xml:id="n59004014004"
+                              lemma="ὁ"
+                              normalized="τῆς"
+                              strong="3588"
+                              number="singular"
+                              gender="feminine"
+                              case="genitive"
+                              gloss="on the"
+                              domain="092004"
+                              ln="92.24"
+                              morph="T-GSF"
+                              unicode="τῆς">τῆς</w>
+                           <w ref="JAS 4:14!5"
+                              after=" "
+                              class="adv"
+                              xml:id="n59004014005"
+                              lemma="αὔριον"
+                              normalized="αὔριον"
+                              strong="839"
+                              gloss="next day [is]"
+                              domain="067010"
+                              ln="67.207"
+                              morph="ADV"
+                              unicode="αὔριον">αὔριον</w>
+                        </wg>
+                     </wg>
+                     <w role="p"
+                        ref="JAS 4:14!6"
+                        after=" "
+                        class="pron"
+                        type="interrogative"
+                        xml:id="n59004014006"
+                        lemma="ποῖος"
+                        normalized="ποία"
+                        strong="4169"
+                        number="singular"
+                        gender="feminine"
+                        case="nominative"
+                        gloss="What [is]"
+                        domain="058004"
+                        ln="58.30"
+                        morph="I-NSF"
+                        unicode="ποία">ποία</w>
+                     <wg class="np" articular="true" rule="DetNP" role="s">
+                        <w ref="JAS 4:14!7"
+                           after=" "
+                           class="det"
+                           xml:id="n59004014007"
+                           lemma="ὁ"
+                           normalized="ἡ"
+                           strong="3588"
+                           number="singular"
+                           gender="feminine"
+                           case="nominative"
+                           gloss="the"
+                           domain="092004"
+                           ln="92.24"
+                           morph="T-NSF"
+                           unicode="ἡ">ἡ</w>
+                        <wg class="np" rule="NPofNP">
+                           <w ref="JAS 4:14!8"
                               after=" "
                               class="noun"
                               type="common"
-                              xml:id="n59004014010"
-                              lemma="ἀτμίς"
-                              normalized="ἀτμίς"
-                              strong="822"
+                              xml:id="n59004014008"
+                              lemma="ζωή"
+                              normalized="ζωή"
+                              strong="2222"
                               number="singular"
                               gender="feminine"
                               case="nominative"
-                              gloss="A vapor"
-                              domain="001005"
-                              ln="1.36"
+                              gloss="life"
+                              domain="023007"
+                              ln="23.88"
                               morph="N-NSF"
-                              unicode="ἀτμὶς">ἀτμὶς</w>
-                           <wg articular="true" rule="DetCL" junction="apposition">
-                              <w ref="JAS 4:14!13"
+                              unicode="ζωὴ">ζωὴ</w>
+                           <w ref="JAS 4:14!9"
+                              after="·"
+                              class="pron"
+                              type="personal"
+                              xml:id="n59004014009"
+                              lemma="σύ"
+                              normalized="ὑμῶν"
+                              strong="4771"
+                              number="plural"
+                              case="genitive"
+                              gloss="of you"
+                              morph="P-2GP"
+                              unicode="ὑμῶν·"
+                              referent="n59004013004">ὑμῶν</w>
+                        </wg>
+                     </wg>
+                     <wg rule="sub-CL" role="adv">
+                        <w ref="JAS 4:14!11"
+                           after=" "
+                           class="conj"
+                           xml:id="n59004014011"
+                           lemma="γάρ"
+                           normalized="γάρ"
+                           strong="1063"
+                           gloss="just"
+                           domain="089007"
+                           ln="89.23"
+                           morph="CONJ"
+                           unicode="γάρ">γάρ</w>
+                        <wg class="cl" rule="VC-P">
+                           <w role="vc"
+                              ref="JAS 4:14!12"
+                              after=" "
+                              class="verb"
+                              xml:id="n59004014012"
+                              lemma="εἰμί"
+                              normalized="ἐστε"
+                              strong="1510"
+                              number="plural"
+                              person="second"
+                              tense="present"
+                              voice="active"
+                              mood="indicative"
+                              discontinuous="true"
+                              gloss="it is"
+                              morph="V-PAI-2P"
+                              unicode="ἐστε"
+                              subjref="n59004013004">ἐστε</w>
+                           <wg type="apposition" class="np" rule="Np-Appos" role="p">
+                              <w ref="JAS 4:14!10"
                                  after=" "
-                                 class="det"
-                                 xml:id="n59004014013"
-                                 lemma="ὁ"
-                                 normalized="ἡ"
-                                 strong="3588"
+                                 class="noun"
+                                 type="common"
+                                 xml:id="n59004014010"
+                                 lemma="ἀτμίς"
+                                 normalized="ἀτμίς"
+                                 strong="822"
                                  number="singular"
                                  gender="feminine"
                                  case="nominative"
-                                 gloss="-"
-                                 domain="092004"
-                                 ln="92.24"
-                                 morph="T-NSF"
-                                 unicode="ἡ">ἡ</w>
-                              <wg type="group" clauseType="nominalized" rule="ClCl">
-                                 <wg class="cl" rule="ADV-V">
-                                    <wg class="pp" rule="PrepNp" role="adv">
-                                       <w ref="JAS 4:14!14"
-                                          after=" "
-                                          class="prep"
-                                          xml:id="n59004014014"
-                                          lemma="πρός"
-                                          normalized="πρός"
-                                          strong="4314"
-                                          gloss="for"
-                                          domain="067005"
-                                          ln="67.106"
-                                          morph="PREP"
-                                          unicode="πρὸς">πρὸς</w>
-                                       <w ref="JAS 4:14!15"
-                                          after=" "
-                                          class="adj"
-                                          xml:id="n59004014015"
-                                          lemma="ὀλίγος"
-                                          normalized="ὀλίγον"
-                                          strong="3641"
+                                 gloss="A vapor"
+                                 domain="001005"
+                                 ln="1.36"
+                                 morph="N-NSF"
+                                 unicode="ἀτμὶς">ἀτμὶς</w>
+                              <wg articular="true" rule="DetCL" junction="apposition">
+                                 <w ref="JAS 4:14!13"
+                                    after=" "
+                                    class="det"
+                                    xml:id="n59004014013"
+                                    lemma="ὁ"
+                                    normalized="ἡ"
+                                    strong="3588"
+                                    number="singular"
+                                    gender="feminine"
+                                    case="nominative"
+                                    gloss="-"
+                                    domain="092004"
+                                    ln="92.24"
+                                    morph="T-NSF"
+                                    unicode="ἡ">ἡ</w>
+                                 <wg type="group" clauseType="nominalized" rule="ClCl">
+                                    <wg class="cl" rule="ADV-V">
+                                       <wg class="pp" rule="PrepNp" role="adv">
+                                          <w ref="JAS 4:14!14"
+                                             after=" "
+                                             class="prep"
+                                             xml:id="n59004014014"
+                                             lemma="πρός"
+                                             normalized="πρός"
+                                             strong="4314"
+                                             gloss="for"
+                                             domain="067005"
+                                             ln="67.106"
+                                             morph="PREP"
+                                             unicode="πρὸς">πρὸς</w>
+                                          <w ref="JAS 4:14!15"
+                                             after=" "
+                                             class="adj"
+                                             xml:id="n59004014015"
+                                             lemma="ὀλίγος"
+                                             normalized="ὀλίγον"
+                                             strong="3641"
+                                             number="singular"
+                                             gender="neuter"
+                                             case="accusative"
+                                             gloss="a little [while]"
+                                             domain="059002 067005"
+                                             ln="59.13 67.106"
+                                             morph="A-ASN"
+                                             unicode="ὀλίγον">ὀλίγον</w>
+                                       </wg>
+                                       <w role="v"
+                                          ref="JAS 4:14!16"
+                                          after=","
+                                          class="verb"
+                                          xml:id="n59004014016"
+                                          lemma="φαίνω"
+                                          normalized="φαινομένη"
+                                          strong="5316"
                                           number="singular"
-                                          gender="neuter"
-                                          case="accusative"
-                                          gloss="a little [while]"
-                                          domain="059002 067005"
-                                          ln="59.13 67.106"
-                                          morph="A-ASN"
-                                          unicode="ὀλίγον">ὀλίγον</w>
+                                          gender="feminine"
+                                          case="nominative"
+                                          tense="present"
+                                          voice="middlepassive"
+                                          mood="participle"
+                                          gloss="appearing"
+                                          domain="024001"
+                                          ln="24.18"
+                                          morph="V-PEP-NSF"
+                                          unicode="φαινομένη,"
+                                          frame="A0:n59004014010"
+                                          subjref="n59004014010">φαινομένη</w>
                                     </wg>
-                                    <w role="v"
-                                       ref="JAS 4:14!16"
-                                       after=","
-                                       class="verb"
-                                       xml:id="n59004014016"
-                                       lemma="φαίνω"
-                                       normalized="φαινομένη"
-                                       strong="5316"
-                                       number="singular"
-                                       gender="feminine"
-                                       case="nominative"
-                                       tense="present"
-                                       voice="middlepassive"
-                                       mood="participle"
-                                       gloss="appearing"
-                                       domain="024001"
-                                       ln="24.18"
-                                       morph="V-PEP-NSF"
-                                       unicode="φαινομένη,"
-                                       frame="A0:n59004014010"
-                                       subjref="n59004014010">φαινομένη</w>
-                                 </wg>
-                                 <wg class="cl" rule="ADV-V">
-                                    <wg class="advp" rule="2Advp_h1" role="adv">
-                                       <w ref="JAS 4:14!17"
-                                          after=" "
-                                          class="adv"
-                                          xml:id="n59004014017"
-                                          lemma="ἔπειτα"
-                                          normalized="ἔπειτα"
-                                          strong="1899"
-                                          gloss="then"
-                                          domain="067002"
-                                          ln="67.44"
-                                          morph="ADV"
-                                          unicode="ἔπειτα">ἔπειτα</w>
-                                       <w ref="JAS 4:14!18"
-                                          after=" "
-                                          class="adv"
-                                          xml:id="n59004014018"
-                                          lemma="καί"
-                                          normalized="καί"
-                                          strong="2532"
-                                          gloss="also"
-                                          morph="CONJ"
-                                          unicode="καὶ">καὶ</w>
+                                    <wg class="cl" rule="ADV-V">
+                                       <wg class="advp" rule="2Advp_h1" role="adv">
+                                          <w ref="JAS 4:14!17"
+                                             after=" "
+                                             class="adv"
+                                             xml:id="n59004014017"
+                                             lemma="ἔπειτα"
+                                             normalized="ἔπειτα"
+                                             strong="1899"
+                                             gloss="then"
+                                             domain="067002"
+                                             ln="67.44"
+                                             morph="ADV"
+                                             unicode="ἔπειτα">ἔπειτα</w>
+                                          <w ref="JAS 4:14!18"
+                                             after=" "
+                                             class="adv"
+                                             xml:id="n59004014018"
+                                             lemma="καί"
+                                             normalized="καί"
+                                             strong="2532"
+                                             gloss="also"
+                                             morph="CONJ"
+                                             unicode="καὶ">καὶ</w>
+                                       </wg>
+                                       <w role="v"
+                                          ref="JAS 4:14!19"
+                                          after="·"
+                                          class="verb"
+                                          xml:id="n59004014019"
+                                          lemma="ἀφανίζω"
+                                          normalized="ἀφανιζομένη"
+                                          strong="853"
+                                          number="singular"
+                                          gender="feminine"
+                                          case="nominative"
+                                          tense="present"
+                                          voice="passive"
+                                          mood="participle"
+                                          gloss="vanishing"
+                                          domain="024001"
+                                          ln="24.27"
+                                          morph="V-PPP-NSF"
+                                          unicode="ἀφανιζομένη·"
+                                          frame="A1:n59004014010"
+                                          subjref="n59004014010">ἀφανιζομένη</w>
                                     </wg>
-                                    <w role="v"
-                                       ref="JAS 4:14!19"
-                                       after="·"
-                                       class="verb"
-                                       xml:id="n59004014019"
-                                       lemma="ἀφανίζω"
-                                       normalized="ἀφανιζομένη"
-                                       strong="853"
-                                       number="singular"
-                                       gender="feminine"
-                                       case="nominative"
-                                       tense="present"
-                                       voice="passive"
-                                       mood="participle"
-                                       gloss="vanishing"
-                                       domain="024001"
-                                       ln="24.27"
-                                       morph="V-PPP-NSF"
-                                       unicode="ἀφανιζομένη·"
-                                       frame="A1:n59004014010"
-                                       subjref="n59004014010">ἀφανιζομένη</w>
                                  </wg>
                               </wg>
                            </wg>
@@ -23257,7 +23264,7 @@
                </wg>
             </wg>
          </wg>
-         <wg class="cl" articular="true" rule="ADV2CL" role="adv">
+         <wg class="cl" articular="true" rule="ADV2CL" predication="elided">
             <wg class="pp" articular="true" rule="PrepNp" role="adv">
                <w ref="JAS 4:15!1"
                   after=" "
@@ -23726,7 +23733,7 @@
             gloss="therefore"
             morph="CONJ"
             unicode="οὖν">οὖν</w>
-         <wg Rule="ClCl2" class="cl" nodeId="590040170010090">
+         <wg type="group" rule="ClCl2">
             <wg rule="CLaCL">
                <wg class="cl" rule="V-O">
                   <w role="v"
@@ -23832,57 +23839,59 @@
                   </wg>
                </wg>
             </wg>
-            <w role="s"
-               ref="JAS 4:17!8"
-               after=" "
-               class="noun"
-               type="common"
-               xml:id="n59004017008"
-               lemma="ἁμαρτία"
-               normalized="ἁμαρτία"
-               strong="266"
-               number="singular"
-               gender="feminine"
-               case="nominative"
-               gloss="sin"
-               domain="088038"
-               ln="88.289"
-               morph="N-NSF"
-               unicode="ἁμαρτία">ἁμαρτία</w>
-            <w role="adv"
-               ref="JAS 4:17!9"
-               after=" "
-               class="pron"
-               type="personal"
-               xml:id="n59004017009"
-               lemma="αὐτός"
-               normalized="αὐτῷ"
-               strong="846"
-               number="singular"
-               gender="masculine"
-               case="dative"
-               gloss="to him"
-               domain="092004"
-               ln="92.11"
-               morph="P-DSM"
-               unicode="αὐτῷ"
-               referent="n59004017001">αὐτῷ</w>
-            <w role="v"
-               ref="JAS 4:17!10"
-               after="."
-               class="verb"
-               xml:id="n59004017010"
-               lemma="εἰμί"
-               normalized="ἐστιν"
-               strong="1510"
-               number="singular"
-               person="third"
-               tense="present"
-               voice="active"
-               mood="indicative"
-               gloss="it is"
-               morph="V-PAI-3S"
-               unicode="ἐστιν.">ἐστιν</w>
+            <wg class="cl" rule="S-ADV-V">
+               <w role="s"
+                  ref="JAS 4:17!8"
+                  after=" "
+                  class="noun"
+                  type="common"
+                  xml:id="n59004017008"
+                  lemma="ἁμαρτία"
+                  normalized="ἁμαρτία"
+                  strong="266"
+                  number="singular"
+                  gender="feminine"
+                  case="nominative"
+                  gloss="sin"
+                  domain="088038"
+                  ln="88.289"
+                  morph="N-NSF"
+                  unicode="ἁμαρτία">ἁμαρτία</w>
+               <w role="adv"
+                  ref="JAS 4:17!9"
+                  after=" "
+                  class="pron"
+                  type="personal"
+                  xml:id="n59004017009"
+                  lemma="αὐτός"
+                  normalized="αὐτῷ"
+                  strong="846"
+                  number="singular"
+                  gender="masculine"
+                  case="dative"
+                  gloss="to him"
+                  domain="092004"
+                  ln="92.11"
+                  morph="P-DSM"
+                  unicode="αὐτῷ"
+                  referent="n59004017001">αὐτῷ</w>
+               <w role="v"
+                  ref="JAS 4:17!10"
+                  after="."
+                  class="verb"
+                  xml:id="n59004017010"
+                  lemma="εἰμί"
+                  normalized="ἐστιν"
+                  strong="1510"
+                  number="singular"
+                  person="third"
+                  tense="present"
+                  voice="active"
+                  mood="indicative"
+                  gloss="it is"
+                  morph="V-PAI-3S"
+                  unicode="ἐστιν.">ἐστιν</w>
+            </wg>
          </wg>
       </wg>
    </sentence>
@@ -23926,7 +23935,7 @@
                   morph="ADV"
                   unicode="νῦν">νῦν</w>
             </wg>
-            <wg articular="true" rule="Np2CL">
+            <wg role="aux" articular="true" rule="Np2CL">
                <wg class="np" articular="true" rule="DetAdj" role="aux">
                   <w ref="JAS 5:1!3"
                      after=" "
@@ -25570,7 +25579,7 @@
             morph="CONJ"
             unicode="οὖν,">οὖν</w>
          <wg Rule="ClCl2" class="cl" nodeId="590050070030070">
-            <wg rule="Np2CL">
+            <wg role="aux" rule="Np2CL">
                <w role="aux"
                   ref="JAS 5:7!3"
                   after=","
@@ -25910,7 +25919,7 @@
                   referent="n59005007015">αὐτῷ</w>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" role="o">
             <w ref="JAS 5:7!21"
                after=" "
                class="conj"
@@ -26219,7 +26228,7 @@
       <p>
          <milestone unit="verse" id="JAS 5:9">JAS 5:9</milestone> μὴ στενάζετε, ἀδελφοί, κατ’ ἀλλήλων, ἵνα μὴ κριθῆτε·</p>
       <wg Rule="ClCl2" class="cl" nodeId="590050090030080">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <w role="aux"
                ref="JAS 5:9!3"
                after=","
@@ -26477,7 +26486,7 @@
       <p>
          <milestone unit="verse" id="JAS 5:10">JAS 5:10</milestone> ὑπόδειγμα λάβετε, ἀδελφοί, τῆς κακοπαθείας καὶ τῆς μακροθυμίας τοὺς προφήτας, οἳ ἐλάλησαν ἐν τῷ ὀνόματι Κυρίου.</p>
       <wg Rule="ClCl2" class="cl" nodeId="590050100030160">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <w role="aux"
                ref="JAS 5:10!3"
                after=","
@@ -27136,7 +27145,7 @@
             morph="CONJ"
             unicode="δέ,">δέ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590050120040160">
-            <wg rule="Np2CL">
+            <wg role="aux" rule="Np2CL">
                <wg class="np" rule="NPofNP" role="aux">
                   <w ref="JAS 5:12!4"
                      after=" "
@@ -27497,7 +27506,7 @@
                   gloss="and"
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
-               <wg class="cl" rule="S-P">
+               <wg class="cl" rule="S-P" predication="verbless">
                   <wg class="np" articular="true" rule="DetNP" role="s">
                      <w ref="JAS 5:12!25"
                         after=" "
@@ -27780,68 +27789,70 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:14">JAS 5:14</milestone> ἀσθενεῖ τις ἐν ὑμῖν; προσκαλεσάσθω τοὺς πρεσβυτέρους τῆς ἐκκλησίας, καὶ προσευξάσθωσαν ἐπ’ αὐτὸν ἀλείψαντες ἐλαίῳ ἐν τῷ ὀνόματι τοῦ Κυρίου.</p>
-      <wg Rule="ClCl" class="cl" nodeId="590050140010200">
-         <w role="v"
-            ref="JAS 5:14!1"
-            after=" "
-            class="verb"
-            xml:id="n59005014001"
-            lemma="ἀσθενέω"
-            normalized="ἀσθενεῖ"
-            strong="770"
-            number="singular"
-            person="third"
-            tense="present"
-            voice="active"
-            mood="indicative"
-            gloss="Is sick"
-            domain="023009 074"
-            ln="23.144 74.26"
-            morph="V-PAI-3S"
-            unicode="ἀσθενεῖ"
-            frame="A0:n59005014002">ἀσθενεῖ</w>
-         <wg class="np" rule="NpPp" role="s">
-            <w ref="JAS 5:14!2"
+      <wg type="group" rule="ClCl">
+         <wg class="cl" rule="V-S">
+            <w role="v"
+               ref="JAS 5:14!1"
                after=" "
-               class="pron"
-               type="indefinite"
-               xml:id="n59005014002"
-               lemma="τὶς"
-               normalized="τις"
-               strong="5100"
+               class="verb"
+               xml:id="n59005014001"
+               lemma="ἀσθενέω"
+               normalized="ἀσθενεῖ"
+               strong="770"
                number="singular"
-               gender="masculine"
-               case="nominative"
-               gloss="anyone"
-               morph="X-NSM"
-               unicode="τις">τις</w>
-            <wg class="pp" rule="PrepNp">
-               <w ref="JAS 5:14!3"
+               person="third"
+               tense="present"
+               voice="active"
+               mood="indicative"
+               gloss="Is sick"
+               domain="023009 074"
+               ln="23.144 74.26"
+               morph="V-PAI-3S"
+               unicode="ἀσθενεῖ"
+               frame="A0:n59005014002">ἀσθενεῖ</w>
+            <wg class="np" rule="NpPp" role="s">
+               <w ref="JAS 5:14!2"
                   after=" "
-                  class="prep"
-                  xml:id="n59005014003"
-                  lemma="ἐν"
-                  normalized="ἐν"
-                  strong="1722"
-                  gloss="among"
-                  domain="083003"
-                  ln="83.9"
-                  morph="PREP"
-                  unicode="ἐν">ἐν</w>
-               <w ref="JAS 5:14!4"
-                  after=";"
                   class="pron"
-                  type="personal"
-                  xml:id="n59005014004"
-                  lemma="σύ"
-                  normalized="ὑμῖν"
-                  strong="4771"
-                  number="plural"
-                  case="dative"
-                  gloss="you"
-                  morph="P-2DP"
-                  unicode="ὑμῖν;"
-                  referent="n59005012004">ὑμῖν</w>
+                  type="indefinite"
+                  xml:id="n59005014002"
+                  lemma="τὶς"
+                  normalized="τις"
+                  strong="5100"
+                  number="singular"
+                  gender="masculine"
+                  case="nominative"
+                  gloss="anyone"
+                  morph="X-NSM"
+                  unicode="τις">τις</w>
+               <wg class="pp" rule="PrepNp">
+                  <w ref="JAS 5:14!3"
+                     after=" "
+                     class="prep"
+                     xml:id="n59005014003"
+                     lemma="ἐν"
+                     normalized="ἐν"
+                     strong="1722"
+                     gloss="among"
+                     domain="083003"
+                     ln="83.9"
+                     morph="PREP"
+                     unicode="ἐν">ἐν</w>
+                  <w ref="JAS 5:14!4"
+                     after=";"
+                     class="pron"
+                     type="personal"
+                     xml:id="n59005014004"
+                     lemma="σύ"
+                     normalized="ὑμῖν"
+                     strong="4771"
+                     number="plural"
+                     case="dative"
+                     gloss="you"
+                     morph="P-2DP"
+                     unicode="ὑμῖν;"
+                     referent="n59005012004">ὑμῖν</w>
+               </wg>
             </wg>
          </wg>
          <wg rule="CLaCL">
@@ -29381,7 +29392,7 @@
          <milestone unit="verse" id="JAS 5:19">JAS 5:19</milestone> 
          <milestone unit="verse" id="JAS 5:20">JAS 5:20</milestone> Ἀδελφοί μου, ἐάν τις ἐν ὑμῖν πλανηθῇ ἀπὸ τῆς ἀληθείας καὶ ἐπιστρέψῃ τις αὐτόν, γινώσκετε ὅτι ὁ ἐπιστρέψας ἁμαρτωλὸν ἐκ πλάνης ὁδοῦ αὐτοῦ σώσει ψυχὴν αὐτοῦ ἐκ θανάτου καὶ καλύψει πλῆθος ἁμαρτιῶν.</p>
       <wg Rule="ClCl2" class="cl" nodeId="590050190010320">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="NPofNP" role="aux">
                <w ref="JAS 5:19!1"
                   after=" "
@@ -29609,310 +29620,310 @@
                </wg>
             </wg>
          </wg>
-         <w role="v"
-            ref="JAS 5:20!1"
-            after=" "
-            class="verb"
-            xml:id="n59005020001"
-            lemma="γινώσκω"
-            normalized="γινώσκετε"
-            strong="1097"
-            number="plural"
-            person="second"
-            tense="present"
-            voice="active"
-            mood="imperative"
-            gloss="let him know"
-            morph="V-PAM-2P"
-            unicode="γινώσκετε"
-            frame="A0:n59005019001"
-            subjref="n59005019001">γινώσκετε</w>
-         <wg rule="that-VP" role="o">
-            <w ref="JAS 5:20!2"
+         <wg class="cl" rule="V2CL" role="o">
+            <w role="v"
+               ref="JAS 5:20!1"
                after=" "
-               class="conj"
-               xml:id="n59005020002"
-               lemma="ὅτι"
-               normalized="ὅτι"
-               strong="3754"
-               gloss="that"
-               morph="CONJ"
-               unicode="ὅτι">ὅτι</w>
-            <wg rule="CLaCL">
-               <wg class="cl" rule="S-V-O-ADV">
-                  <wg articular="true" rule="DetCL" role="s">
-                     <w ref="JAS 5:20!3"
+               class="verb"
+               xml:id="n59005020001"
+               lemma="γινώσκω"
+               normalized="γινώσκετε"
+               strong="1097"
+               number="plural"
+               person="second"
+               tense="present"
+               voice="active"
+               mood="imperative"
+               gloss="let him know"
+               morph="V-PAM-2P"
+               unicode="γινώσκετε"
+               frame="A0:n59005019001"
+               subjref="n59005019001">γινώσκετε</w>
+         </wg>
+         <w ref="JAS 5:20!2"
+            after=" "
+            class="conj"
+            xml:id="n59005020002"
+            lemma="ὅτι"
+            normalized="ὅτι"
+            strong="3754"
+            gloss="that"
+            morph="CONJ"
+            unicode="ὅτι">ὅτι</w>
+         <wg rule="CLaCL">
+            <wg class="cl" rule="S-V-O-ADV">
+               <wg articular="true" rule="DetCL" role="s">
+                  <w ref="JAS 5:20!3"
+                     after=" "
+                     class="det"
+                     xml:id="n59005020003"
+                     lemma="ὁ"
+                     normalized="ὁ"
+                     strong="3588"
+                     number="singular"
+                     gender="masculine"
+                     case="nominative"
+                     gloss="the [one]"
+                     domain="092004"
+                     ln="92.24"
+                     morph="T-NSM"
+                     unicode="ὁ">ὁ</w>
+                  <wg class="cl" clauseType="nominalized" rule="V-O-ADV">
+                     <w role="v"
+                        ref="JAS 5:20!4"
                         after=" "
-                        class="det"
-                        xml:id="n59005020003"
-                        lemma="ὁ"
-                        normalized="ὁ"
-                        strong="3588"
+                        class="verb"
+                        xml:id="n59005020004"
+                        lemma="ἐπιστρέφω"
+                        normalized="ἐπιστρέψας"
+                        strong="1994"
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="the [one]"
-                        domain="092004"
-                        ln="92.24"
-                        morph="T-NSM"
-                        unicode="ὁ">ὁ</w>
-                     <wg class="cl" clauseType="nominalized" rule="V-O-ADV">
-                        <w role="v"
-                           ref="JAS 5:20!4"
+                        tense="aorist"
+                        voice="active"
+                        mood="participle"
+                        gloss="having brought back"
+                        domain="016 031008"
+                        ln="16.13 31.61"
+                        morph="V-AAP-NSM"
+                        unicode="ἐπιστρέψας"
+                        frame="A0:n00000000000 A1:n59005020005">ἐπιστρέψας</w>
+                     <w role="o"
+                        ref="JAS 5:20!5"
+                        after=" "
+                        class="adj"
+                        xml:id="n59005020005"
+                        lemma="ἁμαρτωλός"
+                        normalized="ἁμαρτωλόν"
+                        strong="268"
+                        number="singular"
+                        gender="masculine"
+                        case="accusative"
+                        gloss="a sinner"
+                        domain="088038"
+                        ln="88.295"
+                        morph="A-ASM"
+                        unicode="ἁμαρτωλὸν">ἁμαρτωλὸν</w>
+                     <wg class="pp" rule="PrepNp" role="adv">
+                        <w ref="JAS 5:20!6"
                            after=" "
-                           class="verb"
-                           xml:id="n59005020004"
-                           lemma="ἐπιστρέφω"
-                           normalized="ἐπιστρέψας"
-                           strong="1994"
-                           number="singular"
-                           gender="masculine"
-                           case="nominative"
-                           tense="aorist"
-                           voice="active"
-                           mood="participle"
-                           gloss="having brought back"
-                           domain="016 031008"
-                           ln="16.13 31.61"
-                           morph="V-AAP-NSM"
-                           unicode="ἐπιστρέψας"
-                           frame="A0:n00000000000 A1:n59005020005">ἐπιστρέψας</w>
-                        <w role="o"
-                           ref="JAS 5:20!5"
-                           after=" "
-                           class="adj"
-                           xml:id="n59005020005"
-                           lemma="ἁμαρτωλός"
-                           normalized="ἁμαρτωλόν"
-                           strong="268"
-                           number="singular"
-                           gender="masculine"
-                           case="accusative"
-                           gloss="a sinner"
-                           domain="088038"
-                           ln="88.295"
-                           morph="A-ASM"
-                           unicode="ἁμαρτωλὸν">ἁμαρτωλὸν</w>
-                        <wg class="pp" rule="PrepNp" role="adv">
-                           <w ref="JAS 5:20!6"
+                           class="prep"
+                           xml:id="n59005020006"
+                           lemma="ἐκ"
+                           normalized="ἐκ"
+                           strong="1537"
+                           gloss="from"
+                           domain="084001"
+                           ln="84.4"
+                           morph="PREP"
+                           unicode="ἐκ">ἐκ</w>
+                        <wg class="np" rule="NPofNP">
+                           <w ref="JAS 5:20!7"
                               after=" "
-                              class="prep"
-                              xml:id="n59005020006"
-                              lemma="ἐκ"
-                              normalized="ἐκ"
-                              strong="1537"
-                              gloss="from"
-                              domain="084001"
-                              ln="84.4"
-                              morph="PREP"
-                              unicode="ἐκ">ἐκ</w>
+                              class="noun"
+                              type="common"
+                              xml:id="n59005020007"
+                              lemma="πλάνη"
+                              normalized="πλάνης"
+                              strong="4106"
+                              number="singular"
+                              gender="feminine"
+                              case="genitive"
+                              gloss="[the] error"
+                              domain="031002"
+                              ln="31.10 31.8"
+                              morph="N-GSF"
+                              unicode="πλάνης">πλάνης</w>
                            <wg class="np" rule="NPofNP">
-                              <w ref="JAS 5:20!7"
+                              <w ref="JAS 5:20!8"
                                  after=" "
                                  class="noun"
                                  type="common"
-                                 xml:id="n59005020007"
-                                 lemma="πλάνη"
-                                 normalized="πλάνης"
-                                 strong="4106"
+                                 xml:id="n59005020008"
+                                 lemma="ὁδός"
+                                 normalized="ὁδοῦ"
+                                 strong="3598"
                                  number="singular"
                                  gender="feminine"
                                  case="genitive"
-                                 gloss="[the] error"
-                                 domain="031002"
-                                 ln="31.10 31.8"
+                                 gloss="of the way"
+                                 domain="041001"
+                                 ln="41.16"
                                  morph="N-GSF"
-                                 unicode="πλάνης">πλάνης</w>
-                              <wg class="np" rule="NPofNP">
-                                 <w ref="JAS 5:20!8"
-                                    after=" "
-                                    class="noun"
-                                    type="common"
-                                    xml:id="n59005020008"
-                                    lemma="ὁδός"
-                                    normalized="ὁδοῦ"
-                                    strong="3598"
-                                    number="singular"
-                                    gender="feminine"
-                                    case="genitive"
-                                    gloss="of the way"
-                                    domain="041001"
-                                    ln="41.16"
-                                    morph="N-GSF"
-                                    unicode="ὁδοῦ">ὁδοῦ</w>
-                                 <w ref="JAS 5:20!9"
-                                    after=" "
-                                    class="pron"
-                                    type="personal"
-                                    xml:id="n59005020009"
-                                    lemma="αὐτός"
-                                    normalized="αὐτοῦ"
-                                    strong="846"
-                                    number="singular"
-                                    gender="masculine"
-                                    case="genitive"
-                                    gloss="of him"
-                                    domain="092004"
-                                    ln="92.11"
-                                    morph="P-GSM"
-                                    unicode="αὐτοῦ"
-                                    referent="n59005020005">αὐτοῦ</w>
-                              </wg>
+                                 unicode="ὁδοῦ">ὁδοῦ</w>
+                              <w ref="JAS 5:20!9"
+                                 after=" "
+                                 class="pron"
+                                 type="personal"
+                                 xml:id="n59005020009"
+                                 lemma="αὐτός"
+                                 normalized="αὐτοῦ"
+                                 strong="846"
+                                 number="singular"
+                                 gender="masculine"
+                                 case="genitive"
+                                 gloss="of him"
+                                 domain="092004"
+                                 ln="92.11"
+                                 morph="P-GSM"
+                                 unicode="αὐτοῦ"
+                                 referent="n59005020005">αὐτοῦ</w>
                            </wg>
                         </wg>
                      </wg>
                   </wg>
+               </wg>
+               <w role="v"
+                  ref="JAS 5:20!10"
+                  after=" "
+                  class="verb"
+                  xml:id="n59005020010"
+                  lemma="σῴζω"
+                  normalized="σώσει"
+                  strong="4982"
+                  number="singular"
+                  person="third"
+                  tense="future"
+                  voice="active"
+                  mood="indicative"
+                  gloss="will save"
+                  domain="021005 021006"
+                  ln="21.18 21.27"
+                  morph="V-FAI-3S"
+                  unicode="σώσει"
+                  frame="A0:n59005020004 A1:n59005020011">σώσει</w>
+               <wg class="np" rule="NPofNP" role="o">
+                  <w ref="JAS 5:20!11"
+                     after=" "
+                     class="noun"
+                     type="common"
+                     xml:id="n59005020011"
+                     lemma="ψυχή"
+                     normalized="ψυχήν"
+                     strong="5590"
+                     number="singular"
+                     gender="feminine"
+                     case="accusative"
+                     gloss="the soul"
+                     domain="009001"
+                     ln="9.20"
+                     morph="N-ASF"
+                     unicode="ψυχὴν">ψυχὴν</w>
+                  <w ref="JAS 5:20!12"
+                     after=" "
+                     class="pron"
+                     type="personal"
+                     xml:id="n59005020012"
+                     lemma="αὐτός"
+                     normalized="αὐτοῦ"
+                     strong="846"
+                     number="singular"
+                     gender="masculine"
+                     case="genitive"
+                     gloss="of him"
+                     domain="092004"
+                     ln="92.11"
+                     morph="P-GSM"
+                     unicode="αὐτοῦ"
+                     referent="n59005020005">αὐτοῦ</w>
+               </wg>
+               <wg class="pp" rule="PrepNp" role="adv">
+                  <w ref="JAS 5:20!13"
+                     after=" "
+                     class="prep"
+                     xml:id="n59005020013"
+                     lemma="ἐκ"
+                     normalized="ἐκ"
+                     strong="1537"
+                     gloss="from"
+                     domain="084001"
+                     ln="84.4"
+                     morph="PREP"
+                     unicode="ἐκ">ἐκ</w>
+                  <w ref="JAS 5:20!14"
+                     after=" "
+                     class="noun"
+                     type="common"
+                     xml:id="n59005020014"
+                     lemma="θάνατος"
+                     normalized="θανάτου"
+                     strong="2288"
+                     number="singular"
+                     gender="masculine"
+                     case="genitive"
+                     gloss="death"
+                     domain="023007"
+                     ln="23.99"
+                     morph="N-GSM"
+                     unicode="θανάτου">θανάτου</w>
+               </wg>
+            </wg>
+            <wg type="group">
+               <w ref="JAS 5:20!15"
+                  after=" "
+                  class="conj"
+                  xml:id="n59005020015"
+                  lemma="καί"
+                  normalized="καί"
+                  strong="2532"
+                  gloss="and"
+                  morph="CONJ"
+                  unicode="καὶ">καὶ</w>
+               <wg class="cl" rule="V-O">
                   <w role="v"
-                     ref="JAS 5:20!10"
+                     ref="JAS 5:20!16"
                      after=" "
                      class="verb"
-                     xml:id="n59005020010"
-                     lemma="σῴζω"
-                     normalized="σώσει"
-                     strong="4982"
+                     xml:id="n59005020016"
+                     lemma="καλύπτω"
+                     normalized="καλύψει"
+                     strong="2572"
                      number="singular"
                      person="third"
                      tense="future"
                      voice="active"
                      mood="indicative"
-                     gloss="will save"
-                     domain="021005 021006"
-                     ln="21.18 21.27"
+                     gloss="will cover over"
+                     domain="079025"
+                     ln="79.114"
                      morph="V-FAI-3S"
-                     unicode="σώσει"
-                     frame="A0:n59005020004 A1:n59005020011">σώσει</w>
+                     unicode="καλύψει"
+                     frame="A0:n59005020004 A1:n59005020017"
+                     subjref="n59005020004">καλύψει</w>
                   <wg class="np" rule="NPofNP" role="o">
-                     <w ref="JAS 5:20!11"
+                     <w ref="JAS 5:20!17"
                         after=" "
                         class="noun"
                         type="common"
-                        xml:id="n59005020011"
-                        lemma="ψυχή"
-                        normalized="ψυχήν"
-                        strong="5590"
+                        xml:id="n59005020017"
+                        lemma="πλῆθος"
+                        normalized="πλῆθος"
+                        strong="4128"
                         number="singular"
-                        gender="feminine"
+                        gender="neuter"
                         case="accusative"
-                        gloss="the soul"
-                        domain="009001"
-                        ln="9.20"
-                        morph="N-ASF"
-                        unicode="ψυχὴν">ψυχὴν</w>
-                     <w ref="JAS 5:20!12"
-                        after=" "
-                        class="pron"
-                        type="personal"
-                        xml:id="n59005020012"
-                        lemma="αὐτός"
-                        normalized="αὐτοῦ"
-                        strong="846"
-                        number="singular"
-                        gender="masculine"
-                        case="genitive"
-                        gloss="of him"
-                        domain="092004"
-                        ln="92.11"
-                        morph="P-GSM"
-                        unicode="αὐτοῦ"
-                        referent="n59005020005">αὐτοῦ</w>
-                  </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
-                     <w ref="JAS 5:20!13"
-                        after=" "
-                        class="prep"
-                        xml:id="n59005020013"
-                        lemma="ἐκ"
-                        normalized="ἐκ"
-                        strong="1537"
-                        gloss="from"
-                        domain="084001"
-                        ln="84.4"
-                        morph="PREP"
-                        unicode="ἐκ">ἐκ</w>
-                     <w ref="JAS 5:20!14"
-                        after=" "
+                        gloss="a multitude"
+                        domain="059001"
+                        ln="59.9"
+                        morph="N-ASN"
+                        unicode="πλῆθος">πλῆθος</w>
+                     <w ref="JAS 5:20!18"
+                        after="."
                         class="noun"
                         type="common"
-                        xml:id="n59005020014"
-                        lemma="θάνατος"
-                        normalized="θανάτου"
-                        strong="2288"
-                        number="singular"
-                        gender="masculine"
+                        xml:id="n59005020018"
+                        lemma="ἁμαρτία"
+                        normalized="ἁμαρτιῶν"
+                        strong="266"
+                        number="plural"
+                        gender="feminine"
                         case="genitive"
-                        gloss="death"
-                        domain="023007"
-                        ln="23.99"
-                        morph="N-GSM"
-                        unicode="θανάτου">θανάτου</w>
-                  </wg>
-               </wg>
-               <wg type="group">
-                  <w ref="JAS 5:20!15"
-                     after=" "
-                     class="conj"
-                     xml:id="n59005020015"
-                     lemma="καί"
-                     normalized="καί"
-                     strong="2532"
-                     gloss="and"
-                     morph="CONJ"
-                     unicode="καὶ">καὶ</w>
-                  <wg class="cl" rule="V-O">
-                     <w role="v"
-                        ref="JAS 5:20!16"
-                        after=" "
-                        class="verb"
-                        xml:id="n59005020016"
-                        lemma="καλύπτω"
-                        normalized="καλύψει"
-                        strong="2572"
-                        number="singular"
-                        person="third"
-                        tense="future"
-                        voice="active"
-                        mood="indicative"
-                        gloss="will cover over"
-                        domain="079025"
-                        ln="79.114"
-                        morph="V-FAI-3S"
-                        unicode="καλύψει"
-                        frame="A0:n59005020004 A1:n59005020017"
-                        subjref="n59005020004">καλύψει</w>
-                     <wg class="np" rule="NPofNP" role="o">
-                        <w ref="JAS 5:20!17"
-                           after=" "
-                           class="noun"
-                           type="common"
-                           xml:id="n59005020017"
-                           lemma="πλῆθος"
-                           normalized="πλῆθος"
-                           strong="4128"
-                           number="singular"
-                           gender="neuter"
-                           case="accusative"
-                           gloss="a multitude"
-                           domain="059001"
-                           ln="59.9"
-                           morph="N-ASN"
-                           unicode="πλῆθος">πλῆθος</w>
-                        <w ref="JAS 5:20!18"
-                           after="."
-                           class="noun"
-                           type="common"
-                           xml:id="n59005020018"
-                           lemma="ἁμαρτία"
-                           normalized="ἁμαρτιῶν"
-                           strong="266"
-                           number="plural"
-                           gender="feminine"
-                           case="genitive"
-                           gloss="of sins"
-                           domain="088038"
-                           ln="88.310"
-                           morph="N-GPF"
-                           unicode="ἁμαρτιῶν.">ἁμαρτιῶν</w>
-                     </wg>
+                        gloss="of sins"
+                        domain="088038"
+                        ln="88.310"
+                        morph="N-GPF"
+                        unicode="ἁμαρτιῶν.">ἁμαρτιῶν</w>
                   </wg>
                </wg>
             </wg>

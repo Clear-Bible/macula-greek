@@ -5,7 +5,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JUD 1:1">JUD 1:1</milestone> Ἰούδας Ἰησοῦ Χριστοῦ δοῦλος, ἀδελφὸς δὲ Ἰακώβου, τοῖς ἐν Θεῷ Πατρὶ ἠγαπημένοις καὶ Ἰησοῦ Χριστῷ τετηρημένοις κλητοῖς.</p>
-      <wg class="cl" rule="S-IO">
+      <wg class="cl" rule="S-IO" predication="elided">
          <wg type="apposition" class="np" rule="Np-Appos" role="s">
             <w ref="JUD 1:1!1"
                after=" "
@@ -423,7 +423,7 @@
       <p>
          <milestone unit="verse" id="JUD 1:3">JUD 1:3</milestone> Ἀγαπητοί, πᾶσαν σπουδὴν ποιούμενος γράφειν ὑμῖν περὶ τῆς κοινῆς ἡμῶν σωτηρίας, ἀνάγκην ἔσχον γράψαι ὑμῖν παρακαλῶν ἐπαγωνίζεσθαι τῇ ἅπαξ παραδοθείσῃ τοῖς ἁγίοις πίστει.</p>
       <wg Rule="ClCl2" class="cl" nodeId="650010030010230">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <w role="aux"
                ref="JUD 1:3!1"
                after=","
@@ -1434,40 +1434,42 @@
                   morph="A-APN"
                   unicode="πάντα,">πάντα</w>
             </wg>
-            <wg Rule="ClCl" class="cl" nodeId="650010050010620" role="o">
-               <w role="v"
-                  ref="JUD 1:5!1"
-                  after=" "
-                  class="verb"
-                  xml:id="n65001005001"
-                  lemma="ὑπομιμνῄσκω"
-                  normalized="Ὑπομνῆσαι"
-                  strong="5279"
-                  tense="aorist"
-                  voice="active"
-                  mood="infinitive"
-                  gloss="To remind"
-                  domain="029002"
-                  ln="29.10"
-                  morph="V-AAN"
-                  unicode="Ὑπομνῆσαι"
-                  frame="A0:n65001001001 A1:n65001005003"
-                  subjref="n65001001001">Ὑπομνῆσαι</w>
-               <w role="o"
-                  ref="JUD 1:5!3"
-                  after=" "
-                  class="pron"
-                  type="personal"
-                  xml:id="n65001005003"
-                  lemma="σύ"
-                  normalized="ὑμᾶς"
-                  strong="4771"
-                  number="plural"
-                  case="accusative"
-                  gloss="you"
-                  morph="P-2AP"
-                  unicode="ὑμᾶς"
-                  referent="n65001003001">ὑμᾶς</w>
+            <wg type="group" rule="ClCl" role="o">
+               <wg class="cl" rule="V-O">
+                  <w role="v"
+                     ref="JUD 1:5!1"
+                     after=" "
+                     class="verb"
+                     xml:id="n65001005001"
+                     lemma="ὑπομιμνῄσκω"
+                     normalized="Ὑπομνῆσαι"
+                     strong="5279"
+                     tense="aorist"
+                     voice="active"
+                     mood="infinitive"
+                     gloss="To remind"
+                     domain="029002"
+                     ln="29.10"
+                     morph="V-AAN"
+                     unicode="Ὑπομνῆσαι"
+                     frame="A0:n65001001001 A1:n65001005003"
+                     subjref="n65001001001">Ὑπομνῆσαι</w>
+                  <w role="o"
+                     ref="JUD 1:5!3"
+                     after=" "
+                     class="pron"
+                     type="personal"
+                     xml:id="n65001005003"
+                     lemma="σύ"
+                     normalized="ὑμᾶς"
+                     strong="4771"
+                     number="plural"
+                     case="accusative"
+                     gloss="you"
+                     morph="P-2AP"
+                     unicode="ὑμᾶς"
+                     referent="n65001003001">ὑμᾶς</w>
+               </wg>
                <wg Rule="ClCl" class="cl" nodeId="650010050080600">
                   <w ref="JUD 1:5!8"
                      after=" "
@@ -2055,7 +2057,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg rule="sub-CL" role="adv">
+                  <wg rule="sub-CL" role="o">
                      <w ref="JUD 1:7!1"
                         after=" "
                         class="conj"
@@ -3322,7 +3324,7 @@
                            ln="64.12"
                            morph="ADV"
                            unicode="ὡς">ὡς</w>
-                        <wg class="cl" articular="true" rule="S2CL">
+                        <wg class="cl" articular="true" rule="S2CL" predication="elided">
                            <wg class="np" articular="true" rule="DetNP" role="s">
                               <w ref="JUD 1:10!12"
                                  after=" "
@@ -4021,7 +4023,11 @@
                   subjref="n65001008005">ποιμαίνοντες</w>
             </wg>
          </wg>
-         <wg class="cl" clauseType="nominalized" rule="P2CL" role="adv">
+         <wg class="cl"
+             clauseType="nominalized"
+             rule="P2CL"
+             predication="verbless"
+             role="adv">
             <wg type="group" rule="NpNpNpNp" role="p">
                <wg class="np" rule="NpAdjp">
                   <wg class="np" rule="NpAdjp">
@@ -5602,7 +5608,7 @@
             morph="CONJ"
             unicode="δέ,">δέ</w>
          <wg Rule="ClCl2" class="cl" nodeId="650010170030150">
-            <wg rule="Np2CL">
+            <wg role="aux" rule="Np2CL">
                <w role="aux"
                   ref="JUD 1:17!3"
                   after=","
@@ -6310,7 +6316,7 @@
             morph="CONJ"
             unicode="δέ,">δέ</w>
          <wg Rule="ClCl2" class="cl" nodeId="650010200030280">
-            <wg rule="Np2CL">
+            <wg role="aux" rule="Np2CL">
                <w role="aux"
                   ref="JUD 1:20!3"
                   after=","
@@ -7862,7 +7868,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg rule="Intj2CL">
+            <wg role="aux" rule="Intj2CL">
                <w role="aux"
                   ref="JUD 1:25!27"
                   after="."

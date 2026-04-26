@@ -414,6 +414,12 @@ declare function local:attributes($node, $exclusions, $passed-role)
     $node/@Frame ! attribute frame {.},
     $node/@Ref ! attribute referent {.},
     $node/@SubjRef  ! attribute subjref {.},
+    (: @predication marks structural properties of the predication not captured elsewhere in lowfat:
+         verbless  — clause with no finite verb (verbless predication)
+         elided    — clause with an elided (understood) verb :)
+    if ($node/@ClType = 'Verbless') then attribute predication {'verbless'}
+    else if ($node/@ClType = 'VerbElided') then attribute predication {'elided'}
+    else (),
 
     if (($node/@xml:id, $node/@nodeId) = $discontinuous-discourse-nodes) then
 		attribute note {'discontinuous discourse'}
@@ -475,7 +481,7 @@ declare function local:is-peripheral($node)
 {
     $node/@ClType="Minor"
     or
-    $node/*[@Cat="V"]/descendant::Node[@LN="91.13"]
+    $node/*[@Cat="V"]/descendant::Node[tokenize(@LN, ' ') = '91.13']
     (:    Prompters of Attention
         ἄγε     look	91.13
         ἴδε     look!	91.13
@@ -595,37 +601,48 @@ declare function local:simple-clause($node, $passed-role, $ellipsis-already-proc
 declare function local:contains-projecting-verb($node)
 {
 
-	let $exceptions-to-exclude := ('430090240130012')
 	let $exceptions-to-include := ()
 	return
 
 		$node[@nodeId = $exceptions-to-include]
 		or
 		(
-			(: Find words with projecting LN codes that are NOT inside any embedded CL sub-clause within $node.
-			   The predicate `ancestor::Node[@Cat='CL'] intersect $node/descendant::Node[@Cat='CL']` returns
-			   CL nodes that are both ancestors of the word AND descendants of $node (i.e. embedded sub-clauses).
-			   `not(...)` ensures we only find projecting verbs at the surface level of $node, not inside
-			   relative clauses or other embedded clauses. This fixes false positives from e.g. λεγομένην
-			   ("called/named") inside an NP, or projecting verbs inside relative clauses. :)
+			(: Projecting verbs: verbs of saying, thinking, knowing, and perceiving (Smyth §§2576ff).
+			   Tokenize @LN on space (multi-valued codes like "27.2 28.1" are allowed) then check
+			   the domain number against known projecting domains:
+			     33 Communication       — verbs of saying (Smyth class 1)
+			     31 Hold a view/believe — verbs of thinking (Smyth class 2)
+			     32 Understand          — (Smyth class 2/3)
+			     30 Think, plan         — (Smyth class 2)
+			     28 Know                — (Smyth class 3)
+			     25 Attitudes/emotions  — those that take content clauses
+			     27.1–27.18             — come to know / find out / perceive (Smyth class 3):
+			                              γινώσκω, ὁράω, ἐπιγινώσκω, μανθάνω, εὑρίσκω, πυνθάνομαι.
+			                              Domain 27 splits cleanly at 27.18/27.27: 27.27–27.61 are
+			                              searching/testing/watching verbs that do NOT project.
+			   NOTE: The correct approach is to check that the projecting verb actually GOVERNS the
+			   candidate clause (i.e. the clause is a syntactic complement of the verb, not merely
+			   nearby). This heuristic — finding any projecting-domain verb within $node — is known
+			   to produce false positives (e.g. emotion verbs with prepositional complements, temporal
+			   ὅτε clauses misidentified as content complements). A proper fix requires checking the
+			   syntactic relationship between the verb and the clause; see GitHub issue #13. :)
 			exists(
-				$node/descendant::Node[
+				$node/descendant::Node[@Cat ne 'CL']/descendant::Node[
 					@Cat = 'verb'
-					and (starts-with(@LN, '33')
-					or starts-with(@LN, '31')
-					or starts-with(@LN, '32')
-					or starts-with(@LN, '28')
-					or starts-with(@LN, '30')
-					or starts-with(@LN, '25')
-					or @UnicodeLemma = "λέγω")
-					and not(
-						ancestor::Node[@Cat='CL'] intersect $node/descendant::Node[@Cat='CL']
-					)
+					and (some $ln in tokenize(@LN, ' ') satisfies
+					        let $p := tokenize($ln, '\.')
+					        return $p[1] = ('33','31','32','30','28','25')
+					            or ($p[1] = '27' and xs:integer($p[2]) le 18))
+					or @UnicodeLemma = "λέγω"
+					(: δίδωμι is never a speech-projecting verb, but appears twice in LN domain 33 (Communication):
+					     JHN 9:24 "Δὸς δόξαν τῷ θεῷ" — "Give glory to God!" — a fixed oath formula meaning
+					       "tell the truth"; the object is δόξαν (glory), not a reported clause.
+					     LUK 21:15 "δώσω ὑμῖν στόμα καὶ σοφίαν" — "I will give you a mouth and wisdom" —
+					       Jesus promises eloquence under persecution; again the object is a noun, not a clause.
+					   Both land in LN 33 because "give glory" and "give eloquence" are communicative acts,
+					   but neither projects a reported speech clause; δίδωμι is the one false positive. :)
+					and not(@UnicodeLemma = "δίδωμι")
 				]
-			)
-			and not(
-				(: Exceptions that would otherwise be false positives since they are structurally almost indistinguishable from projecting constructions :)
-				$node[@nodeId = $exceptions-to-exclude]
 			)
 		)
 };
@@ -1326,7 +1343,8 @@ declare function local:disambiguate-clause-complex-structure($node, $passed-role
 									'o' || (if ($debugging-mode) then '_b' else ())
 								else
 									'apposition'
-							else if ($constituent-to-subordinate//@LN = ('91.13', '91.14')) then
+							else if (($constituent-to-subordinate//Node[@LN])[1]/@LN = ('91.13', '91.14')) then
+								(: attention-getter (ἰδοὺ/ἴδε/ἄγε) is the first word of this constituent — peripheral :)
 								'aux' || (if ($debugging-mode) then  '_aux2' else ())
 							
 							else if ($constituent-to-subordinate/@Rule = 'ADV2CL') then
@@ -1624,6 +1642,7 @@ declare function local:process-single-constituent-clause($node, $passed-role)
 					or $node/@ClType = 'Minor'
 				) then
 					<wg>{
+						attribute role {'aux'},
 						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
 						$node/element() ! local:node(., 'aux' || (if ($debugging-mode) then  '__intj2cl or np2cl' else ()))
 					}</wg>
@@ -1854,28 +1873,30 @@ declare function local:node($node as element(), $passed-role as xs:string?)
 			'400250110090020' (: ClCl with two auxiliaries :)
 		)
 		
+		(: Minor clauses (ClType=Minor) are always peripheral — override any passed-in role with 'aux'. :)
+		let $effective-role := if ($node/@ClType = 'Minor') then 'aux' else $passed-role
 		return
 			if ($node/@nodeId = $exceptions-to-skip-node) then
-					$node/element() ! local:node(., $passed-role || (if ($debugging-mode) then  '__exception-atomic_' || ./@Unicode else ()))
+					$node/element() ! local:node(., $effective-role || (if ($debugging-mode) then  '__exception-atomic_' || ./@Unicode else ()))
 			else if ($node/@Rule = $conjuncted-structure-rule) then
-				local:process-conjunctions($node, $passed-role)
-			else 
+				local:process-conjunctions($node, $effective-role)
+			else
 				switch (local:node-type($node))
 					case "word"
 						return
-							local:word($node, $passed-role)
+							local:word($node, $effective-role)
 					case "simple-clause"
 						return
-							local:simple-clause($node, $passed-role, ())
+							local:simple-clause($node, $effective-role, ())
 					case "clause-complex"
 						return
-							local:disambiguate-clause-complex-structure($node, $passed-role)
+							local:disambiguate-clause-complex-structure($node, $effective-role)
 					case "atomic"
 						return
-							$node/element() ! local:node(., $passed-role || (if ($debugging-mode) then  '__atomic_' || ./@Unicode else ()))
+							$node/element() ! local:node(., $effective-role || (if ($debugging-mode) then  '__atomic_' || ./@Unicode else ()))
 					case "complex"
 						return
-							local:process-complex-node($node, $passed-role)
+							local:process-complex-node($node, $effective-role)
 					default
 					return
 						<error_unknown_node_type

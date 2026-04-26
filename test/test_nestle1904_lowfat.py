@@ -118,6 +118,40 @@ def test_no_cltype_attr(lowfat_file):
     assert not offenders
 
 
+# @predication attribute must only take values 'verbless' or 'elided' (internal #10)
+@pytest.mark.parametrize("lowfat_file", __lowfat_files__)
+def test_predication_values(lowfat_file):
+    VALID = {'verbless', 'elided'}
+    for el in run_xpath_for_file("//*[@predication]", lowfat_file):
+        assert el.attrib["predication"] in VALID, \
+            f"Unexpected @predication={el.attrib['predication']!r} at {el.attrib.get('rule')}"
+
+
+# @predication must only appear on <wg class="cl"> elements (internal #10)
+@pytest.mark.parametrize("lowfat_file", __lowfat_files__)
+def test_predication_on_cl_only(lowfat_file):
+    for el in run_xpath_for_file("//*[@predication]", lowfat_file):
+        assert el.tag == "wg" and el.attrib.get("class") == "cl", \
+            f"@predication on unexpected element <{el.tag} class={el.attrib.get('class')!r}>"
+
+
+# Minor clauses (ClType=Minor in nodes) must surface as role=aux in lowfat (internal #10)
+# Spot-check: canonical single-word minor clause words must have role=aux on parent wg
+def test_minor_clause_role_aux():
+    import os
+    from lxml import etree as ET
+    lowfat_path = os.path.join(os.path.dirname(__file__), "..", "Nestle1904", "lowfat", "01-matthew.xml")
+    tree = ET.parse(lowfat_path)
+    # Σατανᾶ (MAT 4:10), Ῥακά (MAT 5:22), Κύριε (MAT 7:21) — all Np2CL[ClType=Minor]
+    for normalized in ["Σατανᾶ", "Ῥακά"]:
+        words = tree.xpath(f'//w[@normalized="{normalized}"]')
+        assert words, f"No <w normalized='{normalized}'> found"
+        for w in words:
+            parent = w.getparent()
+            assert parent is not None and parent.get("role") == "aux", \
+                f"Expected role=aux on parent of {normalized!r}, got role={parent.get('role')!r}"
+
+
 # Regression: length heuristic was stripping final letters into @after (public #76)
 @pytest.mark.parametrize("lowfat_file", __lowfat_files__)
 def test_after_no_alphabetic(lowfat_file):

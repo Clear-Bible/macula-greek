@@ -6,7 +6,7 @@
       <p>
          <milestone unit="verse" id="1TI 1:1">1TI 1:1</milestone> 
          <milestone unit="verse" id="1TI 1:2">1TI 1:2</milestone> Παῦλος ἀπόστολος Χριστοῦ Ἰησοῦ κατ’ ἐπιταγὴν Θεοῦ Σωτῆρος ἡμῶν καὶ Χριστοῦ Ἰησοῦ τῆς ἐλπίδος ἡμῶν Τιμοθέῳ γνησίῳ τέκνῳ ἐν πίστει·</p>
-      <wg class="cl" rule="S-IO">
+      <wg class="cl" rule="S-IO" predication="elided">
          <wg type="apposition" class="np" rule="Np-Appos" role="s">
             <w ref="1TI 1:1!1"
                after=" "
@@ -350,7 +350,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 1:2">1TI 1:2</milestone> χάρις, ἔλεος, εἰρήνη ἀπὸ Θεοῦ πατρὸς καὶ Χριστοῦ Ἰησοῦ τοῦ κυρίου ἡμῶν.</p>
-      <wg class="cl" rule="S-ADV">
+      <wg class="cl" rule="S-ADV" predication="elided">
          <wg type="group" rule="NpNpNp" role="s">
             <w ref="1TI 1:2!6"
                after=","
@@ -704,7 +704,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" role="o">
             <w ref="1TI 1:3!10"
                after=" "
                class="conj"
@@ -960,7 +960,7 @@
                                     gloss="than"
                                     morph="PRT"
                                     unicode="ἢ">ἢ</w>
-                                 <wg class="cl" rule="O2CL">
+                                 <wg class="cl" rule="O2CL" predication="elided">
                                     <wg type="apposition" class="np" rule="Np-Appos" role="o">
                                        <wg class="np" rule="NPofNP">
                                           <w ref="1TI 1:4!12"
@@ -1932,7 +1932,7 @@
                                     morph="CONJ"
                                     unicode="δὲ">δὲ</w>
                                  <wg rule="CLaCL">
-                                    <wg class="cl" rule="ADV2CL">
+                                    <wg class="cl" rule="ADV2CL" predication="elided">
                                        <wg type="group" rule="NpNpNpNpNpNpNpNpNpNp" role="adv">
                                           <wg rule="NpaNp">
                                              <w ref="1TI 1:9!8"
@@ -3713,375 +3713,375 @@
             morph="CONJ"
             unicode="ἀλλὰ">ἀλλὰ</w>
          <wg Rule="ClCl" class="cl" nodeId="540010160020230">
-            <wg class="pp" rule="PrepNp" role="adv">
-               <w ref="1TI 1:16!2"
-                  after=" "
-                  class="prep"
-                  xml:id="n54001016002"
-                  lemma="διά"
-                  normalized="διά"
-                  strong="1223"
-                  gloss="because of"
-                  morph="PREP"
-                  unicode="διὰ">διὰ</w>
-               <w ref="1TI 1:16!3"
-                  after=" "
-                  class="pron"
-                  type="demonstrative"
-                  xml:id="n54001016003"
-                  lemma="οὗτος"
-                  normalized="τοῦτο"
-                  strong="3778"
-                  number="singular"
-                  gender="neuter"
-                  case="accusative"
-                  gloss="this"
-                  morph="D-ASN"
-                  unicode="τοῦτο"
-                  referent="n54001016009">τοῦτο</w>
-            </wg>
-            <w role="v"
-               ref="1TI 1:16!4"
-               after=","
-               class="verb"
-               xml:id="n54001016004"
-               lemma="ἐλεέω"
-               normalized="ἠλεήθην"
-               strong="1653"
-               number="singular"
-               person="first"
-               tense="aorist"
-               voice="passive"
-               mood="indicative"
-               gloss="I was shown mercy"
-               domain="088010"
-               ln="88.76"
-               morph="V-API-1S"
-               unicode="ἠλεήθην,"
-               frame="A1:n54001001001"
-               subjref="n54001001001">ἠλεήθην</w>
-            <wg rule="that-VP" role="o">
-               <w ref="1TI 1:16!5"
-                  after=" "
-                  class="conj"
-                  xml:id="n54001016005"
-                  lemma="ἵνα"
-                  normalized="ἵνα"
-                  strong="2443"
-                  gloss="that"
-                  morph="CONJ"
-                  unicode="ἵνα">ἵνα</w>
-               <wg class="cl" rule="ADV-V-S-O-ADV">
-                  <wg class="pp" rule="PrepNp" role="adv">
-                     <w ref="1TI 1:16!6"
-                        after=" "
-                        class="prep"
-                        xml:id="n54001016006"
-                        lemma="ἐν"
-                        normalized="ἐν"
-                        strong="1722"
-                        gloss="in"
-                        morph="PREP"
-                        unicode="ἐν">ἐν</w>
-                     <wg type="apposition" class="np" rule="Np-Appos">
-                        <w ref="1TI 1:16!7"
-                           after=" "
-                           class="pron"
-                           type="personal"
-                           xml:id="n54001016007"
-                           lemma="ἐγώ"
-                           normalized="ἐμοί"
-                           strong="1473"
-                           number="singular"
-                           case="dative"
-                           gloss="me"
-                           domain="092001"
-                           ln="92.1"
-                           morph="P-1DS"
-                           unicode="ἐμοὶ"
-                           referent="n54001001001">ἐμοὶ</w>
-                        <w ref="1TI 1:16!8"
-                           after=" "
-                           class="adj"
-                           xml:id="n54001016008"
-                           lemma="πρῶτος"
-                           normalized="πρώτῳ"
-                           strong="4413"
-                           number="singular"
-                           gender="masculine"
-                           case="dative"
-                           degree="superlative"
-                           gloss="[the] foremost"
-                           domain="087003"
-                           ln="87.45"
-                           morph="A-DSM-S"
-                           unicode="πρώτῳ"
-                           junction="apposition">πρώτῳ</w>
-                     </wg>
-                  </wg>
-                  <w role="v"
-                     ref="1TI 1:16!9"
+            <wg class="cl" rule="ADV-V" role="o">
+               <wg class="pp" rule="PrepNp" role="adv">
+                  <w ref="1TI 1:16!2"
                      after=" "
-                     class="verb"
-                     xml:id="n54001016009"
-                     lemma="ἐνδείκνυμι"
-                     normalized="ἐνδείξηται"
-                     strong="1731"
+                     class="prep"
+                     xml:id="n54001016002"
+                     lemma="διά"
+                     normalized="διά"
+                     strong="1223"
+                     gloss="because of"
+                     morph="PREP"
+                     unicode="διὰ">διὰ</w>
+                  <w ref="1TI 1:16!3"
+                     after=" "
+                     class="pron"
+                     type="demonstrative"
+                     xml:id="n54001016003"
+                     lemma="οὗτος"
+                     normalized="τοῦτο"
+                     strong="3778"
                      number="singular"
-                     person="third"
-                     tense="aorist"
-                     voice="middle"
-                     mood="subjunctive"
-                     gloss="might display"
-                     domain="028003"
-                     ln="28.51"
-                     morph="V-AMS-3S"
-                     unicode="ἐνδείξηται"
-                     frame="A0:n54001016010 A1:n54001016014">ἐνδείξηται</w>
-                  <wg type="apposition" class="np" rule="Np-Appos" role="s">
-                     <w ref="1TI 1:16!10"
+                     gender="neuter"
+                     case="accusative"
+                     gloss="this"
+                     morph="D-ASN"
+                     unicode="τοῦτο"
+                     referent="n54001016009">τοῦτο</w>
+               </wg>
+               <w role="v"
+                  ref="1TI 1:16!4"
+                  after=","
+                  class="verb"
+                  xml:id="n54001016004"
+                  lemma="ἐλεέω"
+                  normalized="ἠλεήθην"
+                  strong="1653"
+                  number="singular"
+                  person="first"
+                  tense="aorist"
+                  voice="passive"
+                  mood="indicative"
+                  gloss="I was shown mercy"
+                  domain="088010"
+                  ln="88.76"
+                  morph="V-API-1S"
+                  unicode="ἠλεήθην,"
+                  frame="A1:n54001001001"
+                  subjref="n54001001001">ἠλεήθην</w>
+            </wg>
+            <w ref="1TI 1:16!5"
+               after=" "
+               class="conj"
+               xml:id="n54001016005"
+               lemma="ἵνα"
+               normalized="ἵνα"
+               strong="2443"
+               gloss="that"
+               morph="CONJ"
+               unicode="ἵνα">ἵνα</w>
+            <wg class="cl" rule="ADV-V-S-O-ADV">
+               <wg class="pp" rule="PrepNp" role="adv">
+                  <w ref="1TI 1:16!6"
+                     after=" "
+                     class="prep"
+                     xml:id="n54001016006"
+                     lemma="ἐν"
+                     normalized="ἐν"
+                     strong="1722"
+                     gloss="in"
+                     morph="PREP"
+                     unicode="ἐν">ἐν</w>
+                  <wg type="apposition" class="np" rule="Np-Appos">
+                     <w ref="1TI 1:16!7"
                         after=" "
-                        class="noun"
-                        type="proper"
-                        xml:id="n54001016010"
-                        lemma="Ἰησοῦς"
-                        normalized="Ἰησοῦς"
-                        strong="2424"
+                        class="pron"
+                        type="personal"
+                        xml:id="n54001016007"
+                        lemma="ἐγώ"
+                        normalized="ἐμοί"
+                        strong="1473"
+                        number="singular"
+                        case="dative"
+                        gloss="me"
+                        domain="092001"
+                        ln="92.1"
+                        morph="P-1DS"
+                        unicode="ἐμοὶ"
+                        referent="n54001001001">ἐμοὶ</w>
+                     <w ref="1TI 1:16!8"
+                        after=" "
+                        class="adj"
+                        xml:id="n54001016008"
+                        lemma="πρῶτος"
+                        normalized="πρώτῳ"
+                        strong="4413"
                         number="singular"
                         gender="masculine"
-                        case="nominative"
-                        gloss="Jesus"
-                        domain="093001"
-                        ln="93.169a"
-                        morph="N-NSM"
-                        unicode="Ἰησοῦς">Ἰησοῦς</w>
-                     <w ref="1TI 1:16!11"
-                        after=" "
-                        class="noun"
-                        type="proper"
-                        xml:id="n54001016011"
-                        lemma="Χριστός"
-                        normalized="Χριστός"
-                        strong="5547"
-                        number="singular"
-                        gender="masculine"
-                        case="nominative"
-                        gloss="Christ"
-                        domain="093001"
-                        ln="93.387"
-                        morph="N-NSM"
-                        unicode="Χριστὸς"
-                        junction="apposition">Χριστὸς</w>
+                        case="dative"
+                        degree="superlative"
+                        gloss="[the] foremost"
+                        domain="087003"
+                        ln="87.45"
+                        morph="A-DSM-S"
+                        unicode="πρώτῳ"
+                        junction="apposition">πρώτῳ</w>
                   </wg>
-                  <wg class="np" articular="true" rule="DetNP" role="o">
-                     <w ref="1TI 1:16!12"
+               </wg>
+               <w role="v"
+                  ref="1TI 1:16!9"
+                  after=" "
+                  class="verb"
+                  xml:id="n54001016009"
+                  lemma="ἐνδείκνυμι"
+                  normalized="ἐνδείξηται"
+                  strong="1731"
+                  number="singular"
+                  person="third"
+                  tense="aorist"
+                  voice="middle"
+                  mood="subjunctive"
+                  gloss="might display"
+                  domain="028003"
+                  ln="28.51"
+                  morph="V-AMS-3S"
+                  unicode="ἐνδείξηται"
+                  frame="A0:n54001016010 A1:n54001016014">ἐνδείξηται</w>
+               <wg type="apposition" class="np" rule="Np-Appos" role="s">
+                  <w ref="1TI 1:16!10"
+                     after=" "
+                     class="noun"
+                     type="proper"
+                     xml:id="n54001016010"
+                     lemma="Ἰησοῦς"
+                     normalized="Ἰησοῦς"
+                     strong="2424"
+                     number="singular"
+                     gender="masculine"
+                     case="nominative"
+                     gloss="Jesus"
+                     domain="093001"
+                     ln="93.169a"
+                     morph="N-NSM"
+                     unicode="Ἰησοῦς">Ἰησοῦς</w>
+                  <w ref="1TI 1:16!11"
+                     after=" "
+                     class="noun"
+                     type="proper"
+                     xml:id="n54001016011"
+                     lemma="Χριστός"
+                     normalized="Χριστός"
+                     strong="5547"
+                     number="singular"
+                     gender="masculine"
+                     case="nominative"
+                     gloss="Christ"
+                     domain="093001"
+                     ln="93.387"
+                     morph="N-NSM"
+                     unicode="Χριστὸς"
+                     junction="apposition">Χριστὸς</w>
+               </wg>
+               <wg class="np" articular="true" rule="DetNP" role="o">
+                  <w ref="1TI 1:16!12"
+                     after=" "
+                     class="det"
+                     xml:id="n54001016012"
+                     lemma="ὁ"
+                     normalized="τήν"
+                     strong="3588"
+                     number="singular"
+                     gender="feminine"
+                     case="accusative"
+                     gloss="-"
+                     domain="092004"
+                     ln="92.24"
+                     morph="T-ASF"
+                     unicode="τὴν">τὴν</w>
+                  <wg class="np" rule="AdjpNp">
+                     <w ref="1TI 1:16!13"
                         after=" "
-                        class="det"
-                        xml:id="n54001016012"
-                        lemma="ὁ"
-                        normalized="τήν"
-                        strong="3588"
+                        class="adj"
+                        xml:id="n54001016013"
+                        lemma="ἅπας"
+                        normalized="ἅπασαν"
+                        strong="537"
                         number="singular"
                         gender="feminine"
                         case="accusative"
-                        gloss="-"
-                        domain="092004"
-                        ln="92.24"
-                        morph="T-ASF"
-                        unicode="τὴν">τὴν</w>
-                     <wg class="np" rule="AdjpNp">
-                        <w ref="1TI 1:16!13"
-                           after=" "
-                           class="adj"
-                           xml:id="n54001016013"
-                           lemma="ἅπας"
-                           normalized="ἅπασαν"
-                           strong="537"
-                           number="singular"
-                           gender="feminine"
-                           case="accusative"
-                           gloss="perfect"
-                           domain="059003"
-                           ln="59.23"
-                           morph="A-ASF"
-                           unicode="ἅπασαν">ἅπασαν</w>
-                        <w ref="1TI 1:16!14"
-                           after=","
-                           class="noun"
-                           type="common"
-                           xml:id="n54001016014"
-                           lemma="μακροθυμία"
-                           normalized="μακροθυμίαν"
-                           strong="3115"
-                           number="singular"
-                           gender="feminine"
-                           case="accusative"
-                           gloss="patience"
-                           domain="025015"
-                           ln="25.167"
-                           morph="N-ASF"
-                           unicode="μακροθυμίαν,">μακροθυμίαν</w>
-                     </wg>
+                        gloss="perfect"
+                        domain="059003"
+                        ln="59.23"
+                        morph="A-ASF"
+                        unicode="ἅπασαν">ἅπασαν</w>
+                     <w ref="1TI 1:16!14"
+                        after=","
+                        class="noun"
+                        type="common"
+                        xml:id="n54001016014"
+                        lemma="μακροθυμία"
+                        normalized="μακροθυμίαν"
+                        strong="3115"
+                        number="singular"
+                        gender="feminine"
+                        case="accusative"
+                        gloss="patience"
+                        domain="025015"
+                        ln="25.167"
+                        morph="N-ASF"
+                        unicode="μακροθυμίαν,">μακροθυμίαν</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
-                     <w ref="1TI 1:16!15"
+               </wg>
+               <wg class="pp" rule="PrepNp" role="adv">
+                  <w ref="1TI 1:16!15"
+                     after=" "
+                     class="prep"
+                     xml:id="n54001016015"
+                     lemma="πρός"
+                     normalized="πρός"
+                     strong="4314"
+                     gloss="as"
+                     domain="090013"
+                     ln="90.58"
+                     morph="PREP"
+                     unicode="πρὸς">πρὸς</w>
+                  <wg class="np" rule="NPofNP">
+                     <w ref="1TI 1:16!16"
                         after=" "
-                        class="prep"
-                        xml:id="n54001016015"
-                        lemma="πρός"
-                        normalized="πρός"
-                        strong="4314"
-                        gloss="as"
-                        domain="090013"
-                        ln="90.58"
-                        morph="PREP"
-                        unicode="πρὸς">πρὸς</w>
-                     <wg class="np" rule="NPofNP">
-                        <w ref="1TI 1:16!16"
+                        class="noun"
+                        type="common"
+                        xml:id="n54001016016"
+                        lemma="ὑποτύπωσις"
+                        normalized="ὑποτύπωσιν"
+                        strong="5296"
+                        number="singular"
+                        gender="feminine"
+                        case="accusative"
+                        gloss="a pattern"
+                        domain="058009"
+                        ln="58.59"
+                        morph="N-ASF"
+                        unicode="ὑποτύπωσιν">ὑποτύπωσιν</w>
+                     <wg articular="true" rule="DetCL">
+                        <w ref="1TI 1:16!17"
                            after=" "
-                           class="noun"
-                           type="common"
-                           xml:id="n54001016016"
-                           lemma="ὑποτύπωσις"
-                           normalized="ὑποτύπωσιν"
-                           strong="5296"
-                           number="singular"
-                           gender="feminine"
-                           case="accusative"
-                           gloss="a pattern"
-                           domain="058009"
-                           ln="58.59"
-                           morph="N-ASF"
-                           unicode="ὑποτύπωσιν">ὑποτύπωσιν</w>
-                        <wg articular="true" rule="DetCL">
-                           <w ref="1TI 1:16!17"
+                           class="det"
+                           xml:id="n54001016017"
+                           lemma="ὁ"
+                           normalized="τῶν"
+                           strong="3588"
+                           number="plural"
+                           gender="masculine"
+                           case="genitive"
+                           gloss="for those"
+                           domain="092004"
+                           ln="92.24"
+                           morph="T-GPM"
+                           unicode="τῶν">τῶν</w>
+                        <wg class="cl" clauseType="nominalized" rule="V-O">
+                           <w role="v"
+                              ref="1TI 1:16!18"
                               after=" "
-                              class="det"
-                              xml:id="n54001016017"
-                              lemma="ὁ"
-                              normalized="τῶν"
-                              strong="3588"
+                              class="verb"
+                              xml:id="n54001016018"
+                              lemma="μέλλω"
+                              normalized="μελλόντων"
+                              strong="3195"
                               number="plural"
                               gender="masculine"
                               case="genitive"
-                              gloss="for those"
-                              domain="092004"
-                              ln="92.24"
-                              morph="T-GPM"
-                              unicode="τῶν">τῶν</w>
-                           <wg class="cl" clauseType="nominalized" rule="V-O">
+                              tense="present"
+                              voice="active"
+                              mood="participle"
+                              gloss="being about"
+                              domain="067002"
+                              ln="67.62"
+                              morph="V-PAP-GPM"
+                              unicode="μελλόντων"
+                              frame="A0:n00000000000 A1:n54001016019">μελλόντων</w>
+                           <wg class="cl" rule="V-ADV-ADV" role="o">
                               <w role="v"
-                                 ref="1TI 1:16!18"
+                                 ref="1TI 1:16!19"
                                  after=" "
                                  class="verb"
-                                 xml:id="n54001016018"
-                                 lemma="μέλλω"
-                                 normalized="μελλόντων"
-                                 strong="3195"
-                                 number="plural"
-                                 gender="masculine"
-                                 case="genitive"
+                                 xml:id="n54001016019"
+                                 lemma="πιστεύω"
+                                 normalized="πιστεύειν"
+                                 strong="4100"
                                  tense="present"
                                  voice="active"
-                                 mood="participle"
-                                 gloss="being about"
-                                 domain="067002"
-                                 ln="67.62"
-                                 morph="V-PAP-GPM"
-                                 unicode="μελλόντων"
-                                 frame="A0:n00000000000 A1:n54001016019">μελλόντων</w>
-                              <wg class="cl" rule="V-ADV-ADV" role="o">
-                                 <w role="v"
-                                    ref="1TI 1:16!19"
+                                 mood="infinitive"
+                                 gloss="to believe"
+                                 domain="031009"
+                                 ln="31.85"
+                                 morph="V-PAN"
+                                 unicode="πιστεύειν"
+                                 frame="A0:n54001016018"
+                                 subjref="n54001016018">πιστεύειν</w>
+                              <wg class="pp" rule="PrepNp" role="adv">
+                                 <w ref="1TI 1:16!20"
+                                    after="’"
+                                    class="prep"
+                                    xml:id="n54001016020"
+                                    lemma="ἐπί"
+                                    normalized="ἐπ’"
+                                    strong="1909"
+                                    gloss="on"
+                                    morph="PREP"
+                                    unicode="ἐπ’">ἐπ</w>
+                                 <w ref="1TI 1:16!21"
                                     after=" "
-                                    class="verb"
-                                    xml:id="n54001016019"
-                                    lemma="πιστεύω"
-                                    normalized="πιστεύειν"
-                                    strong="4100"
-                                    tense="present"
-                                    voice="active"
-                                    mood="infinitive"
-                                    gloss="to believe"
-                                    domain="031009"
-                                    ln="31.85"
-                                    morph="V-PAN"
-                                    unicode="πιστεύειν"
-                                    frame="A0:n54001016018"
-                                    subjref="n54001016018">πιστεύειν</w>
-                                 <wg class="pp" rule="PrepNp" role="adv">
-                                    <w ref="1TI 1:16!20"
-                                       after="’"
-                                       class="prep"
-                                       xml:id="n54001016020"
-                                       lemma="ἐπί"
-                                       normalized="ἐπ’"
-                                       strong="1909"
-                                       gloss="on"
-                                       morph="PREP"
-                                       unicode="ἐπ’">ἐπ</w>
-                                    <w ref="1TI 1:16!21"
+                                    class="pron"
+                                    type="personal"
+                                    xml:id="n54001016021"
+                                    lemma="αὐτός"
+                                    normalized="αὐτῷ"
+                                    strong="846"
+                                    number="singular"
+                                    gender="masculine"
+                                    case="dative"
+                                    gloss="Him"
+                                    domain="092004"
+                                    ln="92.11"
+                                    morph="P-DSM"
+                                    unicode="αὐτῷ"
+                                    referent="n54001016010">αὐτῷ</w>
+                              </wg>
+                              <wg class="pp" rule="PrepNp" role="adv">
+                                 <w ref="1TI 1:16!22"
+                                    after=" "
+                                    class="prep"
+                                    xml:id="n54001016022"
+                                    lemma="εἰς"
+                                    normalized="εἰς"
+                                    strong="1519"
+                                    gloss="to"
+                                    morph="PREP"
+                                    unicode="εἰς">εἰς</w>
+                                 <wg class="np" rule="NpAdjp">
+                                    <w ref="1TI 1:16!23"
                                        after=" "
-                                       class="pron"
-                                       type="personal"
-                                       xml:id="n54001016021"
-                                       lemma="αὐτός"
-                                       normalized="αὐτῷ"
-                                       strong="846"
+                                       class="noun"
+                                       type="common"
+                                       xml:id="n54001016023"
+                                       lemma="ζωή"
+                                       normalized="ζωήν"
+                                       strong="2222"
                                        number="singular"
-                                       gender="masculine"
-                                       case="dative"
-                                       gloss="Him"
-                                       domain="092004"
-                                       ln="92.11"
-                                       morph="P-DSM"
-                                       unicode="αὐτῷ"
-                                       referent="n54001016010">αὐτῷ</w>
-                                 </wg>
-                                 <wg class="pp" rule="PrepNp" role="adv">
-                                    <w ref="1TI 1:16!22"
-                                       after=" "
-                                       class="prep"
-                                       xml:id="n54001016022"
-                                       lemma="εἰς"
-                                       normalized="εἰς"
-                                       strong="1519"
-                                       gloss="to"
-                                       morph="PREP"
-                                       unicode="εἰς">εἰς</w>
-                                    <wg class="np" rule="NpAdjp">
-                                       <w ref="1TI 1:16!23"
-                                          after=" "
-                                          class="noun"
-                                          type="common"
-                                          xml:id="n54001016023"
-                                          lemma="ζωή"
-                                          normalized="ζωήν"
-                                          strong="2222"
-                                          number="singular"
-                                          gender="feminine"
-                                          case="accusative"
-                                          gloss="life"
-                                          domain="023007"
-                                          ln="23.88"
-                                          morph="N-ASF"
-                                          unicode="ζωὴν">ζωὴν</w>
-                                       <w ref="1TI 1:16!24"
-                                          after="."
-                                          class="adj"
-                                          xml:id="n54001016024"
-                                          lemma="αἰώνιος"
-                                          normalized="αἰώνιον"
-                                          strong="166"
-                                          number="singular"
-                                          gender="feminine"
-                                          case="accusative"
-                                          gloss="eternal"
-                                          domain="067005"
-                                          ln="67.96"
-                                          morph="A-ASF"
-                                          unicode="αἰώνιον.">αἰώνιον</w>
-                                    </wg>
+                                       gender="feminine"
+                                       case="accusative"
+                                       gloss="life"
+                                       domain="023007"
+                                       ln="23.88"
+                                       morph="N-ASF"
+                                       unicode="ζωὴν">ζωὴν</w>
+                                    <w ref="1TI 1:16!24"
+                                       after="."
+                                       class="adj"
+                                       xml:id="n54001016024"
+                                       lemma="αἰώνιος"
+                                       normalized="αἰώνιον"
+                                       strong="166"
+                                       number="singular"
+                                       gender="feminine"
+                                       case="accusative"
+                                       gloss="eternal"
+                                       domain="067005"
+                                       ln="67.96"
+                                       morph="A-ASF"
+                                       unicode="αἰώνιον.">αἰώνιον</w>
                                  </wg>
                               </wg>
                            </wg>
@@ -4374,7 +4374,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg rule="Intj2CL">
+            <wg role="aux" rule="Intj2CL">
                <w role="aux"
                   ref="1TI 1:17!18"
                   after="."
@@ -4398,7 +4398,7 @@
          <milestone unit="verse" id="1TI 1:19">1TI 1:19</milestone> 
          <milestone unit="verse" id="1TI 1:20">1TI 1:20</milestone> Ταύτην τὴν παραγγελίαν παρατίθεμαί σοι, τέκνον Τιμόθεε, κατὰ τὰς προαγούσας ἐπὶ σὲ προφητείας, ἵνα στρατεύῃ ἐν αὐταῖς τὴν καλὴν στρατείαν, ἔχων πίστιν καὶ ἀγαθὴν συνείδησιν, ἥν τινες ἀπωσάμενοι περὶ τὴν πίστιν ἐναυάγησαν· ὧν ἐστιν Ὑμέναιος καὶ Ἀλέξανδρος, οὓς παρέδωκα τῷ Σατανᾷ, ἵνα παιδευθῶσιν μὴ βλασφημεῖν.</p>
       <wg Rule="ClCl2" class="cl" nodeId="540010180060450">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg type="apposition" class="np" rule="Np-Appos" role="aux">
                <w ref="1TI 1:18!6"
                   after=" "
@@ -4809,11 +4809,14 @@
                                  morph="N-ASF"
                                  unicode="συνείδησιν,">συνείδησιν</w>
                            </wg>
-                           <wg type="group"
-                               clauseType="nominalized"
-                               rule="ClCl"
+                           <wg Rule="ClCl"
+                               class="cl"
+                               nodeId="540010190060200"
                                junction="apposition">
-                              <wg class="cl" clauseType="nominalized" rule="ADV-S-ADV-V">
+                              <wg class="cl"
+                                  clauseType="nominalized"
+                                  rule="ADV-S-ADV-V"
+                                  role="adv">
                                  <wg class="cl" clauseType="nominalized" rule="O-V" role="adv">
                                     <w role="o"
                                        ref="1TI 1:19!6"
@@ -4934,222 +4937,220 @@
                                     unicode="ἐναυάγησαν·"
                                     frame="A0:n54001019007">ἐναυάγησαν</w>
                               </wg>
-                              <wg class="cl" clauseType="nominalized" rule="P-VC-S">
-                                 <w role="p"
-                                    ref="1TI 1:20!1"
-                                    after=" "
-                                    class="pron"
-                                    type="relative"
-                                    xml:id="n54001020001"
-                                    lemma="ὅς"
-                                    normalized="ὧν"
-                                    strong="3739"
-                                    number="plural"
-                                    gender="masculine"
-                                    case="genitive"
-                                    gloss="among whom"
-                                    morph="R-GPM"
-                                    unicode="ὧν"
-                                    referent="n54001019007">ὧν</w>
-                                 <w role="vc"
-                                    ref="1TI 1:20!2"
-                                    after=" "
-                                    class="verb"
-                                    xml:id="n54001020002"
-                                    lemma="εἰμί"
-                                    normalized="ἐστιν"
-                                    strong="1510"
-                                    number="singular"
-                                    person="third"
-                                    tense="present"
-                                    voice="active"
-                                    mood="indicative"
-                                    gloss="are"
-                                    morph="V-PAI-3S"
-                                    unicode="ἐστιν">ἐστιν</w>
-                                 <wg class="np" type="apposition" rule="NP-CL" role="s">
-                                    <wg rule="NpaNp">
-                                       <w ref="1TI 1:20!3"
+                              <w role="p"
+                                 ref="1TI 1:20!1"
+                                 after=" "
+                                 class="pron"
+                                 type="relative"
+                                 xml:id="n54001020001"
+                                 lemma="ὅς"
+                                 normalized="ὧν"
+                                 strong="3739"
+                                 number="plural"
+                                 gender="masculine"
+                                 case="genitive"
+                                 gloss="among whom"
+                                 morph="R-GPM"
+                                 unicode="ὧν"
+                                 referent="n54001019007">ὧν</w>
+                              <w role="vc"
+                                 ref="1TI 1:20!2"
+                                 after=" "
+                                 class="verb"
+                                 xml:id="n54001020002"
+                                 lemma="εἰμί"
+                                 normalized="ἐστιν"
+                                 strong="1510"
+                                 number="singular"
+                                 person="third"
+                                 tense="present"
+                                 voice="active"
+                                 mood="indicative"
+                                 gloss="are"
+                                 morph="V-PAI-3S"
+                                 unicode="ἐστιν">ἐστιν</w>
+                              <wg class="np" type="apposition" rule="NP-CL" role="s">
+                                 <wg rule="NpaNp">
+                                    <w ref="1TI 1:20!3"
+                                       after=" "
+                                       class="noun"
+                                       type="proper"
+                                       xml:id="n54001020003"
+                                       lemma="Ὑμέναιος"
+                                       normalized="Ὑμέναιος"
+                                       strong="5211"
+                                       number="singular"
+                                       gender="masculine"
+                                       case="nominative"
+                                       gloss="Hymenaeus"
+                                       domain="093001"
+                                       ln="93.370"
+                                       morph="N-NSM"
+                                       unicode="Ὑμέναιος">Ὑμέναιος</w>
+                                    <wg type="group">
+                                       <w ref="1TI 1:20!4"
                                           after=" "
+                                          class="conj"
+                                          xml:id="n54001020004"
+                                          lemma="καί"
+                                          normalized="καί"
+                                          strong="2532"
+                                          gloss="and"
+                                          morph="CONJ"
+                                          unicode="καὶ">καὶ</w>
+                                       <w ref="1TI 1:20!5"
+                                          after=","
                                           class="noun"
                                           type="proper"
-                                          xml:id="n54001020003"
-                                          lemma="Ὑμέναιος"
-                                          normalized="Ὑμέναιος"
-                                          strong="5211"
+                                          xml:id="n54001020005"
+                                          lemma="Ἀλέξανδρος"
+                                          normalized="Ἀλέξανδρος"
+                                          strong="223"
                                           number="singular"
                                           gender="masculine"
                                           case="nominative"
-                                          gloss="Hymenaeus"
+                                          gloss="Alexander"
                                           domain="093001"
-                                          ln="93.370"
+                                          ln="93.17d"
                                           morph="N-NSM"
-                                          unicode="Ὑμέναιος">Ὑμέναιος</w>
-                                       <wg type="group">
-                                          <w ref="1TI 1:20!4"
-                                             after=" "
-                                             class="conj"
-                                             xml:id="n54001020004"
-                                             lemma="καί"
-                                             normalized="καί"
-                                             strong="2532"
-                                             gloss="and"
-                                             morph="CONJ"
-                                             unicode="καὶ">καὶ</w>
-                                          <w ref="1TI 1:20!5"
-                                             after=","
-                                             class="noun"
-                                             type="proper"
-                                             xml:id="n54001020005"
-                                             lemma="Ἀλέξανδρος"
-                                             normalized="Ἀλέξανδρος"
-                                             strong="223"
-                                             number="singular"
-                                             gender="masculine"
-                                             case="nominative"
-                                             gloss="Alexander"
-                                             domain="093001"
-                                             ln="93.17d"
-                                             morph="N-NSM"
-                                             unicode="Ἀλέξανδρος,">Ἀλέξανδρος</w>
-                                       </wg>
+                                          unicode="Ἀλέξανδρος,">Ἀλέξανδρος</w>
                                     </wg>
-                                    <wg Rule="ClCl"
-                                        class="cl"
-                                        nodeId="540010200060080"
-                                        junction="apposition">
-                                       <w role="o"
-                                          ref="1TI 1:20!6"
+                                 </wg>
+                                 <wg Rule="ClCl"
+                                     class="cl"
+                                     nodeId="540010200060080"
+                                     junction="apposition">
+                                    <w role="o"
+                                       ref="1TI 1:20!6"
+                                       after=" "
+                                       class="pron"
+                                       type="relative"
+                                       xml:id="n54001020006"
+                                       lemma="ὅς"
+                                       normalized="οὕς"
+                                       strong="3739"
+                                       number="plural"
+                                       gender="masculine"
+                                       case="accusative"
+                                       gloss="whom"
+                                       morph="R-APM"
+                                       unicode="οὓς"
+                                       referent="n54001020003 n54001020005">οὓς</w>
+                                    <w role="v"
+                                       ref="1TI 1:20!7"
+                                       after=" "
+                                       class="verb"
+                                       xml:id="n54001020007"
+                                       lemma="παραδίδωμι"
+                                       normalized="παρέδωκα"
+                                       strong="3860"
+                                       number="singular"
+                                       person="first"
+                                       tense="aorist"
+                                       voice="active"
+                                       mood="indicative"
+                                       gloss="I have handed over"
+                                       domain="037007"
+                                       ln="37.111"
+                                       morph="V-AAI-1S"
+                                       unicode="παρέδωκα"
+                                       frame="A0:n54001001001 A1:n54001020006 A2:n54001020009"
+                                       subjref="n54001001001">παρέδωκα</w>
+                                    <wg class="np" articular="true" rule="DetNP" role="io">
+                                       <w ref="1TI 1:20!8"
                                           after=" "
-                                          class="pron"
-                                          type="relative"
-                                          xml:id="n54001020006"
-                                          lemma="ὅς"
-                                          normalized="οὕς"
-                                          strong="3739"
-                                          number="plural"
-                                          gender="masculine"
-                                          case="accusative"
-                                          gloss="whom"
-                                          morph="R-APM"
-                                          unicode="οὓς"
-                                          referent="n54001020003 n54001020005">οὓς</w>
-                                       <w role="v"
-                                          ref="1TI 1:20!7"
-                                          after=" "
-                                          class="verb"
-                                          xml:id="n54001020007"
-                                          lemma="παραδίδωμι"
-                                          normalized="παρέδωκα"
-                                          strong="3860"
+                                          class="det"
+                                          xml:id="n54001020008"
+                                          lemma="ὁ"
+                                          normalized="τῷ"
+                                          strong="3588"
                                           number="singular"
-                                          person="first"
-                                          tense="aorist"
-                                          voice="active"
-                                          mood="indicative"
-                                          gloss="I have handed over"
-                                          domain="037007"
-                                          ln="37.111"
-                                          morph="V-AAI-1S"
-                                          unicode="παρέδωκα"
-                                          frame="A0:n54001001001 A1:n54001020006 A2:n54001020009"
-                                          subjref="n54001001001">παρέδωκα</w>
-                                       <wg class="np" articular="true" rule="DetNP" role="io">
-                                          <w ref="1TI 1:20!8"
+                                          gender="masculine"
+                                          case="dative"
+                                          gloss="-"
+                                          domain="092004"
+                                          ln="92.24"
+                                          morph="T-DSM"
+                                          unicode="τῷ">τῷ</w>
+                                       <w ref="1TI 1:20!9"
+                                          after=","
+                                          class="noun"
+                                          type="proper"
+                                          xml:id="n54001020009"
+                                          lemma="Σατανᾶς"
+                                          normalized="Σατανᾷ"
+                                          strong="4567"
+                                          number="singular"
+                                          gender="masculine"
+                                          case="dative"
+                                          gloss="to Satan"
+                                          domain="012001 093001"
+                                          ln="12.34 93.330"
+                                          morph="N-DSM"
+                                          unicode="Σατανᾷ,">Σατανᾷ</w>
+                                    </wg>
+                                    <wg rule="sub-CL" role="adv">
+                                       <w ref="1TI 1:20!10"
+                                          after=" "
+                                          class="conj"
+                                          xml:id="n54001020010"
+                                          lemma="ἵνα"
+                                          normalized="ἵνα"
+                                          strong="2443"
+                                          gloss="that"
+                                          morph="CONJ"
+                                          unicode="ἵνα">ἵνα</w>
+                                       <wg class="cl" rule="V-O">
+                                          <w role="v"
+                                             ref="1TI 1:20!11"
                                              after=" "
-                                             class="det"
-                                             xml:id="n54001020008"
-                                             lemma="ὁ"
-                                             normalized="τῷ"
-                                             strong="3588"
-                                             number="singular"
-                                             gender="masculine"
-                                             case="dative"
-                                             gloss="-"
-                                             domain="092004"
-                                             ln="92.24"
-                                             morph="T-DSM"
-                                             unicode="τῷ">τῷ</w>
-                                          <w ref="1TI 1:20!9"
-                                             after=","
-                                             class="noun"
-                                             type="proper"
-                                             xml:id="n54001020009"
-                                             lemma="Σατανᾶς"
-                                             normalized="Σατανᾷ"
-                                             strong="4567"
-                                             number="singular"
-                                             gender="masculine"
-                                             case="dative"
-                                             gloss="to Satan"
-                                             domain="012001 093001"
-                                             ln="12.34 93.330"
-                                             morph="N-DSM"
-                                             unicode="Σατανᾷ,">Σατανᾷ</w>
-                                       </wg>
-                                       <wg rule="sub-CL" role="adv">
-                                          <w ref="1TI 1:20!10"
-                                             after=" "
-                                             class="conj"
-                                             xml:id="n54001020010"
-                                             lemma="ἵνα"
-                                             normalized="ἵνα"
-                                             strong="2443"
-                                             gloss="that"
-                                             morph="CONJ"
-                                             unicode="ἵνα">ἵνα</w>
-                                          <wg class="cl" rule="V-O">
-                                             <w role="v"
-                                                ref="1TI 1:20!11"
+                                             class="verb"
+                                             xml:id="n54001020011"
+                                             lemma="παιδεύω"
+                                             normalized="παιδευθῶσιν"
+                                             strong="3811"
+                                             number="plural"
+                                             person="third"
+                                             tense="aorist"
+                                             voice="passive"
+                                             mood="subjunctive"
+                                             gloss="they may be disciplined"
+                                             domain="038001"
+                                             ln="38.4"
+                                             morph="V-APS-3P"
+                                             unicode="παιδευθῶσιν"
+                                             frame="A1:n54001020003;n54001020005 A1:n54001020013"
+                                             subjref="n54001020003 n54001020005">παιδευθῶσιν</w>
+                                          <wg class="cl" rule="ADV-V" role="o">
+                                             <w role="adv"
+                                                ref="1TI 1:20!12"
                                                 after=" "
+                                                class="adv"
+                                                xml:id="n54001020012"
+                                                lemma="μή"
+                                                normalized="μή"
+                                                strong="3361"
+                                                gloss="not"
+                                                morph="PRT-N"
+                                                unicode="μὴ">μὴ</w>
+                                             <w role="v"
+                                                ref="1TI 1:20!13"
+                                                after="."
                                                 class="verb"
-                                                xml:id="n54001020011"
-                                                lemma="παιδεύω"
-                                                normalized="παιδευθῶσιν"
-                                                strong="3811"
-                                                number="plural"
-                                                person="third"
-                                                tense="aorist"
-                                                voice="passive"
-                                                mood="subjunctive"
-                                                gloss="they may be disciplined"
-                                                domain="038001"
-                                                ln="38.4"
-                                                morph="V-APS-3P"
-                                                unicode="παιδευθῶσιν"
-                                                frame="A1:n54001020003;n54001020005 A1:n54001020013"
-                                                subjref="n54001020003 n54001020005">παιδευθῶσιν</w>
-                                             <wg class="cl" rule="ADV-V" role="o">
-                                                <w role="adv"
-                                                   ref="1TI 1:20!12"
-                                                   after=" "
-                                                   class="adv"
-                                                   xml:id="n54001020012"
-                                                   lemma="μή"
-                                                   normalized="μή"
-                                                   strong="3361"
-                                                   gloss="not"
-                                                   morph="PRT-N"
-                                                   unicode="μὴ">μὴ</w>
-                                                <w role="v"
-                                                   ref="1TI 1:20!13"
-                                                   after="."
-                                                   class="verb"
-                                                   xml:id="n54001020013"
-                                                   lemma="βλασφημέω"
-                                                   normalized="βλασφημεῖν"
-                                                   strong="987"
-                                                   tense="present"
-                                                   voice="active"
-                                                   mood="infinitive"
-                                                   gloss="to blaspheme"
-                                                   domain="033042"
-                                                   ln="33.400"
-                                                   morph="V-PAN"
-                                                   unicode="βλασφημεῖν."
-                                                   frame="A0:n54001020003;n54001020005"
-                                                   subjref="n54001020003 n54001020005">βλασφημεῖν</w>
-                                             </wg>
+                                                xml:id="n54001020013"
+                                                lemma="βλασφημέω"
+                                                normalized="βλασφημεῖν"
+                                                strong="987"
+                                                tense="present"
+                                                voice="active"
+                                                mood="infinitive"
+                                                gloss="to blaspheme"
+                                                domain="033042"
+                                                ln="33.400"
+                                                morph="V-PAN"
+                                                unicode="βλασφημεῖν."
+                                                frame="A0:n54001020003;n54001020005"
+                                                subjref="n54001020003 n54001020005">βλασφημεῖν</w>
                                           </wg>
                                        </wg>
                                     </wg>
@@ -5671,7 +5672,7 @@
       <p>
          <milestone unit="verse" id="1TI 2:3">1TI 2:3</milestone> 
          <milestone unit="verse" id="1TI 2:4">1TI 2:4</milestone> τοῦτο καλὸν καὶ ἀπόδεκτον ἐνώπιον τοῦ Σωτῆρος ἡμῶν Θεοῦ, ὃς πάντας ἀνθρώπους θέλει σωθῆναι καὶ εἰς ἐπίγνωσιν ἀληθείας ἐλθεῖν.</p>
-      <wg class="cl" rule="S-P-ADV">
+      <wg class="cl" rule="S-P-ADV" predication="verbless">
          <w role="s"
             ref="1TI 2:3!1"
             after=" "
@@ -6013,7 +6014,7 @@
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
          <wg type="group" rule="ClCl">
-            <wg class="cl" rule="P-S">
+            <wg class="cl" rule="P-S" predication="verbless">
                <w role="p"
                   ref="1TI 2:5!1"
                   after=" "
@@ -6046,7 +6047,7 @@
                   morph="N-NSM"
                   unicode="Θεός,">Θεός</w>
             </wg>
-            <wg class="cl" rule="P-S">
+            <wg class="cl" rule="P-S" predication="verbless">
                <w role="p"
                   ref="1TI 2:5!4"
                   after=" "
@@ -6311,354 +6312,358 @@
          <milestone unit="verse" id="1TI 2:6">1TI 2:6</milestone> 
          <milestone unit="verse" id="1TI 2:7">1TI 2:7</milestone> τὸ μαρτύριον καιροῖς ἰδίοις· εἰς ὃ ἐτέθην ἐγὼ κῆρυξ καὶ ἀπόστολος, ἀλήθειαν λέγω, οὐ ψεύδομαι, διδάσκαλος ἐθνῶν ἐν πίστει καὶ ἀληθείᾳ.</p>
       <wg Rule="ClCl" class="cl" nodeId="540020060070210">
-         <wg class="np" articular="true" rule="DetNP" role="s">
-            <w ref="1TI 2:6!7"
-               after=" "
-               class="det"
-               xml:id="n54002006007"
-               lemma="ὁ"
-               normalized="τό"
-               strong="3588"
-               number="singular"
-               gender="neuter"
-               case="accusative"
-               gloss="the"
-               domain="092004"
-               ln="92.24"
-               morph="T-ASN"
-               unicode="τὸ">τὸ</w>
-            <w ref="1TI 2:6!8"
-               after=" "
-               class="noun"
-               type="common"
-               xml:id="n54002006008"
-               lemma="μαρτύριον"
-               normalized="μαρτύριον"
-               strong="3142"
-               number="singular"
-               gender="neuter"
-               case="accusative"
-               gloss="testimony"
-               domain="033020"
-               ln="33.264"
-               morph="N-ASN"
-               unicode="μαρτύριον">μαρτύριον</w>
-         </wg>
-         <wg class="np" rule="NpAdjp" role="adv">
-            <w ref="1TI 2:6!9"
-               after=" "
-               class="noun"
-               type="common"
-               xml:id="n54002006009"
-               lemma="καιρός"
-               normalized="καιροῖς"
-               strong="2540"
-               number="plural"
-               gender="masculine"
-               case="dative"
-               gloss="in proper times"
-               domain="067001"
-               ln="67.1"
-               morph="N-DPM"
-               unicode="καιροῖς">καιροῖς</w>
-            <w ref="1TI 2:6!10"
-               after="·"
-               class="adj"
-               xml:id="n54002006010"
-               lemma="ἴδιος"
-               normalized="ἰδίοις"
-               strong="2398"
-               number="plural"
-               gender="masculine"
-               case="dative"
-               gloss="their own"
-               domain="058007"
-               ln="58.47"
-               morph="A-DPM"
-               unicode="ἰδίοις·"
-               referent="n54002006009">ἰδίοις</w>
-         </wg>
-         <wg Rule="ClCl2" class="cl" nodeId="540020070010170">
-            <wg class="cl"
-                clauseType="nominalized"
-                rule="ADV-VC-S-P"
-                role="adv">
-               <wg class="pp" rule="PrepNp" role="adv">
-                  <w ref="1TI 2:7!1"
-                     after=" "
-                     class="prep"
-                     xml:id="n54002007001"
-                     lemma="εἰς"
-                     normalized="εἰς"
-                     strong="1519"
-                     gloss="in regard to"
-                     morph="PREP"
-                     unicode="εἰς">εἰς</w>
-                  <w ref="1TI 2:7!2"
-                     after=" "
-                     class="pron"
-                     type="relative"
-                     xml:id="n54002007002"
-                     lemma="ὅς"
-                     normalized="ὅ"
-                     strong="3739"
-                     number="singular"
-                     gender="neuter"
-                     case="accusative"
-                     gloss="which"
-                     morph="R-ASN"
-                     unicode="ὃ"
-                     referent="n54002006008">ὃ</w>
-               </wg>
-               <w role="vc"
-                  ref="1TI 2:7!3"
+         <wg class="cl"
+             articular="true"
+             rule="S-ADV"
+             predication="elided"
+             role="o">
+            <wg class="np" articular="true" rule="DetNP" role="s">
+               <w ref="1TI 2:6!7"
                   after=" "
-                  class="verb"
-                  xml:id="n54002007003"
-                  lemma="τίθημι"
-                  normalized="ἐτέθην"
-                  strong="5087"
+                  class="det"
+                  xml:id="n54002006007"
+                  lemma="ὁ"
+                  normalized="τό"
+                  strong="3588"
                   number="singular"
-                  person="first"
-                  tense="aorist"
-                  voice="passive"
-                  mood="indicative"
-                  gloss="was appointed"
-                  domain="037005"
-                  ln="37.96"
-                  morph="V-API-1S"
-                  unicode="ἐτέθην">ἐτέθην</w>
-               <w role="s"
-                  ref="1TI 2:7!4"
+                  gender="neuter"
+                  case="accusative"
+                  gloss="the"
+                  domain="092004"
+                  ln="92.24"
+                  morph="T-ASN"
+                  unicode="τὸ">τὸ</w>
+               <w ref="1TI 2:6!8"
+                  after=" "
+                  class="noun"
+                  type="common"
+                  xml:id="n54002006008"
+                  lemma="μαρτύριον"
+                  normalized="μαρτύριον"
+                  strong="3142"
+                  number="singular"
+                  gender="neuter"
+                  case="accusative"
+                  gloss="testimony"
+                  domain="033020"
+                  ln="33.264"
+                  morph="N-ASN"
+                  unicode="μαρτύριον">μαρτύριον</w>
+            </wg>
+            <wg class="np" rule="NpAdjp" role="adv">
+               <w ref="1TI 2:6!9"
+                  after=" "
+                  class="noun"
+                  type="common"
+                  xml:id="n54002006009"
+                  lemma="καιρός"
+                  normalized="καιροῖς"
+                  strong="2540"
+                  number="plural"
+                  gender="masculine"
+                  case="dative"
+                  gloss="in proper times"
+                  domain="067001"
+                  ln="67.1"
+                  morph="N-DPM"
+                  unicode="καιροῖς">καιροῖς</w>
+               <w ref="1TI 2:6!10"
+                  after="·"
+                  class="adj"
+                  xml:id="n54002006010"
+                  lemma="ἴδιος"
+                  normalized="ἰδίοις"
+                  strong="2398"
+                  number="plural"
+                  gender="masculine"
+                  case="dative"
+                  gloss="their own"
+                  domain="058007"
+                  ln="58.47"
+                  morph="A-DPM"
+                  unicode="ἰδίοις·"
+                  referent="n54002006009">ἰδίοις</w>
+            </wg>
+         </wg>
+         <wg class="cl"
+             clauseType="nominalized"
+             rule="ADV-VC-S-P"
+             role="adv">
+            <wg class="pp" rule="PrepNp" role="adv">
+               <w ref="1TI 2:7!1"
+                  after=" "
+                  class="prep"
+                  xml:id="n54002007001"
+                  lemma="εἰς"
+                  normalized="εἰς"
+                  strong="1519"
+                  gloss="in regard to"
+                  morph="PREP"
+                  unicode="εἰς">εἰς</w>
+               <w ref="1TI 2:7!2"
                   after=" "
                   class="pron"
-                  type="personal"
-                  xml:id="n54002007004"
-                  lemma="ἐγώ"
-                  normalized="ἐγώ"
-                  strong="1473"
+                  type="relative"
+                  xml:id="n54002007002"
+                  lemma="ὅς"
+                  normalized="ὅ"
+                  strong="3739"
                   number="singular"
-                  case="nominative"
-                  gloss="I"
-                  domain="092001"
-                  ln="92.1"
-                  morph="P-1NS"
-                  unicode="ἐγὼ"
-                  referent="n54001001001">ἐγὼ</w>
-               <wg type="apposition" class="np" rule="Np-Appos" role="p">
-                  <wg rule="NpaNp">
-                     <w ref="1TI 2:7!5"
+                  gender="neuter"
+                  case="accusative"
+                  gloss="which"
+                  morph="R-ASN"
+                  unicode="ὃ"
+                  referent="n54002006008">ὃ</w>
+            </wg>
+            <w role="vc"
+               ref="1TI 2:7!3"
+               after=" "
+               class="verb"
+               xml:id="n54002007003"
+               lemma="τίθημι"
+               normalized="ἐτέθην"
+               strong="5087"
+               number="singular"
+               person="first"
+               tense="aorist"
+               voice="passive"
+               mood="indicative"
+               gloss="was appointed"
+               domain="037005"
+               ln="37.96"
+               morph="V-API-1S"
+               unicode="ἐτέθην">ἐτέθην</w>
+            <w role="s"
+               ref="1TI 2:7!4"
+               after=" "
+               class="pron"
+               type="personal"
+               xml:id="n54002007004"
+               lemma="ἐγώ"
+               normalized="ἐγώ"
+               strong="1473"
+               number="singular"
+               case="nominative"
+               gloss="I"
+               domain="092001"
+               ln="92.1"
+               morph="P-1NS"
+               unicode="ἐγὼ"
+               referent="n54001001001">ἐγὼ</w>
+            <wg type="apposition" class="np" rule="Np-Appos" role="p">
+               <wg rule="NpaNp">
+                  <w ref="1TI 2:7!5"
+                     after=" "
+                     class="noun"
+                     type="common"
+                     xml:id="n54002007005"
+                     lemma="κῆρυξ"
+                     normalized="κῆρυξ"
+                     strong="2783"
+                     number="singular"
+                     gender="masculine"
+                     case="nominative"
+                     gloss="a herald"
+                     domain="033019"
+                     ln="33.259"
+                     morph="N-NSM"
+                     unicode="κῆρυξ">κῆρυξ</w>
+                  <wg type="group">
+                     <w ref="1TI 2:7!6"
                         after=" "
+                        class="conj"
+                        xml:id="n54002007006"
+                        lemma="καί"
+                        normalized="καί"
+                        strong="2532"
+                        gloss="and"
+                        morph="CONJ"
+                        unicode="καὶ">καὶ</w>
+                     <w ref="1TI 2:7!7"
+                        after=","
                         class="noun"
                         type="common"
-                        xml:id="n54002007005"
-                        lemma="κῆρυξ"
-                        normalized="κῆρυξ"
-                        strong="2783"
+                        xml:id="n54002007007"
+                        lemma="ἀπόστολος"
+                        normalized="ἀπόστολος"
+                        strong="652"
                         number="singular"
                         gender="masculine"
                         case="nominative"
-                        gloss="a herald"
-                        domain="033019"
-                        ln="33.259"
+                        gloss="an apostle"
+                        domain="053009"
+                        ln="53.74"
                         morph="N-NSM"
-                        unicode="κῆρυξ">κῆρυξ</w>
-                     <wg type="group">
-                        <w ref="1TI 2:7!6"
-                           after=" "
-                           class="conj"
-                           xml:id="n54002007006"
-                           lemma="καί"
-                           normalized="καί"
-                           strong="2532"
-                           gloss="and"
-                           morph="CONJ"
-                           unicode="καὶ">καὶ</w>
-                        <w ref="1TI 2:7!7"
-                           after=","
-                           class="noun"
-                           type="common"
-                           xml:id="n54002007007"
-                           lemma="ἀπόστολος"
-                           normalized="ἀπόστολος"
-                           strong="652"
-                           number="singular"
-                           gender="masculine"
-                           case="nominative"
-                           gloss="an apostle"
-                           domain="053009"
-                           ln="53.74"
-                           morph="N-NSM"
-                           unicode="ἀπόστολος,">ἀπόστολος</w>
-                     </wg>
+                        unicode="ἀπόστολος,">ἀπόστολος</w>
                   </wg>
-                  <wg class="np" rule="NpPp" junction="apposition">
-                     <wg class="np" rule="NPofNP">
-                        <w ref="1TI 2:7!12"
+               </wg>
+               <wg class="np" rule="NpPp" junction="apposition">
+                  <wg class="np" rule="NPofNP">
+                     <w ref="1TI 2:7!12"
+                        after=" "
+                        class="noun"
+                        type="common"
+                        xml:id="n54002007012"
+                        lemma="διδάσκαλος"
+                        normalized="διδάσκαλος"
+                        strong="1320"
+                        number="singular"
+                        gender="masculine"
+                        case="nominative"
+                        gloss="a teacher"
+                        domain="033017"
+                        ln="33.243"
+                        morph="N-NSM"
+                        unicode="διδάσκαλος">διδάσκαλος</w>
+                     <w ref="1TI 2:7!13"
+                        after=" "
+                        class="noun"
+                        type="common"
+                        xml:id="n54002007013"
+                        lemma="ἔθνος"
+                        normalized="ἐθνῶν"
+                        strong="1484"
+                        number="plural"
+                        gender="neuter"
+                        case="genitive"
+                        gloss="of [the] Gentiles"
+                        domain="011002"
+                        ln="11.37"
+                        morph="N-GPN"
+                        unicode="ἐθνῶν">ἐθνῶν</w>
+                  </wg>
+                  <wg class="pp" rule="PrepNp">
+                     <w ref="1TI 2:7!14"
+                        after=" "
+                        class="prep"
+                        xml:id="n54002007014"
+                        lemma="ἐν"
+                        normalized="ἐν"
+                        strong="1722"
+                        gloss="in"
+                        morph="PREP"
+                        unicode="ἐν">ἐν</w>
+                     <wg rule="NpaNp">
+                        <w ref="1TI 2:7!15"
                            after=" "
                            class="noun"
                            type="common"
-                           xml:id="n54002007012"
-                           lemma="διδάσκαλος"
-                           normalized="διδάσκαλος"
-                           strong="1320"
+                           xml:id="n54002007015"
+                           lemma="πίστις"
+                           normalized="πίστει"
+                           strong="4102"
                            number="singular"
-                           gender="masculine"
-                           case="nominative"
-                           gloss="a teacher"
-                           domain="033017"
-                           ln="33.243"
-                           morph="N-NSM"
-                           unicode="διδάσκαλος">διδάσκαλος</w>
-                        <w ref="1TI 2:7!13"
-                           after=" "
-                           class="noun"
-                           type="common"
-                           xml:id="n54002007013"
-                           lemma="ἔθνος"
-                           normalized="ἐθνῶν"
-                           strong="1484"
-                           number="plural"
-                           gender="neuter"
-                           case="genitive"
-                           gloss="of [the] Gentiles"
-                           domain="011002"
-                           ln="11.37"
-                           morph="N-GPN"
-                           unicode="ἐθνῶν">ἐθνῶν</w>
-                     </wg>
-                     <wg class="pp" rule="PrepNp">
-                        <w ref="1TI 2:7!14"
-                           after=" "
-                           class="prep"
-                           xml:id="n54002007014"
-                           lemma="ἐν"
-                           normalized="ἐν"
-                           strong="1722"
-                           gloss="in"
-                           morph="PREP"
-                           unicode="ἐν">ἐν</w>
-                        <wg rule="NpaNp">
-                           <w ref="1TI 2:7!15"
+                           gender="feminine"
+                           case="dative"
+                           gloss="faith"
+                           domain="031010"
+                           ln="31.104"
+                           morph="N-DSF"
+                           unicode="πίστει">πίστει</w>
+                        <wg type="group">
+                           <w ref="1TI 2:7!16"
                               after=" "
+                              class="conj"
+                              xml:id="n54002007016"
+                              lemma="καί"
+                              normalized="καί"
+                              strong="2532"
+                              gloss="and"
+                              morph="CONJ"
+                              unicode="καὶ">καὶ</w>
+                           <w ref="1TI 2:7!17"
+                              after="."
                               class="noun"
                               type="common"
-                              xml:id="n54002007015"
-                              lemma="πίστις"
-                              normalized="πίστει"
-                              strong="4102"
+                              xml:id="n54002007017"
+                              lemma="ἀλήθεια"
+                              normalized="ἀληθείᾳ"
+                              strong="225"
                               number="singular"
                               gender="feminine"
                               case="dative"
-                              gloss="faith"
-                              domain="031010"
-                              ln="31.104"
+                              discontinuous="true"
+                              gloss="truth"
+                              domain="072001"
+                              ln="72.2"
                               morph="N-DSF"
-                              unicode="πίστει">πίστει</w>
-                           <wg type="group">
-                              <w ref="1TI 2:7!16"
-                                 after=" "
-                                 class="conj"
-                                 xml:id="n54002007016"
-                                 lemma="καί"
-                                 normalized="καί"
-                                 strong="2532"
-                                 gloss="and"
-                                 morph="CONJ"
-                                 unicode="καὶ">καὶ</w>
-                              <w ref="1TI 2:7!17"
-                                 after="."
-                                 class="noun"
-                                 type="common"
-                                 xml:id="n54002007017"
-                                 lemma="ἀλήθεια"
-                                 normalized="ἀληθείᾳ"
-                                 strong="225"
-                                 number="singular"
-                                 gender="feminine"
-                                 case="dative"
-                                 discontinuous="true"
-                                 gloss="truth"
-                                 domain="072001"
-                                 ln="72.2"
-                                 morph="N-DSF"
-                                 unicode="ἀληθείᾳ.">ἀληθείᾳ</w>
-                           </wg>
+                              unicode="ἀληθείᾳ.">ἀληθείᾳ</w>
                         </wg>
                      </wg>
                   </wg>
                </wg>
             </wg>
-            <w role="o"
-               ref="1TI 2:7!8"
+         </wg>
+         <w role="o"
+            ref="1TI 2:7!8"
+            after=" "
+            class="noun"
+            type="common"
+            xml:id="n54002007008"
+            lemma="ἀλήθεια"
+            normalized="ἀλήθειαν"
+            strong="225"
+            number="singular"
+            gender="feminine"
+            case="accusative"
+            gloss="[the] truth"
+            domain="072001"
+            ln="72.2"
+            morph="N-ASF"
+            unicode="ἀλήθειαν">ἀλήθειαν</w>
+         <w role="v"
+            ref="1TI 2:7!9"
+            after=","
+            class="verb"
+            xml:id="n54002007009"
+            lemma="λέγω"
+            normalized="λέγω"
+            strong="3004"
+            number="singular"
+            person="first"
+            tense="present"
+            voice="active"
+            mood="indicative"
+            gloss="I am speaking"
+            domain="033006"
+            ln="33.69"
+            morph="V-PAI-1S"
+            unicode="λέγω,"
+            frame="A0:n54001001001 A1:n54002007008"
+            subjref="n54001001001">λέγω</w>
+         <wg class="cl" rule="ADV-V" role="o">
+            <w role="adv"
+               ref="1TI 2:7!10"
                after=" "
-               class="noun"
-               type="common"
-               xml:id="n54002007008"
-               lemma="ἀλήθεια"
-               normalized="ἀλήθειαν"
-               strong="225"
-               number="singular"
-               gender="feminine"
-               case="accusative"
-               gloss="[the] truth"
-               domain="072001"
-               ln="72.2"
-               morph="N-ASF"
-               unicode="ἀλήθειαν">ἀλήθειαν</w>
+               class="adv"
+               xml:id="n54002007010"
+               lemma="οὐ"
+               normalized="οὐ"
+               strong="3756"
+               gloss="not"
+               morph="PRT-N"
+               unicode="οὐ">οὐ</w>
             <w role="v"
-               ref="1TI 2:7!9"
+               ref="1TI 2:7!11"
                after=","
                class="verb"
-               xml:id="n54002007009"
-               lemma="λέγω"
-               normalized="λέγω"
-               strong="3004"
+               xml:id="n54002007011"
+               lemma="ψεύδομαι"
+               normalized="ψεύδομαι"
+               strong="5574"
                number="singular"
                person="first"
                tense="present"
-               voice="active"
+               voice="middlepassive"
                mood="indicative"
-               gloss="I am speaking"
-               domain="033006"
-               ln="33.69"
-               morph="V-PAI-1S"
-               unicode="λέγω,"
-               frame="A0:n54001001001 A1:n54002007008"
-               subjref="n54001001001">λέγω</w>
-            <wg class="cl" rule="ADV-V" role="o">
-               <w role="adv"
-                  ref="1TI 2:7!10"
-                  after=" "
-                  class="adv"
-                  xml:id="n54002007010"
-                  lemma="οὐ"
-                  normalized="οὐ"
-                  strong="3756"
-                  gloss="not"
-                  morph="PRT-N"
-                  unicode="οὐ">οὐ</w>
-               <w role="v"
-                  ref="1TI 2:7!11"
-                  after=","
-                  class="verb"
-                  xml:id="n54002007011"
-                  lemma="ψεύδομαι"
-                  normalized="ψεύδομαι"
-                  strong="5574"
-                  number="singular"
-                  person="first"
-                  tense="present"
-                  voice="middlepassive"
-                  mood="indicative"
-                  gloss="I do lie"
-                  domain="033018"
-                  ln="33.253"
-                  morph="V-PNI-1S"
-                  unicode="ψεύδομαι,"
-                  frame="A0:n54001001001"
-                  subjref="n54001001001">ψεύδομαι</w>
-            </wg>
+               gloss="I do lie"
+               domain="033018"
+               ln="33.253"
+               morph="V-PNI-1S"
+               unicode="ψεύδομαι,"
+               frame="A0:n54001001001"
+               subjref="n54001001001">ψεύδομαι</w>
          </wg>
       </wg>
    </sentence>
@@ -7771,7 +7776,7 @@
                      unicode="ἐπλάσθη,"
                      frame="A1:n54002013001">ἐπλάσθη</w>
                </wg>
-               <wg class="cl" rule="ADV-S">
+               <wg class="cl" rule="ADV-S" predication="elided">
                   <w role="adv"
                      ref="1TI 2:13!5"
                      after=" "
@@ -8224,7 +8229,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 3:1">1TI 3:1</milestone> Πιστὸς ὁ λόγος·</p>
-      <wg class="cl" rule="P-S">
+      <wg class="cl" rule="P-S" predication="verbless">
          <w role="p"
             ref="1TI 3:1!1"
             after=" "
@@ -9610,7 +9615,7 @@
       <p>
          <milestone unit="verse" id="1TI 3:8">1TI 3:8</milestone> 
          <milestone unit="verse" id="1TI 3:9">1TI 3:9</milestone> Διακόνους ὡσαύτως σεμνούς, μὴ διλόγους, μὴ οἴνῳ πολλῷ προσέχοντας, μὴ αἰσχροκερδεῖς, ἔχοντας τὸ μυστήριον τῆς πίστεως ἐν καθαρᾷ συνειδήσει.</p>
-      <wg class="cl" rule="ADV-S">
+      <wg class="cl" rule="ADV-S" predication="elided">
          <w role="adv"
             ref="1TI 3:8!2"
             after=" "
@@ -9625,7 +9630,7 @@
             ln="64.16"
             morph="ADV"
             unicode="ὡσαύτως">ὡσαύτως</w>
-         <wg class="cl" rule="S-P" role="s">
+         <wg class="cl" rule="S-P" predication="verbless" role="s">
             <w role="s"
                ref="1TI 3:8!1"
                after=" "
@@ -10073,7 +10078,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 3:11">1TI 3:11</milestone> γυναῖκας ὡσαύτως σεμνάς, μὴ διαβόλους, νηφαλίους, πιστὰς ἐν πᾶσιν.</p>
-      <wg class="cl" rule="ADV-S">
+      <wg class="cl" rule="ADV-S" predication="elided">
          <w role="adv"
             ref="1TI 3:11!2"
             after=" "
@@ -10088,7 +10093,7 @@
             ln="64.16"
             morph="ADV"
             unicode="ὡσαύτως">ὡσαύτως</w>
-         <wg class="cl" rule="S-P" role="s">
+         <wg class="cl" rule="S-P" predication="verbless" role="s">
             <w role="s"
                ref="1TI 3:11!1"
                after=" "
@@ -10570,7 +10575,7 @@
                   gloss="and"
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
-               <wg class="cl" rule="O-ADV">
+               <wg class="cl" rule="O-ADV" predication="elided">
                   <wg class="np" rule="AdjpNp" role="o">
                      <w ref="1TI 3:13!10"
                         after=" "
@@ -12405,7 +12410,7 @@
                                              morph="CONJ"
                                              unicode="ὅτι">ὅτι</w>
                                           <wg Rule="ClCl" class="cl" nodeId="540040040020170">
-                                             <wg class="cl" rule="S-P">
+                                             <wg class="cl" rule="S-P" predication="verbless">
                                                 <wg class="np" rule="All-NP" role="s">
                                                    <w ref="1TI 4:4!2"
                                                       after=" "
@@ -12485,7 +12490,7 @@
                                                    gloss="and"
                                                    morph="CONJ"
                                                    unicode="καὶ">καὶ</w>
-                                                <wg class="cl" rule="S-P-ADV">
+                                                <wg class="cl" rule="S-P-ADV" predication="verbless">
                                                    <w role="s"
                                                       ref="1TI 4:4!7"
                                                       after=" "
@@ -13649,7 +13654,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 4:9">1TI 4:9</milestone> πιστὸς ὁ λόγος καὶ πάσης ἀποδοχῆς ἄξιος·</p>
-      <wg class="cl" rule="S-P">
+      <wg class="cl" rule="S-P" predication="verbless">
          <wg class="np" articular="true" rule="DetNP" role="s">
             <w ref="1TI 4:9!2"
                after=" "
@@ -13781,286 +13786,286 @@
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
          <wg Rule="ClCl" class="cl" nodeId="540040100010170">
-            <wg class="pp" rule="PrepNp" role="adv">
-               <w ref="1TI 4:10!1"
-                  after=" "
-                  class="prep"
-                  xml:id="n54004010001"
-                  lemma="εἰς"
-                  normalized="εἰς"
-                  strong="1519"
-                  gloss="For"
-                  morph="PREP"
-                  unicode="εἰς">εἰς</w>
-               <w ref="1TI 4:10!2"
-                  after=" "
-                  class="pron"
-                  type="demonstrative"
-                  xml:id="n54004010002"
-                  lemma="οὗτος"
-                  normalized="τοῦτο"
-                  strong="3778"
-                  number="singular"
-                  gender="neuter"
-                  case="accusative"
-                  gloss="this"
-                  morph="D-ASN"
-                  unicode="τοῦτο"
-                  referent="n54004010008">τοῦτο</w>
-            </wg>
-            <wg rule="Conj2VP" role="v">
-               <w ref="1TI 4:10!4"
-                  after=" "
-                  class="verb"
-                  xml:id="n54004010004"
-                  lemma="κοπιάω"
-                  normalized="κοπιῶμεν"
-                  strong="2872"
-                  number="plural"
-                  person="first"
-                  tense="present"
-                  voice="active"
-                  mood="indicative"
-                  gloss="we toil"
-                  domain="042004"
-                  ln="42.47"
-                  morph="V-PAI-1P"
-                  unicode="κοπιῶμεν"
-                  frame="A0:n54001001001;n54001018006;n54004006004"
-                  subjref="n54001001001 n54001018006 n54004006004">κοπιῶμεν</w>
-               <wg type="group">
-                  <w ref="1TI 4:10!5"
+            <wg class="cl" rule="ADV-V" role="o">
+               <wg class="pp" rule="PrepNp" role="adv">
+                  <w ref="1TI 4:10!1"
                      after=" "
-                     class="conj"
-                     xml:id="n54004010005"
-                     lemma="καί"
-                     normalized="καί"
-                     strong="2532"
-                     gloss="and"
-                     morph="CONJ"
-                     unicode="καὶ">καὶ</w>
-                  <w ref="1TI 4:10!6"
-                     after=","
+                     class="prep"
+                     xml:id="n54004010001"
+                     lemma="εἰς"
+                     normalized="εἰς"
+                     strong="1519"
+                     gloss="For"
+                     morph="PREP"
+                     unicode="εἰς">εἰς</w>
+                  <w ref="1TI 4:10!2"
+                     after=" "
+                     class="pron"
+                     type="demonstrative"
+                     xml:id="n54004010002"
+                     lemma="οὗτος"
+                     normalized="τοῦτο"
+                     strong="3778"
+                     number="singular"
+                     gender="neuter"
+                     case="accusative"
+                     gloss="this"
+                     morph="D-ASN"
+                     unicode="τοῦτο"
+                     referent="n54004010008">τοῦτο</w>
+               </wg>
+               <wg rule="Conj2VP" role="v">
+                  <w ref="1TI 4:10!4"
+                     after=" "
                      class="verb"
-                     xml:id="n54004010006"
-                     lemma="ἀγωνίζομαι"
-                     normalized="ἀγωνιζόμεθα"
-                     strong="75"
+                     xml:id="n54004010004"
+                     lemma="κοπιάω"
+                     normalized="κοπιῶμεν"
+                     strong="2872"
                      number="plural"
                      person="first"
                      tense="present"
-                     voice="middlepassive"
-                     mood="indicative"
-                     gloss="strive"
-                     domain="039005"
-                     ln="39.29"
-                     morph="V-PNI-1P"
-                     unicode="ἀγωνιζόμεθα,"
-                     frame="A0:n54001001001;n54001018006;n54004006004"
-                     subjref="n54001001001 n54001018006 n54004006004">ἀγωνιζόμεθα</w>
-               </wg>
-            </wg>
-            <wg rule="that-VP" role="o">
-               <w ref="1TI 4:10!7"
-                  after=" "
-                  class="conj"
-                  xml:id="n54004010007"
-                  lemma="ὅτι"
-                  normalized="ὅτι"
-                  strong="3754"
-                  gloss="because"
-                  morph="CONJ"
-                  unicode="ὅτι">ὅτι</w>
-               <wg class="cl" rule="V-ADV">
-                  <w role="v"
-                     ref="1TI 4:10!8"
-                     after=" "
-                     class="verb"
-                     xml:id="n54004010008"
-                     lemma="ἐλπίζω"
-                     normalized="ἠλπίκαμεν"
-                     strong="1679"
-                     number="plural"
-                     person="first"
-                     tense="perfect"
                      voice="active"
                      mood="indicative"
-                     gloss="we have hope"
-                     domain="025004"
-                     ln="25.59"
-                     morph="V-RAI-1P"
-                     unicode="ἠλπίκαμεν"
+                     gloss="we toil"
+                     domain="042004"
+                     ln="42.47"
+                     morph="V-PAI-1P"
+                     unicode="κοπιῶμεν"
                      frame="A0:n54001001001;n54001018006;n54004006004"
-                     subjref="n54001001001 n54001018006 n54004006004">ἠλπίκαμεν</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
-                     <w ref="1TI 4:10!9"
+                     subjref="n54001001001 n54001018006 n54004006004">κοπιῶμεν</w>
+                  <wg type="group">
+                     <w ref="1TI 4:10!5"
                         after=" "
-                        class="prep"
-                        xml:id="n54004010009"
-                        lemma="ἐπί"
-                        normalized="ἐπί"
-                        strong="1909"
-                        gloss="on"
-                        morph="PREP"
-                        unicode="ἐπὶ">ἐπὶ</w>
-                     <wg class="np" type="apposition" rule="NP-CL">
-                        <wg class="np" rule="NpAdjp">
-                           <w ref="1TI 4:10!10"
-                              after=" "
-                              class="noun"
-                              type="common"
-                              xml:id="n54004010010"
-                              lemma="θεός"
-                              normalized="Θεῷ"
-                              strong="2316"
+                        class="conj"
+                        xml:id="n54004010005"
+                        lemma="καί"
+                        normalized="καί"
+                        strong="2532"
+                        gloss="and"
+                        morph="CONJ"
+                        unicode="καὶ">καὶ</w>
+                     <w ref="1TI 4:10!6"
+                        after=","
+                        class="verb"
+                        xml:id="n54004010006"
+                        lemma="ἀγωνίζομαι"
+                        normalized="ἀγωνιζόμεθα"
+                        strong="75"
+                        number="plural"
+                        person="first"
+                        tense="present"
+                        voice="middlepassive"
+                        mood="indicative"
+                        gloss="strive"
+                        domain="039005"
+                        ln="39.29"
+                        morph="V-PNI-1P"
+                        unicode="ἀγωνιζόμεθα,"
+                        frame="A0:n54001001001;n54001018006;n54004006004"
+                        subjref="n54001001001 n54001018006 n54004006004">ἀγωνιζόμεθα</w>
+                  </wg>
+               </wg>
+            </wg>
+            <w ref="1TI 4:10!7"
+               after=" "
+               class="conj"
+               xml:id="n54004010007"
+               lemma="ὅτι"
+               normalized="ὅτι"
+               strong="3754"
+               gloss="because"
+               morph="CONJ"
+               unicode="ὅτι">ὅτι</w>
+            <wg class="cl" rule="V-ADV">
+               <w role="v"
+                  ref="1TI 4:10!8"
+                  after=" "
+                  class="verb"
+                  xml:id="n54004010008"
+                  lemma="ἐλπίζω"
+                  normalized="ἠλπίκαμεν"
+                  strong="1679"
+                  number="plural"
+                  person="first"
+                  tense="perfect"
+                  voice="active"
+                  mood="indicative"
+                  gloss="we have hope"
+                  domain="025004"
+                  ln="25.59"
+                  morph="V-RAI-1P"
+                  unicode="ἠλπίκαμεν"
+                  frame="A0:n54001001001;n54001018006;n54004006004"
+                  subjref="n54001001001 n54001018006 n54004006004">ἠλπίκαμεν</w>
+               <wg class="pp" rule="PrepNp" role="adv">
+                  <w ref="1TI 4:10!9"
+                     after=" "
+                     class="prep"
+                     xml:id="n54004010009"
+                     lemma="ἐπί"
+                     normalized="ἐπί"
+                     strong="1909"
+                     gloss="on"
+                     morph="PREP"
+                     unicode="ἐπὶ">ἐπὶ</w>
+                  <wg class="np" type="apposition" rule="NP-CL">
+                     <wg class="np" rule="NpAdjp">
+                        <w ref="1TI 4:10!10"
+                           after=" "
+                           class="noun"
+                           type="common"
+                           xml:id="n54004010010"
+                           lemma="θεός"
+                           normalized="Θεῷ"
+                           strong="2316"
+                           number="singular"
+                           gender="masculine"
+                           case="dative"
+                           gloss="God"
+                           domain="012001"
+                           ln="12.1"
+                           morph="N-DSM"
+                           unicode="Θεῷ">Θεῷ</w>
+                        <wg class="cl" clauseType="nominalized" rule="V2CL">
+                           <w role="v"
+                              ref="1TI 4:10!11"
+                              after=","
+                              class="verb"
+                              xml:id="n54004010011"
+                              lemma="ζάω"
+                              normalized="ζῶντι"
+                              strong="2198"
                               number="singular"
                               gender="masculine"
                               case="dative"
-                              gloss="God"
-                              domain="012001"
-                              ln="12.1"
-                              morph="N-DSM"
-                              unicode="Θεῷ">Θεῷ</w>
-                           <wg class="cl" clauseType="nominalized" rule="V2CL">
-                              <w role="v"
-                                 ref="1TI 4:10!11"
-                                 after=","
-                                 class="verb"
-                                 xml:id="n54004010011"
-                                 lemma="ζάω"
-                                 normalized="ζῶντι"
-                                 strong="2198"
-                                 number="singular"
-                                 gender="masculine"
-                                 case="dative"
-                                 tense="present"
-                                 voice="active"
-                                 mood="participle"
-                                 gloss="[the] living"
-                                 domain="023007"
-                                 ln="23.88"
-                                 morph="V-PAP-DSM"
-                                 unicode="ζῶντι,"
-                                 frame="A0:n54004010010"
-                                 subjref="n54004010010">ζῶντι</w>
-                           </wg>
+                              tense="present"
+                              voice="active"
+                              mood="participle"
+                              gloss="[the] living"
+                              domain="023007"
+                              ln="23.88"
+                              morph="V-PAP-DSM"
+                              unicode="ζῶντι,"
+                              frame="A0:n54004010010"
+                              subjref="n54004010010">ζῶντι</w>
                         </wg>
-                        <wg class="cl"
-                            clauseType="nominalized"
-                            rule="S-VC-P"
-                            junction="apposition">
-                           <w role="s"
-                              ref="1TI 4:10!12"
+                     </wg>
+                     <wg class="cl"
+                         clauseType="nominalized"
+                         rule="S-VC-P"
+                         junction="apposition">
+                        <w role="s"
+                           ref="1TI 4:10!12"
+                           after=" "
+                           class="pron"
+                           type="relative"
+                           xml:id="n54004010012"
+                           lemma="ὅς"
+                           normalized="ὅς"
+                           strong="3739"
+                           number="singular"
+                           gender="masculine"
+                           case="nominative"
+                           gloss="who"
+                           morph="R-NSM"
+                           unicode="ὅς"
+                           referent="n54004010010">ὅς</w>
+                        <w role="vc"
+                           ref="1TI 4:10!13"
+                           after=" "
+                           class="verb"
+                           xml:id="n54004010013"
+                           lemma="εἰμί"
+                           normalized="ἐστιν"
+                           strong="1510"
+                           number="singular"
+                           person="third"
+                           tense="present"
+                           voice="active"
+                           mood="indicative"
+                           gloss="is"
+                           morph="V-PAI-3S"
+                           unicode="ἐστιν">ἐστιν</w>
+                        <wg class="np" rule="NPofNP" role="p">
+                           <w ref="1TI 4:10!14"
                               after=" "
-                              class="pron"
-                              type="relative"
-                              xml:id="n54004010012"
-                              lemma="ὅς"
-                              normalized="ὅς"
-                              strong="3739"
+                              class="noun"
+                              type="common"
+                              xml:id="n54004010014"
+                              lemma="σωτήρ"
+                              normalized="Σωτήρ"
+                              strong="4990"
                               number="singular"
                               gender="masculine"
                               case="nominative"
-                              gloss="who"
-                              morph="R-NSM"
-                              unicode="ὅς"
-                              referent="n54004010010">ὅς</w>
-                           <w role="vc"
-                              ref="1TI 4:10!13"
-                              after=" "
-                              class="verb"
-                              xml:id="n54004010013"
-                              lemma="εἰμί"
-                              normalized="ἐστιν"
-                              strong="1510"
-                              number="singular"
-                              person="third"
-                              tense="present"
-                              voice="active"
-                              mood="indicative"
-                              gloss="is"
-                              morph="V-PAI-3S"
-                              unicode="ἐστιν">ἐστιν</w>
-                           <wg class="np" rule="NPofNP" role="p">
-                              <w ref="1TI 4:10!14"
-                                 after=" "
-                                 class="noun"
-                                 type="common"
-                                 xml:id="n54004010014"
-                                 lemma="σωτήρ"
-                                 normalized="Σωτήρ"
-                                 strong="4990"
-                                 number="singular"
-                                 gender="masculine"
-                                 case="nominative"
-                                 gloss="[the] Savior"
-                                 domain="021006"
-                                 ln="21.31"
-                                 morph="N-NSM"
-                                 unicode="Σωτὴρ">Σωτὴρ</w>
-                              <wg type="group" rule="2Np">
-                                 <wg class="np" rule="All-NP">
-                                    <w ref="1TI 4:10!15"
-                                       after=" "
-                                       class="adj"
-                                       xml:id="n54004010015"
-                                       lemma="πᾶς"
-                                       normalized="πάντων"
-                                       strong="3956"
-                                       number="plural"
-                                       gender="masculine"
-                                       case="genitive"
-                                       gloss="of all"
-                                       domain="059003"
-                                       ln="59.23"
-                                       morph="A-GPM"
-                                       unicode="πάντων">πάντων</w>
-                                    <w ref="1TI 4:10!16"
-                                       after=","
-                                       class="noun"
-                                       type="common"
-                                       xml:id="n54004010016"
-                                       lemma="ἄνθρωπος"
-                                       normalized="ἀνθρώπων"
-                                       strong="444"
-                                       number="plural"
-                                       gender="masculine"
-                                       case="genitive"
-                                       gloss="men"
-                                       domain="009001"
-                                       ln="9.1"
-                                       morph="N-GPM"
-                                       unicode="ἀνθρώπων,">ἀνθρώπων</w>
-                                 </wg>
-                                 <wg class="np" rule="AdvpNp">
-                                    <w ref="1TI 4:10!17"
-                                       after=" "
-                                       class="adv"
-                                       xml:id="n54004010017"
-                                       lemma="μάλιστα"
-                                       normalized="μάλιστα"
-                                       strong="3122"
-                                       gloss="especially"
-                                       domain="078001"
-                                       ln="78.7"
-                                       morph="ADV-S"
-                                       unicode="μάλιστα">μάλιστα</w>
-                                    <w ref="1TI 4:10!18"
-                                       after="."
-                                       class="adj"
-                                       xml:id="n54004010018"
-                                       lemma="πιστός"
-                                       normalized="πιστῶν"
-                                       strong="4103"
-                                       number="plural"
-                                       gender="masculine"
-                                       case="genitive"
-                                       gloss="of believers"
-                                       domain="031009"
-                                       ln="31.86"
-                                       morph="A-GPM"
-                                       unicode="πιστῶν.">πιστῶν</w>
-                                 </wg>
+                              gloss="[the] Savior"
+                              domain="021006"
+                              ln="21.31"
+                              morph="N-NSM"
+                              unicode="Σωτὴρ">Σωτὴρ</w>
+                           <wg type="group" rule="2Np">
+                              <wg class="np" rule="All-NP">
+                                 <w ref="1TI 4:10!15"
+                                    after=" "
+                                    class="adj"
+                                    xml:id="n54004010015"
+                                    lemma="πᾶς"
+                                    normalized="πάντων"
+                                    strong="3956"
+                                    number="plural"
+                                    gender="masculine"
+                                    case="genitive"
+                                    gloss="of all"
+                                    domain="059003"
+                                    ln="59.23"
+                                    morph="A-GPM"
+                                    unicode="πάντων">πάντων</w>
+                                 <w ref="1TI 4:10!16"
+                                    after=","
+                                    class="noun"
+                                    type="common"
+                                    xml:id="n54004010016"
+                                    lemma="ἄνθρωπος"
+                                    normalized="ἀνθρώπων"
+                                    strong="444"
+                                    number="plural"
+                                    gender="masculine"
+                                    case="genitive"
+                                    gloss="men"
+                                    domain="009001"
+                                    ln="9.1"
+                                    morph="N-GPM"
+                                    unicode="ἀνθρώπων,">ἀνθρώπων</w>
+                              </wg>
+                              <wg class="np" rule="AdvpNp">
+                                 <w ref="1TI 4:10!17"
+                                    after=" "
+                                    class="adv"
+                                    xml:id="n54004010017"
+                                    lemma="μάλιστα"
+                                    normalized="μάλιστα"
+                                    strong="3122"
+                                    gloss="especially"
+                                    domain="078001"
+                                    ln="78.7"
+                                    morph="ADV-S"
+                                    unicode="μάλιστα">μάλιστα</w>
+                                 <w ref="1TI 4:10!18"
+                                    after="."
+                                    class="adj"
+                                    xml:id="n54004010018"
+                                    lemma="πιστός"
+                                    normalized="πιστῶν"
+                                    strong="4103"
+                                    number="plural"
+                                    gender="masculine"
+                                    case="genitive"
+                                    gloss="of believers"
+                                    domain="031009"
+                                    ln="31.86"
+                                    morph="A-GPM"
+                                    unicode="πιστῶν.">πιστῶν</w>
                               </wg>
                            </wg>
                         </wg>
@@ -15541,7 +15546,7 @@
             </wg>
          </wg>
          <wg type="group" rule="ClClCl">
-            <wg class="cl" rule="O-ADV">
+            <wg class="cl" rule="O-ADV" predication="elided">
                <w role="o"
                   ref="1TI 5:1!8"
                   after=" "
@@ -15590,7 +15595,7 @@
                      unicode="ἀδελφούς,">ἀδελφούς</w>
                </wg>
             </wg>
-            <wg class="cl" rule="O-ADV">
+            <wg class="cl" rule="O-ADV" predication="elided">
                <w role="o"
                   ref="1TI 5:2!1"
                   after=" "
@@ -15639,7 +15644,7 @@
                      unicode="μητέρας,">μητέρας</w>
                </wg>
             </wg>
-            <wg class="cl" rule="O-ADV-ADV">
+            <wg class="cl" rule="O-ADV-ADV" predication="elided">
                <w role="o"
                   ref="1TI 5:2!4"
                   after=" "
@@ -15842,7 +15847,7 @@
             morph="CONJ"
             unicode="δέ">δέ</w>
          <wg Rule="ClCl2" class="cl" nodeId="540050040010180">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" role="o">
                <w ref="1TI 5:4!1"
                   after=" "
                   class="conj"
@@ -18031,7 +18036,7 @@
                      gloss="not"
                      morph="PRT-N"
                      unicode="οὐ">οὐ</w>
-                  <wg class="cl" rule="ADV-P">
+                  <wg class="cl" rule="ADV-P" predication="verbless">
                      <w role="adv"
                         ref="1TI 5:13!10"
                         after=" "
@@ -18075,7 +18080,7 @@
                      ln="89.125"
                      morph="CONJ"
                      unicode="ἀλλὰ">ἀλλὰ</w>
-                  <wg class="cl" rule="P-ADV">
+                  <wg class="cl" rule="P-ADV" predication="verbless">
                      <wg class="np" rule="AdvpNp" role="p">
                         <w ref="1TI 5:13!14"
                            after=" "
@@ -18970,7 +18975,7 @@
                unicode="ἀξιούσθωσαν,"
                frame="A1:n54005017004 A1:n54005017006">ἀξιούσθωσαν</w>
          </wg>
-         <wg class="cl" articular="true" rule="ADV-S">
+         <wg class="cl" articular="true" rule="ADV-S" predication="elided">
             <w role="adv"
                ref="1TI 5:17!8"
                after=" "
@@ -19237,7 +19242,7 @@
                      gloss="and"
                      morph="CONJ"
                      unicode="καί">καί</w>
-                  <wg class="cl" rule="P-S-ADV">
+                  <wg class="cl" rule="P-S-ADV" predication="verbless">
                      <w role="p"
                         ref="1TI 5:18!10"
                         after=" "
@@ -19449,7 +19454,7 @@
                   gloss="if"
                   morph="COND"
                   unicode="εἰ">εἰ</w>
-               <wg class="cl" rule="ADV-ADV">
+               <wg class="cl" rule="ADV-ADV" predication="elided">
                   <w role="adv"
                      ref="1TI 5:19!8"
                      after=" "
@@ -20722,7 +20727,7 @@
             morph="ADV"
             unicode="ὡσαύτως">ὡσαύτως</w>
          <wg rule="CLaCL">
-            <wg class="cl" rule="S-P">
+            <wg class="cl" rule="S-P" predication="verbless">
                <wg class="np" articular="true" rule="AdvpNp" role="s">
                   <w ref="1TI 5:25!2"
                      after=" "
@@ -21753,7 +21758,7 @@
          <milestone unit="verse" id="1TI 6:4">1TI 6:4</milestone> 
          <milestone unit="verse" id="1TI 6:5">1TI 6:5</milestone> εἴ τις ἑτεροδιδασκαλεῖ καὶ μὴ προσέρχεται ὑγιαίνουσιν λόγοις, τοῖς τοῦ Κυρίου ἡμῶν Ἰησοῦ Χριστοῦ, καὶ τῇ κατ’ εὐσέβειαν διδασκαλίᾳ, τετύφωται, μηδὲν ἐπιστάμενος, ἀλλὰ νοσῶν περὶ ζητήσεις καὶ λογομαχίας, ἐξ ὧν γίνεται φθόνος, ἔρις, βλασφημίαι, ὑπόνοιαι πονηραί, διαπαρατριβαὶ διεφθαρμένων ἀνθρώπων τὸν νοῦν καὶ ἀπεστερημένων τῆς ἀληθείας, νομιζόντων πορισμὸν εἶναι τὴν εὐσέβειαν.</p>
       <wg Rule="ClCl2" class="cl" nodeId="540060030010500">
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" role="o">
             <w ref="1TI 6:3!1"
                after=" "
                class="conj"
@@ -23798,7 +23803,7 @@
             morph="CONJ"
             unicode="δέ,">δέ</w>
          <wg Rule="ClCl2" class="cl" nodeId="540060110030060">
-            <wg rule="Np2CL">
+            <wg role="aux" rule="Np2CL">
                <wg class="np" rule="intjNP" role="aux">
                   <w ref="1TI 6:11!3"
                      after=" "
@@ -25635,7 +25640,7 @@
                                  </wg>
                               </wg>
                            </wg>
-                           <wg rule="Intj2CL">
+                           <wg role="aux" rule="Intj2CL">
                               <w role="aux"
                                  ref="1TI 6:16!20"
                                  after="."
@@ -25903,7 +25908,7 @@
                   ln="89.125"
                   morph="CONJ"
                   unicode="ἀλλ’">ἀλλ</w>
-               <wg class="cl" rule="ADV2CL">
+               <wg class="cl" rule="ADV2CL" predication="elided">
                   <wg class="pp" rule="PrepNp" role="adv">
                      <w ref="1TI 6:17!16"
                         after=" "
@@ -26168,7 +26173,7 @@
                   unicode="εἶναι,"
                   subjref="n54006017002">εἶναι</w>
             </wg>
-            <wg class="cl" rule="P2CL">
+            <wg class="cl" rule="P2CL" predication="verbless">
                <w role="p"
                   ref="1TI 6:18!8"
                   after=","
@@ -26400,7 +26405,7 @@
          <milestone unit="verse" id="1TI 6:20">1TI 6:20</milestone> 
          <milestone unit="verse" id="1TI 6:21">1TI 6:21</milestone> Ὦ Τιμόθεε, τὴν παραθήκην φύλαξον, ἐκτρεπόμενος τὰς βεβήλους κενοφωνίας καὶ ἀντιθέσεις τῆς ψευδωνύμου γνώσεως, ἥν τινες ἐπαγγελλόμενοι περὶ τὴν πίστιν ἠστόχησαν.</p>
       <wg Rule="ClCl2" class="cl" nodeId="540060200010210">
-         <wg rule="Np2CL">
+         <wg role="aux" rule="Np2CL">
             <wg class="np" rule="intjNP" role="aux">
                <w ref="1TI 6:20!1"
                   after=" "
@@ -26771,7 +26776,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 6:21">1TI 6:21</milestone> Ἠ χάρις μεθ’ ὑμῶν.</p>
-      <wg class="cl" rule="S-P">
+      <wg class="cl" rule="S-P" predication="verbless">
          <wg class="np" articular="true" rule="DetNP" role="s">
             <w ref="1TI 6:21!8"
                after=" "
