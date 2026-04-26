@@ -5,8 +5,8 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 1:1">2TH 1:1</milestone> Παῦλος καὶ Σιλουανὸς καὶ Τιμόθεος τῇ ἐκκλησίᾳ Θεσσαλονικέων ἐν θεῷ πατρὶ ἡμῶν καὶ κυρίῳ Ἰησοῦ Χριστῷ·</p>
-      <wg class="cl" rule="S-IO">
-         <wg rule="Conj3Np" role="s">
+      <wg class="cl" rule="S-IO" predication="elided">
+         <wg rule="Conj3Np" class="np" role="s">
             <w ref="2TH 1:1!1"
                after=" "
                class="noun"
@@ -148,7 +148,7 @@
                      morph="N-GPM"
                      unicode="Θεσσαλονικέων">Θεσσαλονικέων</w>
                </wg>
-               <wg class="pp" rule="PrepNp">
+               <wg rule="PrepNp" class="pp">
                   <w ref="2TH 1:1!9"
                      after=" "
                      class="prep"
@@ -161,7 +161,7 @@
                      gloss="in"
                      morph="PREP"
                      unicode="ἐν">ἐν</w>
-                  <wg rule="NpaNp">
+                  <wg rule="NpaNp" class="np">
                      <wg type="apposition" class="np" rule="Np-Appos">
                         <w ref="2TH 1:1!10"
                            after=" "
@@ -305,7 +305,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 1:2">2TH 1:2</milestone> χάρις ὑμῖν καὶ εἰρήνη ἀπὸ θεοῦ πατρὸς καὶ κυρίου Ἰησοῦ Χριστοῦ.</p>
-      <wg class="cl" rule="IO-S-ADV">
+      <wg class="cl" rule="IO-S-ADV" predication="elided">
          <w role="io"
             ref="2TH 1:2!2"
             after=" "
@@ -324,7 +324,7 @@
             morph="P-2DP"
             unicode="ὑμῖν"
             referent="n53001001007">ὑμῖν</w>
-         <wg rule="NpaNp" role="s">
+         <wg rule="NpaNp" class="np" role="s">
             <w ref="2TH 1:2!1"
                after=" "
                class="noun"
@@ -376,7 +376,7 @@
                   unicode="εἰρήνη">εἰρήνη</w>
             </wg>
          </wg>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="2TH 1:2!5"
                after=" "
                class="prep"
@@ -391,7 +391,7 @@
                ln="90.15"
                morph="PREP"
                unicode="ἀπὸ">ἀπὸ</w>
-            <wg rule="NpaNp">
+            <wg rule="NpaNp" class="np">
                <wg type="apposition" class="np" rule="Np-Appos">
                   <w ref="2TH 1:2!6"
                      after=" "
@@ -516,28 +516,27 @@
          <milestone unit="verse" id="2TH 1:3">2TH 1:3</milestone> 
          <milestone unit="verse" id="2TH 1:4">2TH 1:4</milestone> Εὐχαριστεῖν ὀφείλομεν τῷ θεῷ πάντοτε περὶ ὑμῶν, ἀδελφοί, καθὼς ἄξιόν ἐστιν, ὅτι ὑπεραυξάνει ἡ πίστις ὑμῶν καὶ πλεονάζει ἡ ἀγάπη ἑνὸς ἑκάστου πάντων ὑμῶν εἰς ἀλλήλους, ὥστε αὐτοὺς ἡμᾶς ἐν ὑμῖν ἐγκαυχᾶσθαι ἐν ταῖς ἐκκλησίαις τοῦ θεοῦ ὑπὲρ τῆς ὑπομονῆς ὑμῶν καὶ πίστεως ἐν πᾶσιν τοῖς διωγμοῖς ὑμῶν καὶ ταῖς θλίψεσιν αἷς ἀνέχεσθε,</p>
       <wg Rule="ClCl2" class="cl" nodeId="530010030080530">
-         <wg rule="Np2CL">
-            <w role="aux"
-               ref="2TH 1:3!8"
-               after=","
-               class="noun"
-               type="common"
-               xml:id="n53001003008"
-               lemma="ἀδελφός"
-               normalized="ἀδελφοί"
-               strong="80"
-               number="plural"
-               gender="masculine"
-               case="vocative"
-               discontinuous="true"
-               english="brothers"
-               mandarin="弟兄们"
-               gloss="brothers"
-               domain="011002"
-               ln="11.23"
-               morph="N-VPM"
-               unicode="ἀδελφοί,">ἀδελφοί</w>
-         </wg>
+         <w role="aux"
+            rule="np2cl"
+            ref="2TH 1:3!8"
+            after=","
+            class="noun"
+            type="common"
+            xml:id="n53001003008"
+            lemma="ἀδελφός"
+            normalized="ἀδελφοί"
+            strong="80"
+            number="plural"
+            gender="masculine"
+            case="vocative"
+            discontinuous="true"
+            english="brothers"
+            mandarin="弟兄们"
+            gloss="brothers"
+            domain="011002"
+            ln="11.23"
+            morph="N-VPM"
+            unicode="ἀδελφοί,">ἀδελφοί</w>
          <w role="v"
             ref="2TH 1:3!2"
             after=" "
@@ -634,7 +633,7 @@
                ln="67.88"
                morph="ADV"
                unicode="πάντοτε">πάντοτε</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 1:3!6"
                   after=" "
                   class="prep"
@@ -667,7 +666,7 @@
                   referent="n53001003008">ὑμῶν</w>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="2TH 1:3!9"
                after=" "
                class="conj"
@@ -724,7 +723,7 @@
                   subjref="n53001003001">ἐστιν</w>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="2TH 1:3!12"
                after=" "
                class="conj"
@@ -965,7 +964,7 @@
                                  </wg>
                               </wg>
                            </wg>
-                           <wg class="pp" rule="PrepNp">
+                           <wg rule="PrepNp" class="pp">
                               <w ref="2TH 1:3!25"
                                  after=" "
                                  class="prep"
@@ -1002,7 +1001,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg rule="sub-CL">
+               <wg rule="sub-CL" class="cl">
                   <w ref="2TH 1:4!1"
                      after=" "
                      class="conj"
@@ -1057,7 +1056,7 @@
                            unicode="ἡμᾶς"
                            referent="n53001001001 n53001001003 n53001001005">ἡμᾶς</w>
                      </wg>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 1:4!4"
                            after=" "
                            class="prep"
@@ -1108,7 +1107,7 @@
                         morph="V-PNN"
                         unicode="ἐγκαυχᾶσθαι"
                         frame="A0:n53001004003">ἐγκαυχᾶσθαι</w>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 1:4!7"
                            after=" "
                            class="prep"
@@ -1198,7 +1197,7 @@
                            </wg>
                         </wg>
                      </wg>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 1:4!12"
                            after=" "
                            class="prep"
@@ -1213,7 +1212,7 @@
                            ln="89.28 90.24"
                            morph="PREP"
                            unicode="ὑπὲρ">ὑπὲρ</w>
-                        <wg articular="true" rule="NpaNp">
+                        <wg articular="true" rule="NpaNp" class="np">
                            <wg class="np" articular="true" rule="DetNP">
                               <w ref="2TH 1:4!13"
                                  after=" "
@@ -1301,7 +1300,7 @@
                                     ln="31.85 31.88"
                                     morph="N-GSF"
                                     unicode="πίστεως">πίστεως</w>
-                                 <wg class="pp" articular="true" rule="PrepNp">
+                                 <wg articular="true" rule="PrepNp" class="pp">
                                     <w ref="2TH 1:4!18"
                                        after=" "
                                        class="prep"
@@ -1335,7 +1334,7 @@
                                              ln="59.23"
                                              morph="A-DPM"
                                              unicode="πᾶσιν">πᾶσιν</w>
-                                          <wg articular="true" rule="NpaNp">
+                                          <wg articular="true" rule="NpaNp" class="np">
                                              <wg class="np" articular="true" rule="DetNP">
                                                 <w ref="2TH 1:4!20"
                                                    after=" "
@@ -1625,7 +1624,7 @@
                </wg>
             </wg>
          </wg>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="2TH 1:5!7"
                after=" "
                class="prep"
@@ -1640,7 +1639,7 @@
                ln="89.48 89.57"
                morph="PREP"
                unicode="εἰς">εἰς</w>
-            <wg rule="DetCL">
+            <wg rule="DetCL" class="cl">
                <w ref="2TH 1:5!8"
                   after=" "
                   class="det"
@@ -1775,7 +1774,7 @@
                             clauseType="nominalized"
                             rule="ADV-ADV-V"
                             junction="apposition">
-                           <wg class="pp" rule="PrepNp" role="adv">
+                           <wg rule="PrepNp" class="pp" role="adv">
                               <w ref="2TH 1:5!15"
                                  after=" "
                                  class="prep"
@@ -1851,7 +1850,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="2TH 1:6!1"
                after=" "
                class="conj"
@@ -1885,7 +1884,7 @@
                   ln="66.5 88.12"
                   morph="A-NSN"
                   unicode="δίκαιον">δίκαιον</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="2TH 1:6!3"
                      after=" "
                      class="prep"
@@ -1919,7 +1918,7 @@
                      morph="N-DSM"
                      unicode="θεῷ">θεῷ</w>
                </wg>
-               <wg clauseType="nominalized" rule="CLaCL" role="s">
+               <wg clauseType="nominalized" rule="CLaCL" class="cl" role="s">
                   <wg class="cl" rule="V-IO-O">
                      <w role="v"
                         ref="2TH 1:6!5"
@@ -1941,7 +1940,7 @@
                         unicode="ἀνταποδοῦναι"
                         frame="A0:n53001006004 A2:n53001006007 A1:n53001006009"
                         subjref="n53001006004">ἀνταποδοῦναι</w>
-                     <wg rule="DetCL" role="io">
+                     <wg rule="DetCL" class="cl" role="io">
                         <w ref="2TH 1:6!6"
                            after=" "
                            class="det"
@@ -2036,7 +2035,7 @@
                         ln="89.92"
                         morph="CONJ"
                         unicode="καὶ">καὶ</w>
-                     <wg class="cl" rule="IO-O-ADV-ADV-ADV">
+                     <wg class="cl" rule="IO-O-ADV-ADV-ADV" predication="elided">
                         <wg type="apposition" class="np" rule="Np-Appos" role="io">
                            <w ref="2TH 1:7!2"
                               after=" "
@@ -2054,7 +2053,7 @@
                               morph="P-2DP"
                               unicode="ὑμῖν"
                               referent="n53001003008">ὑμῖν</w>
-                           <wg rule="DetCL" junction="apposition">
+                           <wg rule="DetCL" class="cl" junction="apposition">
                               <w ref="2TH 1:7!3"
                                  after=" "
                                  class="det"
@@ -2072,30 +2071,29 @@
                                  ln="92.24"
                                  morph="T-DPM"
                                  unicode="τοῖς">τοῖς</w>
-                              <wg class="cl" clauseType="nominalized" rule="V2CL">
-                                 <w role="v"
-                                    ref="2TH 1:7!4"
-                                    after=" "
-                                    class="verb"
-                                    xml:id="n53001007004"
-                                    lemma="θλίβω"
-                                    normalized="θλιβομένοις"
-                                    strong="2346"
-                                    number="plural"
-                                    gender="masculine"
-                                    case="dative"
-                                    tense="present"
-                                    voice="passive"
-                                    mood="participle"
-                                    english="afflicted"
-                                    mandarin="受患难"
-                                    gloss="being oppressed"
-                                    domain="022002"
-                                    ln="22.15"
-                                    morph="V-PPP-DPM"
-                                    unicode="θλιβομένοις"
-                                    frame="A1:n00000000000">θλιβομένοις</w>
-                              </wg>
+                              <w role="v"
+                                 rule="v2cl"
+                                 ref="2TH 1:7!4"
+                                 after=" "
+                                 class="verb"
+                                 xml:id="n53001007004"
+                                 lemma="θλίβω"
+                                 normalized="θλιβομένοις"
+                                 strong="2346"
+                                 number="plural"
+                                 gender="masculine"
+                                 case="dative"
+                                 tense="present"
+                                 voice="passive"
+                                 mood="participle"
+                                 english="afflicted"
+                                 mandarin="受患难"
+                                 gloss="being oppressed"
+                                 domain="022002"
+                                 ln="22.15"
+                                 morph="V-PPP-DPM"
+                                 unicode="θλιβομένοις"
+                                 frame="A1:n00000000000">θλιβομένοις</w>
                            </wg>
                         </wg>
                         <w role="o"
@@ -2117,7 +2115,7 @@
                            ln="22.36"
                            morph="N-ASF"
                            unicode="ἄνεσιν">ἄνεσιν</w>
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="2TH 1:7!6"
                               after="’"
                               class="prep"
@@ -2151,7 +2149,7 @@
                               unicode="ἡμῶν"
                               referent="n53001001001 n53001001003 n53001001005">ἡμῶν</w>
                         </wg>
-                        <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                        <wg articular="true" rule="PrepNp" class="pp" role="adv">
                            <w ref="2TH 1:7!8"
                               after=" "
                               class="prep"
@@ -2265,7 +2263,7 @@
                                                 junction="apposition">Ἰησοῦ</w>
                                           </wg>
                                        </wg>
-                                       <wg class="pp" rule="PrepNp">
+                                       <wg rule="PrepNp" class="pp">
                                           <w ref="2TH 1:7!14"
                                              after="’"
                                              class="prep"
@@ -2298,7 +2296,7 @@
                                              unicode="οὐρανοῦ">οὐρανοῦ</w>
                                        </wg>
                                     </wg>
-                                    <wg class="pp" rule="PrepNp">
+                                    <wg rule="PrepNp" class="pp">
                                        <w ref="2TH 1:7!16"
                                           after="’"
                                           class="prep"
@@ -2374,7 +2372,7 @@
                                        </wg>
                                     </wg>
                                  </wg>
-                                 <wg class="pp" rule="PrepNp">
+                                 <wg rule="PrepNp" class="pp">
                                     <w ref="2TH 1:8!1"
                                        after=" "
                                        class="prep"
@@ -2473,8 +2471,8 @@
                               morph="N-ASF"
                               unicode="ἐκδίκησιν">ἐκδίκησιν</w>
                            <wg class="np" type="apposition" rule="NP-CL" role="io">
-                              <wg rule="NpaNp">
-                                 <wg rule="DetCL">
+                              <wg rule="NpaNp" class="np">
+                                 <wg rule="DetCL" class="cl">
                                     <w ref="2TH 1:8!6"
                                        after=" "
                                        class="det"
@@ -2562,7 +2560,7 @@
                                        gloss="and"
                                        morph="CONJ"
                                        unicode="καὶ">καὶ</w>
-                                    <wg rule="DetCL">
+                                    <wg rule="DetCL" class="cl">
                                        <w ref="2TH 1:8!11"
                                           after=" "
                                           class="det"
@@ -2840,8 +2838,8 @@
                                           unicode="αἰώνιον">αἰώνιον</w>
                                     </wg>
                                  </wg>
-                                 <wg rule="Conj2Pp" role="adv">
-                                    <wg class="pp" rule="PrepNp">
+                                 <wg rule="Conj2Pp" class="pp" role="adv">
+                                    <wg rule="PrepNp" class="pp">
                                        <w ref="2TH 1:9!6"
                                           after=" "
                                           class="prep"
@@ -2927,7 +2925,7 @@
                                           gloss="and"
                                           morph="CONJ"
                                           unicode="καὶ">καὶ</w>
-                                       <wg class="pp" articular="true" rule="PrepNp">
+                                       <wg articular="true" rule="PrepNp" class="pp">
                                           <w ref="2TH 1:9!11"
                                              after=" "
                                              class="prep"
@@ -3046,7 +3044,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg rule="sub-CL" role="adv">
+               <wg rule="sub-CL" class="cl" role="o">
                   <w ref="2TH 1:10!1"
                      after=" "
                      class="conj"
@@ -3082,7 +3080,7 @@
                         unicode="ἔλθῃ"
                         frame="A0:n53001009009"
                         subjref="n53001009009">ἔλθῃ</w>
-                     <wg rule="CLaCL" role="adv">
+                     <wg rule="CLaCL" class="cl" role="adv">
                         <wg class="cl" rule="V-ADV">
                            <w role="v"
                               ref="2TH 1:10!3"
@@ -3104,7 +3102,7 @@
                               unicode="ἐνδοξασθῆναι"
                               frame="A1:n53001009009"
                               subjref="n53001009009">ἐνδοξασθῆναι</w>
-                           <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                           <wg articular="true" rule="PrepNp" class="pp" role="adv">
                               <w ref="2TH 1:10!4"
                                  after=" "
                                  class="prep"
@@ -3212,7 +3210,7 @@
                                  unicode="θαυμασθῆναι"
                                  frame="A1:n53001009009"
                                  subjref="n53001009009">θαυμασθῆναι</w>
-                              <wg class="pp" rule="PrepNp" role="adv">
+                              <wg rule="PrepNp" class="pp" role="adv">
                                  <w ref="2TH 1:10!10"
                                     after=" "
                                     class="prep"
@@ -3245,7 +3243,7 @@
                                        ln="59.23"
                                        morph="A-DPM"
                                        unicode="πᾶσιν">πᾶσιν</w>
-                                    <wg rule="DetCL">
+                                    <wg rule="DetCL" class="cl">
                                        <w ref="2TH 1:10!12"
                                           after=" "
                                           class="det"
@@ -3263,37 +3261,36 @@
                                           ln="92.24"
                                           morph="T-DPM"
                                           unicode="τοῖς">τοῖς</w>
-                                       <wg class="cl" clauseType="nominalized" rule="V2CL">
-                                          <w role="v"
-                                             ref="2TH 1:10!13"
-                                             after=","
-                                             class="verb"
-                                             xml:id="n53001010013"
-                                             lemma="πιστεύω"
-                                             normalized="πιστεύσασιν"
-                                             strong="4100"
-                                             number="plural"
-                                             gender="masculine"
-                                             case="dative"
-                                             tense="aorist"
-                                             voice="active"
-                                             mood="participle"
-                                             english="believed"
-                                             mandarin="信徒"
-                                             gloss="having believed"
-                                             domain="031009"
-                                             ln="31.85"
-                                             morph="V-AAP-DPM"
-                                             unicode="πιστεύσασιν,"
-                                             frame="A0:n00000000000">πιστεύσασιν</w>
-                                       </wg>
+                                       <w role="v"
+                                          rule="v2cl"
+                                          ref="2TH 1:10!13"
+                                          after=","
+                                          class="verb"
+                                          xml:id="n53001010013"
+                                          lemma="πιστεύω"
+                                          normalized="πιστεύσασιν"
+                                          strong="4100"
+                                          number="plural"
+                                          gender="masculine"
+                                          case="dative"
+                                          tense="aorist"
+                                          voice="active"
+                                          mood="participle"
+                                          english="believed"
+                                          mandarin="信徒"
+                                          gloss="having believed"
+                                          domain="031009"
+                                          ln="31.85"
+                                          morph="V-AAP-DPM"
+                                          unicode="πιστεύσασιν,"
+                                          frame="A0:n00000000000">πιστεύσασιν</w>
                                     </wg>
                                  </wg>
                               </wg>
                            </wg>
                         </wg>
                      </wg>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 1:10!21"
                            after=" "
                            class="prep"
@@ -3369,7 +3366,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg rule="sub-CL" role="adv">
+               <wg rule="sub-CL" class="cl" role="adv">
                   <w ref="2TH 1:10!14"
                      after=" "
                      class="conj"
@@ -3463,7 +3460,7 @@
                               referent="n53001001001 n53001001003 n53001001005">ἡμῶν</w>
                         </wg>
                      </wg>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 1:10!19"
                            after="’"
                            class="prep"
@@ -3510,7 +3507,7 @@
              clauseType="nominalized"
              rule="ADV-ADV-V-ADV-ADV"
              role="adv">
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 1:11!1"
                   after=" "
                   class="prep"
@@ -3596,7 +3593,7 @@
                ln="67.88"
                morph="ADV"
                unicode="πάντοτε">πάντοτε</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 1:11!6"
                   after=" "
                   class="prep"
@@ -3643,7 +3640,7 @@
             ln="90.22"
             morph="CONJ"
             unicode="ἵνα">ἵνα</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="O-V-ADV-S">
                <w role="o"
                   ref="2TH 1:11!9"
@@ -3832,7 +3829,7 @@
                         ln="59.23"
                         morph="A-ASF"
                         unicode="πᾶσαν">πᾶσαν</w>
-                     <wg rule="NpaNp">
+                     <wg rule="NpaNp" class="np">
                         <wg class="np" rule="NPofNP">
                            <w ref="2TH 1:11!19"
                               after=" "
@@ -3925,7 +3922,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="2TH 1:11!24"
                         after=" "
                         class="prep"
@@ -3962,7 +3959,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="2TH 1:12!1"
                after=" "
                class="conj"
@@ -3977,7 +3974,7 @@
                ln="89.59"
                morph="ADV"
                unicode="ὅπως">ὅπως</w>
-            <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
                <wg class="cl" rule="V-S-ADV">
                   <w role="v"
                      ref="2TH 1:12!2"
@@ -4117,7 +4114,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="2TH 1:12!9"
                         after=" "
                         class="prep"
@@ -4163,7 +4160,7 @@
                      gloss="and"
                      morph="CONJ"
                      unicode="καὶ">καὶ</w>
-                  <wg class="cl" rule="S-ADV-ADV">
+                  <wg class="cl" rule="S-ADV-ADV" predication="elided">
                      <w role="s"
                         ref="2TH 1:12!12"
                         after=" "
@@ -4181,7 +4178,7 @@
                         morph="P-2NP"
                         unicode="ὑμεῖς"
                         referent="n53001003008">ὑμεῖς</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 1:12!13"
                            after=" "
                            class="prep"
@@ -4214,7 +4211,7 @@
                            unicode="αὐτῷ,"
                            referent="n53001012006">αὐτῷ</w>
                      </wg>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 1:12!15"
                            after=" "
                            class="prep"
@@ -4284,7 +4281,7 @@
                                     ln="92.24"
                                     morph="T-GSM"
                                     unicode="τοῦ">τοῦ</w>
-                                 <wg rule="NpaNp">
+                                 <wg rule="NpaNp" class="np">
                                     <wg class="np" rule="NPofNP">
                                        <w ref="2TH 1:12!19"
                                           after=" "
@@ -4414,7 +4411,7 @@
       <p>
          <milestone unit="verse" id="2TH 2:1">2TH 2:1</milestone> 
          <milestone unit="verse" id="2TH 2:2">2TH 2:2</milestone> Ἐρωτῶμεν δὲ ὑμᾶς, ἀδελφοί, ὑπὲρ τῆς παρουσίας τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ καὶ ἡμῶν ἐπισυναγωγῆς ἐπ’ αὐτόν, εἰς τὸ μὴ ταχέως σαλευθῆναι ὑμᾶς ἀπὸ τοῦ νοὸς μηδὲ θροεῖσθαι μήτε διὰ πνεύματος μήτε διὰ λόγου μήτε δι’ ἐπιστολῆς ὡς δι’ ἡμῶν, ὡς ὅτι ἐνέστηκεν ἡ ἡμέρα τοῦ κυρίου.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 2:1!2"
             after=" "
             class="conj"
@@ -4430,28 +4427,27 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="530020010040460">
-            <wg rule="Np2CL">
-               <w role="aux"
-                  ref="2TH 2:1!4"
-                  after=","
-                  class="noun"
-                  type="common"
-                  xml:id="n53002001004"
-                  lemma="ἀδελφός"
-                  normalized="ἀδελφοί"
-                  strong="80"
-                  number="plural"
-                  gender="masculine"
-                  case="vocative"
-                  discontinuous="true"
-                  english="brothers"
-                  mandarin="弟兄们"
-                  gloss="brothers"
-                  domain="011002"
-                  ln="11.23"
-                  morph="N-VPM"
-                  unicode="ἀδελφοί,">ἀδελφοί</w>
-            </wg>
+            <w role="aux"
+               rule="np2cl"
+               ref="2TH 2:1!4"
+               after=","
+               class="noun"
+               type="common"
+               xml:id="n53002001004"
+               lemma="ἀδελφός"
+               normalized="ἀδελφοί"
+               strong="80"
+               number="plural"
+               gender="masculine"
+               case="vocative"
+               discontinuous="true"
+               english="brothers"
+               mandarin="弟兄们"
+               gloss="brothers"
+               domain="011002"
+               ln="11.23"
+               morph="N-VPM"
+               unicode="ἀδελφοί,">ἀδελφοί</w>
             <w role="v"
                ref="2TH 2:1!1"
                after=" "
@@ -4491,7 +4487,7 @@
                morph="P-2AP"
                unicode="ὑμᾶς,"
                referent="n53002001004">ὑμᾶς</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 2:1!5"
                   after=" "
                   class="prep"
@@ -4506,7 +4502,7 @@
                   ln="90.24"
                   morph="PREP"
                   unicode="ὑπὲρ">ὑπὲρ</w>
-               <wg articular="true" rule="NpaNp">
+               <wg articular="true" rule="NpaNp" class="np">
                   <wg class="np" articular="true" rule="DetNP">
                      <w ref="2TH 2:1!6"
                         after=" "
@@ -4699,7 +4695,7 @@
                               morph="N-GSF"
                               unicode="ἐπισυναγωγῆς">ἐπισυναγωγῆς</w>
                         </wg>
-                        <wg class="pp" rule="PrepNp">
+                        <wg rule="PrepNp" class="pp">
                            <w ref="2TH 2:1!16"
                               after="’"
                               class="prep"
@@ -4738,7 +4734,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 2:2!1"
                   after=" "
                   class="prep"
@@ -4753,7 +4749,7 @@
                   ln="89.57 90.23"
                   morph="PREP"
                   unicode="εἰς">εἰς</w>
-               <wg rule="DetCL">
+               <wg rule="DetCL" class="cl">
                   <w ref="2TH 2:2!2"
                      after=" "
                      class="det"
@@ -4772,7 +4768,7 @@
                      morph="T-ASN"
                      unicode="τὸ">τὸ</w>
                   <wg Rule="ClCl" class="cl" nodeId="530020020030280">
-                     <wg rule="Conj2VP" role="v">
+                     <wg rule="Conj2VP" class="vp" role="v">
                         <wg class="cl" rule="ADV-ADV-V-S-ADV">
                            <w role="adv"
                               ref="2TH 2:2!3"
@@ -4838,7 +4834,7 @@
                               morph="P-2AP"
                               unicode="ὑμᾶς"
                               referent="n53002001004">ὑμᾶς</w>
-                           <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                           <wg articular="true" rule="PrepNp" class="pp" role="adv">
                               <w ref="2TH 2:2!7"
                                  after=" "
                                  class="prep"
@@ -4928,7 +4924,7 @@
                               subjref="n53002001004">θροεῖσθαι</w>
                         </wg>
                      </wg>
-                     <wg rule="aPpaPpaPp" role="adv">
+                     <wg rule="aPpaPpaPp" class="pp" role="adv">
                         <wg type="group">
                            <w ref="2TH 2:2!12"
                               after=" "
@@ -4944,7 +4940,7 @@
                               ln="69.9"
                               morph="CONJ-N"
                               unicode="μήτε">μήτε</w>
-                           <wg class="pp" rule="PrepNp">
+                           <wg rule="PrepNp" class="pp">
                               <w ref="2TH 2:2!13"
                                  after=" "
                                  class="prep"
@@ -4994,7 +4990,7 @@
                               ln="69.9"
                               morph="CONJ-N"
                               unicode="μήτε">μήτε</w>
-                           <wg class="pp" rule="PrepNp">
+                           <wg rule="PrepNp" class="pp">
                               <w ref="2TH 2:2!16"
                                  after=" "
                                  class="prep"
@@ -5042,7 +5038,7 @@
                               ln="69.9"
                               morph="CONJ-N"
                               unicode="μήτε">μήτε</w>
-                           <wg class="pp" rule="PrepNp">
+                           <wg rule="PrepNp" class="pp">
                               <w ref="2TH 2:2!19"
                                  after="’"
                                  class="prep"
@@ -5089,7 +5085,7 @@
                                        ln="64.12"
                                        morph="ADV"
                                        unicode="ὡς">ὡς</w>
-                                    <wg class="pp" rule="PrepNp">
+                                    <wg rule="PrepNp" class="pp">
                                        <w ref="2TH 2:2!22"
                                           after="’"
                                           class="prep"
@@ -5128,7 +5124,7 @@
                            </wg>
                         </wg>
                      </wg>
-                     <wg rule="sub-CL" role="adv">
+                     <wg rule="sub-CL" class="cl" role="adv">
                         <w ref="2TH 2:2!24"
                            after=" "
                            class="conj"
@@ -5143,7 +5139,7 @@
                            ln="64.12 90.21"
                            morph="ADV"
                            unicode="ὡς">ὡς</w>
-                        <wg rule="that-VP">
+                        <wg rule="that-VP" class="cl">
                            <w ref="2TH 2:2!25"
                               after=" "
                               class="conj"
@@ -5336,7 +5332,7 @@
             morph="V-AAS-3S"
             unicode="ἐξαπατήσῃ"
             frame="A0:n53002003002 A1:n53002003003">ἐξαπατήσῃ</w>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="2TH 2:3!5"
                after=" "
                class="prep"
@@ -5387,7 +5383,7 @@
                   unicode="τρόπον·">τρόπον</w>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="2TH 2:3!8"
                after=" "
                class="conj"
@@ -5402,7 +5398,7 @@
                ln="89.33"
                morph="CONJ"
                unicode="ὅτι">ὅτι</w>
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="2TH 2:3!9"
                   after=" "
                   class="conj"
@@ -5415,7 +5411,7 @@
                   gloss="if"
                   morph="COND"
                   unicode="ἐὰν">ἐὰν</w>
-               <wg rule="AdvpCL">
+               <wg rule="AdvpCL" class="cl">
                   <w ref="2TH 2:3!10"
                      after=" "
                      class="adv"
@@ -5428,7 +5424,7 @@
                      gloss="not [until]"
                      morph="PRT-N"
                      unicode="μὴ">μὴ</w>
-                  <wg rule="CLaCL">
+                  <wg rule="CLaCL" class="cl">
                      <wg class="cl" rule="V-S-ADV">
                         <w role="v"
                            ref="2TH 2:3!11"
@@ -5701,7 +5697,7 @@
                                     </wg>
                                  </wg>
                               </wg>
-                              <wg rule="DetCL" junction="apposition">
+                              <wg rule="DetCL" class="cl" junction="apposition">
                                  <w ref="2TH 2:4!1"
                                     after=" "
                                     class="det"
@@ -5720,7 +5716,7 @@
                                     morph="T-NSM"
                                     unicode="ὁ">ὁ</w>
                                  <wg class="cl" clauseType="nominalized" rule="V-ADV">
-                                    <wg rule="Conj2VP" role="v">
+                                    <wg rule="Conj2VP" class="vp" role="v">
                                        <w ref="2TH 2:4!2"
                                           after=" "
                                           class="verb"
@@ -5780,7 +5776,7 @@
                                              subjref="n53002003018">ὑπεραιρόμενος</w>
                                        </wg>
                                     </wg>
-                                    <wg class="pp" rule="PrepNp" role="adv">
+                                    <wg rule="PrepNp" class="pp" role="adv">
                                        <w ref="2TH 2:4!5"
                                           after=" "
                                           class="prep"
@@ -5836,7 +5832,7 @@
                                                 morph="V-PPP-ASM"
                                                 unicode="λεγόμενον"
                                                 frame="A1:n00000000000 A1:n53002004008;n53002004010">λεγόμενον</w>
-                                             <wg rule="NpaNp" role="o">
+                                             <wg rule="NpaNp" class="np" role="o">
                                                 <w ref="2TH 2:4!8"
                                                    after=" "
                                                    class="noun"
@@ -5894,7 +5890,7 @@
                                  </wg>
                               </wg>
                            </wg>
-                           <wg rule="sub-CL" role="adv">
+                           <wg rule="sub-CL" class="cl" role="adv">
                               <w ref="2TH 2:4!11"
                                  after=" "
                                  class="conj"
@@ -5930,7 +5926,7 @@
                                     morph="P-ASM"
                                     unicode="αὐτὸν"
                                     referent="n53002003018">αὐτὸν</w>
-                                 <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                                 <wg articular="true" rule="PrepNp" class="pp" role="adv">
                                     <w ref="2TH 2:4!13"
                                        after=" "
                                        class="prep"
@@ -6083,7 +6079,7 @@
                                        morph="F-3ASM"
                                        unicode="ἑαυτὸν"
                                        referent="n53002003018">ἑαυτὸν</w>
-                                    <wg rule="that-VP" role="o">
+                                    <wg rule="that-VP" class="cl" role="o">
                                        <w ref="2TH 2:4!21"
                                           after=" "
                                           class="conj"
@@ -6154,190 +6150,190 @@
       <p>
          <milestone unit="verse" id="2TH 2:5">2TH 2:5</milestone> οὐ μνημονεύετε ὅτι ἔτι ὢν πρὸς ὑμᾶς ταῦτα ἔλεγον ὑμῖν;</p>
       <wg Rule="ClCl" class="cl" nodeId="530020050010100">
-         <w role="adv"
-            ref="2TH 2:5!1"
-            after=" "
-            class="adv"
-            xml:id="n53002005001"
-            lemma="οὐ"
-            normalized="οὐ"
-            strong="3756"
-            english="not"
-            mandarin="不"
-            gloss="Not"
-            morph="PRT-N"
-            unicode="οὐ">οὐ</w>
-         <w role="v"
-            ref="2TH 2:5!2"
-            after=" "
-            class="verb"
-            xml:id="n53002005002"
-            lemma="μνημονεύω"
-            normalized="μνημονεύετε"
-            strong="3421"
-            number="plural"
-            person="second"
-            tense="present"
-            voice="active"
-            mood="indicative"
-            english="remember"
-            mandarin="记得"
-            gloss="do you remember"
-            domain="029002"
-            ln="29.7"
-            morph="V-PAI-2P"
-            unicode="μνημονεύετε"
-            frame="A0:n53002001004"
-            subjref="n53002001004">μνημονεύετε</w>
-         <wg rule="that-VP" role="o">
-            <w ref="2TH 2:5!3"
+         <wg class="cl" rule="ADV-V" role="o">
+            <w role="adv"
+               ref="2TH 2:5!1"
                after=" "
-               class="conj"
-               xml:id="n53002005003"
-               lemma="ὅτι"
-               normalized="ὅτι"
-               strong="3754"
-               english="that"
-               mandarin=""
-               gloss="that"
-               morph="CONJ"
-               unicode="ὅτι">ὅτι</w>
-            <wg class="cl" rule="ADV-O-V-IO">
-               <wg class="cl" rule="ADV-VC-P" role="adv">
-                  <w role="adv"
-                     ref="2TH 2:5!4"
-                     after=" "
-                     class="adv"
-                     xml:id="n53002005004"
-                     lemma="ἔτι"
-                     normalized="ἔτι"
-                     strong="2089"
-                     english="still"
-                     mandarin="还"
-                     gloss="yet"
-                     domain="067006"
-                     ln="67.128"
-                     morph="ADV"
-                     unicode="ἔτι">ἔτι</w>
-                  <w role="vc"
-                     ref="2TH 2:5!5"
-                     after=" "
-                     class="verb"
-                     xml:id="n53002005005"
-                     lemma="εἰμί"
-                     normalized="ὢν"
-                     strong="5607"
-                     number="singular"
-                     gender="masculine"
-                     case="nominative"
-                     tense="present"
-                     voice="active"
-                     mood="participle"
-                     english="was"
-                     mandarin="在"
-                     gloss="being"
-                     domain="085001"
-                     ln="85.1"
-                     morph="V-PAP-NSM"
-                     unicode="ὢν"
-                     subjref="n53001001001">ὢν</w>
-                  <wg class="pp" rule="PrepNp" role="p">
-                     <w ref="2TH 2:5!6"
-                        after=" "
-                        class="prep"
-                        xml:id="n53002005006"
-                        lemma="πρός"
-                        normalized="πρὸς"
-                        strong="4314"
-                        english="with"
-                        mandarin="跟~一起"
-                        gloss="with"
-                        domain="089020"
-                        ln="89.112"
-                        morph="PREP"
-                        unicode="πρὸς">πρὸς</w>
-                     <w ref="2TH 2:5!7"
-                        after=" "
-                        class="pron"
-                        type="personal"
-                        xml:id="n53002005007"
-                        lemma="σύ"
-                        normalized="ὑμᾶς"
-                        strong="5209"
-                        number="plural"
-                        case="accusative"
-                        english="you"
-                        mandarin="你们"
-                        gloss="you"
-                        morph="P-2AP"
-                        unicode="ὑμᾶς"
-                        referent="n53002001004">ὑμᾶς</w>
-                  </wg>
-               </wg>
-               <w role="o"
-                  ref="2TH 2:5!8"
+               class="adv"
+               xml:id="n53002005001"
+               lemma="οὐ"
+               normalized="οὐ"
+               strong="3756"
+               english="not"
+               mandarin="不"
+               gloss="Not"
+               morph="PRT-N"
+               unicode="οὐ">οὐ</w>
+            <w role="v"
+               ref="2TH 2:5!2"
+               after=" "
+               class="verb"
+               xml:id="n53002005002"
+               lemma="μνημονεύω"
+               normalized="μνημονεύετε"
+               strong="3421"
+               number="plural"
+               person="second"
+               tense="present"
+               voice="active"
+               mood="indicative"
+               english="remember"
+               mandarin="记得"
+               gloss="do you remember"
+               domain="029002"
+               ln="29.7"
+               morph="V-PAI-2P"
+               unicode="μνημονεύετε"
+               frame="A0:n53002001004"
+               subjref="n53002001004">μνημονεύετε</w>
+         </wg>
+         <w ref="2TH 2:5!3"
+            after=" "
+            class="conj"
+            xml:id="n53002005003"
+            lemma="ὅτι"
+            normalized="ὅτι"
+            strong="3754"
+            english="that"
+            mandarin=""
+            gloss="that"
+            morph="CONJ"
+            unicode="ὅτι">ὅτι</w>
+         <wg class="cl" rule="ADV-O-V-IO">
+            <wg class="cl" rule="ADV-VC-P" role="adv">
+               <w role="adv"
+                  ref="2TH 2:5!4"
                   after=" "
-                  class="pron"
-                  type="demonstrative"
-                  xml:id="n53002005008"
-                  lemma="οὗτος"
-                  normalized="ταῦτα"
-                  strong="5023"
-                  number="plural"
-                  gender="neuter"
-                  case="accusative"
-                  english="these"
-                  mandarin="这些"
-                  gloss="these things"
-                  morph="D-APN"
-                  unicode="ταῦτα">ταῦτα</w>
-               <w role="v"
-                  ref="2TH 2:5!9"
+                  class="adv"
+                  xml:id="n53002005004"
+                  lemma="ἔτι"
+                  normalized="ἔτι"
+                  strong="2089"
+                  english="still"
+                  mandarin="还"
+                  gloss="yet"
+                  domain="067006"
+                  ln="67.128"
+                  morph="ADV"
+                  unicode="ἔτι">ἔτι</w>
+               <w role="vc"
+                  ref="2TH 2:5!5"
                   after=" "
                   class="verb"
-                  xml:id="n53002005009"
-                  lemma="λέγω"
-                  normalized="ἔλεγον"
-                  strong="3004"
+                  xml:id="n53002005005"
+                  lemma="εἰμί"
+                  normalized="ὢν"
+                  strong="5607"
                   number="singular"
-                  person="first"
-                  tense="imperfect"
+                  gender="masculine"
+                  case="nominative"
+                  tense="present"
                   voice="active"
-                  mood="indicative"
-                  english="told"
-                  mandarin="告诉"
-                  gloss="I was saying"
-                  domain="033006"
-                  ln="33.69"
-                  morph="V-IAI-1S"
-                  unicode="ἔλεγον"
-                  frame="A0:n53001001001 A1:n53002005008 A2:n53002005010"
-                  subjref="n53001001001">ἔλεγον</w>
-               <w role="io"
-                  ref="2TH 2:5!10"
-                  after=";"
-                  class="pron"
-                  type="personal"
-                  xml:id="n53002005010"
-                  lemma="σύ"
-                  normalized="ὑμῖν"
-                  strong="5213"
-                  number="plural"
-                  case="dative"
-                  english="you"
-                  mandarin="你们"
-                  gloss="to you"
-                  morph="P-2DP"
-                  unicode="ὑμῖν;"
-                  referent="n53002001004">ὑμῖν</w>
+                  mood="participle"
+                  english="was"
+                  mandarin="在"
+                  gloss="being"
+                  domain="085001"
+                  ln="85.1"
+                  morph="V-PAP-NSM"
+                  unicode="ὢν"
+                  subjref="n53001001001">ὢν</w>
+               <wg rule="PrepNp" class="pp" role="p">
+                  <w ref="2TH 2:5!6"
+                     after=" "
+                     class="prep"
+                     xml:id="n53002005006"
+                     lemma="πρός"
+                     normalized="πρὸς"
+                     strong="4314"
+                     english="with"
+                     mandarin="跟~一起"
+                     gloss="with"
+                     domain="089020"
+                     ln="89.112"
+                     morph="PREP"
+                     unicode="πρὸς">πρὸς</w>
+                  <w ref="2TH 2:5!7"
+                     after=" "
+                     class="pron"
+                     type="personal"
+                     xml:id="n53002005007"
+                     lemma="σύ"
+                     normalized="ὑμᾶς"
+                     strong="5209"
+                     number="plural"
+                     case="accusative"
+                     english="you"
+                     mandarin="你们"
+                     gloss="you"
+                     morph="P-2AP"
+                     unicode="ὑμᾶς"
+                     referent="n53002001004">ὑμᾶς</w>
+               </wg>
             </wg>
+            <w role="o"
+               ref="2TH 2:5!8"
+               after=" "
+               class="pron"
+               type="demonstrative"
+               xml:id="n53002005008"
+               lemma="οὗτος"
+               normalized="ταῦτα"
+               strong="5023"
+               number="plural"
+               gender="neuter"
+               case="accusative"
+               english="these"
+               mandarin="这些"
+               gloss="these things"
+               morph="D-APN"
+               unicode="ταῦτα">ταῦτα</w>
+            <w role="v"
+               ref="2TH 2:5!9"
+               after=" "
+               class="verb"
+               xml:id="n53002005009"
+               lemma="λέγω"
+               normalized="ἔλεγον"
+               strong="3004"
+               number="singular"
+               person="first"
+               tense="imperfect"
+               voice="active"
+               mood="indicative"
+               english="told"
+               mandarin="告诉"
+               gloss="I was saying"
+               domain="033006"
+               ln="33.69"
+               morph="V-IAI-1S"
+               unicode="ἔλεγον"
+               frame="A0:n53001001001 A1:n53002005008 A2:n53002005010"
+               subjref="n53001001001">ἔλεγον</w>
+            <w role="io"
+               ref="2TH 2:5!10"
+               after=";"
+               class="pron"
+               type="personal"
+               xml:id="n53002005010"
+               lemma="σύ"
+               normalized="ὑμῖν"
+               strong="5213"
+               number="plural"
+               case="dative"
+               english="you"
+               mandarin="你们"
+               gloss="to you"
+               morph="P-2DP"
+               unicode="ὑμῖν;"
+               referent="n53002001004">ὑμῖν</w>
          </wg>
       </wg>
    </sentence>
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 2:6">2TH 2:6</milestone> καὶ νῦν τὸ κατέχον οἴδατε, εἰς τὸ ἀποκαλυφθῆναι αὐτὸν ἐν τῷ ἑαυτοῦ καιρῷ·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 2:6!1"
             after=" "
             class="conj"
@@ -6366,7 +6362,7 @@
                ln="67.38"
                morph="ADV"
                unicode="νῦν">νῦν</w>
-            <wg rule="DetCL" role="o">
+            <wg rule="DetCL" class="cl" role="o">
                <w ref="2TH 2:6!3"
                   after=" "
                   class="det"
@@ -6384,30 +6380,29 @@
                   ln="92.24"
                   morph="T-ASN"
                   unicode="τὸ">τὸ</w>
-               <wg class="cl" clauseType="nominalized" rule="V2CL">
-                  <w role="v"
-                     ref="2TH 2:6!4"
-                     after=" "
-                     class="verb"
-                     xml:id="n53002006004"
-                     lemma="κατέχω"
-                     normalized="κατέχον"
-                     strong="2722"
-                     number="singular"
-                     gender="neuter"
-                     case="accusative"
-                     tense="present"
-                     voice="active"
-                     mood="participle"
-                     english="restraining"
-                     mandarin="拦阻"
-                     gloss="is restraining"
-                     domain="013004"
-                     ln="13.150"
-                     morph="V-PAP-ASN"
-                     unicode="κατέχον"
-                     frame="A0:n00000000000">κατέχον</w>
-               </wg>
+               <w role="v"
+                  rule="v2cl"
+                  ref="2TH 2:6!4"
+                  after=" "
+                  class="verb"
+                  xml:id="n53002006004"
+                  lemma="κατέχω"
+                  normalized="κατέχον"
+                  strong="2722"
+                  number="singular"
+                  gender="neuter"
+                  case="accusative"
+                  tense="present"
+                  voice="active"
+                  mood="participle"
+                  english="restraining"
+                  mandarin="拦阻"
+                  gloss="is restraining"
+                  domain="013004"
+                  ln="13.150"
+                  morph="V-PAP-ASN"
+                  unicode="κατέχον"
+                  frame="A0:n00000000000">κατέχον</w>
             </wg>
             <w role="v"
                ref="2TH 2:6!5"
@@ -6431,7 +6426,7 @@
                unicode="οἴδατε,"
                frame="A0:n53002001004 A1:n53002006004"
                subjref="n53002001004">οἴδατε</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 2:6!6"
                   after=" "
                   class="prep"
@@ -6446,7 +6441,7 @@
                   ln="67.119 89.48 89.57"
                   morph="PREP"
                   unicode="εἰς">εἰς</w>
-               <wg rule="DetCL">
+               <wg rule="DetCL" class="cl">
                   <w ref="2TH 2:6!7"
                      after=" "
                      class="det"
@@ -6504,7 +6499,7 @@
                         morph="P-ASM"
                         unicode="αὐτὸν"
                         referent="n53002003018">αὐτὸν</w>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 2:6!10"
                            after=" "
                            class="prep"
@@ -6585,7 +6580,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 2:7">2TH 2:7</milestone> τὸ γὰρ μυστήριον ἤδη ἐνεργεῖται τῆς ἀνομίας· μόνον ὁ κατέχων ἄρτι ἕως ἐκ μέσου γένηται.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 2:7!2"
             after=" "
             class="conj"
@@ -6734,7 +6729,7 @@
                   ln="58.50"
                   morph="ADV"
                   unicode="μόνον">μόνον</w>
-               <wg rule="DetCL" role="s">
+               <wg rule="DetCL" class="cl" role="s">
                   <w ref="2TH 2:7!9"
                      after=" "
                      class="det"
@@ -6752,30 +6747,29 @@
                      ln="92.24"
                      morph="T-NSM"
                      unicode="ὁ">ὁ</w>
-                  <wg class="cl" clauseType="nominalized" rule="V2CL">
-                     <w role="v"
-                        ref="2TH 2:7!10"
-                        after=" "
-                        class="verb"
-                        xml:id="n53002007010"
-                        lemma="κατέχω"
-                        normalized="κατέχων"
-                        strong="2722"
-                        number="singular"
-                        gender="masculine"
-                        case="nominative"
-                        tense="present"
-                        voice="active"
-                        mood="participle"
-                        english="restrains"
-                        mandarin="阻止"
-                        gloss="restraining [it]"
-                        domain="013004"
-                        ln="13.150"
-                        morph="V-PAP-NSM"
-                        unicode="κατέχων"
-                        frame="A0:n00000000000">κατέχων</w>
-                  </wg>
+                  <w role="v"
+                     rule="v2cl"
+                     ref="2TH 2:7!10"
+                     after=" "
+                     class="verb"
+                     xml:id="n53002007010"
+                     lemma="κατέχω"
+                     normalized="κατέχων"
+                     strong="2722"
+                     number="singular"
+                     gender="masculine"
+                     case="nominative"
+                     tense="present"
+                     voice="active"
+                     mood="participle"
+                     english="restrains"
+                     mandarin="阻止"
+                     gloss="restraining [it]"
+                     domain="013004"
+                     ln="13.150"
+                     morph="V-PAP-NSM"
+                     unicode="κατέχων"
+                     frame="A0:n00000000000">κατέχων</w>
                </wg>
                <w role="adv"
                   ref="2TH 2:7!11"
@@ -6792,7 +6786,7 @@
                   ln="67.42"
                   morph="ADV"
                   unicode="ἄρτι">ἄρτι</w>
-               <wg rule="sub-CL" role="adv">
+               <wg rule="sub-CL" class="cl" role="adv">
                   <w ref="2TH 2:7!12"
                      after=" "
                      class="conj"
@@ -6808,7 +6802,7 @@
                      morph="ADV"
                      unicode="ἕως">ἕως</w>
                   <wg class="cl" rule="ADV-V">
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 2:7!13"
                            after=" "
                            class="prep"
@@ -6872,7 +6866,7 @@
          <milestone unit="verse" id="2TH 2:8">2TH 2:8</milestone> 
          <milestone unit="verse" id="2TH 2:9">2TH 2:9</milestone> 
          <milestone unit="verse" id="2TH 2:10">2TH 2:10</milestone> καὶ τότε ἀποκαλυφθήσεται ὁ ἄνομος, ὃν ὁ κύριος Ἰησοῦς ἀνελεῖ τῷ πνεύματι τοῦ στόματος αὐτοῦ καὶ καταργήσει τῇ ἐπιφανείᾳ τῆς παρουσίας αὐτοῦ, οὗ ἐστιν ἡ παρουσία κατ’ ἐνέργειαν τοῦ Σατανᾶ ἐν πάσῃ δυνάμει καὶ σημείοις καὶ τέρασιν ψεύδους καὶ ἐν πάσῃ ἀπάτῃ ἀδικίας τοῖς ἀπολλυμένοις, ἀνθ’ ὧν τὴν ἀγάπην τῆς ἀληθείας οὐκ ἐδέξαντο εἰς τὸ σωθῆναι αὐτούς·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 2:8!1"
             after=" "
             class="conj"
@@ -6964,7 +6958,10 @@
                         morph="A-NSM"
                         unicode="ἄνομος,">ἄνομος</w>
                   </wg>
-                  <wg clauseType="nominalized" rule="CLaCL" junction="apposition">
+                  <wg clauseType="nominalized"
+                      rule="CLaCL"
+                      class="cl"
+                      junction="apposition">
                      <wg class="cl" clauseType="nominalized" rule="O-S-V-ADV">
                         <w role="o"
                            ref="2TH 2:8!6"
@@ -7383,7 +7380,7 @@
                      ln="13.1"
                      morph="V-PAI-3S"
                      unicode="ἐστιν">ἐστιν</w>
-                  <wg class="pp" rule="PrepNp" role="p">
+                  <wg rule="PrepNp" class="pp" role="p">
                      <w ref="2TH 2:9!5"
                         after="’"
                         class="prep"
@@ -7456,8 +7453,8 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg rule="Conj2Pp" role="adv">
-                     <wg class="pp" rule="PrepNp">
+                  <wg rule="Conj2Pp" class="pp" role="adv">
+                     <wg rule="PrepNp" class="pp">
                         <w ref="2TH 2:9!9"
                            after=" "
                            class="prep"
@@ -7490,7 +7487,7 @@
                               ln="58.28 59.23"
                               morph="A-DSF"
                               unicode="πάσῃ">πάσῃ</w>
-                           <wg rule="Conj3Np">
+                           <wg rule="Conj3Np" class="np">
                               <w ref="2TH 2:9!11"
                                  after=" "
                                  class="noun"
@@ -7609,7 +7606,7 @@
                            gloss="and"
                            morph="CONJ"
                            unicode="καὶ">καὶ</w>
-                        <wg class="pp" rule="PrepNp">
+                        <wg rule="PrepNp" class="pp">
                            <w ref="2TH 2:10!2"
                               after=" "
                               class="prep"
@@ -7684,7 +7681,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg rule="DetCL" role="adv">
+                  <wg rule="DetCL" class="cl" role="adv">
                      <w ref="2TH 2:10!6"
                         after=" "
                         class="det"
@@ -7702,32 +7699,31 @@
                         ln="92.24"
                         morph="T-DPM"
                         unicode="τοῖς">τοῖς</w>
-                     <wg class="cl" clauseType="nominalized" rule="V2CL">
-                        <w role="v"
-                           ref="2TH 2:10!7"
-                           after=","
-                           class="verb"
-                           xml:id="n53002010007"
-                           lemma="ἀπόλλυμι"
-                           normalized="ἀπολλυμένοις"
-                           strong="622"
-                           number="plural"
-                           gender="masculine"
-                           case="dative"
-                           tense="present"
-                           voice="middle"
-                           mood="participle"
-                           english="perishing"
-                           mandarin="沉沦"
-                           gloss="perishing"
-                           domain="020003"
-                           ln="20.31"
-                           morph="V-PEP-DPM"
-                           unicode="ἀπολλυμένοις,"
-                           frame="A0:n00000000000">ἀπολλυμένοις</w>
-                     </wg>
+                     <w role="v"
+                        rule="v2cl"
+                        ref="2TH 2:10!7"
+                        after=","
+                        class="verb"
+                        xml:id="n53002010007"
+                        lemma="ἀπόλλυμι"
+                        normalized="ἀπολλυμένοις"
+                        strong="622"
+                        number="plural"
+                        gender="masculine"
+                        case="dative"
+                        tense="present"
+                        voice="middle"
+                        mood="participle"
+                        english="perishing"
+                        mandarin="沉沦"
+                        gloss="perishing"
+                        domain="020003"
+                        ln="20.31"
+                        morph="V-PEP-DPM"
+                        unicode="ἀπολλυμένοις,"
+                        frame="A0:n00000000000">ἀπολλυμένοις</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="2TH 2:10!8"
                         after="’"
                         class="prep"
@@ -7871,7 +7867,7 @@
                            unicode="ἐδέξαντο"
                            frame="A0:n53002008005 A1:n53002010011"
                            subjref="n53002008005">ἐδέξαντο</w>
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="2TH 2:10!16"
                               after=" "
                               class="prep"
@@ -7886,7 +7882,7 @@
                               ln="89.48 89.57"
                               morph="PREP"
                               unicode="εἰς">εἰς</w>
-                           <wg rule="DetCL">
+                           <wg rule="DetCL" class="cl">
                               <w ref="2TH 2:10!17"
                                  after=" "
                                  class="det"
@@ -7958,7 +7954,7 @@
       <p>
          <milestone unit="verse" id="2TH 2:11">2TH 2:11</milestone> 
          <milestone unit="verse" id="2TH 2:12">2TH 2:12</milestone> καὶ διὰ τοῦτο πέμπει αὐτοῖς ὁ θεὸς ἐνέργειαν πλάνης εἰς τὸ πιστεῦσαι αὐτοὺς τῷ ψεύδει, ἵνα κριθῶσιν πάντες οἱ μὴ πιστεύσαντες τῇ ἀληθείᾳ ἀλλὰ εὐδοκήσαντες τῇ ἀδικίᾳ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 2:11!1"
             after=" "
             class="conj"
@@ -7972,7 +7968,7 @@
             morph="CONJ"
             unicode="καὶ">καὶ</w>
          <wg Rule="ClCl" class="cl" nodeId="530020110020260">
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 2:11!2"
                   after=" "
                   class="prep"
@@ -8120,7 +8116,7 @@
                   morph="N-GSF"
                   unicode="πλάνης">πλάνης</w>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 2:11!10"
                   after=" "
                   class="prep"
@@ -8135,7 +8131,7 @@
                   ln="89.48 89.57"
                   morph="PREP"
                   unicode="εἰς">εἰς</w>
-               <wg rule="DetCL">
+               <wg rule="DetCL" class="cl">
                   <w ref="2TH 2:11!11"
                      after=" "
                      class="det"
@@ -8233,7 +8229,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="o">
                <w ref="2TH 2:12!1"
                   after=" "
                   class="conj"
@@ -8288,7 +8284,7 @@
                         ln="59.23"
                         morph="A-NPM"
                         unicode="πάντες">πάντες</w>
-                     <wg rule="DetCL">
+                     <wg rule="DetCL" class="cl">
                         <w ref="2TH 2:12!4"
                            after=" "
                            class="det"
@@ -8467,7 +8463,7 @@
       <p>
          <milestone unit="verse" id="2TH 2:13">2TH 2:13</milestone> 
          <milestone unit="verse" id="2TH 2:14">2TH 2:14</milestone> Ἡμεῖς δὲ ὀφείλομεν εὐχαριστεῖν τῷ θεῷ πάντοτε περὶ ὑμῶν, ἀδελφοὶ ἠγαπημένοι ὑπὸ κυρίου, ὅτι εἵλατο ὑμᾶς ὁ θεὸς ἀπαρχὴν εἰς σωτηρίαν ἐν ἁγιασμῷ πνεύματος καὶ πίστει ἀληθείας, εἰς ὃ ἐκάλεσεν ὑμᾶς διὰ τοῦ εὐαγγελίου ἡμῶν, εἰς περιποίησιν δόξης τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 2:13!2"
             after=" "
             class="conj"
@@ -8597,7 +8593,7 @@
                   ln="67.88"
                   morph="ADV"
                   unicode="πάντοτε">πάντοτε</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="2TH 2:13!8"
                      after=" "
                      class="prep"
@@ -8628,86 +8624,84 @@
                      referent="n53002001004">ὑμῶν</w>
                </wg>
             </wg>
-            <wg rule="Np2CL">
-               <wg class="np" rule="NpAdjp" role="aux">
-                  <w ref="2TH 2:13!10"
+            <wg class="np" rule="NpAdjp" role="aux">
+               <w ref="2TH 2:13!10"
+                  after=" "
+                  class="noun"
+                  type="common"
+                  xml:id="n53002013010"
+                  lemma="ἀδελφός"
+                  normalized="ἀδελφοὶ"
+                  strong="80"
+                  number="plural"
+                  gender="masculine"
+                  case="vocative"
+                  english="brothers"
+                  mandarin="弟兄们"
+                  gloss="brothers"
+                  domain="011002"
+                  ln="11.23"
+                  morph="N-VPM"
+                  unicode="ἀδελφοὶ">ἀδελφοὶ</w>
+               <wg class="cl" clauseType="nominalized" rule="V-ADV">
+                  <w role="v"
+                     ref="2TH 2:13!11"
                      after=" "
-                     class="noun"
-                     type="common"
-                     xml:id="n53002013010"
-                     lemma="ἀδελφός"
-                     normalized="ἀδελφοὶ"
-                     strong="80"
+                     class="verb"
+                     xml:id="n53002013011"
+                     lemma="ἀγαπάω"
+                     normalized="ἠγαπημένοι"
+                     strong="25"
                      number="plural"
                      gender="masculine"
                      case="vocative"
-                     english="brothers"
-                     mandarin="弟兄们"
-                     gloss="brothers"
-                     domain="011002"
-                     ln="11.23"
-                     morph="N-VPM"
-                     unicode="ἀδελφοὶ">ἀδελφοὶ</w>
-                  <wg class="cl" clauseType="nominalized" rule="V-ADV">
-                     <w role="v"
-                        ref="2TH 2:13!11"
+                     tense="perfect"
+                     voice="passive"
+                     mood="participle"
+                     english="beloved"
+                     mandarin="爱"
+                     gloss="beloved"
+                     domain="025003"
+                     ln="25.43"
+                     morph="V-RPP-NPM"
+                     unicode="ἠγαπημένοι"
+                     frame="A1:n53002013010"
+                     subjref="n53002013010">ἠγαπημένοι</w>
+                  <wg rule="PrepNp" class="pp" role="adv">
+                     <w ref="2TH 2:13!12"
                         after=" "
-                        class="verb"
-                        xml:id="n53002013011"
-                        lemma="ἀγαπάω"
-                        normalized="ἠγαπημένοι"
-                        strong="25"
-                        number="plural"
+                        class="prep"
+                        xml:id="n53002013012"
+                        lemma="ὑπό"
+                        normalized="ὑπὸ"
+                        strong="5259"
+                        english="by"
+                        mandarin="蒙"
+                        gloss="by"
+                        morph="PREP"
+                        unicode="ὑπὸ">ὑπὸ</w>
+                     <w ref="2TH 2:13!13"
+                        after=","
+                        class="noun"
+                        type="common"
+                        xml:id="n53002013013"
+                        lemma="κύριος"
+                        normalized="κυρίου"
+                        strong="2962"
+                        number="singular"
                         gender="masculine"
-                        case="vocative"
-                        tense="perfect"
-                        voice="passive"
-                        mood="participle"
-                        english="beloved"
-                        mandarin="爱"
-                        gloss="beloved"
-                        domain="025003"
-                        ln="25.43"
-                        morph="V-RPP-NPM"
-                        unicode="ἠγαπημένοι"
-                        frame="A1:n53002013010"
-                        subjref="n53002013010">ἠγαπημένοι</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
-                        <w ref="2TH 2:13!12"
-                           after=" "
-                           class="prep"
-                           xml:id="n53002013012"
-                           lemma="ὑπό"
-                           normalized="ὑπὸ"
-                           strong="5259"
-                           english="by"
-                           mandarin="蒙"
-                           gloss="by"
-                           morph="PREP"
-                           unicode="ὑπὸ">ὑπὸ</w>
-                        <w ref="2TH 2:13!13"
-                           after=","
-                           class="noun"
-                           type="common"
-                           xml:id="n53002013013"
-                           lemma="κύριος"
-                           normalized="κυρίου"
-                           strong="2962"
-                           number="singular"
-                           gender="masculine"
-                           case="genitive"
-                           english="Lord"
-                           mandarin="主"
-                           gloss="[the] Lord"
-                           domain="012001"
-                           ln="12.9"
-                           morph="N-GSM"
-                           unicode="κυρίου,">κυρίου</w>
-                     </wg>
+                        case="genitive"
+                        english="Lord"
+                        mandarin="主"
+                        gloss="[the] Lord"
+                        domain="012001"
+                        ln="12.9"
+                        morph="N-GSM"
+                        unicode="κυρίου,">κυρίου</w>
                   </wg>
                </wg>
             </wg>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="2TH 2:13!14"
                   after=" "
                   class="conj"
@@ -8816,7 +8810,7 @@
                      ln="61.8"
                      morph="N-ASF"
                      unicode="ἀπαρχὴν">ἀπαρχὴν</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="2TH 2:13!20"
                         after=" "
                         class="prep"
@@ -8850,7 +8844,7 @@
                         morph="N-ASF"
                         unicode="σωτηρίαν">σωτηρίαν</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="2TH 2:13!22"
                         after=" "
                         class="prep"
@@ -8865,7 +8859,7 @@
                         ln="89.76 89.80"
                         morph="PREP"
                         unicode="ἐν">ἐν</w>
-                     <wg rule="NpaNp">
+                     <wg rule="NpaNp" class="np">
                         <wg class="np" rule="NPofNP">
                            <w ref="2TH 2:13!23"
                               after=" "
@@ -8962,7 +8956,7 @@
                       clauseType="nominalized"
                       rule="ADV-V-O-ADV-ADV"
                       role="adv">
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 2:14!1"
                            after=" "
                            class="prep"
@@ -9033,7 +9027,7 @@
                         morph="P-2AP"
                         unicode="ὑμᾶς"
                         referent="n53002013010">ὑμᾶς</w>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 2:14!5"
                            after=" "
                            class="prep"
@@ -9106,7 +9100,7 @@
                            </wg>
                         </wg>
                      </wg>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 2:14!9"
                            after=" "
                            class="prep"
@@ -9272,7 +9266,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 2:15">2TH 2:15</milestone> ἄρα οὖν, ἀδελφοί, στήκετε, καὶ κρατεῖτε τὰς παραδόσεις ἃς ἐδιδάχθητε εἴτε διὰ λόγου εἴτε δι’ ἐπιστολῆς ἡμῶν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 2:15!1"
             after=" "
             class="conj"
@@ -9287,7 +9281,7 @@
             ln="89.46"
             morph="PRT"
             unicode="ἄρα">ἄρα</w>
-         <wg rule="Conj-CL">
+         <wg rule="Conj-CL" class="cl">
             <w ref="2TH 2:15!2"
                after=","
                class="conj"
@@ -9301,51 +9295,49 @@
                morph="CONJ"
                unicode="οὖν,">οὖν</w>
             <wg Rule="ClCl2" class="cl" nodeId="530020150030150">
-               <wg rule="Np2CL">
-                  <w role="aux"
-                     ref="2TH 2:15!3"
-                     after=","
-                     class="noun"
-                     type="common"
-                     xml:id="n53002015003"
-                     lemma="ἀδελφός"
-                     normalized="ἀδελφοί"
-                     strong="80"
-                     number="plural"
-                     gender="masculine"
-                     case="vocative"
-                     english="brothers"
-                     mandarin="弟兄们"
-                     gloss="brothers"
-                     domain="011002"
-                     ln="11.23"
-                     morph="N-VPM"
-                     unicode="ἀδελφοί,">ἀδελφοί</w>
-               </wg>
-               <wg class="cl" rule="V2CL">
-                  <w role="v"
-                     ref="2TH 2:15!4"
-                     after=","
-                     class="verb"
-                     xml:id="n53002015004"
-                     lemma="στήκω"
-                     normalized="στήκετε"
-                     strong="4739"
-                     number="plural"
-                     person="second"
-                     tense="present"
-                     voice="active"
-                     mood="imperative"
-                     english="stand firm"
-                     mandarin="站立得稳"
-                     gloss="stand firm"
-                     domain="013001"
-                     ln="13.30"
-                     morph="V-PAM-2P"
-                     unicode="στήκετε,"
-                     frame="A0:n53002015003"
-                     subjref="n53002015003">στήκετε</w>
-               </wg>
+               <w role="aux"
+                  rule="np2cl"
+                  ref="2TH 2:15!3"
+                  after=","
+                  class="noun"
+                  type="common"
+                  xml:id="n53002015003"
+                  lemma="ἀδελφός"
+                  normalized="ἀδελφοί"
+                  strong="80"
+                  number="plural"
+                  gender="masculine"
+                  case="vocative"
+                  english="brothers"
+                  mandarin="弟兄们"
+                  gloss="brothers"
+                  domain="011002"
+                  ln="11.23"
+                  morph="N-VPM"
+                  unicode="ἀδελφοί,">ἀδελφοί</w>
+               <w role="v"
+                  rule="v2cl"
+                  ref="2TH 2:15!4"
+                  after=","
+                  class="verb"
+                  xml:id="n53002015004"
+                  lemma="στήκω"
+                  normalized="στήκετε"
+                  strong="4739"
+                  number="plural"
+                  person="second"
+                  tense="present"
+                  voice="active"
+                  mood="imperative"
+                  english="stand firm"
+                  mandarin="站立得稳"
+                  gloss="stand firm"
+                  domain="013001"
+                  ln="13.30"
+                  morph="V-PAM-2P"
+                  unicode="στήκετε,"
+                  frame="A0:n53002015003"
+                  subjref="n53002015003">στήκετε</w>
                <wg type="group">
                   <w ref="2TH 2:15!5"
                      after=" "
@@ -9465,7 +9457,7 @@
                                  unicode="ἐδιδάχθητε"
                                  frame="A1:n53002015003 A1:n53002015009"
                                  subjref="n53002015003">ἐδιδάχθητε</w>
-                              <wg rule="aPpaPp" role="adv">
+                              <wg rule="aPpaPp" class="pp" role="adv">
                                  <wg type="group">
                                     <w ref="2TH 2:15!11"
                                        after=" "
@@ -9481,7 +9473,7 @@
                                        ln="89.69"
                                        morph="CONJ"
                                        unicode="εἴτε">εἴτε</w>
-                                    <wg class="pp" rule="PrepNp">
+                                    <wg rule="PrepNp" class="pp">
                                        <w ref="2TH 2:15!12"
                                           after=" "
                                           class="prep"
@@ -9531,7 +9523,7 @@
                                        ln="89.69"
                                        morph="CONJ"
                                        unicode="εἴτε">εἴτε</w>
-                                    <wg class="pp" rule="PrepNp">
+                                    <wg rule="PrepNp" class="pp">
                                        <w ref="2TH 2:15!15"
                                           after="’"
                                           class="prep"
@@ -9598,7 +9590,7 @@
       <p>
          <milestone unit="verse" id="2TH 2:16">2TH 2:16</milestone> 
          <milestone unit="verse" id="2TH 2:17">2TH 2:17</milestone> Αὐτὸς δὲ ὁ κύριος ἡμῶν Ἰησοῦς Χριστὸς καὶ θεὸς ὁ πατὴρ ἡμῶν, ὁ ἀγαπήσας ἡμᾶς καὶ δοὺς παράκλησιν αἰωνίαν καὶ ἐλπίδα ἀγαθὴν ἐν χάριτι, παρακαλέσαι ὑμῶν τὰς καρδίας καὶ στηρίξαι ἐν παντὶ ἔργῳ καὶ λόγῳ ἀγαθῷ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 2:16!2"
             after=" "
             class="conj"
@@ -9614,9 +9606,9 @@
             ln="89.124 89.94"
             morph="CONJ"
             unicode="δὲ">δὲ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="S-V-O">
-               <wg articular="true" rule="NpaNp" role="s">
+               <wg articular="true" rule="NpaNp" class="np" role="s">
                   <wg class="np" articular="true" rule="PronNP">
                      <w ref="2TH 2:16!1"
                         after=" "
@@ -9830,7 +9822,7 @@
                               </wg>
                            </wg>
                         </wg>
-                        <wg rule="DetCL" junction="apposition">
+                        <wg rule="DetCL" class="cl" junction="apposition">
                            <w ref="2TH 2:16!13"
                               after=" "
                               class="det"
@@ -9848,7 +9840,7 @@
                               ln="92.24"
                               morph="T-NSM"
                               unicode="ὁ">ὁ</w>
-                           <wg clauseType="nominalized" rule="CLaCL">
+                           <wg clauseType="nominalized" rule="CLaCL" class="cl">
                               <wg class="cl" rule="V-O">
                                  <w role="v"
                                     ref="2TH 2:16!14"
@@ -9930,7 +9922,7 @@
                                        unicode="δοὺς"
                                        frame="A0:n53002016009 A1:n53002016018;n53002016021"
                                        subjref="n53002016009">δοὺς</w>
-                                    <wg rule="NpaNp" role="o">
+                                    <wg rule="NpaNp" class="np" role="o">
                                        <wg class="np" rule="NpAdjp">
                                           <w ref="2TH 2:16!18"
                                              after=" "
@@ -10020,7 +10012,7 @@
                                           </wg>
                                        </wg>
                                     </wg>
-                                    <wg class="pp" rule="PrepNp" role="adv">
+                                    <wg rule="PrepNp" class="pp" role="adv">
                                        <w ref="2TH 2:16!23"
                                           after=" "
                                           class="prep"
@@ -10175,7 +10167,7 @@
                      unicode="στηρίξαι"
                      frame="A0:n53002016004;n53002016009"
                      subjref="n53002016004 n53002016009">στηρίξαι</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="2TH 2:17!7"
                         after=" "
                         class="prep"
@@ -10209,7 +10201,7 @@
                            morph="A-DSN"
                            unicode="παντὶ">παντὶ</w>
                         <wg class="np" rule="NpAdjp">
-                           <wg rule="NpaNp">
+                           <wg rule="NpaNp" class="np">
                               <w ref="2TH 2:17!9"
                                  after=" "
                                  class="noun"
@@ -10291,28 +10283,27 @@
          <milestone unit="verse" id="2TH 3:1">2TH 3:1</milestone> 
          <milestone unit="verse" id="2TH 3:2">2TH 3:2</milestone> Τὸ λοιπὸν προσεύχεσθε, ἀδελφοί, περὶ ἡμῶν, ἵνα ὁ λόγος τοῦ κυρίου τρέχῃ καὶ δοξάζηται καθὼς καὶ πρὸς ὑμᾶς, καὶ ἵνα ῥυσθῶμεν ἀπὸ τῶν ἀτόπων καὶ πονηρῶν ἀνθρώπων,</p>
       <wg Rule="ClCl2" class="cl" nodeId="530030010040270">
-         <wg rule="Np2CL">
-            <w role="aux"
-               ref="2TH 3:1!4"
-               after=","
-               class="noun"
-               type="common"
-               xml:id="n53003001004"
-               lemma="ἀδελφός"
-               normalized="ἀδελφοί"
-               strong="80"
-               number="plural"
-               gender="masculine"
-               case="vocative"
-               discontinuous="true"
-               english="brothers"
-               mandarin="弟兄们"
-               gloss="brothers"
-               domain="011002"
-               ln="11.23"
-               morph="N-VPM"
-               unicode="ἀδελφοί,">ἀδελφοί</w>
-         </wg>
+         <w role="aux"
+            rule="np2cl"
+            ref="2TH 3:1!4"
+            after=","
+            class="noun"
+            type="common"
+            xml:id="n53003001004"
+            lemma="ἀδελφός"
+            normalized="ἀδελφοί"
+            strong="80"
+            number="plural"
+            gender="masculine"
+            case="vocative"
+            discontinuous="true"
+            english="brothers"
+            mandarin="弟兄们"
+            gloss="brothers"
+            domain="011002"
+            ln="11.23"
+            morph="N-VPM"
+            unicode="ἀδελφοί,">ἀδελφοί</w>
          <wg class="np" articular="true" rule="DetAdj" role="adv">
             <w ref="2TH 3:1!1"
                after=" "
@@ -10371,7 +10362,7 @@
             unicode="προσεύχεσθε,"
             frame="A0:n53003001004"
             subjref="n53003001004">προσεύχεσθε</w>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="2TH 3:1!5"
                after=" "
                class="prep"
@@ -10405,8 +10396,8 @@
                unicode="ἡμῶν,"
                referent="n53001001001 n53001001003 n53001001005">ἡμῶν</w>
          </wg>
-         <wg rule="CLaCL" role="o">
-            <wg rule="that-VP">
+         <wg rule="CLaCL" class="cl" role="o">
+            <wg rule="that-VP" class="cl">
                <w ref="2TH 3:1!7"
                   after=" "
                   class="conj"
@@ -10534,32 +10525,31 @@
                         gloss="and"
                         morph="CONJ"
                         unicode="καὶ">καὶ</w>
-                     <wg class="cl" rule="V2CL">
-                        <w role="v"
-                           ref="2TH 3:1!14"
-                           after=" "
-                           class="verb"
-                           xml:id="n53003001014"
-                           lemma="δοξάζω"
-                           normalized="δοξάζηται"
-                           strong="1392"
-                           number="singular"
-                           person="third"
-                           tense="present"
-                           voice="passive"
-                           mood="subjunctive"
-                           english="honored"
-                           mandarin="得着荣耀"
-                           gloss="may be glorified"
-                           domain="033037"
-                           ln="33.357"
-                           morph="V-PPS-3S"
-                           unicode="δοξάζηται"
-                           frame="A1:n53003001009"
-                           subjref="n53003001009">δοξάζηται</w>
-                     </wg>
+                     <w role="v"
+                        rule="v2cl"
+                        ref="2TH 3:1!14"
+                        after=" "
+                        class="verb"
+                        xml:id="n53003001014"
+                        lemma="δοξάζω"
+                        normalized="δοξάζηται"
+                        strong="1392"
+                        number="singular"
+                        person="third"
+                        tense="present"
+                        voice="passive"
+                        mood="subjunctive"
+                        english="honored"
+                        mandarin="得着荣耀"
+                        gloss="may be glorified"
+                        domain="033037"
+                        ln="33.357"
+                        morph="V-PPS-3S"
+                        unicode="δοξάζηται"
+                        frame="A1:n53003001009"
+                        subjref="n53003001009">δοξάζηται</w>
                   </wg>
-                  <wg rule="sub-CL">
+                  <wg rule="sub-CL" class="cl">
                      <w ref="2TH 3:1!15"
                         after=" "
                         class="conj"
@@ -10574,54 +10564,52 @@
                         ln="64.14"
                         morph="ADV"
                         unicode="καθὼς">καθὼς</w>
-                     <wg class="cl" rule="ADV2CL">
-                        <wg class="pp" rule="AdvPp" role="adv">
-                           <w ref="2TH 3:1!16"
+                     <wg class="pp" rule="AdvPp" role="adv">
+                        <w ref="2TH 3:1!16"
+                           after=" "
+                           class="adv"
+                           xml:id="n53003001016"
+                           lemma="καί"
+                           normalized="καὶ"
+                           strong="2532"
+                           english="also"
+                           mandarin="也"
+                           gloss="also"
+                           domain="089017 091002"
+                           ln="89.93 91.12"
+                           morph="CONJ"
+                           unicode="καὶ">καὶ</w>
+                        <wg rule="PrepNp" class="pp">
+                           <w ref="2TH 3:1!17"
                               after=" "
-                              class="adv"
-                              xml:id="n53003001016"
-                              lemma="καί"
-                              normalized="καὶ"
-                              strong="2532"
-                              english="also"
-                              mandarin="也"
-                              gloss="also"
-                              domain="089017 091002"
-                              ln="89.93 91.12"
-                              morph="CONJ"
-                              unicode="καὶ">καὶ</w>
-                           <wg class="pp" rule="PrepNp">
-                              <w ref="2TH 3:1!17"
-                                 after=" "
-                                 class="prep"
-                                 xml:id="n53003001017"
-                                 lemma="πρός"
-                                 normalized="πρὸς"
-                                 strong="4314"
-                                 english="with"
-                                 mandarin="在~中间"
-                                 gloss="with"
-                                 domain="083003"
-                                 ln="83.9"
-                                 morph="PREP"
-                                 unicode="πρὸς">πρὸς</w>
-                              <w ref="2TH 3:1!18"
-                                 after=","
-                                 class="pron"
-                                 type="personal"
-                                 xml:id="n53003001018"
-                                 lemma="σύ"
-                                 normalized="ὑμᾶς"
-                                 strong="5209"
-                                 number="plural"
-                                 case="accusative"
-                                 english="you"
-                                 mandarin="你们"
-                                 gloss="you"
-                                 morph="P-2AP"
-                                 unicode="ὑμᾶς,"
-                                 referent="n53003001004">ὑμᾶς</w>
-                           </wg>
+                              class="prep"
+                              xml:id="n53003001017"
+                              lemma="πρός"
+                              normalized="πρὸς"
+                              strong="4314"
+                              english="with"
+                              mandarin="在~中间"
+                              gloss="with"
+                              domain="083003"
+                              ln="83.9"
+                              morph="PREP"
+                              unicode="πρὸς">πρὸς</w>
+                           <w ref="2TH 3:1!18"
+                              after=","
+                              class="pron"
+                              type="personal"
+                              xml:id="n53003001018"
+                              lemma="σύ"
+                              normalized="ὑμᾶς"
+                              strong="5209"
+                              number="plural"
+                              case="accusative"
+                              english="you"
+                              mandarin="你们"
+                              gloss="you"
+                              morph="P-2AP"
+                              unicode="ὑμᾶς,"
+                              referent="n53003001004">ὑμᾶς</w>
                         </wg>
                      </wg>
                   </wg>
@@ -10640,7 +10628,7 @@
                   gloss="and"
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
-               <wg rule="that-VP">
+               <wg rule="that-VP" class="cl">
                   <w ref="2TH 3:2!2"
                      after=" "
                      class="conj"
@@ -10676,7 +10664,7 @@
                         unicode="ῥυσθῶμεν"
                         frame="A1:n53001001001;n53001001003;n53001001005"
                         subjref="n53001001001 n53001001003 n53001001005">ῥυσθῶμεν</w>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 3:2!4"
                            after=" "
                            class="prep"
@@ -10708,7 +10696,7 @@
                               morph="T-GPM"
                               unicode="τῶν">τῶν</w>
                            <wg class="np" rule="AdjpNp">
-                              <wg rule="AdjpaAdjp">
+                              <wg rule="AdjpaAdjp" class="adjp">
                                  <w ref="2TH 3:2!6"
                                     after=" "
                                     class="adj"
@@ -10788,7 +10776,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:2">2TH 3:2</milestone> οὐ γὰρ πάντων ἡ πίστις.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:2!11"
             after=" "
             class="conj"
@@ -10804,7 +10792,7 @@
             ln="89.23"
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
-         <wg class="cl" rule="ADV-P-S">
+         <wg class="cl" rule="ADV-P-S" predication="verbless">
             <w role="adv"
                ref="2TH 3:2!10"
                after=" "
@@ -10880,7 +10868,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:3">2TH 3:3</milestone> πιστὸς δέ ἐστιν ὁ κύριος, ὃς στηρίξει ὑμᾶς καὶ φυλάξει ἀπὸ τοῦ πονηροῦ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:3!2"
             after=" "
             class="conj"
@@ -10977,7 +10965,10 @@
                      morph="N-NSM"
                      unicode="κύριος,">κύριος</w>
                </wg>
-               <wg clauseType="nominalized" rule="CLaCL" junction="apposition">
+               <wg clauseType="nominalized"
+                   rule="CLaCL"
+                   class="cl"
+                   junction="apposition">
                   <wg class="cl" clauseType="nominalized" rule="S-V-O">
                      <w role="s"
                         ref="2TH 3:3!6"
@@ -11072,7 +11063,7 @@
                            unicode="φυλάξει"
                            frame="A0:n53003003005"
                            subjref="n53003003005">φυλάξει</w>
-                        <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                        <wg articular="true" rule="PrepNp" class="pp" role="adv">
                            <w ref="2TH 3:3!11"
                               after=" "
                               class="prep"
@@ -11132,7 +11123,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:4">2TH 3:4</milestone> πεποίθαμεν δὲ ἐν κυρίῳ ἐφ’ ὑμᾶς, ὅτι ἃ παραγγέλλομεν καὶ ποιεῖτε καὶ ποιήσετε.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:4!2"
             after=" "
             class="conj"
@@ -11171,7 +11162,7 @@
                unicode="πεποίθαμεν"
                frame="A0:n53001001001;n53001001003;n53001001005"
                subjref="n53001001001 n53001001003 n53001001005">πεποίθαμεν</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 3:4!3"
                   after=" "
                   class="prep"
@@ -11205,7 +11196,7 @@
                   morph="N-DSM"
                   unicode="κυρίῳ">κυρίῳ</w>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 3:4!5"
                   after="’"
                   class="prep"
@@ -11237,7 +11228,7 @@
                   unicode="ὑμᾶς,"
                   referent="n53003001004">ὑμᾶς</w>
             </wg>
-            <wg rule="that-VP" role="o">
+            <wg rule="that-VP" class="cl" role="o">
                <w ref="2TH 3:4!7"
                   after=" "
                   class="conj"
@@ -11292,7 +11283,7 @@
                         frame="A0:n53001001001;n53001001003;n53001001005 A1:n53003004008"
                         subjref="n53001001001 n53001001003 n53001001005">παραγγέλλομεν</w>
                   </wg>
-                  <wg rule="EitherOrVp" role="v">
+                  <wg rule="EitherOrVp" class="vp" role="v">
                      <wg type="group">
                         <w ref="2TH 3:4!10"
                            after=" "
@@ -11374,7 +11365,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:5">2TH 3:5</milestone> ὁ δὲ κύριος κατευθύναι ὑμῶν τὰς καρδίας εἰς τὴν ἀγάπην τοῦ θεοῦ καὶ εἰς τὴν ὑπομονὴν τοῦ Χριστοῦ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:5!2"
             after=" "
             class="conj"
@@ -11502,8 +11493,8 @@
                      unicode="καρδίας">καρδίας</w>
                </wg>
             </wg>
-            <wg articular="true" rule="Conj2Pp" role="adv">
-               <wg class="pp" articular="true" rule="PrepNp">
+            <wg articular="true" rule="Conj2Pp" class="pp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp">
                   <w ref="2TH 3:5!8"
                      after=" "
                      class="prep"
@@ -11608,7 +11599,7 @@
                      gloss="and"
                      morph="CONJ"
                      unicode="καὶ">καὶ</w>
-                  <wg class="pp" articular="true" rule="PrepNp">
+                  <wg articular="true" rule="PrepNp" class="pp">
                      <w ref="2TH 3:5!14"
                         after=" "
                         class="prep"
@@ -11706,7 +11697,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:6">2TH 3:6</milestone> Παραγγέλλομεν δὲ ὑμῖν, ἀδελφοί, ἐν ὀνόματι τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ στέλλεσθαι ὑμᾶς ἀπὸ παντὸς ἀδελφοῦ ἀτάκτως περιπατοῦντος καὶ μὴ κατὰ τὴν παράδοσιν ἣν παρελάβοσαν παρ’ ἡμῶν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:6!2"
             after=" "
             class="conj"
@@ -11722,28 +11713,27 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="530030060040260">
-            <wg rule="Np2CL">
-               <w role="aux"
-                  ref="2TH 3:6!4"
-                  after=","
-                  class="noun"
-                  type="common"
-                  xml:id="n53003006004"
-                  lemma="ἀδελφός"
-                  normalized="ἀδελφοί"
-                  strong="80"
-                  number="plural"
-                  gender="masculine"
-                  case="vocative"
-                  discontinuous="true"
-                  english="brothers"
-                  mandarin="弟兄们"
-                  gloss="brothers"
-                  domain="011002"
-                  ln="11.23"
-                  morph="N-VPM"
-                  unicode="ἀδελφοί,">ἀδελφοί</w>
-            </wg>
+            <w role="aux"
+               rule="np2cl"
+               ref="2TH 3:6!4"
+               after=","
+               class="noun"
+               type="common"
+               xml:id="n53003006004"
+               lemma="ἀδελφός"
+               normalized="ἀδελφοί"
+               strong="80"
+               number="plural"
+               gender="masculine"
+               case="vocative"
+               discontinuous="true"
+               english="brothers"
+               mandarin="弟兄们"
+               gloss="brothers"
+               domain="011002"
+               ln="11.23"
+               morph="N-VPM"
+               unicode="ἀδελφοί,">ἀδελφοί</w>
             <w role="v"
                ref="2TH 3:6!1"
                after=" "
@@ -11783,7 +11773,7 @@
                morph="P-2DP"
                unicode="ὑμῖν,"
                referent="n53003006004">ὑμῖν</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 3:6!5"
                   after=" "
                   class="prep"
@@ -11952,7 +11942,7 @@
                   morph="P-2AP"
                   unicode="ὑμᾶς"
                   referent="n53003006004">ὑμᾶς</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="2TH 3:6!14"
                      after=" "
                      class="prep"
@@ -12002,7 +11992,7 @@
                            ln="11.23"
                            morph="N-GSM"
                            unicode="ἀδελφοῦ">ἀδελφοῦ</w>
-                        <wg clauseType="nominalized" rule="CLaCL">
+                        <wg clauseType="nominalized" rule="CLaCL" class="cl">
                            <wg class="cl" rule="ADV-V">
                               <w role="adv"
                                  ref="2TH 3:6!17"
@@ -12056,7 +12046,7 @@
                                  gloss="and"
                                  morph="CONJ"
                                  unicode="καὶ">καὶ</w>
-                              <wg class="cl" articular="true" rule="ADV-ADV">
+                              <wg class="cl" articular="true" rule="ADV-ADV" predication="elided">
                                  <w role="adv"
                                     ref="2TH 3:6!20"
                                     after=" "
@@ -12070,7 +12060,7 @@
                                     gloss="not"
                                     morph="PRT-N"
                                     unicode="μὴ">μὴ</w>
-                                 <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                                 <wg articular="true" rule="PrepNp" class="pp" role="adv">
                                     <w ref="2TH 3:6!21"
                                        after=" "
                                        class="prep"
@@ -12164,7 +12154,7 @@
                                                 morph="V-AAI-3P"
                                                 unicode="παρελάβοσαν"
                                                 subjref="n53003006004">παρελάβοσαν</w>
-                                             <wg class="pp" rule="PrepNp" role="adv">
+                                             <wg rule="PrepNp" class="pp" role="adv">
                                                 <w ref="2TH 3:6!26"
                                                    after="’"
                                                    class="prep"
@@ -12214,7 +12204,7 @@
       <p>
          <milestone unit="verse" id="2TH 3:7">2TH 3:7</milestone> 
          <milestone unit="verse" id="2TH 3:8">2TH 3:8</milestone> αὐτοὶ γὰρ οἴδατε πῶς δεῖ μιμεῖσθαι ἡμᾶς, ὅτι οὐκ ἠτακτήσαμεν ἐν ὑμῖν οὐδὲ δωρεὰν ἄρτον ἐφάγομεν παρά τινος, ἀλλ’ ἐν κόπῳ καὶ μόχθῳ νυκτὸς καὶ ἡμέρας ἐργαζόμενοι πρὸς τὸ μὴ ἐπιβαρῆσαί τινα ὑμῶν·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:7!2"
             after=" "
             class="conj"
@@ -12351,7 +12341,7 @@
                      referent="n53001001001 n53001001003 n53001001005">ἡμᾶς</w>
                </wg>
             </wg>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="2TH 3:7!8"
                   after=" "
                   class="conj"
@@ -12379,7 +12369,7 @@
                      gloss="not"
                      morph="PRT-N"
                      unicode="οὐκ">οὐκ</w>
-                  <wg rule="CLaCL">
+                  <wg rule="CLaCL" class="cl">
                      <wg class="cl" rule="V-ADV">
                         <w role="v"
                            ref="2TH 3:7!10"
@@ -12403,7 +12393,7 @@
                            unicode="ἠτακτήσαμεν"
                            frame="A0:n53001001001;n53001001003;n53001001005"
                            subjref="n53001001001 n53001001003 n53001001005">ἠτακτήσαμεν</w>
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="2TH 3:7!11"
                               after=" "
                               class="prep"
@@ -12508,7 +12498,7 @@
                               unicode="ἐφάγομεν"
                               frame="A0:n53001001001;n53001001003;n53001001005 A1:n53003008003"
                               subjref="n53001001001 n53001001003 n53001001005">ἐφάγομεν</w>
-                           <wg class="pp" rule="PrepNp" role="adv">
+                           <wg rule="PrepNp" class="pp" role="adv">
                               <w ref="2TH 3:8!5"
                                  after=" "
                                  class="prep"
@@ -12556,7 +12546,7 @@
                      morph="CONJ"
                      unicode="ἀλλ’">ἀλλ</w>
                   <wg class="cl" rule="ADV-ADV-V-ADV">
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 3:8!8"
                            after=" "
                            class="prep"
@@ -12569,7 +12559,7 @@
                            gloss="in"
                            morph="PREP"
                            unicode="ἐν">ἐν</w>
-                        <wg rule="NpaNp">
+                        <wg rule="NpaNp" class="np">
                            <w ref="2TH 3:8!9"
                               after=" "
                               class="noun"
@@ -12622,7 +12612,7 @@
                            </wg>
                         </wg>
                      </wg>
-                     <wg rule="NpaNp" role="adv">
+                     <wg rule="NpaNp" class="np" role="adv">
                         <w ref="2TH 3:8!12"
                            after=" "
                            class="noun"
@@ -12697,7 +12687,7 @@
                         unicode="ἐργαζόμενοι"
                         frame="A0:n53001001001;n53001001003;n53001001005"
                         subjref="n53001001001 n53001001003 n53001001005">ἐργαζόμενοι</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 3:8!16"
                            after=" "
                            class="prep"
@@ -12712,7 +12702,7 @@
                            ln="89.60"
                            morph="PREP"
                            unicode="πρὸς">πρὸς</w>
-                        <wg rule="DetCL">
+                        <wg rule="DetCL" class="cl">
                            <w ref="2TH 3:8!17"
                               after=" "
                               class="det"
@@ -12824,7 +12814,7 @@
             gloss="not"
             morph="PRT-N"
             unicode="οὐχ">οὐχ</w>
-         <wg rule="that-VP">
+         <wg rule="that-VP" class="cl">
             <w ref="2TH 3:9!2"
                after=" "
                class="conj"
@@ -12910,7 +12900,7 @@
             ln="89.125"
             morph="CONJ"
             unicode="ἀλλ’">ἀλλ</w>
-         <wg rule="that-VP">
+         <wg rule="that-VP" class="cl">
             <w ref="2TH 3:9!7"
                after=" "
                class="conj"
@@ -13004,7 +12994,7 @@
                   morph="P-2DP"
                   unicode="ὑμῖν"
                   referent="n53003006004">ὑμῖν</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="2TH 3:9!12"
                      after=" "
                      class="prep"
@@ -13017,7 +13007,7 @@
                      gloss="for"
                      morph="PREP"
                      unicode="εἰς">εἰς</w>
-                  <wg rule="DetCL">
+                  <wg rule="DetCL" class="cl">
                      <w ref="2TH 3:9!13"
                         after=" "
                         class="det"
@@ -13085,7 +13075,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:10">2TH 3:10</milestone> καὶ γὰρ ὅτε ἦμεν πρὸς ὑμᾶς, τοῦτο παρηγγέλλομεν ὑμῖν, ὅτι εἴ τις οὐ θέλει ἐργάζεσθαι μηδὲ ἐσθιέτω.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:10!2"
             after=" "
             class="conj"
@@ -13101,8 +13091,8 @@
             ln="89.23 91.1"
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
-         <wg Rule="ClCl2" class="cl" nodeId="530030100010160">
-            <wg rule="AdvpCL" role="adv">
+         <wg type="group" rule="ClCl2">
+            <wg rule="AdvpCL" class="cl">
                <w ref="2TH 3:10!1"
                   after=" "
                   class="adv"
@@ -13117,7 +13107,7 @@
                   ln="89.92 89.93 91.12"
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
-               <wg rule="sub-CL">
+               <wg rule="sub-CL" class="cl">
                   <w ref="2TH 3:10!3"
                      after=" "
                      class="conj"
@@ -13152,7 +13142,7 @@
                         morph="V-IAI-1P"
                         unicode="ἦμεν"
                         subjref="n53001001001 n53001001003 n53001001005">ἦμεν</w>
-                     <wg class="pp" rule="PrepNp" role="p">
+                     <wg rule="PrepNp" class="pp" role="p">
                         <w ref="2TH 3:10!5"
                            after=" "
                            class="prep"
@@ -13187,144 +13177,145 @@
                   </wg>
                </wg>
             </wg>
-            <w role="o"
-               ref="2TH 3:10!7"
-               after=" "
-               class="pron"
-               type="demonstrative"
-               xml:id="n53003010007"
-               lemma="οὗτος"
-               normalized="τοῦτο"
-               strong="5124"
-               number="singular"
-               gender="neuter"
-               case="accusative"
-               english="this"
-               mandarin="这"
-               gloss="this"
-               morph="D-ASN"
-               unicode="τοῦτο"
-               referent="n53003010017">τοῦτο</w>
-            <w role="v"
-               ref="2TH 3:10!8"
-               after=" "
-               class="verb"
-               xml:id="n53003010008"
-               lemma="παραγγέλλω"
-               normalized="παρηγγέλλομεν"
-               strong="3853"
-               number="plural"
-               person="first"
-               tense="imperfect"
-               voice="active"
-               mood="indicative"
-               english="commanded"
-               mandarin="吩咐"
-               gloss="we were commanding"
-               domain="033032"
-               ln="33.327"
-               morph="V-IAI-1P"
-               unicode="παρηγγέλλομεν"
-               frame="A0:n53001001001;n53001001003;n53001001005 A1:n53003010007 A2:n53003010009"
-               subjref="n53001001001 n53001001003 n53001001005">παρηγγέλλομεν</w>
-            <w role="io"
-               ref="2TH 3:10!9"
-               after=","
-               class="pron"
-               type="personal"
-               xml:id="n53003010009"
-               lemma="σύ"
-               normalized="ὑμῖν"
-               strong="5213"
-               number="plural"
-               case="dative"
-               english="you"
-               mandarin="你们"
-               gloss="you"
-               morph="P-2DP"
-               unicode="ὑμῖν,"
-               referent="n53003006004">ὑμῖν</w>
-            <wg rule="that-VP" role="o">
-               <w ref="2TH 3:10!10"
+            <wg Rule="ClCl" class="cl" nodeId="530030100070110">
+               <w role="o"
+                  ref="2TH 3:10!7"
                   after=" "
-                  class="adv"
-                  xml:id="n53003010010"
-                  lemma="ὅτι"
-                  normalized="ὅτι"
-                  strong="3754"
-                  english="that"
-                  mandarin=""
-                  gloss="that"
-                  morph="CONJ"
-                  unicode="ὅτι">ὅτι</w>
-               <wg Rule="ClCl2" class="cl" nodeId="530030100110070">
-                  <wg rule="sub-CL" role="adv">
-                     <w ref="2TH 3:10!11"
-                        after=" "
-                        class="conj"
-                        xml:id="n53003010011"
-                        lemma="εἰ"
-                        normalized="εἴ"
-                        strong="1487"
-                        english="if"
-                        mandarin="若~就"
-                        gloss="if"
-                        morph="COND"
-                        unicode="εἴ">εἴ</w>
-                     <wg class="cl" rule="S-ADV-V-O">
-                        <w role="s"
-                           ref="2TH 3:10!12"
+                  class="pron"
+                  type="demonstrative"
+                  xml:id="n53003010007"
+                  lemma="οὗτος"
+                  normalized="τοῦτο"
+                  strong="5124"
+                  number="singular"
+                  gender="neuter"
+                  case="accusative"
+                  english="this"
+                  mandarin="这"
+                  gloss="this"
+                  morph="D-ASN"
+                  unicode="τοῦτο"
+                  referent="n53003010017">τοῦτο</w>
+               <w role="v"
+                  ref="2TH 3:10!8"
+                  after=" "
+                  class="verb"
+                  xml:id="n53003010008"
+                  lemma="παραγγέλλω"
+                  normalized="παρηγγέλλομεν"
+                  strong="3853"
+                  number="plural"
+                  person="first"
+                  tense="imperfect"
+                  voice="active"
+                  mood="indicative"
+                  english="commanded"
+                  mandarin="吩咐"
+                  gloss="we were commanding"
+                  domain="033032"
+                  ln="33.327"
+                  morph="V-IAI-1P"
+                  unicode="παρηγγέλλομεν"
+                  frame="A0:n53001001001;n53001001003;n53001001005 A1:n53003010007 A2:n53003010009"
+                  subjref="n53001001001 n53001001003 n53001001005">παρηγγέλλομεν</w>
+               <w role="io"
+                  ref="2TH 3:10!9"
+                  after=","
+                  class="pron"
+                  type="personal"
+                  xml:id="n53003010009"
+                  lemma="σύ"
+                  normalized="ὑμῖν"
+                  strong="5213"
+                  number="plural"
+                  case="dative"
+                  english="you"
+                  mandarin="你们"
+                  gloss="you"
+                  morph="P-2DP"
+                  unicode="ὑμῖν,"
+                  referent="n53003006004">ὑμῖν</w>
+               <wg rule="that-VP" class="cl" role="o">
+                  <w ref="2TH 3:10!10"
+                     after=" "
+                     class="adv"
+                     xml:id="n53003010010"
+                     lemma="ὅτι"
+                     normalized="ὅτι"
+                     strong="3754"
+                     english="that"
+                     mandarin=""
+                     gloss="that"
+                     morph="CONJ"
+                     unicode="ὅτι">ὅτι</w>
+                  <wg Rule="ClCl2" class="cl" nodeId="530030100110070">
+                     <wg rule="sub-CL" class="cl" role="adv">
+                        <w ref="2TH 3:10!11"
                            after=" "
-                           class="pron"
-                           type="indefinite"
-                           xml:id="n53003010012"
-                           lemma="τις"
-                           normalized="τις"
-                           strong="5100"
-                           number="singular"
-                           gender="masculine"
-                           case="nominative"
-                           english="anyone"
-                           mandarin="人"
-                           gloss="anyone"
-                           morph="X-NSM"
-                           unicode="τις">τις</w>
-                        <w role="adv"
-                           ref="2TH 3:10!13"
-                           after=" "
-                           class="adv"
-                           xml:id="n53003010013"
-                           lemma="οὐ"
-                           normalized="οὐ"
-                           strong="3756"
-                           english="not"
-                           mandarin="不"
-                           gloss="not"
-                           morph="PRT-N"
-                           unicode="οὐ">οὐ</w>
-                        <w role="v"
-                           ref="2TH 3:10!14"
-                           after=" "
-                           class="verb"
-                           xml:id="n53003010014"
-                           lemma="θέλω"
-                           normalized="θέλει"
-                           strong="2309"
-                           number="singular"
-                           person="third"
-                           tense="present"
-                           voice="active"
-                           mood="indicative"
-                           english="willing"
-                           mandarin="肯"
-                           gloss="is willing"
-                           domain="025001"
-                           ln="25.1"
-                           morph="V-PAI-3S"
-                           unicode="θέλει"
-                           frame="A0:n53003010012 A1:n53003010015">θέλει</w>
-                        <wg class="cl" rule="V2CL" role="o">
+                           class="conj"
+                           xml:id="n53003010011"
+                           lemma="εἰ"
+                           normalized="εἴ"
+                           strong="1487"
+                           english="if"
+                           mandarin="若~就"
+                           gloss="if"
+                           morph="COND"
+                           unicode="εἴ">εἴ</w>
+                        <wg class="cl" rule="S-ADV-V-O">
+                           <w role="s"
+                              ref="2TH 3:10!12"
+                              after=" "
+                              class="pron"
+                              type="indefinite"
+                              xml:id="n53003010012"
+                              lemma="τις"
+                              normalized="τις"
+                              strong="5100"
+                              number="singular"
+                              gender="masculine"
+                              case="nominative"
+                              english="anyone"
+                              mandarin="人"
+                              gloss="anyone"
+                              morph="X-NSM"
+                              unicode="τις">τις</w>
+                           <w role="adv"
+                              ref="2TH 3:10!13"
+                              after=" "
+                              class="adv"
+                              xml:id="n53003010013"
+                              lemma="οὐ"
+                              normalized="οὐ"
+                              strong="3756"
+                              english="not"
+                              mandarin="不"
+                              gloss="not"
+                              morph="PRT-N"
+                              unicode="οὐ">οὐ</w>
                            <w role="v"
+                              ref="2TH 3:10!14"
+                              after=" "
+                              class="verb"
+                              xml:id="n53003010014"
+                              lemma="θέλω"
+                              normalized="θέλει"
+                              strong="2309"
+                              number="singular"
+                              person="third"
+                              tense="present"
+                              voice="active"
+                              mood="indicative"
+                              english="willing"
+                              mandarin="肯"
+                              gloss="is willing"
+                              domain="025001"
+                              ln="25.1"
+                              morph="V-PAI-3S"
+                              unicode="θέλει"
+                              frame="A0:n53003010012 A1:n53003010015">θέλει</w>
+                           <w role="v"
+                              rule="v2cl"
                               ref="2TH 3:10!15"
                               after=" "
                               class="verb"
@@ -13346,44 +13337,44 @@
                               subjref="n53003010012">ἐργάζεσθαι</w>
                         </wg>
                      </wg>
+                     <w role="adv"
+                        ref="2TH 3:10!16"
+                        after=" "
+                        class="adv"
+                        xml:id="n53003010016"
+                        lemma="μηδέ"
+                        normalized="μηδὲ"
+                        strong="3366"
+                        english="not"
+                        mandarin="不"
+                        gloss="neither"
+                        domain="069003"
+                        ln="69.7"
+                        morph="CONJ-N"
+                        unicode="μηδὲ">μηδὲ</w>
+                     <w role="v"
+                        ref="2TH 3:10!17"
+                        after="."
+                        class="verb"
+                        xml:id="n53003010017"
+                        lemma="ἐσθίω"
+                        normalized="ἐσθιέτω"
+                        strong="2068"
+                        number="singular"
+                        person="third"
+                        tense="present"
+                        voice="active"
+                        mood="imperative"
+                        english="eat"
+                        mandarin="吃饭"
+                        gloss="let him eat"
+                        domain="023001"
+                        ln="23.1"
+                        morph="V-PAM-3S"
+                        unicode="ἐσθιέτω."
+                        frame="A0:n53003010012"
+                        subjref="n53003010012">ἐσθιέτω</w>
                   </wg>
-                  <w role="adv"
-                     ref="2TH 3:10!16"
-                     after=" "
-                     class="adv"
-                     xml:id="n53003010016"
-                     lemma="μηδέ"
-                     normalized="μηδὲ"
-                     strong="3366"
-                     english="not"
-                     mandarin="不"
-                     gloss="neither"
-                     domain="069003"
-                     ln="69.7"
-                     morph="CONJ-N"
-                     unicode="μηδὲ">μηδὲ</w>
-                  <w role="v"
-                     ref="2TH 3:10!17"
-                     after="."
-                     class="verb"
-                     xml:id="n53003010017"
-                     lemma="ἐσθίω"
-                     normalized="ἐσθιέτω"
-                     strong="2068"
-                     number="singular"
-                     person="third"
-                     tense="present"
-                     voice="active"
-                     mood="imperative"
-                     english="eat"
-                     mandarin="吃饭"
-                     gloss="let him eat"
-                     domain="023001"
-                     ln="23.1"
-                     morph="V-PAM-3S"
-                     unicode="ἐσθιέτω."
-                     frame="A0:n53003010012"
-                     subjref="n53003010012">ἐσθιέτω</w>
                </wg>
             </wg>
          </wg>
@@ -13392,7 +13383,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:11">2TH 3:11</milestone> ἀκούομεν γάρ τινας περιπατοῦντας ἐν ὑμῖν ἀτάκτως, μηδὲν ἐργαζομένους ἀλλὰ περιεργαζομένους·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:11!2"
             after=" "
             class="conj"
@@ -13471,7 +13462,7 @@
                   morph="V-PAP-APM"
                   unicode="περιπατοῦντας"
                   frame="A0:n53003011003">περιπατοῦντας</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="2TH 3:11!5"
                      after=" "
                      class="prep"
@@ -13536,31 +13527,30 @@
                      ln="92.23"
                      morph="A-ASN-N"
                      unicode="μηδὲν">μηδὲν</w>
-                  <wg class="cl" rule="V2CL">
-                     <w role="v"
-                        ref="2TH 3:11!9"
-                        after=" "
-                        class="verb"
-                        xml:id="n53003011009"
-                        lemma="ἐργάζομαι"
-                        normalized="ἐργαζομένους"
-                        strong="2038"
-                        number="plural"
-                        gender="masculine"
-                        case="accusative"
-                        tense="present"
-                        voice="middle"
-                        mood="participle"
-                        english="working"
-                        mandarin="做"
-                        gloss="working"
-                        domain="042004"
-                        ln="42.41"
-                        morph="V-PNP-APM"
-                        unicode="ἐργαζομένους"
-                        frame="A0:n53003011003"
-                        subjref="n53003011003">ἐργαζομένους</w>
-                  </wg>
+                  <w role="v"
+                     rule="v2cl"
+                     ref="2TH 3:11!9"
+                     after=" "
+                     class="verb"
+                     xml:id="n53003011009"
+                     lemma="ἐργάζομαι"
+                     normalized="ἐργαζομένους"
+                     strong="2038"
+                     number="plural"
+                     gender="masculine"
+                     case="accusative"
+                     tense="present"
+                     voice="middle"
+                     mood="participle"
+                     english="working"
+                     mandarin="做"
+                     gloss="working"
+                     domain="042004"
+                     ln="42.41"
+                     morph="V-PNP-APM"
+                     unicode="ἐργαζομένους"
+                     frame="A0:n53003011003"
+                     subjref="n53003011003">ἐργαζομένους</w>
                   <w ref="2TH 3:11!10"
                      after=" "
                      class="conj"
@@ -13575,31 +13565,30 @@
                      ln="91.2"
                      morph="CONJ"
                      unicode="ἀλλὰ">ἀλλὰ</w>
-                  <wg class="cl" rule="V2CL">
-                     <w role="v"
-                        ref="2TH 3:11!11"
-                        after="·"
-                        class="verb"
-                        xml:id="n53003011011"
-                        lemma="περιεργάζομαι"
-                        normalized="περιεργαζομένους"
-                        strong="4020"
-                        number="plural"
-                        gender="masculine"
-                        case="accusative"
-                        tense="present"
-                        voice="middle"
-                        mood="participle"
-                        english="busybodies"
-                        mandarin="专管闲事"
-                        gloss="being busybodies"
-                        domain="088031"
-                        ln="88.243"
-                        morph="V-PNP-APM"
-                        unicode="περιεργαζομένους·"
-                        frame="A0:n53003011003"
-                        subjref="n53003011003">περιεργαζομένους</w>
-                  </wg>
+                  <w role="v"
+                     rule="v2cl"
+                     ref="2TH 3:11!11"
+                     after="·"
+                     class="verb"
+                     xml:id="n53003011011"
+                     lemma="περιεργάζομαι"
+                     normalized="περιεργαζομένους"
+                     strong="4020"
+                     number="plural"
+                     gender="masculine"
+                     case="accusative"
+                     tense="present"
+                     voice="middle"
+                     mood="participle"
+                     english="busybodies"
+                     mandarin="专管闲事"
+                     gloss="being busybodies"
+                     domain="088031"
+                     ln="88.243"
+                     morph="V-PNP-APM"
+                     unicode="περιεργαζομένους·"
+                     frame="A0:n53003011003"
+                     subjref="n53003011003">περιεργαζομένους</w>
                </wg>
             </wg>
          </wg>
@@ -13608,7 +13597,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:12">2TH 3:12</milestone> τοῖς δὲ τοιούτοις παραγγέλλομεν καὶ παρακαλοῦμεν ἐν κυρίῳ Ἰησοῦ Χριστῷ ἵνα μετὰ ἡσυχίας ἐργαζόμενοι τὸν ἑαυτῶν ἄρτον ἐσθίωσιν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:12!2"
             after=" "
             class="conj"
@@ -13663,7 +13652,7 @@
                   unicode="τοιούτοις"
                   referent="n53003011003">τοιούτοις</w>
             </wg>
-            <wg rule="Conj2VP" role="v">
+            <wg rule="Conj2VP" class="vp" role="v">
                <w ref="2TH 3:12!4"
                   after=" "
                   class="verb"
@@ -13721,7 +13710,7 @@
                      subjref="n53001001001 n53001001003 n53001001005">παρακαλοῦμεν</w>
                </wg>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 3:12!7"
                   after=" "
                   class="prep"
@@ -13799,7 +13788,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg rule="that-VP" role="o">
+            <wg rule="that-VP" class="cl" role="o">
                <w ref="2TH 3:12!11"
                   after=" "
                   class="conj"
@@ -13816,7 +13805,7 @@
                   unicode="ἵνα">ἵνα</w>
                <wg class="cl" rule="ADV-O-V">
                   <wg class="cl" rule="ADV-V" role="adv">
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="2TH 3:12!12"
                            after=" "
                            class="prep"
@@ -13960,7 +13949,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:13">2TH 3:13</milestone> ὑμεῖς δέ, ἀδελφοί, μὴ ἐγκακήσητε καλοποιοῦντες.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:13!2"
             after=","
             class="conj"
@@ -13976,28 +13965,27 @@
             morph="CONJ"
             unicode="δέ,">δέ</w>
          <wg Rule="ClCl2" class="cl" nodeId="530030130030050">
-            <wg rule="Np2CL">
-               <w role="aux"
-                  ref="2TH 3:13!3"
-                  after=","
-                  class="noun"
-                  type="common"
-                  xml:id="n53003013003"
-                  lemma="ἀδελφός"
-                  normalized="ἀδελφοί"
-                  strong="80"
-                  number="plural"
-                  gender="masculine"
-                  case="vocative"
-                  discontinuous="true"
-                  english="brothers"
-                  mandarin="弟兄们"
-                  gloss="brothers"
-                  domain="011002"
-                  ln="11.23"
-                  morph="N-VPM"
-                  unicode="ἀδελφοί,">ἀδελφοί</w>
-            </wg>
+            <w role="aux"
+               rule="np2cl"
+               ref="2TH 3:13!3"
+               after=","
+               class="noun"
+               type="common"
+               xml:id="n53003013003"
+               lemma="ἀδελφός"
+               normalized="ἀδελφοί"
+               strong="80"
+               number="plural"
+               gender="masculine"
+               case="vocative"
+               discontinuous="true"
+               english="brothers"
+               mandarin="弟兄们"
+               gloss="brothers"
+               domain="011002"
+               ln="11.23"
+               morph="N-VPM"
+               unicode="ἀδελφοί,">ἀδελφοί</w>
             <w role="s"
                ref="2TH 3:13!1"
                after=" "
@@ -14049,38 +14037,37 @@
                morph="V-AAS-2P"
                unicode="ἐγκακήσητε"
                frame="A0:n53003013001">ἐγκακήσητε</w>
-            <wg class="cl" rule="V2CL" role="o">
-               <w role="v"
-                  ref="2TH 3:13!6"
-                  after="."
-                  class="verb"
-                  xml:id="n53003013006"
-                  lemma="καλοποιέω"
-                  normalized="καλοποιοῦντες"
-                  strong="2569"
-                  number="plural"
-                  gender="masculine"
-                  case="nominative"
-                  tense="present"
-                  voice="active"
-                  mood="participle"
-                  english="doing good"
-                  mandarin="行善"
-                  gloss="[in] well-doing"
-                  domain="088001"
-                  ln="88.5"
-                  morph="V-PAP-NPM"
-                  unicode="καλοποιοῦντες."
-                  frame="A0:n53003013003"
-                  subjref="n53003013003">καλοποιοῦντες</w>
-            </wg>
+            <w role="v"
+               rule="v2cl"
+               ref="2TH 3:13!6"
+               after="."
+               class="verb"
+               xml:id="n53003013006"
+               lemma="καλοποιέω"
+               normalized="καλοποιοῦντες"
+               strong="2569"
+               number="plural"
+               gender="masculine"
+               case="nominative"
+               tense="present"
+               voice="active"
+               mood="participle"
+               english="doing good"
+               mandarin="行善"
+               gloss="[in] well-doing"
+               domain="088001"
+               ln="88.5"
+               morph="V-PAP-NPM"
+               unicode="καλοποιοῦντες."
+               frame="A0:n53003013003"
+               subjref="n53003013003">καλοποιοῦντες</w>
          </wg>
       </wg>
    </sentence>
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:14">2TH 3:14</milestone> Εἰ δέ τις οὐχ ὑπακούει τῷ λόγῳ ἡμῶν διὰ τῆς ἐπιστολῆς, τοῦτον σημειοῦσθε, μὴ συναναμίγνυσθαι αὐτῷ, ἵνα ἐντραπῇ·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:14!2"
             after=" "
             class="conj"
@@ -14097,7 +14084,7 @@
             morph="CONJ"
             unicode="δέ">δέ</w>
          <wg Rule="ClCl" class="cl" nodeId="530030140010170">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="2TH 3:14!1"
                   after=" "
                   class="conj"
@@ -14219,7 +14206,7 @@
                               unicode="ἡμῶν"
                               referent="n53001001001 n53001001003 n53001001005">ἡμῶν</w>
                         </wg>
-                        <wg class="pp" articular="true" rule="PrepNp">
+                        <wg articular="true" rule="PrepNp" class="pp">
                            <w ref="2TH 3:14!9"
                               after=" "
                               class="prep"
@@ -14371,7 +14358,7 @@
                   unicode="αὐτῷ,"
                   referent="n53003014003">αὐτῷ</w>
             </wg>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="2TH 3:14!17"
                   after=" "
                   class="conj"
@@ -14386,30 +14373,29 @@
                   ln="89.59"
                   morph="CONJ"
                   unicode="ἵνα">ἵνα</w>
-               <wg class="cl" rule="V2CL">
-                  <w role="v"
-                     ref="2TH 3:14!18"
-                     after="·"
-                     class="verb"
-                     xml:id="n53003014018"
-                     lemma="ἐντρέπω"
-                     normalized="ἐντραπῇ"
-                     strong="1788"
-                     number="singular"
-                     person="third"
-                     tense="aorist"
-                     voice="passive"
-                     mood="subjunctive"
-                     english="ashamed"
-                     mandarin="惭愧"
-                     gloss="he may be ashamed"
-                     domain="025018"
-                     ln="25.196"
-                     morph="V-2APS-3S"
-                     unicode="ἐντραπῇ·"
-                     frame="A1:n53003014003"
-                     subjref="n53003014003">ἐντραπῇ</w>
-               </wg>
+               <w role="v"
+                  rule="v2cl"
+                  ref="2TH 3:14!18"
+                  after="·"
+                  class="verb"
+                  xml:id="n53003014018"
+                  lemma="ἐντρέπω"
+                  normalized="ἐντραπῇ"
+                  strong="1788"
+                  number="singular"
+                  person="third"
+                  tense="aorist"
+                  voice="passive"
+                  mood="subjunctive"
+                  english="ashamed"
+                  mandarin="惭愧"
+                  gloss="he may be ashamed"
+                  domain="025018"
+                  ln="25.196"
+                  morph="V-2APS-3S"
+                  unicode="ἐντραπῇ·"
+                  frame="A1:n53003014003"
+                  subjref="n53003014003">ἐντραπῇ</w>
             </wg>
          </wg>
       </wg>
@@ -14417,7 +14403,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:15">2TH 3:15</milestone> καὶ μὴ ὡς ἐχθρὸν ἡγεῖσθε, ἀλλὰ νουθετεῖτε ὡς ἀδελφόν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:15!1"
             after=" "
             class="conj"
@@ -14446,7 +14432,7 @@
                morph="PRT-N"
                unicode="μὴ">μὴ</w>
             <wg Rule="ClCl2" class="cl" nodeId="530030150030030">
-               <wg rule="sub-CL" role="adv">
+               <wg rule="sub-CL" class="cl" role="adv">
                   <w ref="2TH 3:15!3"
                      after=" "
                      class="conj"
@@ -14461,29 +14447,29 @@
                      ln="64.12"
                      morph="ADV"
                      unicode="ὡς">ὡς</w>
-                  <wg class="cl" rule="O2CL">
-                     <w role="o"
-                        ref="2TH 3:15!4"
-                        after=" "
-                        class="adj"
-                        type="substantive"
-                        xml:id="n53003015004"
-                        lemma="ἐχθρός"
-                        normalized="ἐχθρὸν"
-                        strong="2190"
-                        number="singular"
-                        gender="masculine"
-                        case="accusative"
-                        english="enemy"
-                        mandarin="敌人"
-                        gloss="an enemy"
-                        domain="039001"
-                        ln="39.11"
-                        morph="A-ASM"
-                        unicode="ἐχθρὸν">ἐχθρὸν</w>
-                  </wg>
+                  <w role="o"
+                     rule="o2cl"
+                     ref="2TH 3:15!4"
+                     after=" "
+                     class="adj"
+                     type="substantive"
+                     xml:id="n53003015004"
+                     lemma="ἐχθρός"
+                     normalized="ἐχθρὸν"
+                     strong="2190"
+                     number="singular"
+                     gender="masculine"
+                     case="accusative"
+                     english="enemy"
+                     mandarin="敌人"
+                     gloss="an enemy"
+                     domain="039001"
+                     ln="39.11"
+                     morph="A-ASM"
+                     unicode="ἐχθρὸν">ἐχθρὸν</w>
                </wg>
                <w role="v"
+                  rule="v2cl"
                   ref="2TH 3:15!5"
                   after=","
                   class="verb"
@@ -14522,6 +14508,7 @@
                unicode="ἀλλὰ">ἀλλὰ</w>
             <wg Rule="ClCl" class="cl" nodeId="530030150070030">
                <w role="v"
+                  rule="v2cl"
                   ref="2TH 3:15!7"
                   after=" "
                   class="verb"
@@ -14543,7 +14530,7 @@
                   unicode="νουθετεῖτε"
                   frame="A0:n53003013003"
                   subjref="n53003013003">νουθετεῖτε</w>
-               <wg rule="sub-CL" role="adv">
+               <wg rule="sub-CL" class="cl" role="adv">
                   <w ref="2TH 3:15!8"
                      after=" "
                      class="conj"
@@ -14558,27 +14545,26 @@
                      ln="64.12"
                      morph="ADV"
                      unicode="ὡς">ὡς</w>
-                  <wg class="cl" rule="O2CL">
-                     <w role="o"
-                        ref="2TH 3:15!9"
-                        after="."
-                        class="noun"
-                        type="common"
-                        xml:id="n53003015009"
-                        lemma="ἀδελφός"
-                        normalized="ἀδελφόν"
-                        strong="80"
-                        number="singular"
-                        gender="masculine"
-                        case="accusative"
-                        english="brother"
-                        mandarin="弟兄"
-                        gloss="a brother"
-                        domain="011002"
-                        ln="11.23"
-                        morph="N-ASM"
-                        unicode="ἀδελφόν.">ἀδελφόν</w>
-                  </wg>
+                  <w role="o"
+                     rule="o2cl"
+                     ref="2TH 3:15!9"
+                     after="."
+                     class="noun"
+                     type="common"
+                     xml:id="n53003015009"
+                     lemma="ἀδελφός"
+                     normalized="ἀδελφόν"
+                     strong="80"
+                     number="singular"
+                     gender="masculine"
+                     case="accusative"
+                     english="brother"
+                     mandarin="弟兄"
+                     gloss="a brother"
+                     domain="011002"
+                     ln="11.23"
+                     morph="N-ASM"
+                     unicode="ἀδελφόν.">ἀδελφόν</w>
                </wg>
             </wg>
          </wg>
@@ -14587,7 +14573,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:16">2TH 3:16</milestone> Αὐτὸς δὲ ὁ κύριος τῆς εἰρήνης δῴη ὑμῖν τὴν εἰρήνην διὰ παντὸς ἐν παντὶ τρόπῳ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="2TH 3:16!2"
             after=" "
             class="conj"
@@ -14776,7 +14762,7 @@
                   morph="N-ASF"
                   unicode="εἰρήνην">εἰρήνην</w>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 3:16!11"
                   after=" "
                   class="prep"
@@ -14807,7 +14793,7 @@
                   morph="A-GSN"
                   unicode="παντὸς">παντὸς</w>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 3:16!13"
                   after=" "
                   class="prep"
@@ -14864,7 +14850,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:16">2TH 3:16</milestone> ὁ κύριος μετὰ πάντων ὑμῶν.</p>
-      <wg class="cl" rule="S-P">
+      <wg class="cl" rule="S-P" predication="verbless">
          <wg class="np" articular="true" rule="DetNP" role="s">
             <w ref="2TH 3:16!16"
                after=" "
@@ -14902,7 +14888,7 @@
                morph="N-NSM"
                unicode="κύριος">κύριος</w>
          </wg>
-         <wg class="pp" rule="PrepNp" role="p">
+         <wg rule="PrepNp" class="pp" role="p">
             <w ref="2TH 3:16!18"
                after=" "
                class="prep"
@@ -15135,7 +15121,7 @@
                ln="33.477"
                morph="N-NSN"
                unicode="σημεῖον">σημεῖον</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="2TH 3:17!10"
                   after=" "
                   class="prep"
@@ -15235,7 +15221,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="2TH 3:18">2TH 3:18</milestone> ἡ χάρις τοῦ κυρίου ἡμῶν Ἰησοῦ Χριστοῦ μετὰ πάντων ὑμῶν.</p>
-      <wg class="cl" rule="S-P">
+      <wg class="cl" rule="S-P" predication="verbless">
          <wg class="np" articular="true" rule="DetNP" role="s">
             <w ref="2TH 3:18!1"
                after=" "
@@ -15376,7 +15362,7 @@
                </wg>
             </wg>
          </wg>
-         <wg class="pp" rule="PrepNp" role="p">
+         <wg rule="PrepNp" class="pp" role="p">
             <w ref="2TH 3:18!8"
                after=" "
                class="prep"

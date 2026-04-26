@@ -59,14 +59,45 @@ def test_required_attrs_exist_on_w_elements(lowfat_file):
             assert attr in node.attrib
 
 
-# Unable to determine required attrs for `wg` at this time.
-# @pytest.mark.parametrize("lowfat_file", __lowfat_files__)
-# def test_required_attrs_exist_on_wg_elements(lowfat_file):
-#     required_attrs = [ "class" ]
-#     nodes = run_xpath_for_file("//wg", lowfat_file)
-#     for node in nodes:
-#         for attr in required_attrs:
-#             assert attr in node.attrib
+# Wrapper-clause rules are exempt from the @class requirement pending semantic redesign (issue #104).
+# Conjuncted/group rules are exempt pending the broader @class fix (issue #103).
+# All other <wg> elements must have @class or @type.
+WRAPPER_CLAUSE_RULES = {
+    # issue #104 — semantics of wrapper rules not yet defined
+    "AdjpCL", "AdvpCL", "PtclCL", "DetCL", "sub-CL", "that-VP", "Conj-CL",
+    # issue #103 — conjuncted/group structures missing @class in XQuery else-branch
+    "2CLaCL", "2CLaCLaCL", "2NpaNpaNp", "2PpaPp",
+    "3NpaNp", "4NpaNp",
+    "ADVaADV", "AdjpaAdjp", "AdvpaAdvp", "aAdvpaAdvp",
+    "CLa2CL", "CLaCL", "CLandCL2", "CLandClClandClandClandCl",
+    "ClCl", "ClCl2",
+    "Conj12CL", "Conj12Np", "Conj13CL", "Conj14CL",
+    "Conj2Nump", "Conj2P", "Conj2Pp", "Conj2VP",
+    "Conj3ADV", "Conj3Adjp", "Conj3Advp", "Conj3CL", "Conj3Np", "Conj3Pp", "Conj3VP",
+    "Conj4CL", "Conj4Np", "Conj4Pp",
+    "Conj5AdjP", "Conj5CL", "Conj5Np", "Conj5Pp",
+    "Conj6CL", "Conj6Np", "Conj6P",
+    "Conj7CL", "Conj7Np", "Conj7Pp",
+    "Conj8Np", "Conj9Np", "ConjNp",
+    "EitherOr10Np", "EitherOr3Vp", "EitherOr4Advp", "EitherOr4CL", "EitherOr4Np",
+    "EitherOr4Pp", "EitherOr4Vp", "EitherOr5Vp", "EitherOr7CL", "EitherOr8Np",
+    "EitherOrAdjp", "EitherOrVp",
+    "Intj2CL", "Np2CL",
+    "NpNpNpNpNpNpNpNpNpNpNpNpNpNpNpAndNp", "NpaNp",
+    "aCLaCL", "aCLaCLaCL", "aNpaNp", "aNpaNpaNp", "aPpaPp", "aPpaPpaPp",
+    "",  # <wg> with no rule at all
+}
+
+
+@pytest.mark.parametrize("lowfat_file", __sblgnt_lowfat_files__)
+def test_required_attrs_exist_on_wg_elements(lowfat_file):
+    nodes = run_xpath_for_file("//wg", lowfat_file)
+    for node in nodes:
+        rule = node.attrib.get("rule") or node.attrib.get("Rule", "")
+        if rule in WRAPPER_CLAUSE_RULES:
+            continue
+        assert "class" in node.attrib or "type" in node.attrib, \
+            f"<wg> missing @class/@type: rule={rule!r} nodeId={node.attrib.get('nodeId')!r}"
 
 
 def test_number_of_words():
@@ -112,44 +143,44 @@ def test_em_dash_words_not_truncated(lowfat_file):
             f"Alphabetic chars stripped into @after for {w.attrib.get('unicode')!r}: after={after!r} at {w.attrib.get(XML_ID)}"
 
 
-# TODO: Discuss with team and restore this test
-# @pytest.mark.parametrize("lowfat_file", __sblgnt_lowfat_files__)
-# def test_referent_id_validity(lowfat_file):
-#     valid_ids = []
-#     nodes_with_id = run_xpath_for_file("//w", lowfat_file)
-#     for id_node in nodes_with_id:
-#         valid_ids.append(id_node.attrib["{http://www.w3.org/XML/1998/namespace}id"])
+@pytest.mark.parametrize("lowfat_file", __sblgnt_lowfat_files__)
+def test_referent_id_validity(lowfat_file):
+    valid_ids = []
+    nodes_with_id = run_xpath_for_file("//w", lowfat_file)
+    for id_node in nodes_with_id:
+        valid_ids.append(id_node.attrib["{http://www.w3.org/XML/1998/namespace}id"])
 
-#     # xpath to find node with Ref or SubjRef attribute
-#     nodes_with_ref = run_xpath_for_file("//w[@referent or @subjref or @frame]", lowfat_file)
-#     for ref_node in nodes_with_ref:
-#         # Note: one element could have all three attributes, so test each individually
-#         if "referent" in ref_node.attrib:
-#             # Ref attribute is a space-separated list of IDs
-#             ref_content = ref_node.attrib["referent"]
-#             refs = ref_content.split(" ") if " " in ref_content else ref_content.split(";")
-#             for ref in refs:
-#                 assert ref in valid_ids
+    # xpath to find node with Ref or SubjRef attribute
+    nodes_with_ref = run_xpath_for_file("//w[@referent or @subjref or @frame]", lowfat_file)
+    for ref_node in nodes_with_ref:
+        # Note: one element could have all three attributes, so test each individually
+        if "referent" in ref_node.attrib:
+            # Ref attribute is a space-separated list of IDs
+            ref_content = ref_node.attrib["referent"]
+            refs = ref_content.split(" ") if " " in ref_content else ref_content.split(";")
+            for ref in refs:
+                if ref != 'n00000000000':  # sentinel value meaning unknown referent
+                    assert ref in valid_ids
 
-#         if "subjref" in ref_node.attrib:
-#             # SubjRef attribute is a space-separated list of IDs
-#             ref_content = ref_node.attrib["subjref"]
-#             refs = ref_content.split(" ") if " " in ref_content else ref_content.split(";")
-#             for ref in refs:
-#                 assert ref in valid_ids
+        if "subjref" in ref_node.attrib:
+            # SubjRef attribute is a space-separated list of IDs
+            ref_content = ref_node.attrib["subjref"]
+            refs = ref_content.split(" ") if " " in ref_content else ref_content.split(";")
+            for ref in refs:
+                assert ref in valid_ids
 
-#         if "Frame" in ref_node.attrib:
-#             ref_content = ref_node.attrib["frame"]
-#             # split on spaces.
-#             refs = ref_content.split(" ")
-#             for frame_refs in refs:
-#                 # regex to remove `A[012]:` from frame_refs
-#                 # Actually, `AA:`, `A0:`, `A1:`, `A2:`, and `AA2:` are valid.
-#                 # (but `AA:` only in Hebrew at present)
-#                 frame_ref_string = re.sub(r"A+[0-2]{0,1}:", "", frame_refs)
-#                 # split on `;'
-#                 frame_ref_list = frame_ref_string.split(";")
-#                 for frame_ref in frame_ref_list:
-#                     if frame_ref != '':
-#                         if frame_ref != 'n00000000000':  # Assuming these are OK since they happen frequently
-#                             assert frame_ref in valid_ids
+        if "Frame" in ref_node.attrib:
+            ref_content = ref_node.attrib["frame"]
+            # split on spaces.
+            refs = ref_content.split(" ")
+            for frame_refs in refs:
+                # regex to remove `A[012]:` from frame_refs
+                # Actually, `AA:`, `A0:`, `A1:`, `A2:`, and `AA2:` are valid.
+                # (but `AA:` only in Hebrew at present)
+                frame_ref_string = re.sub(r"A+[0-2]{0,1}:", "", frame_refs)
+                # split on `;'
+                frame_ref_list = frame_ref_string.split(";")
+                for frame_ref in frame_ref_list:
+                    if frame_ref != '':
+                        if frame_ref != 'n00000000000':  # Assuming these are OK since they happen frequently
+                            assert frame_ref in valid_ids
