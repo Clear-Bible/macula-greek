@@ -78,7 +78,7 @@
                         junction="apposition">Ἰησοῦ</w>
                   </wg>
                </wg>
-               <wg class="pp" rule="PrepNp">
+               <wg rule="PrepNp" class="pp">
                   <w ref="1TI 1:1!5"
                      after="’"
                      class="prep"
@@ -106,7 +106,7 @@
                         ln="33.326"
                         morph="N-ASF"
                         unicode="ἐπιταγὴν">ἐπιταγὴν</w>
-                     <wg rule="NpaNp">
+                     <wg rule="NpaNp" class="np">
                         <wg type="apposition" class="np" rule="Np-Appos">
                            <w ref="1TI 1:1!7"
                               after=" "
@@ -315,7 +315,7 @@
                      morph="N-DSN"
                      unicode="τέκνῳ">τέκνῳ</w>
                </wg>
-               <wg class="pp" rule="PrepNp">
+               <wg rule="PrepNp" class="pp">
                   <w ref="1TI 1:2!4"
                      after=" "
                      class="prep"
@@ -401,7 +401,7 @@
                morph="N-NSF"
                unicode="εἰρήνη">εἰρήνη</w>
          </wg>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="1TI 1:2!9"
                after=" "
                class="prep"
@@ -412,7 +412,7 @@
                gloss="from"
                morph="PREP"
                unicode="ἀπὸ">ἀπὸ</w>
-            <wg rule="NpaNp">
+            <wg rule="NpaNp" class="np">
                <wg type="apposition" class="np" rule="Np-Appos">
                   <w ref="1TI 1:2!10"
                      after=" "
@@ -623,7 +623,7 @@
                   morph="V-AAN"
                   unicode="προσμεῖναι"
                   frame="A0:n54001003003">προσμεῖναι</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 1:3!5"
                      after=" "
                      class="prep"
@@ -674,7 +674,7 @@
                   unicode="πορευόμενος"
                   frame="A0:n54001001001"
                   subjref="n54001001001">πορευόμενος</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 1:3!8"
                      after=" "
                      class="prep"
@@ -704,7 +704,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="o">
+         <wg rule="sub-CL" class="cl" role="o">
             <w ref="1TI 1:3!10"
                after=" "
                class="conj"
@@ -751,7 +751,7 @@
                   gloss="certain men"
                   morph="X-DPM"
                   unicode="τισὶν">τισὶν</w>
-               <wg rule="CLaCL" role="o">
+               <wg rule="CLaCL" class="cl" role="o">
                   <wg class="cl" rule="ADV-V">
                      <w role="adv"
                         ref="1TI 1:3!13"
@@ -816,7 +816,7 @@
                            frame="A0:n54001003012"
                            subjref="n54001003012">προσέχειν</w>
                         <wg class="np" type="apposition" rule="NP-CL" role="adv">
-                           <wg rule="NpaNp">
+                           <wg rule="NpaNp" class="np">
                               <w ref="1TI 1:4!3"
                                  after=" "
                                  class="noun"
@@ -879,7 +879,10 @@
                                  </wg>
                               </wg>
                            </wg>
-                           <wg clauseType="nominalized" rule="CLaCL" junction="apposition">
+                           <wg clauseType="nominalized"
+                               rule="CLaCL"
+                               class="cl"
+                               junction="apposition">
                               <wg class="cl" clauseType="nominalized" rule="S-O-V-ADV">
                                  <w role="s"
                                     ref="1TI 1:4!7"
@@ -1011,7 +1014,7 @@
                                           ln="92.24"
                                           morph="T-ASF"
                                           unicode="τὴν">τὴν</w>
-                                       <wg class="pp" rule="PrepNp">
+                                       <wg rule="PrepNp" class="pp">
                                           <w ref="1TI 1:4!15"
                                              after=" "
                                              class="prep"
@@ -1056,7 +1059,7 @@
          <milestone unit="verse" id="1TI 1:5">1TI 1:5</milestone> 
          <milestone unit="verse" id="1TI 1:6">1TI 1:6</milestone> 
          <milestone unit="verse" id="1TI 1:7">1TI 1:7</milestone> τὸ δὲ τέλος τῆς παραγγελίας ἐστὶν ἀγάπη ἐκ καθαρᾶς καρδίας καὶ συνειδήσεως ἀγαθῆς καὶ πίστεως ἀνυποκρίτου, ὧν τινες ἀστοχήσαντες ἐξετράπησαν εἰς ματαιολογίαν, θέλοντες εἶναι νομοδιδάσκαλοι, μὴ νοοῦντες μήτε ἃ λέγουσιν μήτε περὶ τίνων διαβεβαιοῦνται.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 1:5!2"
             after=" "
             class="conj"
@@ -1170,7 +1173,7 @@
                   ln="25.43"
                   morph="N-NSF"
                   unicode="ἀγάπη">ἀγάπη</w>
-               <wg class="pp" rule="PrepNp">
+               <wg rule="PrepNp" class="pp">
                   <w ref="1TI 1:5!8"
                      after=" "
                      class="prep"
@@ -1182,7 +1185,7 @@
                      morph="PREP"
                      unicode="ἐκ">ἐκ</w>
                   <wg class="np" type="apposition" rule="NP-CL">
-                     <wg rule="Conj3Np">
+                     <wg rule="Conj3Np" class="np">
                         <wg class="np" rule="AdjpNp">
                            <w ref="1TI 1:5!9"
                               after=" "
@@ -1385,7 +1388,7 @@
                            morph="V-2API-3P"
                            unicode="ἐξετράπησαν"
                            frame="A0:n54001006002">ἐξετράπησαν</w>
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="1TI 1:6!5"
                               after=" "
                               class="prep"
@@ -1502,7 +1505,7 @@
                                  unicode="νοοῦντες"
                                  frame="A0:n54001006002 A1:n54001007008;n54001007012"
                                  subjref="n54001006002">νοοῦντες</w>
-                              <wg rule="aNpaNp" role="o">
+                              <wg rule="aNpaNp" class="np" role="o">
                                  <wg type="group">
                                     <w ref="1TI 1:7!6"
                                        after=" "
@@ -1568,7 +1571,7 @@
                                        morph="CONJ-N"
                                        unicode="μήτε">μήτε</w>
                                     <wg class="cl" clauseType="nominalized" rule="ADV-V">
-                                       <wg class="pp" rule="PrepNp" role="adv">
+                                       <wg rule="PrepNp" class="pp" role="adv">
                                           <w ref="1TI 1:7!10"
                                              after=" "
                                              class="prep"
@@ -1632,7 +1635,7 @@
          <milestone unit="verse" id="1TI 1:9">1TI 1:9</milestone> 
          <milestone unit="verse" id="1TI 1:10">1TI 1:10</milestone> 
          <milestone unit="verse" id="1TI 1:11">1TI 1:11</milestone> Οἴδαμεν δὲ ὅτι καλὸς ὁ νόμος, ἐάν τις αὐτῷ νομίμως χρῆται, εἰδὼς τοῦτο, ὅτι δικαίῳ νόμος οὐ κεῖται, ἀνόμοις δὲ καὶ ἀνυποτάκτοις, ἀσεβέσι καὶ ἁμαρτωλοῖς, ἀνοσίοις καὶ βεβήλοις, πατρολῴαις καὶ μητρολῴαις, ἀνδροφόνοις, πόρνοις, ἀρσενοκοίταις, ἀνδραποδισταῖς, ψεύσταις, ἐπιόρκοις, καὶ εἴ τι ἕτερον τῇ ὑγιαινούσῃ διδασκαλίᾳ ἀντίκειται, κατὰ τὸ εὐαγγέλιον τῆς δόξης τοῦ μακαρίου Θεοῦ, ὃ ἐπιστεύθην ἐγώ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 1:8!2"
             after=" "
             class="conj"
@@ -1666,7 +1669,7 @@
                unicode="Οἴδαμεν"
                frame="A0:n54001001001;n54001002001"
                subjref="n54001001001 n54001002001">Οἴδαμεν</w>
-            <wg rule="that-VP" role="adv">
+            <wg rule="that-VP" class="cl" role="adv">
                <w ref="1TI 1:8!3"
                   after=" "
                   class="conj"
@@ -1727,7 +1730,7 @@
                         morph="N-NSM"
                         unicode="νόμος,">νόμος</w>
                   </wg>
-                  <wg rule="sub-CL" role="adv">
+                  <wg rule="sub-CL" class="cl" role="adv">
                      <w ref="1TI 1:8!7"
                         after=" "
                         class="conj"
@@ -1842,7 +1845,7 @@
                               morph="D-ASN"
                               unicode="τοῦτο,"
                               referent="n54001009008">τοῦτο</w>
-                           <wg rule="that-VP" role="o2">
+                           <wg rule="that-VP" class="cl" role="o2">
                               <w ref="1TI 1:9!3"
                                  after=" "
                                  class="adv"
@@ -1930,9 +1933,9 @@
                                     gloss="however"
                                     morph="CONJ"
                                     unicode="δὲ">δὲ</w>
-                                 <wg rule="CLaCL">
+                                 <wg rule="CLaCL" class="cl">
                                     <wg type="group" rule="NpNpNpNpNpNpNpNpNpNp" role="adv">
-                                       <wg rule="NpaNp">
+                                       <wg rule="NpaNp" class="np">
                                           <w ref="1TI 1:9!8"
                                              after=" "
                                              class="adj"
@@ -1976,7 +1979,7 @@
                                                 unicode="ἀνυποτάκτοις,">ἀνυποτάκτοις</w>
                                           </wg>
                                        </wg>
-                                       <wg rule="NpaNp">
+                                       <wg rule="NpaNp" class="np">
                                           <w ref="1TI 1:9!12"
                                              after=" "
                                              class="adj"
@@ -2020,7 +2023,7 @@
                                                 unicode="ἁμαρτωλοῖς,">ἁμαρτωλοῖς</w>
                                           </wg>
                                        </wg>
-                                       <wg rule="NpaNp">
+                                       <wg rule="NpaNp" class="np">
                                           <w ref="1TI 1:9!15"
                                              after=" "
                                              class="adj"
@@ -2064,7 +2067,7 @@
                                                 unicode="βεβήλοις,">βεβήλοις</w>
                                           </wg>
                                        </wg>
-                                       <wg rule="NpaNp">
+                                       <wg rule="NpaNp" class="np">
                                           <w ref="1TI 1:9!18"
                                              after=" "
                                              class="noun"
@@ -2217,7 +2220,7 @@
                                           gloss="and"
                                           morph="CONJ"
                                           unicode="καὶ">καὶ</w>
-                                       <wg rule="sub-CL">
+                                       <wg rule="sub-CL" class="cl">
                                           <w ref="1TI 1:10!7"
                                              after=" "
                                              class="conj"
@@ -2336,7 +2339,7 @@
                                                          ln="33.236"
                                                          morph="N-DSF"
                                                          unicode="διδασκαλίᾳ">διδασκαλίᾳ</w>
-                                                      <wg class="pp" articular="true" rule="PrepNp">
+                                                      <wg articular="true" rule="PrepNp" class="pp">
                                                          <w ref="1TI 1:11!1"
                                                             after=" "
                                                             class="prep"
@@ -2589,7 +2592,7 @@
              articular="true"
              rule="Np-Appos"
              role="io">
-            <wg articular="true" rule="DetCL">
+            <wg articular="true" rule="DetCL" class="cl">
                <w ref="1TI 1:12!3"
                   after=" "
                   class="det"
@@ -2738,7 +2741,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="1TI 1:12!11"
                after=" "
                class="conj"
@@ -2825,7 +2828,7 @@
                      unicode="θέμενος"
                      frame="A0:n54001012004"
                      subjref="n54001012004">θέμενος</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 1:12!16"
                         after=" "
                         class="prep"
@@ -2906,7 +2909,7 @@
                      morph="V-PAP-ASM"
                      unicode="ὄντα"
                      subjref="n54001001001">ὄντα</w>
-                  <wg rule="Conj3Np" role="p">
+                  <wg rule="Conj3Np" class="np" role="p">
                      <w ref="1TI 1:13!4"
                         after=" "
                         class="adj"
@@ -2988,7 +2991,7 @@
       <p>
          <milestone unit="verse" id="1TI 1:13">1TI 1:13</milestone> 
          <milestone unit="verse" id="1TI 1:14">1TI 1:14</milestone> ἀλλὰ ἠλεήθην, ὅτι ἀγνοῶν ἐποίησα ἐν ἀπιστίᾳ, ὑπερεπλεόνασεν δὲ ἡ χάρις τοῦ Κυρίου ἡμῶν μετὰ πίστεως καὶ ἀγάπης τῆς ἐν Χριστῷ Ἰησοῦ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 1:13!9"
             after=" "
             class="conj"
@@ -3001,7 +3004,7 @@
             ln="89.125"
             morph="CONJ"
             unicode="ἀλλὰ">ἀλλὰ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg Rule="ClCl" class="cl" nodeId="540010130100060">
                <w role="v"
                   rule="v2cl"
@@ -3024,7 +3027,7 @@
                   unicode="ἠλεήθην,"
                   frame="A1:n54001001001"
                   subjref="n54001001001">ἠλεήθην</w>
-               <wg rule="sub-CL" role="adv">
+               <wg rule="sub-CL" class="cl" role="adv">
                   <w ref="1TI 1:13!11"
                      after=" "
                      class="conj"
@@ -3078,7 +3081,7 @@
                         unicode="ἐποίησα"
                         frame="A0:n54001001001"
                         subjref="n54001001001">ἐποίησα</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="1TI 1:13!14"
                            after=" "
                            class="prep"
@@ -3227,7 +3230,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 1:14!8"
                         after=" "
                         class="prep"
@@ -3239,7 +3242,7 @@
                         morph="PREP"
                         unicode="μετὰ">μετὰ</w>
                      <wg type="apposition" class="np" rule="Np-Appos">
-                        <wg rule="NpaNp">
+                        <wg rule="NpaNp" class="np">
                            <w ref="1TI 1:14!9"
                               after=" "
                               class="noun"
@@ -3301,7 +3304,7 @@
                               ln="92.24"
                               morph="T-GSF"
                               unicode="τῆς">τῆς</w>
-                           <wg class="pp" rule="PrepNp">
+                           <wg rule="PrepNp" class="pp">
                               <w ref="1TI 1:14!13"
                                  after=" "
                                  class="prep"
@@ -3394,7 +3397,7 @@
                morph="N-NSM"
                unicode="λόγος">λόγος</w>
          </wg>
-         <wg rule="AdjpaAdjp" role="p">
+         <wg rule="AdjpaAdjp" class="adjp" role="p">
             <w ref="1TI 1:15!1"
                after=" "
                class="adj"
@@ -3473,7 +3476,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="that-VP" role="o">
+         <wg rule="that-VP" class="cl" role="o">
             <w ref="1TI 1:15!8"
                after=" "
                class="adv"
@@ -3539,7 +3542,7 @@
                   morph="V-2AAI-3S"
                   unicode="ἦλθεν"
                   frame="A0:n54001015009">ἦλθεν</w>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 1:15!12"
                      after=" "
                      class="prep"
@@ -3695,7 +3698,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 1:16">1TI 1:16</milestone> ἀλλὰ διὰ τοῦτο ἠλεήθην, ἵνα ἐν ἐμοὶ πρώτῳ ἐνδείξηται Ἰησοῦς Χριστὸς τὴν ἅπασαν μακροθυμίαν, πρὸς ὑποτύπωσιν τῶν μελλόντων πιστεύειν ἐπ’ αὐτῷ εἰς ζωὴν αἰώνιον.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 1:16!1"
             after=" "
             class="conj"
@@ -3710,7 +3713,7 @@
             unicode="ἀλλὰ">ἀλλὰ</w>
          <wg Rule="ClCl" class="cl" nodeId="540010160020230">
             <wg class="cl" rule="ADV-V" role="o">
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 1:16!2"
                      after=" "
                      class="prep"
@@ -3769,7 +3772,7 @@
                morph="CONJ"
                unicode="ἵνα">ἵνα</w>
             <wg class="cl" rule="ADV-V-S-O-ADV">
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 1:16!6"
                      after=" "
                      class="prep"
@@ -3920,7 +3923,7 @@
                         unicode="μακροθυμίαν,">μακροθυμίαν</w>
                   </wg>
                </wg>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 1:16!15"
                      after=" "
                      class="prep"
@@ -3950,7 +3953,7 @@
                         ln="58.59"
                         morph="N-ASF"
                         unicode="ὑποτύπωσιν">ὑποτύπωσιν</w>
-                     <wg articular="true" rule="DetCL">
+                     <wg articular="true" rule="DetCL" class="cl">
                         <w ref="1TI 1:16!17"
                            after=" "
                            class="det"
@@ -4006,7 +4009,7 @@
                                  unicode="πιστεύειν"
                                  frame="A0:n54001016018"
                                  subjref="n54001016018">πιστεύειν</w>
-                              <wg class="pp" rule="PrepNp" role="adv">
+                              <wg rule="PrepNp" class="pp" role="adv">
                                  <w ref="1TI 1:16!20"
                                     after="’"
                                     class="prep"
@@ -4035,7 +4038,7 @@
                                     unicode="αὐτῷ"
                                     referent="n54001016010">αὐτῷ</w>
                               </wg>
-                              <wg class="pp" rule="PrepNp" role="adv">
+                              <wg rule="PrepNp" class="pp" role="adv">
                                  <w ref="1TI 1:16!22"
                                     after=" "
                                     class="prep"
@@ -4092,7 +4095,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 1:17">1TI 1:17</milestone> Τῷ δὲ Βασιλεῖ τῶν αἰώνων, ἀφθάρτῳ ἀοράτῳ μόνῳ Θεῷ, τιμὴ καὶ δόξα εἰς τοὺς αἰῶνας τῶν αἰώνων· ἀμήν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 1:17!2"
             after=" "
             class="conj"
@@ -4244,7 +4247,7 @@
                      unicode="Θεῷ,">Θεῷ</w>
                </wg>
             </wg>
-            <wg rule="NpaNp" role="s">
+            <wg rule="NpaNp" class="np" role="s">
                <w ref="1TI 1:17!10"
                   after=" "
                   class="noun"
@@ -4290,7 +4293,7 @@
                      unicode="δόξα">δόξα</w>
                </wg>
             </wg>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 1:17!13"
                   after=" "
                   class="prep"
@@ -4513,7 +4516,7 @@
             morph="P-2DS"
             unicode="σοι,"
             referent="n54001018006">σοι</w>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="1TI 1:18!8"
                after=" "
                class="prep"
@@ -4563,7 +4566,7 @@
                         unicode="προαγούσας"
                         frame="A0:n54001018013"
                         subjref="n54001018013">προαγούσας</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="1TI 1:18!11"
                            after=" "
                            class="prep"
@@ -4609,7 +4612,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="1TI 1:18!14"
                after=" "
                class="adv"
@@ -4641,7 +4644,7 @@
                   unicode="στρατεύῃ"
                   frame="A0:n54001018006 A1:n54001018020"
                   subjref="n54001018006">στρατεύῃ</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 1:18!16"
                      after=" "
                      class="prep"
@@ -4740,7 +4743,7 @@
                      unicode="ἔχων"
                      frame="A0:n54001018006 A1:n54001019002;n54001019005"
                      subjref="n54001018006">ἔχων</w>
-                  <wg rule="NpaNp" role="o">
+                  <wg rule="NpaNp" class="np" role="o">
                      <w ref="1TI 1:19!2"
                         after=" "
                         class="noun"
@@ -4865,7 +4868,7 @@
                                     gloss="some"
                                     morph="X-NPM"
                                     unicode="τινες">τινες</w>
-                                 <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                                 <wg articular="true" rule="PrepNp" class="pp" role="adv">
                                     <w ref="1TI 1:19!9"
                                        after=" "
                                        class="prep"
@@ -4963,7 +4966,7 @@
                                  morph="V-PAI-3S"
                                  unicode="ἐστιν">ἐστιν</w>
                               <wg class="np" type="apposition" rule="NP-CL" role="s">
-                                 <wg rule="NpaNp">
+                                 <wg rule="NpaNp" class="np">
                                     <w ref="1TI 1:20!3"
                                        after=" "
                                        class="noun"
@@ -5082,7 +5085,7 @@
                                           morph="N-DSM"
                                           unicode="Σατανᾷ,">Σατανᾷ</w>
                                     </wg>
-                                    <wg rule="sub-CL" role="adv">
+                                    <wg rule="sub-CL" class="cl" role="adv">
                                        <w ref="1TI 1:20!10"
                                           after=" "
                                           class="conj"
@@ -5162,7 +5165,7 @@
       <p>
          <milestone unit="verse" id="1TI 2:1">1TI 2:1</milestone> 
          <milestone unit="verse" id="1TI 2:2">1TI 2:2</milestone> Παρακαλῶ οὖν πρῶτον πάντων ποιεῖσθαι δεήσεις, προσευχάς, ἐντεύξεις, εὐχαριστίας, ὑπὲρ πάντων ἀνθρώπων, ὑπὲρ βασιλέων καὶ πάντων τῶν ἐν ὑπεροχῇ ὄντων, ἵνα ἤρεμον καὶ ἡσύχιον βίον διάγωμεν ἐν πάσῃ εὐσεβείᾳ καὶ σεμνότητι.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 2:1!2"
             after=" "
             class="conj"
@@ -5312,7 +5315,7 @@
                      unicode="εὐχαριστίας,">εὐχαριστίας</w>
                </wg>
                <wg type="group" rule="2Pp" role="adv">
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 2:1!10"
                         after=" "
                         class="prep"
@@ -5359,7 +5362,7 @@
                            unicode="ἀνθρώπων,">ἀνθρώπων</w>
                      </wg>
                   </wg>
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 2:2!1"
                         after=" "
                         class="prep"
@@ -5372,7 +5375,7 @@
                         ln="90.36"
                         morph="PREP"
                         unicode="ὑπὲρ">ὑπὲρ</w>
-                     <wg rule="NpaNp">
+                     <wg rule="NpaNp" class="np">
                         <w ref="1TI 2:2!2"
                            after=" "
                            class="noun"
@@ -5416,7 +5419,7 @@
                                  ln="59.23"
                                  morph="A-GPM"
                                  unicode="πάντων">πάντων</w>
-                              <wg articular="true" rule="DetCL">
+                              <wg articular="true" rule="DetCL" class="cl">
                                  <w ref="1TI 2:2!5"
                                     after=" "
                                     class="det"
@@ -5433,7 +5436,7 @@
                                     morph="T-GPM"
                                     unicode="τῶν">τῶν</w>
                                  <wg class="cl" clauseType="nominalized" rule="P-VC">
-                                    <wg class="pp" rule="PrepNp" role="p">
+                                    <wg rule="PrepNp" class="pp" role="p">
                                        <w ref="1TI 2:2!6"
                                           after=" "
                                           class="prep"
@@ -5486,7 +5489,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg rule="sub-CL" role="adv">
+               <wg rule="sub-CL" class="cl" role="adv">
                   <w ref="1TI 2:2!9"
                      after=" "
                      class="conj"
@@ -5499,7 +5502,7 @@
                      unicode="ἵνα">ἵνα</w>
                   <wg class="cl" rule="O-V-ADV">
                      <wg class="np" rule="AdjpNp" role="o">
-                        <wg rule="AdjpaAdjp">
+                        <wg rule="AdjpaAdjp" class="adjp">
                            <w ref="1TI 2:2!10"
                               after=" "
                               class="adj"
@@ -5580,7 +5583,7 @@
                         unicode="διάγωμεν"
                         frame="A0:n54001001001;n54001018006;n54001016018 A1:n54002002013"
                         subjref="n54001001001 n54001018006 n54001016018">διάγωμεν</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="1TI 2:2!15"
                            after=" "
                            class="prep"
@@ -5607,7 +5610,7 @@
                               ln="59.23"
                               morph="A-DSF"
                               unicode="πάσῃ">πάσῃ</w>
-                           <wg rule="NpaNp">
+                           <wg rule="NpaNp" class="np">
                               <w ref="1TI 2:2!17"
                                  after=" "
                                  class="noun"
@@ -5682,7 +5685,7 @@
             morph="D-NSN"
             unicode="τοῦτο"
             referent="n54002001005">τοῦτο</w>
-         <wg rule="AdjpaAdjp" role="p">
+         <wg rule="AdjpaAdjp" class="adjp" role="p">
             <w ref="1TI 2:3!2"
                after=" "
                class="adj"
@@ -5726,7 +5729,7 @@
                   unicode="ἀπόδεκτον">ἀπόδεκτον</w>
             </wg>
          </wg>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="1TI 2:3!5"
                after=" "
                class="prep"
@@ -5884,7 +5887,7 @@
                            morph="N-APM"
                            unicode="ἀνθρώπους">ἀνθρώπους</w>
                      </wg>
-                     <wg rule="CLaCL" role="v">
+                     <wg rule="CLaCL" class="cl" role="v">
                         <w role="v"
                            rule="v2cl"
                            ref="1TI 2:4!5"
@@ -5915,7 +5918,7 @@
                               morph="CONJ"
                               unicode="καὶ">καὶ</w>
                            <wg class="cl" rule="ADV-V">
-                              <wg class="pp" rule="PrepNp" role="adv">
+                              <wg rule="PrepNp" class="pp" role="adv">
                                  <w ref="1TI 2:4!7"
                                     after=" "
                                     class="prep"
@@ -5993,7 +5996,7 @@
       <p>
          <milestone unit="verse" id="1TI 2:5">1TI 2:5</milestone> 
          <milestone unit="verse" id="1TI 2:6">1TI 2:6</milestone> εἷς γὰρ Θεός, εἷς καὶ μεσίτης Θεοῦ καὶ ἀνθρώπων, ἄνθρωπος Χριστὸς Ἰησοῦς, ὁ δοὺς ἑαυτὸν ἀντίλυτρον ὑπὲρ πάντων,</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 2:5!2"
             after=" "
             class="conj"
@@ -6083,7 +6086,7 @@
                            ln="40.6"
                            morph="N-NSM"
                            unicode="μεσίτης">μεσίτης</w>
-                        <wg rule="NpaNp">
+                        <wg rule="NpaNp" class="np">
                            <w ref="1TI 2:5!7"
                               after=" "
                               class="noun"
@@ -6190,7 +6193,7 @@
                                  junction="apposition">Ἰησοῦς</w>
                            </wg>
                         </wg>
-                        <wg articular="true" rule="DetCL" junction="apposition">
+                        <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                            <w ref="1TI 2:6!1"
                               after=" "
                               class="det"
@@ -6261,7 +6264,7 @@
                                  ln="37.130"
                                  morph="N-ASN"
                                  unicode="ἀντίλυτρον">ἀντίλυτρον</w>
-                              <wg class="pp" rule="PrepNp" role="adv">
+                              <wg rule="PrepNp" class="pp" role="adv">
                                  <w ref="1TI 2:6!5"
                                     after=" "
                                     class="prep"
@@ -6381,7 +6384,7 @@
              clauseType="nominalized"
              rule="ADV-VC-S-P"
              role="adv">
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 2:7!1"
                   after=" "
                   class="prep"
@@ -6444,7 +6447,7 @@
                unicode="ἐγὼ"
                referent="n54001001001">ἐγὼ</w>
             <wg type="apposition" class="np" rule="Np-Appos" role="p">
-               <wg rule="NpaNp">
+               <wg rule="NpaNp" class="np">
                   <w ref="1TI 2:7!5"
                      after=" "
                      class="noun"
@@ -6525,7 +6528,7 @@
                         morph="N-GPN"
                         unicode="ἐθνῶν">ἐθνῶν</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 2:7!14"
                         after=" "
                         class="prep"
@@ -6536,7 +6539,7 @@
                         gloss="in"
                         morph="PREP"
                         unicode="ἐν">ἐν</w>
-                     <wg rule="NpaNp">
+                     <wg rule="NpaNp" class="np">
                         <w ref="1TI 2:7!15"
                            after=" "
                            class="noun"
@@ -6664,7 +6667,7 @@
          <milestone unit="verse" id="1TI 2:8">1TI 2:8</milestone> 
          <milestone unit="verse" id="1TI 2:9">1TI 2:9</milestone> 
          <milestone unit="verse" id="1TI 2:10">1TI 2:10</milestone> Βούλομαι οὖν προσεύχεσθαι τοὺς ἄνδρας ἐν παντὶ τόπῳ ἐπαίροντας ὁσίους χεῖρας χωρὶς ὀργῆς καὶ διαλογισμοῦ. Ὡσαύτως γυναῖκας ἐν καταστολῇ κοσμίῳ μετὰ αἰδοῦς καὶ σωφροσύνης κοσμεῖν ἑαυτάς, μὴ ἐν πλέγμασιν καὶ χρυσίῳ ἢ μαργαρίταις ἢ ἱματισμῷ πολυτελεῖ, ἀλλ’ ὃ πρέπει γυναιξὶν ἐπαγγελλομέναις θεοσέβειαν, δι’ ἔργων ἀγαθῶν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 2:8!2"
             after=" "
             class="conj"
@@ -6748,7 +6751,7 @@
                      morph="N-APM"
                      unicode="ἄνδρας">ἄνδρας</w>
                </wg>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 2:8!6"
                      after=" "
                      class="prep"
@@ -6849,7 +6852,7 @@
                         unicode="χεῖρας">χεῖρας</w>
                   </wg>
                </wg>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 2:8!12"
                      after=" "
                      class="prep"
@@ -6862,7 +6865,7 @@
                      ln="89.120"
                      morph="ADV"
                      unicode="χωρὶς">χωρὶς</w>
-                  <wg rule="NpaNp">
+                  <wg rule="NpaNp" class="np">
                      <w ref="1TI 2:8!13"
                         after=" "
                         class="noun"
@@ -6909,7 +6912,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg rule="AdvpCL" role="o">
+               <wg rule="AdvpCL" class="cl" role="o">
                   <w ref="1TI 2:9!1"
                      after=" "
                      class="adv"
@@ -6940,7 +6943,7 @@
                         ln="9.34"
                         morph="N-APF"
                         unicode="γυναῖκας">γυναῖκας</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="1TI 2:9!3"
                            after=" "
                            class="prep"
@@ -6985,7 +6988,7 @@
                               unicode="κοσμίῳ">κοσμίῳ</w>
                         </wg>
                      </wg>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="1TI 2:9!6"
                            after=" "
                            class="prep"
@@ -6996,7 +6999,7 @@
                            gloss="with"
                            morph="PREP"
                            unicode="μετὰ">μετὰ</w>
-                        <wg rule="NpaNp">
+                        <wg rule="NpaNp" class="np">
                            <w ref="1TI 2:9!7"
                               after=" "
                               class="noun"
@@ -7089,7 +7092,7 @@
                            gloss="not"
                            morph="PRT-N"
                            unicode="μὴ">μὴ</w>
-                        <wg class="pp" rule="PrepNp">
+                        <wg rule="PrepNp" class="pp">
                            <w ref="1TI 2:9!13"
                               after=" "
                               class="prep"
@@ -7100,7 +7103,7 @@
                               gloss="with"
                               morph="PREP"
                               unicode="ἐν">ἐν</w>
-                           <wg rule="Conj4Np">
+                           <wg rule="Conj4Np" class="np">
                               <w ref="1TI 2:9!14"
                                  after=" "
                                  class="noun"
@@ -7232,7 +7235,7 @@
                            ln="89.125"
                            morph="CONJ"
                            unicode="ἀλλ’">ἀλλ</w>
-                        <wg class="pp" rule="PrepNp">
+                        <wg rule="PrepNp" class="pp">
                            <w ref="1TI 2:10!7"
                               after="’"
                               class="prep"
@@ -7403,7 +7406,7 @@
             ln="9.34"
             morph="N-NSF"
             unicode="Γυνὴ">Γυνὴ</w>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="1TI 2:11!2"
                after=" "
                class="prep"
@@ -7450,7 +7453,7 @@
             morph="V-PAM-3S"
             unicode="μανθανέτω"
             frame="A0:n54002011001">μανθανέτω</w>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="1TI 2:11!5"
                after=" "
                class="prep"
@@ -7500,7 +7503,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 2:12">1TI 2:12</milestone> διδάσκειν δὲ γυναικὶ οὐκ ἐπιτρέπω, οὐδὲ αὐθεντεῖν ἀνδρός, ἀλλ’ εἶναι ἐν ἡσυχίᾳ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 2:12!2"
             after=" "
             class="conj"
@@ -7545,7 +7548,7 @@
                   gloss="not"
                   morph="PRT-N"
                   unicode="οὐκ">οὐκ</w>
-               <wg rule="CLaCL">
+               <wg rule="CLaCL" class="cl">
                   <wg class="cl" rule="V-S">
                      <w role="v"
                         ref="1TI 2:12!1"
@@ -7662,7 +7665,7 @@
                      morph="V-PAN"
                      unicode="εἶναι"
                      subjref="n54002012003">εἶναι</w>
-                  <wg class="pp" rule="PrepNp" role="p">
+                  <wg rule="PrepNp" class="pp" role="p">
                      <w ref="1TI 2:12!11"
                         after=" "
                         class="prep"
@@ -7699,7 +7702,7 @@
       <p>
          <milestone unit="verse" id="1TI 2:13">1TI 2:13</milestone> 
          <milestone unit="verse" id="1TI 2:14">1TI 2:14</milestone> Ἀδὰμ γὰρ πρῶτος ἐπλάσθη, εἶτα Εὔα. καὶ Ἀδὰμ οὐκ ἠπατήθη, ἡ δὲ γυνὴ ἐξαπατηθεῖσα ἐν παραβάσει γέγονεν·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 2:13!2"
             after=" "
             class="conj"
@@ -7711,7 +7714,7 @@
             gloss="for"
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg type="group" rule="ClCl">
                <wg class="cl" rule="S-ADV-V">
                   <w role="s"
@@ -7812,7 +7815,7 @@
                   gloss="And"
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
-               <wg rule="CLaCL">
+               <wg rule="CLaCL" class="cl">
                   <wg class="cl" rule="S-ADV-V">
                      <w role="s"
                         ref="1TI 2:14!2"
@@ -7930,7 +7933,7 @@
                            unicode="ἐξαπατηθεῖσα"
                            frame="A1:n54002014007"
                            subjref="n54002014007">ἐξαπατηθεῖσα</w>
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="1TI 2:14!9"
                               after=" "
                               class="prep"
@@ -7986,7 +7989,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 2:15">1TI 2:15</milestone> σωθήσεται δὲ διὰ τῆς τεκνογονίας, ἐὰν μείνωσιν ἐν πίστει καὶ ἀγάπῃ καὶ ἁγιασμῷ μετὰ σωφροσύνης.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 2:15!2"
             after=" "
             class="conj"
@@ -8019,7 +8022,7 @@
                unicode="σωθήσεται"
                frame="A1:n54002012003"
                subjref="n54002012003">σωθήσεται</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 2:15!3"
                   after=" "
                   class="prep"
@@ -8064,7 +8067,7 @@
                      unicode="τεκνογονίας,">τεκνογονίας</w>
                </wg>
             </wg>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="1TI 2:15!6"
                   after=" "
                   class="conj"
@@ -8096,7 +8099,7 @@
                      unicode="μείνωσιν"
                      frame="A0:n54002012003"
                      subjref="n54002012003">μείνωσιν</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 2:15!8"
                         after=" "
                         class="prep"
@@ -8107,7 +8110,7 @@
                         gloss="in"
                         morph="PREP"
                         unicode="ἐν">ἐν</w>
-                     <wg rule="Conj3Np">
+                     <wg rule="Conj3Np" class="np">
                         <w ref="1TI 2:15!9"
                            after=" "
                            class="noun"
@@ -8182,7 +8185,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 2:15!14"
                         after=" "
                         class="prep"
@@ -8276,7 +8279,7 @@
       <p>
          <milestone unit="verse" id="1TI 3:1">1TI 3:1</milestone> εἴ τις ἐπισκοπῆς ὀρέγεται, καλοῦ ἔργου ἐπιθυμεῖ.</p>
       <wg Rule="ClCl2" class="cl" nodeId="540030010040070">
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="1TI 3:1!4"
                after=" "
                class="conj"
@@ -8401,7 +8404,7 @@
          <milestone unit="verse" id="1TI 3:2">1TI 3:2</milestone> 
          <milestone unit="verse" id="1TI 3:3">1TI 3:3</milestone> 
          <milestone unit="verse" id="1TI 3:4">1TI 3:4</milestone> δεῖ οὖν τὸν ἐπίσκοπον ἀνεπίλημπτον εἶναι, μιᾶς γυναικὸς ἄνδρα, νηφάλιον, σώφρονα, κόσμιον, φιλόξενον, διδακτικόν, μὴ πάροινον, μὴ πλήκτην, ἀλλὰ ἐπιεικῆ, ἄμαχον, ἀφιλάργυρον, τοῦ ἰδίου οἴκου καλῶς προϊστάμενον, τέκνα ἔχοντα ἐν ὑποταγῇ μετὰ πάσης σεμνότητος,</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 3:2!2"
             after=" "
             class="conj"
@@ -8864,7 +8867,7 @@
                         unicode="ἔχοντα"
                         frame="A0:n54003002004 A1:n54003004006"
                         subjref="n54003002004">ἔχοντα</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="1TI 3:4!8"
                            after=" "
                            class="prep"
@@ -8892,7 +8895,7 @@
                            morph="N-DSF"
                            unicode="ὑποταγῇ">ὑποταγῇ</w>
                      </wg>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="1TI 3:4!10"
                            after=" "
                            class="prep"
@@ -8946,7 +8949,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 3:5">1TI 3:5</milestone> (εἰ δέ τις τοῦ ἰδίου οἴκου προστῆναι οὐκ οἶδεν, πῶς ἐκκλησίας Θεοῦ ἐπιμελήσεται;)</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 3:5!2"
             after=" "
             class="conj"
@@ -8959,7 +8962,7 @@
             morph="CONJ"
             unicode="δέ">δέ</w>
          <wg Rule="ClCl2" class="cl" nodeId="540030050010120">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="1TI 3:5!1"
                   after=" "
                   class="conj"
@@ -9190,7 +9193,7 @@
             ln="11.21"
             morph="A-ASM"
             unicode="νεόφυτον,">νεόφυτον</w>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="1TI 3:6!3"
                after=" "
                class="conj"
@@ -9235,7 +9238,7 @@
                   unicode="τυφωθεὶς"
                   frame="A1:n54003002004"
                   subjref="n54003002004">τυφωθεὶς</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 3:6!6"
                      after=" "
                      class="prep"
@@ -9325,7 +9328,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 3:7">1TI 3:7</milestone> δεῖ δὲ καὶ μαρτυρίαν καλὴν ἔχειν ἀπὸ τῶν ἔξωθεν, ἵνα μὴ εἰς ὀνειδισμὸν ἐμπέσῃ καὶ παγίδα τοῦ διαβόλου.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 3:7!2"
             after=" "
             class="conj"
@@ -9418,7 +9421,7 @@
                   unicode="ἔχειν"
                   frame="A0:n54003002004 A1:n54003007004"
                   subjref="n54003002004">ἔχειν</w>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 3:7!7"
                      after=" "
                      class="prep"
@@ -9460,7 +9463,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="1TI 3:7!10"
                   after=" "
                   class="conj"
@@ -9504,7 +9507,7 @@
                      unicode="ἐμπέσῃ"
                      frame="A0:n54003002004"
                      subjref="n54003002004">ἐμπέσῃ</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 3:7!12"
                         after=" "
                         class="prep"
@@ -9515,7 +9518,7 @@
                         gloss="into"
                         morph="PREP"
                         unicode="εἰς">εἰς</w>
-                     <wg rule="NpaNp">
+                     <wg rule="NpaNp" class="np">
                         <w ref="1TI 3:7!13"
                            after=" "
                            class="noun"
@@ -9861,7 +9864,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 3:9!6"
                         after=" "
                         class="prep"
@@ -9914,7 +9917,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 3:10">1TI 3:10</milestone> καὶ οὗτοι δὲ δοκιμαζέσθωσαν πρῶτον, εἶτα διακονείτωσαν ἀνέγκλητοι ὄντες.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 3:10!3"
             after=" "
             class="conj"
@@ -10175,7 +10178,7 @@
                      ln="31.87"
                      morph="A-APF"
                      unicode="πιστὰς">πιστὰς</w>
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 3:11!8"
                         after=" "
                         class="prep"
@@ -10329,7 +10332,7 @@
                unicode="προϊστάμενοι"
                frame="A0:n54003012001 A1:n54003012006;n54003012012"
                subjref="n54003012001">προϊστάμενοι</w>
-            <wg rule="NpaNp" role="o">
+            <wg rule="NpaNp" class="np" role="o">
                <w ref="1TI 3:12!6"
                   after=" "
                   class="noun"
@@ -10416,7 +10419,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 3:13">1TI 3:13</milestone> οἱ γὰρ καλῶς διακονήσαντες βαθμὸν ἑαυτοῖς καλὸν περιποιοῦνται καὶ πολλὴν παρρησίαν ἐν πίστει τῇ ἐν Χριστῷ Ἰησοῦ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 3:13!2"
             after=" "
             class="conj"
@@ -10428,9 +10431,9 @@
             gloss="for"
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="S-O-IO-V">
-               <wg articular="true" rule="DetCL" role="s">
+               <wg articular="true" rule="DetCL" class="cl" role="s">
                   <w ref="1TI 3:13!1"
                      after=" "
                      class="det"
@@ -10597,7 +10600,7 @@
                         morph="N-ASF"
                         unicode="παρρησίαν">παρρησίαν</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 3:13!12"
                         after=" "
                         class="prep"
@@ -10641,7 +10644,7 @@
                               ln="92.24"
                               morph="T-DSF"
                               unicode="τῇ">τῇ</w>
-                           <wg class="pp" rule="PrepNp">
+                           <wg rule="PrepNp" class="pp">
                               <w ref="1TI 3:13!15"
                                  after=" "
                                  class="prep"
@@ -10791,7 +10794,7 @@
                   unicode="ἐλθεῖν"
                   frame="A0:n54001001001"
                   subjref="n54001001001">ἐλθεῖν</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 3:14!6"
                      after=" "
                      class="prep"
@@ -10840,7 +10843,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 3:15">1TI 3:15</milestone> ἐὰν δὲ βραδύνω, ἵνα εἰδῇς πῶς δεῖ ἐν οἴκῳ Θεοῦ ἀναστρέφεσθαι, ἥτις ἐστὶν ἐκκλησία Θεοῦ ζῶντος, στῦλος καὶ ἑδραίωμα τῆς ἀληθείας.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 3:15!2"
             after=" "
             class="conj"
@@ -10884,7 +10887,7 @@
                unicode="βραδύνω,"
                frame="A0:n54001001001"
                subjref="n54001001001">βραδύνω</w>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="1TI 3:15!4"
                   after=" "
                   class="conj"
@@ -10969,7 +10972,7 @@
                            unicode="ἀναστρέφεσθαι,"
                            frame="A1:n54001018006"
                            subjref="n54001018006">ἀναστρέφεσθαι</w>
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="1TI 3:15!8"
                               after=" "
                               class="prep"
@@ -11113,7 +11116,7 @@
                                        </wg>
                                     </wg>
                                     <wg class="np" rule="NPofNP" junction="apposition">
-                                       <wg rule="NpaNp">
+                                       <wg rule="NpaNp" class="np">
                                           <w ref="1TI 3:15!17"
                                              after=" "
                                              class="noun"
@@ -11207,7 +11210,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 3:16">1TI 3:16</milestone> καὶ ὁμολογουμένως μέγα ἐστὶν τὸ τῆς εὐσεβείας μυστήριον·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 3:16!1"
             after=" "
             class="conj"
@@ -11374,7 +11377,7 @@
                morph="V-API-3S"
                unicode="ἐφανερώθη"
                frame="A1:n54003016009">ἐφανερώθη</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 3:16!11"
                   after=" "
                   class="prep"
@@ -11424,7 +11427,7 @@
                unicode="ἐδικαιώθη"
                frame="A1:n54003016009"
                subjref="n54003016009">ἐδικαιώθη</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 3:16!14"
                   after=" "
                   class="prep"
@@ -11513,7 +11516,7 @@
                unicode="ἐκηρύχθη"
                frame="A1:n54003016009"
                subjref="n54003016009">ἐκηρύχθη</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 3:16!19"
                   after=" "
                   class="prep"
@@ -11563,7 +11566,7 @@
                unicode="ἐπιστεύθη"
                frame="A1:n54003016009"
                subjref="n54003016009">ἐπιστεύθη</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 3:16!22"
                   after=" "
                   class="prep"
@@ -11613,7 +11616,7 @@
                unicode="ἀνελήμφθη"
                frame="A1:n54003016009"
                subjref="n54003016009">ἀνελήμφθη</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 3:16!25"
                   after=" "
                   class="prep"
@@ -11651,7 +11654,7 @@
          <milestone unit="verse" id="1TI 4:3">1TI 4:3</milestone> 
          <milestone unit="verse" id="1TI 4:4">1TI 4:4</milestone> 
          <milestone unit="verse" id="1TI 4:5">1TI 4:5</milestone> Τὸ δὲ πνεῦμα ῥητῶς λέγει ὅτι ἐν ὑστέροις καιροῖς ἀποστήσονταί τινες τῆς πίστεως, προσέχοντες πνεύμασιν πλάνοις καὶ διδασκαλίαις δαιμονίων, ἐν ὑποκρίσει ψευδολόγων, κεκαυστηριασμένων τὴν ἰδίαν συνείδησιν, κωλυόντων γαμεῖν, ἀπέχεσθαι βρωμάτων, ἃ ὁ Θεὸς ἔκτισεν εἰς μετάλημψιν μετὰ εὐχαριστίας τοῖς πιστοῖς καὶ ἐπεγνωκόσι τὴν ἀλήθειαν. ὅτι πᾶν κτίσμα Θεοῦ καλόν, καὶ οὐδὲν ἀπόβλητον μετὰ εὐχαριστίας λαμβανόμενον· ἁγιάζεται γὰρ διὰ λόγου Θεοῦ καὶ ἐντεύξεως.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 4:1!2"
             after=" "
             class="conj"
@@ -11729,7 +11732,7 @@
                morph="V-PAI-3S"
                unicode="λέγει"
                frame="A0:n54004001003">λέγει</w>
-            <wg rule="that-VP" role="adv">
+            <wg rule="that-VP" class="cl" role="adv">
                <w ref="1TI 4:1!6"
                   after=" "
                   class="conj"
@@ -11741,7 +11744,7 @@
                   morph="CONJ"
                   unicode="ὅτι">ὅτι</w>
                <wg class="cl" rule="ADV-V-S-ADV-ADV-ADV">
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 4:1!7"
                         after=" "
                         class="prep"
@@ -11875,7 +11878,7 @@
                         unicode="προσέχοντες"
                         frame="A0:n54004001011"
                         subjref="n54004001011">προσέχοντες</w>
-                     <wg rule="NpaNp" role="adv">
+                     <wg rule="NpaNp" class="np" role="adv">
                         <wg class="np" rule="NpAdjp">
                            <w ref="1TI 4:1!15"
                               after=" "
@@ -11957,7 +11960,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 4:2!1"
                         after=" "
                         class="prep"
@@ -12224,7 +12227,7 @@
                                           morph="V-AAI-3S"
                                           unicode="ἔκτισεν"
                                           frame="A1:n54004003005 A0:n54004003007">ἔκτισεν</w>
-                                       <wg class="pp" rule="PrepNp" role="adv">
+                                       <wg rule="PrepNp" class="pp" role="adv">
                                           <w ref="1TI 4:3!9"
                                              after=" "
                                              class="prep"
@@ -12253,7 +12256,7 @@
                                                    ln="57.129"
                                                    morph="N-ASF"
                                                    unicode="μετάλημψιν">μετάλημψιν</w>
-                                                <wg class="pp" rule="PrepNp">
+                                                <wg rule="PrepNp" class="pp">
                                                    <w ref="1TI 4:3!11"
                                                       after=" "
                                                       class="prep"
@@ -12298,7 +12301,7 @@
                                                    ln="92.24"
                                                    morph="T-DPM"
                                                    unicode="τοῖς">τοῖς</w>
-                                                <wg rule="NpaNp">
+                                                <wg rule="NpaNp" class="np">
                                                    <w ref="1TI 4:3!14"
                                                       after=" "
                                                       class="adj"
@@ -12385,7 +12388,7 @@
                                              </wg>
                                           </wg>
                                        </wg>
-                                       <wg rule="sub-CL" role="adv">
+                                       <wg rule="sub-CL" class="cl" role="adv">
                                           <w ref="1TI 4:4!1"
                                              after=" "
                                              class="conj"
@@ -12511,7 +12514,7 @@
                                                       morph="A-NSN"
                                                       unicode="ἀπόβλητον">ἀπόβλητον</w>
                                                    <wg class="cl" rule="ADV-V" role="adv">
-                                                      <wg class="pp" rule="PrepNp" role="adv">
+                                                      <wg rule="PrepNp" class="pp" role="adv">
                                                          <w ref="1TI 4:4!9"
                                                             after=" "
                                                             class="prep"
@@ -12563,7 +12566,7 @@
                                                    </wg>
                                                 </wg>
                                              </wg>
-                                             <wg rule="sub-CL">
+                                             <wg rule="sub-CL" class="cl">
                                                 <w ref="1TI 4:5!2"
                                                    after=" "
                                                    class="conj"
@@ -12596,7 +12599,7 @@
                                                       unicode="ἁγιάζεται"
                                                       frame="A1:n54004004003"
                                                       subjref="n54004004003">ἁγιάζεται</w>
-                                                   <wg class="pp" rule="PrepNp" role="adv">
+                                                   <wg rule="PrepNp" class="pp" role="adv">
                                                       <w ref="1TI 4:5!3"
                                                          after=" "
                                                          class="prep"
@@ -12607,7 +12610,7 @@
                                                          gloss="by"
                                                          morph="PREP"
                                                          unicode="διὰ">διὰ</w>
-                                                      <wg rule="NpaNp">
+                                                      <wg rule="NpaNp" class="np">
                                                          <wg class="np" rule="NPofNP">
                                                             <w ref="1TI 4:5!4"
                                                                after=" "
@@ -12906,7 +12909,7 @@
                      ln="33.98"
                      morph="N-DPM"
                      unicode="λόγοις">λόγοις</w>
-                  <wg articular="true" rule="NpaNp">
+                  <wg articular="true" rule="NpaNp" class="np">
                      <wg class="np" articular="true" rule="DetNP">
                         <w ref="1TI 4:6!13"
                            after=" "
@@ -13054,7 +13057,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 4:7">1TI 4:7</milestone> τοὺς δὲ βεβήλους καὶ γραώδεις μύθους παραιτοῦ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 4:7!2"
             after=" "
             class="conj"
@@ -13084,7 +13087,7 @@
                   morph="T-APM"
                   unicode="τοὺς">τοὺς</w>
                <wg class="np" rule="AdjpNp">
-                  <wg rule="AdjpaAdjp">
+                  <wg rule="AdjpaAdjp" class="adjp">
                      <w ref="1TI 4:7!3"
                         after=" "
                         class="adj"
@@ -13172,7 +13175,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 4:7">1TI 4:7</milestone> γύμναζε δὲ σεαυτὸν πρὸς εὐσέβειαν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 4:7!9"
             after=" "
             class="conj"
@@ -13223,7 +13226,7 @@
                morph="F-2ASM"
                unicode="σεαυτὸν"
                referent="n54001018006">σεαυτὸν</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 4:7!11"
                   after=" "
                   class="prep"
@@ -13259,7 +13262,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 4:8">1TI 4:8</milestone> ἡ γὰρ σωματικὴ γυμνασία πρὸς ὀλίγον ἐστὶν ὠφέλιμος· ἡ δὲ εὐσέβεια πρὸς πάντα ὠφέλιμός ἐστιν, ἐπαγγελίαν ἔχουσα ζωῆς τῆς νῦν καὶ τῆς μελλούσης.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 4:8!2"
             after=" "
             class="conj"
@@ -13271,7 +13274,7 @@
             gloss="For"
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="S-ADV-VC-P">
                <wg class="np" articular="true" rule="DetNP" role="s">
                   <w ref="1TI 4:8!1"
@@ -13323,7 +13326,7 @@
                         unicode="γυμνασία">γυμνασία</w>
                   </wg>
                </wg>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 4:8!5"
                      after=" "
                      class="prep"
@@ -13431,7 +13434,7 @@
                         morph="N-NSF"
                         unicode="εὐσέβεια">εὐσέβεια</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 4:8!12"
                         after=" "
                         class="prep"
@@ -13547,7 +13550,7 @@
                               ln="23.88"
                               morph="N-GSF"
                               unicode="ζωῆς">ζωῆς</w>
-                           <wg articular="true" rule="NpaNp">
+                           <wg articular="true" rule="NpaNp" class="np">
                               <wg class="np" articular="true" rule="DetNP">
                                  <w ref="1TI 4:8!19"
                                     after=" "
@@ -13588,7 +13591,7 @@
                                     gloss="and"
                                     morph="CONJ"
                                     unicode="καὶ">καὶ</w>
-                                 <wg articular="true" rule="DetCL">
+                                 <wg articular="true" rule="DetCL" class="cl">
                                     <w ref="1TI 4:8!22"
                                        after=" "
                                        class="det"
@@ -13675,7 +13678,7 @@
                morph="N-NSM"
                unicode="λόγος">λόγος</w>
          </wg>
-         <wg rule="AdjpaAdjp" role="p">
+         <wg rule="AdjpaAdjp" class="adjp" role="p">
             <w ref="1TI 4:9!1"
                after=" "
                class="adj"
@@ -13759,7 +13762,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 4:10">1TI 4:10</milestone> εἰς τοῦτο γὰρ κοπιῶμεν καὶ ἀγωνιζόμεθα, ὅτι ἠλπίκαμεν ἐπὶ Θεῷ ζῶντι, ὅς ἐστιν Σωτὴρ πάντων ἀνθρώπων, μάλιστα πιστῶν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 4:10!3"
             after=" "
             class="conj"
@@ -13773,7 +13776,7 @@
             unicode="γὰρ">γὰρ</w>
          <wg Rule="ClCl" class="cl" nodeId="540040100010170">
             <wg class="cl" rule="ADV-V" role="o">
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 4:10!1"
                      after=" "
                      class="prep"
@@ -13800,7 +13803,7 @@
                      unicode="τοῦτο"
                      referent="n54004010008">τοῦτο</w>
                </wg>
-               <wg rule="Conj2VP" role="v">
+               <wg rule="Conj2VP" class="vp" role="v">
                   <w ref="1TI 4:10!4"
                      after=" "
                      class="verb"
@@ -13884,7 +13887,7 @@
                   unicode="ἠλπίκαμεν"
                   frame="A0:n54001001001;n54001018006;n54004006004"
                   subjref="n54001001001 n54001018006 n54004006004">ἠλπίκαμεν</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 4:10!9"
                      after=" "
                      class="prep"
@@ -14081,7 +14084,7 @@
             gloss="these things"
             morph="D-APN"
             unicode="ταῦτα">ταῦτα</w>
-         <wg rule="Conj2VP" role="v">
+         <wg rule="Conj2VP" class="vp" role="v">
             <w ref="1TI 4:11!1"
                after=" "
                class="verb"
@@ -14138,7 +14141,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 4:12">1TI 4:12</milestone> μηδείς σου τῆς νεότητος καταφρονείτω, ἀλλὰ τύπος γίνου τῶν πιστῶν ἐν λόγῳ, ἐν ἀναστροφῇ, ἐν ἀγάπῃ, ἐν πίστει, ἐν ἁγνείᾳ.</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="S-O-V">
             <w role="s"
                ref="1TI 4:12!1"
@@ -14310,7 +14313,7 @@
                   </wg>
                </wg>
                <wg type="group" rule="PpPpPpPpPp" role="adv">
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 4:12!11"
                         after=" "
                         class="prep"
@@ -14338,7 +14341,7 @@
                         morph="N-DSM"
                         unicode="λόγῳ,">λόγῳ</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 4:12!13"
                         after=" "
                         class="prep"
@@ -14366,7 +14369,7 @@
                         morph="N-DSF"
                         unicode="ἀναστροφῇ,">ἀναστροφῇ</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 4:12!15"
                         after=" "
                         class="prep"
@@ -14394,7 +14397,7 @@
                         morph="N-DSF"
                         unicode="ἀγάπῃ,">ἀγάπῃ</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 4:12!17"
                         after=" "
                         class="prep"
@@ -14422,7 +14425,7 @@
                         morph="N-DSF"
                         unicode="πίστει,">πίστει</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 4:12!19"
                         after=" "
                         class="prep"
@@ -14459,7 +14462,7 @@
       <p>
          <milestone unit="verse" id="1TI 4:13">1TI 4:13</milestone> ἕως ἔρχομαι πρόσεχε τῇ ἀναγνώσει, τῇ παρακλήσει, τῇ διδασκαλίᾳ.</p>
       <wg Rule="ClCl2" class="cl" nodeId="540040130010090">
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="1TI 4:13!1"
                after=" "
                class="conj"
@@ -14674,7 +14677,7 @@
                   morph="T-GSN"
                   unicode="τοῦ">τοῦ</w>
                <wg class="np" rule="PpNp2Np">
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 4:14!4"
                         after=" "
                         class="prep"
@@ -14770,7 +14773,7 @@
                   morph="P-2DS"
                   unicode="σοι"
                   referent="n54001018006">σοι</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 4:14!10"
                      after=" "
                      class="prep"
@@ -14798,7 +14801,7 @@
                      morph="N-GSF"
                      unicode="προφητείας">προφητείας</w>
                </wg>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 4:14!12"
                      after=" "
                      class="prep"
@@ -14941,7 +14944,7 @@
             frame="A0:n54001018006 A1:n54004015001"
             subjref="n54001018006">μελέτα</w>
          <wg class="cl" rule="P-VC" role="o">
-            <wg class="pp" rule="PrepNp" role="p">
+            <wg rule="PrepNp" class="pp" role="p">
                <w ref="1TI 4:15!3"
                   after=" "
                   class="prep"
@@ -14989,7 +14992,7 @@
                frame="A0:n54001018006"
                subjref="n54001018006">ἴσθι</w>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="1TI 4:15!6"
                after=" "
                class="conj"
@@ -15127,7 +15130,7 @@
                unicode="ἔπεχε"
                frame="A0:n54001018006"
                subjref="n54001018006">ἔπεχε</w>
-            <wg rule="NpaNp" role="adv">
+            <wg rule="NpaNp" class="np" role="adv">
                <w ref="1TI 4:16!2"
                   after=" "
                   class="pron"
@@ -15232,7 +15235,7 @@
                unicode="αὐτοῖς·"
                referent="n54004012005 n54004012007 n54004013003 n54004014002">αὐτοῖς</w>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="1TI 4:16!9"
                after=" "
                class="conj"
@@ -15305,7 +15308,7 @@
                   unicode="σώσεις"
                   frame="A0:n54001018006 A1:n54004016012;n54004016016"
                   subjref="n54001018006">σώσεις</w>
-               <wg rule="aNpaNp" role="o">
+               <wg rule="aNpaNp" class="np" role="o">
                   <wg type="group">
                      <w ref="1TI 4:16!11"
                         after=" "
@@ -15346,7 +15349,7 @@
                         gloss="and"
                         morph="CONJ"
                         unicode="καὶ">καὶ</w>
-                     <wg articular="true" rule="DetCL">
+                     <wg articular="true" rule="DetCL" class="cl">
                         <w ref="1TI 4:16!15"
                            after=" "
                            class="det"
@@ -15411,7 +15414,7 @@
          <milestone unit="verse" id="1TI 5:1">1TI 5:1</milestone> 
          <milestone unit="verse" id="1TI 5:2">1TI 5:2</milestone> Πρεσβυτέρῳ μὴ ἐπιπλήξῃς, ἀλλὰ παρακάλει ὡς πατέρα, νεωτέρους ὡς ἀδελφούς, πρεσβυτέρας ὡς μητέρας, νεωτέρας ὡς ἀδελφὰς ἐν πάσῃ ἁγνείᾳ.</p>
       <wg type="group" rule="ClCl">
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="O-ADV-V">
                <w role="o"
                   ref="1TI 5:1!1"
@@ -15496,7 +15499,7 @@
                      unicode="παρακάλει"
                      frame="A0:n54001018006"
                      subjref="n54001018006">παρακάλει</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 5:1!6"
                         after=" "
                         class="conj"
@@ -15548,7 +15551,7 @@
                   ln="67.116"
                   morph="A-APM-C"
                   unicode="νεωτέρους">νεωτέρους</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 5:1!9"
                      after=" "
                      class="conj"
@@ -15597,7 +15600,7 @@
                   ln="9.31"
                   morph="A-APF-C"
                   unicode="πρεσβυτέρας">πρεσβυτέρας</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 5:2!2"
                      after=" "
                      class="conj"
@@ -15646,7 +15649,7 @@
                   ln="67.116"
                   morph="A-APF-C"
                   unicode="νεωτέρας">νεωτέρας</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 5:2!5"
                      after=" "
                      class="conj"
@@ -15676,7 +15679,7 @@
                      morph="N-APF"
                      unicode="ἀδελφὰς">ἀδελφὰς</w>
                </wg>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 5:2!7"
                      after=" "
                      class="prep"
@@ -15818,7 +15821,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:4">1TI 5:4</milestone> εἰ δέ τις χήρα τέκνα ἢ ἔκγονα ἔχει, μανθανέτωσαν πρῶτον τὸν ἴδιον οἶκον εὐσεβεῖν καὶ ἀμοιβὰς ἀποδιδόναι τοῖς προγόνοις·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:4!2"
             after=" "
             class="conj"
@@ -15831,7 +15834,7 @@
             morph="CONJ"
             unicode="δέ">δέ</w>
          <wg Rule="ClCl2" class="cl" nodeId="540050040010180">
-            <wg rule="sub-CL" role="o">
+            <wg rule="sub-CL" class="cl" role="o">
                <w ref="1TI 5:4!1"
                   after=" "
                   class="conj"
@@ -15874,7 +15877,7 @@
                         morph="N-NSF"
                         unicode="χήρα">χήρα</w>
                   </wg>
-                  <wg rule="NpaNp" role="o">
+                  <wg rule="NpaNp" class="np" role="o">
                      <w ref="1TI 5:4!5"
                         after=" "
                         class="noun"
@@ -15971,7 +15974,7 @@
                ln="60.46"
                morph="ADV-S"
                unicode="πρῶτον">πρῶτον</w>
-            <wg rule="CLaCL" role="o">
+            <wg rule="CLaCL" class="cl" role="o">
                <wg class="cl" rule="O-V">
                   <wg class="np" articular="true" rule="DetNP" role="o">
                      <w ref="1TI 5:4!11"
@@ -16131,7 +16134,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:4">1TI 5:4</milestone> τοῦτο γάρ ἐστιν ἀπόδεκτον ἐνώπιον τοῦ Θεοῦ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:4!21"
             after=" "
             class="conj"
@@ -16192,7 +16195,7 @@
                ln="25.85"
                morph="A-NSN"
                unicode="ἀπόδεκτον">ἀπόδεκτον</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 5:4!24"
                   after=" "
                   class="prep"
@@ -16245,7 +16248,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:5">1TI 5:5</milestone> ἡ δὲ ὄντως χήρα καὶ μεμονωμένη ἤλπικεν ἐπὶ Θεὸν καὶ προσμένει ταῖς δεήσεσιν καὶ ταῖς προσευχαῖς νυκτὸς καὶ ἡμέρας·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:5!2"
             after=" "
             class="conj"
@@ -16257,7 +16260,7 @@
             gloss="now"
             morph="CONJ"
             unicode="δὲ">δὲ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="S-V-ADV">
                <wg class="np" articular="true" rule="DetNP" role="s">
                   <w ref="1TI 5:5!1"
@@ -16288,7 +16291,7 @@
                         ln="70.2"
                         morph="ADV"
                         unicode="ὄντως">ὄντως</w>
-                     <wg rule="NpaNp">
+                     <wg rule="NpaNp" class="np">
                         <w ref="1TI 5:5!4"
                            after=" "
                            class="noun"
@@ -16359,7 +16362,7 @@
                   morph="V-RAI-3S"
                   unicode="ἤλπικεν"
                   frame="A0:n54005005004;n54005005006">ἤλπικεν</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 5:5!8"
                      after=" "
                      class="prep"
@@ -16420,7 +16423,7 @@
                      unicode="προσμένει"
                      frame="A0:n54005005004"
                      subjref="n54005005004">προσμένει</w>
-                  <wg articular="true" rule="NpaNp" role="adv">
+                  <wg articular="true" rule="NpaNp" class="np" role="adv">
                      <wg class="np" articular="true" rule="DetNP">
                         <w ref="1TI 5:5!12"
                            after=" "
@@ -16500,7 +16503,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg rule="NpaNp" role="adv">
+                  <wg rule="NpaNp" class="np" role="adv">
                      <w ref="1TI 5:5!17"
                         after=" "
                         class="noun"
@@ -16554,7 +16557,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:6">1TI 5:6</milestone> ἡ δὲ σπαταλῶσα ζῶσα τέθνηκεν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:6!2"
             after=" "
             class="conj"
@@ -16567,7 +16570,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg class="cl" rule="S-ADV-V">
-            <wg articular="true" rule="DetCL" role="s">
+            <wg articular="true" rule="DetCL" class="cl" role="s">
                <w ref="1TI 5:6!1"
                   after=" "
                   class="det"
@@ -16699,7 +16702,7 @@
             unicode="παράγγελλε,"
             frame="A0:n54001018006 A1:n54005007002"
             subjref="n54001018006">παράγγελλε</w>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="1TI 5:7!4"
                after=" "
                class="conj"
@@ -16751,7 +16754,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:8">1TI 5:8</milestone> εἰ δέ τις τῶν ἰδίων καὶ μάλιστα οἰκείων οὐ προνοεῖ, τὴν πίστιν ἤρνηται καὶ ἔστιν ἀπίστου χείρων.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:8!2"
             after=" "
             class="conj"
@@ -16764,7 +16767,7 @@
             morph="CONJ"
             unicode="δέ">δέ</w>
          <wg Rule="ClCl2" class="cl" nodeId="540050080010160">
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="1TI 5:8!1"
                   after=" "
                   class="conj"
@@ -16807,7 +16810,7 @@
                         ln="92.24"
                         morph="T-GPM"
                         unicode="τῶν">τῶν</w>
-                     <wg rule="NpaNp">
+                     <wg rule="NpaNp" class="np">
                         <w ref="1TI 5:8!5"
                            after=" "
                            class="adj"
@@ -17192,7 +17195,7 @@
             </wg>
          </wg>
          <wg class="cl" rule="ADV-V" role="adv">
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 5:10!1"
                   after=" "
                   class="prep"
@@ -17260,7 +17263,7 @@
                subjref="n54005009001">μαρτυρουμένη</w>
          </wg>
          <wg type="group" rule="ClClClClCl" role="o">
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="1TI 5:10!5"
                   after=" "
                   class="conj"
@@ -17293,7 +17296,7 @@
                   frame="A0:n54005009001"
                   subjref="n54005009001">ἐτεκνοτρόφησεν</w>
             </wg>
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="1TI 5:10!7"
                   after=" "
                   class="conj"
@@ -17326,7 +17329,7 @@
                   frame="A0:n54005009001"
                   subjref="n54005009001">ἐξενοδόχησεν</w>
             </wg>
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="1TI 5:10!9"
                   after=" "
                   class="conj"
@@ -17393,7 +17396,7 @@
                      subjref="n54005009001">ἔνιψεν</w>
                </wg>
             </wg>
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="1TI 5:10!13"
                   after=" "
                   class="conj"
@@ -17448,7 +17451,7 @@
                      subjref="n54005009001">ἐπήρκεσεν</w>
                </wg>
             </wg>
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="1TI 5:10!16"
                   after=" "
                   class="conj"
@@ -17538,7 +17541,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:11">1TI 5:11</milestone> νεωτέρας δὲ χήρας παραιτοῦ·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:11!2"
             after=" "
             class="conj"
@@ -17611,7 +17614,7 @@
       <p>
          <milestone unit="verse" id="1TI 5:11">1TI 5:11</milestone> 
          <milestone unit="verse" id="1TI 5:12">1TI 5:12</milestone> ὅταν γὰρ καταστρηνιάσωσιν τοῦ Χριστοῦ, γαμεῖν θέλουσιν, ἔχουσαι κρίμα ὅτι τὴν πρώτην πίστιν ἠθέτησαν·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:11!6"
             after=" "
             class="conj"
@@ -17624,7 +17627,7 @@
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
          <wg Rule="ClCl2" class="cl" nodeId="540050110050130">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="1TI 5:11!5"
                   after=" "
                   class="conj"
@@ -17767,7 +17770,7 @@
                   ln="56.30"
                   morph="N-ASN"
                   unicode="κρίμα">κρίμα</w>
-               <wg rule="sub-CL" role="adv">
+               <wg rule="sub-CL" class="cl" role="adv">
                   <w ref="1TI 5:12!3"
                      after=" "
                      class="conj"
@@ -17859,7 +17862,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:13">1TI 5:13</milestone> ἅμα δὲ καὶ ἀργαὶ μανθάνουσιν, περιερχόμεναι τὰς οἰκίας, οὐ μόνον δὲ ἀργαὶ ἀλλὰ καὶ φλύαροι καὶ περίεργοι, λαλοῦσαι τὰ μὴ δέοντα.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:13!2"
             after=" "
             class="conj"
@@ -17871,7 +17874,7 @@
             gloss="then"
             morph="CONJ"
             unicode="δὲ">δὲ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="ADV-ADV-V-ADV">
                <w role="adv"
                   ref="1TI 5:13!1"
@@ -18069,7 +18072,7 @@
                            gloss="also"
                            morph="CONJ"
                            unicode="καὶ">καὶ</w>
-                        <wg rule="AdjpaAdjp">
+                        <wg rule="AdjpaAdjp" class="adjp">
                            <w ref="1TI 5:13!15"
                               after=" "
                               class="adj"
@@ -18136,7 +18139,7 @@
                            unicode="λαλοῦσαι"
                            frame="A0:n54005011003 A1:n54005013021"
                            subjref="n54005011003">λαλοῦσαι</w>
-                        <wg articular="true" rule="DetCL" role="o">
+                        <wg articular="true" rule="DetCL" class="cl" role="o">
                            <w ref="1TI 5:13!19"
                               after=" "
                               class="det"
@@ -18196,7 +18199,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:14">1TI 5:14</milestone> βούλομαι οὖν νεωτέρας γαμεῖν, τεκνογονεῖν, οἰκοδεσποτεῖν, μηδεμίαν ἀφορμὴν διδόναι τῷ ἀντικειμένῳ λοιδορίας χάριν·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:14!2"
             after=" "
             class="conj"
@@ -18351,7 +18354,7 @@
                         morph="V-PAN"
                         unicode="διδόναι"
                         frame="A0:n00000000000 A1:n54005014008 A2:n54005014011">διδόναι</w>
-                     <wg articular="true" rule="DetCL" role="io">
+                     <wg articular="true" rule="DetCL" class="cl" role="io">
                         <w ref="1TI 5:14!10"
                            after=" "
                            class="det"
@@ -18389,7 +18392,7 @@
                            unicode="ἀντικειμένῳ"
                            frame="A0:n00000000000">ἀντικειμένῳ</w>
                      </wg>
-                     <wg class="pp" rule="NP-Prep" role="adv">
+                     <wg rule="NP-Prep" class="pp" role="adv">
                         <w ref="1TI 5:14!12"
                            after=" "
                            class="noun"
@@ -18428,7 +18431,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:15">1TI 5:15</milestone> ἤδη γάρ τινες ἐξετράπησαν ὀπίσω τοῦ Σατανᾶ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:15!2"
             after=" "
             class="conj"
@@ -18488,7 +18491,7 @@
                morph="V-2API-3P"
                unicode="ἐξετράπησαν"
                frame="A0:n54005015003">ἐξετράπησαν</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 5:15!5"
                   after=" "
                   class="prep"
@@ -18542,7 +18545,7 @@
       <p>
          <milestone unit="verse" id="1TI 5:16">1TI 5:16</milestone> εἴ τις πιστὴ ἔχει χήρας, ἐπαρκείτω αὐταῖς, καὶ μὴ βαρείσθω ἡ ἐκκλησία, ἵνα ταῖς ὄντως χήραις ἐπαρκέσῃ.</p>
       <wg Rule="ClCl" class="cl" nodeId="540050160010170">
-         <wg rule="sub-CL">
+         <wg rule="sub-CL" class="cl">
             <w ref="1TI 5:16!1"
                after=" "
                class="conj"
@@ -18737,7 +18740,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="1TI 5:16!13"
                after=" "
                class="conj"
@@ -18962,7 +18965,7 @@
                ln="78.7"
                morph="ADV-S"
                unicode="μάλιστα">μάλιστα</w>
-            <wg articular="true" rule="DetCL" role="s">
+            <wg articular="true" rule="DetCL" class="cl" role="s">
                <w ref="1TI 5:17!9"
                   after=" "
                   class="det"
@@ -18999,7 +19002,7 @@
                      morph="V-PAP-NPM"
                      unicode="κοπιῶντες"
                      frame="A0:n00000000000">κοπιῶντες</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 5:17!11"
                         after=" "
                         class="prep"
@@ -19010,7 +19013,7 @@
                         gloss="in"
                         morph="PREP"
                         unicode="ἐν">ἐν</w>
-                     <wg rule="NpaNp">
+                     <wg rule="NpaNp" class="np">
                         <w ref="1TI 5:17!12"
                            after=" "
                            class="noun"
@@ -19065,7 +19068,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:18">1TI 5:18</milestone> λέγει γὰρ ἡ γραφή Βοῦν ἀλοῶντα οὐ φιμώσεις, καί Ἄξιος ὁ ἐργάτης τοῦ μισθοῦ αὐτοῦ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 5:18!2"
             after=" "
             class="conj"
@@ -19130,7 +19133,7 @@
                   morph="N-NSF"
                   unicode="γραφή">γραφή</w>
             </wg>
-            <wg rule="CLaCL" role="o">
+            <wg rule="CLaCL" class="cl" role="o">
                <wg class="cl" rule="O-ADV-V">
                   <wg class="np" rule="NpAdjp" role="o">
                      <w ref="1TI 5:18!5"
@@ -19326,7 +19329,7 @@
       <p>
          <milestone unit="verse" id="1TI 5:19">1TI 5:19</milestone> κατὰ πρεσβυτέρου κατηγορίαν μὴ παραδέχου, ἐκτὸς εἰ μὴ ἐπὶ δύο ἢ τριῶν μαρτύρων.</p>
       <wg Rule="ClCl" class="cl" nodeId="540050190010130">
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="1TI 5:19!1"
                after=" "
                class="prep"
@@ -19402,7 +19405,7 @@
             unicode="παραδέχου,"
             frame="A0:n54001018006 A1:n54005019003"
             subjref="n54001018006">παραδέχου</w>
-         <wg rule="AdvpCL" role="o">
+         <wg rule="AdvpCL" class="cl" role="o">
             <w ref="1TI 5:19!6"
                after=" "
                class="adv"
@@ -19415,7 +19418,7 @@
                ln="89.138"
                morph="ADV"
                unicode="ἐκτὸς">ἐκτὸς</w>
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="1TI 5:19!7"
                   after=" "
                   class="conj"
@@ -19438,7 +19441,7 @@
                      gloss="not"
                      morph="PRT-N"
                      unicode="μὴ">μὴ</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 5:19!9"
                         after=" "
                         class="prep"
@@ -19516,7 +19519,7 @@
       <p>
          <milestone unit="verse" id="1TI 5:20">1TI 5:20</milestone> Τοὺς ἁμαρτάνοντας ἐνώπιον πάντων ἔλεγχε, ἵνα καὶ οἱ λοιποὶ φόβον ἔχωσιν.</p>
       <wg Rule="ClCl" class="cl" nodeId="540050200010110">
-         <wg articular="true" rule="DetCL" role="o">
+         <wg articular="true" rule="DetCL" class="cl" role="o">
             <w ref="1TI 5:20!1"
                after=" "
                class="det"
@@ -19554,7 +19557,7 @@
                unicode="ἁμαρτάνοντας"
                frame="A0:n00000000000">ἁμαρτάνοντας</w>
          </wg>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="1TI 5:20!3"
                after=" "
                class="prep"
@@ -19603,7 +19606,7 @@
             unicode="ἔλεγχε,"
             frame="A0:n54001018006 A1:n54005020002"
             subjref="n54001018006">ἔλεγχε</w>
-         <wg rule="sub-CL" role="o">
+         <wg rule="sub-CL" class="cl" role="o">
             <w ref="1TI 5:20!6"
                after=" "
                class="conj"
@@ -19721,7 +19724,7 @@
             unicode="διαμαρτύρομαι"
             frame="A0:n54001001001"
             subjref="n54001001001">διαμαρτύρομαι</w>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="1TI 5:21!2"
                after=" "
                class="prep"
@@ -19734,7 +19737,7 @@
                ln="90.20"
                morph="PREP"
                unicode="ἐνώπιον">ἐνώπιον</w>
-            <wg articular="true" rule="Conj3Np">
+            <wg articular="true" rule="Conj3Np" class="np">
                <wg class="np" articular="true" rule="DetNP">
                   <w ref="1TI 5:21!3"
                      after=" "
@@ -19879,7 +19882,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="that-VP" role="o">
+         <wg rule="that-VP" class="cl" role="o">
             <w ref="1TI 5:21!12"
                after=" "
                class="conj"
@@ -19926,7 +19929,7 @@
                   unicode="φυλάξῃς"
                   frame="A0:n54001018006 A1:n54005021013"
                   subjref="n54001018006">φυλάξῃς</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 5:21!15"
                      after=" "
                      class="prep"
@@ -19994,7 +19997,7 @@
                      unicode="ποιῶν"
                      frame="A0:n54001018006 A1:n54005021017"
                      subjref="n54001018006">ποιῶν</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 5:21!19"
                         after=" "
                         class="prep"
@@ -20030,7 +20033,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:22">1TI 5:22</milestone> Χεῖρας ταχέως μηδενὶ ἐπιτίθει, μηδὲ κοινώνει ἁμαρτίαις ἀλλοτρίαις·</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="O-ADV-IO-V">
             <w role="o"
                ref="1TI 5:22!1"
@@ -20333,7 +20336,7 @@
                unicode="χρῶ"
                frame="A0:n54001018006 A1:n54005023004"
                subjref="n54001018006">χρῶ</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 5:23!7"
                   after=" "
                   class="prep"
@@ -20344,7 +20347,7 @@
                   gloss="because of"
                   morph="PREP"
                   unicode="διὰ">διὰ</w>
-               <wg articular="true" rule="NpaNp">
+               <wg articular="true" rule="NpaNp" class="np">
                   <wg class="np" articular="true" rule="DetNP">
                      <w ref="1TI 5:23!8"
                         after=" "
@@ -20464,7 +20467,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:24">1TI 5:24</milestone> Τινῶν ἀνθρώπων αἱ ἁμαρτίαι πρόδηλοί εἰσιν προάγουσαι εἰς κρίσιν, τισὶν δὲ καὶ ἐπακολουθοῦσιν·</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="S-P-VC-ADV">
             <wg class="np" articular="true" rule="ofNPNP" role="s">
                <wg class="np" rule="AdjpNp">
@@ -20587,7 +20590,7 @@
                   unicode="προάγουσαι"
                   frame="A0:n54005024004"
                   subjref="n54005024004">προάγουσαι</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 5:24!8"
                      after=" "
                      class="prep"
@@ -20683,7 +20686,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 5:25">1TI 5:25</milestone> ὡσαύτως καὶ τὰ ἔργα τὰ καλὰ πρόδηλα, καὶ τὰ ἄλλως ἔχοντα κρυβῆναι οὐ δύνανται.</p>
-      <wg rule="AdvpCL">
+      <wg rule="AdvpCL" class="cl">
          <w ref="1TI 5:25!1"
             after=" "
             class="adv"
@@ -20696,7 +20699,7 @@
             ln="64.16"
             morph="ADV"
             unicode="ὡσαύτως">ὡσαύτως</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="S-P" predication="verbless">
                <wg class="np" articular="true" rule="AdvpNp" role="s">
                   <w ref="1TI 5:25!2"
@@ -20806,7 +20809,7 @@
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
                <wg class="cl" rule="S-O-ADV-V">
-                  <wg articular="true" rule="DetCL" role="s">
+                  <wg articular="true" rule="DetCL" class="cl" role="s">
                      <w ref="1TI 5:25!9"
                         after=" "
                         class="det"
@@ -20950,7 +20953,7 @@
                ln="87.80"
                morph="V-PAI-3P"
                unicode="εἰσὶν">εἰσὶν</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 6:1!3"
                   after=" "
                   class="prep"
@@ -21118,7 +21121,7 @@
             morph="V-PNM-3P"
             unicode="ἡγείσθωσαν,"
             frame="A0:n54006001005 A1:n54006001008">ἡγείσθωσαν</w>
-         <wg rule="sub-CL" role="o">
+         <wg rule="sub-CL" class="cl" role="o">
             <w ref="1TI 6:1!13"
                after=" "
                class="conj"
@@ -21141,7 +21144,7 @@
                   gloss="not"
                   morph="PRT-N"
                   unicode="μὴ">μὴ</w>
-               <wg articular="true" rule="NpaNp" role="s">
+               <wg articular="true" rule="NpaNp" class="np" role="s">
                   <wg class="np" articular="true" rule="DetNP">
                      <w ref="1TI 6:1!15"
                         after=" "
@@ -21282,7 +21285,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 6:2">1TI 6:2</milestone> οἱ δὲ πιστοὺς ἔχοντες δεσπότας μὴ καταφρονείτωσαν, ὅτι ἀδελφοί εἰσιν,</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 6:2!2"
             after=" "
             class="conj"
@@ -21295,7 +21298,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl" class="cl" nodeId="540060020010090">
-            <wg articular="true" rule="DetCL" role="s">
+            <wg articular="true" rule="DetCL" class="cl" role="s">
                <w ref="1TI 6:2!1"
                   after=" "
                   class="det"
@@ -21396,7 +21399,7 @@
                morph="V-PAM-3P"
                unicode="καταφρονείτωσαν,"
                frame="A0:n54006002004">καταφρονείτωσαν</w>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="1TI 6:2!8"
                   after=" "
                   class="conj"
@@ -21450,7 +21453,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 6:2">1TI 6:2</milestone> ἀλλὰ μᾶλλον δουλευέτωσαν, ὅτι πιστοί εἰσιν καὶ ἀγαπητοὶ οἱ τῆς εὐεργεσίας ἀντιλαμβανόμενοι.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 6:2!11"
             after=" "
             class="conj"
@@ -21497,7 +21500,7 @@
                unicode="δουλευέτωσαν,"
                frame="A0:n54006002004"
                subjref="n54006002004">δουλευέτωσαν</w>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="1TI 6:2!14"
                   after=" "
                   class="conj"
@@ -21526,7 +21529,7 @@
                      gloss="they are"
                      morph="V-PAI-3P"
                      unicode="εἰσιν">εἰσιν</w>
-                  <wg rule="NpaNp" role="p">
+                  <wg rule="NpaNp" class="np" role="p">
                      <w ref="1TI 6:2!15"
                         after=" "
                         class="adj"
@@ -21570,7 +21573,7 @@
                            unicode="ἀγαπητοὶ">ἀγαπητοὶ</w>
                      </wg>
                   </wg>
-                  <wg articular="true" rule="DetCL" role="s">
+                  <wg articular="true" rule="DetCL" class="cl" role="s">
                      <w ref="1TI 6:2!19"
                         after=" "
                         class="det"
@@ -21667,7 +21670,7 @@
             morph="D-APN"
             unicode="Ταῦτα"
             referent="n54006001012 n54006002007 n54006002013">Ταῦτα</w>
-         <wg rule="Conj2VP" role="v">
+         <wg rule="Conj2VP" class="vp" role="v">
             <w ref="1TI 6:2!24"
                after=" "
                class="verb"
@@ -21727,7 +21730,7 @@
          <milestone unit="verse" id="1TI 6:4">1TI 6:4</milestone> 
          <milestone unit="verse" id="1TI 6:5">1TI 6:5</milestone> εἴ τις ἑτεροδιδασκαλεῖ καὶ μὴ προσέρχεται ὑγιαίνουσιν λόγοις, τοῖς τοῦ Κυρίου ἡμῶν Ἰησοῦ Χριστοῦ, καὶ τῇ κατ’ εὐσέβειαν διδασκαλίᾳ, τετύφωται, μηδὲν ἐπιστάμενος, ἀλλὰ νοσῶν περὶ ζητήσεις καὶ λογομαχίας, ἐξ ὧν γίνεται φθόνος, ἔρις, βλασφημίαι, ὑπόνοιαι πονηραί, διαπαρατριβαὶ διεφθαρμένων ἀνθρώπων τὸν νοῦν καὶ ἀπεστερημένων τῆς ἀληθείας, νομιζόντων πορισμὸν εἶναι τὴν εὐσέβειαν.</p>
       <wg Rule="ClCl2" class="cl" nodeId="540060030010500">
-         <wg rule="sub-CL" role="o">
+         <wg rule="sub-CL" class="cl" role="o">
             <w ref="1TI 6:3!1"
                after=" "
                class="conj"
@@ -21738,7 +21741,7 @@
                gloss="If"
                morph="COND"
                unicode="εἴ">εἴ</w>
-            <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
                <wg class="cl" rule="S-V">
                   <w role="s"
                      ref="1TI 6:3!2"
@@ -21818,7 +21821,7 @@
                         unicode="προσέρχεται"
                         frame="A0:n54006003002"
                         subjref="n54006003002">προσέρχεται</w>
-                     <wg rule="NpaNp" role="adv">
+                     <wg rule="NpaNp" class="np" role="adv">
                         <wg type="apposition" class="np" rule="Np-Appos">
                            <wg class="np" rule="AdjpNp">
                               <w role="v"
@@ -21997,7 +22000,7 @@
                                  morph="T-DSF"
                                  unicode="τῇ">τῇ</w>
                               <wg class="np" rule="PpNp2Np">
-                                 <wg class="pp" rule="PrepNp">
+                                 <wg rule="PrepNp" class="pp">
                                     <w ref="1TI 6:3!17"
                                        after="’"
                                        class="prep"
@@ -22069,7 +22072,7 @@
             unicode="τετύφωται,"
             frame="A1:n54006003002"
             subjref="n54006003002">τετύφωται</w>
-         <wg rule="CLaCL" role="adv">
+         <wg rule="CLaCL" class="cl" role="adv">
             <wg class="cl" rule="O-V">
                <w role="o"
                   ref="1TI 6:4!2"
@@ -22144,7 +22147,7 @@
                      unicode="νοσῶν"
                      frame="A0:n54006003002"
                      subjref="n54006003002">νοσῶν</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="1TI 6:4!6"
                         after=" "
                         class="prep"
@@ -22156,7 +22159,7 @@
                         morph="PREP"
                         unicode="περὶ">περὶ</w>
                      <wg class="np" type="apposition" rule="NP-CL">
-                        <wg rule="NpaNp">
+                        <wg rule="NpaNp" class="np">
                            <w ref="1TI 6:4!7"
                               after=" "
                               class="noun"
@@ -22206,7 +22209,7 @@
                             clauseType="nominalized"
                             rule="ADV-V-S"
                             junction="apposition">
-                           <wg class="pp" rule="PrepNp" role="adv">
+                           <wg rule="PrepNp" class="pp" role="adv">
                               <w ref="1TI 6:4!10"
                                  after=" "
                                  class="prep"
@@ -22369,7 +22372,7 @@
                                        ln="9.1"
                                        morph="N-GPM"
                                        unicode="ἀνθρώπων">ἀνθρώπων</w>
-                                    <wg clauseType="nominalized" rule="CLa2CL">
+                                    <wg clauseType="nominalized" rule="CLa2CL" class="cl">
                                        <wg class="cl" rule="V-ADV">
                                           <w role="v"
                                              ref="1TI 6:5!2"
@@ -22598,7 +22601,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 6:6">1TI 6:6</milestone> ἔστιν δὲ πορισμὸς μέγας ἡ εὐσέβεια μετὰ αὐταρκείας·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 6:6!2"
             after=" "
             class="conj"
@@ -22693,7 +22696,7 @@
                      ln="53.1"
                      morph="N-NSF"
                      unicode="εὐσέβεια">εὐσέβεια</w>
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="1TI 6:6!7"
                         after=" "
                         class="prep"
@@ -22729,7 +22732,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 6:7">1TI 6:7</milestone> οὐδὲν γὰρ εἰσηνέγκαμεν εἰς τὸν κόσμον, ὅτι οὐδὲ ἐξενεγκεῖν τι δυνάμεθα·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 6:7!2"
             after=" "
             class="conj"
@@ -22778,7 +22781,7 @@
                unicode="εἰσηνέγκαμεν"
                frame="A0:n54001001001;n54001018006;n54004006004 A1:n54006007001"
                subjref="n54001001001 n54001018006 n54004006004">εἰσηνέγκαμεν</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 6:7!4"
                   after=" "
                   class="prep"
@@ -22823,7 +22826,7 @@
                      unicode="κόσμον,">κόσμον</w>
                </wg>
             </wg>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="1TI 6:7!7"
                   after=" "
                   class="conj"
@@ -22911,7 +22914,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 6:8">1TI 6:8</milestone> ἔχοντες δὲ διατροφὰς καὶ σκεπάσματα, τούτοις ἀρκεσθησόμεθα.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 6:8!2"
             after=" "
             class="conj"
@@ -22944,7 +22947,7 @@
                   unicode="ἔχοντες"
                   frame="A0:n54001001001;n54001018006;n54004006004 A1:n54006008003;n54006008005"
                   subjref="n54001001001 n54001018006 n54004006004">ἔχοντες</w>
-               <wg rule="NpaNp" role="o">
+               <wg rule="NpaNp" class="np" role="o">
                   <w ref="1TI 6:8!3"
                      after=" "
                      class="noun"
@@ -23033,7 +23036,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 6:9">1TI 6:9</milestone> οἱ δὲ βουλόμενοι πλουτεῖν ἐμπίπτουσιν εἰς πειρασμὸν καὶ παγίδα καὶ ἐπιθυμίας πολλὰς ἀνοήτους καὶ βλαβεράς, αἵτινες βυθίζουσιν τοὺς ἀνθρώπους εἰς ὄλεθρον καὶ ἀπώλειαν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 6:9!2"
             after=" "
             class="conj"
@@ -23046,7 +23049,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg class="cl" rule="S-V-ADV">
-            <wg articular="true" rule="DetCL" role="s">
+            <wg articular="true" rule="DetCL" class="cl" role="s">
                <w ref="1TI 6:9!1"
                   after=" "
                   class="det"
@@ -23123,7 +23126,7 @@
                morph="V-PAI-3P"
                unicode="ἐμπίπτουσιν"
                frame="A0:n54006009003">ἐμπίπτουσιν</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 6:9!6"
                   after=" "
                   class="prep"
@@ -23135,7 +23138,7 @@
                   morph="PREP"
                   unicode="εἰς">εἰς</w>
                <wg class="np" type="apposition" rule="NP-CL">
-                  <wg rule="Conj3Np">
+                  <wg rule="Conj3Np" class="np">
                      <w ref="1TI 6:9!7"
                         after=" "
                         class="noun"
@@ -23223,7 +23226,7 @@
                                  morph="A-APF"
                                  unicode="πολλὰς">πολλὰς</w>
                            </wg>
-                           <wg rule="AdjpaAdjp">
+                           <wg rule="AdjpaAdjp" class="adjp">
                               <w ref="1TI 6:9!13"
                                  after=" "
                                  class="adj"
@@ -23344,7 +23347,7 @@
                            morph="N-APM"
                            unicode="ἀνθρώπους">ἀνθρώπους</w>
                      </wg>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="1TI 6:9!20"
                            after=" "
                            class="prep"
@@ -23355,7 +23358,7 @@
                            gloss="into"
                            morph="PREP"
                            unicode="εἰς">εἰς</w>
-                        <wg rule="NpaNp">
+                        <wg rule="NpaNp" class="np">
                            <w ref="1TI 6:9!21"
                               after=" "
                               class="noun"
@@ -23411,7 +23414,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 6:10">1TI 6:10</milestone> ῥίζα γὰρ πάντων τῶν κακῶν ἐστιν ἡ φιλαργυρία, ἧς τινες ὀρεγόμενοι ἀπεπλανήθησαν ἀπὸ τῆς πίστεως καὶ ἑαυτοὺς περιέπειραν ὀδύναις πολλαῖς.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 6:10!2"
             after=" "
             class="conj"
@@ -23545,7 +23548,10 @@
                      morph="N-NSF"
                      unicode="φιλαργυρία,">φιλαργυρία</w>
                </wg>
-               <wg clauseType="nominalized" rule="CLaCL" junction="apposition">
+               <wg clauseType="nominalized"
+                   rule="CLaCL"
+                   class="cl"
+                   junction="apposition">
                   <wg class="cl" clauseType="nominalized" rule="ADV-S-V-ADV">
                      <wg class="cl" clauseType="nominalized" rule="O-V" role="adv">
                         <w role="o"
@@ -23621,7 +23627,7 @@
                         morph="V-API-3P"
                         unicode="ἀπεπλανήθησαν"
                         frame="A1:n54006010010">ἀπεπλανήθησαν</w>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="1TI 6:10!13"
                            after=" "
                            class="prep"
@@ -23758,7 +23764,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="1TI 6:11">1TI 6:11</milestone> Σὺ δέ, ὦ ἄνθρωπε Θεοῦ, ταῦτα φεῦγε·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 6:11!2"
             after=","
             class="conj"
@@ -23875,7 +23881,7 @@
       <p>
          <milestone unit="verse" id="1TI 6:11">1TI 6:11</milestone> 
          <milestone unit="verse" id="1TI 6:12">1TI 6:12</milestone> δίωκε δὲ δικαιοσύνην, εὐσέβειαν, πίστιν, ἀγάπην, ὑπομονήν, πραϋπαθίαν. ἀγωνίζου τὸν καλὸν ἀγῶνα τῆς πίστεως, ἐπιλαβοῦ τῆς αἰωνίου ζωῆς, εἰς ἣν ἐκλήθης καὶ ὡμολόγησας τὴν καλὴν ὁμολογίαν ἐνώπιον πολλῶν μαρτύρων.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="1TI 6:11!9"
             after=" "
             class="conj"
@@ -24195,7 +24201,7 @@
                       clauseType="nominalized"
                       rule="ADV-V"
                       junction="apposition">
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="1TI 6:12!11"
                            after=" "
                            class="prep"
@@ -24222,7 +24228,7 @@
                            unicode="ἣν"
                            referent="n54006012010">ἣν</w>
                      </wg>
-                     <wg rule="CLaCL" role="v">
+                     <wg rule="CLaCL" class="cl" role="v">
                         <w role="v"
                            rule="v2cl"
                            ref="1TI 6:12!13"
@@ -24326,7 +24332,7 @@
                                        unicode="ὁμολογίαν">ὁμολογίαν</w>
                                  </wg>
                               </wg>
-                              <wg class="pp" rule="PrepNp" role="adv">
+                              <wg rule="PrepNp" class="pp" role="adv">
                                  <w ref="1TI 6:12!19"
                                     after=" "
                                     class="prep"
@@ -24407,7 +24413,7 @@
             unicode="παραγγέλλω"
             frame="A0:n54001001001 A2:n54006011004 A1:n54006014001"
             subjref="n54001001001">παραγγέλλω</w>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="1TI 6:13!2"
                after=" "
                class="prep"
@@ -24420,7 +24426,7 @@
                ln="90.20"
                morph="PREP"
                unicode="ἐνώπιον">ἐνώπιον</w>
-            <wg articular="true" rule="NpaNp">
+            <wg articular="true" rule="NpaNp" class="np">
                <wg type="apposition" class="np" articular="true" rule="Np-Appos">
                   <wg class="np" articular="true" rule="DetNP">
                      <w ref="1TI 6:13!3"
@@ -24455,7 +24461,7 @@
                         morph="N-GSM"
                         unicode="Θεοῦ">Θεοῦ</w>
                   </wg>
-                  <wg articular="true" rule="DetCL" junction="apposition">
+                  <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                      <w ref="1TI 6:13!5"
                         after=" "
                         class="det"
@@ -24575,7 +24581,7 @@
                            unicode="Ἰησοῦ"
                            junction="apposition">Ἰησοῦ</w>
                      </wg>
-                     <wg articular="true" rule="DetCL" junction="apposition">
+                     <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                         <w ref="1TI 6:13!12"
                            after=" "
                            class="det"
@@ -24613,7 +24619,7 @@
                               unicode="μαρτυρήσαντος"
                               frame="A0:n54006013010 A1:n54006013019"
                               subjref="n54006013010">μαρτυρήσαντος</w>
-                           <wg class="pp" rule="PrepNp" role="adv">
+                           <wg rule="PrepNp" class="pp" role="adv">
                               <w ref="1TI 6:13!14"
                                  after=" "
                                  class="prep"
@@ -24814,7 +24820,7 @@
                   morph="A-ASF"
                   unicode="ἀνεπίλημπτον">ἀνεπίλημπτον</w>
             </wg>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="1TI 6:14!7"
                   after=" "
                   class="prep"
@@ -25052,7 +25058,7 @@
                                        morph="T-NSM"
                                        unicode="ὁ">ὁ</w>
                                     <wg class="np" rule="AdjpNp">
-                                       <wg rule="AdjpaAdjp">
+                                       <wg rule="AdjpaAdjp" class="adjp">
                                           <w ref="1TI 6:15!6"
                                              after=" "
                                              class="adj"
@@ -25130,7 +25136,7 @@
                                        ln="92.24"
                                        morph="T-NSM"
                                        unicode="ὁ">ὁ</w>
-                                    <wg rule="NpaNp">
+                                    <wg rule="NpaNp" class="np">
                                        <wg class="np" rule="NPofNP">
                                           <w ref="1TI 6:15!11"
                                              after=" "
@@ -25148,7 +25154,7 @@
                                              ln="37.67"
                                              morph="N-NSM"
                                              unicode="Βασιλεὺς">Βασιλεὺς</w>
-                                          <wg articular="true" rule="DetCL">
+                                          <wg articular="true" rule="DetCL" class="cl">
                                              <w ref="1TI 6:15!12"
                                                 after=" "
                                                 class="det"
@@ -25215,7 +25221,7 @@
                                                 ln="12.9"
                                                 morph="N-NSM"
                                                 unicode="Κύριος">Κύριος</w>
-                                             <wg articular="true" rule="DetCL">
+                                             <wg articular="true" rule="DetCL" class="cl">
                                                 <w ref="1TI 6:15!16"
                                                    after=" "
                                                    class="det"
@@ -25390,7 +25396,10 @@
                                  </wg>
                               </wg>
                            </wg>
-                           <wg clauseType="nominalized" rule="CLaCL" junction="apposition">
+                           <wg clauseType="nominalized"
+                               rule="CLaCL"
+                               class="cl"
+                               junction="apposition">
                               <wg class="cl" clauseType="nominalized" rule="O-V-S">
                                  <w role="o"
                                     ref="1TI 6:16!8"
@@ -25538,7 +25547,7 @@
                               morph="R-DSM"
                               unicode="ᾧ"
                               referent="n54006015009">ᾧ</w>
-                           <wg rule="NpaNp" role="s">
+                           <wg rule="NpaNp" class="np" role="s">
                               <w ref="1TI 6:16!16"
                                  after=" "
                                  class="noun"
@@ -25661,7 +25670,7 @@
                   ln="57.26"
                   morph="A-DPM"
                   unicode="πλουσίοις">πλουσίοις</w>
-               <wg class="pp" articular="true" rule="PrepNp">
+               <wg articular="true" rule="PrepNp" class="pp">
                   <w ref="1TI 6:17!3"
                      after=" "
                      class="prep"
@@ -25754,7 +25763,7 @@
                   gloss="not"
                   morph="PRT-N"
                   unicode="μὴ">μὴ</w>
-               <wg rule="CLaCL">
+               <wg rule="CLaCL" class="cl">
                   <w role="v"
                      rule="v2cl"
                      ref="1TI 6:17!9"
@@ -25806,7 +25815,7 @@
                            unicode="ἠλπικέναι"
                            frame="A0:n54006017002"
                            subjref="n54006017002">ἠλπικέναι</w>
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="1TI 6:17!12"
                               after=" "
                               class="prep"
@@ -25867,7 +25876,7 @@
                   ln="89.125"
                   morph="CONJ"
                   unicode="ἀλλ’">ἀλλ</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 6:17!16"
                      after=" "
                      class="prep"
@@ -25895,7 +25904,7 @@
                         ln="12.1"
                         morph="N-DSM"
                         unicode="Θεῷ">Θεῷ</w>
-                     <wg articular="true" rule="DetCL" junction="apposition">
+                     <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                         <w ref="1TI 6:17!18"
                            after=" "
                            class="det"
@@ -25979,7 +25988,7 @@
                               ln="59.57"
                               morph="ADV"
                               unicode="πλουσίως">πλουσίως</w>
-                           <wg class="pp" rule="PrepNp" role="adv">
+                           <wg rule="PrepNp" class="pp" role="adv">
                               <w ref="1TI 6:17!23"
                                  after=" "
                                  class="prep"
@@ -26050,7 +26059,7 @@
                   unicode="πλουτεῖν"
                   frame="A0:n54006017002"
                   subjref="n54006017002">πλουτεῖν</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 6:18!3"
                      after=" "
                      class="prep"
@@ -26219,7 +26228,7 @@
                      morph="A-ASM"
                      unicode="καλὸν">καλὸν</w>
                </wg>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="1TI 6:19!5"
                      after=" "
                      class="prep"
@@ -26230,7 +26239,7 @@
                      gloss="for"
                      morph="PREP"
                      unicode="εἰς">εἰς</w>
-                  <wg articular="true" rule="DetCL">
+                  <wg articular="true" rule="DetCL" class="cl">
                      <w ref="1TI 6:19!6"
                         after=" "
                         class="det"
@@ -26271,7 +26280,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="1TI 6:19!8"
                after=" "
                class="conj"
@@ -26480,7 +26489,7 @@
                   ln="92.24"
                   morph="T-APF"
                   unicode="τὰς">τὰς</w>
-               <wg rule="NpaNp">
+               <wg rule="NpaNp" class="np">
                   <wg class="np" rule="AdjpNp">
                      <w ref="1TI 6:20!8"
                         after=" "
@@ -26651,7 +26660,7 @@
                                     gloss="some"
                                     morph="X-NPM"
                                     unicode="τινες">τινες</w>
-                                 <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                                 <wg articular="true" rule="PrepNp" class="pp" role="adv">
                                     <w ref="1TI 6:21!4"
                                        after=" "
                                        class="prep"
@@ -26762,7 +26771,7 @@
                morph="N-NSF"
                unicode="χάρις">χάρις</w>
          </wg>
-         <wg class="pp" rule="PrepNp" role="p">
+         <wg rule="PrepNp" class="pp" role="p">
             <w ref="1TI 6:21!10"
                after="’"
                class="prep"

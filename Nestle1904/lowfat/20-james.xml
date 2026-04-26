@@ -24,7 +24,7 @@
                morph="N-NSM"
                unicode="Ἰάκωβος">Ἰάκωβος</w>
             <wg class="np" rule="ofNPNP" junction="apposition">
-               <wg rule="NpaNp">
+               <wg rule="NpaNp" class="np">
                   <w ref="JAS 1:1!2"
                      after=" "
                      class="noun"
@@ -191,7 +191,7 @@
                      ln="92.24"
                      morph="T-DPF"
                      unicode="ταῖς">ταῖς</w>
-                  <wg class="pp" articular="true" rule="PrepNp">
+                  <wg articular="true" rule="PrepNp" class="pp">
                      <w ref="JAS 1:1!12"
                         after=" "
                         class="prep"
@@ -353,7 +353,7 @@
             unicode="ἡγήσασθε,"
             frame="A0:n59001002004 A1:n59001002002"
             subjref="n59001002004">ἡγήσασθε</w>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 1:2!6"
                after=" "
                class="conj"
@@ -444,7 +444,7 @@
                unicode="γινώσκοντες"
                frame="A0:n59001002004"
                subjref="n59001002004">γινώσκοντες</w>
-            <wg rule="that-VP" role="o">
+            <wg rule="that-VP" class="cl" role="o">
                <w ref="JAS 1:3!2"
                   after=" "
                   class="conj"
@@ -584,7 +584,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:4">JAS 1:4</milestone> ἡ δὲ ὑπομονὴ ἔργον τέλειον ἐχέτω, ἵνα ἦτε τέλειοι καὶ ὁλόκληροι, ἐν μηδενὶ λειπόμενοι.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:4!2"
             after=" "
             class="conj"
@@ -684,7 +684,7 @@
                morph="V-PAM-3S"
                unicode="ἐχέτω,"
                frame="A0:n59001004003 A1:n59001004004">ἐχέτω</w>
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="JAS 1:4!7"
                   after=" "
                   class="conj"
@@ -715,7 +715,7 @@
                      morph="V-PAS-2P"
                      unicode="ἦτε"
                      subjref="n59001002004">ἦτε</w>
-                  <wg rule="AdjpaAdjp" role="p">
+                  <wg rule="AdjpaAdjp" class="adjp" role="p">
                      <w ref="JAS 1:4!9"
                         after=" "
                         class="adj"
@@ -760,7 +760,7 @@
                      </wg>
                   </wg>
                   <wg class="cl" rule="ADV-V" role="adv">
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 1:4!12"
                            after=" "
                            class="prep"
@@ -819,7 +819,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:5">JAS 1:5</milestone> Εἰ δέ τις ὑμῶν λείπεται σοφίας, αἰτείτω παρὰ τοῦ διδόντος Θεοῦ πᾶσιν ἁπλῶς καὶ μὴ ὀνειδίζοντος, καὶ δοθήσεται αὐτῷ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:5!2"
             after=" "
             class="conj"
@@ -834,7 +834,7 @@
             morph="CONJ"
             unicode="δέ">δέ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590010050010180">
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="JAS 1:5!1"
                   after=" "
                   class="conj"
@@ -935,7 +935,7 @@
                   unicode="αἰτείτω"
                   frame="A0:n59001005003"
                   subjref="n59001005003">αἰτείτω</w>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 1:5!8"
                      after=" "
                      class="prep"
@@ -963,7 +963,7 @@
                         morph="T-GSM"
                         unicode="τοῦ">τοῦ</w>
                      <wg class="np" rule="AdjpNp">
-                        <wg clauseType="nominalized" rule="CLaCL">
+                        <wg clauseType="nominalized" rule="CLaCL" class="cl">
                            <wg class="cl" rule="V-IO-ADV">
                               <w role="v"
                                  ref="JAS 1:5!10"
@@ -1140,7 +1140,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:6">JAS 1:6</milestone> αἰτείτω δὲ ἐν πίστει, μηδὲν διακρινόμενος·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:6!2"
             after=" "
             class="conj"
@@ -1175,7 +1175,7 @@
                unicode="αἰτείτω"
                frame="A0:n59001005003"
                subjref="n59001005003">αἰτείτω</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 1:6!3"
                   after=" "
                   class="prep"
@@ -1250,7 +1250,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:6">JAS 1:6</milestone> ὁ γὰρ διακρινόμενος ἔοικεν κλύδωνι θαλάσσης ἀνεμιζομένῳ καὶ ῥιπιζομένῳ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:6!8"
             after=" "
             class="conj"
@@ -1265,7 +1265,7 @@
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
          <wg class="cl" rule="S-V-ADV">
-            <wg articular="true" rule="DetCL" role="s">
+            <wg articular="true" rule="DetCL" class="cl" role="s">
                <w ref="JAS 1:6!7"
                   after=" "
                   class="det"
@@ -1357,7 +1357,7 @@
                      morph="N-GSF"
                      unicode="θαλάσσης">θαλάσσης</w>
                </wg>
-               <wg rule="AdjpaAdjp">
+               <wg rule="AdjpaAdjp" class="adjp">
                   <w role="v"
                      rule="v2cl"
                      ref="JAS 1:6!13"
@@ -1423,7 +1423,7 @@
       <p>
          <milestone unit="verse" id="JAS 1:7">JAS 1:7</milestone> 
          <milestone unit="verse" id="JAS 1:8">JAS 1:8</milestone> μὴ γὰρ οἰέσθω ὁ ἄνθρωπος ἐκεῖνος ὅτι λήμψεταί τι παρὰ τοῦ Κυρίου, ἀνὴρ δίψυχος, ἀκατάστατος ἐν πάσαις ταῖς ὁδοῖς αὐτοῦ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:7!2"
             after=" "
             class="conj"
@@ -1521,7 +1521,7 @@
                      unicode="ἐκεῖνος"
                      referent="n59001006009">ἐκεῖνος</w>
                </wg>
-               <wg rule="that-VP" role="o">
+               <wg rule="that-VP" class="cl" role="o">
                   <w ref="JAS 1:7!7"
                      after=" "
                      class="conj"
@@ -1568,7 +1568,7 @@
                         gloss="anything"
                         morph="X-ASN"
                         unicode="τι">τι</w>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 1:7!10"
                            after=" "
                            class="prep"
@@ -1666,7 +1666,7 @@
                   ln="37.32"
                   morph="A-NSM"
                   unicode="ἀκατάστατος">ἀκατάστατος</w>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 1:8!4"
                      after=" "
                      class="prep"
@@ -1755,7 +1755,7 @@
       <p>
          <milestone unit="verse" id="JAS 1:9">JAS 1:9</milestone> 
          <milestone unit="verse" id="JAS 1:10">JAS 1:10</milestone> Καυχάσθω δὲ ὁ ἀδελφὸς ὁ ταπεινὸς ἐν τῷ ὕψει αὐτοῦ, ὁ δὲ πλούσιος ἐν τῇ ταπεινώσει αὐτοῦ, ὅτι ὡς ἄνθος χόρτου παρελεύσεται.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:9!2"
             after=" "
             class="conj"
@@ -1769,7 +1769,7 @@
             ln="89.124 89.94"
             morph="CONJ"
             unicode="δὲ">δὲ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="V-S-ADV">
                <w role="v"
                   ref="JAS 1:9!1"
@@ -1857,7 +1857,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 1:9!7"
                      after=" "
                      class="prep"
@@ -1969,7 +1969,7 @@
                         morph="A-NSM"
                         unicode="πλούσιος">πλούσιος</w>
                   </wg>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                  <wg articular="true" rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 1:10!4"
                         after=" "
                         class="prep"
@@ -2033,7 +2033,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg rule="sub-CL" role="adv">
+                  <wg rule="sub-CL" class="cl" role="adv">
                      <w ref="JAS 1:10!8"
                         after=" "
                         class="conj"
@@ -2047,7 +2047,7 @@
                         morph="CONJ"
                         unicode="ὅτι">ὅτι</w>
                      <wg Rule="ClCl2" class="cl" nodeId="590010100090040">
-                        <wg rule="sub-CL" role="adv">
+                        <wg rule="sub-CL" class="cl" role="adv">
                            <w ref="JAS 1:10!9"
                               after=" "
                               class="conj"
@@ -2126,7 +2126,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:11">JAS 1:11</milestone> ἀνέτειλεν γὰρ ὁ ἥλιος σὺν τῷ καύσωνι καὶ ἐξήρανεν τὸν χόρτον, καὶ τὸ ἄνθος αὐτοῦ ἐξέπεσεν καὶ ἡ εὐπρέπεια τοῦ προσώπου αὐτοῦ ἀπώλετο·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:11!2"
             after=" "
             class="conj"
@@ -2140,8 +2140,8 @@
             ln="89.23"
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
-         <wg rule="CLaCL">
-            <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
+            <wg rule="CLaCL" class="cl">
                <wg class="cl" rule="V-S-ADV">
                   <w role="v"
                      ref="JAS 1:11!1"
@@ -2195,7 +2195,7 @@
                         morph="N-NSM"
                         unicode="ἥλιος">ἥλιος</w>
                   </wg>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                  <wg articular="true" rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 1:11!5"
                         after=" "
                         class="prep"
@@ -2322,7 +2322,7 @@
                   gloss="and"
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
-               <wg rule="CLaCL">
+               <wg rule="CLaCL" class="cl">
                   <wg class="cl" rule="S-V">
                      <wg class="np" articular="true" rule="DetNP" role="s">
                         <w ref="JAS 1:11!13"
@@ -2580,7 +2580,7 @@
                   unicode="πλούσιος">πλούσιος</w>
             </wg>
          </wg>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 1:11!28"
                after=" "
                class="prep"
@@ -2762,7 +2762,7 @@
                   unicode="πειρασμόν,">πειρασμόν</w>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 1:12!6"
                after=" "
                class="conj"
@@ -2947,7 +2947,7 @@
                         unicode="ἐπηγγείλατο"
                         frame="A0:n59001007012 A1:n59001012014 A2:n59001012017"
                         subjref="n59001007012">ἐπηγγείλατο</w>
-                     <wg articular="true" rule="DetCL" role="io">
+                     <wg articular="true" rule="DetCL" class="cl" role="io">
                         <w ref="JAS 1:12!16"
                            after=" "
                            class="det"
@@ -3071,7 +3071,7 @@
             morph="V-PAM-3S"
             unicode="λεγέτω"
             frame="A0:n59001013001">λεγέτω</w>
-         <wg rule="that-VP" role="o">
+         <wg rule="that-VP" class="cl" role="o">
             <w ref="JAS 1:13!4"
                after=" "
                class="conj"
@@ -3083,7 +3083,7 @@
                morph="CONJ"
                unicode="ὅτι">ὅτι</w>
             <wg class="cl" rule="ADV-V">
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 1:13!5"
                      after=" "
                      class="prep"
@@ -3140,7 +3140,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:13">JAS 1:13</milestone> ὁ γὰρ Θεὸς ἀπείραστός ἐστιν κακῶν, πειράζει δὲ αὐτὸς οὐδένα.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:13!9"
             after=" "
             class="conj"
@@ -3154,7 +3154,7 @@
             ln="89.23"
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="S-P-VC-ADV">
                <wg class="np" articular="true" rule="DetNP" role="s">
                   <w ref="JAS 1:13!8"
@@ -3312,7 +3312,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:14">JAS 1:14</milestone> ἕκαστος δὲ πειράζεται ὑπὸ τῆς ἰδίας ἐπιθυμίας ἐξελκόμενος καὶ δελεαζόμενος·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:14!2"
             after=" "
             class="conj"
@@ -3363,7 +3363,7 @@
                unicode="πειράζεται"
                frame="A1:n59001014001">πειράζεται</w>
             <wg class="cl" rule="ADV-V" role="adv">
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 1:14!4"
                      after=" "
                      class="prep"
@@ -3428,7 +3428,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg rule="Conj2VP" role="v">
+               <wg rule="Conj2VP" class="vp" role="v">
                   <w ref="JAS 1:14!8"
                      after=" "
                      class="verb"
@@ -3489,7 +3489,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:15">JAS 1:15</milestone> εἶτα ἡ ἐπιθυμία συλλαβοῦσα τίκτει ἁμαρτίαν, ἡ δὲ ἁμαρτία ἀποτελεσθεῖσα ἀποκύει θάνατον.</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="ADV-S-ADV-V-O">
             <w role="adv"
                ref="JAS 1:15!1"
@@ -3796,7 +3796,7 @@
       <p>
          <milestone unit="verse" id="JAS 1:17">JAS 1:17</milestone> πᾶσα δόσις ἀγαθὴ καὶ πᾶν δώρημα τέλειον ἄνωθέν ἐστιν καταβαῖνον ἀπὸ τοῦ Πατρὸς τῶν φώτων, παρ’ ᾧ οὐκ ἔνι παραλλαγὴ ἢ τροπῆς ἀποσκίασμα.</p>
       <wg class="cl" rule="S-P-VC-ADV">
-         <wg rule="NpaNp" role="s">
+         <wg rule="NpaNp" class="np" role="s">
             <wg class="np" rule="All-NP">
                <w ref="JAS 1:17!1"
                   after=" "
@@ -3961,7 +3961,7 @@
                unicode="καταβαῖνον"
                frame="A0:n59001017002;n59001017006"
                subjref="n59001017002 n59001017006">καταβαῖνον</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 1:17!11"
                   after=" "
                   class="prep"
@@ -4045,7 +4045,7 @@
                       clauseType="nominalized"
                       rule="P-ADV-VC-S"
                       junction="apposition">
-                     <wg class="pp" rule="PrepNp" role="p">
+                     <wg rule="PrepNp" class="pp" role="p">
                         <w ref="JAS 1:17!16"
                            after="’"
                            class="prep"
@@ -4101,7 +4101,7 @@
                         ln="13.70"
                         morph="V-PAI-3S"
                         unicode="ἔνι">ἔνι</w>
-                     <wg rule="NpaNp" role="s">
+                     <wg rule="NpaNp" class="np" role="s">
                         <w ref="JAS 1:17!20"
                            after=" "
                            class="noun"
@@ -4268,7 +4268,7 @@
                morph="N-GSF"
                unicode="ἀληθείας,">ἀληθείας</w>
          </wg>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 1:18!6"
                after=" "
                class="prep"
@@ -4279,7 +4279,7 @@
                gloss="for"
                morph="PREP"
                unicode="εἰς">εἰς</w>
-            <wg articular="true" rule="DetCL">
+            <wg articular="true" rule="DetCL" class="cl">
                <w ref="JAS 1:18!7"
                   after=" "
                   class="det"
@@ -4501,7 +4501,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:19">JAS 1:19</milestone> ἔστω δὲ πᾶς ἄνθρωπος ταχὺς εἰς τὸ ἀκοῦσαι, βραδὺς εἰς τὸ λαλῆσαι, βραδὺς εἰς ὀργήν·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:19!6"
             after=" "
             class="conj"
@@ -4580,7 +4580,7 @@
                   ln="67.110"
                   morph="A-NSM"
                   unicode="ταχὺς">ταχὺς</w>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 1:19!10"
                      after=" "
                      class="prep"
@@ -4593,7 +4593,7 @@
                      ln="90.23"
                      morph="PREP"
                      unicode="εἰς">εἰς</w>
-                  <wg articular="true" rule="DetCL">
+                  <wg articular="true" rule="DetCL" class="cl">
                      <w ref="JAS 1:19!11"
                         after=" "
                         class="det"
@@ -4648,7 +4648,7 @@
                   ln="67.123"
                   morph="A-NSM"
                   unicode="βραδὺς">βραδὺς</w>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 1:19!14"
                      after=" "
                      class="prep"
@@ -4661,7 +4661,7 @@
                      ln="90.23"
                      morph="PREP"
                      unicode="εἰς">εἰς</w>
-                  <wg articular="true" rule="DetCL">
+                  <wg articular="true" rule="DetCL" class="cl">
                      <w ref="JAS 1:19!15"
                         after=" "
                         class="det"
@@ -4716,7 +4716,7 @@
                   ln="67.123"
                   morph="A-NSM"
                   unicode="βραδὺς">βραδὺς</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 1:19!18"
                      after=" "
                      class="prep"
@@ -4751,7 +4751,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:20">JAS 1:20</milestone> ὀργὴ γὰρ ἀνδρὸς δικαιοσύνην Θεοῦ οὐκ ἐργάζεται.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:20!2"
             after=" "
             class="conj"
@@ -4866,7 +4866,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:21">JAS 1:21</milestone> διὸ ἀποθέμενοι πᾶσαν ῥυπαρίαν καὶ περισσείαν κακίας ἐν πραΰτητι δέξασθε τὸν ἔμφυτον λόγον τὸν δυνάμενον σῶσαι τὰς ψυχὰς ὑμῶν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:21!1"
             after=" "
             class="conj"
@@ -4918,7 +4918,7 @@
                      ln="59.23"
                      morph="A-ASF"
                      unicode="πᾶσαν">πᾶσαν</w>
-                  <wg rule="NpaNp">
+                  <wg rule="NpaNp" class="np">
                      <w ref="JAS 1:21!4"
                         after=" "
                         class="noun"
@@ -4984,7 +4984,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 1:21!8"
                   after=" "
                   class="prep"
@@ -5089,7 +5089,7 @@
                         unicode="λόγον">λόγον</w>
                   </wg>
                </wg>
-               <wg articular="true" rule="DetCL" junction="apposition">
+               <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                   <w ref="JAS 1:21!14"
                      after=" "
                      class="det"
@@ -5207,7 +5207,7 @@
          <milestone unit="verse" id="JAS 1:22">JAS 1:22</milestone> 
          <milestone unit="verse" id="JAS 1:23">JAS 1:23</milestone> 
          <milestone unit="verse" id="JAS 1:24">JAS 1:24</milestone> γίνεσθε δὲ ποιηταὶ λόγου, καὶ μὴ ἀκροαταὶ μόνον παραλογιζόμενοι ἑαυτούς. ὅτι εἴ τις ἀκροατὴς λόγου ἐστὶν καὶ οὐ ποιητής, οὗτος ἔοικεν ἀνδρὶ κατανοοῦντι τὸ πρόσωπον τῆς γενέσεως αὐτοῦ ἐν ἐσόπτρῳ· κατενόησεν γὰρ ἑαυτὸν καὶ ἀπελήλυθεν, καὶ εὐθέως ἐπελάθετο ὁποῖος ἦν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:22!2"
             after=" "
             class="conj"
@@ -5376,7 +5376,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="JAS 1:23!1"
                   after=" "
                   class="conj"
@@ -5390,7 +5390,7 @@
                   morph="CONJ"
                   unicode="ὅτι">ὅτι</w>
                <wg Rule="ClCl2" class="cl" nodeId="590010230020290">
-                  <wg rule="sub-CL" role="adv">
+                  <wg rule="sub-CL" class="cl" role="adv">
                      <w ref="JAS 1:23!2"
                         after=" "
                         class="conj"
@@ -5401,7 +5401,7 @@
                         gloss="if"
                         morph="COND"
                         unicode="εἴ">εἴ</w>
-                     <wg rule="CLaCL">
+                     <wg rule="CLaCL" class="cl">
                         <wg class="cl" rule="S-P-VC">
                            <w role="s"
                               ref="JAS 1:23!3"
@@ -5674,7 +5674,7 @@
                               </wg>
                            </wg>
                         </wg>
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="JAS 1:23!19"
                               after=" "
                               class="prep"
@@ -5706,7 +5706,7 @@
                         </wg>
                      </wg>
                   </wg>
-                  <wg rule="sub-CL" role="adv">
+                  <wg rule="sub-CL" class="cl" role="adv">
                      <w ref="JAS 1:24!2"
                         after=" "
                         class="conj"
@@ -5718,7 +5718,7 @@
                         gloss="for"
                         morph="CONJ"
                         unicode="γὰρ">γὰρ</w>
-                     <wg rule="Conj3CL">
+                     <wg rule="Conj3CL" class="cl">
                         <wg class="cl" rule="V-O">
                            <w role="v"
                               ref="JAS 1:24!1"
@@ -5885,7 +5885,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 1:25">JAS 1:25</milestone> ὁ δὲ παρακύψας εἰς νόμον τέλειον τὸν τῆς ἐλευθερίας καὶ παραμείνας, οὐκ ἀκροατὴς ἐπιλησμονῆς γενόμενος ἀλλὰ ποιητὴς ἔργου, οὗτος μακάριος ἐν τῇ ποιήσει αὐτοῦ ἔσται.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 1:25!2"
             after=" "
             class="conj"
@@ -5898,7 +5898,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590010250010240">
-            <wg articular="true" rule="DetCL" role="aux">
+            <wg articular="true" rule="DetCL" class="cl" role="aux">
                <w ref="JAS 1:25!1"
                   after=" "
                   class="det"
@@ -5914,7 +5914,7 @@
                   ln="92.24"
                   morph="T-NSM"
                   unicode="ὁ">ὁ</w>
-               <wg clauseType="nominalized" rule="CLaCL">
+               <wg clauseType="nominalized" rule="CLaCL" class="cl">
                   <wg class="cl" rule="V-ADV">
                      <w role="v"
                         ref="JAS 1:25!3"
@@ -5936,7 +5936,7 @@
                         morph="V-AAP-NSM"
                         unicode="παρακύψας"
                         frame="A0:n00000000000">παρακύψας</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 1:25!4"
                            after=" "
                            class="prep"
@@ -6219,7 +6219,7 @@
                ln="25.119"
                morph="A-NSM"
                unicode="μακάριος">μακάριος</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 1:25!21"
                   after=" "
                   class="prep"
@@ -6308,7 +6308,7 @@
       <p>
          <milestone unit="verse" id="JAS 1:26">JAS 1:26</milestone> Εἴ τις δοκεῖ θρησκὸς εἶναι, μὴ χαλιναγωγῶν γλῶσσαν ἑαυτοῦ ἀλλὰ ἀπατῶν καρδίαν ἑαυτοῦ, τούτου μάταιος ἡ θρησκεία.</p>
       <wg Rule="ClCl2" class="cl" nodeId="590010260010170">
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 1:26!1"
                after=" "
                class="conj"
@@ -6616,7 +6616,7 @@
                   ln="53.1"
                   morph="N-NSF"
                   unicode="θρησκεία">θρησκεία</w>
-               <wg rule="AdjpaAdjp">
+               <wg rule="AdjpaAdjp" class="adjp">
                   <w ref="JAS 1:27!2"
                      after=" "
                      class="adj"
@@ -6661,7 +6661,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg class="pp" articular="true" rule="PrepNp">
+            <wg articular="true" rule="PrepNp" class="pp">
                <w ref="JAS 1:27!5"
                   after=" "
                   class="prep"
@@ -6690,7 +6690,7 @@
                      ln="92.24"
                      morph="T-DSM"
                      unicode="τῷ">τῷ</w>
-                  <wg rule="NpaNp">
+                  <wg rule="NpaNp" class="np">
                      <w ref="JAS 1:27!7"
                         after=" "
                         class="noun"
@@ -6794,7 +6794,7 @@
                      morph="V-PNN"
                      unicode="ἐπισκέπτεσθαι"
                      frame="A0:n00000000000 A1:n59001027013;n59001027015">ἐπισκέπτεσθαι</w>
-                  <wg rule="NpaNp" role="o">
+                  <wg rule="NpaNp" class="np" role="o">
                      <w ref="JAS 1:27!13"
                         after=" "
                         class="adj"
@@ -6838,7 +6838,7 @@
                            unicode="χήρας">χήρας</w>
                      </wg>
                   </wg>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                  <wg articular="true" rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 1:27!16"
                         after=" "
                         class="prep"
@@ -6956,7 +6956,7 @@
                      morph="V-PAN"
                      unicode="τηρεῖν"
                      frame="A0:n00000000000 A1:n59001027021">τηρεῖν</w>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                  <wg articular="true" rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 1:27!23"
                         after=" "
                         class="prep"
@@ -7057,7 +7057,7 @@
             gloss="not"
             morph="PRT-N"
             unicode="μὴ">μὴ</w>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 2:1!4"
                after=" "
                class="prep"
@@ -7275,7 +7275,7 @@
          <milestone unit="verse" id="JAS 2:2">JAS 2:2</milestone> 
          <milestone unit="verse" id="JAS 2:3">JAS 2:3</milestone> 
          <milestone unit="verse" id="JAS 2:4">JAS 2:4</milestone> ἐὰν γὰρ εἰσέλθῃ εἰς συναγωγὴν ὑμῶν ἀνὴρ χρυσοδακτύλιος ἐν ἐσθῆτι λαμπρᾷ, εἰσέλθῃ δὲ καὶ πτωχὸς ἐν ῥυπαρᾷ ἐσθῆτι, ἐπιβλέψητε δὲ ἐπὶ τὸν φοροῦντα τὴν ἐσθῆτα τὴν λαμπρὰν καὶ εἴπητε Σὺ κάθου ὧδε καλῶς, καὶ τῷ πτωχῷ εἴπητε Σὺ στῆθι ἐκεῖ ἢ κάθου ὑπὸ τὸ ὑποπόδιόν μου, οὐ διεκρίθητε ἐν ἑαυτοῖς καὶ ἐγένεσθε κριταὶ διαλογισμῶν πονηρῶν;</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:2!2"
             after=" "
             class="conj"
@@ -7290,7 +7290,7 @@
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590020020010540">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="JAS 2:2!1"
                   after=" "
                   class="conj"
@@ -7301,8 +7301,8 @@
                   gloss="If"
                   morph="COND"
                   unicode="ἐὰν">ἐὰν</w>
-               <wg rule="CLaCL">
-                  <wg rule="CLaCL">
+               <wg rule="CLaCL" class="cl">
+                  <wg rule="CLaCL" class="cl">
                      <wg class="cl" rule="V-ADV-S">
                         <w role="v"
                            ref="JAS 2:2!3"
@@ -7323,7 +7323,7 @@
                            morph="V-2AAS-3S"
                            unicode="εἰσέλθῃ"
                            frame="A0:n59002002007">εἰσέλθῃ</w>
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="JAS 2:2!4"
                               after=" "
                               class="prep"
@@ -7403,7 +7403,7 @@
                                  morph="A-NSM"
                                  unicode="χρυσοδακτύλιος">χρυσοδακτύλιος</w>
                            </wg>
-                           <wg class="pp" rule="PrepNp">
+                           <wg rule="PrepNp" class="pp">
                               <w ref="JAS 2:2!9"
                                  after=" "
                                  class="prep"
@@ -7511,7 +7511,7 @@
                                     ln="57.53"
                                     morph="A-NSM"
                                     unicode="πτωχὸς">πτωχὸς</w>
-                                 <wg class="pp" rule="PrepNp">
+                                 <wg rule="PrepNp" class="pp">
                                     <w ref="JAS 2:2!16"
                                        after=" "
                                        class="prep"
@@ -7575,8 +7575,8 @@
                         gloss="also"
                         morph="CONJ"
                         unicode="δὲ">δὲ</w>
-                     <wg rule="CLaCL">
-                        <wg rule="CLaCL">
+                     <wg rule="CLaCL" class="cl">
+                        <wg rule="CLaCL" class="cl">
                            <wg class="cl" rule="V-ADV">
                               <w role="v"
                                  ref="JAS 2:3!1"
@@ -7598,7 +7598,7 @@
                                  unicode="ἐπιβλέψητε"
                                  frame="A0:n59002001001"
                                  subjref="n59002001001">ἐπιβλέψητε</w>
-                              <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                              <wg articular="true" rule="PrepNp" class="pp" role="adv">
                                  <w ref="JAS 2:3!3"
                                     after=" "
                                     class="prep"
@@ -7611,7 +7611,7 @@
                                     ln="90.57"
                                     morph="PREP"
                                     unicode="ἐπὶ">ἐπὶ</w>
-                                 <wg articular="true" rule="DetCL">
+                                 <wg articular="true" rule="DetCL" class="cl">
                                     <w ref="JAS 2:3!4"
                                        after=" "
                                        class="det"
@@ -7882,7 +7882,7 @@
                                  unicode="εἴπητε"
                                  frame="A0:n59002001001 A2:n59002003018"
                                  subjref="n59002001001">εἴπητε</w>
-                              <wg rule="CLaCL" role="o">
+                              <wg rule="CLaCL" class="cl" role="o">
                                  <wg class="cl" rule="S-V-ADV">
                                     <w role="s"
                                        ref="JAS 2:3!20"
@@ -7964,7 +7964,7 @@
                                           unicode="κάθου"
                                           frame="A0:n59002003018"
                                           subjref="n59002003018">κάθου</w>
-                                       <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                                       <wg articular="true" rule="PrepNp" class="pp" role="adv">
                                           <w ref="JAS 2:3!25"
                                              after=" "
                                              class="prep"
@@ -8048,7 +8048,7 @@
                gloss="not"
                morph="PRT-N"
                unicode="οὐ">οὐ</w>
-            <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
                <wg class="cl" rule="V-ADV">
                   <w role="v"
                      ref="JAS 2:4!2"
@@ -8070,7 +8070,7 @@
                      unicode="διεκρίθητε"
                      frame="A1:n59002001001"
                      subjref="n59002001001">διεκρίθητε</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 2:4!3"
                         after=" "
                         class="prep"
@@ -8269,7 +8269,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:5">JAS 2:5</milestone> οὐχ ὁ Θεὸς ἐξελέξατο τοὺς πτωχοὺς τῷ κόσμῳ πλουσίους ἐν πίστει καὶ κληρονόμους τῆς βασιλείας ἧς ἐπηγγείλατο τοῖς ἀγαπῶσιν αὐτόν;</p>
-      <wg rule="PtclCL">
+      <wg rule="PtclCL" class="cl">
          <w ref="JAS 2:5!5"
             after=" "
             class="ptcl"
@@ -8400,7 +8400,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg rule="NpaNp" role="o2">
+            <wg rule="NpaNp" class="np" role="o2">
                <wg class="np" rule="NpPp">
                   <w ref="JAS 2:5!13"
                      after=" "
@@ -8417,7 +8417,7 @@
                      ln="59.57"
                      morph="A-APM"
                      unicode="πλουσίους">πλουσίους</w>
-                  <wg class="pp" rule="PrepNp">
+                  <wg rule="PrepNp" class="pp">
                      <w ref="JAS 2:5!14"
                         after=" "
                         class="prep"
@@ -8549,7 +8549,7 @@
                                  unicode="ἐπηγγείλατο"
                                  frame="A0:n59002005007 A1:n59002005020 A2:n59002005023"
                                  subjref="n59002005007">ἐπηγγείλατο</w>
-                              <wg articular="true" rule="DetCL" role="io">
+                              <wg articular="true" rule="DetCL" class="cl" role="io">
                                  <w ref="JAS 2:5!22"
                                     after=" "
                                     class="det"
@@ -8618,7 +8618,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:6">JAS 2:6</milestone> ὑμεῖς δὲ ἠτιμάσατε τὸν πτωχόν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:6!2"
             after=" "
             class="conj"
@@ -8703,7 +8703,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:6">JAS 2:6</milestone> οὐχ οἱ πλούσιοι καταδυναστεύουσιν ὑμῶν, καὶ αὐτοὶ ἕλκουσιν ὑμᾶς εἰς κριτήρια;</p>
-      <wg rule="PtclCL">
+      <wg rule="PtclCL" class="cl">
          <w ref="JAS 2:6!6"
             after=" "
             class="ptcl"
@@ -8714,7 +8714,7 @@
             gloss="Not"
             morph="PRT-N"
             unicode="οὐχ">οὐχ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="S-V-O">
                <wg class="np" articular="true" rule="DetAdj" role="s">
                   <w ref="JAS 2:6!7"
@@ -8847,7 +8847,7 @@
                      morph="P-2AP"
                      unicode="ὑμᾶς"
                      referent="n59002005002">ὑμᾶς</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 2:6!15"
                         after=" "
                         class="prep"
@@ -8885,7 +8885,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:7">JAS 2:7</milestone> οὐκ αὐτοὶ βλασφημοῦσιν τὸ καλὸν ὄνομα τὸ ἐπικληθὲν ἐφ’ ὑμᾶς;</p>
-      <wg rule="PtclCL">
+      <wg rule="PtclCL" class="cl">
          <w ref="JAS 2:7!1"
             after=" "
             class="ptcl"
@@ -8989,7 +8989,7 @@
                         unicode="ὄνομα">ὄνομα</w>
                   </wg>
                </wg>
-               <wg articular="true" rule="DetCL" junction="apposition">
+               <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                   <w ref="JAS 2:7!7"
                      after=" "
                      class="det"
@@ -9027,7 +9027,7 @@
                         unicode="ἐπικληθὲν"
                         frame="A1:n59002007006"
                         subjref="n59002007006">ἐπικληθὲν</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 2:7!9"
                            after="’"
                            class="prep"
@@ -9065,7 +9065,7 @@
       <p>
          <milestone unit="verse" id="JAS 2:8">JAS 2:8</milestone> εἰ μέντοι νόμον τελεῖτε βασιλικὸν κατὰ τὴν γραφήν Ἀγαπήσεις τὸν πλησίον σου ὡς σεαυτόν, καλῶς ποιεῖτε·</p>
       <wg Rule="ClCl2" class="cl" nodeId="590020080010160">
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 2:8!1"
                after=" "
                class="conj"
@@ -9076,7 +9076,7 @@
                gloss="If"
                morph="COND"
                unicode="εἰ">εἰ</w>
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="JAS 2:8!2"
                   after=" "
                   class="conj"
@@ -9144,7 +9144,7 @@
                      unicode="τελεῖτε"
                      frame="A0:n59002005002 A1:n59002008003"
                      subjref="n59002005002">τελεῖτε</w>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                  <wg articular="true" rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 2:8!6"
                         after=" "
                         class="prep"
@@ -9257,7 +9257,7 @@
                                        unicode="σου">σου</w>
                                  </wg>
                               </wg>
-                              <wg rule="sub-CL" role="adv">
+                              <wg rule="sub-CL" class="cl" role="adv">
                                  <w ref="JAS 2:8!13"
                                     after=" "
                                     class="conj"
@@ -9334,7 +9334,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:9">JAS 2:9</milestone> εἰ δὲ προσωπολημπτεῖτε, ἁμαρτίαν ἐργάζεσθε, ἐλεγχόμενοι ὑπὸ τοῦ νόμου ὡς παραβάται.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:9!2"
             after=" "
             class="conj"
@@ -9347,7 +9347,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590020090010100">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="JAS 2:9!1"
                   after=" "
                   class="conj"
@@ -9439,7 +9439,7 @@
                   unicode="ἐλεγχόμενοι"
                   frame="A1:n59002005002"
                   subjref="n59002005002">ἐλεγχόμενοι</w>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 2:9!7"
                      after=" "
                      class="prep"
@@ -9486,7 +9486,7 @@
                         unicode="νόμου">νόμου</w>
                   </wg>
                </wg>
-               <wg rule="sub-CL" role="adv">
+               <wg rule="sub-CL" class="cl" role="adv">
                   <w ref="JAS 2:9!10"
                      after=" "
                      class="conj"
@@ -9525,7 +9525,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:10">JAS 2:10</milestone> ὅστις γὰρ ὅλον τὸν νόμον τηρήσῃ, πταίσῃ δὲ ἐν ἑνί, γέγονεν πάντων ἔνοχος.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:10!2"
             after=" "
             class="conj"
@@ -9540,7 +9540,7 @@
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
          <wg class="cl" clauseType="nominalized" rule="S-VC-P">
-            <wg clauseType="nominalized" rule="CLaCL" role="s">
+            <wg clauseType="nominalized" rule="CLaCL" class="cl" role="s">
                <wg class="cl" clauseType="nominalized" rule="S-O-V">
                   <w role="s"
                      ref="JAS 2:10!1"
@@ -9662,7 +9662,7 @@
                         unicode="πταίσῃ"
                         frame="A0:n59002010001"
                         subjref="n59002010001">πταίσῃ</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 2:10!9"
                            after=" "
                            class="prep"
@@ -9748,7 +9748,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:11">JAS 2:11</milestone> ὁ γὰρ εἰπών Μὴ μοιχεύσῃς, εἶπεν καί Μὴ φονεύσῃς·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:11!2"
             after=" "
             class="conj"
@@ -9763,7 +9763,7 @@
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
          <wg Rule="ClCl" class="cl" nodeId="590020110010080">
-            <wg articular="true" rule="DetCL" role="s">
+            <wg articular="true" rule="DetCL" class="cl" role="s">
                <w ref="JAS 2:11!1"
                   after=" "
                   class="det"
@@ -9904,7 +9904,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:11">JAS 2:11</milestone> εἰ δὲ οὐ μοιχεύεις, φονεύεις δέ, γέγονας παραβάτης νόμου.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:11!11"
             after=" "
             class="conj"
@@ -9919,7 +9919,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590020110100080">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="JAS 2:11!10"
                   after=" "
                   class="conj"
@@ -9930,7 +9930,7 @@
                   gloss="If"
                   morph="COND"
                   unicode="εἰ">εἰ</w>
-               <wg rule="CLaCL">
+               <wg rule="CLaCL" class="cl">
                   <wg class="cl" rule="ADV-V">
                      <w role="adv"
                         ref="JAS 2:11!12"
@@ -10142,7 +10142,7 @@
                   subjref="n59002005002">ποιεῖτε</w>
             </wg>
          </wg>
-         <wg rule="sub-CL">
+         <wg rule="sub-CL" class="cl">
             <w ref="JAS 2:12!6"
                after=" "
                class="conj"
@@ -10157,7 +10157,7 @@
                unicode="ὡς">ὡς</w>
             <wg class="cl" rule="O-V">
                <wg class="cl" rule="ADV-V" role="o">
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 2:12!7"
                         after=" "
                         class="prep"
@@ -10253,7 +10253,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:13">JAS 2:13</milestone> ἡ γὰρ κρίσις ἀνέλεος τῷ μὴ ποιήσαντι ἔλεος· κατακαυχᾶται ἔλεος κρίσεως.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:13!2"
             after=" "
             class="conj"
@@ -10318,7 +10318,7 @@
                   ln="88.82"
                   morph="A-NSF"
                   unicode="ἀνέλεος">ἀνέλεος</w>
-               <wg articular="true" rule="DetCL" role="adv">
+               <wg articular="true" rule="DetCL" class="cl" role="adv">
                   <w ref="JAS 2:13!5"
                      after=" "
                      class="det"
@@ -10531,7 +10531,7 @@
                morph="N-NSN"
                unicode="ὄφελος,">ὄφελος</w>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 2:14!6"
                after=" "
                class="conj"
@@ -10542,7 +10542,7 @@
                gloss="if"
                morph="COND"
                unicode="ἐὰν">ἐὰν</w>
-            <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
                <wg class="cl" rule="O-V-S">
                   <wg class="cl" rule="O-V" role="o">
                      <w role="o"
@@ -10683,7 +10683,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:14">JAS 2:14</milestone> μὴ δύναται ἡ πίστις σῶσαι αὐτόν;</p>
-      <wg rule="PtclCL">
+      <wg rule="PtclCL" class="cl">
          <w ref="JAS 2:14!15"
             after=" "
             class="ptcl"
@@ -10793,7 +10793,7 @@
          <milestone unit="verse" id="JAS 2:15">JAS 2:15</milestone> 
          <milestone unit="verse" id="JAS 2:16">JAS 2:16</milestone> ἐὰν ἀδελφὸς ἢ ἀδελφὴ γυμνοὶ ὑπάρχωσιν καὶ λειπόμενοι τῆς ἐφημέρου τροφῆς, εἴπῃ δέ τις αὐτοῖς ἐξ ὑμῶν Ὑπάγετε ἐν εἰρήνῃ, θερμαίνεσθε καὶ χορτάζεσθε, μὴ δῶτε δὲ αὐτοῖς τὰ ἐπιτήδεια τοῦ σώματος, τί τὸ ὄφελος;</p>
       <wg Rule="ClCl2" class="cl" nodeId="590020150010340">
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 2:15!1"
                after=" "
                class="conj"
@@ -10806,10 +10806,10 @@
                ln="89.67"
                morph="COND"
                unicode="ἐὰν">ἐὰν</w>
-            <wg rule="CLaCL">
-               <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
+               <wg rule="CLaCL" class="cl">
                   <wg class="cl" rule="S-P-VC">
-                     <wg rule="NpaNp" role="s">
+                     <wg rule="NpaNp" class="np" role="s">
                         <w ref="JAS 2:15!2"
                            after=" "
                            class="noun"
@@ -10988,7 +10988,7 @@
                      gloss="then"
                      morph="CONJ"
                      unicode="δέ">δέ</w>
-                  <wg rule="CLaCL">
+                  <wg rule="CLaCL" class="cl">
                      <wg Rule="ClCl" class="cl" nodeId="590020160010110">
                         <w role="v"
                            ref="JAS 2:16!1"
@@ -11043,7 +11043,7 @@
                               gloss="anyone"
                               morph="X-NSM"
                               unicode="τις">τις</w>
-                           <wg class="pp" rule="PrepNp">
+                           <wg rule="PrepNp" class="pp">
                               <w ref="JAS 2:16!5"
                                  after=" "
                                  class="prep"
@@ -11094,7 +11094,7 @@
                                  unicode="Ὑπάγετε"
                                  frame="A0:n59002015002;n59002015004"
                                  subjref="n59002015002 n59002015004">Ὑπάγετε</w>
-                              <wg class="pp" rule="PrepNp" role="adv">
+                              <wg rule="PrepNp" class="pp" role="adv">
                                  <w ref="JAS 2:16!8"
                                     after=" "
                                     class="prep"
@@ -11125,7 +11125,7 @@
                                     unicode="εἰρήνῃ,">εἰρήνῃ</w>
                               </wg>
                            </wg>
-                           <wg rule="CLaCL">
+                           <wg rule="CLaCL" class="cl">
                               <w role="v"
                                  rule="v2cl"
                                  ref="JAS 2:16!10"
@@ -11428,7 +11428,7 @@
                   unicode="πίστις,">πίστις</w>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 2:17!5"
                after=" "
                class="conj"
@@ -11522,7 +11522,7 @@
             gloss="is"
             morph="V-PAI-3S"
             unicode="ἐστιν">ἐστιν</w>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 2:17!11"
                after="’"
                class="prep"
@@ -11558,7 +11558,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:18">JAS 2:18</milestone> ἀλλ’ ἐρεῖ τις Σὺ πίστιν ἔχεις, κἀγὼ ἔργα ἔχω·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:18!1"
             after="’"
             class="conj"
@@ -11804,7 +11804,7 @@
                   referent="n59002014004">σου</w>
             </wg>
          </wg>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 2:18!15"
                after=" "
                class="prep"
@@ -11903,7 +11903,7 @@
                morph="V-FAI-1S"
                unicode="δείξω"
                frame="A0:n59002018018 A2:n59002018019 A1:n59002018026">δείξω</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 2:18!21"
                   after=" "
                   class="prep"
@@ -12042,7 +12042,7 @@
             morph="V-PAI-2S"
             unicode="πιστεύεις"
             frame="A0:n59002019001">πιστεύεις</w>
-         <wg rule="that-VP" role="o">
+         <wg rule="that-VP" class="cl" role="o">
             <w ref="JAS 2:19!3"
                after=" "
                class="conj"
@@ -12165,7 +12165,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:19">JAS 2:19</milestone> καὶ τὰ δαιμόνια πιστεύουσιν καὶ φρίσσουσιν.</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="S-V">
             <wg class="np" articular="true" rule="AdvpNp" role="s">
                <w ref="JAS 2:19!10"
@@ -12270,7 +12270,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:20">JAS 2:20</milestone> θέλεις δὲ γνῶναι, ὦ ἄνθρωπε κενέ, ὅτι ἡ πίστις χωρὶς τῶν ἔργων ἀργή ἐστιν;</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:20!2"
             after=" "
             class="conj"
@@ -12370,7 +12370,7 @@
                   unicode="γνῶναι,"
                   frame="A0:n59002020005"
                   subjref="n59002020005">γνῶναι</w>
-               <wg rule="that-VP" role="o">
+               <wg rule="that-VP" class="cl" role="o">
                   <w ref="JAS 2:20!7"
                      after=" "
                      class="conj"
@@ -12415,7 +12415,7 @@
                            morph="N-NSF"
                            unicode="πίστις">πίστις</w>
                      </wg>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 2:20!10"
                            after=" "
                            class="prep"
@@ -12584,7 +12584,7 @@
             morph="PRT-N"
             unicode="οὐκ">οὐκ</w>
          <wg class="cl" rule="ADV-V-ADV">
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 2:21!6"
                   after=" "
                   class="prep"
@@ -12726,7 +12726,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 2:21!14"
                      after=" "
                      class="prep"
@@ -12803,7 +12803,7 @@
             unicode="βλέπεις"
             frame="A0:n59002020005"
             subjref="n59002020005">βλέπεις</w>
-         <wg rule="that-VP" role="o">
+         <wg rule="that-VP" class="cl" role="o">
             <w ref="JAS 2:22!2"
                after=" "
                class="conj"
@@ -12814,8 +12814,8 @@
                gloss="that"
                morph="CONJ"
                unicode="ὅτι">ὅτι</w>
-            <wg rule="CLaCL">
-               <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
+               <wg rule="CLaCL" class="cl">
                   <wg class="cl" rule="S-V-ADV">
                      <wg class="np" articular="true" rule="DetNP" role="s">
                         <w ref="JAS 2:22!3"
@@ -12934,7 +12934,7 @@
                         morph="CONJ"
                         unicode="καὶ">καὶ</w>
                      <wg class="cl" rule="ADV-S-V">
-                        <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                        <wg articular="true" rule="PrepNp" class="pp" role="adv">
                            <w ref="JAS 2:22!10"
                               after=" "
                               class="prep"
@@ -13047,7 +13047,7 @@
                      gloss="And"
                      morph="CONJ"
                      unicode="καὶ">καὶ</w>
-                  <wg rule="CLaCL">
+                  <wg rule="CLaCL" class="cl">
                      <wg class="cl" rule="V-S">
                         <w role="v"
                            ref="JAS 2:23!2"
@@ -13106,7 +13106,7 @@
                                  morph="N-NSF"
                                  unicode="γραφὴ">γραφὴ</w>
                            </wg>
-                           <wg articular="true" rule="DetCL" junction="apposition">
+                           <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                               <w ref="JAS 2:23!5"
                                  after=" "
                                  class="det"
@@ -13144,8 +13144,8 @@
                                     unicode="λέγουσα"
                                     frame="A0:n59002023004 A1:n59002023007;n59002023013"
                                     subjref="n59002023004">λέγουσα</w>
-                                 <wg rule="CLaCL" role="o">
-                                    <wg rule="Conj-CL">
+                                 <wg rule="CLaCL" class="cl" role="o">
+                                    <wg rule="Conj-CL" class="cl">
                                        <w ref="JAS 2:23!8"
                                           after=" "
                                           class="conj"
@@ -13279,7 +13279,7 @@
                                              morph="P-DSM"
                                              unicode="αὐτῷ"
                                              referent="n59002023009">αὐτῷ</w>
-                                          <wg class="pp" rule="PrepNp" role="adv">
+                                          <wg rule="PrepNp" class="pp" role="adv">
                                              <w ref="JAS 2:23!15"
                                                 after=" "
                                                 class="prep"
@@ -13413,7 +13413,7 @@
             unicode="ὁρᾶτε"
             frame="A0:n59002020005"
             subjref="n59002020005">ὁρᾶτε</w>
-         <wg rule="that-VP" role="o">
+         <wg rule="that-VP" class="cl" role="o">
             <w ref="JAS 2:24!2"
                after=" "
                class="conj"
@@ -13424,9 +13424,9 @@
                gloss="that"
                morph="CONJ"
                unicode="ὅτι">ὅτι</w>
-            <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
                <wg class="cl" rule="ADV-V-S">
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 2:24!3"
                         after=" "
                         class="prep"
@@ -13516,7 +13516,7 @@
                         gloss="not"
                         morph="PRT-N"
                         unicode="οὐκ">οὐκ</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 2:24!9"
                            after=" "
                            class="prep"
@@ -13569,7 +13569,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:25">JAS 2:25</milestone> ὁμοίως δὲ καὶ Ῥαὰβ ἡ πόρνη οὐκ ἐξ ἔργων ἐδικαιώθη, ὑποδεξαμένη τοὺς ἀγγέλους καὶ ἑτέρᾳ ὁδῷ ἐκβαλοῦσα;</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:25!2"
             after=" "
             class="conj"
@@ -13671,7 +13671,7 @@
                   gloss="not"
                   morph="PRT-N"
                   unicode="οὐκ">οὐκ</w>
-               <wg class="pp" rule="PrepNp">
+               <wg rule="PrepNp" class="pp">
                   <w ref="JAS 2:25!8"
                      after=" "
                      class="prep"
@@ -13721,7 +13721,7 @@
                morph="V-API-3S"
                unicode="ἐδικαιώθη,"
                frame="A1:n59002025004">ἐδικαιώθη</w>
-            <wg rule="CLaCL" role="adv">
+            <wg rule="CLaCL" class="cl" role="adv">
                <wg class="cl" rule="V-O">
                   <w role="v"
                      ref="JAS 2:25!11"
@@ -13853,7 +13853,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 2:26">JAS 2:26</milestone> ὥσπερ γὰρ τὸ σῶμα χωρὶς πνεύματος νεκρόν ἐστιν, οὕτως καὶ ἡ πίστις χωρὶς ἔργων νεκρά ἐστιν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 2:26!2"
             after=" "
             class="conj"
@@ -13868,7 +13868,7 @@
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590020260010150">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="JAS 2:26!1"
                   after=" "
                   class="conj"
@@ -13915,7 +13915,7 @@
                         morph="N-NSN"
                         unicode="σῶμα">σῶμα</w>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 2:26!5"
                         after=" "
                         class="prep"
@@ -14038,7 +14038,7 @@
                   morph="N-NSF"
                   unicode="πίστις">πίστις</w>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 2:26!13"
                   after=" "
                   class="prep"
@@ -14226,7 +14226,7 @@
                unicode="εἰδότες"
                frame="A0:n59003001005"
                subjref="n59003001005">εἰδότες</w>
-            <wg rule="that-VP" role="o">
+            <wg rule="that-VP" class="cl" role="o">
                <w ref="JAS 3:1!8"
                   after=" "
                   class="conj"
@@ -14300,7 +14300,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:2">JAS 3:2</milestone> πολλὰ γὰρ πταίομεν ἅπαντες·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 3:2!2"
             after=" "
             class="conj"
@@ -14374,7 +14374,7 @@
       <p>
          <milestone unit="verse" id="JAS 3:2">JAS 3:2</milestone> εἴ τις ἐν λόγῳ οὐ πταίει, οὗτος τέλειος ἀνήρ, δυνατὸς χαλιναγωγῆσαι καὶ ὅλον τὸ σῶμα.</p>
       <wg Rule="ClCl2" class="cl" nodeId="590030020050150">
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 3:2!5"
                after=" "
                class="conj"
@@ -14401,7 +14401,7 @@
                   gloss="anyone"
                   morph="X-NSM"
                   unicode="τις">τις</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 3:2!7"
                      after=" "
                      class="prep"
@@ -14513,7 +14513,7 @@
                   morph="N-NSM"
                   unicode="ἀνήρ,">ἀνήρ</w>
             </wg>
-            <wg rule="AdjpCL">
+            <wg rule="AdjpCL" class="cl">
                <w ref="JAS 3:2!14"
                   after=" "
                   class="adj"
@@ -14620,7 +14620,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:3">JAS 3:3</milestone> εἰ δὲ τῶν ἵππων τοὺς χαλινοὺς εἰς τὰ στόματα βάλλομεν εἰς τὸ πείθεσθαι αὐτοὺς ἡμῖν, καὶ ὅλον τὸ σῶμα αὐτῶν μετάγομεν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 3:3!2"
             after=" "
             class="conj"
@@ -14635,7 +14635,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590030030010200">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="JAS 3:3!1"
                   after=" "
                   class="conj"
@@ -14717,7 +14717,7 @@
                            unicode="χαλινοὺς">χαλινοὺς</w>
                      </wg>
                   </wg>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                  <wg articular="true" rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 3:3!7"
                         after=" "
                         class="prep"
@@ -14784,7 +14784,7 @@
                      unicode="βάλλομεν"
                      frame="A0:n59001001001;n59003001005;n59003001003 A1:n59003003006"
                      subjref="n59001001001 n59003001005 n59003001003">βάλλομεν</w>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                  <wg articular="true" rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 3:3!11"
                         after=" "
                         class="prep"
@@ -14797,7 +14797,7 @@
                         ln="89.57"
                         morph="PREP"
                         unicode="εἰς">εἰς</w>
-                     <wg articular="true" rule="DetCL">
+                     <wg articular="true" rule="DetCL" class="cl">
                         <w ref="JAS 3:3!12"
                            after=" "
                            class="det"
@@ -15046,7 +15046,7 @@
                   unicode="πλοῖα,">πλοῖα</w>
             </wg>
          </wg>
-         <wg rule="CLaCL" role="adv">
+         <wg rule="CLaCL" class="cl" role="adv">
             <wg class="cl" rule="P-VC">
                <w role="p"
                   ref="JAS 3:4!5"
@@ -15096,7 +15096,7 @@
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
                <wg class="cl" rule="ADV-V">
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 3:4!8"
                         after=" "
                         class="prep"
@@ -15186,7 +15186,7 @@
             morph="V-PPI-3S"
             unicode="μετάγεται"
             frame="A1:n59003004004">μετάγεται</w>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 3:4!13"
                after=" "
                class="prep"
@@ -15281,7 +15281,7 @@
                      ln="26.12"
                      morph="N-NSF"
                      unicode="ὁρμὴ">ὁρμὴ</w>
-                  <wg articular="true" rule="DetCL">
+                  <wg articular="true" rule="DetCL" class="cl">
                      <w ref="JAS 3:4!19"
                         after=" "
                         class="det"
@@ -15346,7 +15346,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:5">JAS 3:5</milestone> οὕτως καὶ ἡ γλῶσσα μικρὸν μέλος ἐστὶν καὶ μεγάλα αὐχεῖ.</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="ADV-S-P-VC">
             <w role="adv"
                ref="JAS 3:5!1"
@@ -15622,7 +15622,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:6">JAS 3:6</milestone> καὶ ἡ γλῶσσα πῦρ, ὁ κόσμος τῆς ἀδικίας, ἡ γλῶσσα καθίσταται ἐν τοῖς μέλεσιν ἡμῶν, ἡ σπιλοῦσα ὅλον τὸ σῶμα καὶ φλογίζουσα τὸν τροχὸν τῆς γενέσεως καὶ φλογιζομένη ὑπὸ τῆς γεέννης.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 3:6!1"
             after=" "
             class="conj"
@@ -15810,7 +15810,7 @@
                      morph="V-PPI-3S"
                      unicode="καθίσταται"
                      frame="A1:n59003006010">καθίσταται</w>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                  <wg articular="true" rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 3:6!12"
                         after=" "
                         class="prep"
@@ -15876,7 +15876,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg articular="true" rule="DetCL" role="p">
+               <wg articular="true" rule="DetCL" class="cl" role="p">
                   <w ref="JAS 3:6!16"
                      after=" "
                      class="det"
@@ -15892,7 +15892,7 @@
                      ln="92.24"
                      morph="T-NSF"
                      unicode="ἡ">ἡ</w>
-                  <wg clauseType="nominalized" rule="Conj3CL">
+                  <wg clauseType="nominalized" rule="Conj3CL" class="cl">
                      <wg class="cl" rule="V-O">
                         <w role="v"
                            ref="JAS 3:6!17"
@@ -16102,7 +16102,7 @@
                               unicode="φλογιζομένη"
                               frame="A1:n59003006010"
                               subjref="n59003006010">φλογιζομένη</w>
-                           <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                           <wg articular="true" rule="PrepNp" class="pp" role="adv">
                               <w ref="JAS 3:6!29"
                                  after=" "
                                  class="prep"
@@ -16161,7 +16161,7 @@
       <p>
          <milestone unit="verse" id="JAS 3:7">JAS 3:7</milestone> 
          <milestone unit="verse" id="JAS 3:8">JAS 3:8</milestone> πᾶσα γὰρ φύσις θηρίων τε καὶ πετεινῶν ἑρπετῶν τε καὶ ἐναλίων δαμάζεται καὶ δεδάμασται τῇ φύσει τῇ ἀνθρωπίνῃ, τὴν δὲ γλῶσσαν οὐδεὶς δαμάσαι δύναται ἀνθρώπων· ἀκατάστατον κακόν, μεστὴ ἰοῦ θανατηφόρου.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 3:7!2"
             after=" "
             class="conj"
@@ -16173,7 +16173,7 @@
             gloss="for"
             morph="CONJ"
             unicode="γὰρ">γὰρ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="S-V-ADV">
                <wg class="np" rule="All-NP" role="s">
                   <w ref="JAS 3:7!1"
@@ -16208,7 +16208,7 @@
                         ln="58.24"
                         morph="N-NSF"
                         unicode="φύσις">φύσις</w>
-                     <wg rule="EitherOr4Np">
+                     <wg rule="EitherOr4Np" class="np">
                         <wg type="group">
                            <w ref="JAS 3:7!5"
                               after=" "
@@ -16324,7 +16324,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg rule="Conj2VP" role="v">
+               <wg rule="Conj2VP" class="vp" role="v">
                   <w ref="JAS 3:7!12"
                      after=" "
                      class="verb"
@@ -16653,9 +16653,9 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:9">JAS 3:9</milestone> ἐν αὐτῇ εὐλογοῦμεν τὸν Κύριον καὶ Πατέρα, καὶ ἐν αὐτῇ καταρώμεθα τοὺς ἀνθρώπους τοὺς καθ’ ὁμοίωσιν Θεοῦ γεγονότας·</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="ADV-V-O">
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 3:9!1"
                   after=" "
                   class="prep"
@@ -16722,7 +16722,7 @@
                   ln="92.24"
                   morph="T-ASM"
                   unicode="τὸν">τὸν</w>
-               <wg rule="NpaNp">
+               <wg rule="NpaNp" class="np">
                   <w ref="JAS 3:9!5"
                      after=" "
                      class="noun"
@@ -16782,7 +16782,7 @@
                morph="CONJ"
                unicode="καὶ">καὶ</w>
             <wg class="cl" rule="ADV-V-O">
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 3:9!9"
                      after=" "
                      class="prep"
@@ -16871,7 +16871,7 @@
                         morph="N-APM"
                         unicode="ἀνθρώπους">ἀνθρώπους</w>
                   </wg>
-                  <wg articular="true" rule="DetCL" junction="apposition">
+                  <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                      <w ref="JAS 3:9!14"
                         after=" "
                         class="det"
@@ -16888,7 +16888,7 @@
                         morph="T-APM"
                         unicode="τοὺς">τοὺς</w>
                      <wg class="cl" clauseType="nominalized" rule="ADV-V">
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="JAS 3:9!15"
                               after="’"
                               class="prep"
@@ -16967,7 +16967,7 @@
       <p>
          <milestone unit="verse" id="JAS 3:10">JAS 3:10</milestone> ἐκ τοῦ αὐτοῦ στόματος ἐξέρχεται εὐλογία καὶ κατάρα.</p>
       <wg class="cl" rule="ADV-V-S">
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 3:10!1"
                after=" "
                class="prep"
@@ -17051,7 +17051,7 @@
             morph="V-PNI-3S"
             unicode="ἐξέρχεται"
             frame="A0:n59003010006;n59003010008">ἐξέρχεται</w>
-         <wg rule="NpaNp" role="s">
+         <wg rule="NpaNp" class="np" role="s">
             <w ref="JAS 3:10!6"
                after=" "
                class="noun"
@@ -17220,7 +17220,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:11">JAS 3:11</milestone> μήτι ἡ πηγὴ ἐκ τῆς αὐτῆς ὀπῆς βρύει τὸ γλυκὺ καὶ τὸ πικρόν;</p>
-      <wg rule="PtclCL">
+      <wg rule="PtclCL" class="cl">
          <w ref="JAS 3:11!1"
             after=" "
             class="ptcl"
@@ -17267,7 +17267,7 @@
                   morph="N-NSF"
                   unicode="πηγὴ">πηγὴ</w>
             </wg>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 3:11!4"
                   after=" "
                   class="prep"
@@ -17351,7 +17351,7 @@
                morph="V-PAI-3S"
                unicode="βρύει"
                frame="A0:n59003011003 A1:n59003011010;n59003011013">βρύει</w>
-            <wg articular="true" rule="NpaNp" role="o">
+            <wg articular="true" rule="NpaNp" class="np" role="o">
                <wg class="np" articular="true" rule="DetAdj">
                   <w ref="JAS 3:11!9"
                      after=" "
@@ -17483,7 +17483,7 @@
             ln="69.15"
             morph="PRT-N"
             unicode="μὴ">μὴ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="V-S-O">
                <w role="v"
                   ref="JAS 3:12!2"
@@ -17613,7 +17613,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:12">JAS 3:12</milestone> οὔτε ἁλυκὸν γλυκὺ ποιῆσαι ὕδωρ.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 3:12!11"
             after=" "
             class="conj"
@@ -17716,7 +17716,7 @@
             gloss="Who"
             morph="I-NSM"
             unicode="Τίς">Τίς</w>
-         <wg rule="AdjpaAdjp" role="p">
+         <wg rule="AdjpaAdjp" class="adjp" role="p">
             <w ref="JAS 3:13!2"
                after=" "
                class="adj"
@@ -17760,7 +17760,7 @@
                   unicode="ἐπιστήμων">ἐπιστήμων</w>
             </wg>
          </wg>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 3:13!5"
                after=" "
                class="prep"
@@ -17814,7 +17814,7 @@
             unicode="δειξάτω"
             frame="A0:n59003013001 A1:n59003013013"
             subjref="n59003013001">δειξάτω</w>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 3:13!8"
                after=" "
                class="prep"
@@ -17930,7 +17930,7 @@
                   referent="n59003013001">αὐτοῦ</w>
             </wg>
          </wg>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 3:13!15"
                after=" "
                class="prep"
@@ -17983,7 +17983,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:14">JAS 3:14</milestone> εἰ δὲ ζῆλον πικρὸν ἔχετε καὶ ἐριθείαν ἐν τῇ καρδίᾳ ὑμῶν, μὴ κατακαυχᾶσθε καὶ ψεύδεσθε κατὰ τῆς ἀληθείας.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 3:14!2"
             after=" "
             class="conj"
@@ -17998,7 +17998,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590030140010170">
-            <wg rule="sub-CL" role="o">
+            <wg rule="sub-CL" class="cl" role="o">
                <w ref="JAS 3:14!1"
                   after=" "
                   class="conj"
@@ -18029,7 +18029,7 @@
                      unicode="ἔχετε"
                      frame="A0:n59003012003 A1:n59003014003;n59003014007"
                      subjref="n59003012003">ἔχετε</w>
-                  <wg rule="NpaNp" role="o">
+                  <wg rule="NpaNp" class="np" role="o">
                      <wg class="np" rule="NpAdjp">
                         <w ref="JAS 3:14!3"
                            after=" "
@@ -18092,7 +18092,7 @@
                            unicode="ἐριθείαν">ἐριθείαν</w>
                      </wg>
                   </wg>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                  <wg articular="true" rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 3:14!8"
                         after=" "
                         class="prep"
@@ -18167,7 +18167,7 @@
                gloss="not"
                morph="PRT-N"
                unicode="μὴ">μὴ</w>
-            <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
                <w role="v"
                   rule="v2cl"
                   ref="JAS 3:14!13"
@@ -18221,7 +18221,7 @@
                         unicode="ψεύδεσθε"
                         frame="A0:n59003012003"
                         subjref="n59003012003">ψεύδεσθε</w>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 3:14!16"
                            after=" "
                            class="prep"
@@ -18456,7 +18456,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:16">JAS 3:16</milestone> ὅπου γὰρ ζῆλος καὶ ἐριθεία, ἐκεῖ ἀκαταστασία καὶ πᾶν φαῦλον πρᾶγμα.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 3:16!2"
             after=" "
             class="conj"
@@ -18485,7 +18485,7 @@
                   ln="92.28"
                   morph="ADV"
                   unicode="ὅπου">ὅπου</w>
-               <wg rule="NpaNp" role="s">
+               <wg rule="NpaNp" class="np" role="s">
                   <w ref="JAS 3:16!3"
                      after=" "
                      class="noun"
@@ -18547,7 +18547,7 @@
                   morph="ADV"
                   unicode="ἐκεῖ"
                   referent="n59003016001">ἐκεῖ</w>
-               <wg rule="NpaNp" role="s">
+               <wg rule="NpaNp" class="np" role="s">
                   <w ref="JAS 3:16!7"
                      after=" "
                      class="noun"
@@ -18634,7 +18634,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:17">JAS 3:17</milestone> ἡ δὲ ἄνωθεν σοφία πρῶτον μὲν ἁγνή ἐστιν, ἔπειτα εἰρηνική, ἐπιεικής, εὐπειθής, μεστὴ ἐλέους καὶ καρπῶν ἀγαθῶν, ἀδιάκριτος, ἀνυπόκριτος.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 3:17!2"
             after=" "
             class="conj"
@@ -18833,7 +18833,7 @@
                         ln="78.45"
                         morph="A-NSF"
                         unicode="μεστὴ">μεστὴ</w>
-                     <wg rule="NpaNp">
+                     <wg rule="NpaNp" class="np">
                         <w ref="JAS 3:17!14"
                            after=" "
                            class="noun"
@@ -18935,7 +18935,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 3:18">JAS 3:18</milestone> καρπὸς δὲ δικαιοσύνης ἐν εἰρήνῃ σπείρεται τοῖς ποιοῦσιν εἰρήνην.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 3:18!2"
             after=" "
             class="conj"
@@ -18984,7 +18984,7 @@
                   morph="N-GSF"
                   unicode="δικαιοσύνης">δικαιοσύνης</w>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 3:18!4"
                   after=" "
                   class="prep"
@@ -19033,7 +19033,7 @@
                morph="V-PPI-3S"
                unicode="σπείρεται"
                frame="A1:n59003018001">σπείρεται</w>
-            <wg articular="true" rule="DetCL" role="adv">
+            <wg articular="true" rule="DetCL" class="cl" role="adv">
                <w ref="JAS 3:18!7"
                   after=" "
                   class="det"
@@ -19095,7 +19095,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:1">JAS 4:1</milestone> Πόθεν πόλεμοι καὶ πόθεν μάχαι ἐν ὑμῖν;</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="P-S" predication="verbless">
             <w role="p"
                ref="JAS 4:1!1"
@@ -19170,7 +19170,7 @@
                   ln="39.23"
                   morph="N-NPF"
                   unicode="μάχαι">μάχαι</w>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 4:1!6"
                      after=" "
                      class="prep"
@@ -19205,7 +19205,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:1">JAS 4:1</milestone> οὐκ ἐντεῦθεν, ἐκ τῶν ἡδονῶν ὑμῶν τῶν στρατευομένων ἐν τοῖς μέλεσιν ὑμῶν;</p>
-      <wg articular="true" rule="PtclCL">
+      <wg articular="true" rule="PtclCL" class="cl">
          <w ref="JAS 4:1!8"
             after=" "
             class="ptcl"
@@ -19229,7 +19229,7 @@
                ln="92.34"
                morph="ADV"
                unicode="ἐντεῦθεν,">ἐντεῦθεν</w>
-            <wg class="pp" articular="true" rule="PrepNp">
+            <wg articular="true" rule="PrepNp" class="pp">
                <w ref="JAS 4:1!10"
                   after=" "
                   class="prep"
@@ -19290,7 +19290,7 @@
                            referent="n59003012003">ὑμῶν</w>
                      </wg>
                   </wg>
-                  <wg articular="true" rule="DetCL" junction="apposition">
+                  <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                      <w ref="JAS 4:1!14"
                         after=" "
                         class="det"
@@ -19328,7 +19328,7 @@
                            unicode="στρατευομένων"
                            frame="A0:n59004001012"
                            subjref="n59004001012">στρατευομένων</w>
-                        <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                        <wg articular="true" rule="PrepNp" class="pp" role="adv">
                            <w ref="JAS 4:1!16"
                               after=" "
                               class="prep"
@@ -19401,7 +19401,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:2">JAS 4:2</milestone> ἐπιθυμεῖτε, καὶ οὐκ ἔχετε·</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <w role="v"
             rule="v2cl"
             ref="JAS 4:2!1"
@@ -19473,8 +19473,8 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:2">JAS 4:2</milestone> φονεύετε καὶ ζηλοῦτε, καὶ οὐ δύνασθε ἐπιτυχεῖν·</p>
-      <wg rule="CLaCL">
-         <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
+         <wg rule="CLaCL" class="cl">
             <w role="v"
                rule="v2cl"
                ref="JAS 4:2!5"
@@ -19599,7 +19599,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:2">JAS 4:2</milestone> μάχεσθε καὶ πολεμεῖτε.</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <w role="v"
             rule="v2cl"
             ref="JAS 4:2!12"
@@ -19689,7 +19689,7 @@
             unicode="ἔχετε"
             frame="A0:n59003012003"
             subjref="n59003012003">ἔχετε</w>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 4:2!17"
                after=" "
                class="prep"
@@ -19702,7 +19702,7 @@
                ln="89.26 90.44"
                morph="PREP"
                unicode="διὰ">διὰ</w>
-            <wg articular="true" rule="DetCL">
+            <wg articular="true" rule="DetCL" class="cl">
                <w ref="JAS 4:2!18"
                   after=" "
                   class="det"
@@ -19837,7 +19837,7 @@
                   subjref="n59003012003">λαμβάνετε</w>
             </wg>
          </wg>
-         <wg rule="sub-CL">
+         <wg rule="sub-CL" class="cl">
             <w ref="JAS 4:3!5"
                after=" "
                class="conj"
@@ -19884,7 +19884,7 @@
                   unicode="αἰτεῖσθε,"
                   frame="A0:n59003012003"
                   subjref="n59003012003">αἰτεῖσθε</w>
-               <wg rule="sub-CL" role="adv">
+               <wg rule="sub-CL" class="cl" role="adv">
                   <w ref="JAS 4:3!8"
                      after=" "
                      class="conj"
@@ -19898,7 +19898,7 @@
                      morph="CONJ"
                      unicode="ἵνα">ἵνα</w>
                   <wg class="cl" rule="ADV-V">
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 4:3!9"
                            after=" "
                            class="prep"
@@ -20040,7 +20040,7 @@
                unicode="οἴδατε"
                frame="A0:n59004004001"
                subjref="n59004004001">οἴδατε</w>
-            <wg rule="that-VP" role="o">
+            <wg rule="that-VP" class="cl" role="o">
                <w ref="JAS 4:4!4"
                   after=" "
                   class="conj"
@@ -20195,7 +20195,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:4">JAS 4:4</milestone> ὃς ἐὰν οὖν βουληθῇ φίλος εἶναι τοῦ κόσμου, ἐχθρὸς τοῦ Θεοῦ καθίσταται.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 4:4!15"
             after=" "
             class="conj"
@@ -20210,7 +20210,7 @@
             morph="CONJ"
             unicode="οὖν">οὖν</w>
          <wg class="cl" clauseType="nominalized" rule="S-O-V">
-            <wg rule="PtclCL" role="s">
+            <wg rule="PtclCL" class="cl" role="s">
                <w ref="JAS 4:4!14"
                   after=" "
                   class="ptcl"
@@ -20403,7 +20403,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:5">JAS 4:5</milestone> ἢ δοκεῖτε ὅτι κενῶς ἡ γραφὴ λέγει Πρὸς φθόνον ἐπιποθεῖ τὸ πνεῦμα ὃ κατῴκισεν ἐν ἡμῖν;</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 4:5!1"
             after=" "
             class="conj"
@@ -20438,7 +20438,7 @@
                unicode="δοκεῖτε"
                frame="A0:n59004004001"
                subjref="n59004004001">δοκεῖτε</w>
-            <wg rule="that-VP" role="o">
+            <wg rule="that-VP" class="cl" role="o">
                <w ref="JAS 4:5!3"
                   after=" "
                   class="conj"
@@ -20516,7 +20516,7 @@
                      unicode="λέγει"
                      frame="A0:n59004005006">λέγει</w>
                   <wg class="cl" rule="ADV-V-O" role="o">
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 4:5!8"
                            after=" "
                            class="prep"
@@ -20639,7 +20639,7 @@
                                  unicode="κατῴκισεν"
                                  frame="A0:n59004004023 A1:n59004005013"
                                  subjref="n59004004023">κατῴκισεν</w>
-                              <wg class="pp" rule="PrepNp" role="adv">
+                              <wg rule="PrepNp" class="pp" role="adv">
                                  <w ref="JAS 4:5!15"
                                     after=" "
                                     class="prep"
@@ -20681,7 +20681,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:6">JAS 4:6</milestone> μείζονα δὲ δίδωσιν χάριν·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 4:6!2"
             after=" "
             class="conj"
@@ -20753,7 +20753,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:6">JAS 4:6</milestone> διὸ λέγει Ὁ Θεὸς ὑπερηφάνοις ἀντιτάσσεται, ταπεινοῖς δὲ δίδωσιν χάριν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 4:6!5"
             after=" "
             class="conj"
@@ -20788,7 +20788,7 @@
                unicode="λέγει"
                frame="A0:n59004005006"
                subjref="n59004005006">λέγει</w>
-            <wg rule="CLaCL" role="o">
+            <wg rule="CLaCL" class="cl" role="o">
                <wg class="cl" rule="S-O-V">
                   <wg class="np" articular="true" rule="DetNP" role="s">
                      <w ref="JAS 4:6!7"
@@ -20932,7 +20932,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:7">JAS 4:7</milestone> ὑποτάγητε οὖν τῷ Θεῷ· ἀντίστητε δὲ τῷ διαβόλῳ, καὶ φεύξεται ἀφ’ ὑμῶν·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 4:7!2"
             after=" "
             class="conj"
@@ -20944,7 +20944,7 @@
             gloss="therefore"
             morph="CONJ"
             unicode="οὖν">οὖν</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="V-O">
                <w role="v"
                   ref="JAS 4:7!1"
@@ -21012,7 +21012,7 @@
                   gloss="however"
                   morph="CONJ"
                   unicode="δὲ">δὲ</w>
-               <wg rule="CLaCL">
+               <wg rule="CLaCL" class="cl">
                   <wg class="cl" rule="V-O">
                      <w role="v"
                         ref="JAS 4:7!5"
@@ -21099,7 +21099,7 @@
                            unicode="φεύξεται"
                            frame="A0:n59004007008"
                            subjref="n59004007008">φεύξεται</w>
-                        <wg class="pp" rule="PrepNp" role="adv">
+                        <wg rule="PrepNp" class="pp" role="adv">
                            <w ref="JAS 4:7!11"
                               after="’"
                               class="prep"
@@ -21137,7 +21137,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:8">JAS 4:8</milestone> ἐγγίσατε τῷ Θεῷ, καὶ ἐγγίσει ὑμῖν.</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="V-ADV">
             <w role="v"
                ref="JAS 4:8!1"
@@ -21245,7 +21245,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:8">JAS 4:8</milestone> καθαρίσατε χεῖρας, ἁμαρτωλοί, καὶ ἁγνίσατε καρδίας, δίψυχοι.</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg Rule="ClCl" class="cl" nodeId="590040080070030">
             <w role="v"
                ref="JAS 4:8!7"
@@ -21375,7 +21375,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:8">JAS 4:8</milestone> ταλαιπωρήσατε καὶ πενθήσατε καὶ κλαύσατε·</p>
-      <wg rule="Conj3CL">
+      <wg rule="Conj3CL" class="cl">
          <w role="v"
             rule="v2cl"
             ref="JAS 4:8!14"
@@ -21462,7 +21462,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:9">JAS 4:9</milestone> ὁ γέλως ὑμῶν εἰς πένθος μετατραπήτω καὶ ἡ χαρὰ εἰς κατήφειαν.</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="S-ADV-V">
             <wg class="np" articular="true" rule="DetNP" role="s">
                <w ref="JAS 4:9!1"
@@ -21513,7 +21513,7 @@
                      referent="n59004008013">ὑμῶν</w>
                </wg>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 4:9!4"
                   after=" "
                   class="prep"
@@ -21608,7 +21608,7 @@
                      morph="N-NSF"
                      unicode="χαρὰ">χαρὰ</w>
                </wg>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 4:9!10"
                      after=" "
                      class="prep"
@@ -21643,7 +21643,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:10">JAS 4:10</milestone> ταπεινώθητε ἐνώπιον Κυρίου, καὶ ὑψώσει ὑμᾶς.</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="V-ADV">
             <w role="v"
                ref="JAS 4:10!1"
@@ -21665,7 +21665,7 @@
                unicode="ταπεινώθητε"
                frame="A1:n59004008013"
                subjref="n59004008013">ταπεινώθητε</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 4:10!2"
                   after=" "
                   class="prep"
@@ -21823,9 +21823,9 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:11">JAS 4:11</milestone> ὁ καταλαλῶν ἀδελφοῦ ἢ κρίνων τὸν ἀδελφὸν αὐτοῦ καταλαλεῖ νόμου καὶ κρίνει νόμον·</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="S-V-O">
-            <wg articular="true" rule="DetCL" role="s">
+            <wg articular="true" rule="DetCL" class="cl" role="s">
                <w ref="JAS 4:11!5"
                   after=" "
                   class="det"
@@ -21841,7 +21841,7 @@
                   ln="92.24"
                   morph="T-NSM"
                   unicode="ὁ">ὁ</w>
-               <wg clauseType="nominalized" rule="CLaCL">
+               <wg clauseType="nominalized" rule="CLaCL" class="cl">
                   <wg class="cl" rule="V-O">
                      <w role="v"
                         ref="JAS 4:11!6"
@@ -22062,7 +22062,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:11">JAS 4:11</milestone> εἰ δὲ νόμον κρίνεις, οὐκ εἶ ποιητὴς νόμου ἀλλὰ κριτής.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 4:11!19"
             after=" "
             class="conj"
@@ -22077,7 +22077,7 @@
             morph="CONJ"
             unicode="δὲ">δὲ</w>
          <wg Rule="ClCl2" class="cl" nodeId="590040110180090">
-            <wg rule="sub-CL" role="adv">
+            <wg rule="sub-CL" class="cl" role="adv">
                <w ref="JAS 4:11!18"
                   after=" "
                   class="conj"
@@ -22260,7 +22260,7 @@
             morph="V-PAI-3S"
             unicode="ἐστιν">ἐστιν</w>
          <wg type="apposition" class="np" rule="Np-Appos" role="s">
-            <wg rule="NpaNp">
+            <wg rule="NpaNp" class="np">
                <w ref="JAS 4:12!3"
                   after=" "
                   class="noun"
@@ -22306,7 +22306,7 @@
                      unicode="κριτής,">κριτής</w>
                </wg>
             </wg>
-            <wg articular="true" rule="DetCL" junction="apposition">
+            <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                <w ref="JAS 4:12!6"
                   after=" "
                   class="det"
@@ -22344,7 +22344,7 @@
                      unicode="δυνάμενος"
                      frame="A0:n59004012003 A1:n59004012008;n59004012010"
                      subjref="n59004012003">δυνάμενος</w>
-                  <wg rule="Conj2VP" role="o">
+                  <wg rule="Conj2VP" class="vp" role="o">
                      <w ref="JAS 4:12!8"
                         after=" "
                         class="verb"
@@ -22400,7 +22400,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:12">JAS 4:12</milestone> σὺ δὲ τίς εἶ, ὁ κρίνων τὸν πλησίον;</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 4:12!12"
             after=" "
             class="conj"
@@ -22459,7 +22459,7 @@
                gloss="are"
                morph="V-PAI-2S"
                unicode="εἶ,">εἶ</w>
-            <wg articular="true" rule="DetCL" role="aux">
+            <wg articular="true" rule="DetCL" class="cl" role="aux">
                <w ref="JAS 4:12!15"
                   after=" "
                   class="det"
@@ -22575,7 +22575,7 @@
                 articular="true"
                 rule="NP-CL"
                 role="aux">
-               <wg articular="true" rule="DetCL">
+               <wg articular="true" rule="DetCL" class="cl">
                   <w ref="JAS 4:13!3"
                      after=" "
                      class="det"
@@ -22613,9 +22613,9 @@
                         morph="V-PAP-NPM"
                         unicode="λέγοντες"
                         frame="A0:n00000000000">λέγοντες</w>
-                     <wg rule="CLaCL" role="o">
+                     <wg rule="CLaCL" class="cl" role="o">
                         <wg class="cl" rule="ADV-V-ADV">
-                           <wg rule="AdvpaAdvp" role="adv">
+                           <wg rule="AdvpaAdvp" class="advp" role="adv">
                               <w ref="JAS 4:13!5"
                                  after=" "
                                  class="adv"
@@ -22673,7 +22673,7 @@
                               unicode="πορευσόμεθα"
                               frame="A0:n59004013004"
                               subjref="n59004013004">πορευσόμεθα</w>
-                           <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                           <wg articular="true" rule="PrepNp" class="pp" role="adv">
                               <w ref="JAS 4:13!9"
                                  after=" "
                                  class="prep"
@@ -22750,7 +22750,7 @@
                               gloss="and"
                               morph="CONJ"
                               unicode="καὶ">καὶ</w>
-                           <wg rule="Conj3CL">
+                           <wg rule="Conj3CL" class="cl">
                               <wg class="cl" rule="V-ADV-ADV">
                                  <w role="v"
                                     ref="JAS 4:13!14"
@@ -23024,7 +23024,7 @@
                            referent="n59004013004">ὑμῶν</w>
                      </wg>
                   </wg>
-                  <wg rule="sub-CL" role="adv">
+                  <wg rule="sub-CL" class="cl" role="adv">
                      <w ref="JAS 4:14!11"
                         after=" "
                         class="conj"
@@ -23073,7 +23073,7 @@
                               ln="1.36"
                               morph="N-NSF"
                               unicode="ἀτμὶς">ἀτμὶς</w>
-                           <wg articular="true" rule="DetCL" junction="apposition">
+                           <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                               <w ref="JAS 4:14!13"
                                  after=" "
                                  class="det"
@@ -23091,7 +23091,7 @@
                                  unicode="ἡ">ἡ</w>
                               <wg type="group" clauseType="nominalized" rule="ClCl">
                                  <wg class="cl" rule="ADV-V">
-                                    <wg class="pp" rule="PrepNp" role="adv">
+                                    <wg rule="PrepNp" class="pp" role="adv">
                                        <w ref="JAS 4:14!14"
                                           after=" "
                                           class="prep"
@@ -23197,7 +23197,7 @@
                </wg>
             </wg>
          </wg>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 4:15!1"
                after=" "
                class="prep"
@@ -23210,7 +23210,7 @@
                ln="89.133"
                morph="PREP"
                unicode="ἀντὶ">ἀντὶ</w>
-            <wg articular="true" rule="DetCL">
+            <wg articular="true" rule="DetCL" class="cl">
                <w ref="JAS 4:15!2"
                   after=" "
                   class="det"
@@ -23260,7 +23260,7 @@
                      unicode="ὑμᾶς"
                      referent="n59004013004">ὑμᾶς</w>
                   <wg Rule="ClCl2" class="cl" nodeId="590040150050110" role="o">
-                     <wg rule="sub-CL" role="adv">
+                     <wg rule="sub-CL" class="cl" role="adv">
                         <w ref="JAS 4:15!5"
                            after=" "
                            class="conj"
@@ -23391,7 +23391,7 @@
                               unicode="ποιήσομεν"
                               frame="A0:n59004013004 A1:n59004015013;n59004015015"
                               subjref="n59004013004">ποιήσομεν</w>
-                           <wg rule="NpaNp" role="o">
+                           <wg rule="NpaNp" class="np" role="o">
                               <w ref="JAS 4:15!13"
                                  after=" "
                                  class="pron"
@@ -23446,7 +23446,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:16">JAS 4:16</milestone> νῦν δὲ καυχᾶσθε ἐν ταῖς ἀλαζονίαις ὑμῶν·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 4:16!2"
             after=" "
             class="conj"
@@ -23492,7 +23492,7 @@
                unicode="καυχᾶσθε"
                frame="A0:n59004013004"
                subjref="n59004013004">καυχᾶσθε</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 4:16!4"
                   after=" "
                   class="prep"
@@ -23651,7 +23651,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 4:17">JAS 4:17</milestone> εἰδότι οὖν καλὸν ποιεῖν καὶ μὴ ποιοῦντι, ἁμαρτία αὐτῷ ἐστιν.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 4:17!2"
             after=" "
             class="conj"
@@ -23664,7 +23664,7 @@
             morph="CONJ"
             unicode="οὖν">οὖν</w>
          <wg type="group" rule="ClCl2">
-            <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
                <wg class="cl" rule="V-O">
                   <w role="v"
                      ref="JAS 4:17!1"
@@ -23941,7 +23941,7 @@
                   unicode="ὀλολύζοντες"
                   frame="A0:n59005001004"
                   subjref="n59005001004">ὀλολύζοντες</w>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 5:1!7"
                      after=" "
                      class="prep"
@@ -24004,7 +24004,7 @@
                               referent="n59005001004">ὑμῶν</w>
                         </wg>
                      </wg>
-                     <wg articular="true" rule="DetCL" junction="apposition">
+                     <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                         <w ref="JAS 5:1!11"
                            after=" "
                            class="det"
@@ -24052,7 +24052,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:2">JAS 5:2</milestone> ὁ πλοῦτος ὑμῶν σέσηπεν, καὶ τὰ ἱμάτια ὑμῶν σητόβρωτα γέγονεν,</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="S-V">
             <wg class="np" articular="true" rule="DetNP" role="s">
                <w ref="JAS 5:2!1"
@@ -24225,9 +24225,9 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:3">JAS 5:3</milestone> ὁ χρυσὸς ὑμῶν καὶ ὁ ἄργυρος κατίωται, καὶ ὁ ἰὸς αὐτῶν εἰς μαρτύριον ὑμῖν ἔσται καὶ φάγεται τὰς σάρκας ὑμῶν ὡς πῦρ.</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="S-V">
-            <wg articular="true" rule="NpaNp" role="s">
+            <wg articular="true" rule="NpaNp" class="np" role="s">
                <wg class="np" articular="true" rule="DetNP">
                   <w ref="JAS 5:3!1"
                      after=" "
@@ -24354,7 +24354,7 @@
                gloss="and"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
                <wg class="cl" rule="S-P-ADV-VC">
                   <wg class="np" articular="true" rule="DetNP" role="s">
                      <w ref="JAS 5:3!9"
@@ -24408,7 +24408,7 @@
                            referent="n59005003002 n59005003006">αὐτῶν</w>
                      </wg>
                   </wg>
-                  <wg class="pp" rule="PrepNp" role="p">
+                  <wg rule="PrepNp" class="pp" role="p">
                      <w ref="JAS 5:3!12"
                         after=" "
                         class="prep"
@@ -24551,7 +24551,7 @@
                               referent="n59005001004">ὑμῶν</w>
                         </wg>
                      </wg>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 5:3!21"
                            after=" "
                            class="conj"
@@ -24611,7 +24611,7 @@
             unicode="ἐθησαυρίσατε"
             frame="A0:n59005001004"
             subjref="n59005001004">ἐθησαυρίσατε</w>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 5:3!24"
                after=" "
                class="prep"
@@ -24758,7 +24758,7 @@
                               morph="N-GPM"
                               unicode="ἐργατῶν">ἐργατῶν</w>
                         </wg>
-                        <wg articular="true" rule="DetCL" junction="apposition">
+                        <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                            <w ref="JAS 5:4!6"
                               after=" "
                               class="det"
@@ -24850,7 +24850,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg articular="true" rule="DetCL" junction="apposition">
+               <wg articular="true" rule="DetCL" class="cl" junction="apposition">
                   <w ref="JAS 5:4!11"
                      after=" "
                      class="det"
@@ -24886,7 +24886,7 @@
                         unicode="ἀφυστερημένος"
                         frame="A1:n59005004003"
                         subjref="n59005004003">ἀφυστερημένος</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 5:4!13"
                            after="’"
                            class="prep"
@@ -24982,7 +24982,7 @@
                         ln="33.82"
                         morph="N-NPF"
                         unicode="βοαὶ">βοαὶ</w>
-                     <wg articular="true" rule="DetCL">
+                     <wg articular="true" rule="DetCL" class="cl">
                         <w ref="JAS 5:4!19"
                            after=" "
                            class="det"
@@ -25022,7 +25022,7 @@
                      </wg>
                   </wg>
                </wg>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 5:4!21"
                      after=" "
                      class="prep"
@@ -25131,7 +25131,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:5">JAS 5:5</milestone> ἐτρυφήσατε ἐπὶ τῆς γῆς καὶ ἐσπαταλήσατε,</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="V-ADV">
             <w role="v"
                ref="JAS 5:5!1"
@@ -25153,7 +25153,7 @@
                unicode="ἐτρυφήσατε"
                frame="A0:n59005001004"
                subjref="n59005001004">ἐτρυφήσατε</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 5:5!2"
                   after=" "
                   class="prep"
@@ -25309,7 +25309,7 @@
                   referent="n59005001004">ὑμῶν</w>
             </wg>
          </wg>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 5:5!11"
                after=" "
                class="prep"
@@ -25492,7 +25492,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:7">JAS 5:7</milestone> Μακροθυμήσατε οὖν, ἀδελφοί, ἕως τῆς παρουσίας τοῦ Κυρίου.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 5:7!2"
             after=","
             class="conj"
@@ -25543,7 +25543,7 @@
                unicode="Μακροθυμήσατε"
                frame="A0:n59005007003"
                subjref="n59005007003">Μακροθυμήσατε</w>
-            <wg class="pp" articular="true" rule="PrepNp" role="adv">
+            <wg articular="true" rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 5:7!4"
                   after=" "
                   class="prep"
@@ -25811,7 +25811,7 @@
                unicode="μακροθυμῶν"
                frame="A0:n59005007011"
                subjref="n59005007011">μακροθυμῶν</w>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 5:7!19"
                   after="’"
                   class="prep"
@@ -25843,7 +25843,7 @@
                   referent="n59005007015">αὐτῷ</w>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="o">
+         <wg rule="sub-CL" class="cl" role="o">
             <w ref="JAS 5:7!21"
                after=" "
                class="conj"
@@ -25877,7 +25877,7 @@
                   unicode="λάβῃ"
                   frame="A0:n59005007015 A1:n59005007023;n59005007025"
                   subjref="n59005007015">λάβῃ</w>
-               <wg rule="NpaNp" role="o">
+               <wg rule="NpaNp" class="np" role="o">
                   <w ref="JAS 5:7!23"
                      after=" "
                      class="adj"
@@ -26045,7 +26045,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 5:8!8"
                after=" "
                class="conj"
@@ -26202,7 +26202,7 @@
             unicode="στενάζετε,"
             frame="A0:n59005009003"
             subjref="n59005009003">στενάζετε</w>
-         <wg class="pp" rule="PrepNp" role="adv">
+         <wg rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 5:9!4"
                after="’"
                class="prep"
@@ -26233,7 +26233,7 @@
                unicode="ἀλλήλων,"
                referent="n59005009003">ἀλλήλων</w>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 5:9!6"
                after=" "
                class="conj"
@@ -26339,7 +26339,7 @@
                morph="N-NSM"
                unicode="κριτὴς">κριτὴς</w>
          </wg>
-         <wg class="pp" articular="true" rule="PrepNp" role="adv">
+         <wg articular="true" rule="PrepNp" class="pp" role="adv">
             <w ref="JAS 5:9!12"
                after=" "
                class="prep"
@@ -26466,7 +26466,7 @@
                ln="58.59"
                morph="N-ASN"
                unicode="ὑπόδειγμα">ὑπόδειγμα</w>
-            <wg articular="true" rule="NpaNp">
+            <wg articular="true" rule="NpaNp" class="np">
                <wg class="np" articular="true" rule="DetNP">
                   <w ref="JAS 5:10!4"
                      after=" "
@@ -26624,7 +26624,7 @@
                   morph="V-AAI-3P"
                   unicode="ἐλάλησαν"
                   frame="A0:n59005010011">ἐλάλησαν</w>
-               <wg class="pp" articular="true" rule="PrepNp" role="adv">
+               <wg articular="true" rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 5:10!13"
                      after=" "
                      class="prep"
@@ -26737,7 +26737,7 @@
             unicode="μακαρίζομεν"
             frame="A0:n59001001001;n59005010003;n59003001003 A1:n59005011004"
             subjref="n59001001001 n59005010003 n59003001003">μακαρίζομεν</w>
-         <wg articular="true" rule="DetCL" role="o">
+         <wg articular="true" rule="DetCL" class="cl" role="o">
             <w ref="JAS 5:11!3"
                after=" "
                class="det"
@@ -26939,7 +26939,7 @@
                   subjref="n59005010003">εἴδετε</w>
             </wg>
          </wg>
-         <wg rule="that-VP">
+         <wg rule="that-VP" class="cl">
             <w ref="JAS 5:11!14"
                after=" "
                class="adv"
@@ -27003,7 +27003,7 @@
                      morph="N-NSM"
                      unicode="Κύριος">Κύριος</w>
                </wg>
-               <wg rule="AdjpaAdjp" role="p">
+               <wg rule="AdjpaAdjp" class="adjp" role="p">
                   <w ref="JAS 5:11!15"
                      after=" "
                      class="adj"
@@ -27054,7 +27054,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:12">JAS 5:12</milestone> Πρὸ πάντων δέ, ἀδελφοί μου, μὴ ὀμνύετε, μήτε τὸν οὐρανὸν μήτε τὴν γῆν μήτε ἄλλον τινὰ ὅρκον·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 5:12!3"
             after=","
             class="conj"
@@ -27101,7 +27101,7 @@
                   unicode="μου,"
                   referent="n59001001001">μου</w>
             </wg>
-            <wg class="pp" rule="PrepNp" role="adv">
+            <wg rule="PrepNp" class="pp" role="adv">
                <w ref="JAS 5:12!1"
                   after=" "
                   class="prep"
@@ -27161,7 +27161,7 @@
                unicode="ὀμνύετε,"
                frame="A0:n59005012004 A1:n59005012017"
                subjref="n59005012004">ὀμνύετε</w>
-            <wg articular="true" rule="aNpaNpaNp" role="adv">
+            <wg articular="true" rule="aNpaNpaNp" class="np" role="adv">
                <wg type="group">
                   <w ref="JAS 5:12!8"
                      after=" "
@@ -27325,7 +27325,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:12">JAS 5:12</milestone> ἤτω δὲ ὑμῶν τὸ Ναὶ ναί, καὶ τὸ Οὒ οὔ, ἵνα μὴ ὑπὸ κρίσιν πέσητε.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 5:12!19"
             after=" "
             class="conj"
@@ -27470,7 +27470,7 @@
                      unicode="οὔ,">οὔ</w>
                </wg>
             </wg>
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="JAS 5:12!28"
                   after=" "
                   class="conj"
@@ -27495,7 +27495,7 @@
                      gloss="not"
                      morph="PRT-N"
                      unicode="μὴ">μὴ</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 5:12!30"
                         after=" "
                         class="prep"
@@ -27589,7 +27589,7 @@
                   gloss="anyone"
                   morph="X-NSM"
                   unicode="τις">τις</w>
-               <wg class="pp" rule="PrepNp">
+               <wg rule="PrepNp" class="pp">
                   <w ref="JAS 5:13!3"
                      after=" "
                      class="prep"
@@ -27742,7 +27742,7 @@
                   gloss="anyone"
                   morph="X-NSM"
                   unicode="τις">τις</w>
-               <wg class="pp" rule="PrepNp">
+               <wg rule="PrepNp" class="pp">
                   <w ref="JAS 5:14!3"
                      after=" "
                      class="prep"
@@ -27772,7 +27772,7 @@
                </wg>
             </wg>
          </wg>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="V-O">
                <w role="v"
                   ref="JAS 5:14!5"
@@ -27895,7 +27895,7 @@
                      unicode="προσευξάσθωσαν"
                      frame="A0:n59005014007"
                      subjref="n59005014007">προσευξάσθωσαν</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 5:14!12"
                         after="’"
                         class="prep"
@@ -27965,7 +27965,7 @@
                         ln="6.202"
                         morph="N-DSN"
                         unicode="ἐλαίῳ">ἐλαίῳ</w>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 5:14!16"
                            after=" "
                            class="prep"
@@ -28056,7 +28056,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:15">JAS 5:15</milestone> καὶ ἡ εὐχὴ τῆς πίστεως σώσει τὸν κάμνοντα, καὶ ἐγερεῖ αὐτὸν ὁ Κύριος·</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 5:15!1"
             after=" "
             class="conj"
@@ -28067,7 +28067,7 @@
             gloss="And"
             morph="CONJ"
             unicode="καὶ">καὶ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="S-V-O">
                <wg class="np" articular="true" rule="DetNP" role="s">
                   <w ref="JAS 5:15!2"
@@ -28156,7 +28156,7 @@
                   morph="V-FAI-3S"
                   unicode="σώσει"
                   frame="A0:n59005015003 A1:n59005015008">σώσει</w>
-               <wg articular="true" rule="DetCL" role="o">
+               <wg articular="true" rule="DetCL" class="cl" role="o">
                   <w ref="JAS 5:15!7"
                      after=" "
                      class="det"
@@ -28287,7 +28287,7 @@
       <p>
          <milestone unit="verse" id="JAS 5:15">JAS 5:15</milestone> κἂν ἁμαρτίας ᾖ πεποιηκώς, ἀφεθήσεται αὐτῷ.</p>
       <wg Rule="ClCl2" class="cl" nodeId="590050150140060">
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 5:15!14"
                after=" "
                class="conj"
@@ -28318,7 +28318,7 @@
                   ln="88.289"
                   morph="N-APF"
                   unicode="ἁμαρτίας">ἁμαρτίας</w>
-               <wg class="vp" rule="BeVerb" role="v">
+               <wg rule="BeVerb" class="vp" role="v">
                   <w ref="JAS 5:15!16"
                      after=" "
                      class="verb"
@@ -28401,7 +28401,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:16">JAS 5:16</milestone> ἐξομολογεῖσθε οὖν ἀλλήλοις τὰς ἁμαρτίας, καὶ προσεύχεσθε ὑπὲρ ἀλλήλων, ὅπως ἰαθῆτε.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 5:16!2"
             after=" "
             class="conj"
@@ -28519,7 +28519,7 @@
                      unicode="προσεύχεσθε"
                      frame="A0:n59005012004"
                      subjref="n59005012004">προσεύχεσθε</w>
-                  <wg class="pp" rule="PrepNp" role="adv">
+                  <wg rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 5:16!8"
                         after=" "
                         class="prep"
@@ -28552,7 +28552,7 @@
                   </wg>
                </wg>
             </wg>
-            <wg rule="sub-CL">
+            <wg rule="sub-CL" class="cl">
                <w ref="JAS 5:16!10"
                   after=" "
                   class="conj"
@@ -28687,7 +28687,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:17">JAS 5:17</milestone> Ἠλείας ἄνθρωπος ἦν ὁμοιοπαθὴς ἡμῖν, καὶ προσευχῇ προσηύξατο τοῦ μὴ βρέξαι, καὶ οὐκ ἔβρεξεν ἐπὶ τῆς γῆς ἐνιαυτοὺς τρεῖς καὶ μῆνας ἕξ·</p>
-      <wg rule="CLaCL">
+      <wg rule="CLaCL" class="cl">
          <wg class="cl" rule="S-VC-P">
             <w role="s"
                ref="JAS 5:17!1"
@@ -28786,7 +28786,7 @@
                gloss="and"
                morph="CONJ"
                unicode="καὶ">καὶ</w>
-            <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
                <wg class="cl" rule="ADV-V-ADV">
                   <w role="adv"
                      ref="JAS 5:17!7"
@@ -28825,7 +28825,7 @@
                      unicode="προσηύξατο"
                      frame="A0:n59005017001"
                      subjref="n59005017001">προσηύξατο</w>
-                  <wg articular="true" rule="DetCL" role="adv">
+                  <wg articular="true" rule="DetCL" class="cl" role="adv">
                      <w ref="JAS 5:17!9"
                         after=" "
                         class="det"
@@ -28915,7 +28915,7 @@
                         morph="V-AAI-3S"
                         unicode="ἔβρεξεν"
                         frame="A0:n00000000000">ἔβρεξεν</w>
-                     <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                     <wg articular="true" rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 5:17!15"
                            after=" "
                            class="prep"
@@ -28962,7 +28962,7 @@
                               unicode="γῆς">γῆς</w>
                         </wg>
                      </wg>
-                     <wg rule="NpaNp" role="adv">
+                     <wg rule="NpaNp" class="np" role="adv">
                         <wg class="np" rule="NpAdjp">
                            <w ref="JAS 5:17!18"
                               after=" "
@@ -29048,7 +29048,7 @@
    <sentence>
       <p>
          <milestone unit="verse" id="JAS 5:18">JAS 5:18</milestone> καὶ πάλιν προσηύξατο, καὶ ὁ οὐρανὸς ὑετὸν ἔδωκεν καὶ ἡ γῆ ἐβλάστησεν τὸν καρπὸν αὐτῆς.</p>
-      <wg rule="Conj-CL">
+      <wg rule="Conj-CL" class="cl">
          <w ref="JAS 5:18!1"
             after=" "
             class="conj"
@@ -29059,7 +29059,7 @@
             gloss="And"
             morph="CONJ"
             unicode="καὶ">καὶ</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="ADV-V">
                <w role="adv"
                   ref="JAS 5:18!2"
@@ -29106,7 +29106,7 @@
                   gloss="and"
                   morph="CONJ"
                   unicode="καὶ">καὶ</w>
-               <wg rule="CLaCL">
+               <wg rule="CLaCL" class="cl">
                   <wg class="cl" rule="S-O-V">
                      <wg class="np" articular="true" rule="DetNP" role="s">
                         <w ref="JAS 5:18!5"
@@ -29340,7 +29340,7 @@
                unicode="μου,"
                referent="n59001001001">μου</w>
          </wg>
-         <wg rule="sub-CL" role="adv">
+         <wg rule="sub-CL" class="cl" role="adv">
             <w ref="JAS 5:19!3"
                after=" "
                class="conj"
@@ -29351,7 +29351,7 @@
                gloss="if"
                morph="COND"
                unicode="ἐάν">ἐάν</w>
-            <wg rule="CLaCL">
+            <wg rule="CLaCL" class="cl">
                <wg class="cl" rule="S-V-ADV">
                   <wg class="np" rule="NpPp" role="s">
                      <w ref="JAS 5:19!4"
@@ -29368,7 +29368,7 @@
                         gloss="anyone"
                         morph="X-NSM"
                         unicode="τις">τις</w>
-                     <wg class="pp" rule="PrepNp">
+                     <wg rule="PrepNp" class="pp">
                         <w ref="JAS 5:19!5"
                            after=" "
                            class="prep"
@@ -29416,7 +29416,7 @@
                      morph="V-APS-3S"
                      unicode="πλανηθῇ"
                      frame="A1:n59005019004">πλανηθῇ</w>
-                  <wg class="pp" articular="true" rule="PrepNp" role="adv">
+                  <wg articular="true" rule="PrepNp" class="pp" role="adv">
                      <w ref="JAS 5:19!8"
                         after=" "
                         class="prep"
@@ -29561,9 +29561,9 @@
             gloss="that"
             morph="CONJ"
             unicode="ὅτι">ὅτι</w>
-         <wg rule="CLaCL">
+         <wg rule="CLaCL" class="cl">
             <wg class="cl" rule="S-V-O-ADV">
-               <wg articular="true" rule="DetCL" role="s">
+               <wg articular="true" rule="DetCL" class="cl" role="s">
                   <w ref="JAS 5:20!3"
                      after=" "
                      class="det"
@@ -29616,7 +29616,7 @@
                         ln="88.295"
                         morph="A-ASM"
                         unicode="ἁμαρτωλὸν">ἁμαρτωλὸν</w>
-                     <wg class="pp" rule="PrepNp" role="adv">
+                     <wg rule="PrepNp" class="pp" role="adv">
                         <w ref="JAS 5:20!6"
                            after=" "
                            class="prep"
@@ -29739,7 +29739,7 @@
                      unicode="αὐτοῦ"
                      referent="n59005020005">αὐτοῦ</w>
                </wg>
-               <wg class="pp" rule="PrepNp" role="adv">
+               <wg rule="PrepNp" class="pp" role="adv">
                   <w ref="JAS 5:20!13"
                      after=" "
                      class="prep"

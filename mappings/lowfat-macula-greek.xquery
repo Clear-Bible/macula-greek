@@ -802,8 +802,8 @@ declare function local:clause-complex-class-attribute($node, $constituent-to-sub
 			$node/@Cat ! attribute type {'group'},
 			if($debugging-mode) then attribute debug {'class condition 6 - type'} else ()
 		)
-	else 
-		()
+	else
+		$node/@Cat ! attribute class {lower-case(.)}
 };
 
 declare function local:disambiguate-ellipsis($elip-clause as element(Node))
@@ -1573,6 +1573,7 @@ declare function local:process-wrapper-clause($node, $passed-role)
 			else
 				<wg>{
 						local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
+						attribute class {'cl'},
 						if ($passed-role = 'apposition') then
          			        attribute junction {$passed-role}
          				else if ($passed-role) then
@@ -1588,6 +1589,7 @@ declare function local:process-conjunctions($node, $passed-role)
 {
 <wg>{
 		local:attributes($node, 'class') ! (if (name(.) = 'class') then () else .),
+		$node/@Cat ! attribute class {lower-case(.)},
 		if ($passed-role = 'apposition') then
 				attribute junction {$passed-role}
 		else if ($passed-role) then
@@ -1724,7 +1726,8 @@ declare function local:process-complex-node($node, $passed-role)
 	if ($node/@Rule = $wrapper-rule) then
 		(:local:process-wrapper($node, $passed-role):)
 		<wg>{
-				local:attributes($node),
+				local:attributes($node, 'class', ()),
+				$node/@Cat ! attribute class {lower-case(.)},
 				(:attribute type {"wrapper-scope"},:)
 				if ($passed-role = 'apposition') then
 				    attribute junction {$passed-role}
