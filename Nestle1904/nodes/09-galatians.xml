@@ -1571,7 +1571,10 @@
         <Node Cat="S" Head="0" nodeId="480010200020111">
           <Node Cat="CL" Start="0" End="10" Rule="Conj-CL" HasDet="True" nodeId="480010200020110">
             <Node xml:id="n48001020002" ref="GAL 1:20!2" Cat="conj" Start="0" End="0" StrongNumber="1161" UnicodeLemma="δέ" FunctionalTag="CONJ" Type="" morphId="48001020002" NormalizedForm="δέ" Unicode="δὲ" FormalTag="CONJ" nodeId="480010200020010" Gloss="now">δὲ</Node>
-            <Node Cat="CL" Start="1" End="10" Rule="ClCl2" Head="1" HasDet="True" nodeId="480010200010100">
+            <!-- LowfatException: GAL 1:20 outer ClCl2 "ἃ δὲ γράφω ὑμῖν, ἰδοὺ ἐνώπιον τοῦ Θεοῦ ὅτι οὐ ψεύδομαι"
+              The verse is an oath/assurance; γράφω projects the content but the ἰδοὺ clause
+              is a coordinate oath-formula, not nested projected discourse. Force coordination. -->
+            <Node Cat="CL" Start="1" End="10" Rule="ClCl2" Head="1" HasDet="True" nodeId="480010200010100" LowfatException="force-coordination">
               <Node Cat="CL" Start="1" End="3" Rule="O-V-IO" Head="1" nodeId="480010200010030">
                 <Node Cat="O" Start="1" End="1" Rule="Np2O" Head="0" nodeId="480010200010012">
                   <Node Cat="np" Start="1" End="1" Rule="Pron2NP" Head="0" nodeId="480010200010011">
@@ -1589,7 +1592,11 @@
                   </Node>
                 </Node>
               </Node>
-              <Node Cat="CL" Start="4" End="10" Rule="ClCl2" Head="1" HasDet="True" nodeId="480010200050070">
+              <!-- LowfatException: GAL 1:20 inner ClCl2 "ἰδοὺ ἐνώπιον τοῦ Θεοῦ ὅτι οὐ ψεύδομαι"
+              Oath formula: ἰδοὺ + prepositional oath + ὅτι-clause. The projecting verb γράφω
+              is in the sibling at the parent level, not here. Force coordination; exclude
+              from projected-discourse detection to prevent wrong nesting under γράφω. -->
+              <Node Cat="CL" Start="4" End="10" Rule="ClCl2" Head="1" HasDet="True" nodeId="480010200050070" LowfatException="force-coordination exclude-projected-discourse">
                 <Node Cat="CL" Start="4" End="4" Rule="V2CL" Head="0" nodeId="480010200050013">
                   <Node Cat="V" Start="4" End="4" Rule="Vp2V" Head="0" nodeId="480010200050012">
                     <Node Cat="vp" Start="4" End="4" Rule="V2VP" Head="0" nodeId="480010200050011">
@@ -5323,7 +5330,7 @@
                     </Node>
                   </Node>
                 </Node>
-                <Node Cat="CL" Start="2" End="4" Rule="Np2CL" Head="0" HasDet="True" ClType="Minor" nodeId="480030160130031">
+                <Node Cat="CL" Start="2" End="4" Rule="Np2CL" Head="0" HasDet="True" nodeId="480030160130031">
                   <Node Cat="np" Start="2" End="4" Rule="ConjNp" Head="1" HasDet="True" nodeId="480030160130030">
                     <Node xml:id="n48003016013" ref="GAL 3:16!13" Cat="conj" Start="2" End="2" StrongNumber="2532" UnicodeLemma="καί" FunctionalTag="CONJ" Type="" morphId="48003016013" NormalizedForm="Καί" Unicode="Καὶ" FormalTag="CONJ" nodeId="480030160130010" Gloss="and" LexDomain="089017" LN="89.92">Καὶ</Node>
                     <Node Cat="np" Start="3" End="4" Rule="DetNP" Head="1" HasDet="True" nodeId="480030160140020">
@@ -5369,7 +5376,7 @@
                     </Node>
                   </Node>
                 </Node>
-                <Node Cat="CL" Start="12" End="15" Rule="Np2CL" Head="0" HasDet="True" ClType="Minor" nodeId="480030160230041">
+                <Node Cat="CL" Start="12" End="15" Rule="Np2CL" Head="0" HasDet="True" nodeId="480030160230041">
                   <Node Cat="np" Start="12" End="15" Rule="ConjNp" Head="1" HasDet="True" nodeId="480030160230040">
                     <Node xml:id="n48003016023" ref="GAL 3:16!23" Cat="conj" Start="12" End="12" StrongNumber="2532" UnicodeLemma="καί" FunctionalTag="CONJ" Type="" morphId="48003016023" NormalizedForm="Καί" Unicode="Καὶ" FormalTag="CONJ" nodeId="480030160230010" Gloss="and" LexDomain="089017" LN="89.92">Καὶ</Node>
                     <Node Cat="np" Start="13" End="15" Rule="DetNP" Head="1" HasDet="True" nodeId="480030160240030">
