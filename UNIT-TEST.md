@@ -103,8 +103,9 @@ poetry env use python3.14
 poetry install
 ```
 
-Repeat in each of `test/`, `pipelines/lowfat-transform/` and
-`pipelines/tei-transform/` — each keeps its own environment.
+Repeat in each of `test/`, `pipelines/lowfat-transform/`,
+`pipelines/tei-transform/` and `pipelines/tsv-transform/` — each keeps its own
+environment.
 
 To confirm which interpreter you ended up on:
 

@@ -75,6 +75,7 @@ jobs:
         pipeline:
           - pipelines/lowfat-transform
           - pipelines/tei-transform
+          - pipelines/tsv-transform
     steps:
       # No `lfs: true` here. The pipeline tests do read the corpus, but nothing
       # in this repository is stored in LFS (there is no `.gitattributes`), so

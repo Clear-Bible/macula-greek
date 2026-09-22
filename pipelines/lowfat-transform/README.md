@@ -81,8 +81,9 @@ depth of "101" that exceeds the limit "100" set by "jdk.xml.maxElementDepth".
 asserts the corpus still nests past 100 so the workaround cannot quietly stop
 being load-bearing.
 
-`mappings/generate-tsv.sh` carries the same fix for the same reason, as
-`BASEX_JVM=-Djdk.xml.maxElementDepth=0`.
+The sibling [tsv-transform](../tsv-transform) pipeline carries the same
+property for the same reason; so did the `mappings/generate-tsv.sh` it replaced,
+as `BASEX_JVM=-Djdk.xml.maxElementDepth=0`.
 
 ## Tests
 

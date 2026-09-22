@@ -4,7 +4,8 @@ import pytest
 from test import __macula_greek_tsv_rows__, __tsv_files__
 
 # Expected data row count per TSV, which must equal count(//w) over the
-# corresponding lowfat XML. Regenerate both with `./mappings/generate-tsv.sh all`.
+# corresponding lowfat XML. Regenerate both by running `poetry run python
+# main.py all` in `pipelines/tsv-transform`.
 NODE_COUNTS = {
     "../Nestle1904/tsv/macula-greek-Nestle1904.tsv": 137779,
     "../SBLGNT/tsv/macula-greek-SBLGNT.tsv": 137741,
