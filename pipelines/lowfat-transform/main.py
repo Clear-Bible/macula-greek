@@ -13,6 +13,7 @@ except NameError:
     REPO_ROOT = Path(os.getcwd()).parent.parent
 
 MAX_WORKERS = int(os.environ.get("MAX_WORKERS", multiprocessing.cpu_count() - 1))
+SERIAL = os.environ.get("SERIAL", "").lower() in ("1", "true", "yes")
 
 
 def nodes_xml_paths(nodes_dir):
@@ -48,9 +49,11 @@ def do_transform(input_path, output_dir):
     reformat(dest)
 
 
-def serial_transform():
-    for node_path in nodes_xml_paths():
-        do_transform(node_path)
+def serial_transform(nodes_dir, output_dir):
+    # Runs in-process, so exceptions keep their traceback and `pdb`/`ipdb` are
+    # usable. Set SERIAL=1 to choose this path.
+    for node_path in nodes_xml_paths(nodes_dir):
+        do_transform(node_path, output_dir)
 
 
 def parallel_transform(nodes_dir, output_dir):
@@ -77,7 +80,10 @@ def main():
     assert nodes_dir.exists()
 
     lowfat_dir = REPO_ROOT / f"{edition}/lowfat"
-    parallel_transform(nodes_dir, lowfat_dir)
+    if SERIAL:
+        serial_transform(nodes_dir, lowfat_dir)
+    else:
+        parallel_transform(nodes_dir, lowfat_dir)
 
 
 if __name__ == "__main__":
