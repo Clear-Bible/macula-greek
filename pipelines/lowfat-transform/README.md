@@ -17,8 +17,9 @@ Saxon's final newline.
   `pyproject.toml` and pinned in CI. The real constraint is wheel availability:
   `saxonche` ships no sdist at all, so a release without a wheel for your
   interpreter fails outright with `Unable to find installation candidates for
-  saxonche`. 12.10.0 publishes cp39–cp314 wheels for macOS (x86_64 and arm64),
-  manylinux (x86_64 and aarch64) and Windows.
+  saxonche`. 13.0.0 publishes cp39–cp314 wheels (including cp314t, the
+  free-threaded build) for macOS (x86_64 and arm64), manylinux (x86_64 and
+  aarch64) and Windows.
 - **Poetry 2.5.x.** CI pins 2.5.1 in `.github/workflows/pr.yml`. `poetry.lock`
   is `lock-version` 2.1, which Poetry 1.x cannot read.
 
@@ -60,6 +61,38 @@ The stylesheets (`*.css`) and the XInclude index files
 (`SBLGNT/lowfat/sblgntlowfat.xml`, `Nestle1904/lowfat/nestle1904lowfat.xml`,
 `Nestle1904/lowfat/commonformat.xml`) are not regenerated — only the 27
 per-book files are.
+
+## Element depth
+
+SaxonC 13 is built with GraalVM Native Image 25, so it inherits the JDK 25
+default of `jdk.xml.maxElementDepth=100`. SaxonC 12 did not. The Luke 3:23-38
+genealogy is a recursive NP-of-NP chain — each "son of X" wraps the whole
+phrase before it — nesting about 160 levels, so under that cap `03-luke.xml`
+aborts in both editions:
+
+```
+SXXP0003 Error reported by XML parser: JAXP00010006: The element "Node" has a
+depth of "101" that exceeds the limit "100" set by "jdk.xml.maxElementDepth".
+```
+
+`transform()` lifts the cap by setting Saxon's `parserProperty` feature URI for
+`maxElementDepth` to `0`. This is why the version floor is `13.0.0` rather than
+13 merely happening to work. `test_transform.py` pins the behaviour, and also
+asserts the corpus still nests past 100 so the workaround cannot quietly stop
+being load-bearing.
+
+`mappings/generate-tsv.sh` carries the same fix for the same reason, as
+`BASEX_JVM=-Djdk.xml.maxElementDepth=0`.
+
+## Tests
+
+```shell
+poetry run pytest
+```
+
+The tests transform the deepest book in each edition and compare the result
+against the committed `lowfat` output, so they need the corpus present but
+write only to a temporary directory.
 
 ## Tuning
 

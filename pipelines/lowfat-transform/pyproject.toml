@@ -6,7 +6,7 @@ authors = [{ name = "Biblica's Clear Bible Data Team" }]
 license = "MIT"
 readme = "README.md"
 requires-python = ">=3.14,<4.0"
-dependencies = ["saxonche>=12.10.0,<13.0.0"]
+dependencies = ["saxonche>=13.0.0,<14.0.0"]
 
 [tool.poetry]
 package-mode = false
@@ -16,6 +16,7 @@ black = "^26.5.1"
 ipdb = "^0.13.13"
 ipython = "^9.17.0"
 isort = "^9.0.1"
+pytest = "^9.1.0"
 
 [tool.black]
 line-length = 100

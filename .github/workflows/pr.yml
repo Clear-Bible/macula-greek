@@ -62,8 +62,11 @@ jobs:
           retention-days: 8
 
   # The pipelines are not run here — that would overwrite tracked data files.
-  # This only proves each pyproject is valid, its lock is current, and the
-  # dependencies still resolve and install on the supported Python.
+  # This proves each pyproject is valid, its lock is current, and the
+  # dependencies still resolve and install on the supported Python. Where a
+  # pipeline has tests, they run too: they transform the corpus into a
+  # temporary directory and compare against the committed output, so they
+  # exercise the real Saxon configuration without touching tracked files.
   Check-Pipelines:
     runs-on: ubuntu-latest
     strategy:
@@ -73,8 +76,10 @@ jobs:
           - pipelines/lowfat-transform
           - pipelines/tei-transform
     steps:
-      # No `lfs: true` here: this job never reads the data files, and the LFS
-      # fetch is the slowest step in the workflow.
+      # No `lfs: true` here. The pipeline tests do read the corpus, but nothing
+      # in this repository is stored in LFS (there is no `.gitattributes`), so
+      # a plain checkout already has the data and skips the slowest step in the
+      # workflow.
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
@@ -90,4 +95,9 @@ jobs:
         working-directory: ${{ matrix.pipeline }}
       - name: install dependencies
         run: poetry install --no-interaction
+        working-directory: ${{ matrix.pipeline }}
+      # tei-transform has no tests yet, and `pytest` exits 5 on an empty run.
+      - name: execute pytest
+        if: hashFiles(format('{0}/test_*.py', matrix.pipeline)) != ''
+        run: poetry run pytest
         working-directory: ${{ matrix.pipeline }}
