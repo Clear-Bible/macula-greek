@@ -13,22 +13,27 @@ Saxon's final newline.
 
 ## Requirements
 
-- **Python 3.10 or 3.11.** Not 3.12 or later: the pinned `saxonche` 12.3.0
-  publishes wheels only for cp38–cp311 and ships no sdist, so the install fails
-  with `Unable to find installation candidates for saxonche (12.3.0)`.
-- **Poetry 1.2.x.** CI pins 1.2.2 in `.github/workflows/pr.yml`. The
-  `poetry shell` step below was removed in Poetry 2.0; on 2.x either use
-  `poetry env activate`, or skip the shell and run `poetry run python main.py …`.
+- **Python 3.14.** Declared as `requires-python = ">=3.14,<4.0"` in
+  `pyproject.toml` and pinned in CI. The real constraint is wheel availability:
+  `saxonche` ships no sdist at all, so a release without a wheel for your
+  interpreter fails outright with `Unable to find installation candidates for
+  saxonche`. 12.10.0 publishes cp39–cp314 wheels for macOS (x86_64 and arm64),
+  manylinux (x86_64 and aarch64) and Windows.
+- **Poetry 2.5.x.** CI pins 2.5.1 in `.github/workflows/pr.yml`. `poetry.lock`
+  is `lock-version` 2.1, which Poetry 1.x cannot read.
 
 ## Usage
 
 ```shell
 cd pipelines/lowfat-transform
 poetry install
-poetry shell
-python main.py Nestle1904
-python main.py SBLGNT
+poetry run python main.py Nestle1904
+poetry run python main.py SBLGNT
 ```
+
+`poetry shell` was removed in Poetry 2.0. Either prefix each command with
+`poetry run` as above, or activate the environment once with
+`poetry env activate`.
 
 Each edition takes roughly five seconds with ten workers on fourteen cores.
 
@@ -56,7 +61,7 @@ a single-CPU machine that default evaluates to `0` and the run fails with
 `ValueError: max_workers must be greater than 0`, so set it explicitly there:
 
 ```shell
-MAX_WORKERS=1 python main.py SBLGNT
+MAX_WORKERS=1 poetry run python main.py SBLGNT
 ```
 
 ## Debugging
@@ -65,7 +70,7 @@ MAX_WORKERS=1 python main.py SBLGNT
 current process:
 
 ```shell
-SERIAL=1 python main.py SBLGNT
+SERIAL=1 poetry run python main.py SBLGNT
 ```
 
 Use this when a book fails. In the default parallel path the work happens in a

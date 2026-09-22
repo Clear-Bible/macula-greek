@@ -11,20 +11,24 @@ import time — `main.py` will not even import if that file is missing.
 
 ## Requirements
 
-- **Python 3.10, 3.11 or 3.12.** Not 3.13 or later: the pinned `lxml` 4.9.3
-  has no wheel for 3.13 and does not build from its sdist there.
-- **Poetry 1.2.x.** CI pins 1.2.2 in `.github/workflows/pr.yml`. The
-  `poetry shell` step below was removed in Poetry 2.0; on 2.x either use
-  `poetry env activate`, or skip the shell and run `poetry run python main.py`.
+- **Python 3.14.** Declared as `requires-python = ">=3.14,<4.0"` in
+  `pyproject.toml` and pinned in CI. `lxml` 6.1.3 publishes wheels for
+  3.10–3.15, so unlike the sibling [lowfat-transform](../lowfat-transform)
+  pipeline there is no wheel-availability ceiling here.
+- **Poetry 2.5.x.** CI pins 2.5.1 in `.github/workflows/pr.yml`. `poetry.lock`
+  is `lock-version` 2.1, which Poetry 1.x cannot read.
 
 ## Usage
 
 ```shell
 cd pipelines/tei-transform
 poetry install
-poetry shell
-python main.py
+poetry run python main.py
 ```
+
+`poetry shell` was removed in Poetry 2.0. Either prefix each command with
+`poetry run` as above, or activate the environment once with
+`poetry env activate`.
 
 The whole run takes about a second.
 
@@ -53,7 +57,7 @@ Re-run it with `SERIAL=1`, which skips the process pool and transforms the books
 one at a time in the current process:
 
 ```shell
-SERIAL=1 python main.py
+SERIAL=1 poetry run python main.py
 ```
 
 This matters here more than in most pipelines. `main.py` has `ipdb.set_trace()`
@@ -68,7 +72,7 @@ If you do hit the parallel path with a failure, redirect stdin so the debugger
 raises instead of hanging and the real exception surfaces:
 
 ```shell
-python main.py < /dev/null
+poetry run python main.py < /dev/null
 ```
 
 Note also that `ipdb` is in the `dev` dependency group, so an install that

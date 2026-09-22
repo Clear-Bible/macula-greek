@@ -43,8 +43,9 @@ Returns a list of elements matched by the expression.
 
 Prerequisites:
 
-* Python 3.x
-* Poetry (dependency management for python)
+* Python 3.14 (declared as `requires-python = ">=3.14,<4.0"` in `test/pyproject.toml`)
+* Poetry 2.5.x (dependency management for python) — `poetry.lock` is
+  `lock-version` 2.1 and Poetry 1.x cannot read it
 
 In the `test/` directory, install dependencies:
 
@@ -58,10 +59,10 @@ Run all tests:
 poetry run pytest
 ```
 
-Run a specific test file:
+Run a specific test file (paths are relative to `test/`):
 
 ```shell
-poetry run pytest test/test_lowfat.py
+poetry run pytest test_nestle1904_lowfat.py
 ```
 
 Run the tests with console output:
