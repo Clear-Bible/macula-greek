@@ -22,6 +22,13 @@ Saxon's final newline.
 - **Poetry 2.5.x.** CI pins 2.5.1 in `.github/workflows/pr.yml`. `poetry.lock`
   is `lock-version` 2.1, which Poetry 1.x cannot read.
 
+## Upgrading an existing checkout
+
+If `poetry install` fails with `Current Python version (…) is not allowed by the
+project`, a virtualenv built against an older Python is still in the way. See
+[UNIT-TEST.md](../../UNIT-TEST.md#upgrading-an-existing-checkout) for how to
+clear it.
+
 ## Usage
 
 ```shell
