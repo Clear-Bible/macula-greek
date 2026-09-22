@@ -1,5 +1,4 @@
 import os
-import codecs
 import re
 import pytest
 from test import __macula_greek_tsv_rows__, __tsv_files__
@@ -31,7 +30,8 @@ def test_files_exists(tsv_file):
 # Verify that the file is in utf8 format.
 @pytest.mark.parametrize("tsv_file", __tsv_files__)
 def test_file_is_valid_utf8(tsv_file):
-    lines = codecs.open(tsv_file, encoding="utf-8", errors="strict").readlines()
+    with open(tsv_file, encoding="utf-8", errors="strict") as f:
+        lines = f.readlines()
     assert lines != ""
 
 # Verify a node id that is correctly formatted in each row.
