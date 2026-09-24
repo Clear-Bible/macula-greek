@@ -14,6 +14,17 @@ except NameError:
 MAX_WORKERS = int(os.environ.get("MAX_WORKERS", multiprocessing.cpu_count() - 1))
 SERIAL = os.environ.get("SERIAL", "").lower() in ("1", "true", "yes")
 
+# SaxonC 13 is built with GraalVM Native Image 25 (JDK 25), which enforces the
+# JDK default of jdk.xml.maxElementDepth=100; SaxonC 12 was built on a JDK that
+# did not. The Luke 3:23-38 genealogy is a recursive NP-of-NP chain nesting
+# ~160 levels deep, so without lifting the cap 03-luke.xml aborts with
+# `JAXP00010006: The element "Node" has a depth of "101"`. 0 means no limit.
+# See test_transform.py, which pins this.
+MAX_ELEMENT_DEPTH_PROPERTY = (
+    "http://saxon.sf.net/feature/parserProperty?uri="
+    "http://www.oracle.com/xml/jaxp/properties/maxElementDepth"
+)
+
 
 def nodes_xml_paths(nodes_dir):
     return sorted(nodes_dir.glob("*.xml"))
@@ -21,6 +32,7 @@ def nodes_xml_paths(nodes_dir):
 
 def transform(source, dest):
     proc = PySaxonProcessor(license=False)
+    proc.set_configuration_property(MAX_ELEMENT_DEPTH_PROPERTY, "0")
     xqueryp = proc.new_xquery_processor()
     xqueryp.run_query_to_file(
         input_file_name=str(source),
