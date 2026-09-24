@@ -46,17 +46,21 @@ __sblgnt_lowfat_files__ = list(map(lambda x: sblgnt_lowfat_path + x, desired_fil
 sblgnt_tei_path = "../SBLGNT/tei/"
 __sblgnt_tei_files__ = list(map(lambda x: sblgnt_tei_path + x, desired_filenames))
 
-__macula_greek_tsv_rows__ = []
-
-tsv_path = "../Nestle1904/tsv/macula-greek-Nestle1904.tsv"
-__tsv_files__ = [tsv_path]
+nestle1904_tsv_path = "../Nestle1904/tsv/macula-greek-Nestle1904.tsv"
+sblgnt_tsv_path = "../SBLGNT/tsv/macula-greek-SBLGNT.tsv"
+__tsv_files__ = [nestle1904_tsv_path, sblgnt_tsv_path]
 
 ERROR_EXPRESSION = "//*[starts-with(local-name(), 'error') or starts-with(local-name(), 'error_')]"
 
-with open(tsv_path, encoding='utf-8') as file:
-    reader = csv.DictReader(file, delimiter="\t")
-    for row in reader:
-        __macula_greek_tsv_rows__.append(row)
+
+def read_tsv_rows(path):
+    with open(path, encoding='utf-8') as file:
+        return list(csv.DictReader(file, delimiter="\t"))
+
+
+# Keyed by file: ids do not cross corpora, so each TSV must be validated
+# against its own row set rather than a merged one.
+__macula_greek_tsv_rows__ = {path: read_tsv_rows(path) for path in __tsv_files__}
 
 def run_xpath_for_file(xpath, file):
     tree = etree.parse(file)
