@@ -1,6 +1,5 @@
 import pytest
 import os
-import codecs
 import re
 from lxml import etree
 from test import ERROR_EXPRESSION, __lowfat_files__, run_xpath_for_file
@@ -14,7 +13,8 @@ def test_file_exists(lowfat_file):
 
 @pytest.mark.parametrize("lowfat_file", __lowfat_files__)
 def test_file_is_valid_utf8(lowfat_file):
-    lines = codecs.open(lowfat_file, encoding="utf-8", errors="strict").readlines()
+    with open(lowfat_file, encoding="utf-8", errors="strict") as f:
+        lines = f.readlines()
     assert lines != ""
 
 

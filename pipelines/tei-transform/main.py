@@ -9,7 +9,6 @@ from pathlib import Path
 
 from lxml import etree
 
-
 try:
     REPO_ROOT = Path(__file__).parent.parent.parent
 except NameError:

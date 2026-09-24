@@ -1,11 +1,10 @@
 import concurrent.futures
 import multiprocessing
 import os
-from pathlib import Path
 import sys
+from pathlib import Path
 
 from saxonche import PySaxonProcessor
-
 
 try:
     REPO_ROOT = Path(__file__).parent.parent.parent

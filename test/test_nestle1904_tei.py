@@ -1,6 +1,5 @@
 import pytest
 import os
-import codecs
 import re
 from lxml import etree
 from test import __tei_files__, run_xpath_for_file
@@ -14,7 +13,8 @@ def test_file_exists(tei_file):
 
 @pytest.mark.parametrize("tei_file", __tei_files__)
 def test_file_is_valid_utf8(tei_file):
-    lines = codecs.open(tei_file, encoding="utf-8", errors="strict").readlines()
+    with open(tei_file, encoding="utf-8", errors="strict") as f:
+        lines = f.readlines()
     assert lines != ""
 
 

@@ -1,7 +1,6 @@
 import pytest
 import os
 import csv
-import codecs
 import re
 
 wordsense_tsv_path = '../sources/Clear/wordsense/greek-wordsenses.tsv'

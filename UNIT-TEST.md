@@ -43,8 +43,9 @@ Returns a list of elements matched by the expression.
 
 Prerequisites:
 
-* Python 3.x
-* Poetry (dependency management for python)
+* Python 3.14 (declared as `requires-python = ">=3.14,<4.0"` in `test/pyproject.toml`)
+* Poetry 2.5.x (dependency management for python) — `poetry.lock` is
+  `lock-version` 2.1 and Poetry 1.x cannot read it
 
 In the `test/` directory, install dependencies:
 
@@ -58,14 +59,55 @@ Run all tests:
 poetry run pytest
 ```
 
-Run a specific test file:
+Run a specific test file (paths are relative to `test/`):
 
 ```shell
-poetry run pytest test/test_lowfat.py
+poetry run pytest test_nestle1904_lowfat.py
 ```
 
 Run the tests with console output:
 
 ```shell
 poetry run pytest -rP
+```
+
+### Upgrading an existing checkout
+
+`.venv` is gitignored, so pulling a branch that changes the Python version does
+not replace an environment built against the old one. Poetry may also still
+hold an environment it created earlier under its own cache directory, and it
+prefers that over creating a new one. The result is a confusing failure that
+names an interpreter you never chose and does not say where it came from:
+
+```
+Current Python version (3.13.3) is not allowed by the project (>=3.14,<4.0).
+Please change python executable via the "env use" command.
+```
+
+Following that advice does not help, because `poetry env use` fails the same
+way. The cached environment has to go first. Note that `poetry env remove --all`
+can report nothing and delete nothing here, so check the cache directory
+yourself:
+
+```shell
+poetry config cache-dir                    # e.g. ~/Library/Caches/pypoetry
+ls "$(poetry config cache-dir)/virtualenvs"
+```
+
+Delete the entries whose prefix matches this project, then recreate:
+
+```shell
+rm -rf .venv
+rm -rf "$(poetry config cache-dir)/virtualenvs/<project>-<hash>-py3.13"
+poetry env use python3.14
+poetry install
+```
+
+Repeat in each of `test/`, `pipelines/lowfat-transform/` and
+`pipelines/tei-transform/` — each keeps its own environment.
+
+To confirm which interpreter you ended up on:
+
+```shell
+poetry run python --version
 ```
