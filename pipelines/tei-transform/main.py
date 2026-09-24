@@ -18,6 +18,7 @@ except NameError:
 PIPELINE_ROOT = REPO_ROOT / "pipelines" / "tei-transform"
 FIXTURES_ROOT = PIPELINE_ROOT / "fixtures"
 MAX_WORKERS = int(os.environ.get("MAX_WORKERS", multiprocessing.cpu_count() - 1))
+SERIAL = os.environ.get("SERIAL", "").lower() in ("1", "true", "yes")
 
 # TODO: Refactor into generic library code
 BOOK_LOOKUP_PATH = FIXTURES_ROOT / "bible-books-lookup.json"
@@ -259,6 +260,8 @@ def do_transform(source):
 
 
 def serial_transform():
+    # Runs in-process, so exceptions keep their traceback and the `pdb`/`ipdb`
+    # calls in this module are actually usable. Set SERIAL=1 to choose this path.
     for source_path in get_source_paths():
         do_transform(source_path)
 
@@ -283,7 +286,10 @@ def parallel_transform():
 
 def main():
     TEI_PATH.mkdir(parents=True, exist_ok=True)
-    parallel_transform()
+    if SERIAL:
+        serial_transform()
+    else:
+        parallel_transform()
 
 
 if __name__ == "__main__":
